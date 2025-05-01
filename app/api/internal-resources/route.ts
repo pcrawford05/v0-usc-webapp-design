@@ -1,59 +1,134 @@
-import { NextResponse } from "next/server"
-import { parse } from "csv-parse/sync"
+import { NextResponse } from "next/server";
+import { Client } from "@notionhq/client";
+import type { PageObjectResponse, QueryDatabaseParameters } from "@notionhq/client/build/src/api-endpoints";
+
+// Initialize Notion Client
+const notion = new Client({ auth: process.env.NOTION_API_KEY });
+
+// Your Database ID
+const DATABASE_ID = "1c0dbf52cd2c808db635d801850b90d8"; // Replace if needed, but this is from your link
+
+
+// Helper function to safely get text from Notion property types
+// Adjust this based on your actual property types (e.g., rich_text, title, etc.)
+function getPlainText(property: any): string | null {
+  if (!property) return null;
+  if (property.type === "title" && property.title?.length > 0) {
+    return property.title[0]?.plain_text ?? null;
+  }
+  if (property.type === "rich_text" && property.rich_text?.length > 0) {
+    return property.rich_text[0]?.plain_text ?? null;
+  }
+  if (property.type === "select" && property.select) {
+    return property.select.name ?? null;
+  }
+   if (property.type === "url" && property.url) {
+    return property.url;
+  }
+   if (property.type === "date" && property.date) {
+    return property.date.start ?? null; // Or handle start/end as needed
+  }
+  // Add other property types if needed
+  return null;
+}
+
 
 export async function GET() {
+  // Basic check for environment variables
+  if (!process.env.NOTION_API_KEY) {
+    console.error("Missing NOTION_API_KEY environment variable");
+    return NextResponse.json({ error: "Server configuration error" }, { status: 500 });
+  }
+  if (!DATABASE_ID) {
+    console.error("Missing DATABASE_ID");
+    return NextResponse.json({ error: "Server configuration error" }, { status: 500 });
+  }
+
   try {
-    const response = await fetch(
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/USC%20Entrepreneurship%20Resources%2018cdbf52cd2c804b864dfa1355926b0b_all-y7RcigGsU0QxiUuST4Uouhl3jQNV52.csv",
-    )
-    const csvText = await response.text()
+    const queryParams: QueryDatabaseParameters = {
+      database_id: DATABASE_ID,
+      filter: {
+        // Filter for Internal resources using the 'USC/External' property
+        property: "USC/External", // <<< CONFIRM THIS PROPERTY NAME IS EXACT
+        select: {
+          equals: "USC", // <<< CONFIRM THIS VALUE IS EXACT
+        },
+      },
+      // Notion API fetches max 100 items per request by default.
+      // Add pagination logic here if you have more than 100 resources.
+      page_size: 100,
+    };
 
-    const records = parse(csvText, {
-      columns: true,
-      skip_empty_lines: true,
-    })
+    console.log("Querying Notion database:", DATABASE_ID);
+    const response = await notion.databases.query(queryParams);
+    console.log(`Found ${response.results.length} results from Notion.`);
 
-    // Group by Category
-    const groupedResources = records.reduce((acc: any, resource: any) => {
-      if (!resource.Category) return acc
+    // Process Notion results
+    const resources = response.results
+     .map((page) => {
+        // Ensure page is a PageObjectResponse, not PartialPageObjectResponse
+        if (!("properties" in page)) {
+            return null;
+        }
+        const { properties } = page as PageObjectResponse; // Type assertion
 
-      // Filter out resources with URLs as names
-      if (
-        !resource.Name ||
-        resource.Name.toLowerCase().includes("http") ||
-        resource.Name.toLowerCase().includes("www.") ||
-        resource.Name.toLowerCase().includes(".com") ||
-        resource.Name.toLowerCase().includes(".org") ||
-        resource.Name.toLowerCase().includes(".edu")
-      ) {
-        return acc
-      }
+        // --- Adjust property names here to EXACTLY match your Notion database ---
+        const name = getPlainText(properties["Name"]); // Assumes 'Name' is Title type
+        const description = getPlainText(properties["Description"]); // Assumes 'Description' is Rich Text
+        const link = getPlainText(properties["Link"]); // Assumes 'Link' is URL type
+        const resourceType = getPlainText(properties["Resource Type"]); // Assumes 'Resource Type' is Select type
+        const eligibility = getPlainText(properties["Eligibility"]); // Assumes 'Eligibility' is Rich Text
+        const importantDates = getPlainText(properties["Important Dates"]); // Assumes 'Important Dates' is Date type
 
-      if (!acc[resource.Category]) {
-        acc[resource.Category] = []
-      }
+        // Basic validation - skip if essential fields are missing
+        if (!name || !resourceType) {
+           console.warn("Skipping resource due to missing name or resource type:", page.id);
+           return null;
+        }
 
-      acc[resource.Category].push({
-        name: resource.Name,
-        description: resource.Description,
-        eligibility: resource.Eligibility,
-        link: resource.Link,
-        importantDates: resource["Important Dates"],
-        stage: resource.Stage,
+        return {
+          name,
+          description: description ?? "", // Provide default empty string
+          link: link ?? "#", // Provide default link
+          resourceType, // Used for grouping now
+          eligibility: eligibility ?? "",
+          importantDates: importantDates ?? "",
+        };
       })
+     .filter((resource): resource is NonNullable<typeof resource> => resource !== null); // Filter out nulls and type guard
 
-      return acc
-    }, {})
 
-    // Convert to array format
-    const formattedResources = Object.entries(groupedResources).map(([category, items]) => ({
-      category,
+    console.log(`Processed ${resources.length} valid resources.`);
+
+    // Group by Resource Type (as requested)
+    const groupedResources = resources.reduce<Record<string, Array<typeof resources[0]>>>((acc, resource) => {
+        const key = resource.resourceType; // Grouping by Resource Type
+        if (!acc[key]) {
+        acc[key] = [];
+        }
+        // Pushing the whole resource object, adjust if frontend expects fewer fields
+        acc[key].push(resource);
+        return acc;
+    }, {});
+
+    // Convert to array format expected by frontend (or adjust as needed)
+    const formattedResources = Object.entries(groupedResources).map(([resourceType, items]) => ({
+      resourceType, // Or maybe 'category' if the frontend still expects that key?
       items,
-    }))
+    }));
 
-    return NextResponse.json(formattedResources)
-  } catch (error) {
-    console.error("Error processing CSV:", error)
-    return NextResponse.json({ error: "Failed to process resources" }, { status: 500 })
+    console.log("Returning formatted resources:", formattedResources.length, "groups");
+    return NextResponse.json(formattedResources);
+
+  } catch (error: any) {
+    console.error("Error fetching or processing Notion data:", error);
+    // Provide more specific error info if possible
+    let errorMessage = "Failed to fetch resources";
+    if (error.code === 'object_not_found') {
+        errorMessage = "Database not found or integration lacks access.";
+    } else if (error.body) {
+        errorMessage = `Notion API Error: ${error.body}`;
+    }
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }

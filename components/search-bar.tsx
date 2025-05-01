@@ -67,11 +67,13 @@ export function SearchBar({ onSearch, categories, showTypeFilter = false }: Sear
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All Categories</SelectItem>
-              {categories.map((category) => (
-                <SelectItem key={category} value={category.toLowerCase()}>
-                  {category}
-                </SelectItem>
-              ))}
+                {categories
+                  .filter((category): category is string => typeof category === 'string') // Keep this filter
+                  .map((category) => (
+                    <SelectItem key={category} value={category.toLowerCase()}>
+                      {category}
+                    </SelectItem>
+                ))}
             </SelectContent>
           </Select>
         </div>

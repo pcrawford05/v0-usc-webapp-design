@@ -20,7 +20,7 @@ interface Resource {
 }
 
 interface ResourceGroup {
-  category: string
+  resourceType: string
   items: Resource[]
 }
 
@@ -53,7 +53,7 @@ export default function InternalResources() {
 
         setResources(data)
         setFilteredResources(data)
-        setCategories(data.map((group: ResourceGroup) => group.category))
+        setCategories(data.map((group: ResourceGroup) => group.resourceType))
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred")
       } finally {
@@ -94,9 +94,10 @@ export default function InternalResources() {
 
     // If category changed to a specific value, open that accordion
     if (category !== "all" && category !== lastSearchParams.category) {
+      // Check category before calling toLowerCase
       const matchingCategory = resources.find(
-        (group) => group.category.toLowerCase() === category.toLowerCase(),
-      )?.category
+        (group) => group.resourceType && typeof group.resourceType === 'string' && group.resourceType.toLowerCase() === category.toLowerCase()
+      )?.resourceType; // This component uses category
 
       if (matchingCategory) {
         setOpenCategory(matchingCategory)
@@ -108,20 +109,28 @@ export default function InternalResources() {
     let filtered = [...resources]
 
     if (query) {
+      const lowerQuery = query.toLowerCase(); // Convert query once
       filtered = filtered
         .map((group) => ({
           ...group,
           items: group.items.filter(
             (resource) =>
-              resource.name.toLowerCase().includes(query.toLowerCase()) ||
-              resource.description.toLowerCase().includes(query.toLowerCase()),
+              // Check name before toLowerCase
+              (resource.name && typeof resource.name === 'string' && resource.name.toLowerCase().includes(lowerQuery)) ||
+              // Check description before toLowerCase
+              (resource.description && typeof resource.description === 'string' && resource.description.toLowerCase().includes(lowerQuery))
           ),
         }))
-        .filter((group) => group.items.length > 0)
+        .filter((group) => group.items.length > 0);
     }
 
     if (category && category !== "all") {
-      filtered = filtered.filter((group) => group.category.toLowerCase() === category.toLowerCase())
+      const lowerCategory = category.toLowerCase(); // Convert category once
+      filtered = filtered.filter(
+        (group) =>
+          // Check category before toLowerCase
+          group.resourceType && typeof group.resourceType === 'string' && group.resourceType.toLowerCase() === lowerCategory
+      );
     }
 
     setFilteredResources(filtered)
@@ -194,16 +203,16 @@ export default function InternalResources() {
           >
             {filteredResources.map((group, index) => (
               <AccordionItem
-                key={group.category}
-                value={group.category}
+                key={group.resourceType}
+                value={group.resourceType}
                 className={`bg-white rounded-lg border overflow-hidden ${
                   lastSearchParams.category === "all" && index % 2 === 0 ? "bg-primary/5" : ""
                 }`}
-                data-category={group.category}
+                data-category={group.resourceType}
               >
                 <AccordionTrigger className="px-6 hover:no-underline">
                   <div className="flex items-center">
-                    <span className="text-xl font-semibold">{group.category}</span>
+                    <span className="text-xl font-semibold">{group.resourceType}</span>
                     <span className="ml-3 text-sm text-muted-foreground">({group.items.length} resources)</span>
                   </div>
                 </AccordionTrigger>

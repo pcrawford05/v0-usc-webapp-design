@@ -10,9 +10,10 @@ import { Star } from "lucide-react"
 interface Resource {
   name: string
   description: string
-  category: string
+  resourceType: string
   type: "internal" | "external"
   link: string
+  eligibility?: string
 }
 
 // Separate component for search functionality to be wrapped in Suspense
@@ -68,10 +69,15 @@ export default function Home() {
               )
             })
             .map((item: any) => ({
-              ...item,
-              category: group.category,
+              name: item.name ?? "", // Ensure required fields are strings
+              description: item.description ?? "",
+              link: item.link ?? "#",
+              resourceType: group.resourceType ?? "Unknown", // Use resourceType, provide fallback
               type: "internal" as const,
-            })),
+              // include other fields like eligibility, importantDates if needed
+              eligibility: item.eligibility ?? "",
+              importantDates: item.importantDates ?? "",
+            }))
         )
 
         // Process and filter external resources
@@ -91,17 +97,22 @@ export default function Home() {
               )
             })
             .map((item: any) => ({
-              ...item,
-              category: group.resourceType,
+              name: item.name ?? "", // Ensure required fields are strings
+              description: item.description ?? "",
+              link: item.link ?? "#",
+              resourceType: group.resourceType ?? "Unknown", // Use resourceType, provide fallback
               type: "external" as const,
-            })),
+            }))
         )
 
         const allResources = [...internalResources, ...externalResources]
-        const uniqueCategories = Array.from(new Set(allResources.map((r) => r.category)))
+        // Calculate unique categories/types based on the resourceType field
+        const uniqueResourceTypes = Array.from(
+          new Set(allResources.map((r) => r.resourceType))
+        ).filter((rt): rt is string => typeof rt === 'string' && rt !== "Unknown"); // Filter out non-strings and fallback
 
         setResources(allResources)
-        setCategories(uniqueCategories)
+        setCategories(uniqueResourceTypes)
       } catch (error) {
         console.error("Error fetching resources:", error)
       } finally {
@@ -122,23 +133,33 @@ export default function Home() {
   const handleSearch = ({ query, category, type }: SearchParams) => {
     let filtered = resources
 
-    const isSearchActive = query || (category && category !== "all") || (type && type !== "all")
+    const isSearchActive = Boolean(query || (category && category !== "all") || (type && type !== "all"))
     setIsSearching(isSearchActive)
 
+    // Filter by search query (with safety checks)
     if (query) {
-      const searchQuery = query.toLowerCase()
+      const searchQuery = query.toLowerCase();
       filtered = filtered.filter(
         (resource) =>
-          resource.name.toLowerCase().includes(searchQuery) || resource.description.toLowerCase().includes(searchQuery),
-      )
+          // Check name before toLowerCase
+          (resource.name && typeof resource.name === 'string' && resource.name.toLowerCase().includes(searchQuery)) ||
+          // Check description before toLowerCase
+          (resource.description && typeof resource.description === 'string' && resource.description.toLowerCase().includes(searchQuery))
+      );
     }
 
+    // Filter by selected "Category" dropdown value (checking resource.resourceType)
     if (category && category !== "all") {
-      filtered = filtered.filter((resource) => resource.category.toLowerCase() === category.toLowerCase())
+      const lowerCategory = category.toLowerCase(); // This is the value selected in the dropdown
+      filtered = filtered.filter(resource =>
+        // Check resourceType before toLowerCase
+        resource.resourceType && typeof resource.resourceType === 'string' && resource.resourceType.toLowerCase() === lowerCategory
+      );
     }
 
+    // Filter by internal/external type
     if (type && type !== "all") {
-      filtered = filtered.filter((resource) => resource.type === type)
+      filtered = filtered.filter((resource) => resource.type === type);
     }
 
     setFilteredResources(filtered)
@@ -218,7 +239,7 @@ export default function Home() {
                     </div>
                     <p className="text-sm text-muted-foreground line-clamp-2">{resource.description}</p>
                     <div className="flex items-center justify-start text-xs text-muted-foreground mt-2">
-                      <span>{resource.category}</span>
+                      <span>{resource.resourceType}</span>
                     </div>
                     <button
                       className="absolute bottom-3 right-3 p-1 rounded-full transition-colors z-10"

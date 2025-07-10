@@ -63,9 +63,7 @@ export default function Home() {
                 !item.name.toLowerCase().includes("www.") &&
                 !item.name.toLowerCase().includes(".com") &&
                 !item.name.toLowerCase().includes(".org") &&
-                !item.name.toLowerCase().includes(".edu") &&
-                item.description &&
-                item.description.trim() !== ""
+                !item.name.toLowerCase().includes(".edu")
               )
             })
             .map((item: any) => ({
@@ -91,9 +89,7 @@ export default function Home() {
                 !item.name.toLowerCase().includes("www.") &&
                 !item.name.toLowerCase().includes(".com") &&
                 !item.name.toLowerCase().includes(".org") &&
-                !item.name.toLowerCase().includes(".edu") &&
-                item.description &&
-                item.description.trim() !== ""
+                !item.name.toLowerCase().includes(".edu")
               )
             })
             .map((item: any) => ({

@@ -9,6 +9,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/basic-search',
+        destination: '/?tab=basic',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig

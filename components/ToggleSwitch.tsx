@@ -1,13 +1,13 @@
 // components/ToggleSwitch.tsx
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import clsx from "clsx";
 
 export default function ToggleSwitch() {
   const router = useRouter();
-  const pathname = usePathname();
-  const isAI = pathname.includes("ai-search");
+  const searchParams = useSearchParams();
+  const isAI = searchParams.get("tab") !== "basic"; // default to AI
 
   return (
     <div className="relative w-64 h-12 bg-gray-200 rounded-full flex">
@@ -21,13 +21,13 @@ export default function ToggleSwitch() {
       {/* buttons */}
       <button
         className="relative z-10 flex-1 text-center font-semibold text-white"
-        onClick={() => router.push("/ai-search")}
+        onClick={() => router.push("/?tab=ai", { scroll: false })}
       >
         AI Search
       </button>
       <button
         className="relative z-10 flex-1 text-center font-semibold text-gray-800"
-        onClick={() => router.push("/basic-search")}
+        onClick={() => router.push("/?tab=basic", { scroll: false })}
       >
         Basic Search
       </button>

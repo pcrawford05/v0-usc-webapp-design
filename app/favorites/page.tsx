@@ -82,7 +82,7 @@ export default function Favorites() {
     <main className="min-h-screen p-6 md:p-12 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-center mb-8">
-          <Link href="/basic-search" className="flex items-center text-primary hover:text-primary/80 transition-colors">
+          <Link href="/?tab=basic" className="flex items-center text-primary hover:text-primary/80 transition-colors">
             <ChevronLeft className="h-4 w-4 mr-2" />
             Back to Home
           </Link>

@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState, Suspense } from "react"
+import { useSearchParams, useRouter } from "next/navigation"
 import { SearchBar, type SearchParams } from "@/components/search-bar"
 import { Card } from "@/components/ui/card"
 import { Star } from "lucide-react"
@@ -34,7 +35,10 @@ function ResourceSearch({
 }
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<"ai" | "basic">("ai")
+  const searchParams = useSearchParams()
+  const router = useRouter()
+  const initialTab = (searchParams.get("tab") === "basic" ? "basic" : "ai") as "ai" | "basic"
+  const [activeTab, setActiveTab] = useState<"ai" | "basic">(initialTab)
   const [resources, setResources] = useState<Resource[]>([])
   const [filteredResources, setFilteredResources] = useState<Resource[]>([])
   const [categories, setCategories] = useState<string[]>([])
@@ -151,7 +155,11 @@ export default function Home() {
           className={`flex-1 z-10 font-semibold text-center transition-colors duration-300 ${
             activeTab === "ai" ? "text-white" : "text-gray-700"
           }`}
-          onClick={() => setActiveTab("ai")}
+          onClick={() => {
+            setActiveTab("ai")
+            // Update URL (shallow) so sharing retains tab state
+            router.push("/?tab=ai", { scroll: false })
+          }}
         >
           AI Search
         </button>
@@ -159,7 +167,10 @@ export default function Home() {
           className={`flex-1 z-10 font-semibold text-center transition-colors duration-300 ${
             activeTab === "basic" ? "text-white" : "text-gray-700"
           }`}
-          onClick={() => setActiveTab("basic")}
+          onClick={() => {
+            setActiveTab("basic")
+            router.push("/?tab=basic", { scroll: false })
+          }}
         >
           Basic Search
         </button>

@@ -24,7 +24,8 @@ const DATA_DIR = path.resolve(process.cwd(), "data")
 const NOTION_DATA_PATH = path.join(DATA_DIR, "notion-data.json")
 const EMBEDDINGS_PATH = path.join(DATA_DIR, "embeddings.json")
 
-// Type definitions for Notion API responses
+// ---------------------- Types ----------------------
+
 interface NotionRichText {
   plain_text: string
 }
@@ -96,6 +97,8 @@ function getText(obj: NotionRichText[] | undefined | null): string | null {
   return null
 }
 
+// ---------------------- Notion Fetching ----------------------
+
 async function fetchDatabase(): Promise<ProcessedResource[]> {
   let results: NotionPage[] = []
   let hasMore = true
@@ -140,6 +143,8 @@ async function fetchDatabase(): Promise<ProcessedResource[]> {
     }
   })
 }
+
+// ---------------------- Change Detection ----------------------
 
 function normalizeForComparison(resource: ProcessedResource) {
   return {
@@ -187,6 +192,8 @@ function detectChanges(
 
   return { changed, deletedIds }
 }
+
+// ---------------------- Embedding Helpers ----------------------
 
 function toEmbeddingResource(resource: ProcessedResource): EmbeddingResource {
   const label = resource.uscExternal?.toLowerCase() ?? ""
@@ -237,7 +244,10 @@ async function updateEmbeddings(
   let finalEmbeddings: ResourceEmbedding[] = keptEmbeddings
 
   if (changedResources.length > 0) {
-    const { computeAllEmbeddings } = await import("../lib/embeddings")
+    const embeddingsModule = (await import(
+      new URL("../lib/embeddings.ts", import.meta.url).href
+    )) as typeof import("../lib/embeddings")
+    const { computeAllEmbeddings } = embeddingsModule
     const resourcesForEmbedding = changedResources.map(toEmbeddingResource)
 
     const updatedEmbeddings = await computeAllEmbeddings(resourcesForEmbedding, {
@@ -267,7 +277,9 @@ async function updateEmbeddings(
   console.log(`🧾 Saved ${finalEmbeddings.length} embeddings → ${EMBEDDINGS_PATH}`)
 }
 
-(async () => {
+// ---------------------- Main ----------------------
+
+;(async () => {
   try {
     console.log("🚀 Fetching Notion database...")
     const pages = await fetchDatabase()

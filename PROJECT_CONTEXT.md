@@ -17,7 +17,7 @@
 ---
 
 ## 2. Data Integration
-- [x] Notion API integration (`scripts/fetch-notion.ts`)
+- [x] Notion API integration (`scripts/sync-content.ts`)
   - [x] Pulls `Name`, `Resource Type`, `Description?`, `Eligibility?`, `Link?`, `Important Dates?`, `USC/External`
   - [x] Saves data to `data/notion-data.json`
 - [ ] Automated update from Notion (daily or real-time)
@@ -48,3 +48,11 @@
 ## 5. Key Features to Maintain
 All cards have favorite button and description and they don't highlight if they don't have a link
 Sub pages in basic search all redirect to basic search
+
+Notes to self:
+  Need to test Github action
+  After renaming the sync script run `pnpm run content:sync`
+  Ensure GitHub Action secrets are configured
+  I want the embeddings to only be changed as needed
+    There are many UI changes that need to be made.
+    Need ot watch out for the conversational AI outputting questions at the end

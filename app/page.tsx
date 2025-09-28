@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState, Suspense } from "react"
+import { useSearchParams } from "next/navigation"
 import { SearchBar, type SearchParams } from "@/components/search-bar"
 import { Card } from "@/components/ui/card"
 import { Star } from "lucide-react"
@@ -31,6 +32,20 @@ function ResourceSearch({
       <SearchBar onSearch={onSearch} categories={categories} showTypeFilter={showTypeFilter} />
     </div>
   )
+}
+
+// Component to handle URL parameters - needs to be wrapped in Suspense
+function ToggleHandler({ setActiveTab }: { setActiveTab: (tab: "ai" | "basic") => void }) {
+  const searchParams = useSearchParams()
+
+  useEffect(() => {
+    const toggle = searchParams.get("toggle")
+    if (toggle === "basic-search" || toggle === "basic") {
+      setActiveTab("basic")
+    }
+  }, [searchParams, setActiveTab])
+
+  return null
 }
 
 export default function Home() {
@@ -105,6 +120,31 @@ export default function Home() {
     }
   }, [])
 
+  // Save favorites to localStorage whenever favorites change
+  useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites))
+  }, [favorites])
+
+  const toggleFavorite = (resourceName: string, e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+
+    setFavorites((prev) => {
+      if (prev.includes(resourceName)) {
+        return prev.filter((name) => name !== resourceName)
+      } else {
+        return [...prev, resourceName]
+      }
+    })
+  }
+
+  const handleResourceClick = (e: React.MouseEvent, resource: Resource) => {
+    if (!resource.link || resource.link === "#") {
+      e.preventDefault()
+      alert("No link available for this resource.")
+    }
+  }
+
   const handleSearch = ({ query, category, type }: SearchParams) => {
     let filtered = resources
     const isSearchActive = Boolean(query || (category && category !== "all") || (type && type !== "all"))
@@ -135,6 +175,10 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col items-center p-4 md:p-6 pb-16">
+      <Suspense fallback={null}>
+        <ToggleHandler setActiveTab={setActiveTab} />
+      </Suspense>
+      
       <h1 className="text-3xl md:text-5xl font-bold text-center mb-6 text-primary">
         USC Entrepreneurship Resources
       </h1>
@@ -248,26 +292,82 @@ export default function Home() {
           ) : (
             <div className="flex-1 w-full max-w-6xl overflow-auto pt-2">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {filteredResources.map((resource) => (
-                  <Link
-                    key={resource.name}
-                    href={resource.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block group"
-                  >
-                    <Card className="h-full transition-all duration-200 hover:shadow-md hover:border-secondary hover:-translate-y-0.5 relative">
-                      <div className="p-4">
-                        <div className="flex items-start justify-between mb-2">
-                          <h3 className="font-semibold group-hover:text-primary transition-colors">
-                            {resource.name}
-                          </h3>
-                        </div>
-                        <p className="text-sm text-gray-600">{resource.description}</p>
+                {filteredResources.map((resource) => {
+                  const hasLink = resource.link && resource.link !== "#"
+                  
+                  if (hasLink) {
+                    return (
+                      <Link
+                        key={resource.name}
+                        href={resource.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block group"
+                      >
+                        <Card className="h-full transition-all duration-200 hover:shadow-md hover:border-secondary hover:-translate-y-0.5 relative">
+                          <div className="p-4">
+                            <div className="flex items-start justify-between mb-2">
+                              <h3 className="font-semibold group-hover:text-primary transition-colors">
+                                {resource.name}
+                              </h3>
+                            </div>
+                            <p className="text-sm text-muted-foreground mb-4">{resource.description}</p>
+                            <button
+                              className="absolute bottom-3 right-3 p-1 rounded-full transition-colors z-10"
+                              onClick={(e) => toggleFavorite(resource.name, e)}
+                              aria-label={
+                                favorites.includes(resource.name) ? "Remove from favorites" : "Add to favorites"
+                              }
+                            >
+                              <Star
+                                className={`h-5 w-5 ${
+                                  favorites.includes(resource.name)
+                                    ? "fill-secondary text-secondary"
+                                    : "text-primary hover:fill-primary"
+                                } transition-all`}
+                              />
+                            </button>
+                          </div>
+                        </Card>
+                      </Link>
+                    )
+                  } else {
+                    return (
+                      <div
+                        key={resource.name}
+                        className="block cursor-pointer"
+                        onClick={(e) => handleResourceClick(e, resource)}
+                      >
+                        <Card className="h-full transition-all duration-200 relative">
+                          <div className="p-4">
+                            <div className="flex items-start justify-between mb-2">
+                              <h3 className="font-semibold">
+                                {resource.name}
+                              </h3>
+                            </div>
+                            <p className="text-sm text-muted-foreground mb-4">{resource.description}</p>
+                            <p className="text-xs text-muted-foreground italic mb-2">No link available</p>
+                            <button
+                              className="absolute bottom-3 right-3 p-1 rounded-full transition-colors z-10"
+                              onClick={(e) => toggleFavorite(resource.name, e)}
+                              aria-label={
+                                favorites.includes(resource.name) ? "Remove from favorites" : "Add to favorites"
+                              }
+                            >
+                              <Star
+                                className={`h-5 w-5 ${
+                                  favorites.includes(resource.name)
+                                    ? "fill-secondary text-secondary"
+                                    : "text-primary hover:fill-primary"
+                                } transition-all`}
+                              />
+                            </button>
+                          </div>
+                        </Card>
                       </div>
-                    </Card>
-                  </Link>
-                ))}
+                    )
+                  }
+                })}
               </div>
             </div>
           )}

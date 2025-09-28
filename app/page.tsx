@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { useEffect, useState, Suspense } from "react"
+import { useEffect, useRef, useState, Suspense } from "react"
 import type { FormEvent, KeyboardEvent } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
 import notionData from "@/data/notion-data.json"
@@ -71,6 +71,8 @@ export default function Home() {
   const [aiLoading, setAiLoading] = useState(false)
   const [aiError, setAiError] = useState<string | null>(null)
   const [aiSummary, setAiSummary] = useState<string | null>(null)
+  const [isStreamingSummary, setIsStreamingSummary] = useState(false)
+  const streamControllerRef = useRef<AbortController | null>(null)
 
   const aiExampleQueries = [
     "Freshman interested in edtech",
@@ -133,6 +135,13 @@ export default function Home() {
     }
   }, [])
 
+  useEffect(() => {
+    return () => {
+      streamControllerRef.current?.abort()
+      streamControllerRef.current = null
+    }
+  }, [])
+
   const handleSearch = ({ query, category, type }: SearchParams) => {
     let filtered = resources
     const isSearchActive = Boolean(query || (category && category !== "all") || (type && type !== "all"))
@@ -177,67 +186,235 @@ export default function Home() {
     score?: number | null
   }
 
+  type StreamResultsPayload = { results?: ApiResult[] }
+  type StreamTokenPayload = { token?: string }
+  type StreamSummaryPayload = { summary?: string }
+  type StreamErrorPayload = { error?: string }
+
+  const normalizeApiResults = (values: ApiResult[] | undefined | null) => {
+    if (!Array.isArray(values)) {
+      return [] as { resource: Resource; score: number }[]
+    }
+
+    return values.map((item: ApiResult) => {
+      const resource = item?.resource ?? {}
+
+      const normalizedResource: Resource = {
+        name: resource.name ?? "Untitled Resource",
+        description: resource.description ?? "",
+        resourceType: normalizeResourceType(resource.resourceType),
+        type: resource.type === "external" ? "external" : "internal",
+        link: resource.link ?? "#",
+        eligibility: resource.eligibility ?? "",
+        importantDates: resource.importantDates ?? "",
+      }
+
+      return {
+        resource: normalizedResource,
+        score: typeof item?.score === "number" ? item.score : 0,
+      }
+    })
+  }
+
   const handleAISubmit = async (event?: FormEvent<HTMLFormElement>) => {
     event?.preventDefault()
 
-    if (aiLoading || !aiQuery.trim()) return
+    const trimmedQuery = aiQuery.trim()
+    if (aiLoading || !trimmedQuery) {
+      return
+    }
+
+    streamControllerRef.current?.abort()
+
+    const controller = new AbortController()
+    streamControllerRef.current = controller
 
     setAiLoading(true)
     setAiError(null)
     setAiSummary(null)
+    setAiResults([])
+    setIsStreamingSummary(false)
+
+    const params = new URLSearchParams({ query: trimmedQuery, stream: "1" })
+
+    const consumeStream = async (response: Response) => {
+      const body = response.body
+      if (!body) {
+        throw new Error("Streaming not supported by this browser")
+      }
+
+      const reader = body.getReader()
+      const decoder = new TextDecoder()
+      let buffer = ""
+      let stop = false
+      let sawResults = false
+      let summaryFinished = false
+
+      const handleEvent = (rawEvent: string) => {
+        if (controller.signal.aborted) {
+          stop = true
+          return
+        }
+
+        const lines = rawEvent.split(/\r?\n/)
+        let eventName = "message"
+        const dataLines: string[] = []
+
+        for (const line of lines) {
+          if (line.startsWith("event:")) {
+            eventName = line.slice(6).trim()
+          } else if (line.startsWith("data:")) {
+            dataLines.push(line.slice(5).trimStart())
+          }
+        }
+
+        if (dataLines.length === 0) {
+          return
+        }
+
+        let payload: Record<string, unknown>
+        try {
+          payload = JSON.parse(dataLines.join("\n")) as Record<string, unknown>
+        } catch {
+          return
+        }
+
+        if (eventName === "results") {
+          const normalized = normalizeApiResults((payload as StreamResultsPayload).results ?? [])
+          setAiResults(normalized)
+          setAiLoading(false)
+          setIsStreamingSummary(true)
+          setAiSummary("")
+          sawResults = true
+          return
+        }
+
+        if (eventName === "summary-token") {
+          const token = (payload as StreamTokenPayload).token
+          if (typeof token !== "string" || token.length === 0) {
+            return
+          }
+          setAiSummary(prev => (prev ?? "") + token)
+          return
+        }
+
+        if (eventName === "summary-complete") {
+          const summaryValue = (payload as StreamSummaryPayload).summary ?? null
+          setAiSummary(summaryValue && summaryValue.trim().length > 0 ? summaryValue : null)
+          setIsStreamingSummary(false)
+          setAiLoading(false)
+          summaryFinished = true
+          stop = true
+          return
+        }
+
+        if (eventName === "summary-error") {
+          const errorMessage = (payload as StreamErrorPayload).error
+          if (typeof errorMessage === "string" && errorMessage.length > 0) {
+            console.warn("Summary streaming error:", errorMessage)
+          }
+          setAiSummary(null)
+          setIsStreamingSummary(false)
+          setAiLoading(false)
+          summaryFinished = true
+          stop = true
+          return
+        }
+      }
+
+      try {
+        while (!stop) {
+          const { value, done } = await reader.read()
+          if (done) {
+            break
+          }
+
+          buffer += decoder.decode(value, { stream: true })
+
+          let separatorIndex: number
+          while ((separatorIndex = buffer.indexOf("\n\n")) !== -1) {
+            const rawEvent = buffer.slice(0, separatorIndex)
+            buffer = buffer.slice(separatorIndex + 2)
+
+            if (rawEvent.trim().length === 0) {
+              continue
+            }
+
+            handleEvent(rawEvent)
+
+            if (stop) {
+              break
+            }
+          }
+        }
+
+        if (!stop) {
+          buffer += decoder.decode()
+        }
+
+        if (buffer.trim().length > 0) {
+          handleEvent(buffer)
+        }
+      } finally {
+        reader.releaseLock()
+
+        if (!controller.signal.aborted) {
+          if (!sawResults) {
+            setAiLoading(false)
+          }
+          if (!summaryFinished) {
+            setIsStreamingSummary(false)
+          }
+        }
+      }
+    }
 
     try {
-      const response = await fetch("/api/ai-search", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: aiQuery }),
+      const response = await fetch(`/api/ai-search?${params.toString()}`, {
+        method: "GET",
+        signal: controller.signal,
       })
 
-      const data = await response.json().catch(() => ({}))
+      const contentType = response.headers.get("Content-Type") ?? ""
+
+      if (contentType.includes("text/event-stream")) {
+        await consumeStream(response)
+        return
+      }
+
+      type SearchResponse = { summary?: unknown; results?: ApiResult[]; error?: string }
+      const data = (await response.json().catch(() => ({}))) as SearchResponse
 
       if (!response.ok) {
-        throw new Error(data?.error ?? "Search failed")
+        throw new Error(data.error ?? "Search failed")
       }
 
-      if (Array.isArray(data.results)) {
-        const normalized = data.results.map((item: ApiResult) => {
-          const resource = item?.resource ?? {}
+      const normalized = normalizeApiResults(data.results ?? [])
+      setAiResults(normalized)
 
-          const normalizedResource: Resource = {
-            name: resource.name ?? "Untitled Resource",
-            description: resource.description ?? "",
-            resourceType: normalizeResourceType(resource.resourceType),
-            type: resource.type === "external" ? "external" : "internal",
-            link: resource.link ?? "#",
-            eligibility: resource.eligibility ?? "",
-            importantDates: resource.importantDates ?? "",
-          }
-
-          return {
-            resource: normalizedResource,
-            score: typeof item?.score === "number" ? item.score : 0,
-          }
-        })
-
-        setAiResults(normalized)
-      } else {
-        setAiResults([])
-      }
-
-      if (typeof data.summary === "string") {
-        const trimmed = data.summary.trim()
-        setAiSummary(trimmed.length > 0 ? trimmed : null)
-      } else {
-        setAiSummary(null)
-      }
+      const summaryValue = typeof data.summary === "string" ? data.summary.trim() : ""
+      setAiSummary(summaryValue.length > 0 ? summaryValue : null)
+      setAiLoading(false)
     } catch (error) {
+      if (controller.signal.aborted) {
+        return
+      }
+
+      if (error instanceof DOMException && error.name === "AbortError") {
+        return
+      }
+
       console.error("AI search failed", error)
       const message = error instanceof Error ? error.message : "Unexpected error"
       setAiError(message)
       setAiResults([])
       setAiSummary(null)
-    } finally {
       setAiLoading(false)
+      setIsStreamingSummary(false)
+    } finally {
+      if (streamControllerRef.current === controller) {
+        streamControllerRef.current = null
+      }
     }
   }
 
@@ -252,6 +429,15 @@ export default function Home() {
       void handleAISubmit()
     }
   }
+
+  const summaryHasContent = typeof aiSummary === "string" && aiSummary.trim().length > 0
+  const summaryDisplay = summaryHasContent
+    ? aiSummary
+    : isStreamingSummary
+      ? typeof aiSummary === "string" && aiSummary.length > 0
+        ? aiSummary
+        : "Building summary…"
+      : "Summary unavailable. Here are the top resources instead."
 
   return (
     <main className="min-h-screen flex flex-col items-center p-4 md:p-6 pb-16">
@@ -339,7 +525,7 @@ export default function Home() {
               <div className="w-full rounded-lg border bg-white p-4 shadow-sm">
                 <h3 className="text-lg font-semibold text-primary mb-2">LLM Summary</h3>
                 <p className="text-sm text-muted-foreground whitespace-pre-line">
-                  {aiSummary ?? "Summary unavailable. Here are the top resources instead."}
+                  {summaryDisplay}
                 </p>
               </div>
 

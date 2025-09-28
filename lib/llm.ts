@@ -71,6 +71,22 @@ function isConversationalOnlyError(error: unknown): boolean {
   )
 }
 
+type TextGenerationStreamEvent = {
+  token?: {
+    text?: string
+    special?: boolean
+  }
+  generated_text?: string
+}
+
+type ChatCompletionStreamEvent = {
+  choices?: Array<{
+    delta?: {
+      content?: string | Array<{ text?: string | null } | string | null | undefined>
+    }
+  }>
+}
+
 function extractGeneratedText(payload: unknown): string | null {
   if (typeof payload === "string") {
     return payload.trim()
@@ -199,6 +215,225 @@ async function tryModel(model: string, prompt: string): Promise<TryModelResult> 
   }
 
   return { summary: null, error: null }
+}
+
+interface SummaryStreamCallbacks {
+  onToken?: (token: string) => void
+}
+
+async function streamTextGeneration(
+  model: string,
+  prompt: string,
+  onToken: (token: string) => void
+): Promise<string | null> {
+  const client = getHfClient()
+  let collected = ""
+  let hasContent = false
+
+  for await (const event of client.textGenerationStream({
+    model,
+    inputs: prompt,
+    parameters: {
+      max_new_tokens: 400,
+      temperature: 0.4,
+      top_p: 0.95,
+      return_full_text: false,
+    },
+  }) as AsyncGenerator<TextGenerationStreamEvent>) {
+    if (event.generated_text && event.generated_text.length > collected.length) {
+      const delta = event.generated_text.slice(collected.length)
+      if (delta) {
+        collected += delta
+        hasContent = true
+        onToken(delta)
+      }
+      continue
+    }
+
+    const tokenText = event.token?.text ?? ""
+    if (!tokenText || event.token?.special) {
+      continue
+    }
+
+    collected += tokenText
+    hasContent = true
+    onToken(tokenText)
+  }
+
+  const trimmed = collected.trim()
+  return hasContent && trimmed.length > 0 ? trimmed : null
+}
+
+async function streamChatCompletion(
+  model: string,
+  prompt: string,
+  onToken: (token: string) => void
+): Promise<string | null> {
+  const client = getHfClient()
+  let collected = ""
+  let hasContent = false
+
+  for await (const chunk of client.chatCompletionStream({
+    model,
+    messages: [
+      {
+        role: "system",
+        content: "You are an expert guide for USC entrepreneurship resources who writes concise, encouraging summaries.",
+      },
+      { role: "user", content: prompt },
+    ],
+    max_tokens: 400,
+    temperature: 0.4,
+    top_p: 0.95,
+  }) as AsyncGenerator<ChatCompletionStreamEvent>) {
+    const content = chunk.choices?.[0]?.delta?.content
+
+    if (!content) {
+      continue
+    }
+
+    if (typeof content === "string") {
+      if (content.length > 0) {
+        collected += content
+        hasContent = true
+        onToken(content)
+      }
+      continue
+    }
+
+    if (Array.isArray(content)) {
+      const text = content
+        .map(part => {
+          if (!part) {
+            return ""
+          }
+          if (typeof part === "string") {
+            return part
+          }
+          if (typeof part === "object" && typeof part.text === "string") {
+            return part.text
+          }
+          return ""
+        })
+        .join("")
+
+      if (text.length > 0) {
+        collected += text
+        hasContent = true
+        onToken(text)
+      }
+    }
+  }
+
+  const trimmed = collected.trim()
+  return hasContent && trimmed.length > 0 ? trimmed : null
+}
+
+async function streamModel(
+  model: string,
+  prompt: string,
+  onToken: (token: string) => void
+): Promise<string | null> {
+  try {
+    const generated = await streamTextGeneration(model, prompt, onToken)
+    if (generated) {
+      return generated
+    }
+  } catch (error) {
+    if (isConversationalOnlyError(error)) {
+      const chatSummary = await streamChatCompletion(model, prompt, onToken)
+      if (chatSummary) {
+        return chatSummary
+      }
+      throw error
+    }
+
+    throw error
+  }
+
+  const chatSummary = await streamChatCompletion(model, prompt, onToken)
+  if (chatSummary) {
+    return chatSummary
+  }
+
+  return null
+}
+
+export async function streamSummary(
+  query: string,
+  items: SummaryItem[],
+  callbacks: SummaryStreamCallbacks = {}
+): Promise<string | null> {
+  if (!query.trim() || items.length === 0) {
+    return null
+  }
+
+  const onToken = callbacks.onToken ?? (() => {})
+  const prompt = buildSummaryPrompt(query, items)
+  const modelsToTry = SUMMARY_MODEL !== DEFAULT_SUMMARY_MODEL ? [SUMMARY_MODEL, DEFAULT_SUMMARY_MODEL] : [SUMMARY_MODEL]
+
+  let lastError: unknown = null
+
+  for (const model of modelsToTry) {
+    let modelError: unknown = null
+    let producedTokens = false
+
+    const summary = await streamModel(
+      model,
+      prompt,
+      token => {
+        producedTokens = true
+        onToken(token)
+      }
+    ).catch(error => {
+      modelError = error
+      return null
+    })
+
+    if (summary && summary.trim().length > 0) {
+      return summary.trim()
+    }
+
+    if (modelError) {
+      if (SUMMARY_MODEL !== DEFAULT_SUMMARY_MODEL && model === SUMMARY_MODEL) {
+        if (isProviderUnavailableError(modelError)) {
+          console.warn(
+            `Requested summary model '${SUMMARY_MODEL}' is unavailable for streaming. Falling back to '${DEFAULT_SUMMARY_MODEL}'.`,
+            modelError
+          )
+        } else if (isConversationalOnlyError(modelError)) {
+          console.warn(
+            `Requested summary model '${SUMMARY_MODEL}' only supports conversational streaming. Falling back to '${DEFAULT_SUMMARY_MODEL}'.`
+          )
+        } else {
+          console.warn(
+            `Requested summary model '${SUMMARY_MODEL}' failed while streaming. Falling back to '${DEFAULT_SUMMARY_MODEL}'.`,
+            modelError
+          )
+        }
+      } else {
+        lastError = modelError
+      }
+
+      if (producedTokens) {
+        throw modelError
+      }
+
+      continue
+    }
+
+    if (SUMMARY_MODEL !== DEFAULT_SUMMARY_MODEL && model === SUMMARY_MODEL) {
+      console.warn(
+        `Requested summary model '${SUMMARY_MODEL}' returned no streaming content. Falling back to '${DEFAULT_SUMMARY_MODEL}'.`
+      )
+    }
+  }
+
+  if (lastError) {
+    throw lastError
+  }
+
+  return null
 }
 
 export async function generateSummary(query: string, items: SummaryItem[]): Promise<string | null> {

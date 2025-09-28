@@ -7,6 +7,7 @@ import Link from "next/link"
 import { ChevronLeft, Star } from "lucide-react"
 import { useEffect, useState } from "react"
 import { useLocalStorage } from "@/lib/use-local-storage"
+import notionData from "@/data/notion-data.json"
 
 interface FavoriteResource {
   name: string
@@ -14,6 +15,23 @@ interface FavoriteResource {
   link: string
   type: "internal" | "external"
   category: string
+}
+
+type NotionResource = {
+  name: string
+  description?: string | null
+  link?: string | null
+  uscExternal?: string | null
+  resourceType?: string | null
+}
+
+const notionResources = notionData as NotionResource[]
+
+const INTERNAL_MATCHERS = ["usc", "internal"]
+
+function normalizeResourceType(resourceType?: string | null) {
+  const trimmed = resourceType?.trim()
+  return trimmed && trimmed.length > 0 ? trimmed : "Other"
 }
 
 export default function Favorites() {
@@ -31,51 +49,31 @@ export default function Favorites() {
   }
 
   useEffect(() => {
-    async function fetchFavoriteResources() {
-      try {
-        const [internalRes, externalRes] = await Promise.all([
-          fetch("/api/internal-resources"),
-          fetch("/api/external-resources"),
-        ])
+    try {
+      const matched = notionResources.filter((resource) => favorites.includes(resource.name))
 
-        const internalData = await internalRes.json()
-        const externalData = await externalRes.json()
+      const normalized = matched.map<FavoriteResource>((resource) => {
+        const label = resource.uscExternal?.toLowerCase() ?? ""
+        const type: "internal" | "external" = INTERNAL_MATCHERS.some((matcher) => label.includes(matcher))
+          ? "internal"
+          : "external"
 
-        // Process internal resources
-        const internalResources = internalData.flatMap((group: any) =>
-          group.items
-            .filter((item: any) => favorites.includes(item.name))
-            .map((item: any) => ({
-              name: item.name,
-              description: item.description,
-              link: item.link || "#",
-              type: "internal" as const,
-              category: group.category,
-            })),
-        )
+        return {
+          name: resource.name ?? "Untitled Resource",
+          description: resource.description ?? "",
+          link: resource.link ?? "#",
+          type,
+          category: normalizeResourceType(resource.resourceType),
+        }
+      })
 
-        // Process external resources
-        const externalResources = externalData.flatMap((group: any) =>
-          group.items
-            .filter((item: any) => favorites.includes(item.name))
-            .map((item: any) => ({
-              name: item.name,
-              description: item.description,
-              link: item.link,
-              type: "external" as const,
-              category: group.resourceType,
-            })),
-        )
-
-        setFavoriteResources([...internalResources, ...externalResources])
-      } catch (error) {
-        console.error("Error fetching resources:", error)
-      } finally {
-        setIsLoading(false)
-      }
+      normalized.sort((a, b) => a.name.localeCompare(b.name))
+      setFavoriteResources(normalized)
+    } catch (error) {
+      console.error("Error processing favorites:", error)
+    } finally {
+      setIsLoading(false)
     }
-
-    fetchFavoriteResources()
   }, [favorites])
 
   return (

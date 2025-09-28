@@ -9,6 +9,7 @@ import { ChevronLeft, Calendar, Users, Star } from "lucide-react"
 import { useEffect, useState, useRef, Suspense } from "react"
 import { SearchBar, type SearchParams } from "@/components/search-bar"
 import { useLocalStorage } from "@/lib/use-local-storage"
+import notionData from "@/data/notion-data.json"
 
 interface Resource {
   name: string
@@ -22,6 +23,59 @@ interface Resource {
 interface ResourceGroup {
   resourceType: string
   items: Resource[]
+}
+
+type NotionResource = {
+  id: string
+  name: string
+  description?: string | null
+  resourceType?: string | null
+  uscExternal?: string | null
+  eligibility?: string | null
+  importantDates?: string | null
+  link?: string | null
+  stage?: string | null
+}
+
+const INTERNAL_MATCHERS = ["usc", "internal"]
+
+const notionResources = notionData as NotionResource[]
+
+function normalizeResourceType(resourceType?: string | null) {
+  const trimmed = resourceType?.trim()
+  return trimmed && trimmed.length > 0 ? trimmed : "Other"
+}
+
+function createInternalGroups(): ResourceGroup[] {
+  const grouped = new Map<string, Resource[]>()
+
+  notionResources
+    .filter((resource) => {
+      const label = resource.uscExternal?.toLowerCase() ?? ""
+      return INTERNAL_MATCHERS.some((matcher) => label.includes(matcher))
+    })
+    .forEach((resource) => {
+      const key = normalizeResourceType(resource.resourceType)
+      if (!grouped.has(key)) {
+        grouped.set(key, [])
+      }
+
+      grouped.get(key)!.push({
+        name: resource.name ?? "Untitled Resource",
+        description: resource.description ?? "",
+        eligibility: resource.eligibility ?? undefined,
+        importantDates: resource.importantDates ?? undefined,
+        link: resource.link ?? undefined,
+        stage: resource.stage ?? undefined,
+      })
+    })
+
+  return Array.from(grouped.entries())
+    .map(([resourceType, items]) => ({
+      resourceType,
+      items: items.sort((a, b) => a.name.localeCompare(b.name)),
+    }))
+    .sort((a, b) => a.resourceType.localeCompare(b.resourceType))
 }
 
 // Separate component for search functionality to be wrapped in Suspense
@@ -45,23 +99,16 @@ export default function InternalResources() {
   const [lastSearchParams, setLastSearchParams] = useState<SearchParams>({ query: "", category: "all" })
 
   useEffect(() => {
-    async function fetchResources() {
-      try {
-        const response = await fetch("/api/internal-resources")
-        if (!response.ok) throw new Error("Failed to fetch resources")
-        const data = await response.json()
-
-        setResources(data)
-        setFilteredResources(data)
-        setCategories(data.map((group: ResourceGroup) => group.resourceType))
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "An error occurred")
-      } finally {
-        setIsLoading(false)
-      }
+    try {
+      const grouped = createInternalGroups()
+      setResources(grouped)
+      setFilteredResources(grouped)
+      setCategories(grouped.map((group) => group.resourceType))
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to load internal resources")
+    } finally {
+      setIsLoading(false)
     }
-
-    fetchResources()
   }, [])
 
   useEffect(() => {

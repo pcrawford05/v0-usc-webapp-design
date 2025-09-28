@@ -1,6 +1,7 @@
 {
   "name": "my-v0-project",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -45,6 +46,7 @@
     "cmdk": "1.0.4",
     "csv-parse": "latest",
     "date-fns": "^3.0.0",
+    "dotenv": "^17.2.2",
     "embla-carousel-react": "8.5.1",
     "input-otp": "1.4.1",
     "lucide-react": "^0.454.0",

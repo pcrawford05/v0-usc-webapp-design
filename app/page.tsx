@@ -3,7 +3,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState, Suspense } from "react"
+import type { FormEvent, KeyboardEvent } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
+import notionData from "@/data/notion-data.json"
 import { SearchBar, type SearchParams } from "@/components/search-bar"
 import { Card } from "@/components/ui/card"
 import { Star } from "lucide-react"
@@ -16,6 +18,25 @@ interface Resource {
   link: string
   eligibility?: string
   importantDates?: string
+}
+
+type NotionResource = {
+  name: string
+  description?: string | null
+  resourceType?: string | null
+  uscExternal?: string | null
+  link?: string | null
+  eligibility?: string | null
+  importantDates?: string | null
+}
+
+const notionResources = notionData as NotionResource[]
+const INTERNAL_MATCHERS = ["usc", "internal"]
+const EXTERNAL_MATCHERS = ["external"]
+
+function normalizeResourceType(resourceType?: string | null) {
+  const trimmed = resourceType?.trim()
+  return trimmed && trimmed.length > 0 ? trimmed : "Other"
 }
 
 function ResourceSearch({
@@ -45,60 +66,63 @@ export default function Home() {
   const [isSearching, setIsSearching] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
   const [favorites, setFavorites] = useState<string[]>([])
+  const [aiQuery, setAiQuery] = useState("")
+  const [aiResults, setAiResults] = useState<{ resource: Resource; score: number }[]>([])
+  const [aiLoading, setAiLoading] = useState(false)
+  const [aiError, setAiError] = useState<string | null>(null)
+  const [aiSummary, setAiSummary] = useState<string | null>(null)
 
-  // Fetch resources from API
+  const aiExampleQueries = [
+    "Freshman interested in edtech",
+    "My idea is a robotics manufacturing company",
+    "Looking for external startup mentorship programs",
+    "Resources for USC students building AI products",
+  ]
+
+  // Load resources from static Notion export
   useEffect(() => {
-    async function fetchAllResources() {
-      try {
-        const [internalRes, externalRes] = await Promise.all([
-          fetch("/api/internal-resources"),
-          fetch("/api/external-resources"),
-        ])
+    try {
+      const internalResources: Resource[] = notionResources
+        .filter((resource) => {
+          const label = resource.uscExternal?.toLowerCase() ?? ""
+          return INTERNAL_MATCHERS.some((matcher) => label.includes(matcher))
+        })
+        .map((resource) => ({
+          name: resource.name ?? "Untitled Resource",
+          description: resource.description ?? "",
+          link: resource.link ?? "#",
+          resourceType: normalizeResourceType(resource.resourceType),
+          type: "internal" as const,
+          eligibility: resource.eligibility ?? "",
+          importantDates: resource.importantDates ?? "",
+        }))
 
-        const internalData = await internalRes.json()
-        const externalData = await externalRes.json()
+      const externalResources: Resource[] = notionResources
+        .filter((resource) => {
+          const label = resource.uscExternal?.toLowerCase() ?? ""
+          return EXTERNAL_MATCHERS.some((matcher) => label.includes(matcher))
+        })
+        .map((resource) => ({
+          name: resource.name ?? "Untitled Resource",
+          description: resource.description ?? "",
+          link: resource.link ?? "#",
+          resourceType: normalizeResourceType(resource.resourceType),
+          type: "external" as const,
+        }))
 
-        const internalResources = internalData.flatMap((group: any) =>
-          group.items
-            .filter((item: any) => item.name && !item.name.toLowerCase().includes("http"))
-            .map((item: any) => ({
-              name: item.name ?? "",
-              description: item.description ?? "",
-              link: item.link ?? "#",
-              resourceType: group.resourceType ?? "Unknown",
-              type: "internal" as const,
-              eligibility: item.eligibility ?? "",
-              importantDates: item.importantDates ?? "",
-            }))
-        )
+      const allResources = [...internalResources, ...externalResources]
+      const uniqueResourceTypes = Array.from(new Set(allResources.map((r) => r.resourceType))).sort((a, b) =>
+        a.localeCompare(b)
+      )
 
-        const externalResources = externalData.flatMap((group: any) =>
-          group.items
-            .filter((item: any) => item.name && !item.name.toLowerCase().includes("http"))
-            .map((item: any) => ({
-              name: item.name ?? "",
-              description: item.description ?? "",
-              link: item.link ?? "#",
-              resourceType: group.resourceType ?? "Unknown",
-              type: "external" as const,
-            }))
-        )
-
-        const allResources = [...internalResources, ...externalResources]
-        const uniqueResourceTypes = Array.from(
-          new Set(allResources.map((r) => r.resourceType))
-        ).filter((rt): rt is string => typeof rt === "string" && rt !== "Unknown")
-
-        setResources(allResources)
-        setCategories(uniqueResourceTypes)
-      } catch (error) {
-        console.error("Error fetching resources:", error)
-      } finally {
-        setIsLoading(false)
-      }
+      setResources(allResources)
+      setFilteredResources(allResources)
+      setCategories(uniqueResourceTypes)
+    } catch (error) {
+      console.error("Error loading resources:", error)
+    } finally {
+      setIsLoading(false)
     }
-
-    fetchAllResources()
   }, [])
 
   // Load favorites from localStorage
@@ -135,6 +159,98 @@ export default function Home() {
     }
 
     setFilteredResources(filtered)
+  }
+
+  type ApiResource = {
+    id?: string
+    name?: string | null
+    description?: string | null
+    resourceType?: string | null
+    type?: "internal" | "external"
+    link?: string | null
+    eligibility?: string | null
+    importantDates?: string | null
+  }
+
+  type ApiResult = {
+    resource?: ApiResource | null
+    score?: number | null
+  }
+
+  const handleAISubmit = async (event?: FormEvent<HTMLFormElement>) => {
+    event?.preventDefault()
+
+    if (aiLoading || !aiQuery.trim()) return
+
+    setAiLoading(true)
+    setAiError(null)
+    setAiSummary(null)
+
+    try {
+      const response = await fetch("/api/ai-search", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: aiQuery }),
+      })
+
+      const data = await response.json().catch(() => ({}))
+
+      if (!response.ok) {
+        throw new Error(data?.error ?? "Search failed")
+      }
+
+      if (Array.isArray(data.results)) {
+        const normalized = data.results.map((item: ApiResult) => {
+          const resource = item?.resource ?? {}
+
+          const normalizedResource: Resource = {
+            name: resource.name ?? "Untitled Resource",
+            description: resource.description ?? "",
+            resourceType: normalizeResourceType(resource.resourceType),
+            type: resource.type === "external" ? "external" : "internal",
+            link: resource.link ?? "#",
+            eligibility: resource.eligibility ?? "",
+            importantDates: resource.importantDates ?? "",
+          }
+
+          return {
+            resource: normalizedResource,
+            score: typeof item?.score === "number" ? item.score : 0,
+          }
+        })
+
+        setAiResults(normalized)
+      } else {
+        setAiResults([])
+      }
+
+      if (typeof data.summary === "string") {
+        const trimmed = data.summary.trim()
+        setAiSummary(trimmed.length > 0 ? trimmed : null)
+      } else {
+        setAiSummary(null)
+      }
+    } catch (error) {
+      console.error("AI search failed", error)
+      const message = error instanceof Error ? error.message : "Unexpected error"
+      setAiError(message)
+      setAiResults([])
+      setAiSummary(null)
+    } finally {
+      setAiLoading(false)
+    }
+  }
+
+  const handleAIExampleClick = (example: string) => {
+    setAiQuery(example)
+    setTimeout(() => handleAISubmit(), 0)
+  }
+
+  const handleAITextareaKeyDown = (event: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (event.key === "Enter" && !event.shiftKey) {
+      event.preventDefault()
+      void handleAISubmit()
+    }
   }
 
   return (
@@ -179,23 +295,80 @@ export default function Home() {
       {/* AI Search Tab */}
       {activeTab === "ai" && (
         <div className="w-full max-w-3xl flex flex-col items-center">
-          <textarea
-            className="w-full p-4 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/30 mb-4"
-            placeholder="Ask about USC Entrepreneurship Resources..."
-            rows={4}
-          />
-          <div className="flex flex-wrap gap-2 mt-2">
-            {["Freshman interested in edtech", "Robotics startup idea", "Funding resources"].map(
-              (q) => (
-                <button
-                  key={q}
-                  className="px-3 py-1 rounded-full bg-primary text-white text-sm hover:bg-primary/80"
-                >
-                  {q}
-                </button>
-              )
-            )}
+          <form onSubmit={handleAISubmit} className="w-full">
+            <textarea
+              className="w-full p-4 rounded-lg border border-gray-300 focus:border-primary focus:ring focus:ring-primary/30 mb-3"
+              placeholder="Ask about USC Entrepreneurship Resources..."
+              rows={4}
+              value={aiQuery}
+              onChange={(event) => setAiQuery(event.target.value)}
+              onKeyDown={handleAITextareaKeyDown}
+            />
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className="px-4 py-2 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-primary/80 disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={aiLoading}
+              >
+                Search
+              </button>
+            </div>
+          </form>
+
+          <div className="flex flex-wrap gap-2 mt-4">
+            {aiExampleQueries.map((example) => (
+              <button
+                key={example}
+                type="button"
+                onClick={() => handleAIExampleClick(example)}
+                className="px-3 py-1 rounded-full bg-primary text-white text-sm hover:bg-primary/80"
+              >
+                {example}
+              </button>
+            ))}
           </div>
+
+          {aiLoading && <p className="text-muted-foreground mt-4">Finding the best response…</p>}
+
+          {aiError && !aiLoading && (
+            <p className="text-sm text-red-600 mt-4 text-center">{aiError}</p>
+          )}
+
+          {aiResults.length > 0 && !aiLoading && (
+            <div className="w-full mt-6 space-y-4">
+              <div className="w-full rounded-lg border bg-white p-4 shadow-sm">
+                <h3 className="text-lg font-semibold text-primary mb-2">LLM Summary</h3>
+                <p className="text-sm text-muted-foreground whitespace-pre-line">
+                  {aiSummary ?? "Summary unavailable. Here are the top resources instead."}
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                {aiResults.map(({ resource, score }, index) => (
+                  <Card key={`${resource.name}-${index}`} className="p-4 hover:shadow-md transition-shadow">
+                    <h3 className="font-semibold text-lg text-primary mb-1">{resource.name}</h3>
+                    <p className="text-xs text-muted-foreground mb-2">Match score: {(score * 100).toFixed(1)}%</p>
+                    <p className="text-sm text-muted-foreground mb-2">
+                      {resource.description || "No description provided."}
+                    </p>
+                    <p className="text-xs text-secondary-foreground mb-2">{resource.resourceType}</p>
+                    <a
+                      href={resource.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-red-900 hover:underline text-sm"
+                    >
+                      Visit Resource
+                    </a>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {!aiLoading && !aiError && aiResults.length === 0 && aiQuery && (
+            <p className="text-center text-muted-foreground mt-4">No results found for "{aiQuery}"</p>
+          )}
         </div>
       )}
 

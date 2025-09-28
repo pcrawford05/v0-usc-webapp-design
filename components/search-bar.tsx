@@ -129,10 +129,7 @@ export function SearchBar({ onSearch, categories, showTypeFilter = false }: Sear
         {showTypeFilter && (
           <div className="space-y-1.5">
             <Label>Resource Type</Label>
-            <Select
-              value={searchParams.type ?? "all"}
-              onValueChange={(value) => handleChange("type", value as SearchParams["type"])}
-            >
+            <Select value={searchParams.type ?? "all"} onValueChange={(value) => handleChange("type", value)}>
               <SelectTrigger>
                 <SelectValue placeholder="Select type" />
               </SelectTrigger>

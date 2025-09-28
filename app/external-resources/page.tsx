@@ -9,6 +9,7 @@ import { ChevronLeft, Star } from "lucide-react"
 import { useEffect, useState, useRef, Suspense } from "react"
 import { SearchBar, type SearchParams } from "@/components/search-bar"
 import { useLocalStorage } from "@/lib/use-local-storage"
+import notionData from "@/data/notion-data.json"
 
 interface Resource {
   name: string
@@ -19,6 +20,53 @@ interface Resource {
 interface ResourceGroup {
   resourceType: string
   items: Resource[]
+}
+
+type NotionResource = {
+  id: string
+  name: string
+  description?: string | null
+  resourceType?: string | null
+  uscExternal?: string | null
+  link?: string | null
+}
+
+const EXTERNAL_MATCHERS = ["external"]
+
+const notionResources = notionData as NotionResource[]
+
+function normalizeResourceType(resourceType?: string | null) {
+  const trimmed = resourceType?.trim()
+  return trimmed && trimmed.length > 0 ? trimmed : "Other"
+}
+
+function createExternalGroups(): ResourceGroup[] {
+  const grouped = new Map<string, Resource[]>()
+
+  notionResources
+    .filter((resource) => {
+      const label = resource.uscExternal?.toLowerCase() ?? ""
+      return EXTERNAL_MATCHERS.some((matcher) => label.includes(matcher))
+    })
+    .forEach((resource) => {
+      const key = normalizeResourceType(resource.resourceType)
+      if (!grouped.has(key)) {
+        grouped.set(key, [])
+      }
+
+      grouped.get(key)!.push({
+        name: resource.name ?? "Untitled Resource",
+        description: resource.description ?? "",
+        link: resource.link ?? "#",
+      })
+    })
+
+  return Array.from(grouped.entries())
+    .map(([resourceType, items]) => ({
+      resourceType,
+      items: items.sort((a, b) => a.name.localeCompare(b.name)),
+    }))
+    .sort((a, b) => a.resourceType.localeCompare(b.resourceType))
 }
 
 // Separate component for search functionality to be wrapped in Suspense
@@ -42,23 +90,16 @@ export default function ExternalResources() {
   const [lastSearchParams, setLastSearchParams] = useState<SearchParams>({ query: "", category: "all" })
 
   useEffect(() => {
-    async function fetchResources() {
-      try {
-        const response = await fetch("/api/external-resources")
-        if (!response.ok) throw new Error("Failed to fetch resources")
-        const data = await response.json()
-
-        setResources(data)
-        setFilteredResources(data)
-        setCategories(data.map((group: ResourceGroup) => group.resourceType))
-      } catch (err) {
-        setError(err instanceof Error ? err.message : "An error occurred")
-      } finally {
-        setIsLoading(false)
-      }
+    try {
+      const grouped = createExternalGroups()
+      setResources(grouped)
+      setFilteredResources(grouped)
+      setCategories(grouped.map((group) => group.resourceType))
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to load external resources")
+    } finally {
+      setIsLoading(false)
     }
-
-    fetchResources()
   }, [])
 
   useEffect(() => {

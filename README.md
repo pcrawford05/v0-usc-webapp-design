@@ -1,6 +1,7 @@
 [Live Basic Webapp](https://v0-usc-webapp-design.vercel.app/)
 [Live AI Test Webapp](https://v0-usc-webapp-design-git-ai-test-peytons-projects-5a031a8d.vercel.app/?tab=ai)
 [Live AI Test Webapp](v0-usc-webapp-design-git-ai-test-peytons-projects-5a031a8d.vercel.app)
+[Live AI Test Webapp]([v0-usc-webapp-design-git-ai-test-peytons-projects-5a031a8d.vercel.app](https://v0-usc-webapp-design-git-ai-test-peytons-projects-5a031a8d.vercel.app/?tab=basic))
 # USC webapp design
 
 *Automatically synced with your [v0.dev](https://v0.dev) deployments*

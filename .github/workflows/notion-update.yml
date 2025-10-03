@@ -3,8 +3,8 @@ name: Daily Notion Update
 # Run on schedule or manual dispatch
 on:
   schedule:
-    - cron: "0 4 * * *"  # Every day at 4:00 AM UTC
-  workflow_dispatch:    # Allows manual trigger from GitHub UI
+    - cron: "0 11 * * *"  # Every day at 11:00 AM UTC
+  workflow_dispatch:      # Allows manual trigger from GitHub UI
 
 jobs:
   update-notion:
@@ -38,3 +38,4 @@ jobs:
           echo "NOTION_API_KEY length: ${#NOTION_API_KEY}"
           echo "NOTION_DATABASE_ID length: ${#NOTION_DATABASE_ID}"
           pnpm run content:sync || true
+        run: pnpm exec tsx scripts/sync-content.ts

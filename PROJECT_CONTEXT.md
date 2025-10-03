@@ -54,5 +54,6 @@ Notes to self:
   After renaming the sync script run `pnpm run content:sync`
   Ensure GitHub Action secrets are configured
   I want the embeddings to only be changed as needed
-    There are many UI changes that need to be made.
-    Need ot watch out for the conversational AI outputting questions at the end
+  There are many UI changes that need to be made.
+  Need to watch out for the conversational AI outputting questions at the end
+  

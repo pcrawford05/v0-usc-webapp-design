@@ -31,4 +31,6 @@ jobs:
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          HF_API_KEY: ${{ secrets.HF_API_KEY }}
+          HF_SUMMARY_MODEL: ${{ secrets.HF_SUMMARY_MODEL }}
         run: pnpm exec tsx scripts/sync-content.ts

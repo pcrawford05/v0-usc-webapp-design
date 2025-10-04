@@ -47,4 +47,4 @@ jobs:
             echo "No changes detected, skipping commit."
           fi
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}

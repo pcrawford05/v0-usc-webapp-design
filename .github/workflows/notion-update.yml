@@ -1,6 +1,5 @@
 name: Daily Notion Update
 
-# Run on schedule or manual dispatch
 on:
   schedule:
     - cron: "0 11 * * *"  # Every day at 11:00 AM UTC
@@ -34,3 +33,18 @@ jobs:
           HF_API_KEY: ${{ secrets.HF_API_KEY }}
           HF_SUMMARY_MODEL: ${{ secrets.HF_SUMMARY_MODEL }}
         run: pnpm exec tsx scripts/sync-content.ts
+
+      - name: Commit and push updated data if changes exist
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          # Only commit if there are changes
+          git add data/notion-data.json data/embeddings.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Daily update: Notion data & embeddings"
+            git push "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" HEAD:ai-test
+          else
+            echo "No changes detected, skipping commit."
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

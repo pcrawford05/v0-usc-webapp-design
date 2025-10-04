@@ -31,11 +31,4 @@ jobs:
         env:
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-        run: |
-          echo "Running Notion sync..."
-          echo "Node version: $(node -v)"
-          echo "PNPM version: $(pnpm -v)"
-          echo "NOTION_API_KEY length: ${#NOTION_API_KEY}"
-          echo "NOTION_DATABASE_ID length: ${#NOTION_DATABASE_ID}"
-          pnpm run content:sync || true
         run: pnpm exec tsx scripts/sync-content.ts

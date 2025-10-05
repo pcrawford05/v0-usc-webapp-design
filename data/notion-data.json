@@ -1,16 +1,5 @@
 [
   {
-    "id": "27cdbf52-cd2c-80b0-96e9-fb4ce3dcf396",
-    "last_edited_time": "2025-09-28T23:45:00.000Z",
-    "name": "Test3",
-    "resourceType": "Newsletters",
-    "uscExternal": "USC",
-    "description": null,
-    "eligibility": null,
-    "link": null,
-    "importantDates": null
-  },
-  {
     "id": "1c0dbf52-cd2c-8050-9899-edf4d28e9251",
     "last_edited_time": "2025-03-25T00:00:00.000Z",
     "name": "Biotech-Connection LA",

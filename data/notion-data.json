@@ -1,16 +1,5 @@
 [
   {
-    "id": "283dbf52-cd2c-80aa-9dda-f4e26a16ba6e",
-    "last_edited_time": "2025-10-05T22:30:00.000Z",
-    "name": "MJ Test",
-    "resourceType": "Newsletters",
-    "uscExternal": "USC",
-    "description": null,
-    "eligibility": null,
-    "link": null,
-    "importantDates": null
-  },
-  {
     "id": "1c0dbf52-cd2c-8050-9899-edf4d28e9251",
     "last_edited_time": "2025-03-25T00:00:00.000Z",
     "name": "Biotech-Connection LA",

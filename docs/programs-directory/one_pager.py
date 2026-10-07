@@ -11,24 +11,24 @@ GROUPS = [
         "Viterbi Startup Garage", "VSG Residency Program", "Summer Smasher", "Technology Innovation Fellowship",
         "William W. Wang TIE Hub", "Viterbi Student Institute for Innovation", "Baum Family Maker Space",
         "I-Corps Hub West", "I-Corps West Team Grant", "Viterbi Venture Fund", "Maseeh Entrepreneurial Prize Competition",
-        "Min Family Challenge", "Das Family Innovate x LA Competition", "Trojan Tank", "Origin Weekend",
+        "Min Family Challenge", "Das Family Innovate x LA Competition (InnovateLA)", "Trojan Tank", "Origin Weekend",
         "Origin Weekend Impact", "Global Student Startup Competition", "Viterbi Startup Showcase", "USC Startup Mixer",
         "Start-Up Stories", "Sugar Speaker Series", "Summer Start Fellows", "Deep Tech Office Hours",
         "Innovation Office Hours (TIE)", "VSEE", "Engineering Honors Program", "ENGR 100: Honors Colloquium",
         "ENG 493: Dean's Seminar in Entrepreneurship", "ENGR 499: Tech Development & Commercialization",
         "CSCI 532: Hacking for Defense", "CE 486: Humanitarian Startups", "CE 499: Innovation for Global Challenges",
         "ISE 585: Strategic Management of Technology", "Engineering Innovation for Global Challenges Minor",
-        "Technology Entrepreneurship Minor", "Technology Commercialization Certificate",
+        "Technology Entrepreneurship Minor", "Digital Entrepreneurship Minor", "Technology Commercialization Certificate",
         "Engineering Ventures, Innovation & Launch", "Viterbi TIE Newsletter", "Viterbi Startup Garage Newsletter"]),
     ("USC Marshall School of Business", [
         "Lloyd Greif Center for Entrepreneurial Studies", "Greif Incubator", "USC Marshall Venture Fund",
-        "New Venture Seed Competition", "Innovation Challenge", "ATHENA Initiative", "ATHENA Women's Entrepreneurship Summit",
+        "New Venture Seed Competition", "Innovation Challenge", "ATHENA Initiative", "ATHENA Women's Entrepreneurship Summit (Athena Conference)",
         "ATHENA Female Founders Pitch Competition", "ATHENA Launch & Learn Series", "Founder Central Initiative",
         "Marcia Israel Founder Showcase", "Catalyst Microgrant", "eCouncil Fund", "Hult Prize at USC",
-        "Venture Capital Investment Competition", "Marshall Experts-in-Residence", "Brittingham Social Enterprise Lab",
+        "Venture Capital Investment Competition (VCIC)", "Marshall Experts-in-Residence", "Brittingham Social Enterprise Lab",
         "Brittingham Social Entrepreneur-in-Residence", "BSEL Undergraduate Scholars Mentorship",
-        "Jacobson Family Sustainable Impact Lectures", "M.S. Entrepreneurship & Innovation",
-        "M.S. Social Entrepreneurship", "BAEP Entrepreneurship Courses", "Entrepreneurship & Innovation Emphasis",
+        "Jacobson Family Sustainable Impact Lectures", "M.S. Entrepreneurship & Innovation (MSEI)",
+        "M.S. Social Entrepreneurship (MSSE)", "BAEP Entrepreneurship Courses", "Entrepreneurship & Innovation Emphasis",
         "Entrepreneurship Minor", "MBA Entrepreneurship & Venture Management", "Greif Center Newsletter",
         "Greif Center Event Updates", "Brittingham Lab Newsletter"]),
     ("USC Iovine and Young Academy", [
@@ -59,7 +59,7 @@ GROUPS = [
         "Education Technology Accelerator (Rossier)", "Toolkit Entrepreneurship Courses (Dornsife)",
         "Entrepreneurship Research Guide (Libraries)"]),
     ("Student Organizations", [
-        "eCouncil", "USC Entrepreneur Club", "Trojan Venture Partners", "EVMA", "Sigma Eta Pi", "SparkSC", "LavaLab",
+        "eCouncil", "USC Entrepreneur Club", "Trojan Venture Partners", "EVMA", "Sigma Eta Pi (SEP)", "SparkSC", "LavaLab",
         "TroyLabs", "FightOnFounders", "SoGal", "HackSC", "Makers at USC", "MEDesign", "ProductSC", "Techie",
         "Kappa Theta Pi", "Nucleate"]),
     ("Ecosystem Partners", [
@@ -110,6 +110,6 @@ story = []
 for name, items in GROUPS:
     head = [Paragraph(name.replace("&", "&amp;"), hs), Rule(cw, 1.2), Spacer(1, 2)]
     body = [Paragraph('<font color="#990000">&#8226;</font> ' + s.replace("&", "&amp;"), it) for s in items]
-    story += [KeepTogether(head + body[:3])] + body[3:] + [Spacer(1, 7)]
+    story += [KeepTogether(head + body[:3])] + body[3:] + [Spacer(1, 5)]
 doc.build(story)
 print(sum(len(i) for _, i in GROUPS), "items")

@@ -11,11 +11,10 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      {
-        source: '/basic-search',
-        destination: '/?tab=basic',
-        permanent: true,
-      },
+      { source: '/basic-search', destination: '/?view=browse', permanent: true },
+      { source: '/internal-resources', destination: '/?view=browse', permanent: true },
+      { source: '/external-resources', destination: '/?view=browse', permanent: true },
+      { source: '/favorites', destination: '/?view=saved', permanent: true },
     ]
   },
 }

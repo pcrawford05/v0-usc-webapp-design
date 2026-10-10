@@ -47,6 +47,7 @@
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
     "csv-parse": "latest",
+    "d3-hierarchy": "3.1.2",
     "date-fns": "^3.0.0",
     "dotenv": "^17.2.2",
     "embla-carousel-react": "8.5.1",
@@ -71,6 +72,7 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@types/d3-hierarchy": "^3.1.7",
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",

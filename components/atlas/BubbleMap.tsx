@@ -20,6 +20,7 @@ interface Item {
 }
 interface Body extends Item {
   base: number
+  rv: number
   x: number
   y: number
   vx: number
@@ -69,6 +70,7 @@ function seed(items: Item[]): Body[] {
       ...it,
       r,
       base: r,
+      rv: 0,
       x: W / 2 + Math.cos(a) * W * 0.28 + (Math.random() - 0.5) * 40,
       y: H / 2 + Math.sin(a) * H * 0.25 + (Math.random() - 0.5) * 40,
       vx: (Math.random() - 0.5) * 3,
@@ -101,6 +103,24 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
   const [hover, setHover] = useState<string | null>(null)
   const hoverRef = useRef<string | null>(null)
   hoverRef.current = hover
+  const [ripples, setRipples] = useState<{ id: number; x: number; y: number; r: number; color: string }[]>([])
+  const enter = (key: string) => {
+    if (hoverRef.current === key) return
+    setHover(key)
+    const b = sim.current.find(x => x.key === key)
+    if (!b) return
+    // shockwave: neighbors get a push that ripples through the cluster
+    for (const o of sim.current) {
+      if (o === b) continue
+      const dx = o.x - b.x, dy = o.y - b.y, d = Math.hypot(dx, dy) || 1
+      const f = Math.max(0, 1 - d / 420) * 5
+      o.vx += (dx / d) * f
+      o.vy += (dy / d) * f
+    }
+    const id = Date.now() + Math.random()
+    setRipples(rs => [...rs.slice(-3), { id, x: b.x, y: b.y, r: b.base, color: b.color }])
+    setTimeout(() => setRipples(rs => rs.filter(r => r.id !== id)), 900)
+  }
   const reduced = useRef(false)
   const [portrait, setPortrait] = useState(false)
   useEffect(() => {
@@ -132,8 +152,10 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
         b.vy += (Math.random() - 0.5) * 0.05
         // hovered bubble swells, the rest shrink slightly; collisions push neighbors aside
         const hk = hoverRef.current
-        const target = hk ? (b.key === hk ? b.base * 1.45 : b.base * 0.88) : b.base
-        b.r += (target - b.r) * 0.14
+        const target = hk ? (b.key === hk ? Math.min(b.base * 1.45, b.base + 60) : b.base * 0.9) : b.base
+        // spring with overshoot so size changes wobble into place
+        b.rv = (b.rv + (target - b.r) * 0.16) * 0.78
+        b.r += b.rv
         b.vx *= 0.96
         b.vy *= 0.96
         const sp = Math.hypot(b.vx, b.vy)
@@ -231,7 +253,10 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
                 <stop offset="100%" stopColor="#000" stopOpacity="0.12" />
               </radialGradient>
             </defs>
-            {bodies.map(b => {
+            {ripples.map(rp => (
+              <circle key={rp.id} cx={rp.x} cy={rp.y} r={rp.r} fill="none" stroke={rp.color} strokeWidth={3} className="atlas-ripple" style={{ transformOrigin: `${rp.x}px ${rp.y}px` }} pointerEvents="none" />
+            ))}
+            {[...bodies].sort((a, z) => (a.key === hover ? 1 : 0) - (z.key === hover ? 1 : 0)).map(b => {
               const leaf = !!b.program
               const fs = Math.max(13, Math.min(leaf ? 19 : 24, b.r / (leaf ? 4.4 : 5)))
               const lines = wrapLabel(b.name, b.r, fs)
@@ -242,7 +267,7 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
                   transform={`translate(${b.x},${b.y})`}
                   className="cursor-pointer"
                   onClick={() => open(b)}
-                  onPointerEnter={() => setHover(b.key)}
+                  onPointerEnter={() => enter(b.key)}
                   onPointerLeave={() => setHover(h => (h === b.key ? null : h))}
                 >
                   <circle

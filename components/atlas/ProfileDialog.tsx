@@ -48,7 +48,7 @@ function Choice<T extends string>({ value, options, onChange, multi }: {
           onClick={() => onChange(o.key)}
           className={cn(
             "rounded-full border px-3 py-1.5 text-sm transition",
-            on(o.key) ? "border-transparent bg-primary text-primary-foreground" : "border-border bg-card hover:bg-muted",
+            on(o.key) ? "border-transparent bg-primary text-primary-foreground" : "glass hover:bg-muted",
           )}
         >
           {o.label}
@@ -113,7 +113,7 @@ export function ProfileDialog({ open, onOpenChange, profile, onSave }: {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-h-[92vh] w-[calc(100vw-1.5rem)] max-w-xl overflow-y-auto rounded-2xl p-0">
+      <DialogContent className="max-h-[92vh] w-[calc(100vw-1.5rem)] max-w-xl overflow-y-auto rounded-3xl border-0 p-0 glass-strong">
         <div className="space-y-5 p-5 sm:p-6">
           <DialogHeader className="space-y-1 text-left">
             <DialogTitle className="text-xl">Your founder profile</DialogTitle>
@@ -122,7 +122,7 @@ export function ProfileDialog({ open, onOpenChange, profile, onSave }: {
             </DialogDescription>
           </DialogHeader>
 
-          <section className="rounded-xl border border-border bg-muted/40 p-4">
+          <section className="rounded-2xl border border-white/70 bg-white/40 p-4">
             <div className="flex items-center gap-2 font-semibold">
               <Linkedin className="h-4 w-4 text-[#0A66C2]" /> Import from LinkedIn
             </div>
@@ -146,14 +146,14 @@ export function ProfileDialog({ open, onOpenChange, profile, onSave }: {
               onChange={e => setPaste(e.target.value)}
               placeholder="...or paste your LinkedIn About and Experience here"
               rows={3}
-              className="mt-2 w-full resize-y rounded-lg border border-border bg-card px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/40"
+              className="mt-2 w-full resize-y rounded-lg glass px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/40"
             />
             {paste.trim() && (
               <button
                 type="button"
                 disabled={busy}
                 onClick={() => runImport({ text: paste })}
-                className="mt-2 rounded-lg border border-border bg-card px-3 py-1.5 text-sm font-semibold transition hover:bg-muted disabled:opacity-50"
+                className="mt-2 rounded-lg glass px-3 py-1.5 text-sm font-semibold transition hover:bg-muted disabled:opacity-50"
               >
                 Read pasted text
               </button>
@@ -181,13 +181,13 @@ export function ProfileDialog({ open, onOpenChange, profile, onSave }: {
                 onChange={e => setDraft(d => ({ ...d, venture: e.target.value || undefined }))}
                 placeholder="e.g. A wearable that detects early signs of heat stroke"
                 maxLength={240}
-                className="w-full rounded-lg border border-border bg-card px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/40"
+                className="w-full rounded-lg glass px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/40"
               />
             </Field>
           </div>
         </div>
 
-        <div className="sticky bottom-0 flex items-center justify-between gap-2 border-t border-border bg-background px-5 py-3 sm:px-6">
+        <div className="sticky bottom-0 flex items-center justify-between gap-2 border-t border-white/60 bg-white/70 backdrop-blur-xl px-5 py-3 sm:px-6">
           {profile ? (
             <button type="button" onClick={() => (onSave(null), onOpenChange(false))} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-destructive">
               <X className="h-3.5 w-3.5" /> Clear profile

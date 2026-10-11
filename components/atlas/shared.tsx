@@ -74,7 +74,7 @@ export function ProgramCard({
       tabIndex={0}
       onClick={() => onOpen(program.id)}
       onKeyDown={e => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), onOpen(program.id))}
-      className="group relative flex h-full flex-col rounded-xl border border-border bg-card p-4 text-left transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      className="group relative flex h-full flex-col glass glass-hover rounded-2xl p-4 text-left hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
     >
       <div className="flex items-start justify-between gap-2">
         <GroupPill program={program} />
@@ -136,7 +136,7 @@ export function ProgramDrawer({
   const g = program ? GROUPS[program.group] : null
   return (
     <Sheet open={!!program} onOpenChange={open => !open && onClose()}>
-      <SheetContent side="right" className="w-full overflow-y-auto p-0 sm:max-w-md">
+      <SheetContent side="right" className="glass-strong w-full overflow-y-auto border-0 p-0 sm:max-w-md">
         {program && g && (
           <>
             <div className="px-6 pb-5 pt-8 text-white" style={{ backgroundColor: g.color }}>

@@ -31,7 +31,7 @@ function Chip({ active, onClick, children, color }: { active: boolean; onClick: 
       aria-pressed={active}
       className={cn(
         "rounded-full border px-3 py-1.5 text-sm transition",
-        active ? "border-transparent text-white shadow-sm" : "border-border bg-card text-foreground hover:bg-muted",
+        active ? "border-transparent text-white shadow-sm" : "glass text-foreground hover:bg-muted",
       )}
       style={active ? { backgroundColor: color ?? "hsl(var(--primary))" } : undefined}
     >
@@ -115,7 +115,7 @@ export function FindPathView({ all, profile, ...card }: CardProps & { all: Progr
   }, [all, who, stage, needs, nowMonth])
 
   const step = (n: number, title: string, children: React.ReactNode) => (
-    <div className="rounded-2xl border border-border bg-card p-4">
+    <div className="rounded-2xl glass p-4">
       <div className="mb-3 flex items-center gap-2">
         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{n}</span>
         <h3 className="font-semibold">{title}</h3>
@@ -194,15 +194,15 @@ export function BrowseView({ all, matches, query, profile, ...card }: CardProps 
         ))}
       </div>
       <div className="flex flex-wrap items-center gap-2 text-sm">
-        <select value={cat} onChange={e => setCat(e.target.value as Category)} className="rounded-lg border border-border bg-card px-3 py-2">
+        <select value={cat} onChange={e => setCat(e.target.value as Category)} className="rounded-lg glass px-3 py-2">
           <option value="">All types</option>
           {CATEGORIES.map(c => <option key={c}>{c}</option>)}
         </select>
-        <select value={aud} onChange={e => setAud(e.target.value as Audience)} className="rounded-lg border border-border bg-card px-3 py-2">
+        <select value={aud} onChange={e => setAud(e.target.value as Audience)} className="rounded-lg glass px-3 py-2">
           <option value="">Anyone</option>
           {(Object.keys(AUDIENCE_LABELS) as Audience[]).map(a => <option key={a} value={a}>{AUDIENCE_LABELS[a]}</option>)}
         </select>
-        <label className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-2">
+        <label className="inline-flex items-center gap-2 rounded-lg glass px-3 py-2">
           <input type="checkbox" checked={verifiedOnly} onChange={e => setVerifiedOnly(e.target.checked)} className="accent-[hsl(var(--primary))]" />
           Verified details only
         </label>
@@ -234,7 +234,7 @@ export function CalendarView({ all, onOpen, profile }: { all: Program[]; onOpen:
         <p className="text-sm text-muted-foreground">
           Deadlines and events for the next 12 months, based on each program's usual cycle. Dates shift year to year, so confirm on the official page.
         </p>
-        <label className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-3 py-1.5 text-sm">
+        <label className="inline-flex items-center gap-2 rounded-lg glass px-3 py-1.5 text-sm">
           <input type="checkbox" checked={showCourses} onChange={e => setShowCourses(e.target.checked)} className="accent-[hsl(var(--primary))]" />
           Include courses and clubs
         </label>
@@ -247,7 +247,7 @@ export function CalendarView({ all, onOpen, profile }: { all: Program[]; onOpen:
             <section
               key={`${year}-${m}`}
               className={cn(
-                "w-64 shrink-0 snap-start rounded-2xl border bg-card p-3",
+                "w-64 shrink-0 snap-start rounded-2xl border glass p-3",
                 i === 0 ? "border-primary shadow-md ring-1 ring-primary/30" : "border-border",
               )}
             >
@@ -272,7 +272,7 @@ export function CalendarView({ all, onOpen, profile }: { all: Program[]; onOpen:
           )
         })}
       </div>
-      <div className="rounded-2xl border border-border bg-card p-4">
+      <div className="rounded-2xl glass p-4">
         <button onClick={() => setShowAlways(!showAlways)} className="flex w-full items-center justify-between text-left">
           <span className="font-semibold">Year-round and rolling ({alwaysOn.length})</span>
           <span className="text-sm text-primary">{showAlways ? "Hide" : "Show"}</span>
@@ -335,7 +335,7 @@ export function AskView({
           <p className="mt-1 text-muted-foreground">Describe where you are and what you need. Answers come only from the program catalog.</p>
           <div className="mt-5 flex flex-wrap justify-center gap-2">
             {SUGGESTIONS.map(s => (
-              <button key={s} onClick={() => send(s)} className="rounded-full border border-border bg-card px-3 py-1.5 text-sm transition hover:border-primary/50 hover:bg-muted">
+              <button key={s} onClick={() => send(s)} className="rounded-full glass px-3 py-1.5 text-sm transition hover:border-primary/50 hover:bg-muted">
                 {s}
               </button>
             ))}
@@ -351,7 +351,7 @@ export function AskView({
             </div>
           ) : (
             <div key={i} className="space-y-3">
-              <div className="max-w-[90%] rounded-2xl rounded-bl-sm border border-border bg-card px-4 py-3 leading-relaxed">{t.content}</div>
+              <div className="max-w-[90%] rounded-2xl rounded-bl-sm glass px-4 py-3 leading-relaxed">{t.content}</div>
               {t.picks && t.picks.length > 0 && (
                 <Grid
                   items={t.picks.map(p => programById.get(p.id)!).filter(Boolean)}
@@ -371,7 +371,7 @@ export function AskView({
         <div ref={endRef} />
       </div>
 
-      <form onSubmit={e => (e.preventDefault(), send(input))} className="sticky bottom-4 mt-6 flex items-center gap-2 rounded-2xl border border-border bg-card p-2 shadow-lg">
+      <form onSubmit={e => (e.preventDefault(), send(input))} className="sticky bottom-4 mt-6 flex items-center gap-2 rounded-2xl glass p-2 shadow-lg">
         <input
           value={input}
           onChange={e => setInput(e.target.value)}

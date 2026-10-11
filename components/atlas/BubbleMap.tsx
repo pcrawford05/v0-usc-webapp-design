@@ -41,13 +41,39 @@ function rootLevel(programs: Program[]): Level {
   }
 }
 
+// Distinct hue per category so sibling bubbles are easy to tell apart at every level.
+const CATEGORY_COLORS: Record<string, string> = {
+  "Funding & Grants": "#1B7F5C",
+  "Competitions & Pitch": "#C2410C",
+  "Accelerators & Incubators": "#990000",
+  "Mentorship & Office Hours": "#2563A8",
+  "Events & Speakers": "#7C3AED",
+  "Courses & Degrees": "#0E7490",
+  "Makerspaces & Coworking": "#B45309",
+  "Legal & IP": "#475569",
+  "Research Commercialization": "#BE185D",
+  "Student Organizations": "#A16207",
+  "Partners & Ecosystem": "#6D5A4E",
+  "Founder Toolkits": "#4D7C0F",
+}
+
+// Leaves cycle through distinct hues so neighbouring programs are easy to tell apart.
+const LEAF_COLORS = ["#990000", "#1F4E79", "#1B7F5C", "#7C3AED", "#C2410C", "#0E7490", "#BE185D", "#4D7C0F", "#A16207", "#475569", "#6B3F8F", "#B5651D"]
+
+function leaves(title: string, programs: Program[]): Level {
+  return {
+    title,
+    items: programs.map((p, i) => ({ key: p.id, name: p.name, color: LEAF_COLORS[i % LEAF_COLORS.length], programs: [p], program: p })),
+  }
+}
+
 function childLevel(item: Item): Level {
-  if (item.programs.length <= MAX_DIRECT || item.program)
-    return { title: item.name, items: item.programs.map(p => ({ key: p.id, name: p.name, color: item.color, programs: [p], program: p })) }
   const cats = [...new Set(item.programs.map(p => p.category))].sort()
+  // A single category would only nest the same set again, so show its programs directly.
+  if (item.programs.length <= MAX_DIRECT || cats.length < 2) return leaves(item.name, item.programs)
   return {
     title: item.name,
-    items: cats.map(c => ({ key: `${item.key}/${c}`, name: c, color: item.color, programs: item.programs.filter(p => p.category === c) })),
+    items: cats.map(c => ({ key: `${item.key}/${c}`, name: c, color: CATEGORY_COLORS[c] ?? item.color, programs: item.programs.filter(p => p.category === c) })),
   }
 }
 
@@ -80,15 +106,30 @@ function seed(items: Item[]): Body[] {
   })
 }
 
-function wrapLabel(name: string, r: number, fs: number): string[] {
-  const max = Math.max(6, Math.floor((r * 1.55) / (fs * 0.56)))
+function wrapLabel(name: string, max: number): string[] {
   const lines: string[] = []
   for (const w of name.split(" ")) {
     const last = lines[lines.length - 1]
     if (last && (last + " " + w).length <= max) lines[lines.length - 1] = last + " " + w
     else lines.push(w)
   }
-  return lines.length > 4 ? [...lines.slice(0, 3), lines.slice(3).join(" ").slice(0, max - 1) + "…"] : lines
+  return lines
+}
+
+// Shrink the font until every line fits inside the circle; truncate only as a last resort.
+function fitLabel(name: string, r: number, leaf: boolean, extra: number): { fs: number; lines: string[] } {
+  let fs = Math.min(leaf ? 19 : 24, r / (leaf ? 4.2 : 4.6))
+  for (; fs >= 8.5; fs -= 0.5) {
+    const max = Math.floor((r * 1.5) / (fs * 0.6))
+    const lines = wrapLabel(name, max)
+    const height = (lines.length + extra) * fs * 1.15
+    const half = height / 2
+    const chord = 2 * Math.sqrt(Math.max(0, r * r - half * half)) * 0.9
+    if (height <= r * 1.6 && lines.every(l => l.length * fs * 0.6 <= chord)) return { fs, lines }
+  }
+  const max = Math.max(4, Math.floor((r * 1.4) / (fs * 0.6)))
+  const lines = wrapLabel(name, max).slice(0, 3)
+  return { fs, lines: lines.map(l => (l.length > max ? l.slice(0, max - 1) + "…" : l)) }
 }
 
 export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]; highlight: Set<string> | null; onOpen: (id: string) => void }) {
@@ -183,8 +224,7 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
             </defs>
             {[...bodies].sort((a, z) => (a.key === hover ? 1 : 0) - (z.key === hover ? 1 : 0)).map(b => {
               const leaf = !!b.program
-              const fs = Math.max(13, Math.min(leaf ? 19 : 24, b.r / (leaf ? 4.4 : 5)))
-              const lines = wrapLabel(b.name, b.r, fs)
+              const { fs, lines } = fitLabel(b.name, b.r, leaf, leaf ? 0 : 0.8)
               const isHover = hover === b.key
               return (
                 <g

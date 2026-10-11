@@ -190,7 +190,7 @@ function Atlas() {
       </main>
 
       <footer className="mx-auto max-w-7xl px-4 pb-10 text-xs text-muted-foreground sm:px-6">
-        Program details are researched from public sources and change often. Always confirm dates and eligibility on the official page.
+        Program details are researched from public sources and change often. Always confirm dates and eligibility on the official page. Spot an error? Email <a href="mailto:pcrawfor@usc.edu" className="underline hover:text-foreground">pcrawfor@usc.edu</a>.
       </footer>
 
       <ProfileDialog open={profileOpen} onOpenChange={setProfileOpen} profile={profile} onSave={saveProfile} />

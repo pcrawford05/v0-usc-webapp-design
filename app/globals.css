@@ -79,6 +79,9 @@ body {
 .glass-hover:hover { background: rgba(255, 255, 255, 0.72); box-shadow: inset 0 1px 0 #fff, 0 16px 36px -14px rgba(153, 0, 0, 0.28); }
 
 /* Bubble hover ripple */
-@keyframes atlas-ripple { from { transform: scale(1); opacity: .55; } to { transform: scale(1.9); opacity: 0; } }
-.atlas-ripple { animation: atlas-ripple 900ms cubic-bezier(.2,.7,.3,1) forwards; }
-@media (prefers-reduced-motion: reduce) { .atlas-ripple { display: none; } }
+@keyframes atlas-spark {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  40% { transform: scale(1.15) rotate(45deg); opacity: 1; }
+  100% { transform: scale(0) rotate(120deg); opacity: 0; }
+}
+.atlas-spark { transform-box: fill-box; transform-origin: center; opacity: 0; animation: atlas-spark 700ms cubic-bezier(.3,.7,.4,1) both; }

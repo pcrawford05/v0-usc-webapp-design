@@ -100,7 +100,9 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
   const pointer = useRef<{ x: number; y: number; active: boolean }>({ x: 0, y: 0, active: false })
   const svgRef = useRef<SVGSVGElement>(null)
   const [hover, setHover] = useState<string | null>(null)
-  const enter = (key: string) => setHover(key)
+  // Bumped on every enter so re-hovering remounts the sparkles and restarts them.
+  const [burst, setBurst] = useState(0)
+  const enter = (key: string) => (setHover(key), setBurst(n => n + 1))
   const [portrait, setPortrait] = useState(false)
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 640px)")
@@ -178,15 +180,6 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
                 <stop offset="45%" stopColor="#fff" stopOpacity="0.08" />
                 <stop offset="100%" stopColor="#000" stopOpacity="0.12" />
               </radialGradient>
-              {bodies.map((b, i) => (
-                // A soft band of light sweeps across each bubble; offsets stagger the glints.
-                <linearGradient key={b.key} id={`shine-${i}`} x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0.35" stopColor="#fff" stopOpacity="0" />
-                  <stop offset="0.5" stopColor="#fff" stopOpacity="0.38" />
-                  <stop offset="0.65" stopColor="#fff" stopOpacity="0" />
-                  <animateTransform attributeName="gradientTransform" type="translate" values="-1 -1; 1 1" dur="3.6s" begin={`${((i * 0.9) % 3.6).toFixed(1)}s`} repeatCount="indefinite" />
-                </linearGradient>
-              ))}
             </defs>
             {[...bodies].sort((a, z) => (a.key === hover ? 1 : 0) - (z.key === hover ? 1 : 0)).map(b => {
               const leaf = !!b.program
@@ -212,7 +205,6 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
                     style={{ filter: isHover ? "drop-shadow(0 8px 18px rgba(0,0,0,.25))" : "drop-shadow(0 3px 8px rgba(0,0,0,.12))", transition: "r 150ms" }}
                   />
                   <circle r={b.r} fill="url(#sheen)" pointerEvents="none" />
-                  <circle r={b.r} fill={`url(#shine-${bodies.indexOf(b)})`} pointerEvents="none" className="motion-reduce:hidden" />
                   {lines.map((line, i) => (
                     <text key={i} y={(i - (lines.length - 1) / 2) * fs * 1.15 - (leaf ? 0 : fs * 0.35)} textAnchor="middle" dominantBaseline="middle" fontSize={fs} fontWeight={700} fill="#fff" pointerEvents="none">
                       {line}
@@ -224,6 +216,7 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
                     </text>
                   )}
                   </g>
+                  {isHover && <Sparkles key={burst} r={b.r} />}
                 </g>
               )
             })}
@@ -256,5 +249,30 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
         </ul>
       </aside>
     </div>
+  )
+}
+
+// Four-point stars that pop around a bubble's rim once per hover.
+const SPARKS = [
+  { a: -0.7, d: 0.92, s: 1, t: 0 },
+  { a: 0.35, d: 1.04, s: 0.6, t: 90 },
+  { a: 1.3, d: 0.85, s: 0.8, t: 180 },
+  { a: 2.4, d: 1.0, s: 0.55, t: 60 },
+  { a: 3.4, d: 0.9, s: 0.9, t: 240 },
+  { a: 4.5, d: 1.06, s: 0.65, t: 140 },
+  { a: -0.2, d: 0.45, s: 0.5, t: 300 },
+]
+const STAR = "M0,-1 C0.12,-0.12 0.12,-0.12 1,0 C0.12,0.12 0.12,0.12 0,1 C-0.12,0.12 -0.12,0.12 -1,0 C-0.12,-0.12 -0.12,-0.12 0,-1Z"
+
+function Sparkles({ r }: { r: number }) {
+  const size = Math.max(7, Math.min(16, r * 0.16))
+  return (
+    <g pointerEvents="none" className="motion-reduce:hidden">
+      {SPARKS.map((p, i) => (
+        <g key={i} transform={`translate(${Math.cos(p.a) * r * p.d},${Math.sin(p.a) * r * p.d}) scale(${size * p.s})`}>
+          <path d={STAR} fill="#fff" className="atlas-spark" style={{ animationDelay: `${p.t}ms`, filter: "drop-shadow(0 0 0.35px rgba(255,236,170,.95))" }} />
+        </g>
+      ))}
+    </g>
   )
 }

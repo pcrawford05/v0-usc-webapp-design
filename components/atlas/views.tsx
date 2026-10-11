@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowUp, Bookmark, Loader2, RotateCcw, Sparkles } from "lucide-react"
+import { ArrowUp, Bookmark, LayoutGrid, Rows3, Loader2, RotateCcw, Sparkles } from "lucide-react"
 import { useEffect, useMemo, useRef, useState } from "react"
 
 import {
@@ -20,6 +20,7 @@ import {
 import { fitScore, type Profile } from "@/lib/profile"
 import { cn } from "@/lib/utils"
 
+import { ProgramTable } from "./ProgramTable"
 import { GroupPill, ProgramCard } from "./shared"
 
 type CardProps = { onOpen: (id: string) => void; isSaved: (id: string) => boolean; onToggleSave: (id: string) => void }
@@ -171,6 +172,14 @@ export function BrowseView({ all, matches, query, profile, ...card }: CardProps 
   const [cat, setCat] = useState<Category | "">("")
   const [aud, setAud] = useState<Audience | "">("")
   const [verifiedOnly, setVerifiedOnly] = useState(false)
+  const [layout, setLayoutState] = useState<"cards" | "table">("cards")
+  useEffect(() => {
+    try { if (localStorage.getItem("atlas:browse") === "table") setLayoutState("table") } catch { /* ignore */ }
+  }, [])
+  const setLayout = (l: "cards" | "table") => {
+    setLayoutState(l)
+    try { localStorage.setItem("atlas:browse", l) } catch { /* ignore */ }
+  }
 
   const filtered = (matches ?? all).filter(
     p =>
@@ -211,8 +220,21 @@ export function BrowseView({ all, matches, query, profile, ...card }: CardProps 
           {query && ` matching "${query}"`}
           {forYou && ", best fits for you first"}
         </span>
+        <div className="flex rounded-lg glass p-0.5" role="group" aria-label="Layout">
+          {([["cards", LayoutGrid, "Cards"], ["table", Rows3, "Table"]] as const).map(([k, Icon, label]) => (
+            <button
+              key={k}
+              onClick={() => setLayout(k)}
+              aria-pressed={layout === k}
+              className={cn("inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5", layout === k ? "bg-white/90 text-primary shadow-sm" : "text-foreground/70 hover:text-foreground")}
+            >
+              <Icon className="h-4 w-4" />
+              {label}
+            </button>
+          ))}
+        </div>
       </div>
-      <Grid items={items} {...card} />
+      {layout === "cards" ? <Grid items={items} {...card} /> : <ProgramTable items={items} {...card} />}
     </div>
   )
 }

@@ -19,6 +19,7 @@ interface Item {
   program?: Program
 }
 interface Body extends Item {
+  base: number
   x: number
   y: number
   vx: number
@@ -67,6 +68,7 @@ function seed(items: Item[]): Body[] {
     return {
       ...it,
       r,
+      base: r,
       x: W / 2 + Math.cos(a) * W * 0.28 + (Math.random() - 0.5) * 40,
       y: H / 2 + Math.sin(a) * H * 0.25 + (Math.random() - 0.5) * 40,
       vx: (Math.random() - 0.5) * 3,
@@ -97,6 +99,8 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
   const pointer = useRef<{ x: number; y: number; active: boolean }>({ x: 0, y: 0, active: false })
   const svgRef = useRef<SVGSVGElement>(null)
   const [hover, setHover] = useState<string | null>(null)
+  const hoverRef = useRef<string | null>(null)
+  hoverRef.current = hover
   const reduced = useRef(false)
   const [portrait, setPortrait] = useState(false)
   useEffect(() => {
@@ -124,20 +128,12 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
       const p = pointer.current
       for (const b of bs) {
         // gentle drift keeps things alive even without the cursor
-        b.vx += (Math.random() - 0.5) * 0.12
-        b.vy += (Math.random() - 0.5) * 0.12
-        // cursor pushes bubbles away, harder the closer it is
-        if (p.active) {
-          const dx = b.x - p.x
-          const dy = b.y - p.y
-          const d = Math.hypot(dx, dy) || 1
-          const reach = b.r + 120
-          if (d < reach) {
-            const f = ((reach - d) / reach) * 2.2
-            b.vx += (dx / d) * f
-            b.vy += (dy / d) * f
-          }
-        }
+        b.vx += (Math.random() - 0.5) * 0.05
+        b.vy += (Math.random() - 0.5) * 0.05
+        // hovered bubble swells, the rest shrink slightly; collisions push neighbors aside
+        const hk = hoverRef.current
+        const target = hk ? (b.key === hk ? b.base * 1.45 : b.base * 0.88) : b.base
+        b.r += (target - b.r) * 0.14
         b.vx *= 0.96
         b.vy *= 0.96
         const sp = Math.hypot(b.vx, b.vy)
@@ -250,14 +246,14 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
                   onPointerLeave={() => setHover(h => (h === b.key ? null : h))}
                 >
                   <circle
-                    r={b.r * (isHover ? 1.05 : 1)}
+                    r={b.r}
                     fill={b.color}
                     fillOpacity={leaf ? (b.program!.confidence === "low" ? 0.78 : 0.95) : 0.9}
                     stroke="rgba(255,255,255,0.85)"
                     strokeWidth={isHover ? 4 : 2.5}
                     style={{ filter: isHover ? "drop-shadow(0 8px 18px rgba(0,0,0,.25))" : "drop-shadow(0 3px 8px rgba(0,0,0,.12))", transition: "r 150ms" }}
                   />
-                  <circle r={b.r * (isHover ? 1.05 : 1)} fill="url(#sheen)" pointerEvents="none" />
+                  <circle r={b.r} fill="url(#sheen)" pointerEvents="none" />
                   {lines.map((line, i) => (
                     <text key={i} y={(i - (lines.length - 1) / 2) * fs * 1.15 - (leaf ? 0 : fs * 0.35)} textAnchor="middle" dominantBaseline="middle" fontSize={fs} fontWeight={700} fill="#fff" pointerEvents="none">
                       {line}
@@ -280,7 +276,7 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
             </div>
           )}
         </div>
-        <p className="mt-2 text-xs text-muted-foreground">Move your cursor through the bubbles to scatter them. Tap one to open it.</p>
+        <p className="mt-2 text-xs text-muted-foreground">Hover a bubble to bring it forward. Tap one to open it.</p>
       </div>
 
       <aside className="rounded-2xl glass p-4 lg:max-h-[calc(100vh-200px)] lg:overflow-y-auto">

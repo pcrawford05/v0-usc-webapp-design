@@ -44,7 +44,7 @@ Every program has a shareable link: `/?p=<program-id>` opens its detail panel.
 
 The schema and allowed values are defined in `lib/programs.ts`. To update a program, edit the JSON and commit; Vercel redeploys. Entries marked `"confidence": "low"` show a "confirm on the official page" note in the app. The ones that need an owner's review are listed in [`docs/programs-needing-verification.md`](docs/programs-needing-verification.md).
 
-`scripts/build-programs.mjs` merges and validates new research batches into `data/programs.json` (`node scripts/build-programs.mjs <dir>`).
+`scripts/build-programs.mjs` merges and validates new research batches into `data/programs.json` (`pnpm data:build <dir>`).
 
 ## AI setup (free tier)
 

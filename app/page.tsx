@@ -1,275 +1,215 @@
 "use client"
 
-import Link from "next/link"
-import Image from "next/image"
-import { useEffect, useState, Suspense } from "react"
-import { SearchBar, type SearchParams } from "@/components/search-bar"
-import { Card } from "@/components/ui/card"
-import { Star } from "lucide-react"
+import { Bookmark, CalendarDays, Compass, LayoutGrid, Search, Sparkles, Target, UserRound, X } from "lucide-react"
+import { useRouter, useSearchParams } from "next/navigation"
+import { Suspense, useCallback, useMemo, useState } from "react"
 
-interface Resource {
-  name: string
-  description: string
-  resourceType: string
-  type: "internal" | "external"
-  link: string
-  eligibility?: string
-}
+import { BubbleMap } from "@/components/atlas/BubbleMap"
+import { ConstellationView, JourneyView, OrbitView, SubwayView } from "@/components/atlas/ExploreViews"
+import { ProfileDialog, useProfile } from "@/components/atlas/ProfileDialog"
+import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
+import { AskView, BrowseView, CalendarView, FindPathView, SavedView, type Turn } from "@/components/atlas/views"
+import { describeProfile, hasProfile, ROLES } from "@/lib/profile"
+import { programById, programs } from "@/lib/programs"
+import { rankPrograms } from "@/lib/search"
+import { cn } from "@/lib/utils"
 
-// Separate component for search functionality to be wrapped in Suspense
-function ResourceSearch({
-  onSearch,
-  categories,
-  showTypeFilter = false,
-}: {
-  onSearch: (params: SearchParams) => void
-  categories: string[]
-  showTypeFilter?: boolean
-}) {
+const MODES = [
+  { key: "bubbles", label: "Bubbles" },
+  { key: "journey", label: "Journey" },
+  { key: "constellation", label: "Constellation" },
+  { key: "orbit", label: "Orbit" },
+  { key: "subway", label: "Subway" },
+] as const
+
+const TABS = [
+  { key: "explore", label: "Explore", icon: Compass },
+  { key: "path", label: "Find my path", icon: Target },
+  { key: "browse", label: "Browse", icon: LayoutGrid },
+  { key: "calendar", label: "Calendar", icon: CalendarDays },
+  { key: "ask", label: "Ask AI", icon: Sparkles },
+  { key: "saved", label: "Saved", icon: Bookmark },
+] as const
+type TabKey = (typeof TABS)[number]["key"]
+
+function Atlas() {
+  const params = useSearchParams()
+  const router = useRouter()
+  const tab = (TABS.find(t => t.key === params.get("view"))?.key ?? "explore") as TabKey
+  const mode = MODES.find(m => m.key === params.get("mode"))?.key ?? "bubbles"
+  const openId = params.get("p")
+  const open = openId ? programById.get(openId) ?? null : null
+
+  const setParam = useCallback(
+    (changes: Record<string, string | null>) => {
+      const next = new URLSearchParams(params.toString())
+      Object.entries(changes).forEach(([k, v]) => (v ? next.set(k, v) : next.delete(k)))
+      router.replace(`?${next.toString()}`, { scroll: false })
+    },
+    [params, router],
+  )
+
+  const { saved, isSaved, toggle } = useSaved()
+  const { profile, save: saveProfile } = useProfile()
+  const [profileOpen, setProfileOpen] = useState(false)
+  const me = hasProfile(profile) ? profile : null
+  const [query, setQuery] = useState("")
+  const matches = useMemo(() => (query.trim() ? rankPrograms(query, 200).map(r => r.program) : null), [query])
+  const highlight = useMemo(() => (matches ? new Set(matches.map(p => p.id)) : null), [matches])
+
+  const [turns, setTurns] = useState<Turn[]>([])
+  const [busy, setBusy] = useState(false)
+  const ask = useCallback(
+    async (q: string) => {
+      const query = q.trim()
+      if (!query) return
+      const history = turns.map(t => ({ role: t.role, content: t.content }))
+      setTurns(prev => [...prev, { role: "user", content: query }])
+      setBusy(true)
+      setParam({ view: "ask", p: null })
+      try {
+        const res = await fetch("/api/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query, history, profile: me ? describeProfile(me) : undefined }),
+        })
+        const data = await res.json()
+        setTurns(prev => [
+          ...prev,
+          res.ok
+            ? { role: "assistant", content: data.answer, picks: data.picks, provider: data.provider }
+            : { role: "assistant", content: data.error ?? "Something went wrong." },
+        ])
+      } catch {
+        setTurns(prev => [...prev, { role: "assistant", content: "I could not reach the server. Try again in a moment." }])
+      } finally {
+        setBusy(false)
+      }
+    },
+    [turns, setParam, me],
+  )
+
+  const onOpen = useCallback((id: string) => setParam({ p: id }), [setParam])
+  const card = { onOpen, isSaved, onToggleSave: toggle }
+  const usc = programs.filter(p => p.group !== "external").length
+
   return (
-    <div className="w-full max-w-3xl mb-4">
-      <SearchBar onSearch={onSearch} categories={categories} showTypeFilter={showTypeFilter} />
+    <div className="app-bg min-h-screen">
+      <header className="z-40 px-3 pt-3 sm:sticky sm:top-0 sm:px-6">
+        <div className="glass mx-auto max-w-7xl rounded-3xl px-4 py-3 sm:px-5">
+          <div className="flex flex-wrap items-center gap-3">
+            <div className="flex min-w-0 flex-1 items-center gap-3">
+              <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#b3001b] to-[#7a0000] text-sm font-black tracking-tight text-[#FFCC00] shadow-[inset_0_1px_0_rgba(255,255,255,.35),0_6px_16px_-6px_rgba(153,0,0,.6)]">SC</div>
+              <div className="min-w-0 leading-tight">
+                <div className="text-[15px] font-bold tracking-tight text-foreground">USC Startup Atlas</div>
+                <div className="text-xs text-muted-foreground">{usc} USC programs · {programs.length - usc} outside resources</div>
+              </div>
+            </div>
+            <label className="relative order-last w-full sm:order-none sm:w-72">
+              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+              <input
+                value={query}
+                onChange={e => {
+                  setQuery(e.target.value)
+                  if (e.target.value && tab !== "explore" && tab !== "browse") setParam({ view: "browse" })
+                }}
+                placeholder="Search grants, biotech, pitch..."
+                aria-label="Search programs"
+                className="w-full rounded-2xl border border-white/70 bg-white/60 py-2.5 pl-9 pr-9 text-sm text-foreground shadow-[inset_0_1px_2px_rgba(0,0,0,.06)] outline-none transition focus:bg-white/85 focus:ring-2 focus:ring-primary/30"
+              />
+              {query && (
+                <button aria-label="Clear search" onClick={() => setQuery("")} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
+                  <X className="h-4 w-4" />
+                </button>
+              )}
+            </label>
+            <button
+              onClick={() => setProfileOpen(true)}
+              aria-label="Your profile"
+              className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-br from-[#b3001b] to-[#8a0000] px-3.5 py-2.5 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,.3),0_8px_20px_-8px_rgba(153,0,0,.7)] transition hover:brightness-110"
+            >
+              <UserRound className="h-4 w-4" />
+              <span className="hidden sm:inline">{me ? (me.name?.split(" ")[0] ?? ROLES.find(r => r.key === me.role)?.label ?? "Your profile") : "Personalize"}</span>
+            </button>
+          </div>
+          <nav className="mt-3 flex gap-1 overflow-x-auto rounded-2xl bg-black/[.04] p-1 [scrollbar-width:none]" aria-label="Views">
+            {TABS.map(t => (
+              <button
+                key={t.key}
+                onClick={() => setParam({ view: t.key })}
+                aria-current={tab === t.key ? "page" : undefined}
+                className={cn(
+                  "inline-flex shrink-0 flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-xl px-3 py-2 text-sm font-semibold transition",
+                  tab === t.key ? "bg-white/90 text-primary shadow-[0_1px_0_#fff_inset,0_4px_14px_-6px_rgba(0,0,0,.25)]" : "text-foreground/70 hover:bg-white/50 hover:text-foreground",
+                )}
+              >
+                <t.icon className="h-4 w-4" />
+                {t.label}
+                {t.key === "saved" && saved.length > 0 && (
+                  <span className="rounded-full bg-secondary px-1.5 text-[11px] text-secondary-foreground">{saved.length}</span>
+                )}
+              </button>
+            ))}
+          </nav>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6">
+        {tab === "explore" && (
+          <>
+            <div className="mb-4 flex gap-1 overflow-x-auto rounded-2xl glass p-1 [scrollbar-width:none] sm:inline-flex" role="tablist" aria-label="Explore views">
+              {MODES.map(m => (
+                <button
+                  key={m.key}
+                  role="tab"
+                  aria-selected={mode === m.key}
+                  onClick={() => setParam({ mode: m.key === "bubbles" ? null : m.key })}
+                  className={cn("shrink-0 rounded-xl px-3.5 py-1.5 text-sm font-semibold transition", mode === m.key ? "bg-white/90 text-primary shadow-sm" : "text-foreground/70 hover:text-foreground")}
+                >
+                  {m.label}
+                </button>
+              ))}
+            </div>
+            {matches && (
+              <p className="mb-3 text-sm text-muted-foreground">
+                Highlighting {matches.length} program{matches.length === 1 ? "" : "s"} for "{query}".
+              </p>
+            )}
+            {mode === "bubbles" && <BubbleMap programs={programs} highlight={highlight} onOpen={onOpen} />}
+            {mode === "journey" && <JourneyView programs={matches ?? programs} onOpen={onOpen} stage={me?.stage} />}
+            {mode === "constellation" && <ConstellationView programs={matches ?? programs} onOpen={onOpen} />}
+            {mode === "orbit" && <OrbitView programs={matches ?? programs} onOpen={onOpen} />}
+            {mode === "subway" && <SubwayView programs={matches ?? programs} onOpen={onOpen} />}
+          </>
+        )}
+        {tab === "path" && <FindPathView key={me ? JSON.stringify(me) : "none"} all={programs} profile={me} {...card} />}
+        {tab === "browse" && <BrowseView all={programs} matches={matches} query={query} profile={me} {...card} />}
+        {tab === "calendar" && <CalendarView all={programs} onOpen={onOpen} profile={me} />}
+        {tab === "ask" && <AskView turns={turns} busy={busy} onSend={ask} {...card} />}
+        {tab === "saved" && <SavedView saved={saved} onAskPlan={ask} {...card} />}
+      </main>
+
+      <footer className="mx-auto max-w-7xl px-4 pb-10 text-xs text-muted-foreground sm:px-6">
+        Program details are researched from public sources and change often. Always confirm dates and eligibility on the official page.
+      </footer>
+
+      <ProfileDialog open={profileOpen} onOpenChange={setProfileOpen} profile={profile} onSave={saveProfile} />
+
+      <ProgramDrawer
+        program={open}
+        onClose={() => setParam({ p: null })}
+        saved={open ? isSaved(open.id) : false}
+        onToggleSave={toggle}
+        onAsk={ask}
+      />
     </div>
   )
 }
 
-export default function Home() {
-  const [resources, setResources] = useState<Resource[]>([])
-  const [filteredResources, setFilteredResources] = useState<Resource[]>([])
-  const [categories, setCategories] = useState<string[]>([])
-  const [isSearching, setIsSearching] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
-  const [favorites, setFavorites] = useState<string[]>([])
-
-  useEffect(() => {
-    async function fetchAllResources() {
-      try {
-        const [internalRes, externalRes] = await Promise.all([
-          fetch("/api/internal-resources"),
-          fetch("/api/external-resources"),
-        ])
-
-        const internalData = await internalRes.json()
-        const externalData = await externalRes.json()
-
-        // Process and filter internal resources
-        const internalResources = internalData.flatMap((group: any) =>
-          group.items
-            .filter((item: any) => {
-              // Filter out resources with URLs as names or empty descriptions
-              return (
-                item.name &&
-                !item.name.toLowerCase().includes("http") &&
-                !item.name.toLowerCase().includes("www.") &&
-                !item.name.toLowerCase().includes(".com") &&
-                !item.name.toLowerCase().includes(".org") &&
-                !item.name.toLowerCase().includes(".edu")
-              )
-            })
-            .map((item: any) => ({
-              name: item.name ?? "", // Ensure required fields are strings
-              description: item.description ?? "",
-              link: item.link ?? "#",
-              resourceType: group.resourceType ?? "Unknown", // Use resourceType, provide fallback
-              type: "internal" as const,
-              // include other fields like eligibility, importantDates if needed
-              eligibility: item.eligibility ?? "",
-              importantDates: item.importantDates ?? "",
-            }))
-        )
-
-        // Process and filter external resources
-        const externalResources = externalData.flatMap((group: any) =>
-          group.items
-            .filter((item: any) => {
-              // Filter out resources with URLs as names or empty descriptions
-              return (
-                item.name &&
-                !item.name.toLowerCase().includes("http") &&
-                !item.name.toLowerCase().includes("www.") &&
-                !item.name.toLowerCase().includes(".com") &&
-                !item.name.toLowerCase().includes(".org") &&
-                !item.name.toLowerCase().includes(".edu")
-              )
-            })
-            .map((item: any) => ({
-              name: item.name ?? "", // Ensure required fields are strings
-              description: item.description ?? "",
-              link: item.link ?? "#",
-              resourceType: group.resourceType ?? "Unknown", // Use resourceType, provide fallback
-              type: "external" as const,
-            }))
-        )
-
-        const allResources = [...internalResources, ...externalResources]
-        // Calculate unique categories/types based on the resourceType field
-        const uniqueResourceTypes = Array.from(
-          new Set(allResources.map((r) => r.resourceType))
-        ).filter((rt): rt is string => typeof rt === 'string' && rt !== "Unknown"); // Filter out non-strings and fallback
-
-        setResources(allResources)
-        setCategories(uniqueResourceTypes)
-      } catch (error) {
-        console.error("Error fetching resources:", error)
-      } finally {
-        setIsLoading(false)
-      }
-    }
-
-    fetchAllResources()
-  }, [])
-
-  useEffect(() => {
-    const storedFavorites = localStorage.getItem("favorites")
-    if (storedFavorites) {
-      setFavorites(JSON.parse(storedFavorites))
-    }
-  }, [])
-
-  const handleSearch = ({ query, category, type }: SearchParams) => {
-    let filtered = resources
-
-    const isSearchActive = Boolean(query || (category && category !== "all") || (type && type !== "all"))
-    setIsSearching(isSearchActive)
-
-    // Filter by search query (with safety checks)
-    if (query) {
-      const searchQuery = query.toLowerCase();
-      filtered = filtered.filter(
-        (resource) =>
-          // Check name before toLowerCase
-          (resource.name && typeof resource.name === 'string' && resource.name.toLowerCase().includes(searchQuery)) ||
-          // Check description before toLowerCase
-          (resource.description && typeof resource.description === 'string' && resource.description.toLowerCase().includes(searchQuery))
-      );
-    }
-
-    // Filter by selected "Category" dropdown value (checking resource.resourceType)
-    if (category && category !== "all") {
-      const lowerCategory = category.toLowerCase(); // This is the value selected in the dropdown
-      filtered = filtered.filter(resource =>
-        // Check resourceType before toLowerCase
-        resource.resourceType && typeof resource.resourceType === 'string' && resource.resourceType.toLowerCase() === lowerCategory
-      );
-    }
-
-    // Filter by internal/external type
-    if (type && type !== "all") {
-      filtered = filtered.filter((resource) => resource.type === type);
-    }
-
-    setFilteredResources(filtered)
-  }
-
+export default function Page() {
   return (
-    <main className="min-h-screen flex flex-col items-center p-4 md:p-6 pb-16">
-      <h1 className="text-3xl md:text-5xl font-bold text-center mb-4 text-primary">USC Entrepreneurship Resources</h1>
-
-      <Suspense fallback={<div className="w-full max-w-3xl mb-4 h-40 bg-gray-100 animate-pulse rounded-lg"></div>}>
-        <ResourceSearch onSearch={handleSearch} categories={categories} showTypeFilter={true} />
-      </Suspense>
-
-      {!isSearching ? (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-5xl mb-16">
-          <Link
-            href="/internal-resources"
-            className="group relative overflow-hidden rounded-2xl aspect-[16/9] shadow-lg hover:shadow-xl transition-all duration-500 mb-4 md:mb-0"
-          >
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-3ENBMsRnXH8lODgsfoNvUPDrSAX3S2.png"
-              alt="USC Campus with Tommy Trojan statue"
-              fill
-              className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/30 to-transparent opacity-80 group-hover:opacity-70 transition-opacity duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 p-4 transform transition-transform duration-500 group-hover:translate-y-[-4px]">
-              <h2 className="text-xl md:text-2xl font-bold text-white">Internal Resources</h2>
-            </div>
-          </Link>
-          <Link
-            href="/external-resources"
-            className="group relative overflow-hidden rounded-2xl aspect-[16/9] shadow-lg hover:shadow-xl transition-all duration-500 mb-4 md:mb-0"
-          >
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6UvMPZwjJ4vX0T5SGZzF6pgvPuNn2m.png"
-              alt="Los Angeles Skyline at sunset"
-              fill
-              className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-primary/30 to-transparent opacity-80 group-hover:opacity-70 transition-opacity duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 p-4 transform transition-transform duration-500 group-hover:translate-y-[-4px]">
-              <h2 className="text-xl md:text-2xl font-bold text-white">External Resources</h2>
-            </div>
-          </Link>
-          <Link
-            href="/favorites"
-            className="group relative overflow-hidden rounded-2xl aspect-[16/9] shadow-lg hover:shadow-xl transition-all duration-500 mb-16 md:mb-0"
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary opacity-80 group-hover:opacity-70 transition-opacity duration-500" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-              <Star className="h-16 w-16 text-white mb-4 fill-transparent group-hover:fill-white transition-all duration-700" />
-              <h2 className="text-xl md:text-2xl font-bold text-white text-center">Favorites</h2>
-            </div>
-          </Link>
-        </div>
-      ) : (
-        <div className="flex-1 w-full max-w-6xl overflow-auto pt-2">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredResources.map((resource) => (
-              <Link
-                key={resource.name}
-                href={resource.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block group"
-              >
-                <Card className="h-full transition-all duration-200 hover:shadow-md hover:border-secondary hover:-translate-y-0.5 relative">
-                  <div className="p-4">
-                    <div className="flex items-start justify-between mb-2">
-                      <h3 className="font-semibold group-hover:text-primary transition-colors">{resource.name}</h3>
-                      <span className="text-xs bg-secondary/20 text-secondary-foreground px-2 py-1 rounded">
-                        {resource.type}
-                      </span>
-                    </div>
-                    <p className="text-sm text-muted-foreground line-clamp-2">{resource.description}</p>
-                    <div className="flex items-center justify-start text-xs text-muted-foreground mt-2">
-                      <span>{resource.resourceType}</span>
-                    </div>
-                    <button
-                      className="absolute bottom-3 right-3 p-1 rounded-full transition-colors z-10"
-                      onClick={(e) => {
-                        e.preventDefault()
-                        e.stopPropagation()
-                        const newFavorites = favorites.includes(resource.name)
-                          ? favorites.filter((name) => name !== resource.name)
-                          : [...favorites, resource.name]
-                        localStorage.setItem("favorites", JSON.stringify(newFavorites))
-                        setFavorites(newFavorites)
-                      }}
-                      aria-label={favorites.includes(resource.name) ? "Remove from favorites" : "Add to favorites"}
-                    >
-                      <Star
-                        className={`h-5 w-5 ${
-                          favorites.includes(resource.name)
-                            ? "fill-secondary text-secondary"
-                            : "text-primary hover:fill-primary"
-                        } transition-all`}
-                      />
-                    </button>
-                  </div>
-                </Card>
-              </Link>
-            ))}
-          </div>
-          {filteredResources.length === 0 && (
-            <div className="text-center py-8">
-              <p className="text-lg text-muted-foreground">No resources found matching your search criteria.</p>
-            </div>
-          )}
-        </div>
-      )}
-    </main>
+    <Suspense>
+      <Atlas />
+    </Suspense>
   )
 }

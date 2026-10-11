@@ -57,6 +57,22 @@ export const CATEGORIES = [
 ] as const
 export type Category = (typeof CATEGORIES)[number]
 
+// Distinct hue per category so sibling bubbles are easy to tell apart at every level.
+export const CATEGORY_COLORS: Record<Category, string> = {
+  "Funding & Grants": "#1B7F5C",
+  "Competitions & Pitch": "#C2410C",
+  "Accelerators & Incubators": "#990000",
+  "Mentorship & Office Hours": "#2563A8",
+  "Events & Speakers": "#7C3AED",
+  "Courses & Degrees": "#0E7490",
+  "Makerspaces & Coworking": "#B45309",
+  "Legal & IP": "#475569",
+  "Research Commercialization": "#BE185D",
+  "Student Organizations": "#A16207",
+  "Partners & Ecosystem": "#6D5A4E",
+  "Founder Toolkits": "#4D7C0F",
+}
+
 export const AUDIENCE_LABELS: Record<Audience, string> = {
   undergrad: "Undergrad",
   grad: "Grad",

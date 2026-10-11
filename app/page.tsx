@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { Suspense, useCallback, useMemo, useState } from "react"
 
 import { BubbleMap } from "@/components/atlas/BubbleMap"
+import { ConstellationView, JourneyView, OrbitView, SubwayView } from "@/components/atlas/ExploreViews"
 import { ProfileDialog, useProfile } from "@/components/atlas/ProfileDialog"
 import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
 import { AskView, BrowseView, CalendarView, FindPathView, SavedView, type Turn } from "@/components/atlas/views"
@@ -12,6 +13,14 @@ import { describeProfile, hasProfile, ROLES } from "@/lib/profile"
 import { programById, programs } from "@/lib/programs"
 import { rankPrograms } from "@/lib/search"
 import { cn } from "@/lib/utils"
+
+const MODES = [
+  { key: "bubbles", label: "Bubbles" },
+  { key: "journey", label: "Journey" },
+  { key: "constellation", label: "Constellation" },
+  { key: "orbit", label: "Orbit" },
+  { key: "subway", label: "Subway" },
+] as const
 
 const TABS = [
   { key: "explore", label: "Explore", icon: Compass },
@@ -27,6 +36,7 @@ function Atlas() {
   const params = useSearchParams()
   const router = useRouter()
   const tab = (TABS.find(t => t.key === params.get("view"))?.key ?? "explore") as TabKey
+  const mode = MODES.find(m => m.key === params.get("mode"))?.key ?? "bubbles"
   const openId = params.get("p")
   const open = openId ? programById.get(openId) ?? null : null
 
@@ -147,12 +157,29 @@ function Atlas() {
       <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6">
         {tab === "explore" && (
           <>
+            <div className="mb-4 flex gap-1 overflow-x-auto rounded-2xl glass p-1 [scrollbar-width:none] sm:inline-flex" role="tablist" aria-label="Explore views">
+              {MODES.map(m => (
+                <button
+                  key={m.key}
+                  role="tab"
+                  aria-selected={mode === m.key}
+                  onClick={() => setParam({ mode: m.key === "bubbles" ? null : m.key })}
+                  className={cn("shrink-0 rounded-xl px-3.5 py-1.5 text-sm font-semibold transition", mode === m.key ? "bg-white/90 text-primary shadow-sm" : "text-foreground/70 hover:text-foreground")}
+                >
+                  {m.label}
+                </button>
+              ))}
+            </div>
             {matches && (
               <p className="mb-3 text-sm text-muted-foreground">
                 Highlighting {matches.length} program{matches.length === 1 ? "" : "s"} for "{query}".
               </p>
             )}
-            <BubbleMap programs={programs} highlight={highlight} onOpen={onOpen} />
+            {mode === "bubbles" && <BubbleMap programs={programs} highlight={highlight} onOpen={onOpen} />}
+            {mode === "journey" && <JourneyView programs={matches ?? programs} onOpen={onOpen} stage={me?.stage} />}
+            {mode === "constellation" && <ConstellationView programs={matches ?? programs} onOpen={onOpen} />}
+            {mode === "orbit" && <OrbitView programs={matches ?? programs} onOpen={onOpen} />}
+            {mode === "subway" && <SubwayView programs={matches ?? programs} onOpen={onOpen} />}
           </>
         )}
         {tab === "path" && <FindPathView key={me ? JSON.stringify(me) : "none"} all={programs} profile={me} {...card} />}

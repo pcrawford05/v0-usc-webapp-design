@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { hierarchy, pack } from "d3-hierarchy"
 import { useEffect, useMemo, useRef, useState } from "react"
 
-import { GROUPS, GROUP_KEYS, type Program } from "@/lib/programs"
+import { CATEGORY_COLORS, GROUPS, GROUP_KEYS, type Program } from "@/lib/programs"
 import { cn } from "@/lib/utils"
 
 import { whenLabel } from "./shared"
@@ -41,21 +41,6 @@ function rootLevel(programs: Program[]): Level {
   }
 }
 
-// Distinct hue per category so sibling bubbles are easy to tell apart at every level.
-const CATEGORY_COLORS: Record<string, string> = {
-  "Funding & Grants": "#1B7F5C",
-  "Competitions & Pitch": "#C2410C",
-  "Accelerators & Incubators": "#990000",
-  "Mentorship & Office Hours": "#2563A8",
-  "Events & Speakers": "#7C3AED",
-  "Courses & Degrees": "#0E7490",
-  "Makerspaces & Coworking": "#B45309",
-  "Legal & IP": "#475569",
-  "Research Commercialization": "#BE185D",
-  "Student Organizations": "#A16207",
-  "Partners & Ecosystem": "#6D5A4E",
-  "Founder Toolkits": "#4D7C0F",
-}
 
 // Leaves cycle through distinct hues so neighbouring programs are easy to tell apart.
 const LEAF_COLORS = ["#990000", "#1F4E79", "#1B7F5C", "#7C3AED", "#C2410C", "#0E7490", "#BE185D", "#4D7C0F", "#A16207", "#475569", "#6B3F8F", "#B5651D"]

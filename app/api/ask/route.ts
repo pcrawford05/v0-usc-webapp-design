@@ -30,7 +30,8 @@ export async function POST(req: NextRequest) {
     : []
 
   try {
-    return NextResponse.json(await ask(query, history))
+    const profile = typeof body?.profile === "string" ? body.profile.slice(0, 500) : undefined
+    return NextResponse.json(await ask(query, history, profile))
   } catch (error) {
     console.error("[ask] failed", error)
     return NextResponse.json({ error: "Something went wrong answering that." }, { status: 500 })

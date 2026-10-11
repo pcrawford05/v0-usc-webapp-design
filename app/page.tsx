@@ -1,12 +1,14 @@
 "use client"
 
-import { Bookmark, CalendarDays, Compass, LayoutGrid, Search, Sparkles, Target, X } from "lucide-react"
+import { Bookmark, CalendarDays, Compass, LayoutGrid, Search, Sparkles, Target, UserRound, X } from "lucide-react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { Suspense, useCallback, useMemo, useState } from "react"
 
 import { BubbleMap } from "@/components/atlas/BubbleMap"
+import { ProfileDialog, useProfile } from "@/components/atlas/ProfileDialog"
 import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
 import { AskView, BrowseView, CalendarView, FindPathView, SavedView, type Turn } from "@/components/atlas/views"
+import { describeProfile, hasProfile, ROLES } from "@/lib/profile"
 import { programById, programs } from "@/lib/programs"
 import { rankPrograms } from "@/lib/search"
 import { cn } from "@/lib/utils"
@@ -38,6 +40,9 @@ function Atlas() {
   )
 
   const { saved, isSaved, toggle } = useSaved()
+  const { profile, save: saveProfile } = useProfile()
+  const [profileOpen, setProfileOpen] = useState(false)
+  const me = hasProfile(profile) ? profile : null
   const [query, setQuery] = useState("")
   const matches = useMemo(() => (query.trim() ? rankPrograms(query, 200).map(r => r.program) : null), [query])
   const highlight = useMemo(() => (matches ? new Set(matches.map(p => p.id)) : null), [matches])
@@ -56,7 +61,7 @@ function Atlas() {
         const res = await fetch("/api/ask", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query, history }),
+          body: JSON.stringify({ query, history, profile: me ? describeProfile(me) : undefined }),
         })
         const data = await res.json()
         setTurns(prev => [
@@ -71,7 +76,7 @@ function Atlas() {
         setBusy(false)
       }
     },
-    [turns, setParam],
+    [turns, setParam, me],
   )
 
   const onOpen = useCallback((id: string) => setParam({ p: id }), [setParam])
@@ -90,6 +95,14 @@ function Atlas() {
                 {usc} USC programs and {programs.length - usc} outside resources, mapped in one place.
               </p>
             </div>
+            <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:items-center">
+            <button
+              onClick={() => setProfileOpen(true)}
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-white/10 px-3 py-2.5 text-sm font-semibold ring-1 ring-white/25 transition hover:bg-white/20"
+            >
+              <UserRound className="h-4 w-4" />
+              {me ? (me.name?.split(" ")[0] ?? ROLES.find(r => r.key === me.role)?.label ?? "Your profile") : "Personalize"}
+            </button>
             <label className="relative w-full sm:w-80">
               <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
               <input
@@ -108,6 +121,7 @@ function Atlas() {
                 </button>
               )}
             </label>
+            </div>
           </div>
           <nav className="-mb-px mt-5 flex gap-1 overflow-x-auto" aria-label="Views">
             {TABS.map(t => (
@@ -142,9 +156,9 @@ function Atlas() {
             <BubbleMap programs={programs} highlight={highlight} onOpen={onOpen} />
           </>
         )}
-        {tab === "path" && <FindPathView all={programs} {...card} />}
-        {tab === "browse" && <BrowseView all={programs} matches={matches} query={query} {...card} />}
-        {tab === "calendar" && <CalendarView all={programs} onOpen={onOpen} />}
+        {tab === "path" && <FindPathView key={me ? JSON.stringify(me) : "none"} all={programs} profile={me} {...card} />}
+        {tab === "browse" && <BrowseView all={programs} matches={matches} query={query} profile={me} {...card} />}
+        {tab === "calendar" && <CalendarView all={programs} onOpen={onOpen} profile={me} />}
         {tab === "ask" && <AskView turns={turns} busy={busy} onSend={ask} {...card} />}
         {tab === "saved" && <SavedView saved={saved} onAskPlan={ask} {...card} />}
       </main>
@@ -152,6 +166,8 @@ function Atlas() {
       <footer className="mx-auto max-w-7xl px-4 pb-10 text-xs text-muted-foreground sm:px-6">
         Program details are researched from public sources and change often. Always confirm dates and eligibility on the official page.
       </footer>
+
+      <ProfileDialog open={profileOpen} onOpenChange={setProfileOpen} profile={profile} onSave={saveProfile} />
 
       <ProgramDrawer
         program={open}

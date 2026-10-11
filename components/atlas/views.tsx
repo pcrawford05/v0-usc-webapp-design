@@ -17,6 +17,7 @@ import {
   type Program,
   type Stage,
 } from "@/lib/programs"
+import { fitScore, type Profile } from "@/lib/profile"
 import { cn } from "@/lib/utils"
 
 import { GroupPill, ProgramCard } from "./shared"
@@ -83,10 +84,10 @@ const NEEDS: { key: string; label: string; categories: Category[]; words: RegExp
   { key: "network", label: "Investors & network", categories: ["Partners & Ecosystem", "Events & Speakers"], words: /investor|venture|angel|network|vc/i },
 ]
 
-export function FindPathView({ all, ...card }: CardProps & { all: Program[] }) {
-  const [who, setWho] = useState<string | null>(null)
-  const [stage, setStage] = useState<Stage | null>(null)
-  const [needs, setNeeds] = useState<string[]>([])
+export function FindPathView({ all, profile, ...card }: CardProps & { all: Program[]; profile: Profile | null }) {
+  const [who, setWho] = useState<string | null>(profile?.role ?? null)
+  const [stage, setStage] = useState<Stage | null>(profile?.stage ?? null)
+  const [needs, setNeeds] = useState<string[]>(profile?.interests ?? [])
   const nowMonth = new Date().getMonth() + 1
 
   const results = useMemo(() => {
@@ -165,19 +166,22 @@ export function FindPathView({ all, ...card }: CardProps & { all: Program[] }) {
 
 // ---------- Browse ----------
 
-export function BrowseView({ all, matches, query, ...card }: CardProps & { all: Program[]; matches: Program[] | null; query: string }) {
+export function BrowseView({ all, matches, query, profile, ...card }: CardProps & { all: Program[]; matches: Program[] | null; query: string; profile: Profile | null }) {
   const [groups, setGroups] = useState<GroupKey[]>([])
   const [cat, setCat] = useState<Category | "">("")
   const [aud, setAud] = useState<Audience | "">("")
   const [verifiedOnly, setVerifiedOnly] = useState(false)
 
-  const items = (matches ?? all).filter(
+  const filtered = (matches ?? all).filter(
     p =>
       (!groups.length || groups.includes(p.group)) &&
       (!cat || p.category === cat) &&
       (!aud || p.audience.includes(aud)) &&
       (!verifiedOnly || p.confidence !== "low"),
   )
+  // With a profile and no search query, best fits come first (stable, so ties keep catalog order).
+  const forYou = !!profile && !matches
+  const items = forYou ? [...filtered].sort((a, b) => fitScore(b, profile!) - fitScore(a, profile!)) : filtered
   const toggle = (g: GroupKey) => setGroups(groups.includes(g) ? groups.filter(x => x !== g) : [...groups, g])
 
   return (
@@ -205,6 +209,7 @@ export function BrowseView({ all, matches, query, ...card }: CardProps & { all: 
         <span className="ml-auto text-muted-foreground">
           {items.length} program{items.length === 1 ? "" : "s"}
           {query && ` matching "${query}"`}
+          {forYou && ", best fits for you first"}
         </span>
       </div>
       <Grid items={items} {...card} />
@@ -214,7 +219,7 @@ export function BrowseView({ all, matches, query, ...card }: CardProps & { all: 
 
 // ---------- Calendar ----------
 
-export function CalendarView({ all, onOpen }: { all: Program[]; onOpen: (id: string) => void }) {
+export function CalendarView({ all, onOpen, profile }: { all: Program[]; onOpen: (id: string) => void; profile: Profile | null }) {
   const now = new Date()
   const start = now.getMonth()
   const months = Array.from({ length: 12 }, (_, i) => ({ m: ((start + i) % 12) + 1, year: now.getFullYear() + Math.floor((start + i) / 12) }))
@@ -236,7 +241,8 @@ export function CalendarView({ all, onOpen }: { all: Program[]; onOpen: (id: str
       </div>
       <div className="flex snap-x gap-3 overflow-x-auto pb-3">
         {months.map(({ m, year }, i) => {
-          const items = pool.filter(p => p.months.includes(m))
+          const inMonth = pool.filter(p => p.months.includes(m))
+          const items = profile ? [...inMonth].sort((a, b) => fitScore(b, profile) - fitScore(a, profile)) : inMonth
           return (
             <section
               key={`${year}-${m}`}

@@ -28,13 +28,14 @@ function detail(p: Program): string {
   })
 }
 
-function systemPrompt(): string {
+function systemPrompt(profile?: string): string {
   const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
   return [
     "You are the USC Startup Atlas guide. You help USC students, researchers and alumni find the right entrepreneurship programs.",
     `Today is ${today}. Use this to say what is open now or coming up soon.`,
     "Answer ONLY from the program catalog provided. Never invent programs, dates, amounts or eligibility. If the catalog does not cover something, say so and suggest the closest options.",
     "Be concise and practical: 2 to 4 short sentences, then let the picks do the work. Do not use em dashes. Do not end with a question.",
+    ...(profile ? [`About this user: ${profile}. Favor programs they are eligible for and that fit their stage, and mention why when it matters.`] : []),
     'Respond as JSON: {"answer": string, "picks": [{"id": string, "reason": string}]} with 3 to 6 picks ordered by relevance. Each reason is one short sentence tailored to the user. Use ids exactly as written in the catalog.',
   ].join("\n")
 }
@@ -107,10 +108,10 @@ function parse(raw: string): Omit<AskResult, "provider"> | null {
   }
 }
 
-export async function ask(query: string, history: ChatTurn[] = []): Promise<AskResult> {
+export async function ask(query: string, history: ChatTurn[] = [], profile?: string): Promise<AskResult> {
   const context = [...history.filter(t => t.role === "user").slice(-2).map(t => t.content), query].join(" ")
   const ranked = rankPrograms(context, 20).map(r => r.program)
-  const system = systemPrompt()
+  const system = systemPrompt(profile)
   const trimmedHistory = history.slice(-6)
 
   const providers: [AskResult["provider"], typeof callGemini][] = [["gemini", callGemini], ["groq", callGroq]]

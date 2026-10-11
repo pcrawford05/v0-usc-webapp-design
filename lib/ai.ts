@@ -10,6 +10,8 @@ export interface AskResult {
   answer: string
   picks: { id: string; reason: string }[]
   provider: "gemini" | "groq" | "local"
+  /** Why each AI provider was skipped, when falling back. Never contains keys. */
+  fallbackReason?: string
 }
 
 // ---------- Prompt ----------
@@ -112,12 +114,15 @@ export async function ask(query: string, history: ChatTurn[] = []): Promise<AskR
   const trimmedHistory = history.slice(-6)
 
   const providers: [AskResult["provider"], typeof callGemini][] = [["gemini", callGemini], ["groq", callGroq]]
+  const reasons: string[] = []
   for (const [name, call] of providers) {
     try {
       const parsed = parse(await call(system, trimmedHistory, query, ranked))
       if (parsed) return { ...parsed, provider: name }
     } catch (err) {
-      console.warn(`[ask] ${name} unavailable:`, err instanceof Error ? err.message : err)
+      const msg = err instanceof Error ? err.message : String(err)
+      reasons.push(`${name}: ${msg.slice(0, 160)}`)
+      console.warn(`[ask] ${name} unavailable:`, msg)
     }
   }
 
@@ -128,5 +133,6 @@ export async function ask(query: string, history: ChatTurn[] = []): Promise<AskR
       : "I could not find a close match. Try describing what you need, for example funding, mentorship or a pitch competition.",
     picks: ranked.slice(0, 6).map(p => ({ id: p.id, reason: p.description ?? "" })),
     provider: "local",
+    fallbackReason: reasons.join(" | ") || undefined,
   }
 }

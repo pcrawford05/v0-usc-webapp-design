@@ -1,6 +1,7 @@
 "use client"
 
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import { hierarchy, pack } from "d3-hierarchy"
 import { useEffect, useMemo, useRef, useState } from "react"
 
 import { GROUPS, GROUP_KEYS, type Program } from "@/lib/programs"
@@ -96,32 +97,10 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
   const root = useMemo(() => rootLevel(visible), [visible])
   const [stack, setStack] = useState<Level[]>([root])
   const level = stack[stack.length - 1]
-  const [bodies, setBodies] = useState<Body[]>(() => seed(root.items))
-  const sim = useRef<Body[]>(bodies)
   const pointer = useRef<{ x: number; y: number; active: boolean }>({ x: 0, y: 0, active: false })
   const svgRef = useRef<SVGSVGElement>(null)
   const [hover, setHover] = useState<string | null>(null)
-  const hoverRef = useRef<string | null>(null)
-  hoverRef.current = hover
-  const [ripples, setRipples] = useState<{ id: number; x: number; y: number; r: number; color: string }[]>([])
-  const enter = (key: string) => {
-    if (hoverRef.current === key) return
-    setHover(key)
-    const b = sim.current.find(x => x.key === key)
-    if (!b) return
-    // shockwave: neighbors get a push that ripples through the cluster
-    for (const o of sim.current) {
-      if (o === b) continue
-      const dx = o.x - b.x, dy = o.y - b.y, d = Math.hypot(dx, dy) || 1
-      const f = Math.max(0, 1 - d / 420) * 5
-      o.vx += (dx / d) * f
-      o.vy += (dy / d) * f
-    }
-    const id = Date.now() + Math.random()
-    setRipples(rs => [...rs.slice(-3), { id, x: b.x, y: b.y, r: b.base, color: b.color }])
-    setTimeout(() => setRipples(rs => rs.filter(r => r.id !== id)), 900)
-  }
-  const reduced = useRef(false)
+  const enter = (key: string) => setHover(key)
   const [portrait, setPortrait] = useState(false)
   useEffect(() => {
     const mq = window.matchMedia("(max-width: 640px)")
@@ -130,71 +109,18 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
     mq.addEventListener("change", apply)
     return () => mq.removeEventListener("change", apply)
   }, [])
-  // Module-level size is read by the physics helpers; portrait gives phones bigger, readable bubbles.
   W = portrait ? 600 : 1000
   H = portrait ? 780 : 700
-
   useEffect(() => setStack([root]), [root])
-  useEffect(() => {
-    sim.current = seed(level.items)
-    setBodies(sim.current)
-  }, [level, portrait])
 
-  useEffect(() => {
-    reduced.current = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    let raf = 0
-    const tick = () => {
-      const bs = sim.current
-      const p = pointer.current
-      for (const b of bs) {
-        // gentle drift keeps things alive even without the cursor
-        b.vx += (Math.random() - 0.5) * 0.05
-        b.vy += (Math.random() - 0.5) * 0.05
-        // hovered bubble swells, the rest shrink slightly; collisions push neighbors aside
-        const hk = hoverRef.current
-        const target = hk ? (b.key === hk ? Math.min(b.base * 1.45, b.base + 60) : b.base * 0.9) : b.base
-        // spring with overshoot so size changes wobble into place
-        b.rv = (b.rv + (target - b.r) * 0.16) * 0.78
-        b.r += b.rv
-        b.vx *= 0.96
-        b.vy *= 0.96
-        const sp = Math.hypot(b.vx, b.vy)
-        if (sp > 14) (b.vx *= 14 / sp), (b.vy *= 14 / sp)
-      }
-      // elastic collisions between bubbles
-      for (let i = 0; i < bs.length; i++)
-        for (let j = i + 1; j < bs.length; j++) {
-          const a = bs[i], b = bs[j]
-          const dx = b.x - a.x, dy = b.y - a.y
-          const d = Math.hypot(dx, dy) || 0.01
-          const overlap = a.r + b.r + 4 - d
-          if (overlap > 0) {
-            const nx = dx / d, ny = dy / d
-            const ma = a.r * a.r, mb = b.r * b.r
-            a.x -= nx * overlap * (mb / (ma + mb)); a.y -= ny * overlap * (mb / (ma + mb))
-            b.x += nx * overlap * (ma / (ma + mb)); b.y += ny * overlap * (ma / (ma + mb))
-            const rel = (b.vx - a.vx) * nx + (b.vy - a.vy) * ny
-            if (rel < 0) {
-              const imp = (-1.8 * rel) / (1 / ma + 1 / mb)
-              a.vx -= (imp / ma) * nx; a.vy -= (imp / ma) * ny
-              b.vx += (imp / mb) * nx; b.vy += (imp / mb) * ny
-            }
-          }
-        }
-      // walls
-      for (const b of bs) {
-        b.x += b.vx
-        b.y += b.vy
-        if (b.x < b.r) (b.x = b.r), (b.vx = Math.abs(b.vx) * 0.85)
-        if (b.x > W - b.r) (b.x = W - b.r), (b.vx = -Math.abs(b.vx) * 0.85)
-        if (b.y < b.r) (b.y = b.r), (b.vy = Math.abs(b.vy) * 0.85)
-        if (b.y > H - b.r) (b.y = H - b.r), (b.vy = -Math.abs(b.vy) * 0.85)
-      }
-      setBodies([...bs])
-      if (!reduced.current) raf = requestAnimationFrame(tick)
-    }
-    raf = requestAnimationFrame(tick)
-    return () => cancelAnimationFrame(raf)
+  // Fixed layout: circle packing, sized by program count (equal size for programs).
+  const bodies: Body[] = useMemo(() => {
+    const h = hierarchy<{ children?: Item[] } & Partial<Item>>({ children: level.items })
+      .sum(d => (d.programs ? (d.program ? 1 : Math.max(1, d.programs.length)) : 0))
+      .sort((x, y) => (y.value ?? 0) - (x.value ?? 0))
+    const laid = pack<{ children?: Item[] } & Partial<Item>>().size([W - 24, H - 24]).padding(level.items.length > 8 ? 10 : 18)(h)
+    return (laid.children ?? []).map(n => ({ ...(n.data as Item), x: n.x + 12, y: n.y + 12, r: n.r, base: n.r, rv: 0, vx: 0, vy: 0 }))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, portrait])
 
   const toLocal = (clientX: number, clientY: number) => {
@@ -252,10 +178,16 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
                 <stop offset="45%" stopColor="#fff" stopOpacity="0.08" />
                 <stop offset="100%" stopColor="#000" stopOpacity="0.12" />
               </radialGradient>
+              {bodies.map((b, i) => (
+                // A soft band of light sweeps across each bubble; offsets stagger the glints.
+                <linearGradient key={b.key} id={`shine-${i}`} x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0.35" stopColor="#fff" stopOpacity="0" />
+                  <stop offset="0.5" stopColor="#fff" stopOpacity="0.38" />
+                  <stop offset="0.65" stopColor="#fff" stopOpacity="0" />
+                  <animateTransform attributeName="gradientTransform" type="translate" values="-1 -1; 1 1" dur="3.6s" begin={`${((i * 0.9) % 3.6).toFixed(1)}s`} repeatCount="indefinite" />
+                </linearGradient>
+              ))}
             </defs>
-            {ripples.map(rp => (
-              <circle key={rp.id} cx={rp.x} cy={rp.y} r={rp.r} fill="none" stroke={rp.color} strokeWidth={3} className="atlas-ripple" style={{ transformOrigin: `${rp.x}px ${rp.y}px` }} pointerEvents="none" />
-            ))}
             {[...bodies].sort((a, z) => (a.key === hover ? 1 : 0) - (z.key === hover ? 1 : 0)).map(b => {
               const leaf = !!b.program
               const fs = Math.max(13, Math.min(leaf ? 19 : 24, b.r / (leaf ? 4.4 : 5)))
@@ -270,6 +202,7 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
                   onPointerEnter={() => enter(b.key)}
                   onPointerLeave={() => setHover(h => (h === b.key ? null : h))}
                 >
+                  <g style={{ transform: `scale(${isHover ? 1.07 : 1})`, transition: "transform 320ms cubic-bezier(.3,1.5,.5,1)" }}>
                   <circle
                     r={b.r}
                     fill={b.color}
@@ -279,6 +212,7 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
                     style={{ filter: isHover ? "drop-shadow(0 8px 18px rgba(0,0,0,.25))" : "drop-shadow(0 3px 8px rgba(0,0,0,.12))", transition: "r 150ms" }}
                   />
                   <circle r={b.r} fill="url(#sheen)" pointerEvents="none" />
+                  <circle r={b.r} fill={`url(#shine-${bodies.indexOf(b)})`} pointerEvents="none" className="motion-reduce:hidden" />
                   {lines.map((line, i) => (
                     <text key={i} y={(i - (lines.length - 1) / 2) * fs * 1.15 - (leaf ? 0 : fs * 0.35)} textAnchor="middle" dominantBaseline="middle" fontSize={fs} fontWeight={700} fill="#fff" pointerEvents="none">
                       {line}
@@ -289,6 +223,7 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
                       {b.programs.length} program{b.programs.length === 1 ? "" : "s"}
                     </text>
                   )}
+                  </g>
                 </g>
               )
             })}
@@ -301,7 +236,7 @@ export function BubbleMap({ programs, highlight, onOpen }: { programs: Program[]
             </div>
           )}
         </div>
-        <p className="mt-2 text-xs text-muted-foreground">Hover a bubble to bring it forward. Tap one to open it.</p>
+        <p className="mt-2 text-xs text-muted-foreground">Tap a bubble to open it.</p>
       </div>
 
       <aside className="rounded-2xl glass p-4 lg:max-h-[calc(100vh-200px)] lg:overflow-y-auto">

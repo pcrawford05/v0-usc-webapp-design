@@ -69,6 +69,7 @@ export function ProfileDialog({ open, onOpenChange, profile, onSave }: {
   const [busy, setBusy] = useState(false)
   const [msg, setMsg] = useState<{ kind: "ok" | "err"; text: string } | null>(null)
   const fileRef = useRef<HTMLInputElement>(null)
+  const fieldsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (open) {
@@ -91,6 +92,7 @@ export function ProfileDialog({ open, onOpenChange, profile, onSave }: {
         ...Object.fromEntries(Object.entries(p).filter(([, v]) => v !== undefined && v !== null && !(Array.isArray(v) && !v.length))),
       }))
       setMsg({ kind: "ok", text: "Imported. Review the details below, then save." })
+      setTimeout(() => fieldsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 100)
     } catch (e) {
       setMsg({ kind: "err", text: e instanceof Error ? e.message : "Import failed" })
     } finally {
@@ -160,7 +162,7 @@ export function ProfileDialog({ open, onOpenChange, profile, onSave }: {
             <p className="mt-2 text-xs text-muted-foreground">Your document is read once by Google Gemini to fill in the fields and is not stored.</p>
           </section>
 
-          <div className="space-y-4">
+          <div ref={fieldsRef} className="scroll-mt-4 space-y-4">
             <Field label="I am a">
               <Choice value={draft.role} options={ROLES} onChange={k => setDraft(d => ({ ...d, role: d.role === k ? undefined : k }))} />
             </Field>

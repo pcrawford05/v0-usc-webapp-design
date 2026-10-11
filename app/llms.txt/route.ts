@@ -13,7 +13,7 @@ export function GET(req: Request) {
 
 ## Notes
 - Entries rated "low" confidence need verification against the official link.
-- Corrections are welcome: flag the program id, the field, and a source URL.
+- Corrections: email pcrawfor@usc.edu with the program id, the field, and a source URL.
 `,
     { headers: { "Content-Type": "text/plain; charset=utf-8", "Access-Control-Allow-Origin": "*" } },
   )

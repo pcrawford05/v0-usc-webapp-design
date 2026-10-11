@@ -9,6 +9,7 @@ export function GET() {
       name: "USC Startup Atlas program catalog",
       description: "Entrepreneurship programs and founder resources at USC and beyond. Details are researched from public sources; confirm on each program's official link.",
       updated: new Date().toISOString().slice(0, 10),
+      corrections: "Email pcrawfor@usc.edu with the program id, the field, and a source URL.",
       count: programs.length,
       fields: {
         confidence: "high | medium | low: how well the details are verified against official sources",

@@ -1,6 +1,6 @@
 "use client"
 
-import { Bookmark, CalendarDays, Compass, LayoutGrid, Search, Sparkles, Target, UserRound, X } from "lucide-react"
+import { Bookmark, CalendarDays, FileText, Compass, LayoutGrid, Search, Sparkles, Target, UserRound, X } from "lucide-react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { Suspense, useCallback, useMemo, useState } from "react"
 
@@ -123,6 +123,14 @@ function Atlas() {
                 </button>
               )}
             </label>
+            <a
+              href="/one-pager"
+              aria-label="Share the one-page PDF"
+              className="inline-flex items-center gap-2 rounded-2xl glass px-3.5 py-2.5 text-sm font-semibold text-foreground transition hover:bg-white/70"
+            >
+              <FileText className="h-4 w-4" />
+              <span className="hidden sm:inline">Share PDF</span>
+            </a>
             <button
               onClick={() => setProfileOpen(true)}
               aria-label="Your profile"

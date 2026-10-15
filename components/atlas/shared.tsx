@@ -1,6 +1,6 @@
 "use client"
 
-import { Bookmark, BookmarkCheck, CalendarDays, ExternalLink, GraduationCap, Sparkles, Users, Wallet } from "lucide-react"
+import { Bookmark, BookmarkCheck, CalendarDays, Check, Minus, ExternalLink, GraduationCap, Sparkles, Users, Wallet } from "lucide-react"
 import { useCallback, useEffect, useState } from "react"
 
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
@@ -58,12 +58,14 @@ export function whenLabel(p: Program): string {
 export function ProgramCard({
   program,
   reason,
+  checks,
   onOpen,
   saved,
   onToggleSave,
 }: {
   program: Program
   reason?: string
+  checks?: { ok: boolean; label: string }[]
   onOpen: (id: string) => void
   saved: boolean
   onToggleSave: (id: string) => void
@@ -90,6 +92,16 @@ export function ProgramCard({
       <h3 className="mt-2 font-semibold leading-snug text-foreground">{program.name}</h3>
       <p className="mt-0.5 text-xs text-muted-foreground">{program.category}</p>
       <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{reason || program.description}</p>
+      {checks && checks.length > 0 && (
+        <ul className="mt-2 space-y-0.5">
+          {checks.map(c => (
+            <li key={c.label} className={cn("flex items-center gap-1.5 text-xs", c.ok ? "text-emerald-700" : "text-muted-foreground")}>
+              {c.ok ? <Check className="h-3.5 w-3.5" /> : <Minus className="h-3.5 w-3.5" />}
+              {c.label}
+            </li>
+          ))}
+        </ul>
+      )}
       <div className="mt-auto flex flex-wrap gap-x-3 gap-y-1 pt-3 text-xs text-muted-foreground">
         <span className="inline-flex items-center gap-1">
           <CalendarDays className="h-3.5 w-3.5" />

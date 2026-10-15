@@ -77,3 +77,21 @@ export function fitScore(program: Program, p: Profile): number {
   if (program.group === "external") s -= 0.5
   return s
 }
+
+/** A LinkedIn-style checklist of how a program lines up with the profile. Unknown fields are skipped. */
+export function matchChecklist(program: Program, p: Profile): { ok: boolean; label: string }[] {
+  const out: { ok: boolean; label: string }[] = []
+  const role = ROLES.find(r => r.key === p.role)
+  if (role && program.audience.length) {
+    const ok = program.audience.some(a => (role.audience as readonly Audience[]).includes(a))
+    out.push({ ok, label: ok ? `Open to ${role.label.toLowerCase()} students` : `Not listed for ${role.label.toLowerCase()}` })
+  }
+  const stage = STAGES.find(s => s.key === p.stage)
+  if (stage && program.stage.length) {
+    const ok = program.stage.includes(stage.key)
+    out.push({ ok, label: ok ? `Fits your stage (${stage.label.toLowerCase()})` : `Aimed at a different stage than ${stage.label.toLowerCase()}` })
+  }
+  const school = SCHOOLS.find(s => s.key === p.school)
+  if (school?.group && program.group === school.group) out.push({ ok: true, label: `Run by your school` })
+  return out
+}

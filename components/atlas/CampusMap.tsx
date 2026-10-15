@@ -17,7 +17,7 @@ const OFF = "off"
 /** Frame every pin on a campus, leaving room for the labels under them. */
 function fit(L: typeof import("leaflet"), m: LMap, c: CampusKey, animate = false) {
   const pts = PLACES.filter(p => p.campus === c).map(p => [p.lat, p.lng] as [number, number])
-  const opts = { padding: [70, 70] as [number, number], maxZoom: 18 }
+  const opts = { padding: (m.getSize().x < 500 ? [36, 36] : [70, 70]) as [number, number], maxZoom: 18 }
   if (animate) m.flyToBounds(L.latLngBounds(pts), { ...opts, duration: 0.8 })
   else m.fitBounds(L.latLngBounds(pts), opts)
 }
@@ -54,7 +54,8 @@ export function CampusMap({ programs, highlight, onOpen }: { programs: Program[]
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }).addTo(m)
       m.on("click", () => setSelected(null))
-      fit(L, m, "upc")
+      // The container may still be settling into its final size, so frame the pins once it has.
+      requestAnimationFrame(() => (m.invalidateSize(), fit(L, m, "upc")))
       map.current = m
       setReady(true)
     })

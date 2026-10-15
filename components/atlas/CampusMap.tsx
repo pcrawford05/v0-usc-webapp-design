@@ -28,6 +28,12 @@ const BASEMAPS = {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     className: "atlas-tiles-streets",
   },
+  minimal: {
+    label: "Minimal",
+    url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    className: "atlas-tiles-minimal",
+  },
 } as const
 type BasemapKey = keyof typeof BASEMAPS
 

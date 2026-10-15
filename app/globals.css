@@ -117,3 +117,4 @@ body {
 .palette-item[data-selected="true"] { background: rgba(153, 0, 0, 0.07); }
 .palette-item .palette-arrow { opacity: 0; transition: opacity 120ms, transform 120ms; }
 .palette-item[data-selected="true"] .palette-arrow { opacity: 1; transform: translateX(2px); }
+.atlas-tiles-minimal { filter: grayscale(0.9) contrast(0.92) brightness(1.06) sepia(0.12); }

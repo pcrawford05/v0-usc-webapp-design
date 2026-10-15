@@ -1,4 +1,5 @@
 import { GROUPS, MONTHS, programs, programById, type Program } from "@/lib/programs"
+import { COLUMN, networkPrompt, onMap } from "@/lib/network"
 import { rankPrograms } from "@/lib/search"
 
 export interface ChatTurn {
@@ -9,9 +10,19 @@ export interface ChatTurn {
 export interface AskResult {
   answer: string
   picks: { id: string; reason: string }[]
+  /** An ordered route drawn on the subway map: what to do now, next, and later. */
+  plan?: RoutePlan
   provider: "gemini" | "groq" | "local"
   /** Why each AI provider was skipped, when falling back. Never contains keys. */
   fallbackReason?: string
+}
+
+export interface RoutePlan {
+  now: string[]
+  next: string[]
+  later: string[]
+  /** Always-on support (mentoring, office hours, spaces, legal help) to lean on throughout. */
+  support: string[]
 }
 
 // ---------- Prompt ----------
@@ -36,7 +47,10 @@ function systemPrompt(profile?: string): string {
     "Answer ONLY from the program catalog provided. Never invent programs, dates, amounts or eligibility. If the catalog does not cover something, say so and suggest the closest options.",
     "Be concise and practical: 2 to 4 short sentences, then let the picks do the work. Do not use em dashes. Do not end with a question.",
     ...(profile ? [`About this user: ${profile}. Favor programs they are eligible for and that fit their stage, and mention why when it matters.`] : []),
-    'Respond as JSON: {"answer": string, "picks": [{"id": string, "reason": string}]} with 3 to 6 picks ordered by relevance. Each reason is one short sentence tailored to the user. Use ids exactly as written in the catalog.',
+    'Respond as JSON: {"answer": string, "picks": [{"id": string, "reason": string}], "plan": {"now": [id], "next": [id], "later": [id], "support": [id]}} with 3 to 6 picks ordered by relevance. Each reason is one short sentence tailored to the user. Use ids exactly as written in the catalog.',
+    "The plan is a route on the USC startup subway map below. Lines are founder goals and a station on two lines is an interchange. Choose 1 to 2 stations for now, 1 to 2 for next, and 1 to 2 for later, ordered as the user should do them, preferring stations on the map and routes that use interchanges when the user's goals span lines. Put always-on help such as mentorship, office hours, makerspaces and legal clinics in support (0 to 3 ids), not in the route. Every pick should appear in the plan.",
+    "SUBWAY MAP:",
+    networkPrompt(),
   ].join("\n")
 }
 
@@ -102,10 +116,22 @@ function parse(raw: string): Omit<AskResult, "provider"> | null {
       ? obj.picks.filter((p: { id?: string }) => p && typeof p.id === "string" && programById.has(p.id)).slice(0, 6)
       : []
     if (typeof obj.answer !== "string") return null
-    return { answer: obj.answer.replace(/\s*—\s*/g, ", "), picks }
+    const ids = (v: unknown, n: number) => (Array.isArray(v) ? v.filter((x): x is string => typeof x === "string" && programById.has(x)).slice(0, n) : [])
+    const plan = obj.plan && typeof obj.plan === "object"
+      ? { now: ids(obj.plan.now, 3), next: ids(obj.plan.next, 3), later: ids(obj.plan.later, 3), support: ids(obj.plan.support, 4) }
+      : undefined
+    return { answer: obj.answer.replace(/\s*—\s*/g, ", "), picks, plan: plan && plan.now.length + plan.next.length + plan.later.length ? plan : fallbackPlan(picks.map((p: { id: string }) => p.id)) }
   } catch {
     return null
   }
+}
+
+/** Without a model-written plan, order the picks along the map: earliest stations first. */
+function fallbackPlan(ids: string[]): RoutePlan | undefined {
+  const route = ids.filter(onMap).sort((a, b) => COLUMN[a] - COLUMN[b])
+  if (!route.length) return undefined
+  const third = Math.max(1, Math.ceil(route.length / 3))
+  return { now: route.slice(0, third), next: route.slice(third, third * 2), later: route.slice(third * 2), support: ids.filter(id => !onMap(id)).slice(0, 3) }
 }
 
 export async function ask(query: string, history: ChatTurn[] = [], profile?: string): Promise<AskResult> {
@@ -133,6 +159,7 @@ export async function ask(query: string, history: ChatTurn[] = [], profile?: str
       ? "Here are the closest matches in the catalog. Tap any program for timing, eligibility and the official link."
       : "I could not find a close match. Try describing what you need, for example funding, mentorship or a pitch competition.",
     picks: ranked.slice(0, 6).map(p => ({ id: p.id, reason: p.description ?? "" })),
+    plan: fallbackPlan(rankPrograms(context, 40).map(r => r.program.id).filter(onMap).slice(0, 5)),
     provider: "local",
     fallbackReason: reasons.join(" | ") || undefined,
   }

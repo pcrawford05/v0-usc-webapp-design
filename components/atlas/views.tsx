@@ -25,6 +25,8 @@ import { cn } from "@/lib/utils"
 
 import { ProgramTable } from "./ProgramTable"
 import { GroupPill, ProgramCard } from "./shared"
+import { Itinerary, SubwayMap } from "./Subway"
+import type { RoutePlan } from "@/lib/ai"
 
 type CardProps = { onOpen: (id: string) => void; isSaved: (id: string) => boolean; onToggleSave: (id: string) => void; onAsk?: (q: string) => void }
 
@@ -444,6 +446,7 @@ export interface Turn {
   role: "user" | "assistant"
   content: string
   picks?: { id: string; reason: string }[]
+  plan?: RoutePlan
   provider?: string
 }
 
@@ -498,6 +501,19 @@ export function AskView({
           ) : (
             <div key={i} className="space-y-3">
               <div className="max-w-[90%] rounded-2xl rounded-bl-sm glass px-4 py-3 leading-relaxed">{t.content}</div>
+              {t.plan && (
+                <div className="space-y-3 rounded-3xl border border-white/60 bg-white/30 p-3">
+                  <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Your route</div>
+                  <Itinerary route={t.plan} onOpen={card.onOpen} />
+                  <SubwayMap route={t.plan} onOpen={card.onOpen} compact />
+                  <a
+                    href={`?view=explore&mode=subway&route=${[...t.plan.now, ...t.plan.next, ...t.plan.later].join(",")}`}
+                    className="inline-block text-xs font-semibold text-primary hover:underline"
+                  >
+                    Open on the full subway map
+                  </a>
+                </div>
+              )}
               {t.picks && t.picks.length > 0 && (
                 <Grid
                   items={t.picks.map(p => programById.get(p.id)!).filter(Boolean)}

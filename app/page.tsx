@@ -7,7 +7,9 @@ import { Suspense, useCallback, useEffect, useMemo, useState } from "react"
 import { BubbleMap } from "@/components/atlas/BubbleMap"
 import { CampusMap } from "@/components/atlas/CampusMap"
 import { CommandPalette } from "@/components/atlas/CommandPalette"
-import { ConstellationView, JourneyView, OrbitView, SubwayView } from "@/components/atlas/ExploreViews"
+import { ConstellationView, OrbitView } from "@/components/atlas/ExploreViews"
+import { JourneyView } from "@/components/atlas/Journey"
+import { SubwayView } from "@/components/atlas/Subway"
 import { ProfileDialog, useProfile } from "@/components/atlas/ProfileDialog"
 import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
 import { AskView, BrowseView, CalendarView, FindPathView, SavedView, type Turn } from "@/components/atlas/views"
@@ -53,7 +55,8 @@ function Atlas() {
     try { localStorage.setItem("atlas:edition", e) } catch { /* ignore */ }
   }
   const tabs = edition === "labs" ? TABS : TABS.filter(t => POLISHED_TABS.includes(t.key))
-  const modes = edition === "labs" ? MODES : MODES.filter(m => POLISHED_MODES.includes(m.key))
+  // A shared route link (from Ask AI) always opens the subway, even in Polished.
+  const modes = edition === "labs" ? MODES : MODES.filter(m => POLISHED_MODES.includes(m.key) || (m.key === "subway" && params.get("route")))
   const tab = (tabs.find(t => t.key === params.get("view"))?.key ?? "explore") as TabKey
   const mode = modes.find(m => m.key === params.get("mode"))?.key ?? "bubbles"
   const openId = params.get("p")
@@ -100,7 +103,7 @@ function Atlas() {
         setTurns(prev => [
           ...prev,
           res.ok
-            ? { role: "assistant", content: data.answer, picks: data.picks, provider: data.provider }
+            ? { role: "assistant", content: data.answer, picks: data.picks, plan: data.plan, provider: data.provider }
             : { role: "assistant", content: data.error ?? "Something went wrong." },
         ])
       } catch {
@@ -213,10 +216,10 @@ function Atlas() {
             )}
             {mode === "bubbles" && <BubbleMap programs={programs} highlight={highlight} onOpen={onOpen} />}
             {mode === "campus" && <CampusMap programs={programs} highlight={highlight} onOpen={onOpen} />}
-            {mode === "journey" && <JourneyView programs={matches ?? programs} onOpen={onOpen} stage={me?.stage} />}
+            {mode === "journey" && <JourneyView onOpen={onOpen} profile={me} />}
             {mode === "constellation" && <ConstellationView programs={matches ?? programs} onOpen={onOpen} />}
             {mode === "orbit" && <OrbitView programs={matches ?? programs} onOpen={onOpen} />}
-            {mode === "subway" && <SubwayView programs={matches ?? programs} onOpen={onOpen} />}
+            {mode === "subway" && <SubwayView onOpen={onOpen} profile={me ? describeProfile(me) : undefined} initial={params.get("route")?.split(",").filter(Boolean)} />}
           </>
         )}
         {tab === "path" && <FindPathView key={me ? JSON.stringify(me) : "none"} all={programs} profile={me} {...card} />}

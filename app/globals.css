@@ -118,3 +118,8 @@ body {
 .palette-item .palette-arrow { opacity: 0; transition: opacity 120ms, transform 120ms; }
 .palette-item[data-selected="true"] .palette-arrow { opacity: 1; transform: translateX(2px); }
 .atlas-tiles-minimal { filter: grayscale(0.9) contrast(0.92) brightness(1.06) sepia(0.12); }
+
+/* Route draw-in on the subway map: plays once when a route appears. */
+@keyframes atlas-route { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+.atlas-route { stroke-dasharray: 1; stroke-dashoffset: 1; animation: atlas-route 900ms cubic-bezier(.4,.1,.2,1) forwards; }
+@media (prefers-reduced-motion: reduce) { .atlas-route { animation: none; stroke-dashoffset: 0; } }

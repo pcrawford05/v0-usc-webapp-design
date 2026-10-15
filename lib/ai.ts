@@ -1,5 +1,5 @@
 import { GROUPS, MONTHS, programs, programById, type Program } from "@/lib/programs"
-import { COLUMN, networkPrompt, onMap } from "@/lib/network"
+import { COLUMN, forward, networkPrompt, onMap } from "@/lib/network"
 import { rankPrograms } from "@/lib/search"
 
 export interface ChatTurn {
@@ -45,10 +45,10 @@ function systemPrompt(profile?: string): string {
     "You are the USC Startup Atlas guide. You help USC students, researchers and alumni find the right entrepreneurship programs.",
     `Today is ${today}. Use this to say what is open now or coming up soon.`,
     "Answer ONLY from the program catalog provided. Never invent programs, dates, amounts or eligibility. If the catalog does not cover something, say so and suggest the closest options.",
-    "Be concise and practical: 2 to 4 short sentences, then let the picks do the work. Do not use em dashes. Do not end with a question.",
+    "Be concise and practical: 2 to 4 short sentences, then let the picks do the work. Start with the substance; no greetings or introductions. Do not use em dashes. Do not end with a question.",
     ...(profile ? [`About this user: ${profile}. Favor programs they are eligible for and that fit their stage, and mention why when it matters.`] : []),
     'Respond as JSON: {"answer": string, "picks": [{"id": string, "reason": string}], "plan": {"now": [id], "next": [id], "later": [id], "support": [id]}} with 3 to 6 picks ordered by relevance. Each reason is one short sentence tailored to the user. Use ids exactly as written in the catalog.',
-    "The plan is a route on the USC startup subway map below. Lines are founder goals and a station on two lines is an interchange. Choose 1 to 2 stations for now, 1 to 2 for next, and 1 to 2 for later, ordered as the user should do them, preferring stations on the map and routes that use interchanges when the user's goals span lines. Put always-on help such as mentorship, office hours, makerspaces and legal clinics in support (0 to 3 ids), not in the route. Every pick should appear in the plan.",
+    "The plan is a route on the USC startup subway map below. Lines are founder goals and a station on two lines is an interchange. Choose 4 to 6 stations in total: 1 to 2 for now, 1 to 2 for next, 1 to 2 for later. Cover every goal the user mentions (for example a co-founder means a Find your team station). Order them so the user moves forward through the stages in brackets, prefer stations on the map, and use interchanges to switch lines when the goals span lines. Put always-on help such as mentorship, office hours, makerspaces and legal clinics in support (0 to 3 ids), not in the route. Every pick should appear in the plan.",
     "SUBWAY MAP:",
     networkPrompt(),
   ].join("\n")
@@ -118,7 +118,7 @@ function parse(raw: string): Omit<AskResult, "provider"> | null {
     if (typeof obj.answer !== "string") return null
     const ids = (v: unknown, n: number) => (Array.isArray(v) ? v.filter((x): x is string => typeof x === "string" && programById.has(x)).slice(0, n) : [])
     const plan = obj.plan && typeof obj.plan === "object"
-      ? { now: ids(obj.plan.now, 3), next: ids(obj.plan.next, 3), later: ids(obj.plan.later, 3), support: ids(obj.plan.support, 4) }
+      ? { ...forward({ now: ids(obj.plan.now, 3), next: ids(obj.plan.next, 3), later: ids(obj.plan.later, 3) }), support: ids(obj.plan.support, 4) }
       : undefined
     return { answer: obj.answer.replace(/\s*—\s*/g, ", "), picks, plan: plan && plan.now.length + plan.next.length + plan.later.length ? plan : fallbackPlan(picks.map((p: { id: string }) => p.id)) }
   } catch {

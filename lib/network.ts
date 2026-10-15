@@ -140,5 +140,16 @@ export function planRoute(stops: string[]): { legs: Leg[]; transfers: string[]; 
 
 /** A compact description of the network for the AI prompt. */
 export function networkPrompt(): string {
-  return LINES.map(l => `${l.name} line (${l.key}): ${l.stops.join(" > ")}`).join("\n")
+  const zone = (id: string) => ZONES.find(z => COLUMN[id] >= z.from && COLUMN[id] <= z.to)?.label ?? ""
+  return LINES.map(l => `${l.name} line: ${l.stops.map(id => `${id} [${zone(id)}]`).join(" > ")}`).join("\n")
+}
+
+/** Reorders a plan so the ride always moves forward through the stages, keeping each horizon's size. */
+export function forward(plan: { now: string[]; next: string[]; later: string[] }) {
+  const all = [...plan.now, ...plan.next, ...plan.later]
+  const col = (id: string) => COLUMN[id] ?? 4.5 // off-map stops sit mid-journey unless the AI placed them
+  const sorted = all.map((id, i) => ({ id, i })).sort((a, b) => col(a.id) - col(b.id) || a.i - b.i).map(x => x.id)
+  const a = plan.now.length
+  const b = a + plan.next.length
+  return { now: sorted.slice(0, a), next: sorted.slice(a, b), later: sorted.slice(b) }
 }

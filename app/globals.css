@@ -107,7 +107,8 @@ body {
   0% { box-shadow: 0 8px 22px -6px var(--c), 0 0 0 0 color-mix(in srgb, var(--c) 55%, transparent); }
   100% { box-shadow: 0 8px 22px -6px var(--c), 0 0 0 18px transparent; }
 }
-.atlas-tiles { filter: grayscale(0.9) contrast(0.92) brightness(1.06) sepia(0.12); }
+.atlas-tiles-satellite { filter: saturate(1.25) brightness(1.05) contrast(1.05); }
+.atlas-tiles-streets { filter: saturate(1.1); }
 .leaflet-container { background: #efeae4; font-family: inherit; }
 
 /* ---------- Command palette ---------- */

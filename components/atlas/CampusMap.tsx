@@ -3,7 +3,7 @@
 import "leaflet/dist/leaflet.css"
 
 import { ArrowLeft, Globe2, MapPin } from "lucide-react"
-import type { Map as LMap, Marker } from "leaflet"
+import type { Map as LMap, Marker, TileLayer } from "leaflet"
 import { useEffect, useMemo, useRef, useState } from "react"
 
 import { CAMPUSES, PLACES, placeOf, type CampusKey } from "@/lib/places"
@@ -13,6 +13,23 @@ import { cn } from "@/lib/utils"
 import { whenLabel } from "./shared"
 
 const OFF = "off"
+
+// Satellite is colorful and has no text, so the pins carry all the labels. Streets is for wayfinding.
+const BASEMAPS = {
+  satellite: {
+    label: "Satellite",
+    url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+    attribution: "Imagery &copy; Esri, Maxar, Earthstar Geographics",
+    className: "atlas-tiles-satellite",
+  },
+  streets: {
+    label: "Streets",
+    url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    className: "atlas-tiles-streets",
+  },
+} as const
+type BasemapKey = keyof typeof BASEMAPS
 
 /** Frame every pin on a campus, leaving room for the labels under them. */
 function fit(L: typeof import("leaflet"), m: LMap, c: CampusKey, animate = false) {
@@ -30,6 +47,8 @@ export function CampusMap({ programs, highlight, onOpen }: { programs: Program[]
   const [campus, setCampus] = useState<CampusKey>("upc")
   const [selected, setSelected] = useState<string | null>(null)
   const [cat, setCat] = useState<Category | null>(null)
+  const [basemap, setBasemap] = useState<BasemapKey>("satellite")
+  const tiles = useRef<TileLayer | null>(null)
 
   const visible = useMemo(() => (highlight ? programs.filter(p => highlight.has(p.id)) : programs), [programs, highlight])
   const byPlace = useMemo(() => {
@@ -48,11 +67,6 @@ export function CampusMap({ programs, highlight, onOpen }: { programs: Program[]
       if (cancelled || !el.current || map.current) return
       const m = L.map(el.current, { zoomControl: false, scrollWheelZoom: false, attributionControl: true }).setView(CAMPUSES.upc.center, CAMPUSES.upc.zoom)
       L.control.zoom({ position: "bottomright" }).addTo(m)
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        className: "atlas-tiles",
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      }).addTo(m)
       m.on("click", () => setSelected(null))
       // The container may still be settling into its final size, so frame the pins once it has.
       requestAnimationFrame(() => (m.invalidateSize(), fit(L, m, "upc")))
@@ -66,6 +80,15 @@ export function CampusMap({ programs, highlight, onOpen }: { programs: Program[]
       markers.current.clear()
     }
   }, [])
+
+  useEffect(() => {
+    if (!ready || !map.current) return
+    import("leaflet").then(L => {
+      tiles.current?.remove()
+      const b = BASEMAPS[basemap]
+      tiles.current = L.tileLayer(b.url, { maxZoom: 19, className: b.className, attribution: b.attribution }).addTo(map.current!)
+    })
+  }, [ready, basemap])
 
   // Redraw pins whenever counts, selection or search change.
   useEffect(() => {
@@ -120,9 +143,18 @@ export function CampusMap({ programs, highlight, onOpen }: { programs: Program[]
             </button>
           ))}
         </div>
-        <p className="pointer-events-none absolute bottom-3 left-3 z-[500] hidden rounded-xl glass-strong px-3 py-1.5 text-xs text-muted-foreground sm:block">
-          Pins sit at each program's home building. Tap one to see what runs there.
-        </p>
+        <div className="absolute bottom-7 left-3 z-[500] flex gap-1 rounded-2xl glass-strong p-1">
+          {(Object.keys(BASEMAPS) as BasemapKey[]).map(k => (
+            <button
+              key={k}
+              onClick={() => setBasemap(k)}
+              aria-pressed={basemap === k}
+              className={cn("rounded-xl px-2.5 py-1.5 text-xs font-semibold transition", basemap === k ? "bg-foreground text-background shadow-sm" : "text-foreground/70 hover:text-foreground")}
+            >
+              {BASEMAPS[k].label}
+            </button>
+          ))}
+        </div>
       </div>
 
       <aside className="flex max-h-[620px] flex-col overflow-hidden rounded-3xl glass">
@@ -171,7 +203,7 @@ export function CampusMap({ programs, highlight, onOpen }: { programs: Program[]
           <>
             <div className="border-b border-white/60 p-4">
               <h3 className="text-lg font-bold">Places</h3>
-              <p className="text-xs text-muted-foreground">{highlight ? `${visible.length} matching programs` : "Where entrepreneurship happens at USC"}</p>
+              <p className="text-xs text-muted-foreground">{highlight ? `${visible.length} matching programs` : "Pins sit at each program's home building. Tap one to see what runs there."}</p>
             </div>
             <ul className="flex-1 space-y-1 overflow-y-auto p-2">
               {[...PLACES.map(p => ({ key: p.key, name: p.name, sub: `${p.building} · ${CAMPUSES[p.campus].label}`, color: p.color, campus: p.campus as CampusKey | null })),

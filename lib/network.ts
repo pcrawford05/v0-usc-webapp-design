@@ -144,12 +144,9 @@ export function networkPrompt(): string {
   return LINES.map(l => `${l.name} line: ${l.stops.map(id => `${id} [${zone(id)}]`).join(" > ")}`).join("\n")
 }
 
-/** Reorders a plan so the ride always moves forward through the stages, keeping each horizon's size. */
+/** Keeps the AI's Now / Next / Later order (it matches the written answer) and orders stops by stage within each. */
 export function forward(plan: { now: string[]; next: string[]; later: string[] }) {
-  const all = [...plan.now, ...plan.next, ...plan.later]
-  const col = (id: string) => COLUMN[id] ?? 4.5 // off-map stops sit mid-journey unless the AI placed them
-  const sorted = all.map((id, i) => ({ id, i })).sort((a, b) => col(a.id) - col(b.id) || a.i - b.i).map(x => x.id)
-  const a = plan.now.length
-  const b = a + plan.next.length
-  return { now: sorted.slice(0, a), next: sorted.slice(a, b), later: sorted.slice(b) }
+  const col = (id: string) => COLUMN[id] ?? 4.5
+  const by = (ids: string[]) => [...ids].sort((a, b) => col(a) - col(b))
+  return { now: by(plan.now), next: by(plan.next), later: by(plan.later) }
 }

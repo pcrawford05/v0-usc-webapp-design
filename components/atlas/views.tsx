@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowUp, Bookmark, LayoutGrid, Rows3, Loader2, RotateCcw, Sparkles } from "lucide-react"
+import { ArrowUp, ArrowUpDown, Bookmark, ChevronDown, Clock, LayoutGrid, Loader2, RotateCcw, Rows3, Search, ShieldCheck, Sparkles, X } from "lucide-react"
 import { useEffect, useMemo, useRef, useState } from "react"
 
 import {
@@ -9,6 +9,7 @@ import {
   GROUPS,
   GROUP_KEYS,
   MONTHS,
+  STAGE_LABELS,
   isAlwaysOn,
   programById,
   type Audience,
@@ -17,13 +18,15 @@ import {
   type Program,
   type Stage,
 } from "@/lib/programs"
-import { fitScore, type Profile } from "@/lib/profile"
+import { applyFilters, CLEAR_ALL, isOpenNow, monthsAway, type Filters, type SortKey } from "@/lib/filters"
+import { fitScore, matchChecklist, type Profile } from "@/lib/profile"
+import { rankPrograms } from "@/lib/search"
 import { cn } from "@/lib/utils"
 
 import { ProgramTable } from "./ProgramTable"
 import { GroupPill, ProgramCard } from "./shared"
 
-type CardProps = { onOpen: (id: string) => void; isSaved: (id: string) => boolean; onToggleSave: (id: string) => void }
+type CardProps = { onOpen: (id: string) => void; isSaved: (id: string) => boolean; onToggleSave: (id: string) => void; onAsk?: (q: string) => void }
 
 function Chip({ active, onClick, children, color }: { active: boolean; onClick: () => void; children: React.ReactNode; color?: string }) {
   return (
@@ -41,7 +44,7 @@ function Chip({ active, onClick, children, color }: { active: boolean; onClick: 
   )
 }
 
-function Grid({ items, reasons, ...card }: CardProps & { items: Program[]; reasons?: Map<string, string> }) {
+function Grid({ items, reasons, profile, ...card }: CardProps & { items: Program[]; reasons?: Map<string, string>; profile?: Profile | null }) {
   if (!items.length) return <p className="py-10 text-center text-muted-foreground">No programs match yet. Try loosening a filter.</p>
   return (
     <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -50,6 +53,7 @@ function Grid({ items, reasons, ...card }: CardProps & { items: Program[]; reaso
           key={p.id}
           program={p}
           reason={reasons?.get(p.id)}
+          checks={profile ? matchChecklist(p, profile) : undefined}
           onOpen={card.onOpen}
           saved={card.isSaved(p.id)}
           onToggleSave={card.onToggleSave}
@@ -167,12 +171,55 @@ export function FindPathView({ all, profile, ...card }: CardProps & { all: Progr
 
 // ---------- Browse ----------
 
-export function BrowseView({ all, matches, query, profile, ...card }: CardProps & { all: Program[]; matches: Program[] | null; query: string; profile: Profile | null }) {
-  const [groups, setGroups] = useState<GroupKey[]>([])
-  const [cat, setCat] = useState<Category | "">("")
-  const [aud, setAud] = useState<Audience | "">("")
-  const [verifiedOnly, setVerifiedOnly] = useState(false)
+function Facet<T extends string>({ label, value, options, onChange }: {
+  label: string
+  value: T | null
+  options: { value: T; label: string; count: number }[]
+  onChange: (v: T | null) => void
+}) {
+  return (
+    <label className={cn("relative inline-flex items-center rounded-xl glass pl-3 text-sm", value && "ring-2 ring-primary/40")}>
+      <span className="text-muted-foreground">{label}</span>
+      <select
+        value={value ?? ""}
+        onChange={e => onChange((e.target.value || null) as T | null)}
+        className="cursor-pointer appearance-none bg-transparent py-2 pl-1.5 pr-7 font-semibold text-foreground outline-none"
+      >
+        <option value="">Any</option>
+        {options.map(o => (
+          <option key={o.value} value={o.value} disabled={!o.count && o.value !== value}>
+            {o.label} ({o.count})
+          </option>
+        ))}
+      </select>
+      <ChevronDown className="pointer-events-none absolute right-2 h-4 w-4 text-muted-foreground" />
+    </label>
+  )
+}
+
+function Toggle({ on, onClick, children, count }: { on: boolean; onClick: () => void; children: React.ReactNode; count: number }) {
+  return (
+    <button
+      onClick={onClick}
+      aria-pressed={on}
+      className={cn("inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-semibold transition", on ? "bg-primary text-primary-foreground shadow-sm" : "glass text-foreground/80 hover:text-foreground")}
+    >
+      {children}
+      <span className={cn("text-xs font-normal", on ? "text-primary-foreground/80" : "text-muted-foreground")}>{count}</span>
+    </button>
+  )
+}
+
+export function BrowseView({
+  all,
+  filters: f,
+  setFilters,
+  profile,
+  ...card
+}: CardProps & { all: Program[]; filters: Filters; setFilters: (f: Partial<Filters>) => void; profile: Profile | null }) {
   const [layout, setLayoutState] = useState<"cards" | "table">("cards")
+  const [draft, setDraft] = useState(f.q)
+  useEffect(() => setDraft(f.q), [f.q])
   useEffect(() => {
     try { if (localStorage.getItem("atlas:browse") === "table") setLayoutState("table") } catch { /* ignore */ }
   }, [])
@@ -180,61 +227,138 @@ export function BrowseView({ all, matches, query, profile, ...card }: CardProps 
     setLayoutState(l)
     try { localStorage.setItem("atlas:browse", l) } catch { /* ignore */ }
   }
+  // Typing updates the URL after a short pause so history is not flooded.
+  useEffect(() => {
+    if (draft === f.q) return
+    const t = setTimeout(() => setFilters({ q: draft }), 200)
+    return () => clearTimeout(t)
+  }, [draft, f.q, setFilters])
 
-  const filtered = (matches ?? all).filter(
-    p =>
-      (!groups.length || groups.includes(p.group)) &&
-      (!cat || p.category === cat) &&
-      (!aud || p.audience.includes(aud)) &&
-      (!verifiedOnly || p.confidence !== "low"),
-  )
-  // With a profile and no search query, best fits come first (stable, so ties keep catalog order).
-  const forYou = !!profile && !matches
-  const items = forYou ? [...filtered].sort((a, b) => fitScore(b, profile!) - fitScore(a, profile!)) : filtered
-  const toggle = (g: GroupKey) => setGroups(groups.includes(g) ? groups.filter(x => x !== g) : [...groups, g])
+  const ranked = useMemo(() => (f.q.trim() ? rankPrograms(f.q, 200).map(r => r.program) : all), [f.q, all])
+  const filtered = applyFilters(ranked, f)
+  const count = (skip: Parameters<typeof applyFilters>[2], test: (p: Program) => boolean) => applyFilters(ranked, f, skip).filter(test).length
+
+  const items = useMemo(() => {
+    if (f.sort === "az") return [...filtered].sort((a, b) => a.name.localeCompare(b.name))
+    if (f.sort === "soon") return [...filtered].sort((a, b) => (isAlwaysOn(a) ? 0.5 : monthsAway(a)) - (isAlwaysOn(b) ? 0.5 : monthsAway(b)))
+    if (profile && !f.q) return [...filtered].sort((a, b) => fitScore(b, profile) - fitScore(a, profile))
+    return filtered
+  }, [filtered, f.sort, f.q, profile])
+
+  const chips: { label: string; clear: Partial<Filters> }[] = [
+    f.q && { label: `"${f.q}"`, clear: { q: "" } },
+    f.type && { label: f.type, clear: { type: null } },
+    f.who && { label: AUDIENCE_LABELS[f.who], clear: { who: null } },
+    f.stage && { label: `${STAGE_LABELS[f.stage]} stage`, clear: { stage: null } },
+    ...f.units.map(u => ({ label: GROUPS[u].short, clear: { units: f.units.filter(x => x !== u) } })),
+    f.open && { label: "Open now", clear: { open: false } },
+    f.verified && { label: "Verified", clear: { verified: false } },
+  ].filter(Boolean) as { label: string; clear: Partial<Filters> }[]
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap gap-2">
-        {GROUP_KEYS.map(g => (
-          <Chip key={g} active={groups.includes(g)} onClick={() => toggle(g)} color={GROUPS[g].color}>
-            {GROUPS[g].short}
-          </Chip>
-        ))}
-      </div>
-      <div className="flex flex-wrap items-center gap-2 text-sm">
-        <select value={cat} onChange={e => setCat(e.target.value as Category)} className="rounded-lg glass px-3 py-2">
-          <option value="">All types</option>
-          {CATEGORIES.map(c => <option key={c}>{c}</option>)}
-        </select>
-        <select value={aud} onChange={e => setAud(e.target.value as Audience)} className="rounded-lg glass px-3 py-2">
-          <option value="">Anyone</option>
-          {(Object.keys(AUDIENCE_LABELS) as Audience[]).map(a => <option key={a} value={a}>{AUDIENCE_LABELS[a]}</option>)}
-        </select>
-        <label className="inline-flex items-center gap-2 rounded-lg glass px-3 py-2">
-          <input type="checkbox" checked={verifiedOnly} onChange={e => setVerifiedOnly(e.target.checked)} className="accent-[hsl(var(--primary))]" />
-          Verified details only
+      <div className="rounded-3xl glass p-3 sm:p-4">
+        <label className="relative block">
+          <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
+          <input
+            value={draft}
+            onChange={e => setDraft(e.target.value)}
+            placeholder="Search 203 programs: grants, biotech, pitch, co-founder..."
+            aria-label="Search programs"
+            className="w-full rounded-2xl border border-white/70 bg-white/70 py-3.5 pl-12 pr-4 text-[15px] shadow-[inset_0_1px_2px_rgba(0,0,0,.06)] outline-none transition focus:bg-white focus:ring-2 focus:ring-primary/30"
+          />
         </label>
-        <span className="ml-auto text-muted-foreground">
-          {items.length} program{items.length === 1 ? "" : "s"}
-          {query && ` matching "${query}"`}
-          {forYou && ", best fits for you first"}
-        </span>
-        <div className="flex rounded-lg glass p-0.5" role="group" aria-label="Layout">
-          {([["cards", LayoutGrid, "Cards"], ["table", Rows3, "Table"]] as const).map(([k, Icon, label]) => (
-            <button
-              key={k}
-              onClick={() => setLayout(k)}
-              aria-pressed={layout === k}
-              className={cn("inline-flex items-center gap-1.5 rounded-md px-2.5 py-1.5", layout === k ? "bg-white/90 text-primary shadow-sm" : "text-foreground/70 hover:text-foreground")}
-            >
-              <Icon className="h-4 w-4" />
-              {label}
-            </button>
-          ))}
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          <Facet label="Type" value={f.type} onChange={type => setFilters({ type })}
+            options={CATEGORIES.map(c => ({ value: c, label: c, count: count("type", p => p.category === c) }))} />
+          <Facet label="For" value={f.who} onChange={who => setFilters({ who })}
+            options={(Object.keys(AUDIENCE_LABELS) as Audience[]).map(a => ({ value: a, label: AUDIENCE_LABELS[a], count: count("who", p => p.audience.includes(a)) }))} />
+          <Facet label="Stage" value={f.stage} onChange={stage => setFilters({ stage })}
+            options={(Object.keys(STAGE_LABELS) as Stage[]).map(s => ({ value: s, label: STAGE_LABELS[s], count: count("stage", p => p.stage.includes(s)) }))} />
+          <Toggle on={f.open} onClick={() => setFilters({ open: !f.open })} count={count("open", isOpenNow)}>
+            <Clock className="h-4 w-4" /> Open now
+          </Toggle>
+          <Toggle on={f.verified} onClick={() => setFilters({ verified: !f.verified })} count={count("verified", p => p.confidence !== "low")}>
+            <ShieldCheck className="h-4 w-4" /> Verified
+          </Toggle>
+        </div>
+        <div className="mt-3 flex gap-1.5 overflow-x-auto pb-0.5 [scrollbar-width:none]">
+          {GROUP_KEYS.map(g => {
+            const n = count("units", p => p.group === g)
+            const on = f.units.includes(g)
+            return (
+              <button
+                key={g}
+                disabled={!n && !on}
+                onClick={() => setFilters({ units: on ? f.units.filter(x => x !== g) : [...f.units, g] })}
+                aria-pressed={on}
+                className={cn("inline-flex shrink-0 items-center gap-1.5 rounded-full border px-3 py-1 text-[13px] transition disabled:opacity-35", on ? "border-transparent text-white shadow-sm" : "border-white/70 bg-white/50 hover:bg-white")}
+                style={on ? { backgroundColor: GROUPS[g].color } : undefined}
+              >
+                {!on && <span className="h-2 w-2 rounded-full" style={{ backgroundColor: GROUPS[g].color }} />}
+                {GROUPS[g].short}
+                <span className={on ? "text-white/80" : "text-muted-foreground"}>{n}</span>
+              </button>
+            )
+          })}
         </div>
       </div>
-      {layout === "cards" ? <Grid items={items} {...card} /> : <ProgramTable items={items} {...card} />}
+
+      <div className="flex flex-wrap items-center gap-2 text-sm">
+        <span className="font-semibold">
+          {items.length} <span className="font-normal text-muted-foreground">of {all.length} programs</span>
+        </span>
+        {chips.map(c => (
+          <button key={c.label} onClick={() => setFilters(c.clear)} className="inline-flex items-center gap-1 rounded-full bg-foreground/[.07] py-1 pl-3 pr-2 text-[13px] font-medium transition hover:bg-foreground/[.12]">
+            {c.label} <X className="h-3.5 w-3.5" />
+          </button>
+        ))}
+        {chips.length > 1 && (
+          <button onClick={() => setFilters(CLEAR_ALL)} className="text-[13px] font-semibold text-primary hover:underline">
+            Clear all
+          </button>
+        )}
+        <div className="ml-auto flex items-center gap-2">
+          <label className="relative inline-flex items-center rounded-lg glass pl-2.5">
+            <ArrowUpDown className="h-3.5 w-3.5 text-muted-foreground" />
+            <select value={f.sort} onChange={e => setFilters({ sort: e.target.value as SortKey })} aria-label="Sort" className="cursor-pointer appearance-none bg-transparent py-1.5 pl-1.5 pr-3 outline-none">
+              <option value="best">{f.q ? "Best match" : profile ? "Best fit for you" : "Featured"}</option>
+              <option value="soon">Happening soonest</option>
+              <option value="az">A to Z</option>
+            </select>
+          </label>
+          <div className="flex rounded-lg glass p-0.5" role="group" aria-label="Layout">
+            {([["cards", LayoutGrid, "Cards"], ["table", Rows3, "Table"]] as const).map(([k, Icon, label]) => (
+              <button
+                key={k}
+                onClick={() => setLayout(k)}
+                aria-pressed={layout === k}
+                aria-label={label}
+                className={cn("inline-flex items-center gap-1.5 rounded-md px-2 py-1.5", layout === k ? "bg-white/90 text-primary shadow-sm" : "text-foreground/70 hover:text-foreground")}
+              >
+                <Icon className="h-4 w-4" />
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {items.length ? (
+        layout === "cards" ? <Grid items={items} profile={profile} {...card} /> : <ProgramTable items={items} {...card} />
+      ) : (
+        <div className="rounded-3xl border border-dashed border-border p-10 text-center">
+          <p className="font-semibold">Nothing matches every filter.</p>
+          <p className="mt-1 text-sm text-muted-foreground">Remove a filter above, or ask the AI in your own words.</p>
+          <div className="mt-4 flex justify-center gap-2">
+            <button onClick={() => setFilters(CLEAR_ALL)} className="rounded-lg border border-border px-4 py-2 text-sm font-semibold hover:bg-muted">Clear filters</button>
+            {f.q && (
+              <button onClick={() => card.onAsk?.(f.q)} className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:opacity-90">
+                <Sparkles className="h-4 w-4" /> Ask AI
+              </button>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

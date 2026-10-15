@@ -1,21 +1,25 @@
 "use client"
 
-import { Bookmark, CalendarDays, FileText, Compass, LayoutGrid, Search, Sparkles, Target, UserRound, X } from "lucide-react"
+import { Bookmark, CalendarDays, FileText, Compass, FlaskConical, Gem, LayoutGrid, Search, Sparkles, Target, UserRound, X } from "lucide-react"
 import { useRouter, useSearchParams } from "next/navigation"
-import { Suspense, useCallback, useMemo, useState } from "react"
+import { Suspense, useCallback, useEffect, useMemo, useState } from "react"
 
 import { BubbleMap } from "@/components/atlas/BubbleMap"
+import { CampusMap } from "@/components/atlas/CampusMap"
+import { CommandPalette } from "@/components/atlas/CommandPalette"
 import { ConstellationView, JourneyView, OrbitView, SubwayView } from "@/components/atlas/ExploreViews"
 import { ProfileDialog, useProfile } from "@/components/atlas/ProfileDialog"
 import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
 import { AskView, BrowseView, CalendarView, FindPathView, SavedView, type Turn } from "@/components/atlas/views"
 import { describeProfile, hasProfile, ROLES } from "@/lib/profile"
 import { programById, programs } from "@/lib/programs"
+import { filterParams, readFilters, type Filters } from "@/lib/filters"
 import { rankPrograms } from "@/lib/search"
 import { cn } from "@/lib/utils"
 
 const MODES = [
   { key: "bubbles", label: "Bubbles" },
+  { key: "campus", label: "Campus map" },
   { key: "journey", label: "Journey" },
   { key: "constellation", label: "Constellation" },
   { key: "orbit", label: "Orbit" },
@@ -32,11 +36,26 @@ const TABS = [
 ] as const
 type TabKey = (typeof TABS)[number]["key"]
 
+// Polished is the research-backed core: two explore views and five tabs. Labs shows every experiment.
+type Edition = "polished" | "labs"
+const POLISHED_TABS: TabKey[] = ["explore", "browse", "calendar", "ask", "saved"]
+const POLISHED_MODES = ["bubbles", "campus"]
+
 function Atlas() {
   const params = useSearchParams()
   const router = useRouter()
-  const tab = (TABS.find(t => t.key === params.get("view"))?.key ?? "explore") as TabKey
-  const mode = MODES.find(m => m.key === params.get("mode"))?.key ?? "bubbles"
+  const [edition, setEditionState] = useState<Edition>("polished")
+  useEffect(() => {
+    try { if (localStorage.getItem("atlas:edition") === "labs") setEditionState("labs") } catch { /* ignore */ }
+  }, [])
+  const setEdition = (e: Edition) => {
+    setEditionState(e)
+    try { localStorage.setItem("atlas:edition", e) } catch { /* ignore */ }
+  }
+  const tabs = edition === "labs" ? TABS : TABS.filter(t => POLISHED_TABS.includes(t.key))
+  const modes = edition === "labs" ? MODES : MODES.filter(m => POLISHED_MODES.includes(m.key))
+  const tab = (tabs.find(t => t.key === params.get("view"))?.key ?? "explore") as TabKey
+  const mode = modes.find(m => m.key === params.get("mode"))?.key ?? "bubbles"
   const openId = params.get("p")
   const open = openId ? programById.get(openId) ?? null : null
 
@@ -53,7 +72,11 @@ function Atlas() {
   const { profile, save: saveProfile } = useProfile()
   const [profileOpen, setProfileOpen] = useState(false)
   const me = hasProfile(profile) ? profile : null
-  const [query, setQuery] = useState("")
+  const filters = useMemo(() => readFilters(params), [params])
+  const setFilters = useCallback((f: Partial<Filters>) => setParam(filterParams(f)), [setParam])
+  const [paletteOpen, setPaletteOpen] = useState(false)
+  const query = filters.q
+  const setQuery = (q: string) => setFilters({ q })
   const matches = useMemo(() => (query.trim() ? rankPrograms(query, 200).map(r => r.program) : null), [query])
   const highlight = useMemo(() => (matches ? new Set(matches.map(p => p.id)) : null), [matches])
 
@@ -90,7 +113,7 @@ function Atlas() {
   )
 
   const onOpen = useCallback((id: string) => setParam({ p: id }), [setParam])
-  const card = { onOpen, isSaved, onToggleSave: toggle }
+  const card = { onOpen, isSaved, onToggleSave: toggle, onAsk: (q: string) => ask(q) }
   const usc = programs.filter(p => p.group !== "external").length
 
   return (
@@ -102,27 +125,31 @@ function Atlas() {
               <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#b3001b] to-[#7a0000] text-sm font-black tracking-tight text-[#FFCC00] shadow-[inset_0_1px_0_rgba(255,255,255,.35),0_6px_16px_-6px_rgba(153,0,0,.6)]">SC</div>
               <div className="min-w-0 leading-tight">
                 <div className="text-[15px] font-bold tracking-tight text-foreground">USC Startup Atlas</div>
-                <div className="text-xs text-muted-foreground">{usc} USC programs · {programs.length - usc} outside resources</div>
+                <div className="hidden text-xs text-muted-foreground lg:block">{usc} USC programs · {programs.length - usc} outside resources</div>
               </div>
             </div>
-            <label className="relative order-last w-full sm:order-none sm:w-72">
-              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <input
-                value={query}
-                onChange={e => {
-                  setQuery(e.target.value)
-                  if (e.target.value && tab !== "explore" && tab !== "browse") setParam({ view: "browse" })
-                }}
-                placeholder="Search grants, biotech, pitch..."
-                aria-label="Search programs"
-                className="w-full rounded-2xl border border-white/70 bg-white/60 py-2.5 pl-9 pr-9 text-sm text-foreground shadow-[inset_0_1px_2px_rgba(0,0,0,.06)] outline-none transition focus:bg-white/85 focus:ring-2 focus:ring-primary/30"
-              />
-              {query && (
-                <button aria-label="Clear search" onClick={() => setQuery("")} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground">
-                  <X className="h-4 w-4" />
+            <button
+              onClick={() => setPaletteOpen(true)}
+              className="order-last flex w-full items-center gap-2 rounded-2xl border border-white/70 bg-white/60 py-2.5 pl-3 pr-2 text-left text-sm text-muted-foreground shadow-[inset_0_1px_2px_rgba(0,0,0,.06)] transition hover:bg-white/85 sm:order-none sm:w-80"
+            >
+              <Search className="h-4 w-4" />
+              <span className="flex-1">Search or ask anything...</span>
+              <kbd className="hidden rounded-md border border-black/10 bg-white/80 px-1.5 py-0.5 font-sans text-[11px] sm:inline">⌘K</kbd>
+            </button>
+            <div className="flex rounded-2xl glass p-1" role="group" aria-label="Edition">
+              {([["polished", Gem, "Polished"], ["labs", FlaskConical, "Labs"]] as const).map(([k, Icon, label]) => (
+                <button
+                  key={k}
+                  onClick={() => setEdition(k)}
+                  aria-pressed={edition === k}
+                  title={k === "polished" ? "The research-backed core experience" : "Every experimental view"}
+                  className={cn("inline-flex items-center gap-1.5 rounded-xl px-2.5 py-1.5 text-xs font-semibold transition", edition === k ? "bg-foreground text-background shadow-sm" : "text-foreground/60 hover:text-foreground")}
+                >
+                  <Icon className="h-3.5 w-3.5" />
+                  <span className="hidden md:inline">{label}</span>
                 </button>
-              )}
-            </label>
+              ))}
+            </div>
             <a
               href="/one-pager"
               aria-label="Share the one-page PDF"
@@ -141,7 +168,7 @@ function Atlas() {
             </button>
           </div>
           <nav className="mt-3 flex gap-1 overflow-x-auto rounded-2xl bg-black/[.04] p-1 [scrollbar-width:none]" aria-label="Views">
-            {TABS.map(t => (
+            {tabs.map(t => (
               <button
                 key={t.key}
                 onClick={() => setParam({ view: t.key })}
@@ -166,7 +193,7 @@ function Atlas() {
         {tab === "explore" && (
           <>
             <div className="mb-4 flex gap-1 overflow-x-auto rounded-2xl glass p-1 [scrollbar-width:none] sm:inline-flex" role="tablist" aria-label="Explore views">
-              {MODES.map(m => (
+              {modes.map(m => (
                 <button
                   key={m.key}
                   role="tab"
@@ -179,11 +206,13 @@ function Atlas() {
               ))}
             </div>
             {matches && (
-              <p className="mb-3 text-sm text-muted-foreground">
-                Highlighting {matches.length} program{matches.length === 1 ? "" : "s"} for "{query}".
+              <p className="mb-3 inline-flex items-center gap-2 text-sm text-muted-foreground">
+                Showing {matches.length} program{matches.length === 1 ? "" : "s"} for "{query}"
+                <button onClick={() => setQuery("")} aria-label="Clear search" className="rounded-full bg-foreground/[.07] p-0.5 hover:bg-foreground/[.12]"><X className="h-3.5 w-3.5" /></button>
               </p>
             )}
             {mode === "bubbles" && <BubbleMap programs={programs} highlight={highlight} onOpen={onOpen} />}
+            {mode === "campus" && <CampusMap programs={programs} highlight={highlight} onOpen={onOpen} />}
             {mode === "journey" && <JourneyView programs={matches ?? programs} onOpen={onOpen} stage={me?.stage} />}
             {mode === "constellation" && <ConstellationView programs={matches ?? programs} onOpen={onOpen} />}
             {mode === "orbit" && <OrbitView programs={matches ?? programs} onOpen={onOpen} />}
@@ -191,7 +220,7 @@ function Atlas() {
           </>
         )}
         {tab === "path" && <FindPathView key={me ? JSON.stringify(me) : "none"} all={programs} profile={me} {...card} />}
-        {tab === "browse" && <BrowseView all={programs} matches={matches} query={query} profile={me} {...card} />}
+        {tab === "browse" && <BrowseView all={programs} filters={filters} setFilters={setFilters} profile={me} {...card} />}
         {tab === "calendar" && <CalendarView all={programs} onOpen={onOpen} profile={me} />}
         {tab === "ask" && <AskView turns={turns} busy={busy} onSend={ask} {...card} />}
         {tab === "saved" && <SavedView saved={saved} onAskPlan={ask} {...card} />}
@@ -200,6 +229,16 @@ function Atlas() {
       <footer className="mx-auto max-w-7xl px-4 pb-10 text-xs text-muted-foreground sm:px-6">
         Program details are researched from public sources and change often. Always confirm dates and eligibility on the official page. Spot an error? Email <a href="mailto:pcrawfor@usc.edu" className="underline hover:text-foreground">pcrawfor@usc.edu</a>.
       </footer>
+
+      <CommandPalette
+        open={paletteOpen}
+        onOpenChange={setPaletteOpen}
+        views={tabs}
+        onOpen={onOpen}
+        onAsk={ask}
+        onFilter={q => setParam({ ...filterParams({ q }), view: "browse", p: null })}
+        onView={v => setParam({ view: v })}
+      />
 
       <ProfileDialog open={profileOpen} onOpenChange={setProfileOpen} profile={profile} onSave={saveProfile} />
 

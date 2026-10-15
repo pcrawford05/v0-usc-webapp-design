@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { Suspense, useCallback, useMemo, useState } from "react"
 
 import { BubbleMap } from "@/components/atlas/BubbleMap"
+import { CampusMap } from "@/components/atlas/CampusMap"
 import { ConstellationView, JourneyView, OrbitView, SubwayView } from "@/components/atlas/ExploreViews"
 import { ProfileDialog, useProfile } from "@/components/atlas/ProfileDialog"
 import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
@@ -16,6 +17,7 @@ import { cn } from "@/lib/utils"
 
 const MODES = [
   { key: "bubbles", label: "Bubbles" },
+  { key: "campus", label: "Campus map" },
   { key: "journey", label: "Journey" },
   { key: "constellation", label: "Constellation" },
   { key: "orbit", label: "Orbit" },
@@ -184,6 +186,7 @@ function Atlas() {
               </p>
             )}
             {mode === "bubbles" && <BubbleMap programs={programs} highlight={highlight} onOpen={onOpen} />}
+            {mode === "campus" && <CampusMap programs={programs} highlight={highlight} onOpen={onOpen} />}
             {mode === "journey" && <JourneyView programs={matches ?? programs} onOpen={onOpen} stage={me?.stage} />}
             {mode === "constellation" && <ConstellationView programs={matches ?? programs} onOpen={onOpen} />}
             {mode === "orbit" && <OrbitView programs={matches ?? programs} onOpen={onOpen} />}

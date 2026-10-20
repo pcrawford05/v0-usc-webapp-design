@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, Loader2, RotateCcw, Sparkles } from "lucide-react"
+import { ArrowRight, RotateCcw } from "lucide-react"
 import { useEffect, useMemo, useRef, useState } from "react"
 
 import type { RoutePlan } from "@/lib/ai"
@@ -238,83 +238,24 @@ function StopRow({ id, transfer, onOpen }: { id: string; transfer: boolean; onOp
 
 // ---------- Explore tab ----------
 
-const PRESETS = [
-  "I have an idea and no money yet. How do I get my first funding?",
-  "I'm a PhD with lab research I want to spin out",
-  "I need a technical co-founder, then want to pitch",
-  "Biotech startup headed for an accelerator",
-]
-
-export function SubwayView({ onOpen, profile, initial }: { onOpen: (id: string) => void; profile?: string; initial?: string }) {
-  const [input, setInput] = useState("")
-  const [busy, setBusy] = useState(false)
-  const [answer, setAnswer] = useState<string | null>(null)
+export function SubwayView({ onOpen, initial }: { onOpen: (id: string) => void; profile?: string; initial?: string }) {
+  // A route arrives only from a shared link or the Advisor; the map itself stays a calm overview.
   const [route, setRoute] = useState<RoutePlan | null>(() => (initial ? decodeRoute(initial) : null))
-  const [err, setErr] = useState<string | null>(null)
-
-  const plan = async (q: string) => {
-    if (!q.trim() || busy) return
-    setBusy(true)
-    setErr(null)
-    try {
-      const res = await fetch("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ query: q, history: [], profile }) })
-      const data = await res.json()
-      if (!res.ok) throw new Error(data.error ?? "Could not plan a route")
-      setAnswer(data.answer)
-      setRoute(data.plan ?? null)
-      if (!data.plan) setErr("No route this time. Try describing your goal, for example funding or a co-founder.")
-    } catch (e) {
-      setErr(e instanceof Error ? e.message : "Could not plan a route")
-    } finally {
-      setBusy(false)
-    }
-  }
-
   return (
     <div className="space-y-4">
-      <div className="glass rounded-3xl p-4">
-        <div className="flex items-center gap-2 text-sm font-semibold text-foreground">
-          <Sparkles className="h-4 w-4 text-primary" /> Plan my route
-        </div>
-        <form
-          className="mt-2 flex flex-col gap-2 sm:flex-row"
-          onSubmit={e => {
-            e.preventDefault()
-            plan(input)
-          }}
-        >
-          <input
-            value={input}
-            onChange={e => setInput(e.target.value)}
-            placeholder="Your goal, e.g. find a co-founder, then funding"
-            className="min-w-0 flex-1 rounded-2xl border border-white/70 bg-white/70 px-4 py-3 text-base sm:py-2.5 sm:text-sm outline-none focus:ring-2 focus:ring-primary/30"
-          />
-          <div className="flex gap-2">
-          <button disabled={busy || !input.trim()} className="inline-flex flex-1 items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground disabled:opacity-50 sm:flex-none sm:py-2.5">
-            {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <ArrowRight className="h-4 w-4" />} Route me
-          </button>
-          {route && (
-            <button type="button" onClick={() => (setRoute(null), setAnswer(null))} aria-label="Clear route" className="rounded-2xl glass px-3 text-muted-foreground hover:text-foreground">
-              <RotateCcw className="h-4 w-4" />
-            </button>
-          )}
-          </div>
-        </form>
-        {!route && (
-          <div className="mt-2 flex flex-wrap gap-1.5">
-            {PRESETS.map(p => (
-              <button key={p} onClick={() => (setInput(p), plan(p))} className="rounded-full bg-white/60 px-3 py-1 text-xs text-foreground/80 shadow-sm hover:bg-white">{p}</button>
-            ))}
-          </div>
-        )}
-        {answer && <p className="mt-3 text-sm leading-relaxed text-foreground/90">{answer}</p>}
-        {err && <p className="mt-2 text-sm text-destructive">{err}</p>}
-      </div>
-
+      <p className="text-sm text-muted-foreground">
+        Each line is a founder goal, running left to right from idea to scaling. Stations are programs; a station on two lines serves both goals. Tap any station for details.
+      </p>
       {route && (
-        <div className="space-y-2">
-          <div className="flex justify-end">
-            <ShareButton url={routeUrl(route)} title="My Founder Compass route" label="Share this route" />
+        <div className="space-y-2 animate-pop-in">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <span className="text-sm font-bold text-foreground">Your route</span>
+            <span className="flex gap-2">
+              <ShareButton url={routeUrl(route)} title="My Founder Compass route" label="Share this route" />
+              <button onClick={() => setRoute(null)} className="inline-flex items-center gap-1 rounded-full bg-foreground/[.07] px-3 py-1.5 text-[13px] font-semibold hover:bg-foreground/[.12]">
+                <RotateCcw className="h-3.5 w-3.5" /> Clear
+              </button>
+            </span>
           </div>
           <Itinerary route={route} onOpen={onOpen} />
         </div>

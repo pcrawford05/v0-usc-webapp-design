@@ -2276,15 +2276,13 @@
     "cadence": "unknown",
     "months": [],
     "eligibility": null,
-    "audience": [
-      "undergrad"
-    ],
+    "audience": [],
     "stage": [],
     "funding": null,
     "link": null,
     "sources": [],
     "confidence": "low",
-    "notes": "Not found in searches. Related verified groups: EVMA (grad, clubs.marshall.usc.edu/evma), WorkBench SC, Azure Ventures Group, USC Marshall Venture Fund."
+    "notes": "Not found in searches. Related verified groups: EVMA (grad, clubs.marshall.usc.edu/evma), WorkBench SC, Azure Ventures Group, USC Marshall Venture Fund. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "vaneck-digital-assets-initiative",
@@ -4218,10 +4216,7 @@
     "cadence": "rolling",
     "months": [],
     "eligibility": "USC Recognized Student Organizations hosting entrepreneurship activities.",
-    "audience": [
-      "undergrad",
-      "grad"
-    ],
+    "audience": [],
     "stage": [],
     "funding": "Generally up to $2,000 per semester per RSO",
     "link": "https://engage.usc.edu/entrepreneur/ecouncil-fund/",
@@ -4229,8 +4224,8 @@
       "https://engage.usc.edu/entrepreneur/ecouncil-fund/",
       "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies"
     ],
-    "confidence": "medium",
-    "notes": "eCouncil is listed among Greif Center co-curricular programs; the public detail found is about the eCouncil Fund for student orgs. Items need pre-approval by the Managing Director. Unused funds do not roll over."
+    "confidence": "low",
+    "notes": "eCouncil is listed among Greif Center co-curricular programs; the public detail found is about the eCouncil Fund for student orgs. Items need pre-approval by the Managing Director. Unused funds do not roll over. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "entrepreneur-and-venture-management-association-evma",
@@ -4276,10 +4271,7 @@
     "cadence": "unknown",
     "months": [],
     "eligibility": "USC student founders with an operating business.",
-    "audience": [
-      "undergrad",
-      "grad"
-    ],
+    "audience": [],
     "stage": [
       "launched",
       "scaling"
@@ -4290,7 +4282,7 @@
       "https://dailytrojan.com/?p=240970"
     ],
     "confidence": "low",
-    "notes": "Newer group; no official site, membership or application details found."
+    "notes": "Newer group; no official site, membership or application details found. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "fightonfounders",
@@ -4335,10 +4327,7 @@
     "cadence": "weekly",
     "months": [],
     "eligibility": "USC student founders (selection details unknown).",
-    "audience": [
-      "undergrad",
-      "grad"
-    ],
+    "audience": [],
     "stage": [
       "idea",
       "prototype",
@@ -4348,7 +4337,7 @@
     "link": null,
     "sources": [],
     "confidence": "low",
-    "notes": "New for 2025 per existing app data. No public source found; host office, schedule and application process unverified."
+    "notes": "New for 2025 per existing app data. No public source found; host office, schedule and application process unverified. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "hacksc",
@@ -4366,10 +4355,7 @@
       11
     ],
     "eligibility": "Students (USC and other schools) who register for the hackathon.",
-    "audience": [
-      "undergrad",
-      "grad"
-    ],
+    "audience": [],
     "stage": [
       "idea",
       "prototype"
@@ -4380,8 +4366,8 @@
       "https://www.cs.usc.edu/?p=9555",
       "https://ignite.usc.edu/p/hacksc-hackathon/c/Ignite-usc"
     ],
-    "confidence": "medium",
-    "notes": "2025 and 2026 hackathon dates not confirmed; November based on 2024. Instagram @hackscofficial."
+    "confidence": "low",
+    "notes": "2025 and 2026 hackathon dates not confirmed; November based on 2024. Instagram @hackscofficial. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "high-tech-association-hta",
@@ -4427,9 +4413,7 @@
     "cadence": "semester",
     "months": [],
     "eligibility": "USC students interested in technology, through rush.",
-    "audience": [
-      "undergrad"
-    ],
+    "audience": [],
     "stage": [
       "idea"
     ],
@@ -4437,7 +4421,7 @@
     "link": "https://linktr.ee/ktp.usc",
     "sources": [],
     "confidence": "low",
-    "notes": "Existing app data says Tau chapter; could not independently confirm the USC chapter or rush dates."
+    "notes": "Existing app data says Tau chapter; could not independently confirm the USC chapter or rush dates. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "lavalab",
@@ -4457,10 +4441,7 @@
       12
     ],
     "eligibility": "USC students by application; applicants can apply without an idea.",
-    "audience": [
-      "undergrad",
-      "grad"
-    ],
+    "audience": [],
     "stage": [
       "idea",
       "prototype"
@@ -4472,8 +4453,8 @@
       "https://dailytrojan.com/?p=116212",
       "https://viterbischool.usc.edu/news/2020/11/lavalab-opens-its-doors/web_lavalab_sq_600_20201119/"
     ],
-    "confidence": "medium",
-    "notes": "App data says about 28 students per semester and $4k+ prizes; not independently verified. Application dates not found."
+    "confidence": "low",
+    "notes": "App data says about 28 students per semester and $4k+ prizes; not independently verified. Application dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "medesign",
@@ -4491,10 +4472,7 @@
       11
     ],
     "eligibility": "USC students by application; especially biomedical engineering and medtech-interested students.",
-    "audience": [
-      "undergrad",
-      "grad"
-    ],
+    "audience": [],
     "stage": [
       "idea",
       "prototype"
@@ -4506,8 +4484,8 @@
       "https://viterbiadmission.usc.edu/2025/makeathon-medesign-and-more-hands-on-opportunities-as-a-bme-freshman/",
       "https://bme.usc.edu/2018/01/medesign-wins-uc-davis-makeathon/"
     ],
-    "confidence": "medium",
-    "notes": "Current officers and 2026-27 application dates not found."
+    "confidence": "low",
+    "notes": "Current officers and 2026-27 application dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "productsc",
@@ -4526,10 +4504,7 @@
       9
     ],
     "eligibility": "USC students interested in product management, by application.",
-    "audience": [
-      "undergrad",
-      "grad"
-    ],
+    "audience": [],
     "stage": [
       "idea"
     ],
@@ -4540,8 +4515,8 @@
       "https://dailytrojan.com/?p=173829",
       "https://viterbiundergrad.usc.edu/blog/productsc-apps-out-now/"
     ],
-    "confidence": "medium",
-    "notes": "Contact product@usc.edu. Exact application months inferred from semester cycle, not confirmed. Marshall launching a PM minor in Fall 2026 (separate)."
+    "confidence": "low",
+    "notes": "Contact product@usc.edu. Exact application months inferred from semester cycle, not confirmed. Marshall launching a PM minor in Fall 2026 (separate). Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "shift-sc",
@@ -4557,10 +4532,7 @@
     "cadence": "ongoing",
     "months": [],
     "eligibility": "USC students interested in ethics and social impact of technology.",
-    "audience": [
-      "undergrad",
-      "grad"
-    ],
+    "audience": [],
     "stage": [
       "idea"
     ],
@@ -4571,8 +4543,8 @@
       "https://dailytrojan.com/?p=242098",
       "https://uscneelycenter.substack.com/p/usc-marshalls-neely-center-for-ethical"
     ],
-    "confidence": "medium",
-    "notes": "Sponsored by the USC Marshall Neely Center. Official website not found; sources 2022-2024. Earlier first-year activities included a fund for student researchers."
+    "confidence": "low",
+    "notes": "Sponsored by the USC Marshall Neely Center. Official website not found; sources 2022-2024. Earlier first-year activities included a fund for student researchers. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "sigma-eta-pi-sep",
@@ -4589,9 +4561,7 @@
     "cadence": "semester",
     "months": [],
     "eligibility": "USC students accepted through a competitive application and interview rush process.",
-    "audience": [
-      "undergrad"
-    ],
+    "audience": [],
     "stage": [
       "idea",
       "prototype"
@@ -4603,7 +4573,7 @@
       "https://students.marshall.usc.edu/node/185116"
     ],
     "confidence": "low",
-    "notes": "Details come mainly from an aggregator listing and other chapters; rush dates and official site not confirmed. Chapter designation (possibly Gamma) unverified."
+    "notes": "Details come mainly from an aggregator listing and other chapters; rush dates and official site not confirmed. Chapter designation (possibly Gamma) unverified. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "sogal-usc",
@@ -4620,10 +4590,7 @@
     "cadence": "unknown",
     "months": [],
     "eligibility": "USC students, especially women and diverse founders and aspiring investors.",
-    "audience": [
-      "undergrad",
-      "grad"
-    ],
+    "audience": [],
     "stage": [
       "idea",
       "prototype",
@@ -4636,7 +4603,7 @@
       "https://metromba.com/2015/10/usc-marshall-student-spearheads-inaugural-sogal-startup-bootcamp"
     ],
     "confidence": "low",
-    "notes": "SoGal was founded at USC by Pocket Sun (originally GirlsUp). No current 2025-2026 USC chapter activity found."
+    "notes": "SoGal was founded at USC by Pocket Sun (originally GirlsUp). No current 2025-2026 USC chapter activity found. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "spark-sc",
@@ -4654,9 +4621,7 @@
       2
     ],
     "eligibility": "USC students; members join by semester application, events open to all students.",
-    "audience": [
-      "undergrad"
-    ],
+    "audience": [],
     "stage": [
       "idea",
       "prototype"
@@ -4668,8 +4633,8 @@
       "https://sparksc.substack.com/p/s25-spark-apps-are-open",
       "https://www.cs.usc.edu/newsletter/ug-ms-phd-startup-career-fair-by-spark-sc/"
     ],
-    "confidence": "high",
-    "notes": "Startup Career Fair has run almost annually since 2015."
+    "confidence": "low",
+    "notes": "Startup Career Fair has run almost annually since 2015. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "techie",
@@ -4684,9 +4649,7 @@
     "cadence": "semester",
     "months": [],
     "eligibility": "USC students of any major interested in business roles in tech.",
-    "audience": [
-      "undergrad"
-    ],
+    "audience": [],
     "stage": [
       "idea"
     ],
@@ -4696,8 +4659,8 @@
       "https://dailytrojan.com/?p=157288",
       "https://trojanvision.usc.edu/?p=31054"
     ],
-    "confidence": "medium",
-    "notes": "Instagram @techie_usc. Current recruitment dates not found."
+    "confidence": "low",
+    "notes": "Instagram @techie_usc. Current recruitment dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "trojan-venture-partners",
@@ -4712,10 +4675,7 @@
     "cadence": "unknown",
     "months": [],
     "eligibility": "USC students interested in venture capital.",
-    "audience": [
-      "undergrad",
-      "grad"
-    ],
+    "audience": [],
     "stage": [],
     "funding": null,
     "link": null,
@@ -4723,7 +4683,7 @@
       "https://coda.io/@hanshen-tjoa/usc-organizations-list/entrepreneurship-organizations-21"
     ],
     "confidence": "low",
-    "notes": "Only an unofficial user-made list mentions it; activities, membership and status unconfirmed."
+    "notes": "Only an unofficial user-made list mentions it; activities, membership and status unconfirmed. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "troylabs",
@@ -4741,8 +4701,7 @@
     ],
     "eligibility": "USC student founders and students interested in startups; DEMO features USC student startups.",
     "audience": [
-      "undergrad",
-      "grad"
+      "undergrad"
     ],
     "stage": [
       "idea",
@@ -4757,8 +4716,8 @@
       "https://www.marshall.usc.edu/news/hub-creators-and-creation-troy-labs-demo-day-2022",
       "https://troylabs.substack.com/p/troylabs-weekly"
     ],
-    "confidence": "medium",
-    "notes": "2026 DEMO date not confirmed. Has a student VC team that helps startups prepare to fundraise; no evidence of its own investment fund."
+    "confidence": "low",
+    "notes": "2026 DEMO date not confirmed. Has a student VC team that helps startups prepare to fundraise; no evidence of its own investment fund. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "usc-entrepreneur-club",
@@ -4774,10 +4733,7 @@
     "cadence": "unknown",
     "months": [],
     "eligibility": "USC students of any major.",
-    "audience": [
-      "undergrad",
-      "grad"
-    ],
+    "audience": [],
     "stage": [
       "idea",
       "prototype"
@@ -4788,7 +4744,7 @@
       "https://www.kidsmoney.org/?p=659"
     ],
     "confidence": "low",
-    "notes": "Only a weak third-party mention found; official page and current status unverified."
+    "notes": "Only a weak third-party mention found; official page and current status unverified. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "usc-makers",
@@ -4807,10 +4763,7 @@
       9
     ],
     "eligibility": "USC students by application.",
-    "audience": [
-      "undergrad",
-      "grad"
-    ],
+    "audience": [],
     "stage": [
       "idea",
       "prototype"
@@ -4822,8 +4775,8 @@
       "https://viterbischool.usc.edu/news/2026/06/10-projects-10-solutions-student-engineers-tackle-everyday-problems/",
       "https://losangeles.makerfaire.com/maker/entry/2459"
     ],
-    "confidence": "high",
-    "notes": "Applications via linktr.ee/uscmakers."
+    "confidence": "low",
+    "notes": "Applications via linktr.ee/uscmakers. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
   },
   {
     "id": "blackstone-launchpad-at-usc",

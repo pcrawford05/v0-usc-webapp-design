@@ -1,6 +1,6 @@
 "use client"
 
-import { Bookmark, BookmarkCheck, CalendarDays, Check, Minus, ExternalLink, GraduationCap, Sparkles, Users, Wallet } from "lucide-react"
+import { Bookmark, BookmarkCheck, CalendarDays, Check, Minus, ExternalLink, GraduationCap, Users, Wallet } from "lucide-react"
 import { useCallback, useEffect, useState } from "react"
 
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
@@ -86,7 +86,6 @@ export function ProgramCard({
       <div className="flex items-start justify-between gap-2">
         <GroupPill program={program} />
         <span className="flex items-center">
-        <RemindButton program={program} compact />
         <button
           type="button"
           aria-label={saved ? "Remove from saved" : "Save program"}
@@ -99,7 +98,7 @@ export function ProgramCard({
       </div>
       <h3 className="mt-2 font-semibold leading-snug text-foreground">{program.name}</h3>
       <p className="mt-0.5 text-xs text-muted-foreground">{program.category}</p>
-      <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{reason || program.description}</p>
+      <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{reason || program.description}</p>
       {checks && checks.length > 0 && (
         <ul className="mt-2 space-y-0.5">
           {checks.map(c => (
@@ -218,13 +217,13 @@ export function ProgramDrawer({
                   Some details could not be fully verified. Confirm on the official page before you apply.
                 </p>
               )}
-              <div className="sticky bottom-0 -mx-6 flex flex-wrap gap-2 border-t border-white/60 bg-white/80 px-6 py-3 backdrop-blur-xl sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:pt-1 sm:backdrop-blur-none">
+              <div className="sticky bottom-0 -mx-6 flex flex-nowrap gap-2 border-t sm:flex-wrap border-black/5 bg-white px-6 py-3 sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:pt-1 sm:backdrop-blur-none">
                 {program.link && (
                   <a
                     href={program.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+                    className="inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:opacity-90 sm:flex-none"
                   >
                     Official page <ExternalLink className="h-4 w-4" />
                   </a>
@@ -237,14 +236,18 @@ export function ProgramDrawer({
                   {saved ? "Saved" : "Save"}
                 </button>
                 <RemindButton program={program} />
-                <ShareButton url={`${typeof window !== "undefined" ? window.location.origin : ""}/?p=${program.id}`} title={program.name} label="Share" className="py-2" />
-                <button
-                  onClick={() => onAsk(`Tell me more about ${program.name}. Is it a good fit for me and what is similar?`)}
-                  className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-semibold transition hover:bg-muted"
-                >
-                  <Sparkles className="h-4 w-4 text-primary" /> Ask AI
-                </button>
+                <ShareButton url={`${typeof window !== "undefined" ? window.location.origin : ""}/?p=${program.id}`} title={program.name} label="Share" className="py-2" compactLabel />
               </div>
+              <p className="text-xs text-muted-foreground">
+                Something out of date or wrong?{" "}
+                <a
+                  className="font-semibold text-primary hover:underline"
+                  href={`mailto:pcrawfor@usc.edu?subject=${encodeURIComponent(`Founder Compass correction: ${program.name}`)}&body=${encodeURIComponent(`Program: ${program.name} (${program.id})\nWhat should change:\n\nSource or contact (optional):\n`)}`}
+                >
+                  Send a correction
+                </a>
+                . Run this program? We will update it with you.
+              </p>
             </div>
           </>
         )}

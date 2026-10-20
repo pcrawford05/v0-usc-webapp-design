@@ -8,8 +8,6 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
 import { CATEGORY_COLORS, GROUPS, programs } from "@/lib/programs"
 import { rankPrograms } from "@/lib/search"
 
-const STARTERS = ["Funding I can apply for this month", "Find a technical co-founder", "Pitch competitions for undergrads", "Help with patents and IP"]
-
 /** Opens with Cmd/Ctrl+K or "/". One box for jumping to a program, filtering Browse, or asking the AI. */
 export function CommandPalette({
   open,
@@ -50,7 +48,7 @@ export function CommandPalette({
     <Command.Item value="__ask" onSelect={() => run(() => onAsk(q))} className="palette-item">
       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#b3001b] to-[#7a0000] text-[#FFCC00]"><Sparkles className="h-4 w-4" /></span>
       <span className="min-w-0 flex-1">
-        <span className="block font-semibold">Ask AI</span>
+        <span className="block font-semibold">Ask the Advisor</span>
         <span className="block truncate text-xs text-muted-foreground">"{q}"</span>
       </span>
       <CornerDownLeft className="h-4 w-4 text-muted-foreground" />
@@ -92,14 +90,6 @@ export function CommandPalette({
               </Command.Group>
             ) : (
               <>
-                <Command.Group heading="Ask AI" className="palette-group">
-                  {STARTERS.map(s => (
-                    <Command.Item key={s} value={s} onSelect={() => run(() => onAsk(s))} className="palette-item">
-                      <Sparkles className="h-4 w-4 text-primary" />
-                      <span className="flex-1">{s}</span>
-                    </Command.Item>
-                  ))}
-                </Command.Group>
                 <Command.Group heading="Go to" className="palette-group">
                   {views.map(v => (
                     <Command.Item key={v.key} value={`view-${v.key}`} onSelect={() => run(() => onView(v.key))} className="palette-item">

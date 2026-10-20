@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils"
 // ---------- Share ----------
 
 /** Copies (or natively shares) a link to exactly what is on screen. */
-export function ShareButton({ url, title, label = "Copy link", className }: { url?: string; title: string; label?: string; className?: string }) {
+export function ShareButton({ url, title, label = "Copy link", className, compactLabel }: { url?: string; title: string; label?: string; className?: string; compactLabel?: boolean }) {
   const [state, setState] = useState<"idle" | "done">("idle")
   const go = async () => {
     const r = await shareLink(url ?? window.location.href, title)
@@ -32,7 +32,7 @@ export function ShareButton({ url, title, label = "Copy link", className }: { ur
     >
       <span key={state} className="inline-flex items-center gap-1.5 animate-pop-in">
         {state === "done" ? <Check className="h-3.5 w-3.5" /> : typeof navigator !== "undefined" && "share" in navigator ? <Share2 className="h-3.5 w-3.5" /> : <Link2 className="h-3.5 w-3.5" />}
-        {state === "done" ? "Link ready to send" : label}
+        <span className={cn(state !== "done" && compactLabel && "sr-only sm:not-sr-only")}>{state === "done" ? "Link ready to send" : label}</span>
       </span>
     </button>
   )
@@ -57,7 +57,7 @@ export function RemindButton({ program, compact }: { program: Program; compact?:
   ) : (
     <button onClick={go} className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-semibold transition hover:bg-muted">
       {done ? <Check className="h-4 w-4 text-emerald-600" /> : <BellPlus className="h-4 w-4" />}
-      {done ? "Open the file to add it" : "Remind me"}
+      <span className={cn(!done && "sr-only sm:not-sr-only")}>{done ? "Open the file to add it" : "Remind me"}</span>
     </button>
   )
 }
@@ -71,39 +71,31 @@ export function upcoming(list: Program[], saved: string[] = []): Program[] {
     .sort((a, b) => Number(saved.includes(b.id)) - Number(saved.includes(a.id)) || monthsAway(a) - monthsAway(b) || a.name.localeCompare(b.name))
 }
 
-export function UpcomingStrip({ list, saved, onOpen, title = "Coming up in the next 60 days" }: { list: Program[]; saved: string[]; onOpen: (id: string) => void; title?: string }) {
+export function UpcomingStrip({ list, saved, onOpen, title = "Coming up" }: { list: Program[]; saved: string[]; onOpen: (id: string) => void; title?: string }) {
   const items = upcoming(list, saved).slice(0, 14)
   if (!items.length) return null
-  const label = (p: Program) => {
-    const n = monthsAway(p)
-    return n === 0 ? "This month" : n === 1 ? "Next month" : `In ${n} months`
-  }
+  const when = (p: Program) => (monthsAway(p) === 0 ? "this month" : MONTHS[(new Date().getMonth() + monthsAway(p)) % 12])
   return (
-    <section className="space-y-2">
-      <div className="flex items-baseline justify-between gap-2">
-        <h2 className="text-sm font-bold text-foreground">{title}</h2>
-        <button onClick={() => downloadReminders(items, "founder-compass-upcoming.ics")} className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline">
-          <BellPlus className="h-3.5 w-3.5" /> {items.length === 1 ? "Remind me" : <>Remind me <span className="hidden sm:inline">about all {items.length}</span><span className="sm:hidden">({items.length})</span></>}
-        </button>
-      </div>
-      <div className="-mx-1 flex snap-x gap-2.5 overflow-x-auto px-1 pb-2 [scrollbar-width:thin]">
+    <section className="flex items-center gap-2 overflow-hidden rounded-2xl glass py-2 pl-3 pr-2">
+      <span className="shrink-0 text-xs font-bold uppercase tracking-wide text-primary">{title}</span>
+      <div className="flex min-w-0 flex-1 gap-1.5 overflow-x-auto [scrollbar-width:none]">
         {items.map((p, i) => (
           <button
             key={p.id}
             onClick={() => onOpen(p.id)}
             style={{ "--i": i } as React.CSSProperties}
-            className="spotlight animate-rise group relative w-56 shrink-0 snap-start overflow-hidden rounded-2xl glass p-3 text-left transition hover:-translate-y-0.5"
+            className="animate-rise inline-flex shrink-0 items-center gap-1.5 rounded-full bg-white/70 px-3 py-1.5 text-[13px] shadow-sm transition hover:bg-white"
           >
-            <span className="absolute inset-y-0 left-0 w-1" style={{ backgroundColor: GROUPS[p.group].color }} />
-            <div className="flex items-center justify-between gap-2 pl-1.5">
-              <span className={cn("rounded-full px-2 py-0.5 text-[11px] font-bold", monthsAway(p) === 0 ? "bg-primary text-primary-foreground" : "bg-foreground/[.07] text-foreground")}>{label(p)}</span>
-              {saved.includes(p.id) && <span className="text-[11px] font-semibold text-primary">Saved</span>}
-            </div>
-            <div className="mt-2 line-clamp-2 pl-1.5 text-sm font-semibold leading-snug text-foreground">{p.name}</div>
-            <div className="mt-0.5 pl-1.5 text-[11px] text-muted-foreground">{GROUPS[p.group].short} · usually {p.months.map(m => MONTHS[m - 1]).join(", ")}</div>
+            <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: GROUPS[p.group].color }} />
+            <span className="max-w-[14rem] truncate font-medium text-foreground">{p.name}</span>
+            <span className={cn("text-xs", monthsAway(p) === 0 ? "font-semibold text-primary" : "text-muted-foreground")}>{when(p)}</span>
+            {saved.includes(p.id) && <span className="text-[10px] font-bold uppercase text-primary">saved</span>}
           </button>
         ))}
       </div>
+      <button onClick={() => downloadReminders(items, "founder-compass-upcoming.ics")} title={`Add all ${items.length} to your calendar`} aria-label={`Add all ${items.length} to your calendar`} className="shrink-0 rounded-full p-2 text-primary transition hover:bg-white/70">
+        <BellPlus className="h-4 w-4" />
+      </button>
     </section>
   )
 }
@@ -112,8 +104,8 @@ export function UpcomingStrip({ list, saved, onOpen, title = "Coming up in the n
 
 const STEPS = [
   { target: "search", title: "Search everything", body: "Type anything: grants, biotech, pitch, co-founder. Press ⌘K from anywhere." },
-  { target: "explore-modes", title: "Plan a route", body: "Open Subway and describe your goal. The AI draws your path across USC, with the transfers to make." },
-  { target: "ask", title: "Ask AI", body: "Ask for a plan, for example: what should I apply to in the next 6 months?" },
+  { target: "explore-modes", title: "See how it fits together", body: "The Subway map shows every program by founder goal and stage. Stations on two lines serve both." },
+  { target: "ask", title: "Talk to the Advisor", body: "Tell it about yourself and get advice like you would from a mentor, drawn only from real USC programs." },
 ]
 const TOUR_KEY = "compass:toured"
 

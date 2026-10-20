@@ -38,11 +38,11 @@ type TabKey = (typeof TABS)[number]["key"]
 /** A pill that slides under whichever button in a group is active. */
 function useIndicator(active: string) {
   const ref = useRef<HTMLDivElement>(null)
-  const [box, setBox] = useState<{ x: number; w: number } | null>(null)
+  const [box, setBox] = useState<{ x: number; y: number; w: number; h: number } | null>(null)
   useLayoutEffect(() => {
     const measure = () => {
       const el = ref.current?.querySelector<HTMLElement>(`[data-key="${active}"]`)
-      if (el) setBox({ x: el.offsetLeft, w: el.offsetWidth })
+      if (el) setBox({ x: el.offsetLeft, y: el.offsetTop, w: el.offsetWidth, h: el.offsetHeight })
     }
     measure()
     window.addEventListener("resize", measure)
@@ -181,7 +181,7 @@ function Atlas() {
           </div>
           <nav ref={tabsInd.ref} className="relative mt-3 flex gap-1 overflow-x-auto rounded-2xl bg-black/[.04] p-1 [scrollbar-width:none]" aria-label="Views">
             {tabsInd.box && (
-              <span aria-hidden className="tab-indicator absolute bottom-1 left-0 top-1 rounded-xl bg-white/90 shadow-[0_1px_0_#fff_inset,0_4px_14px_-6px_rgba(0,0,0,.25)]" style={{ transform: `translateX(${tabsInd.box.x}px)`, width: tabsInd.box.w }} />
+              <span aria-hidden className="tab-indicator absolute left-0 top-0 rounded-xl bg-white/90 shadow-[0_1px_0_#fff_inset,0_4px_14px_-6px_rgba(0,0,0,.25)]" style={{ transform: `translate(${tabsInd.box.x}px, ${tabsInd.box.y}px)`, width: tabsInd.box.w, height: tabsInd.box.h }} />
             )}
             {TABS.map(t => (
               <button
@@ -210,8 +210,8 @@ function Atlas() {
       <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6">
         {tab === "explore" && (
           <div key={mode} className="animate-view">
-            <div ref={modesInd.ref} data-tour="explore-modes" className="relative mb-4 flex gap-1 overflow-x-auto rounded-2xl glass p-1 [scrollbar-width:none] sm:inline-flex" role="tablist" aria-label="Explore views">
-              {modesInd.box && <span aria-hidden className="tab-indicator absolute bottom-1 left-0 top-1 rounded-xl bg-white/90 shadow-sm" style={{ transform: `translateX(${modesInd.box.x}px)`, width: modesInd.box.w }} />}
+            <div ref={modesInd.ref} data-tour="explore-modes" className="relative mb-4 grid grid-cols-2 gap-1 rounded-2xl glass p-1 sm:inline-flex" role="tablist" aria-label="Explore views">
+              {modesInd.box && <span aria-hidden className="tab-indicator absolute left-0 top-0 rounded-xl bg-white/90 shadow-sm" style={{ transform: `translate(${modesInd.box.x}px, ${modesInd.box.y}px)`, width: modesInd.box.w, height: modesInd.box.h }} />}
               {MODES.map(m => (
                 <button
                   key={m.key}
@@ -219,11 +219,11 @@ function Atlas() {
                   role="tab"
                   aria-selected={mode === m.key}
                   onClick={() => setParam({ mode: m.key === "bubbles" ? null : m.key, route: null })}
-                  className={cn("relative inline-flex shrink-0 items-center gap-1.5 rounded-xl px-3.5 py-1.5 text-sm font-semibold transition-colors", mode === m.key ? "text-primary" : "text-foreground/70 hover:text-foreground")}
+                  className={cn("relative inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl px-3.5 py-2.5 text-sm font-semibold transition-colors sm:py-1.5", mode === m.key ? "text-primary" : "text-foreground/70 hover:text-foreground")}
                 >
                   {"ai" in m && <Sparkles className="h-3.5 w-3.5 text-primary" />}
                   {m.label}
-                  {"ai" in m && <span className="rounded-full bg-gradient-to-r from-[#990000] to-[#c2410c] px-1.5 py-px text-[10px] font-bold uppercase tracking-wide text-white">AI route</span>}
+                  {"ai" in m && <span className="hidden rounded-full bg-gradient-to-r from-[#990000] to-[#c2410c] px-1.5 py-px text-[10px] sm:inline font-bold uppercase tracking-wide text-white">AI route</span>}
                 </button>
               ))}
             </div>

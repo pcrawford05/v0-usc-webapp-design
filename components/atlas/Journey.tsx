@@ -118,7 +118,7 @@ export function JourneyView({ onOpen, profile }: { onOpen: (id: string) => void;
             value={goal}
             onChange={e => setGoal(e.target.value)}
             placeholder="Optional goal, e.g. raise a pre-seed round by summer"
-            className="min-w-0 flex-1 rounded-2xl border border-white/70 bg-white/70 px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary/30"
+            className="min-w-0 flex-1 rounded-2xl border border-white/70 bg-white/70 px-4 py-3 text-base sm:py-2.5 sm:text-sm outline-none focus:ring-2 focus:ring-primary/30"
           />
           <button disabled={busy} className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground disabled:opacity-50">
             {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Sparkles className="h-4 w-4" />} Tailor with AI

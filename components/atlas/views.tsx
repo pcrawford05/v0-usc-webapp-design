@@ -60,12 +60,12 @@ function Facet<T extends string>({ label, value, options, onChange }: {
   onChange: (v: T | null) => void
 }) {
   return (
-    <label className={cn("relative inline-flex items-center rounded-xl glass pl-3 text-sm", value && "ring-2 ring-primary/40")}>
+    <label className={cn("relative inline-flex min-w-0 max-w-full items-center rounded-xl glass pl-3 text-sm", value && "ring-2 ring-primary/40")}>
       <span className="text-muted-foreground">{label}</span>
       <select
         value={value ?? ""}
         onChange={e => onChange((e.target.value || null) as T | null)}
-        className="cursor-pointer appearance-none bg-transparent py-2 pl-1.5 pr-7 font-semibold text-foreground outline-none"
+        className="min-w-0 max-w-[calc(100vw-8rem)] cursor-pointer appearance-none truncate bg-transparent py-2.5 pl-1.5 pr-7 font-semibold text-foreground outline-none sm:max-w-none sm:py-2"
       >
         <option value="">Any</option>
         {options.map(o => (
@@ -418,15 +418,15 @@ export function AskView({
         <div ref={endRef} />
       </div>
 
-      <form onSubmit={e => (e.preventDefault(), send(input))} className="sticky bottom-4 mt-6 flex items-center gap-2 rounded-2xl glass p-2 shadow-lg">
+      <form onSubmit={e => (e.preventDefault(), send(input))} className="sticky bottom-3 mt-6 flex items-center gap-2 rounded-2xl border border-black/5 bg-white p-2 shadow-xl sm:bg-white/80 sm:backdrop-blur-xl">
         <input
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder="e.g. I have a climate hardware prototype and need $10K"
-          className="flex-1 bg-transparent px-3 py-2 outline-none"
+          className="min-w-0 flex-1 bg-transparent px-3 py-2 text-base outline-none sm:text-sm"
           aria-label="Ask a question"
         />
-        <button type="submit" disabled={busy || !input.trim()} aria-label="Send" className="rounded-xl bg-primary p-2.5 text-primary-foreground transition hover:opacity-90 disabled:opacity-40">
+        <button type="submit" disabled={busy || !input.trim()} aria-label="Send" className="shrink-0 rounded-xl bg-primary p-3 sm:p-2.5 text-primary-foreground transition hover:opacity-90 disabled:opacity-40">
           <ArrowUp className="h-4 w-4" />
         </button>
       </form>

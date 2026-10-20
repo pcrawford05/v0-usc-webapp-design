@@ -1,7 +1,7 @@
 "use client"
 
 import { ArrowRight, Loader2, RotateCcw, Sparkles } from "lucide-react"
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 
 import type { RoutePlan } from "@/lib/ai"
 import { COLUMN, COLUMNS, KIND_LABELS, LINES, STATIONS, ZONES, decodeRoute, encodeRoute, linesAt, monthName, nextMonth, offMap, planRoute, type Kind } from "@/lib/network"
@@ -61,10 +61,20 @@ export function SubwayMap({ route, onOpen, compact }: { route?: RoutePlan | null
   const order = new Map(stops.filter(s => STATIONS.includes(s)).map((s, i) => [s, i + 1]))
   const horizon = (id: string) => (route?.now.includes(id) ? "Now" : route?.next.includes(id) ? "Next" : route?.later.includes(id) ? "Later" : null)
   const hp = hover ? programById.get(hover) : null
+  const scroller = useRef<HTMLDivElement>(null)
+
+  // On phones the map is wider than the screen: bring the start of the route into view.
+  useEffect(() => {
+    const el = scroller.current
+    const first = plan?.path[0]
+    if (!el || !first || el.scrollWidth <= el.clientWidth) return
+    const scale = el.scrollWidth / W
+    el.scrollTo({ left: Math.max(0, pos(first).x * scale - 60), behavior: "smooth" })
+  }, [plan])
 
   return (
     <div className="relative">
-      <div className={cn("overflow-x-auto rounded-3xl glass", compact && "rounded-2xl")}>
+      <div ref={scroller} className={cn("overflow-x-auto overscroll-x-contain rounded-3xl glass", compact && "rounded-2xl")}>
         <svg viewBox={`0 0 ${W} ${H}`} className="block h-auto w-full min-w-[860px]" role="img" aria-label="USC startup subway map" onPointerLeave={() => setHover(null)}>
           <defs>
             <filter id="route-glow" x="-20%" y="-20%" width="140%" height="140%">
@@ -143,6 +153,7 @@ export function SubwayMap({ route, onOpen, compact }: { route?: RoutePlan | null
           {hp.description && <div className="mt-1 line-clamp-3 text-foreground/80">{hp.description}</div>}
         </div>
       )}
+      <p className="mt-1.5 px-1 text-xs font-medium text-muted-foreground sm:hidden">Swipe the map sideways to see every line →</p>
       {!compact && (
         <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 px-1 text-xs text-muted-foreground">
           <span className="inline-flex items-center gap-1.5"><span className="h-3 w-3 rounded-full border-[3px] border-foreground/60 bg-white" /> Station</span>
@@ -275,10 +286,11 @@ export function SubwayView({ onOpen, profile, initial }: { onOpen: (id: string) 
           <input
             value={input}
             onChange={e => setInput(e.target.value)}
-            placeholder="Where are you, and where do you want to get to?"
-            className="min-w-0 flex-1 rounded-2xl border border-white/70 bg-white/70 px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary/30"
+            placeholder="Your goal, e.g. find a co-founder, then funding"
+            className="min-w-0 flex-1 rounded-2xl border border-white/70 bg-white/70 px-4 py-3 text-base sm:py-2.5 sm:text-sm outline-none focus:ring-2 focus:ring-primary/30"
           />
-          <button disabled={busy || !input.trim()} className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground disabled:opacity-50">
+          <div className="flex gap-2">
+          <button disabled={busy || !input.trim()} className="inline-flex flex-1 items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground disabled:opacity-50 sm:flex-none sm:py-2.5">
             {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <ArrowRight className="h-4 w-4" />} Route me
           </button>
           {route && (
@@ -286,6 +298,7 @@ export function SubwayView({ onOpen, profile, initial }: { onOpen: (id: string) 
               <RotateCcw className="h-4 w-4" />
             </button>
           )}
+          </div>
         </form>
         {!route && (
           <div className="mt-2 flex flex-wrap gap-1.5">
@@ -327,7 +340,7 @@ function OffMap({ onOpen }: { onOpen: (id: string) => void }) {
       <div className="text-sm font-bold text-foreground">Off the map</div>
       <div className="mt-2 flex flex-wrap gap-1.5">
         {kinds.map(k => (
-          <button key={k.kind} onClick={() => setOpen(open === k.kind ? null : k.kind)} className={cn("rounded-full px-3 py-1 text-xs font-semibold transition", open === k.kind ? "bg-foreground text-background" : "bg-white/60 text-foreground/80 hover:bg-white")}>
+          <button key={k.kind} onClick={() => setOpen(open === k.kind ? null : k.kind)} className={cn("rounded-full px-3 py-2 text-xs font-semibold transition sm:py-1", open === k.kind ? "bg-foreground text-background" : "bg-white/60 text-foreground/80 hover:bg-white")}>
             {k.kind === "program" ? "More programs" : KIND_LABELS[k.kind]} <span className="opacity-60">{offMap(k.kind).length}</span>
           </button>
         ))}
@@ -337,7 +350,7 @@ function OffMap({ onOpen }: { onOpen: (id: string) => void }) {
           <p className="mt-2 text-xs text-muted-foreground">{kinds.find(k => k.kind === open)!.blurb}</p>
           <div className="mt-2 flex flex-wrap gap-1.5">
             {offMap(open).map(p => (
-              <button key={p.id} onClick={() => onOpen(p.id)} className="inline-flex items-center gap-1.5 rounded-full bg-white/70 px-2.5 py-1 text-xs shadow-sm hover:bg-white">
+              <button key={p.id} onClick={() => onOpen(p.id)} className="inline-flex items-center gap-1.5 rounded-full bg-white/70 px-3 py-2 text-xs shadow-sm hover:bg-white sm:px-2.5 sm:py-1">
                 <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: GROUPS[p.group].color }} />
                 {p.name}
               </button>

@@ -91,7 +91,7 @@ export function ProgramCard({
           type="button"
           aria-label={saved ? "Remove from saved" : "Save program"}
           onClick={e => (e.stopPropagation(), onToggleSave(program.id))}
-          className="rounded-md p-1 text-muted-foreground transition hover:bg-muted hover:text-primary"
+          className="rounded-md p-2 text-muted-foreground transition hover:bg-muted hover:text-primary sm:p-1"
         >
           {saved ? <BookmarkCheck className="h-4 w-4 text-primary" /> : <Bookmark className="h-4 w-4" />}
         </button>
@@ -218,7 +218,7 @@ export function ProgramDrawer({
                   Some details could not be fully verified. Confirm on the official page before you apply.
                 </p>
               )}
-              <div className="flex flex-wrap gap-2 pt-1">
+              <div className="sticky bottom-0 -mx-6 flex flex-wrap gap-2 border-t border-white/60 bg-white/80 px-6 py-3 backdrop-blur-xl sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:pt-1 sm:backdrop-blur-none">
                 {program.link && (
                   <a
                     href={program.link}

@@ -51,7 +51,7 @@ export function RemindButton({ program, compact }: { program: Program; compact?:
   }
   const when = program.months.map(m => MONTHS[m - 1]).join(", ")
   return compact ? (
-    <button type="button" onClick={go} aria-label={`Remind me before ${when}`} title={`Add a calendar reminder 2 weeks before ${when}`} className="rounded-md p-1 text-muted-foreground transition hover:bg-muted hover:text-primary">
+    <button type="button" onClick={go} aria-label={`Remind me before ${when}`} title={`Add a calendar reminder 2 weeks before ${when}`} className="rounded-md p-2 text-muted-foreground transition hover:bg-muted hover:text-primary sm:p-1">
       {done ? <Check className="h-4 w-4 text-emerald-600" /> : <BellPlus className="h-4 w-4" />}
     </button>
   ) : (
@@ -83,7 +83,7 @@ export function UpcomingStrip({ list, saved, onOpen, title = "Coming up in the n
       <div className="flex items-baseline justify-between gap-2">
         <h2 className="text-sm font-bold text-foreground">{title}</h2>
         <button onClick={() => downloadReminders(items, "founder-compass-upcoming.ics")} className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline">
-          <BellPlus className="h-3.5 w-3.5" /> {items.length === 1 ? "Remind me" : `Remind me about all ${items.length}`}
+          <BellPlus className="h-3.5 w-3.5" /> {items.length === 1 ? "Remind me" : <>Remind me <span className="hidden sm:inline">about all {items.length}</span><span className="sm:hidden">({items.length})</span></>}
         </button>
       </div>
       <div className="-mx-1 flex snap-x gap-2.5 overflow-x-auto px-1 pb-2 [scrollbar-width:thin]">

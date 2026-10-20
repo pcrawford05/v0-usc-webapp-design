@@ -7,6 +7,8 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "
 import { AUDIENCE_LABELS, GROUPS, MONTHS, STAGE_LABELS, type Program } from "@/lib/programs"
 import { cn } from "@/lib/utils"
 
+import { RemindButton, ShareButton } from "./extras"
+
 // ---------- Saved programs (per browser) ----------
 
 const SAVED_KEY = "atlas:saved"
@@ -57,6 +59,7 @@ export function whenLabel(p: Program): string {
 
 export function ProgramCard({
   program,
+  index = 0,
   reason,
   checks,
   onOpen,
@@ -64,6 +67,7 @@ export function ProgramCard({
   onToggleSave,
 }: {
   program: Program
+  index?: number
   reason?: string
   checks?: { ok: boolean; label: string }[]
   onOpen: (id: string) => void
@@ -76,10 +80,13 @@ export function ProgramCard({
       tabIndex={0}
       onClick={() => onOpen(program.id)}
       onKeyDown={e => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), onOpen(program.id))}
-      className="group relative flex h-full flex-col glass glass-hover rounded-2xl p-4 text-left hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      style={{ "--i": index } as React.CSSProperties}
+      className="spotlight animate-rise group relative flex h-full flex-col glass glass-hover rounded-2xl p-4 text-left hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
     >
       <div className="flex items-start justify-between gap-2">
         <GroupPill program={program} />
+        <span className="flex items-center">
+        <RemindButton program={program} compact />
         <button
           type="button"
           aria-label={saved ? "Remove from saved" : "Save program"}
@@ -88,6 +95,7 @@ export function ProgramCard({
         >
           {saved ? <BookmarkCheck className="h-4 w-4 text-primary" /> : <Bookmark className="h-4 w-4" />}
         </button>
+        </span>
       </div>
       <h3 className="mt-2 font-semibold leading-snug text-foreground">{program.name}</h3>
       <p className="mt-0.5 text-xs text-muted-foreground">{program.category}</p>
@@ -228,6 +236,8 @@ export function ProgramDrawer({
                   {saved ? <BookmarkCheck className="h-4 w-4 text-primary" /> : <Bookmark className="h-4 w-4" />}
                   {saved ? "Saved" : "Save"}
                 </button>
+                <RemindButton program={program} />
+                <ShareButton url={`${typeof window !== "undefined" ? window.location.origin : ""}/?p=${program.id}`} title={program.name} label="Share" className="py-2" />
                 <button
                   onClick={() => onAsk(`Tell me more about ${program.name}. Is it a good fit for me and what is similar?`)}
                   className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-semibold transition hover:bg-muted"

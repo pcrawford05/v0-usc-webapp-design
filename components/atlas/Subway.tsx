@@ -4,10 +4,11 @@ import { ArrowRight, Loader2, RotateCcw, Sparkles } from "lucide-react"
 import { useMemo, useState } from "react"
 
 import type { RoutePlan } from "@/lib/ai"
-import { COLUMN, COLUMNS, KIND_LABELS, LINES, STATIONS, ZONES, linesAt, monthName, nextMonth, offMap, planRoute, type Kind } from "@/lib/network"
+import { COLUMN, COLUMNS, KIND_LABELS, LINES, STATIONS, ZONES, decodeRoute, encodeRoute, linesAt, monthName, nextMonth, offMap, planRoute, type Kind } from "@/lib/network"
 import { GROUPS, programById, type Program } from "@/lib/programs"
 import { cn } from "@/lib/utils"
 
+import { ShareButton } from "./extras"
 import { whenLabel } from "./shared"
 
 // ---------- Geometry ----------
@@ -233,11 +234,11 @@ const PRESETS = [
   "Biotech startup headed for an accelerator",
 ]
 
-export function SubwayView({ onOpen, profile, initial }: { onOpen: (id: string) => void; profile?: string; initial?: string[] }) {
+export function SubwayView({ onOpen, profile, initial }: { onOpen: (id: string) => void; profile?: string; initial?: string }) {
   const [input, setInput] = useState("")
   const [busy, setBusy] = useState(false)
   const [answer, setAnswer] = useState<string | null>(null)
-  const [route, setRoute] = useState<RoutePlan | null>(initial?.length ? { now: initial.slice(0, 1), next: initial.slice(1, 2), later: initial.slice(2), support: [] } : null)
+  const [route, setRoute] = useState<RoutePlan | null>(() => (initial ? decodeRoute(initial) : null))
   const [err, setErr] = useState<string | null>(null)
 
   const plan = async (q: string) => {
@@ -297,7 +298,14 @@ export function SubwayView({ onOpen, profile, initial }: { onOpen: (id: string) 
         {err && <p className="mt-2 text-sm text-destructive">{err}</p>}
       </div>
 
-      {route && <Itinerary route={route} onOpen={onOpen} />}
+      {route && (
+        <div className="space-y-2">
+          <div className="flex justify-end">
+            <ShareButton url={routeUrl(route)} title="My Founder Compass route" label="Share this route" />
+          </div>
+          <Itinerary route={route} onOpen={onOpen} />
+        </div>
+      )}
       <SubwayMap route={route} onOpen={onOpen} />
       <OffMap onOpen={onOpen} />
     </div>
@@ -339,4 +347,10 @@ function OffMap({ onOpen }: { onOpen: (id: string) => void }) {
       )}
     </div>
   )
+}
+
+/** A link that reopens this exact route on the subway. */
+export function routeUrl(route: RoutePlan): string {
+  const origin = typeof window !== "undefined" ? window.location.origin : ""
+  return `${origin}/?mode=subway&route=${encodeRoute(route)}`
 }

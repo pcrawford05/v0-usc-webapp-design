@@ -42,7 +42,7 @@ function detail(p: Program): string {
 function systemPrompt(profile?: string): string {
   const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
   return [
-    "You are the USC Startup Atlas guide. You help USC students, researchers and alumni find the right entrepreneurship programs.",
+    "You are the Founder Compass guide. You help USC students, researchers and alumni find the right entrepreneurship programs.",
     `Today is ${today}. Use this to say what is open now or coming up soon.`,
     "Answer ONLY from the program catalog provided. Never invent programs, dates, amounts or eligibility. If the catalog does not cover something, say so and suggest the closest options.",
     "Be concise and practical: 2 to 4 short sentences, then let the picks do the work. Start with the substance; no greetings or introductions. Do not use em dashes. Do not end with a question.",

@@ -1,4 +1,4 @@
-# USC Startup Atlas
+# Founder Compass
 
 Every USC entrepreneurship program in one place: 167 USC programs plus 36 outside founder resources, each with timing, eligibility, funding, a description and an official link.
 

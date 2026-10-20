@@ -9,7 +9,8 @@ import { describeProfile, fitScore, SCHOOLS, STAGES, type Profile } from "@/lib/
 import { programs, type Stage } from "@/lib/programs"
 import { cn } from "@/lib/utils"
 
-import { Itinerary, SubwayMap } from "./Subway"
+import { ShareButton } from "./extras"
+import { Itinerary, SubwayMap, routeUrl } from "./Subway"
 
 const ORDER: Stage[] = ["idea", "prototype", "launched", "scaling"]
 
@@ -56,6 +57,7 @@ export function JourneyView({ onOpen, profile }: { onOpen: (id: string) => void;
   const [showMap, setShowMap] = useState(false)
   const base = useMemo(() => defaultRoute(stage, lineKey, profile), [stage, lineKey, profile])
   const route = ai?.plan ?? base
+  const stageCounts = useMemo(() => Object.fromEntries(ORDER.map(st => [st, programs.filter(p => p.stage.includes(st)).length])) as Record<Stage, number>, [])
 
   const personalize = async () => {
     setBusy(true)
@@ -78,7 +80,7 @@ export function JourneyView({ onOpen, profile }: { onOpen: (id: string) => void;
   return (
     <div className="space-y-4">
       <div className="glass rounded-3xl p-4">
-        <div className="text-lg font-bold text-foreground">Your journey</div>
+        <div className="text-lg font-bold text-foreground">My journey</div>
         <p className="text-sm text-muted-foreground">What to do now, what comes next, and what to aim for later. Pick your stage, or let the AI tailor it to your goal.</p>
         <div className="mt-3 flex flex-wrap gap-1.5" role="radiogroup" aria-label="Your stage">
           {STAGES.map(s => (
@@ -90,6 +92,7 @@ export function JourneyView({ onOpen, profile }: { onOpen: (id: string) => void;
               className={cn("rounded-full px-3.5 py-1.5 text-sm font-semibold transition", stage === s.key ? "bg-primary text-primary-foreground" : "bg-white/60 text-foreground/80 hover:bg-white")}
             >
               {s.label}
+              <span className={cn("ml-1.5 text-xs font-normal", stage === s.key ? "text-primary-foreground/75" : "text-muted-foreground")}>{stageCounts[s.key]}</span>
             </button>
           ))}
         </div>
@@ -106,6 +109,7 @@ export function JourneyView({ onOpen, profile }: { onOpen: (id: string) => void;
             >
               {lineKey !== l.key && <span className="h-2 w-2 rounded-full" style={{ backgroundColor: l.color }} />}
               {l.name.toLowerCase()}
+              <span className={cn("text-xs", lineKey === l.key ? "text-white/75" : "text-muted-foreground")}>{l.stops.length}</span>
             </button>
           ))}
         </div>
@@ -125,6 +129,9 @@ export function JourneyView({ onOpen, profile }: { onOpen: (id: string) => void;
         {!ai && <p className="mt-2 text-xs text-muted-foreground">{profile ? "Ordered for your profile." : "Tip: add your profile (Personalize) for picks that fit your school and role."}</p>}
       </div>
 
+      <div className="flex justify-end">
+        <ShareButton url={routeUrl(route)} title="My Founder Compass journey" label="Share my journey" />
+      </div>
       <Itinerary route={route} onOpen={onOpen} />
 
       <button onClick={() => setShowMap(v => !v)} className="inline-flex items-center gap-2 rounded-2xl glass px-3.5 py-2 text-sm font-semibold hover:bg-white/70">

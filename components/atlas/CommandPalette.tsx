@@ -60,7 +60,7 @@ export function CommandPalette({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="glass-strong top-[18%] max-w-xl translate-y-0 gap-0 overflow-hidden rounded-3xl border-0 p-0 [&>button]:hidden">
-        <DialogTitle className="sr-only">Search the Atlas</DialogTitle>
+        <DialogTitle className="sr-only">Search Founder Compass</DialogTitle>
         <Command shouldFilter={false} loop className="flex flex-col">
           <div className="flex items-center gap-3 border-b border-black/5 px-4">
             <Search className="h-5 w-5 text-muted-foreground" />

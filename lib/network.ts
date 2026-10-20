@@ -150,3 +150,20 @@ export function forward(plan: { now: string[]; next: string[]; later: string[] }
   const by = (ids: string[]) => [...ids].sort((a, b) => col(a) - col(b))
   return { now: by(plan.now), next: by(plan.next), later: by(plan.later) }
 }
+
+/** Route <-> URL: horizons separated by "~", stops by ",". */
+export function encodeRoute(r: { now: string[]; next: string[]; later: string[] }): string {
+  return [r.now, r.next, r.later].map(h => h.join(",")).join("~")
+}
+export function decodeRoute(s: string): { now: string[]; next: string[]; later: string[]; support: string[] } | null {
+  const valid = (h = "") => h.split(",").filter(id => programById.has(id))
+  const parts = s.split("~")
+  // Older links had one comma list: split it into thirds.
+  if (parts.length === 1) {
+    const all = valid(parts[0])
+    const k = Math.max(1, Math.ceil(all.length / 3))
+    return all.length ? { now: all.slice(0, k), next: all.slice(k, 2 * k), later: all.slice(2 * k), support: [] } : null
+  }
+  const [now, next, later] = [valid(parts[0]), valid(parts[1]), valid(parts[2])]
+  return now.length + next.length + later.length ? { now, next, later, support: [] } : null
+}

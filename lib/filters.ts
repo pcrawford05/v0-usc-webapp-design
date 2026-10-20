@@ -15,16 +15,34 @@ export interface Filters {
   sort: SortKey
 }
 
+// Short, readable slugs so shared links stay textable: ?t=funding&u=viterbi
+const TYPE_SLUGS: Record<Category, string> = {
+  "Funding & Grants": "funding",
+  "Competitions & Pitch": "pitch",
+  "Accelerators & Incubators": "accelerators",
+  "Mentorship & Office Hours": "mentorship",
+  "Events & Speakers": "events",
+  "Courses & Degrees": "courses",
+  "Makerspaces & Coworking": "spaces",
+  "Legal & IP": "legal",
+  "Research Commercialization": "research",
+  "Student Organizations": "clubs",
+  "Partners & Ecosystem": "partners",
+  "Founder Toolkits": "toolkits",
+}
+const typeFromSlug = (s: string | null) => (CATEGORIES.find(c => TYPE_SLUGS[c] === s || c === s) ?? null) as Category | null
+
 export function readFilters(params: URLSearchParams): Filters {
-  const type = params.get("type")
+  // Short keys first; the long ones still work for links shared before the rename.
+  const get = (short: string, long: string) => params.get(short) ?? params.get(long)
   return {
     q: params.get("q") ?? "",
-    type: CATEGORIES.includes(type as Category) ? (type as Category) : null,
-    who: (params.get("who") as Audience) || null,
-    stage: (params.get("stage") as Stage) || null,
-    units: (params.get("unit") ?? "").split(",").filter((g): g is GroupKey => GROUP_KEYS.includes(g as GroupKey)),
+    type: typeFromSlug(get("t", "type")),
+    who: (get("for", "who") as Audience) || null,
+    stage: (get("s", "stage") as Stage) || null,
+    units: (get("u", "unit") ?? "").split(",").filter((g): g is GroupKey => GROUP_KEYS.includes(g as GroupKey)),
     open: params.get("open") === "1",
-    verified: params.get("verified") === "1",
+    verified: (get("v", "verified")) === "1",
     sort: (["soon", "az"].includes(params.get("sort") ?? "") ? params.get("sort") : "best") as SortKey,
   }
 }
@@ -33,12 +51,12 @@ export function readFilters(params: URLSearchParams): Filters {
 export function filterParams(f: Partial<Filters>): Record<string, string | null> {
   const out: Record<string, string | null> = {}
   if ("q" in f) out.q = f.q || null
-  if ("type" in f) out.type = f.type ?? null
-  if ("who" in f) out.who = f.who ?? null
-  if ("stage" in f) out.stage = f.stage ?? null
-  if ("units" in f) out.unit = f.units?.length ? f.units.join(",") : null
+  if ("type" in f) Object.assign(out, { t: f.type ? TYPE_SLUGS[f.type] : null, type: null })
+  if ("who" in f) Object.assign(out, { for: f.who ?? null, who: null })
+  if ("stage" in f) Object.assign(out, { s: f.stage ?? null, stage: null })
+  if ("units" in f) Object.assign(out, { u: f.units?.length ? f.units.join(",") : null, unit: null })
   if ("open" in f) out.open = f.open ? "1" : null
-  if ("verified" in f) out.verified = f.verified ? "1" : null
+  if ("verified" in f) Object.assign(out, { v: f.verified ? "1" : null, verified: null })
   if ("sort" in f) out.sort = f.sort === "best" ? null : f.sort ?? null
   return out
 }

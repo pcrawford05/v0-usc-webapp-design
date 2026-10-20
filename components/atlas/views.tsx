@@ -149,7 +149,7 @@ export function BrowseView({
             onChange={e => setDraft(e.target.value)}
             placeholder="Search 203 programs: grants, biotech, pitch, co-founder..."
             aria-label="Search programs"
-            className="w-full rounded-2xl border border-white/70 bg-white/70 py-3.5 pl-12 pr-4 text-[15px] shadow-[inset_0_1px_2px_rgba(0,0,0,.06)] outline-none transition focus:bg-white focus:ring-2 focus:ring-primary/30"
+            className="w-full rounded-2xl border border-white/70 bg-white/70 py-3.5 pl-12 pr-4 text-base sm:text-[15px] shadow-[inset_0_1px_2px_rgba(0,0,0,.06)] outline-none transition focus:bg-white focus:ring-2 focus:ring-primary/30"
           />
         </label>
         <div className="mt-3 flex flex-wrap items-center gap-2">

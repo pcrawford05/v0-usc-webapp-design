@@ -64,7 +64,7 @@ export function CommandPalette({
         <Command shouldFilter={false} loop className="flex flex-col">
           <div className="flex items-center gap-3 border-b border-black/5 px-4">
             <Search className="h-5 w-5 text-muted-foreground" />
-            <Command.Input value={q} onValueChange={setQ} placeholder="Search programs or ask anything..." className="h-14 flex-1 bg-transparent text-[15px] outline-none placeholder:text-muted-foreground" />
+            <Command.Input value={q} onValueChange={setQ} placeholder="Search programs or ask anything..." className="h-14 flex-1 bg-transparent text-base sm:text-[15px] outline-none placeholder:text-muted-foreground" />
             <kbd className="rounded-md border border-black/10 bg-white/70 px-1.5 py-0.5 text-[11px] text-muted-foreground">esc</kbd>
           </div>
           <Command.List className="max-h-[60vh] overflow-y-auto p-2">

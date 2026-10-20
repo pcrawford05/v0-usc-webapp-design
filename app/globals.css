@@ -118,3 +118,71 @@ body {
 .palette-item .palette-arrow { opacity: 0; transition: opacity 120ms, transform 120ms; }
 .palette-item[data-selected="true"] .palette-arrow { opacity: 1; transform: translateX(2px); }
 .atlas-tiles-minimal { filter: grayscale(0.9) contrast(0.92) brightness(1.06) sepia(0.12); }
+
+/* Route draw-in on the subway map: plays once when a route appears. */
+@keyframes atlas-route { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+.atlas-route { stroke-dasharray: 1; stroke-dashoffset: 1; animation: atlas-route 900ms cubic-bezier(.4,.1,.2,1) forwards; }
+@media (prefers-reduced-motion: reduce) { .atlas-route { animation: none; stroke-dashoffset: 0; } }
+
+/* ---------- Motion system ---------- */
+
+/* Aurora: the background color fields drift slowly behind the glass. */
+.app-bg { position: relative; isolation: isolate; }
+.app-bg::before {
+  content: ""; position: fixed; inset: -20%; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(30rem 22rem at 20% 20%, rgba(153, 0, 0, 0.12), transparent 60%),
+    radial-gradient(28rem 20rem at 80% 30%, rgba(255, 204, 0, 0.16), transparent 60%),
+    radial-gradient(32rem 24rem at 50% 90%, rgba(107, 63, 143, 0.10), transparent 60%);
+  filter: blur(20px);
+  animation: aurora 28s ease-in-out infinite alternate;
+}
+@keyframes aurora {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg) scale(1); }
+  50% { transform: translate3d(4%, -3%, 0) rotate(8deg) scale(1.06); }
+  100% { transform: translate3d(-3%, 4%, 0) rotate(-6deg) scale(1.02); }
+}
+
+/* Cursor spotlight: a soft light follows the pointer across cards (vars set in page.tsx). */
+.spotlight { position: relative; }
+.spotlight::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0;
+  background: radial-gradient(18rem circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.55), rgba(255, 204, 0, 0.08) 40%, transparent 70%);
+  transition: opacity 250ms;
+}
+.spotlight:hover::after { opacity: 1; }
+
+/* Staggered entrance for lists: set --i on each item. */
+@keyframes rise { from { opacity: 0; transform: translateY(10px) scale(0.985); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+.animate-rise { animation: rise 520ms cubic-bezier(.2,.8,.2,1) both; animation-delay: calc(min(var(--i, 0), 14) * 35ms); }
+
+@keyframes pop-in { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: none; } }
+.animate-pop-in { animation: pop-in 260ms cubic-bezier(.3,1.4,.5,1) both; }
+
+/* Each view fades and lifts in when you switch tabs. */
+@keyframes view-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.animate-view { animation: view-in 420ms cubic-bezier(.2,.8,.2,1) both; }
+
+@keyframes tour-ring { 0%, 100% { box-shadow: 0 0 0 0 rgba(153, 0, 0, 0.25); } 50% { box-shadow: 0 0 0 10px rgba(153, 0, 0, 0); } }
+.animate-tour-ring { animation: tour-ring 1.8s ease-in-out infinite; }
+
+/* Shimmering gradient border for the primary AI call to action. */
+.ai-border { position: relative; background-clip: padding-box; }
+.ai-border::before {
+  content: ""; position: absolute; inset: -1.5px; border-radius: inherit; z-index: -1;
+  background: conic-gradient(from var(--angle, 0deg), #990000, #ffcc00, #c2410c, #7c3aed, #990000);
+  animation: spin-angle 6s linear infinite;
+}
+@property --angle { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
+@keyframes spin-angle { to { --angle: 360deg; } }
+
+/* Sliding pill behind the active tab (positioned in page.tsx). */
+.tab-indicator { transition: transform 420ms cubic-bezier(.3,1.2,.4,1), width 420ms cubic-bezier(.3,1.2,.4,1); }
+
+/* Native cross-fade between views where the browser supports View Transitions. */
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 260ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .app-bg::before, .animate-rise, .animate-pop-in, .animate-view, .animate-tour-ring, .ai-border::before { animation: none !important; }
+  .tab-indicator { transition: none; }
+}

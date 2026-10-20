@@ -4,7 +4,7 @@ export const dynamic = "force-static"
 export function GET(req: Request) {
   const origin = new URL(req.url).origin
   return new Response(
-    `# USC Startup Atlas
+    `# Founder Compass
 
 > A directory of USC entrepreneurship programs and outside founder resources.
 

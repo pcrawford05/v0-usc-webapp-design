@@ -146,7 +146,7 @@ export function ProfileDialog({ open, onOpenChange, profile, onSave }: {
               onChange={e => setPaste(e.target.value)}
               placeholder="...or paste your LinkedIn About and Experience here"
               rows={3}
-              className="mt-2 w-full resize-y rounded-lg glass px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/40"
+              className="mt-2 w-full resize-y rounded-lg glass px-3 py-2 text-base sm:text-sm outline-none focus:ring-2 focus:ring-primary/40"
             />
             {paste.trim() && (
               <button
@@ -181,7 +181,7 @@ export function ProfileDialog({ open, onOpenChange, profile, onSave }: {
                 onChange={e => setDraft(d => ({ ...d, venture: e.target.value || undefined }))}
                 placeholder="e.g. A wearable that detects early signs of heat stroke"
                 maxLength={240}
-                className="w-full rounded-lg glass px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary/40"
+                className="w-full rounded-lg glass px-3 py-2 text-base sm:text-sm outline-none focus:ring-2 focus:ring-primary/40"
               />
             </Field>
           </div>

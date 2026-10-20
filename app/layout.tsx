@@ -6,8 +6,8 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "USC Startup Atlas",
-  description: "Every USC entrepreneurship program, mapped: funding, competitions, mentorship, courses and more."
+  title: "Founder Compass",
+  description: "Find your way through every USC entrepreneurship program: funding, competitions, mentorship, courses and more, with AI route planning."
 }
 
 export default function RootLayout({

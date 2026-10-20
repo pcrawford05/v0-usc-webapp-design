@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowUp, ArrowUpDown, Bookmark, ChevronDown, Clock, LayoutGrid, Loader2, RotateCcw, Rows3, Search, ShieldCheck, Sparkles, X } from "lucide-react"
+import { ArrowUp, ArrowUpDown, Bookmark, CalendarPlus, ChevronDown, Clock, LayoutGrid, Loader2, Rows3, Search, ShieldCheck, Sparkles, X } from "lucide-react"
 import { useEffect, useMemo, useRef, useState } from "react"
 
 import {
@@ -13,8 +13,6 @@ import {
   isAlwaysOn,
   programById,
   type Audience,
-  type Category,
-  type GroupKey,
   type Program,
   type Stage,
 } from "@/lib/programs"
@@ -24,33 +22,23 @@ import { rankPrograms } from "@/lib/search"
 import { cn } from "@/lib/utils"
 
 import { ProgramTable } from "./ProgramTable"
+import { ShareButton, UpcomingStrip } from "./extras"
 import { GroupPill, ProgramCard } from "./shared"
+import { downloadReminders } from "@/lib/reminders"
+import { encodeRoute } from "@/lib/network"
+import { Itinerary, SubwayMap } from "./Subway"
+import type { RoutePlan } from "@/lib/ai"
 
 type CardProps = { onOpen: (id: string) => void; isSaved: (id: string) => boolean; onToggleSave: (id: string) => void; onAsk?: (q: string) => void }
-
-function Chip({ active, onClick, children, color }: { active: boolean; onClick: () => void; children: React.ReactNode; color?: string }) {
-  return (
-    <button
-      onClick={onClick}
-      aria-pressed={active}
-      className={cn(
-        "rounded-full border px-3 py-1.5 text-sm transition",
-        active ? "border-transparent text-white shadow-sm" : "glass text-foreground hover:bg-muted",
-      )}
-      style={active ? { backgroundColor: color ?? "hsl(var(--primary))" } : undefined}
-    >
-      {children}
-    </button>
-  )
-}
 
 function Grid({ items, reasons, profile, ...card }: CardProps & { items: Program[]; reasons?: Map<string, string>; profile?: Profile | null }) {
   if (!items.length) return <p className="py-10 text-center text-muted-foreground">No programs match yet. Try loosening a filter.</p>
   return (
     <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-      {items.map(p => (
+      {items.map((p, i) => (
         <ProgramCard
           key={p.id}
+          index={i}
           program={p}
           reason={reasons?.get(p.id)}
           checks={profile ? matchChecklist(p, profile) : undefined}
@@ -59,112 +47,6 @@ function Grid({ items, reasons, profile, ...card }: CardProps & { items: Program
           onToggleSave={card.onToggleSave}
         />
       ))}
-    </div>
-  )
-}
-
-// ---------- Find my path ----------
-
-const WHO: { key: string; label: string; audience: Audience[] }[] = [
-  { key: "undergrad", label: "Undergrad", audience: ["undergrad"] },
-  { key: "grad", label: "Master's / MBA", audience: ["grad"] },
-  { key: "phd", label: "PhD / Postdoc", audience: ["phd", "postdoc"] },
-  { key: "faculty", label: "Faculty / Staff", audience: ["faculty", "staff"] },
-  { key: "alumni", label: "Alumni", audience: ["alumni"] },
-]
-const STAGES: { key: Stage; label: string; hint: string }[] = [
-  { key: "idea", label: "Just an idea", hint: "Exploring problems" },
-  { key: "prototype", label: "Building", hint: "Prototype or MVP" },
-  { key: "launched", label: "Launched", hint: "Users or revenue" },
-  { key: "scaling", label: "Scaling", hint: "Raising and hiring" },
-]
-const NEEDS: { key: string; label: string; categories: Category[]; words: RegExp }[] = [
-  { key: "money", label: "Funding", categories: ["Funding & Grants", "Competitions & Pitch"], words: /fund|grant|prize|\$/i },
-  { key: "mentor", label: "Mentors & advice", categories: ["Mentorship & Office Hours", "Accelerators & Incubators"], words: /mentor|office hours|advis|residence/i },
-  { key: "team", label: "A co-founder or team", categories: ["Student Organizations", "Events & Speakers"], words: /co-?founder|matching|mixer|team/i },
-  { key: "pitch", label: "Pitch & compete", categories: ["Competitions & Pitch"], words: /pitch|competition|showcase|challenge|demo/i },
-  { key: "build", label: "Space & tools to build", categories: ["Makerspaces & Coworking", "Accelerators & Incubators"], words: /maker|lab|cowork|prototype|hackathon/i },
-  { key: "learn", label: "Learn the skills", categories: ["Courses & Degrees", "Founder Toolkits", "Events & Speakers"], words: /course|bootcamp|training|workshop|minor/i },
-  { key: "legal", label: "Legal, IP, or licensing", categories: ["Legal & IP", "Research Commercialization"], words: /legal|patent|ip\b|licens|law/i },
-  { key: "network", label: "Investors & network", categories: ["Partners & Ecosystem", "Events & Speakers"], words: /investor|venture|angel|network|vc/i },
-]
-
-export function FindPathView({ all, profile, ...card }: CardProps & { all: Program[]; profile: Profile | null }) {
-  const [who, setWho] = useState<string | null>(profile?.role ?? null)
-  const [stage, setStage] = useState<Stage | null>(profile?.stage ?? null)
-  const [needs, setNeeds] = useState<string[]>(profile?.interests ?? [])
-  const nowMonth = new Date().getMonth() + 1
-
-  const results = useMemo(() => {
-    if (!who && !stage && !needs.length) return []
-    const aud = WHO.find(w => w.key === who)?.audience ?? []
-    const picked = NEEDS.filter(n => needs.includes(n.key))
-    return all
-      .map(p => {
-        let s = 0
-        if (aud.length) s += p.audience.some(a => aud.includes(a)) ? 2 : p.audience.length ? -3 : 0.3
-        if (stage) s += p.stage.includes(stage) ? 2 : p.stage.length ? -1 : 0.3
-        for (const n of picked) {
-          if (n.categories.includes(p.category)) s += 3
-          if (n.words.test(`${p.name} ${p.description ?? ""} ${p.funding ?? ""}`)) s += 1.5
-        }
-        if (p.months.some(m => ((m - nowMonth + 12) % 12) <= 2)) s += 0.6
-        if (p.group === "external") s -= 0.8
-        if (p.confidence === "low") s -= 0.5
-        return { p, s }
-      })
-      .filter(x => x.s > 2)
-      .sort((a, b) => b.s - a.s)
-      .slice(0, 12)
-      .map(x => x.p)
-  }, [all, who, stage, needs, nowMonth])
-
-  const step = (n: number, title: string, children: React.ReactNode) => (
-    <div className="rounded-2xl glass p-4">
-      <div className="mb-3 flex items-center gap-2">
-        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{n}</span>
-        <h3 className="font-semibold">{title}</h3>
-      </div>
-      <div className="flex flex-wrap gap-2">{children}</div>
-    </div>
-  )
-
-  return (
-    <div className="space-y-4">
-      <div className="grid gap-3 lg:grid-cols-3">
-        {step(1, "I am a...", WHO.map(w => (
-          <Chip key={w.key} active={who === w.key} onClick={() => setWho(who === w.key ? null : w.key)}>{w.label}</Chip>
-        )))}
-        {step(2, "My venture is...", STAGES.map(s => (
-          <Chip key={s.key} active={stage === s.key} onClick={() => setStage(stage === s.key ? null : s.key)}>
-            <span title={s.hint}>{s.label}</span>
-          </Chip>
-        )))}
-        {step(3, "I need...", NEEDS.map(n => (
-          <Chip
-            key={n.key}
-            active={needs.includes(n.key)}
-            onClick={() => setNeeds(needs.includes(n.key) ? needs.filter(x => x !== n.key) : [...needs, n.key])}
-          >
-            {n.label}
-          </Chip>
-        )))}
-      </div>
-      {results.length > 0 ? (
-        <>
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-semibold">Your shortlist</h3>
-            <button onClick={() => (setWho(null), setStage(null), setNeeds([]))} className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-              <RotateCcw className="h-3.5 w-3.5" /> Start over
-            </button>
-          </div>
-          <Grid items={results} {...card} />
-        </>
-      ) : (
-        <p className="rounded-2xl border border-dashed border-border p-8 text-center text-muted-foreground">
-          Pick an option in any of the three steps and your shortlist appears here.
-        </p>
-      )}
     </div>
   )
 }
@@ -178,12 +60,12 @@ function Facet<T extends string>({ label, value, options, onChange }: {
   onChange: (v: T | null) => void
 }) {
   return (
-    <label className={cn("relative inline-flex items-center rounded-xl glass pl-3 text-sm", value && "ring-2 ring-primary/40")}>
+    <label className={cn("relative inline-flex min-w-0 max-w-full items-center rounded-xl glass pl-3 text-sm", value && "ring-2 ring-primary/40")}>
       <span className="text-muted-foreground">{label}</span>
       <select
         value={value ?? ""}
         onChange={e => onChange((e.target.value || null) as T | null)}
-        className="cursor-pointer appearance-none bg-transparent py-2 pl-1.5 pr-7 font-semibold text-foreground outline-none"
+        className="min-w-0 max-w-[calc(100vw-8rem)] cursor-pointer appearance-none truncate bg-transparent py-2.5 pl-1.5 pr-7 font-semibold text-foreground outline-none sm:max-w-none sm:py-2"
       >
         <option value="">Any</option>
         {options.map(o => (
@@ -215,8 +97,9 @@ export function BrowseView({
   filters: f,
   setFilters,
   profile,
+  saved = [],
   ...card
-}: CardProps & { all: Program[]; filters: Filters; setFilters: (f: Partial<Filters>) => void; profile: Profile | null }) {
+}: CardProps & { all: Program[]; filters: Filters; setFilters: (f: Partial<Filters>) => void; profile: Profile | null; saved?: string[] }) {
   const [layout, setLayoutState] = useState<"cards" | "table">("cards")
   const [draft, setDraft] = useState(f.q)
   useEffect(() => setDraft(f.q), [f.q])
@@ -257,6 +140,7 @@ export function BrowseView({
 
   return (
     <div className="space-y-4">
+      {!chips.length && <UpcomingStrip list={all} saved={saved} onOpen={card.onOpen} />}
       <div className="rounded-3xl glass p-3 sm:p-4">
         <label className="relative block">
           <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
@@ -265,7 +149,7 @@ export function BrowseView({
             onChange={e => setDraft(e.target.value)}
             placeholder="Search 203 programs: grants, biotech, pitch, co-founder..."
             aria-label="Search programs"
-            className="w-full rounded-2xl border border-white/70 bg-white/70 py-3.5 pl-12 pr-4 text-[15px] shadow-[inset_0_1px_2px_rgba(0,0,0,.06)] outline-none transition focus:bg-white focus:ring-2 focus:ring-primary/30"
+            className="w-full rounded-2xl border border-white/70 bg-white/70 py-3.5 pl-12 pr-4 text-base sm:text-[15px] shadow-[inset_0_1px_2px_rgba(0,0,0,.06)] outline-none transition focus:bg-white focus:ring-2 focus:ring-primary/30"
           />
         </label>
         <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -318,6 +202,7 @@ export function BrowseView({
             Clear all
           </button>
         )}
+        {chips.length > 0 && <ShareButton title={`${items.length} USC programs on Founder Compass`} label="Copy link to these results" />}
         <div className="ml-auto flex items-center gap-2">
           <label className="relative inline-flex items-center rounded-lg glass pl-2.5">
             <ArrowUpDown className="h-3.5 w-3.5 text-muted-foreground" />
@@ -365,7 +250,7 @@ export function BrowseView({
 
 // ---------- Calendar ----------
 
-export function CalendarView({ all, onOpen, profile }: { all: Program[]; onOpen: (id: string) => void; profile: Profile | null }) {
+export function CalendarView({ all, onOpen, profile, saved = [] }: { all: Program[]; onOpen: (id: string) => void; profile: Profile | null; saved?: string[] }) {
   const now = new Date()
   const start = now.getMonth()
   const months = Array.from({ length: 12 }, (_, i) => ({ m: ((start + i) % 12) + 1, year: now.getFullYear() + Math.floor((start + i) / 12) }))
@@ -376,6 +261,7 @@ export function CalendarView({ all, onOpen, profile }: { all: Program[]; onOpen:
 
   return (
     <div className="space-y-4">
+      <UpcomingStrip list={pool} saved={saved} onOpen={onOpen} />
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-muted-foreground">
           Deadlines and events for the next 12 months, based on each program's usual cycle. Dates shift year to year, so confirm on the official page.
@@ -444,10 +330,12 @@ export interface Turn {
   role: "user" | "assistant"
   content: string
   picks?: { id: string; reason: string }[]
+  plan?: RoutePlan
   provider?: string
 }
 
 const SUGGESTIONS = [
+  "Plan my next 6 months: what should I apply to, with deadlines and funding amounts?",
   "I'm a PhD student with a medical device idea. Where do I start?",
   "What funding can an undergrad get this semester?",
   "How do I find a technical co-founder?",
@@ -477,7 +365,7 @@ export function AskView({
       {turns.length === 0 && (
         <div className="py-6 text-center">
           <Sparkles className="mx-auto h-8 w-8 text-primary" />
-          <h2 className="mt-2 text-2xl font-bold">Ask the Atlas</h2>
+          <h2 className="mt-2 text-2xl font-bold">Ask Founder Compass</h2>
           <p className="mt-1 text-muted-foreground">Describe where you are and what you need. Answers come only from the program catalog.</p>
           <div className="mt-5 flex flex-wrap justify-center gap-2">
             {SUGGESTIONS.map(s => (
@@ -498,6 +386,19 @@ export function AskView({
           ) : (
             <div key={i} className="space-y-3">
               <div className="max-w-[90%] rounded-2xl rounded-bl-sm glass px-4 py-3 leading-relaxed">{t.content}</div>
+              {t.plan && (
+                <div className="space-y-3 rounded-3xl border border-white/60 bg-white/30 p-3">
+                  <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Your route</div>
+                  <Itinerary route={t.plan} onOpen={card.onOpen} />
+                  <SubwayMap route={t.plan} onOpen={card.onOpen} compact />
+                  <a
+                    href={`?view=explore&mode=subway&route=${encodeRoute(t.plan)}`}
+                    className="inline-block text-xs font-semibold text-primary hover:underline"
+                  >
+                    Open on the full subway map
+                  </a>
+                </div>
+              )}
               {t.picks && t.picks.length > 0 && (
                 <Grid
                   items={t.picks.map(p => programById.get(p.id)!).filter(Boolean)}
@@ -517,15 +418,15 @@ export function AskView({
         <div ref={endRef} />
       </div>
 
-      <form onSubmit={e => (e.preventDefault(), send(input))} className="sticky bottom-4 mt-6 flex items-center gap-2 rounded-2xl glass p-2 shadow-lg">
+      <form onSubmit={e => (e.preventDefault(), send(input))} className="sticky bottom-3 mt-6 flex items-center gap-2 rounded-2xl border border-black/5 bg-white p-2 shadow-xl sm:bg-white/80 sm:backdrop-blur-xl">
         <input
           value={input}
           onChange={e => setInput(e.target.value)}
           placeholder="e.g. I have a climate hardware prototype and need $10K"
-          className="flex-1 bg-transparent px-3 py-2 outline-none"
+          className="min-w-0 flex-1 bg-transparent px-3 py-2 text-base outline-none sm:text-sm"
           aria-label="Ask a question"
         />
-        <button type="submit" disabled={busy || !input.trim()} aria-label="Send" className="rounded-xl bg-primary p-2.5 text-primary-foreground transition hover:opacity-90 disabled:opacity-40">
+        <button type="submit" disabled={busy || !input.trim()} aria-label="Send" className="shrink-0 rounded-xl bg-primary p-3 sm:p-2.5 text-primary-foreground transition hover:opacity-90 disabled:opacity-40">
           <ArrowUp className="h-4 w-4" />
         </button>
       </form>
@@ -548,13 +449,23 @@ export function SavedView({ saved, onAskPlan, ...card }: CardProps & { saved: st
     <div className="space-y-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="flex flex-wrap gap-1.5">{items.slice(0, 8).map(p => <GroupPill key={p.id} program={p} />)}</div>
+        <div className="flex flex-wrap gap-2">
+        <button
+          onClick={() => downloadReminders(items, "founder-compass-saved-deadlines.ics")}
+          title="Downloads one calendar file. Open it and every saved program's deadline is added to your calendar, with a reminder two weeks ahead, repeating each year."
+          className="inline-flex items-center gap-2 rounded-lg border border-border bg-white/60 px-4 py-2 text-sm font-semibold transition hover:bg-white"
+        >
+          <CalendarPlus className="h-4 w-4" /> Add my saved deadlines to my calendar
+        </button>
         <button
           onClick={() => onAskPlan(`I saved these programs: ${items.map(p => p.name).join("; ")}. Put them in a sensible order for the next 6 months and flag any deadlines.`)}
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
         >
           <Sparkles className="h-4 w-4" /> Plan my next 6 months
         </button>
+        </div>
       </div>
+      <UpcomingStrip list={items} saved={saved} onOpen={card.onOpen} title="Your saved programs coming up" />
       <Grid items={items} {...card} />
     </div>
   )

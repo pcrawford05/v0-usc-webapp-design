@@ -23,7 +23,7 @@ export default function OnePager() {
       <div className="mx-auto max-w-4xl space-y-4">
         <div className="glass flex flex-wrap items-center gap-3 rounded-3xl px-4 py-3">
           <Link href="/" className="inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground">
-            <ArrowLeft className="h-4 w-4" /> Atlas
+            <ArrowLeft className="h-4 w-4" /> Founder Compass
           </Link>
           <div className="min-w-0 flex-1">
             <h1 className="text-[15px] font-bold tracking-tight text-foreground">USC Entrepreneurship One-Pager</h1>
@@ -46,7 +46,7 @@ export default function OnePager() {
           <img src="/usc-startup-programs.png" alt="USC Entrepreneurship and Innovation one-page program list" className="block h-auto w-full rounded-2xl" />
         </a>
         <p className="text-xs text-muted-foreground">
-          For full details, deadlines and eligibility, use the <Link href="/" className="underline">Atlas</Link>. Spot an error? Email{" "}
+          For full details, deadlines and eligibility, use <Link href="/" className="underline">Founder Compass</Link>. Spot an error? Email{" "}
           <a href="mailto:pcrawfor@usc.edu" className="underline">pcrawfor@usc.edu</a>.
         </p>
       </div>

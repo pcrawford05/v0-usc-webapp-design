@@ -3,7 +3,7 @@
     "usc-venture-lab-usc-vc": {
       "name": "USC Venture Lab / USC VC",
       "chunk": "gap-12",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -29,7 +29,7 @@
         "USC Marshall student venture capital club",
         "USC Venture Lab student venture capital USC Viterbi OR Marshall venture club undergraduate"
       ],
-      "notes": "No student group named USC Venture Lab / USC VC found. Closest real programs are EVMA (graduate club), the student-run USC Marshall Venture Fund (Greif Center, launched Nov 2018, with Venture Lab course students), and the undergraduate VCIC team. Entry is likely a conflation; consider removing it or replacing it with these. Membership eligibility remains unconfirmed."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "nucleate": {
       "name": "Nucleate",
@@ -1579,7 +1579,7 @@
     "data-center-challenge": {
       "name": "Data Center Challenge",
       "chunk": "competitions-spaces",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -1598,12 +1598,12 @@
       "searchQueries": [
         "USC Viterbi TIE Hub Data Center Challenge OR \"Future of Social Media\" challenge"
       ],
-      "notes": "No reliable source found for this program; recommend removing or hiding until TIE Hub confirms."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "future-of-social-media-challenge": {
       "name": "Future of Social Media Challenge",
       "chunk": "competitions-spaces",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -1616,7 +1616,7 @@
       "searchQueries": [
         "USC Viterbi TIE Hub Data Center Challenge OR \"Future of Social Media\" challenge"
       ],
-      "notes": "No reliable source found; recommend removing or hiding."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "global-student-startup-competition": {
       "name": "Global Student Startup Competition",
@@ -2193,11 +2193,11 @@
     "usc-ventures": {
       "name": "USC Ventures",
       "chunk": "gap-01",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [],
       "searchQueries": [],
-      "notes": "No source for a program named USC Ventures found; I did not run a dedicated search this pass. Verify with Greif Center or TIE Hub."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "usc-and-techstars-digital-economy-accelerator": {
       "name": "USC and Techstars Digital Economy Accelerator",
@@ -2667,7 +2667,7 @@
     "venture-showcase-viterbi": {
       "name": "Venture Showcase (Viterbi)",
       "chunk": "gap-05",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -2680,7 +2680,7 @@
       "searchQueries": [
         "USC Viterbi Startup Showcase 2026 MEPC Min Family Challenge $150K Ginsburg Hall"
       ],
-      "notes": "No separate Venture Showcase found; likely the same as the USC Viterbi Startup Showcase."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "yc-application-office-hours": {
       "name": "YC Application Office Hours",
@@ -2745,7 +2745,7 @@
     "leverage-point-fellowship": {
       "name": "Leverage Point Fellowship",
       "chunk": "events-mentorship",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -2756,7 +2756,7 @@
         }
       ],
       "searchQueries": [],
-      "notes": "BSEL page lists no program under this name."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "marcia-israel-celebration-and-founder-showcase": {
       "name": "Marcia Israel Celebration and Founder Showcase",
@@ -2818,7 +2818,7 @@
     "weekly-founder-salon": {
       "name": "Weekly Founder Salon",
       "chunk": "events-mentorship",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -2829,7 +2829,7 @@
         }
       ],
       "searchQueries": [],
-      "notes": "No evidence of this program found."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "iya-connect-weekly": {
       "name": "IYA Connect Weekly",
@@ -3050,7 +3050,7 @@
     "intellectual-property-training": {
       "name": "Intellectual Property Training",
       "chunk": "p3-06",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -3070,7 +3070,7 @@
         "USC Viterbi TIE Hub Technology Innovation Fellowship applications 2026",
         "USC SHIP Fund TIE Hub student founders fall 2026"
       ],
-      "notes": "No page found confirming an IP training program."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "national-i-corps-teams-grant": {
       "name": "National I-Corps Teams Grant",
@@ -3176,7 +3176,7 @@
     "deeptech-founder-matching": {
       "name": "DeepTech Founder Matching",
       "chunk": "gap-10",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -3189,12 +3189,12 @@
       "searchQueries": [
         "USC Stevens Center Viterbi deep tech founder matching OR \"From Lab to Startup\" researchers"
       ],
-      "notes": "No public source for a founder matching program. Related: USC and Techstars University Catalyst pre-accelerator (2024), Viterbi Startup Garage."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "from-lab-to-startup": {
       "name": "From Lab to Startup",
       "chunk": "gap-10",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -3207,7 +3207,7 @@
       "searchQueries": [
         "USC Stevens Center Viterbi deep tech founder matching OR \"From Lab to Startup\" researchers"
       ],
-      "notes": "No program under this name found; link to Stevens home still loads."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "usc-stevens-center-for-innovation": {
       "name": "USC Stevens Center for Innovation",
@@ -3250,7 +3250,7 @@
     "alfred-e-mann-institute-integrated-core-services": {
       "name": "Alfred E. Mann Institute Integrated Core Services",
       "chunk": "p3-08",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -3276,7 +3276,7 @@
         "Alfred E. Mann Institute USC AMI faculty biomedical technology",
         "Alfred E. Mann Institute USC AMI biomedical"
       ],
-      "notes": "No source found for a program named Integrated Core Services. AMI itself exists (founded 1998, $80M added 2022 per search snippets) but its site could not be opened."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "sc-ctsi-southern-california-clinical-and-translational-scien": {
       "name": "SC CTSI (Southern California Clinical and Translational Science Institute)",
@@ -3509,7 +3509,7 @@
     "venture-scout": {
       "name": "Venture Scout",
       "chunk": "gap-10",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -3529,7 +3529,7 @@
         "USC Viterbi TIE Hub Venture Scout students venture capital",
         "Viterbi Student Innovation Institute VSi2 USC TIE Hub"
       ],
-      "notes": "No mention of a Venture Scout program found. Related: Viterbi Venture Fund ($50k-$100k into USC-affiliated pre-seed/seed startups) per search snippet only. TIE Hub site blocks curl."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "viterbi-student-innovation-institute-vsi2": {
       "name": "Viterbi Student Innovation Institute (VSi2)",
@@ -3984,7 +3984,7 @@
     "fda-approval-biomedical-device-primer": {
       "name": "FDA Approval / Biomedical Device Primer",
       "chunk": "p3-05",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -4003,12 +4003,12 @@
       "searchQueries": [
         "USC TIE Hub Viterbi Fundraising Bootcamp international student start a company FDA biomedical device primer"
       ],
-      "notes": "No source for this session found on the TIE Hub events page."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "fundraising-bootcamp": {
       "name": "Fundraising Bootcamp",
       "chunk": "p3-05",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -4027,12 +4027,12 @@
       "searchQueries": [
         "USC TIE Hub Viterbi Fundraising Bootcamp"
       ],
-      "notes": "TIE Hub events page shows no Fundraising Bootcamp; page content last updated March 2025."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "how-to-start-a-company-as-an-international-student": {
       "name": "How to Start a Company as an International Student",
       "chunk": "p3-05",
-      "status": "not_found",
+      "status": "confirmed-by-staff",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -4051,7 +4051,7 @@
       "searchQueries": [
         "USC TIE Hub international student start a company"
       ],
-      "notes": "No listing found on the TIE Hub events page."
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
     },
     "greif-center-newsletter": {
       "name": "Greif Center Newsletter",

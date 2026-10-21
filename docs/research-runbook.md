@@ -32,6 +32,7 @@ A source counts as checked only if it was actually read. Search snippets do not 
 - Never invent facts; every change cites a page.
 - Audience (undergrad, grad, PhD...) is set only when a source states it. An unconfirmed audience stays empty, so the site says to check with the org.
 - Official USC pages first, then the program's own site, then USC Engage or Campus Groups, then news and the org's socials.
+- Programs on Ralph Lin's USC list (`docs/programs-directory/ralph_one_pager.py`) are confirmed to exist even when no public page turns up; never flag them for removal. Their registry status is `confirmed-by-staff`.
 - No em dashes in any text.
 
 ## Prompt for next week

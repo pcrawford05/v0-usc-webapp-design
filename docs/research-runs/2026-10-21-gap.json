@@ -1,0 +1,38 @@
+{
+  "applied": [
+    "usc-rossier-edtech-accelerator.timing",
+    "usc-rossier-edtech-accelerator.audience",
+    "usc-rossier-edtech-accelerator.eligibility",
+    "larta-institute-heal-la-accelerator.description",
+    "larta-institute-heal-la-accelerator.timing",
+    "larta-institute-heal-la-accelerator.audience",
+    "b-s-in-business-of-innovation.link",
+    "venturewell-e-team-program.timing",
+    "venturewell-e-team-program.months",
+    "venturewell-e-team-program.eligibility",
+    "autobahn-labs-collaboration.timing",
+    "alliance-for-socal-innovation.timing",
+    "alliance-for-socal-innovation.months",
+    "wavemaker-360-health.description",
+    "wavemaker-360-health.funding",
+    "wavemaker-360-health.audience",
+    "vaneck-digital-assets-initiative.description",
+    "vaneck-digital-assets-initiative.timing",
+    "exitsc.timing",
+    "exitsc.eligibility"
+  ],
+  "rejected": 5,
+  "skipped": [],
+  "flagged": [
+    "usc-ventures: not_found (No source for a program named USC Ventures found; I did not run a dedicated search this pass. Verify with Greif Center or TIE Hub.)",
+    "venture-showcase-viterbi: not_found (No separate Venture Showcase found; likely the same as the USC Viterbi Startup Showcase.)",
+    "venture-scout: not_found (No mention of a Venture Scout program found. Related: Viterbi Venture Fund ($50k-$100k into USC-affiliated pre-seed/seed startups) per search snippet only. TIE Hub site blocks curl.)",
+    "deeptech-founder-matching: not_found (No public source for a founder matching program. Related: USC and Techstars University Catalyst pre-accelerator (2024), Viterbi Startup Garage.)",
+    "from-lab-to-startup: not_found (No program under this name found; link to Stevens home still loads.)",
+    "founder-clubs: not_found (No source found.)",
+    "sogal-usc: not_found (No current USC chapter activity found; the Trojans360 profile is old.)",
+    "trojan-venture-partners: not_found (No official page found.)",
+    "usc-entrepreneur-club: not_found (No such club found; may be defunct or a generic mention.)",
+    "usc-venture-lab-usc-vc: not_found (No student group named USC Venture Lab / USC VC found. Closest real programs are EVMA (graduate club), the student-run USC Marshall Venture Fund (Greif Center, launched Nov 2018, with Venture Lab course students), and the undergraduate VCIC team. Entry is likely a conflation; consider removing it or replacing it with these. Membership eligibility remains unconfirmed.)"
+  ]
+}

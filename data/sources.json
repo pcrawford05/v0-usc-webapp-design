@@ -1,0 +1,4520 @@
+{
+  "programs": {
+    "usc-venture-lab-usc-vc": {
+      "name": "USC Venture Lab / USC VC",
+      "chunk": "gap-12",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://clubs.marshall.usc.edu/evma/",
+          "kind": "campus-groups",
+          "holds": "EVMA: graduate club for entrepreneurship, startups and VC; contact mba.evma.club@marshall.usc.edu; 143 members",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies/usc-marshall-venture-fund",
+          "kind": "official",
+          "holds": "USC Marshall Venture Fund and Venture Lab (per search snippet; page fetch returned only the Marshall home page)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://www.marshall.usc.edu/posts/usc-undergraduate-team-win-regional-venture-capital-competition-tie-for-fourth-in-global-finals",
+          "kind": "news",
+          "holds": "Undergraduate VCIC team (Marshall, Dornsife, Viterbi) won VCIC West and tied for fourth at the 2025 global finals",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC Marshall student venture capital club",
+        "USC Venture Lab student venture capital USC Viterbi OR Marshall venture club undergraduate"
+      ],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "nucleate": {
+      "name": "Nucleate",
+      "chunk": "p3-08",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://nucleate.xyz/",
+          "kind": "official",
+          "holds": "program overview (Cloudflare block and DNS failure in browser reader)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://keck.usc.edu/md-student-portal/bulletin/2025/10/17/nucleate-la-biotech-activator/",
+          "kind": "official",
+          "holds": "Oct 2025 notice of 2026 Nucleate LA Activator applications (search snippet only)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://luma.com/lbdrr09k",
+          "kind": "listing",
+          "holds": "USC HSC Nucleate LA x SPARK info session",
+          "lastChecked": null
+        },
+        {
+          "url": "https://apply.nucleate.org",
+          "kind": "application",
+          "holds": "Activator application (named in search snippet)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Nucleate LA biotech activator 2026 USC applications",
+        "Nucleate Los Angeles USC chapter Activator 2026"
+      ],
+      "notes": "Could not open any page. Search snippets say a Nucleate LA chapter runs info sessions with USC SPARK, and a 2027 cohort listing (chapter unclear) shows a Sept 30 deadline, core teams forming Oct 2026, workshops Feb-May 2027, pitches May-June 2027. Not proposed as changes because unopened."
+    },
+    "clubs-ecouncil-fund": {
+      "name": "eCouncil Fund",
+      "chunk": "clubs",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/entrepreneur/ecouncil-fund/",
+          "kind": "official",
+          "holds": "eligibility, $2,000 cap, rolling basis, once per semester",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page matches current entry (awards $2,000 or less, rolling until funds exhausted or end of academic year)."
+    },
+    "entrepreneur-and-venture-management-association-evma": {
+      "name": "Entrepreneur & Venture Management Association (EVMA)",
+      "chunk": "clubs",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://clubs.marshall.usc.edu/evma/",
+          "kind": "official",
+          "holds": "mission, graduate club, contact mba.evma.club@marshall.usc.edu, no upcoming events",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Site described as Marshall's premier graduate club for entrepreneurship, startups and VC; copyright 2026."
+    },
+    "exitsc": {
+      "name": "ExitSC",
+      "chunk": "gap-11",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/exitsc/",
+          "kind": "campus-groups",
+          "holds": "unknown, does not render",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://dailytrojan.com/?p=240970",
+          "kind": "news",
+          "holds": "description, founders, first cohort",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "ExitSC USC student founders"
+      ],
+      "notes": "Audience not stated by source, left []."
+    },
+    "fightonfounders": {
+      "name": "FightOnFounders",
+      "chunk": "clubs",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://fightonfounders.com/",
+          "kind": "official",
+          "holds": "mission, IYA affiliation, spring 2025 application link",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Site last updated Dec 2024; may be stale."
+    },
+    "founder-clubs": {
+      "name": "Founder Clubs",
+      "chunk": "gap-11",
+      "status": "not_found",
+      "lastResearched": "2026-10-21",
+      "sources": [],
+      "searchQueries": [
+        "\"Founder Clubs\" USC Ralph Lin"
+      ],
+      "notes": "No source found."
+    },
+    "hacksc": {
+      "name": "HackSC",
+      "chunk": "clubs",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.hacksc.com/",
+          "kind": "official",
+          "holds": "signature events: SoCal Tech Week, HackSC-X, HackSC Jr., Hack Nights; contact team@hacksc.com",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/hacksc/",
+          "kind": "campus-groups",
+          "holds": "800+ hackers, organizing team recruitment",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "No 2025/2026 hackathon dates published on the pages read; /events returns 404."
+    },
+    "high-tech-association-hta": {
+      "name": "High Tech Association (HTA)",
+      "chunk": "clubs",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://clubs.marshall.usc.edu/hta",
+          "kind": "official",
+          "holds": "mission, career paths, recruiting resources",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Matches entry."
+    },
+    "kappa-theta-pi-ktp": {
+      "name": "Kappa Theta Pi (KTP)",
+      "chunk": "clubs",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://linktr.ee/ktp.usc",
+          "kind": "social",
+          "holds": "Fall 2026 interest form, application, deadline",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Linktree also says it is 'establishing a chapter at USC'; billed as USC's only co-ed professional technology fraternity."
+    },
+    "lavalab": {
+      "name": "LavaLab",
+      "chunk": "clubs",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://usclavalab.org/",
+          "kind": "official",
+          "holds": "Fall 2026 application, cohort size, alumni outcomes",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Site frames it as a product incubator with a YC-style curriculum; prize amounts not on homepage."
+    },
+    "medesign": {
+      "name": "MEDesign",
+      "chunk": "clubs",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/medesign/",
+          "kind": "campus-groups",
+          "holds": "mission, 146 members, 10 officers",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "http://www.medesignusc.com/",
+          "kind": "official",
+          "holds": "returned empty",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "No application dates found."
+    },
+    "productsc": {
+      "name": "ProductSC",
+      "chunk": "clubs",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/ProductSc/",
+          "kind": "campus-groups",
+          "holds": "mission, Compass and Catalyst programs",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "productsc.org did not render text."
+    },
+    "shift-sc": {
+      "name": "Shift SC",
+      "chunk": "clubs",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/shiftsc/",
+          "kind": "campus-groups",
+          "holds": "mission, 81 members, Tech4Good Career Fair, Symposium, Pitch Competition",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Engage lists Tech4Good Career Fair, Symposium and Pitch Competition."
+    },
+    "sigma-eta-pi-sep": {
+      "name": "Sigma Eta Pi (SEP)",
+      "chunk": "gap-11",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/SigmaEtaPi/",
+          "kind": "campus-groups",
+          "holds": "unknown, does not render",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://students.marshall.usc.edu/node/185116",
+          "kind": "official",
+          "holds": "Marshall student org listing incl. SEP, EVMA, Lava Lab, Troy Labs, Spark SC",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://bouncewatch.com/company/sep-at-usc",
+          "kind": "other",
+          "holds": "2014 founding, accelerator, Demo Day",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Sigma Eta Pi USC entrepreneurship fraternity rush"
+      ],
+      "notes": "Current link is fine; no rush dates found. Link change is just a confirmation, effectively no change needed."
+    },
+    "sogal-usc": {
+      "name": "SoGal USC",
+      "chunk": "gap-11",
+      "status": "not_found",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.iamsogal.com/",
+          "kind": "official",
+          "holds": "blocked (Mod_Security)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://www.trojans360.com/trojans360posts/sc-spotlight-pocket-sun",
+          "kind": "news",
+          "holds": "SoGal founded at USC by Pocket Sun, MS Entrepreneurship student (old)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "SoGal USC chapter 2026"
+      ],
+      "notes": "No current USC chapter activity found; the Trojans360 profile is old."
+    },
+    "spark-sc": {
+      "name": "Spark SC",
+      "chunk": "clubs",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://sparksc.org/",
+          "kind": "official",
+          "holds": "mission, Spring 2026 initiatives, 45 board members, apply link",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Homepage matches; no new dates."
+    },
+    "techie": {
+      "name": "Techie",
+      "chunk": "gap-11",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://dailytrojan.com/?p=157288",
+          "kind": "news",
+          "holds": "2021 founding, application to join, workshops and speakers",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Techie USC club recruitment 2026 business roles in tech"
+      ],
+      "notes": "Description consistent with 2021 article; no current recruitment dates found. Instagram @techie_usc."
+    },
+    "trojan-venture-partners": {
+      "name": "Trojan Venture Partners",
+      "chunk": "gap-11",
+      "status": "not_found",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://coda.io/@hanshen-tjoa/usc-organizations-list/entrepreneurship-organizations-21",
+          "kind": "other",
+          "holds": "unofficial list mention",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Trojan Venture Partners USC"
+      ],
+      "notes": "No official page found."
+    },
+    "troylabs": {
+      "name": "TroyLabs",
+      "chunk": "clubs",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.troylabs.vc/",
+          "kind": "official",
+          "holds": "initiatives, sponsorship",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.troylabs.vc/apply",
+          "kind": "application",
+          "holds": "Fall 2026 closed",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.troylabs.vc/demo",
+          "kind": "official",
+          "holds": "DEMO stats",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/Troylabs/",
+          "kind": "campus-groups",
+          "holds": "officers, mission",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Contact troylabs@usc.edu."
+    },
+    "usc-entrepreneur-club": {
+      "name": "USC Entrepreneur Club",
+      "chunk": "gap-11",
+      "status": "not_found",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://students.marshall.usc.edu/node/185116",
+          "kind": "official",
+          "holds": "lists real USC student entrepreneurship orgs (EVMA grad-led, Lava Lab, Troy Labs undergrad-run, Spark SC undergrad-run); no 'USC Entrepreneur Club'",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "\"USC Entrepreneur Club\" students any major"
+      ],
+      "notes": "No such club found; may be defunct or a generic mention."
+    },
+    "usc-makers": {
+      "name": "USC Makers",
+      "chunk": "p3-08",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbimakers.usc.edu/",
+          "kind": "official",
+          "holds": "about, teams of 5-7, ~10 projects a year, 60+ members; tabs for people, projects, join",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbischool.usc.edu/news/2026/06/10-projects-10-solutions-student-engineers-tackle-everyday-problems/",
+          "kind": "news",
+          "holds": "2026 showcase",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Techie USC club recruitment 2026 business roles in tech"
+      ],
+      "notes": "Site does not state undergrad vs grad level, so audience stays []. Join page not read; application mechanics (linktr.ee/uscmakers) not re-verified."
+    },
+    "ce-486-engineering-innovation-for-global-challenges": {
+      "name": "CE 486 Engineering Innovation for Global Challenges",
+      "chunk": "p3-03",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://catalogue.usc.edu/preview_program.php?catoid=16&poid=24865",
+          "kind": "official",
+          "holds": "minor and CE 486 requirements",
+          "lastChecked": null
+        },
+        {
+          "url": "https://cee.usc.edu/academics/minors/",
+          "kind": "official",
+          "holds": "CEE minors page; lists minor, 2022-23 new (blocked by Cloudflare for curl)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://classes.usc.edu/term-20211/course/ce-486b",
+          "kind": "official",
+          "holds": "course listing, prerequisite CE 486A",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi Engineering Innovation for Global Challenges minor CE 486"
+      ],
+      "notes": "Catalogue page returned empty content via curl; not verified."
+    },
+    "ce-499-innovation-for-global-challenges": {
+      "name": "CE 499 Innovation for Global Challenges",
+      "chunk": "p3-03",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://global.usc.edu/usc-viterbi-innovation-engineering-design-global-crises-program/",
+          "kind": "official",
+          "holds": "course history",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Not opened this run."
+    },
+    "csci-532-innovation-for-defense-applications": {
+      "name": "CSCI 532 Innovation for Defense Applications",
+      "chunk": "p3-03",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://classes.usc.edu/term-20261/course/csci-532",
+          "kind": "official",
+          "holds": "schedule, instructor (JS-only page, not readable via curl)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbiundergrad.usc.edu/?p=27668",
+          "kind": "official",
+          "holds": "Spring 2022 announcement: CSCI 532 is USC's Hacking for Defense class (NSIN), teams of 3-5, open to all levels and schools, all nationalities; instructors Neuman, hack4d@usc.edu",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://classes.usc.edu/term-20263/course/csci-532",
+          "kind": "official",
+          "holds": "schedule (JS only, unreadable)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC CSCI 532 Innovation for Defense Applications Spring 2026"
+      ],
+      "notes": "Confirms the CSCI 532 to Hacking for Defense link and open-to-all-levels enrollment (could broaden eligibility beyond grad-eligible; keep as is). Current term schedule unreadable."
+    },
+    "engineering-honors-program-ehp": {
+      "name": "Engineering Honors Program (EHP)",
+      "chunk": "p3-03",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiundergrad.usc.edu/?p=22706",
+          "kind": "official",
+          "holds": "W.V.T. Rusch Honors Program policies (blocked by Cloudflare)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbiundergrad.usc.edu/?p=24591",
+          "kind": "official",
+          "holds": "apply to join Rusch Honors Program (blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbiundergrad.usc.edu/ehp/",
+          "kind": "official",
+          "holds": "requirements, tracks, courses, application timeline",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Engineering Honors Program Viterbi application GPA requirements"
+      ],
+      "notes": "Spring underclassman dates not yet posted. Page readable with the node browser script. Months 1-3 are inferred from 'spring semester' wording; drop if unwanted."
+    },
+    "engineering-innovation-for-global-challenges-minor": {
+      "name": "Engineering Innovation for Global Challenges Minor",
+      "chunk": "p3-03",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://catalogue.usc.edu/preview_program.php?catoid=16&poid=24865",
+          "kind": "official",
+          "holds": "minor requirements",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Catalogue page empty via curl; not verified."
+    },
+    "engr-493-dean-s-seminar-in-entrepreneurship-disruptive-techn": {
+      "name": "ENGR 493 Dean's Seminar in Entrepreneurship: Disruptive Technologies",
+      "chunk": "p3-03",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://classes.usc.edu/term-20261/course/engr-493",
+          "kind": "official",
+          "holds": "schedule (JS only)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://web-app.usc.edu/soc/syllabus/20251/28528.pdf",
+          "kind": "official",
+          "holds": "Spring 2025 syllabus (no readable output)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://classes.usc.edu/term-20263/course/engr-493",
+          "kind": "official",
+          "holds": "schedule (JS only)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC ENGR 493 Dean's Seminar in Entrepreneurship Disruptive Technologies 2026"
+      ],
+      "notes": "Schedule page is JavaScript only; no current-term data obtained."
+    },
+    "graduate-certificate-in-technology-commercialization": {
+      "name": "Graduate Certificate in Technology Commercialization",
+      "chunk": "courses",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.marshall.usc.edu/programs/graduate-programs/graduate-certificates/graduate-certificate-in-technology-commercialization",
+          "kind": "official",
+          "holds": "certificate overview and eligibility (current students in master's/doctoral programs)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.marshall.usc.edu/programs/certificate-programs/graduate-certificate-technology-commercialization/dates-and-deadlines",
+          "kind": "official",
+          "holds": "application timing (apply before finals of completion semester, per search)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC Marshall Graduate Certificate in Technology Commercialization requirements BAEP"
+      ],
+      "notes": "Search snippet says current page lists two required courses rather than the three in the 2012 catalogue; description course list (556, 557, 559) unverified, confirm via gradcert@marshall.usc.edu."
+    },
+    "ise-585-strategic-management-of-technology-and-innovation": {
+      "name": "ISE 585 Strategic Management of Technology and Innovation",
+      "chunk": "p3-03",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://classes.usc.edu/term-20263/course/ise-585",
+          "kind": "official",
+          "holds": "schedule (JS only)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Schedule page is JavaScript only; no current-term data obtained."
+    },
+    "technology-development-and-commercialization-engr-494-former": {
+      "name": "Technology Development and Commercialization (ENGR 494, formerly ENGR 499)",
+      "chunk": "p3-04",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://classes.usc.edu/term-20263/course/engr-494",
+          "kind": "official",
+          "holds": "Fall 2026 schedule (page did not render)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://classes.usc.edu/term-20253/course/engr-494",
+          "kind": "official",
+          "holds": "course schedule (JS only; page body did not render, only search snippet seen: Fall 2025 Tue 3-4:50pm, 2 units)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "ENGR 494 Technology Development and Commercialization USC Fall 2026"
+      ],
+      "notes": "Pages render empty; no Fall 2026 listing found in search."
+    },
+    "technology-entrepreneurship-minor": {
+      "name": "Technology Entrepreneurship Minor",
+      "chunk": "p3-04",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://tac.usc.edu/academics/innovation-digital-entrepreneur",
+          "kind": "official",
+          "holds": "minor name, requirements (BUAD-301, TAC-466, TAC-476, electives), Fall 2026 start, advising contact",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Technology Innovation and Entrepreneurship minor catalogue",
+        "USC Tech Innovation and Entrepreneurship minor Fall 2026",
+        "USC Technology Entrepreneurship minor Viterbi catalogue"
+      ],
+      "notes": "Page does not state who is eligible; audience/eligibility left as is."
+    },
+    "viterbi-startup-and-entrepreneurship-experience-vsee": {
+      "name": "Viterbi Startup and Entrepreneurship Experience (VSEE)",
+      "chunk": "p3-04",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/competitions-and-programs/vsee",
+          "kind": "official",
+          "holds": "VSEE in ENGR 102, two-week module, $50 gift card per winning team member (per search snippet; page blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/competitions-and-programs/vsee/",
+          "kind": "official",
+          "holds": "program description, prize, VSEE instructor hiring (2023); last updated July 2023",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi VSEE Viterbi Startup Entrepreneurship Experience ENGR 102"
+      ],
+      "notes": "Official expansion is Viterbi Student Entrepreneurship Education (not Startup and Entrepreneurship Experience); name should be corrected. Page last updated July 2023."
+    },
+    "baep-entrepreneurship-courses": {
+      "name": "BAEP Entrepreneurship Courses",
+      "chunk": "p3-02",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies",
+          "kind": "official",
+          "holds": "Greif Center hub listing programming (Blackstone LaunchPad, New Venture Seed Competition, Athena Initiative, Marshall Greif Incubator, Catalyst Microgrant, eCouncil, Marshall Venture Fund)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Hub page opened but has no BAEP course details; catalogue not read."
+    },
+    "entrepreneurship-and-innovation-emphasis": {
+      "name": "Entrepreneurship and Innovation Emphasis",
+      "chunk": "p3-03",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies",
+          "kind": "official",
+          "holds": "Greif Center hub: programs list (Blackstone LaunchPad, New Venture Seed Competition, Athena, Greif Incubator, Catalyst Microgrant, eCouncil, Marshall Venture Fund); no emphasis details",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.marshall.usc.edu/departments/lloyd-greif-center-entrepreneurial-studies",
+          "kind": "official",
+          "holds": "Greif Center (BAEP) department page, nav only",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Hub page opened but has no emphasis requirements; nothing to confirm or change."
+    },
+    "entrepreneurship-minor": {
+      "name": "Entrepreneurship Minor",
+      "chunk": "p3-03",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies",
+          "kind": "official",
+          "holds": "Greif Center hub: open to all students at any stage, no prior experience required (checked, but no minor details)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://students.marshall.usc.edu/node/387072",
+          "kind": "official",
+          "holds": "Search snippet: minor available to students in all schools and departments except business majors; provides understanding of entrepreneurship and the entrepreneurial mindset",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://tac.usc.edu/academics/innovation-digital-entrepreneur",
+          "kind": "official",
+          "holds": "different minor (Digital Entrepreneur, 21 units), to be replaced by a Tech Innovation and Entrepreneurship minor in fall 2026 per search snippet",
+          "lastChecked": null
+        },
+        {
+          "url": "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies",
+          "kind": "official",
+          "holds": "Greif Center hub",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Marshall entrepreneurship minor non-business majors Greif Center units",
+        "USC Entrepreneurship minor Greif Center requirements units",
+        "USC Entrepreneurship minor Greif Center non-business majors units"
+      ],
+      "notes": "Eligibility matches search snippet of the official page; page itself not read this run, so confirmation is moderate. Unit count still unverified."
+    },
+    "mba-entrepreneurship-and-venture-management-concentration": {
+      "name": "MBA Entrepreneurship and Venture Management Concentration",
+      "chunk": "p3-03",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies",
+          "kind": "official",
+          "holds": "Greif Center hub only",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "No concentration-specific page found or opened."
+    },
+    "ms-in-entrepreneurship-and-innovation": {
+      "name": "MS in Entrepreneurship and Innovation",
+      "chunk": "courses",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.marshall.usc.edu/programs/graduate-programs/specialized-masters/ms-entrepreneurship-innovation/admissions",
+          "kind": "official",
+          "holds": "deadlines, application criteria, $175 fee, GMAT/GRE not required, progressive degree eligibility",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.marshall.usc.edu/programs/graduate-programs/specialized-masters/ms-entrepreneurship-innovation",
+          "kind": "official",
+          "holds": "27-unit curriculum, full-time 1 year or part-time 2 years (U.S. only)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Eligibility (bachelor's, 1-3 years work experience recommended, no GMAT/GRE) and 27 units confirmed. Part-time route is U.S. applicants only. There is also a progressive degree option for USC undergrads (64+ units, 3.0 GPA)."
+    },
+    "ms-in-social-entrepreneurship": {
+      "name": "MS in Social Entrepreneurship",
+      "chunk": "courses",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.marshall.usc.edu/programs/graduate-programs/specialized-masters/ms-social-entrepreneurship",
+          "kind": "official",
+          "holds": "27-unit curriculum, format, 1-2 years, early/mid-career target, classes begin each August",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Part-time option is for U.S. applicants; in person with evening and weekend classes. Deadlines not found on page read."
+    },
+    "acad-406-purpose-driven-innovation-incubator": {
+      "name": "ACAD 406 Purpose-Driven Innovation Incubator",
+      "chunk": "p3-02",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://classes.usc.edu/term-20263/course/acad-406",
+          "kind": "official",
+          "holds": "Fall 2026 schedule (page only rendered semester selector, no course data)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://web-app.usc.edu/soc/syllabus/20253/10256.pdf",
+          "kind": "official",
+          "holds": "Fall 2025 syllabus (empty via curl)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "classes.usc.edu Fall 2026 ACAD 406 Purpose-Driven Innovation Incubator"
+      ],
+      "notes": "Could not retrieve Fall 2026 course details."
+    },
+    "b-s-in-arts-technology-and-the-business-of-innovation": {
+      "name": "B.S. in Arts, Technology and the Business of Innovation",
+      "chunk": "p3-02",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/",
+          "kind": "official",
+          "holds": "Academy home page, navigation only (Learn: Undergrad, Grad, Minors)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://iovine-young.usc.edu/program/undergraduate.html",
+          "kind": "official",
+          "holds": "returned only Academy home content",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "No program-specific content retrieved."
+    },
+    "b-s-in-business-of-innovation": {
+      "name": "B.S. in Business of Innovation",
+      "chunk": "gap-03",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.marshall.usc.edu/programs/graduate-programs/graduate-certificates/graduate-certificate-in-technology-commercialization",
+          "kind": "official",
+          "holds": "Marshall nav lists 'BS Business of Innovation (BUIN)' among undergraduate degrees",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.marshall.usc.edu/bs-business-of-innovation-buin",
+          "kind": "official",
+          "holds": "program page",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.marshall.usc.edu/posts/usc-marshall-iya-joint-degree-announcement",
+          "kind": "official",
+          "holds": "joint degree announcement, fall 2025 start",
+          "lastChecked": null
+        },
+        {
+          "url": "https://iovine-young.usc.edu/the-pulse/iya-marshall-announce-joint-degree-in-business-and-innovation",
+          "kind": "official",
+          "holds": "announcement (body text not readable)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://dailytrojan.com/?p=215533",
+          "kind": "news",
+          "holds": "Daily Trojan coverage",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC Business of Innovation BS Iovine and Young Academy Marshall"
+      ],
+      "notes": "Admission route and body text of program page not readable via curl."
+    },
+    "health-innovation-minor": {
+      "name": "Health Innovation Minor",
+      "chunk": "p3-02",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/program/minors.html",
+          "kind": "official",
+          "holds": "list of five minors incl. Health Innovation, application timing, advising contact",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://iovine-young.usc.edu/the-pulse/students-in-health-innovation-minor-take-on-the-future",
+          "kind": "official",
+          "holds": "health innovation minor article (blank via curl)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Iovine and Young Academy minors list health innovation minor"
+      ],
+      "notes": "Health Innovation Minor confirmed as one of five Academy minors."
+    },
+    "m-s-in-integrated-design-business-and-technology": {
+      "name": "M.S. in Integrated Design, Business and Technology",
+      "chunk": "p3-02",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/",
+          "kind": "official",
+          "holds": "Academy home; Learn > Grad",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://online.usc.edu/schools/iovine-and-young-academy/",
+          "kind": "official",
+          "holds": "online MS listing",
+          "lastChecked": null
+        },
+        {
+          "url": "https://iovine-young.usc.edu/program/graduate.html",
+          "kind": "official",
+          "holds": "returned only Academy home content",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "No program-specific content retrieved."
+    },
+    "other-iovine-and-young-academy-minors": {
+      "name": "Other Iovine and Young Academy Minors",
+      "chunk": "p3-02",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/program/minors.html",
+          "kind": "official",
+          "holds": "full minors list, application timing, D-clearance",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Iovine and Young Academy minors list health innovation minor"
+      ],
+      "notes": "Disruptive Innovation and Designing Products are confirmed as minors, correcting the earlier note."
+    },
+    "la-biostart-boot-camp": {
+      "name": "LA BioStart Boot Camp",
+      "chunk": "courses",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.calstatela.edu/labiospace/la-biostart",
+          "kind": "official",
+          "holds": "program description, Cohort 9 July 14 to Aug 13 2026, host sites incl. USC MESH, who should apply, info sessions June 5 and 10 2026",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page lists Cohort 9 dates and USC MESH as a site; eligibility includes early-stage founders, scientists, faculty, postdocs, grad students. Cohort 9 has already ended; next cohort not yet announced."
+    },
+    "sbir-sttr-grant-assistance": {
+      "name": "SBIR/STTR Grant Assistance",
+      "chunk": "p3-06",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/community/viterbifaculty/",
+          "kind": "official",
+          "holds": "faculty page: SBIR grant proposal guidance, pitching, company setup; updated Mar 31 2026",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/tie-hub-offerings/",
+          "kind": "official",
+          "holds": "thin offerings page",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC SHIP Fund TIE Hub student founders fall 2026"
+      ],
+      "notes": "Page is addressed to Viterbi faculty and mentions SBIR guidance by email request. Student eligibility not stated there; audience may be overbroad (only faculty stated)."
+    },
+    "ship-fund": {
+      "name": "SHIP Fund",
+      "chunk": "p3-06",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.cs.usc.edu/newsletter/ug-ms-phd-ship-fund/",
+          "kind": "official",
+          "holds": "Fall 2026 dates, 3x$5,000, categories, final ask due Nov 23 5pm PT",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.cs.usc.edu/newsletter/ug-ms-phd-upcoming-spring-2026-tie-hub-opportunities/",
+          "kind": "listing",
+          "holds": "TIE Hub opportunity roundup, spring 2026 (Cloudflare blocked)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC SHIP Fund TIE Hub student founders fall 2026",
+        "USC TIE Hub SHIP Fund student founders $5,000 social impact hardware AI"
+      ],
+      "notes": "Matches current entry. Tagged UG/MS/PhD in the newsletter. Recurrence unknown."
+    },
+    "venturewell-e-team-program": {
+      "name": "VentureWell E-Team Program",
+      "chunk": "gap-07",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://venturewell.org/student-grants/e-team-program-frequently-asked-questions/",
+          "kind": "official",
+          "holds": "eligibility, cycles/deadlines, what is funded, selection (about 50 Stage 1 and 20 Stage 2 teams per year)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "FAQ did not show whether USC is a member or any USC internal process; Stage amounts ($5k/$20k) not re-verified in the portion read. Program page now titled 'E-Team Program: Pioneer and Propel' in site navigation, suggesting Stage 1 is Pioneer and Stage 2 is Propel."
+    },
+    "viterbi-venture-fund": {
+      "name": "Viterbi Venture Fund",
+      "chunk": "p3-06",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/community/alumni/viterbi-venture-fund/",
+          "kind": "official",
+          "holds": "investment size, criteria, contact David Eastman",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page last updated Aug 2021. Source says USC affiliation is faculty, staff or alumni at founder/senior management/lead investor level; current audience includes undergrad/grad/phd not stated, consider alumni, faculty, staff."
+    },
+    "catalyst-microgrant-fund": {
+      "name": "Catalyst Microgrant Fund",
+      "chunk": "funding",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/entrepreneur/catalyst-microgrant-/",
+          "kind": "campus-groups",
+          "holds": "dates, eligibility, $5,000 cap, process",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies/funding-opportunities",
+          "kind": "official",
+          "holds": "Greif funding overview (NVSC etc.)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Spring window no longer separate; one window per year now."
+    },
+    "ecouncil-fund": {
+      "name": "eCouncil Fund",
+      "chunk": "funding",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/entrepreneur/ecouncil-fund/",
+          "kind": "campus-groups",
+          "holds": "award size, rules, cadence",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "For student organizations, not individual founders. Audience left empty since no student level is stated."
+    },
+    "usc-marshall-venture-fund": {
+      "name": "USC Marshall Venture Fund",
+      "chunk": "funding",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://students.marshall.usc.edu/node/387104",
+          "kind": "official",
+          "holds": "fund mission, eligibility, inquiry timing",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://hub.waveup.com/funds/usc-marshall-venture-fund",
+          "kind": "listing",
+          "holds": "fund profile",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page does not state check size; 2018 launch coverage figures kept unverified."
+    },
+    "iya-ignite-grants": {
+      "name": "IYA Ignite Grants",
+      "chunk": "p3-06",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/iya-ignite-grants-overview-and-faqs",
+          "kind": "official",
+          "holds": "Fall 2024 eligibility, amount, deadlines",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://iovine-young.usc.edu/iya-innovation-quest",
+          "kind": "official",
+          "holds": "renders homepage content only",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://iovine-young.usc.edu/innovation-quest-ignite-grants-2023-overview-faqs",
+          "kind": "official",
+          "holds": "Fall 2023 Ignite Grants overview",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Iovine and Young Academy Ignite Grants 2026 application",
+        "Iovine and Young Academy Innovation Quest Ignite Grants 2026"
+      ],
+      "notes": "Page is Fall 2024 only; could not confirm a current-year round. Audience of undergrad/grad not explicitly stated, left as is."
+    },
+    "alfred-e-mann-institute-fund-ami": {
+      "name": "Alfred E. Mann Institute Fund (AMI)",
+      "chunk": "funding",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://research.usc.edu/?p=6419",
+          "kind": "news",
+          "holds": "Sept 2025 announcement: new investments, Tariq Warsi, supports faculty inventors, researchers, entrepreneurs; new website coming",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://ami.usc.edu/",
+          "kind": "official",
+          "holds": "AMI site (returned empty via curl)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Alfred E. Mann Institute USC AMI new website investments Tariq Warsi"
+      ],
+      "notes": "Entry consistent with Sept 2025 article, which says AMI serves later-stage biomedical opportunities and is broadening scope. ami.usc.edu gave no content."
+    },
+    "early-career-innovator-award": {
+      "name": "Early Career Innovator Award",
+      "chunk": "funding",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://rii.usc.edu/wp-content/uploads/sites/5/2026/04/Innovation-Catalyst-Program-Final-v8.pdf",
+          "kind": "official",
+          "holds": "ICP RFP: deadlines, amounts, eligibility, Q&A for all ICP initiatives",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://research.usc.edu/?p=6483",
+          "kind": "news",
+          "holds": "ICP/RCP launch overview",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://provost.sma.usc.edu/prog/icp_-_early_career_innovator_-_techstars",
+          "kind": "official",
+          "holds": "program page (404 via curl)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Innovation Catalyst Program Startup Launch Early Career Innovator Innovation Empowerment deadline 2026"
+      ],
+      "notes": "RFP lists two tracks (general and Techstars); the entry mixes them. Contact in RFP: researchsupport@usc.edu (subject Early Career Innovator Award). Year of Nov 14 deadline not stated; likely 2026."
+    },
+    "icp-startup-launch": {
+      "name": "ICP Startup Launch",
+      "chunk": "funding",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://rii.usc.edu/wp-content/uploads/sites/5/2026/04/Innovation-Catalyst-Program-Final-v8.pdf",
+          "kind": "official",
+          "holds": "Startup Launch: up to $50,000, rolling, eligibility, FAQ, fund uses (incorporation, legal, IP)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://research.usc.edu/?p=6483",
+          "kind": "news",
+          "holds": "ICP overview",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Amount and rolling deadline confirmed. Graded awards require Stevens Center IP check."
+    },
+    "innovation-catalyst-program-icp": {
+      "name": "Innovation Catalyst Program (ICP)",
+      "chunk": "funding",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://rii.usc.edu/wp-content/uploads/sites/5/2026/04/Innovation-Catalyst-Program-Final-v8.pdf",
+          "kind": "official",
+          "holds": "RFP with deadlines Nov 14, Feb 1, Mar 1, rolling; amounts $5K-$50K; eligibility by initiative",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://research.usc.edu/?p=6483",
+          "kind": "news",
+          "holds": "Dec 15 2025 OORI pipeline announcement",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Innovation Catalyst Program Startup Launch Early Career Innovator Innovation Empowerment deadline 2026"
+      ],
+      "notes": "Matches RFP. Contact in the RFP is rii@usc.edu."
+    },
+    "innovation-empowerment-award": {
+      "name": "Innovation Empowerment Award",
+      "chunk": "funding",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://rii.usc.edu/wp-content/uploads/sites/5/2026/04/Innovation-Catalyst-Program-Final-v8.pdf",
+          "kind": "official",
+          "holds": "amount $15,000, deadline, eligibility",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Student audience values (undergrad/grad) are not stated in source; consider confirming. Also a link to research.usc.edu/?p=6483 may serve better than innovation.usc.edu/what-we-do."
+    },
+    "sbir-sttr-planning-award": {
+      "name": "SBIR/STTR Planning Award",
+      "chunk": "funding",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://research.usc.edu/?p=6243",
+          "kind": "news",
+          "holds": "Dec 2024: four awardees; faculty-focused program",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://research.usc.edu/?p=6483",
+          "kind": "news",
+          "holds": "RCP has SBIR/STTR Planning track; RCP deadline Feb 16 (2026)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://provost.sma.usc.edu/prog/rcp_-_sbir-sttr",
+          "kind": "official",
+          "holds": "program page (404 via curl, link may be dead)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Provost program link returns 404 via curl; consider research.usc.edu/?p=6483 as fallback. Award amount still not found."
+    },
+    "stevens-translation-catalyst": {
+      "name": "Stevens Translation Catalyst",
+      "chunk": "funding",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://stevens.usc.edu/researchers-and-innovators/funding-opportunities/",
+          "kind": "official",
+          "holds": "up to $50,000, March 1, 2026 deadline",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://rii.usc.edu/wp-content/uploads/sites/5/2026/04/Innovation-Catalyst-Program-Final-v8.pdf",
+          "kind": "official",
+          "holds": "$25K-$50K, Mar 1 noon, May 1 funding, eligibility",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Next cycle deadline Mar 1 (year not stated in RFP; likely 2027)."
+    },
+    "angellist": {
+      "name": "AngelList",
+      "chunk": "funding",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.angellist.com/ruv",
+          "kind": "official",
+          "holds": "Now branded Rollups; Roll Up Vehicles for raising from many investors as one cap table line",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Link works and shows Rollups branding. Pricing not re-verified on page."
+    },
+    "band-of-angels": {
+      "name": "Band of Angels",
+      "chunk": "funding",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.bandangels.com/apply-to-present",
+          "kind": "official",
+          "holds": "Pre-screening reviews 50+ startups a month, picks 6 for Deal Screening on last Wednesday; seed stage; valuations near $10M; no real estate, restaurants, funds",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Matches entry."
+    },
+    "nfx-signal": {
+      "name": "NFX Signal",
+      "chunk": "funding",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://signal.nfx.com/faq",
+          "kind": "official",
+          "holds": "Free investor-matching tool, Gmail OAuth",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": null
+    },
+    "pasadena-angels": {
+      "name": "Pasadena Angels",
+      "chunk": "funding",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.pasadenaangels.com",
+          "kind": "official",
+          "holds": "Founded 2000, $75M+ in 250+ rounds, ~100 members, PA Fund III $1.5M (2024) co-invests",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Official totals: over $75M in 250+ rounds (entry notes cite higher third-party figures). Typical round size not verified on official page."
+    },
+    "republic": {
+      "name": "Republic",
+      "chunk": "p3-05",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://republic.com",
+          "kind": "official",
+          "holds": "Platform home; blocked by Cloudflare",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Blocked by Cloudflare via curl and browser script; nothing verified."
+    },
+    "stanford-angels-and-entrepreneurs": {
+      "name": "Stanford Angels & Entrepreneurs",
+      "chunk": "funding",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://stanfordangels.us",
+          "kind": "official",
+          "holds": "Site loads with Apply to Pitch / Become an Angel; 'Midwest' footer suggests a regional chapter",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Site stanfordangels.us may be a regional chapter (footer: Stanford Angels & Entrepreneurs Midwest); no eligibility text read, so existing fields left unchanged."
+    },
+    "tech-coast-angels": {
+      "name": "Tech Coast Angels",
+      "chunk": "funding",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://tcaventuregroup.com",
+          "kind": "official",
+          "holds": "Rebrand, members, chapters, Apply for Funding",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "San Diego chapter not seen on the site menu; Pasadena Angels is now listed as a TCA chapter."
+    },
+    "wefunder": {
+      "name": "Wefunder",
+      "chunk": "p3-05",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://wefunder.com/faq",
+          "kind": "official",
+          "holds": "FAQ and fees; Cloudflare verification blocks reading",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Blocked by security check; nothing verified."
+    },
+    "baum-family-maker-space": {
+      "name": "Baum Family Maker Space",
+      "chunk": "p3-06",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://bfms.usc.edu",
+          "kind": "official",
+          "holds": "hours 11am-10pm M-F, 10am-5pm Sat; location; equipment; last updated Mar 2025",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiundergrad.usc.edu/bfms/",
+          "kind": "official",
+          "holds": "who can use, training (blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbischool.usc.edu/news/2026/02/where-mechanical-engineers-are-made-inside-the-baum-family-maker-space/",
+          "kind": "news",
+          "holds": "Feb 2026 feature (blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://today.usc.edu/makerspaces-usc-campus-los-angeles/",
+          "kind": "news",
+          "holds": "2018: Baum Family Maker Space in the Science and Engineering Library with machine shop, 3D printer, wet lab, paint booth",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Baum Family Maker Space USC hours who can use",
+        "Baum Family Maker Space USC hours fall 2026 who can use"
+      ],
+      "notes": "Hours match. Location: ground floor Science and Engineering Library, ~8,000 sq ft."
+    },
+    "biomedical-engineering-innovation-space-bme-makerspace": {
+      "name": "Biomedical Engineering Innovation Space (BME Makerspace)",
+      "chunk": "p3-06",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://bme.usc.edu/facilities/",
+          "kind": "official",
+          "holds": "Innovation Space in Denney Research Building: machining, 3D printing, electronics assembly; updated Aug 2026",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbischool.usc.edu/news/2024/10/new-maker-space-helping-students-craft-life-changing-medical-devices/",
+          "kind": "news",
+          "holds": "2024 opening story (blocked)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page confirms existence and equipment; access rules are on a linked page not found."
+    },
+    "das-family-innovate-x-la-student-competition": {
+      "name": "Das Family Innovate x LA Student Competition",
+      "chunk": "p3-02",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://cee.usc.edu/current-students/student-competition/",
+          "kind": "official",
+          "holds": "eligibility, $20,000 grand prize, monthly workshops, kickoff Design Day & Buildathon (page cites Thu Nov 20 / Fri Nov 21, appears to be the 2025 cycle)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://cee.usc.edu/current-students/innovateLA-apply",
+          "kind": "application",
+          "holds": "application page",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbischool.usc.edu/?p=84389",
+          "kind": "news",
+          "holds": "2026 winner MatterFlow, $20,000, winners announced Apr 30 (snippet only)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Das Family Innovate x LA Student Competition 2026-27 USC civil environmental engineering"
+      ],
+      "notes": "Page confirms $20,000, CEE-led teams, all-discipline students encouraged. Page says 'monthly workshops' (entry says seminars) and a Nov 20-21 Design Day kickoff that looks like the 2025 cycle; no 2026-27 dates found, so timing left unchanged. Audience not stated on page, existing value left as is."
+    },
+    "data-center-challenge": {
+      "name": "Data Center Challenge",
+      "chunk": "competitions-spaces",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/",
+          "kind": "official",
+          "holds": "TIE Hub home (blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://www.cs.usc.edu/newsletter/ug-ms-phd-upcoming-spring-2026-tie-hub-opportunities/",
+          "kind": "listing",
+          "holds": "Spring 2026 TIE Hub opportunities (lists MFC, MEPC, Origin Weekend; no Data Center Challenge in snippet)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi TIE Hub Data Center Challenge OR \"Future of Social Media\" challenge"
+      ],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "future-of-social-media-challenge": {
+      "name": "Future of Social Media Challenge",
+      "chunk": "competitions-spaces",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.cs.usc.edu/newsletter/ug-ms-phd-upcoming-spring-2026-tie-hub-opportunities/",
+          "kind": "listing",
+          "holds": "Spring 2026 TIE Hub opportunities (no such challenge in snippet)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi TIE Hub Data Center Challenge OR \"Future of Social Media\" challenge"
+      ],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "global-student-startup-competition": {
+      "name": "Global Student Startup Competition",
+      "chunk": "p3-02",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.globalstudentstartup.org/",
+          "kind": "official",
+          "holds": "GSSC 2027 dates, qualification pathways (campus winner or regional), fully funded travel for undergraduates, USC listed as partner university",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://globalstudentstartup.org/?p=1402",
+          "kind": "official",
+          "holds": "for students page (snippet: GSSC x USC applications open for All-Star Team)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbischool.usc.edu/news/2025/12/usc-students-lead-global-innovation-at-gssc-2026/",
+          "kind": "news",
+          "holds": "USC 2026 team (blocked)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Global Student Startup Competition 2027 USC GSSC application"
+      ],
+      "notes": "Site says teams are invited only after winning a qualifying competition of at least five teams; selected undergraduates travel fully funded; free for students. USC is a partner university. USC-specific 2026-27 application not seen."
+    },
+    "maseeh-entrepreneurship-prize-competition": {
+      "name": "Maseeh Entrepreneurship Prize Competition",
+      "chunk": "p3-02",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/mepc/",
+          "kind": "official",
+          "holds": "$100,000 grand prize, largest non-dilutive prize at USC, mentors and required workshops; page itself is stale (2024-25 season)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.cs.usc.edu/newsletter/ug-ms-phd-upcoming-spring-2026-tie-hub-opportunities/",
+          "kind": "listing",
+          "holds": "$100,000 prize, applications closed Jan 27 (snippet)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbischool.usc.edu/news/2026/05/usc-viterbi-startup-showcase-awards-150k-to-student-ventures/",
+          "kind": "news",
+          "holds": "2026 showcase results (blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/",
+          "kind": "official",
+          "holds": "TIE Hub home, links to competitions and event calendar",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi TIE Hub Data Center Challenge OR \"Future of Social Media\" challenge"
+      ],
+      "notes": "Official page not updated past 2024-25, so no new dates found; existing 2026 dates from other sources left unchanged."
+    },
+    "min-family-challenge": {
+      "name": "Min Family Challenge",
+      "chunk": "p3-02",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/mfc/",
+          "kind": "official",
+          "holds": "$50,000 prize, eligibility (USC Viterbi student undergrad or grad in lead role, multidisciplinary encouraged), SDG theme; page stale at 2024-25 season",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.cs.usc.edu/newsletter/ug-ms-phd-upcoming-spring-2026-tie-hub-opportunities/",
+          "kind": "listing",
+          "holds": "$50,000, Jan 27 deadline (snippet)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Eligibility and prize confirmed. Official page lists 2024-25 dates only (applications opened Sept, deadline Oct in that cycle)."
+    },
+    "origin-weekend": {
+      "name": "Origin Weekend",
+      "chunk": "competitions-spaces",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/rsvp?id=413622",
+          "kind": "campus-groups",
+          "holds": "Fall 2026 edition Sep 24-28, 2026, x Replit, $5,000 prizes, no idea or team required",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/",
+          "kind": "official",
+          "holds": "TIE Hub home (blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://www.cs.usc.edu/newsletter/ug-ms-phd-upcoming-spring-2026-tie-hub-opportunities/",
+          "kind": "listing",
+          "holds": "Spring 2026 Origin Weekend Impact (snippet)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Origin Weekend USC TIE Hub Fall 2026 Replit"
+      ],
+      "notes": "Fall 2026 dates and $5,000 prize confirmed on EngageSC (event already past as of Oct 21, 2026). Registration was via luma.com/tiehub-16n5. The page does not state an audience, so audience values are unsupported by this source. Next edition (spring 2027) not yet posted."
+    },
+    "tie-hub-coworking": {
+      "name": "TIE Hub Coworking",
+      "chunk": "p3-06",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/",
+          "kind": "official",
+          "holds": "Co-Working under Build",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/tie-hub-offerings/",
+          "kind": "official",
+          "holds": "thin page, no coworking detail",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Could not find any coworking details."
+    },
+    "trojan-tank": {
+      "name": "Trojan Tank",
+      "chunk": "competitions-spaces",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/Viterbitie/rsvp?id=403967",
+          "kind": "campus-groups",
+          "holds": "Apr 11, 2025 event details, co-hosts",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbi.usc.edu/calendar/?event=104073",
+          "kind": "listing",
+          "holds": "2023 edition (unchecked)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Trojan Tank USC pitch competition TIE Hub $3,000"
+      ],
+      "notes": "The $3,000 prize pool and the 3-minute pitch format were not confirmed on the opened page (it only says '$$'); the 'first of its kind' wording conflicts with the claim of a 2023 edition. No edition found since April 2025."
+    },
+    "athena-women-s-entrepreneurship-summit-and-female-founders-p": {
+      "name": "ATHENA Women's Entrepreneurship Summit and Female Founders Pitch Competition",
+      "chunk": "p3-01",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://students.marshall.usc.edu/node/387101",
+          "kind": "official",
+          "holds": "ATHENA Initiative overview: mission, L{a}UNCH & Learn series, 2024 summit Mar 7 (stale)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.marshall.usc.edu/athena-womens-entrepreneurship-summit-2024",
+          "kind": "official",
+          "holds": "2024 summit page (mostly navigation)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://events.usc.edu/esvp/24athena/",
+          "kind": "listing",
+          "holds": "2024 RSVP",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "ATHENA Women's Entrepreneurship Summit USC Greif 2026 Female Founders Pitch Competition",
+        "ATHENA Women's Entrepreneurship Summit USC Greif Center 2026 Female Founders Pitch Competition"
+      ],
+      "notes": "No 2025 or 2026 edition found. The overview page also lists an ATHENA L{a}UNCH & Learn Female Founders lunch series open to all current USC students (could be added to the description)."
+    },
+    "hult-prize-at-usc": {
+      "name": "Hult Prize at USC",
+      "chunk": "competitions-spaces",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/entrepreneur/information-sessions/",
+          "kind": "campus-groups",
+          "holds": "Hult Prize x USC 2025-26: $1,000 winner, advance to US Nationals, hosted by Greif, Greif LaunchPad, Brittingham Social Enterprise Lab, info sessions Sep-Oct",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/rsvp?id=404787",
+          "kind": "campus-groups",
+          "holds": "info session listing",
+          "lastChecked": null
+        },
+        {
+          "url": "https://sustainability.usc.edu/?p=9170",
+          "kind": "news",
+          "holds": "first USC round",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Hult Prize x USC 2026-27 Greif Center"
+      ],
+      "notes": "Page still shows the 2025-26 cycle; no 2026-27 cycle found yet (expect info sessions about Sept-Oct 2026 if it runs). The 2-4 team size and Dec 5 deadline were not visible on the opened page."
+    },
+    "innovation-challenge-greif": {
+      "name": "Innovation Challenge (Greif)",
+      "chunk": "competitions-spaces",
+      "status": "not_found",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://ceo.usc.edu/innovation-challenge/",
+          "kind": "other",
+          "holds": "unrelated CEO (Center for Effective Organizations) competition, entries due Sep 14, 2026",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/new-venture-seed-competition-(nvsc)/",
+          "kind": "campus-groups",
+          "holds": "Greif Center home with programs list (no Innovation Challenge listed)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "The existing link points to a different USC unit's program for organizations. No Greif Innovation Challenge found on the Greif EngageSC program list. Recommend removing or hiding this entry."
+    },
+    "new-venture-seed-competition": {
+      "name": "New Venture Seed Competition",
+      "chunk": "competitions-spaces",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/rsvp?id=404789",
+          "kind": "campus-groups",
+          "holds": "2025-26 rules, full timeline, eligibility, prizes",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/new-venture-seed-competition-(nvsc)/",
+          "kind": "campus-groups",
+          "holds": "Greif Center home page (NVSC page redirects to it)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://nvsc.awardsplatform.com/",
+          "kind": "application",
+          "holds": "application portal (requires JS, did not render)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies/funding-opportunities",
+          "kind": "official",
+          "holds": "NVSC overview, $150,000+, Catalyst Microgrant",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC New Venture Seed Competition 2026-27 Greif Center application deadline"
+      ],
+      "notes": "The NVSC EngageSC page now redirects to the Greif home page; the RSVP page id=404789 holds the detailed rules. Months should probably include March (quarter-finals) but [2,4] is acceptable. Finals are in late April, now confirmed."
+    },
+    "venture-capital-investment-competition-vcic": {
+      "name": "Venture Capital Investment Competition (VCIC)",
+      "chunk": "competitions-spaces",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/entrepreneur/venture-capital-investment-competition-(vcic)/",
+          "kind": "campus-groups",
+          "holds": "full 2025-26 timeline, eligibility, prizes, contacts",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.vcic.org/",
+          "kind": "official",
+          "holds": "global VCIC (not opened)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page still shows the 2025-26 cycle. 2026-27 undergraduate applications likely due mid-November 2026; not yet posted."
+    },
+    "iya-makerspace-the-garage": {
+      "name": "IYA Makerspace (The Garage)",
+      "chunk": "gap-07",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/about",
+          "kind": "official",
+          "holds": "About page, Our Space (little detail)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://today.usc.edu/makerspaces-usc-campus-los-angeles/",
+          "kind": "news",
+          "holds": "2018 article: The Garage is a 9,000 sq ft studio on the 4th floor of the Tutor Campus Center for Iovine and Young Academy students; IYA Hall planned for 2019",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Only the 2018 article was read; it is consistent with the entry. Current access rules and hours still unverified."
+    },
+    "iya-spring-hackathon-generative-ai": {
+      "name": "IYA Spring Hackathon (Generative AI)",
+      "chunk": "p3-01",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/iya-innovation-quest",
+          "kind": "official",
+          "holds": "page renders only the Academy homepage, no hackathon details",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Iovine and Young Academy Innovation Quest 2026 Venture Showcase",
+        "IYA Venture Showcase 2026 Iovine and Young Academy Innovation Quest winners"
+      ],
+      "notes": "No source found for the hackathon name, dates, or eligibility."
+    },
+    "iya-venture-showcase": {
+      "name": "IYA Venture Showcase",
+      "chunk": "p3-01",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/iya-innovation-quest/iya-venture-showcase",
+          "kind": "official",
+          "holds": "renders only the Academy homepage; mentions third annual Venture Showcase in spring 2025",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://iovine-young.usc.edu/the-pulse/2024-iya-venture-showcase-recap-and-video",
+          "kind": "news",
+          "holds": "2024 recap title only",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Iovine and Young Academy Innovation Quest 2026 Venture Showcase",
+        "IYA Venture Showcase 2026 Iovine and Young Academy Innovation Quest winners"
+      ],
+      "notes": "Homepage confirms the showcase is annual (2025 was the third) but no 2026 dates or prizes found."
+    },
+    "usc-and-techstars-startup-weekend": {
+      "name": "USC and Techstars Startup Weekend",
+      "chunk": "competitions-spaces",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://calendar.usc.edu/event/usc-and-techstars-startup-weekend-2026",
+          "kind": "listing",
+          "holds": "2026 dates, location, audience",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://research.usc.edu/news/2026/05/from-idea-to-pitch-oori-and-techstars-bring-usc-founders-together-for-startup-weekend/",
+          "kind": "news",
+          "holds": "2026 recap: 51 ideas, 11 teams, 10 schools",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.techstars.com/usc-and-techstars-programs",
+          "kind": "official",
+          "holds": "program overview: Accelerator, University Catalyst, Startup Weekend",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://research.usc.edu/news/2025/06/usc-techstars-partnership-successfully-hosts-2nd-startup-weekend/",
+          "kind": "news",
+          "holds": "2025 edition Apr 11-13",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC and Techstars Startup Weekend 2026"
+      ],
+      "notes": "Organized by the Office of Research and Innovation (OORI) with Techstars; run is about once per year in spring."
+    },
+    "blackstone-launchpad-at-usc": {
+      "name": "Blackstone LaunchPad at USC",
+      "chunk": "competitions-spaces",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies/start-or-grow-new-venture",
+          "kind": "official",
+          "holds": "Blackstone LaunchPad in Bridge Hall basement, programming, coworking, funding opportunities for all USC students",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/",
+          "kind": "campus-groups",
+          "holds": "Greif Center events and programs list",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page does not state hours or the word 'free' or pitch review schedule; those remain unverified."
+    },
+    "summer-smasher": {
+      "name": "Summer Smasher",
+      "chunk": "p3-01",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/vsg",
+          "kind": "official",
+          "holds": "404, dead link",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/summer-smasher/",
+          "kind": "official",
+          "holds": "program details, 2026 timeline TBD, interest form",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Viterbi Startup Garage Summer Smasher 2026 USC"
+      ],
+      "notes": "Page says Entrepreneur-in-Training in operating tech startups. Page is stale for 2026; revisit."
+    },
+    "usc-games-summer-bridge-program": {
+      "name": "USC Games Summer Bridge Program",
+      "chunk": "accelerators",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://games.usc.edu/summer-bridge",
+          "kind": "official",
+          "holds": "description, eligibility, late May to early August, applications open in February, contact usc_interactive@cinema.usc.edu",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page undated and gives no 2026 dates, but all current fields match it."
+    },
+    "venturespark": {
+      "name": "ventureSPARK",
+      "chunk": "p3-01",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/?p=2775",
+          "kind": "official",
+          "holds": "program description, interest form (published Aug 2024, updated Sep 2024)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page says 'student' without level; undergrad/grad is an inference, consider [] if strict. Page not updated since Sept 2024."
+    },
+    "viterbi-startup-garage": {
+      "name": "Viterbi Startup Garage",
+      "chunk": "p3-01",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/viterbi-startup-garage-landing-page/",
+          "kind": "official",
+          "holds": "404",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/?p=2555",
+          "kind": "official",
+          "holds": "VSG Residency page per search; 404 when fetched",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbicareers.usc.edu/deadline-for-viterbi-startup-garage-residency-program-spring-2025-application-extended",
+          "kind": "news",
+          "holds": "Spring 2025 deadline April 13, 2025 (Cloudflare blocked)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Viterbi Startup Garage USC application residency"
+      ],
+      "notes": "The fee conflicts with the entry description 'no-equity, no-fee'. Search snippets also say a 2025 announcement does not require USC affiliation, and vsg@usc.edu is the contact. These are from search snippets only; verify before changing description/eligibility."
+    },
+    "marshall-greif-incubator": {
+      "name": "Marshall Greif Incubator",
+      "chunk": "accelerators",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/entrepreneur/marshall-greif-incubator/",
+          "kind": "campus-groups",
+          "holds": "cohort dates, eligibility, 300+ portfolio, Paul Orlando",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page now describes a cohort format (Fall 2026), so rolling cadence may be outdated, but it does not say how other terms work. Eligibility matches (one USC-connected founder: students, alumni, faculty, staff). Page does not state an MVP requirement."
+    },
+    "iya-innovation-quest": {
+      "name": "IYA Innovation Quest",
+      "chunk": "p3-01",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/iya-innovation-quest",
+          "kind": "official",
+          "holds": "returned only generic Academy homepage content; no Innovation Quest details",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://iovine-young.usc.edu/the-pulse/2024-iya-venture-showcase-recap-and-video",
+          "kind": "news",
+          "holds": "2024 showcase recap (only title and nav text)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Iovine and Young Academy Innovation Quest 2026 Venture Showcase",
+        "IYA Innovation Quest 2026 Founders Bootcamp Ignite Grants Venture Showcase"
+      ],
+      "notes": "Pages render the Academy homepage; the homepage lists a 2025 Venture Showcase recap ('third annual') and the Microsoft for Startups partnership, which are consistent with the entry but give no 2026 dates. Nothing to change."
+    },
+    "iya-venture-studio": {
+      "name": "IYA Venture Studio",
+      "chunk": "gap-01",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/people/michael-kanazawa",
+          "kind": "official",
+          "holds": "bio: Venture Studio Lead; 'new initiative' focused on future of human performance with AI, XR, IoT, robotics; students, faculty, corporate teams",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Bio now titles Kanazawa 'IYA Venture Studio Lead' but still describes it as a new initiative being designed; no program page or application found."
+    },
+    "usc-ventures": {
+      "name": "USC Ventures",
+      "chunk": "gap-01",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [],
+      "searchQueries": [],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "usc-and-techstars-digital-economy-accelerator": {
+      "name": "USC and Techstars Digital Economy Accelerator",
+      "chunk": "accelerators",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.techstars.com/accelerators/usc-and-techstars",
+          "kind": "official",
+          "holds": "13-week in-person, eligibility, 2027 dates",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Eligibility matches (founder affiliated as student, alumnus, faculty or staff; Keck and CHLA eligible). Page snippet did not show the $220,000 figure, so funding left alone. Program name is now 'USC and Techstars Accelerator'."
+    },
+    "usc-and-techstars-university-catalyst": {
+      "name": "USC and Techstars University Catalyst",
+      "chunk": "accelerators",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://techstars.com/usc-and-techstars-university-catalyst",
+          "kind": "official",
+          "holds": "timeline, eligibility, 10-week format, up to 20 startups, no equity",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Program is part-time and primarily virtual, no equity."
+    },
+    "california-life-sciences-fast-program": {
+      "name": "California Life Sciences FAST Program",
+      "chunk": "p3-01",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://califesciences.org/fast-program/",
+          "kind": "official",
+          "holds": "dates, eligibility, benefits, cohort",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.califesciences.org/wp-content/uploads/2026/03/2026-Startup-Resource-Guide-7.pdf",
+          "kind": "other",
+          "holds": "Startup Resource Guide, mentions accepting applications for next FAST cohort",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "California Life Sciences FAST program 2026 applications spring 2027"
+      ],
+      "notes": "Page also says applications are accepted on a rolling basis. Program name on page is 'FAST California'."
+    },
+    "larta-institute-heal-la-accelerator": {
+      "name": "Larta Institute Heal.LA Accelerator",
+      "chunk": "gap-01",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://larta.org/programs/heal-accelerator/",
+          "kind": "official",
+          "holds": "404 as of today",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://larta.org/heal-la/",
+          "kind": "official",
+          "holds": "program overview, 2026 cohort, interest form for next cohort",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.surveymonkey.com/r/WPS97JN",
+          "kind": "application",
+          "holds": "2026 application form (did not load usable text)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Heal.LA Larta Institute 2026 cohort applications deadline eligibility"
+      ],
+      "notes": "Search snippets disagree on deadline (July 22 vs later October cohort rolling). Contact lmacias@larta.org. Old link larta.org/programs/heal-accelerator/ is 404; larta.org/heal-la/ works."
+    },
+    "usc-rossier-edtech-accelerator": {
+      "name": "USC Rossier EdTech Accelerator",
+      "chunk": "gap-01",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://rossier.usc.edu/usc-education-technology-accelerator",
+          "kind": "official",
+          "holds": "application window, cohort start, eligibility, no equity/fees",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://rossier.usc.edu/news-insights/news/2025/september/uscs-edtech-accelerator-program-opens-its-application-portal",
+          "kind": "news",
+          "holds": "prior-year announcement (only nav text extracted)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC EdTech Accelerator 2026-27 cohort applications"
+      ],
+      "notes": "Cohort 9 applications Sept 1-30, 2026. Page also notes TIME named it a top accelerator for 2026. Different from the USC & Techstars Accelerator."
+    },
+    "berkeley-skydeck": {
+      "name": "Berkeley SkyDeck",
+      "chunk": "accelerators",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://skydeck.berkeley.edu/program",
+          "kind": "official",
+          "holds": "batch timeline, eligibility (worldwide startups)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Official page confirms Aug 21 deadline. The $200K figure was not visible in the portion read."
+    },
+    "ctip-west-coast-consortium-for-technology-and-innovation-in-": {
+      "name": "CTIP (West Coast Consortium for Technology & Innovation in Pediatrics)",
+      "chunk": "accelerators",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.ctipmedtech.org/",
+          "kind": "official",
+          "holds": "description, opportunities menu (CPI Grant, Innovation Bootcamp, Device Innovation Award)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Homepage does not mention USC and shows Lurie and CHLA as co-bases, so the current 'led by CHLA in collaboration with USC' is not supported. Grant amounts not verified."
+    },
+    "founder-institute": {
+      "name": "Founder Institute",
+      "chunk": "accelerators",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://fi.co",
+          "kind": "official",
+          "holds": "chapter cohorts (many Fall 2026 and 2027), bootcamps",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Chapter based cohorts confirmed; fees and equity not checked."
+    },
+    "hax-sosv": {
+      "name": "HAX (SOSV)",
+      "chunk": "p3-01",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://hax.co/program/",
+          "kind": "official",
+          "holds": "capital ($550K), six-month residency, facilities",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://sosv.com/announcing-hax-deep-tech-showcase-ny-deep-tech-week-2026/",
+          "kind": "news",
+          "holds": "HAX showcase (Cloudflare blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://hax.co/apply/",
+          "kind": "application",
+          "holds": "application form, locations, hard tech requirement",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Program page says 'provided up to $550,000' (past tense), so the amount is no longer shown as a current offer; funding field left as is. Audience listing of all eight values is not supported by any source I opened; propose [] unless HAX states who can apply. Rolling timing not stated on the pages I read."
+    },
+    "inception-studio": {
+      "name": "Inception Studio",
+      "chunk": "accelerators",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.inceptionstudio.org",
+          "kind": "official",
+          "holds": "programs, stats (24 retreats, 75+ companies)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "The 72-hour format is the buildathon; retreats are 3 days."
+    },
+    "pearx": {
+      "name": "PearX",
+      "chunk": "p3-01",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://pear.vc/pearx/",
+          "kind": "official",
+          "holds": "check size, cohort size, program benefits (no dates visible in text)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "PearX W27 applications Pear VC accelerator 2026"
+      ],
+      "notes": "No deadlines shown in page text; timing and months unchanged and unverified."
+    },
+    "sequoia-arc": {
+      "name": "Sequoia Arc",
+      "chunk": "accelerators",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.sequoiacap.com/arc/",
+          "kind": "official",
+          "holds": "describes Arc as bi-annual open call for pre-seed and seed founders; no dates",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "No 2026 call dates on the official page, matching current notes."
+    },
+    "startx": {
+      "name": "StartX",
+      "chunk": "accelerators",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://startx.com/accelerator",
+          "kind": "official",
+          "holds": "redirects to About page: no-equity community for Stanford founders",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "No-equity claim confirmed; cycle dates not found."
+    },
+    "techstars": {
+      "name": "Techstars",
+      "chunk": "accelerators",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.techstars.com/accelerators",
+          "kind": "official",
+          "holds": "list of accelerators, 3-month format",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "$220K terms not shown on pages read."
+    },
+    "y-combinator": {
+      "name": "Y Combinator",
+      "chunk": "accelerators",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.ycombinator.com/apply",
+          "kind": "official",
+          "holds": "current batch deadline",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Funding terms not shown in the portion read."
+    },
+    "co-founder-speed-dating": {
+      "name": "Co-founder Speed Dating",
+      "chunk": "p3-04",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/tie-hub-events/",
+          "kind": "official",
+          "holds": "Looking for a Co-Founder? event 7-9pm Wed Mar 5, 2025; page last updated Mar 2025",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.cs.usc.edu/newsletter/ug-ms-phd-upcoming-spring-2026-tie-hub-opportunities/",
+          "kind": "news",
+          "holds": "Spring 2026 TIE Hub opportunities (Origin Weekend Impact, MEPC, Min Family Challenge); seen in search snippet only",
+          "lastChecked": null
+        },
+        {
+          "url": "https://engage.usc.edu/Viterbitie/events",
+          "kind": "campus-groups",
+          "holds": "TIE events (JS)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi TIE Hub fall 2026 mixer co-founder event",
+        "USC Viterbi TIE Hub events fall 2026 startup mixer co-founder"
+      ],
+      "notes": "Page lists Looking for a Co-Founder? on Mar 5, 2025 (a snippet also says Mar 12). No fall 2026 listing found. Link still works."
+    },
+    "founder-happy-hours-and-mixers": {
+      "name": "Founder Happy Hours and Mixers",
+      "chunk": "p3-04",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/tie-hub-events/",
+          "kind": "official",
+          "holds": "Mixers + Pitches section ('Coming soon!'), Start-up Stories dates",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbigrad.usc.edu/academic-services/new-student-information",
+          "kind": "official",
+          "holds": "TIE Hub: Start-up Curious? mixer",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi TIE Hub fall 2026 mixer co-founder event",
+        "USC Viterbi TIE Hub events fall 2026 startup mixer co-founder"
+      ],
+      "notes": "Page says Mixers + Pitches coming soon; page stale since March 2025."
+    },
+    "ronald-and-valerie-sugar-distinguished-speaker-series-in-adv": {
+      "name": "Ronald and Valerie Sugar Distinguished Speaker Series in Advanced Computing",
+      "chunk": "p3-04",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbischool.usc.edu/news/2024/10/uber-ceo-we-depend-on-engineers-to-build-everything/",
+          "kind": "news",
+          "holds": "inaugural talk Oct 22, 2024, housed in School of Advanced Computing",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Sugar Distinguished Speaker Series Advanced Computing USC 2025 2026",
+        "Ronald and Valerie Sugar Distinguished Speaker Series USC School of Advanced Computing 2025 2026"
+      ],
+      "notes": "Audience 'students, faculty, and staff' was in attendance; open/invite policy not stated."
+    },
+    "startup-stories": {
+      "name": "Startup Stories",
+      "chunk": "gap-05",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/tie-hub-events/",
+          "kind": "official",
+          "holds": "current listings (blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://engage.usc.edu/Viterbitie/events",
+          "kind": "campus-groups",
+          "holds": "events list (template only)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/Viterbitie/rsvp_boot?id=397842",
+          "kind": "campus-groups",
+          "holds": "Startup Stories with David Hodge, Wed Sep 11 2024 12-1 PM, free, Viterbi TIE",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Sep 2024 session confirmed. Current schedule not verifiable."
+    },
+    "summer-start-fellows": {
+      "name": "Summer Start Fellows",
+      "chunk": "p3-07",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbigradadmission.usc.edu/summer-start/",
+          "kind": "official",
+          "holds": "dates, eligible programs, benefits",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "This is an admissions program for CS master's students, not an entrepreneurship program; consider removing it from the directory. No startup stipend or 'Fellows' naming on the page."
+    },
+    "tie-hub-1-1-mentorship": {
+      "name": "TIE Hub 1:1 Mentorship",
+      "chunk": "p3-07",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/tie-hub-offerings/",
+          "kind": "official",
+          "holds": "Offerings page; rendered text is thin (stage labels), last updated March 2025",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/tie-hub-office-hours/",
+          "kind": "official",
+          "holds": "Office hours with Trina Gregory and Dr. Oscar Neyra-Nazarrett",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Rendered offerings page has little detail; no distinct mentorship program page. Nothing contradicts the entry."
+    },
+    "tie-hub-office-hours": {
+      "name": "TIE Hub Office Hours",
+      "chunk": "p3-07",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/tie-hub-office-hours/",
+          "kind": "official",
+          "holds": "advisors, booking links",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Weekly Tue/Thu times in the current entry are not on the page; the second host is Dr. Oscar Neyra-Nazarrett (spelling differs from internal notes). Description mention of a deep tech session is unconfirmed."
+    },
+    "usc-viterbi-startup-showcase": {
+      "name": "USC Viterbi Startup Showcase",
+      "chunk": "p3-04",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbischool.usc.edu/news/2026/05/usc-viterbi-startup-showcase-awards-150k-to-student-ventures/",
+          "kind": "news",
+          "holds": "inaugural showcase Apr 27, 2026 at Ginsburg Hall, MEPC $100,000 (Bilisense), MFC, live pitch winner Pando Surgical",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/mfc/",
+          "kind": "official",
+          "holds": "Min Family Challenge",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi Startup Showcase 2026 MEPC Min Family Challenge $150K Ginsburg Hall"
+      ],
+      "notes": "Matches current entry; judges had selected MEPC and MFC winners before the event."
+    },
+    "venture-showcase-viterbi": {
+      "name": "Venture Showcase (Viterbi)",
+      "chunk": "gap-05",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/",
+          "kind": "official",
+          "holds": "TIE Hub home (blocked)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi Startup Showcase 2026 MEPC Min Family Challenge $150K Ginsburg Hall"
+      ],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "yc-application-office-hours": {
+      "name": "YC Application Office Hours",
+      "chunk": "p3-07",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.cs.usc.edu/newsletter/ug-ms-phd-free-yc-application-office-hours-for-usc-founders",
+          "kind": "news",
+          "holds": "Former 2025 announcement; now 404",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/tie-hub-office-hours/",
+          "kind": "official",
+          "holds": "TIE Hub office hours booking",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Announcement page is dead; no current YC office hours page found, so the replacement link is a fallback. Consider marking as possibly defunct."
+    },
+    "brittingham-social-enterprise-lab": {
+      "name": "Brittingham Social Enterprise Lab",
+      "chunk": "events-mentorship",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab",
+          "kind": "official",
+          "holds": "BSEL overview, Social Impact Scholars (9-month, rising juniors and seniors), Warren Bennis Scholars, Jacobson lecture series, MSSE",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/bsel/",
+          "kind": "campus-groups",
+          "holds": "BSEL EngageSC page, works with undergrad and grad students from all schools",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page also lists Warren Bennis Scholars Program (20 sophomores, 2-year leadership program). Impact Scholars is now named Social Impact Scholars Program."
+    },
+    "jacobson-family-sustainable-impact-lecture-series": {
+      "name": "Jacobson Family Sustainable Impact Lecture Series",
+      "chunk": "gap-05",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab",
+          "kind": "official",
+          "holds": "states the series is hosted annually for students, alumni and local community; features social impact and business leaders",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page confirms annual series for students, alumni and the local community. No current-year schedule on the page."
+    },
+    "leverage-point-fellowship": {
+      "name": "Leverage Point Fellowship",
+      "chunk": "events-mentorship",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab",
+          "kind": "official",
+          "holds": "BSEL programs list: Social Impact Scholars, Warren Bennis Scholars, Jacobson lectures, MSSE; no Leverage Point Fellowship",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "marcia-israel-celebration-and-founder-showcase": {
+      "name": "Marcia Israel Celebration and Founder Showcase",
+      "chunk": "gap-05",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.marshall.usc.edu/posts/usc-greif-center-celebrate-student-and-alumni-founders-at-marcia-israel-celebration-and-founder-showcase",
+          "kind": "official",
+          "holds": "event recap: about 200 attendees voted with gold coins, undergrad and alumni winners, recognizes Greif Center 2025 graduates, New Venture Seed Competition prize",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Marcia Israel Celebration and Founder Showcase Greif Center 2026",
+        "Marcia Israel Celebration and Founder Showcase USC Greif Center 2026"
+      ],
+      "notes": "Recap is the 2025 edition (2025 graduates recognized). No 2026 edition found."
+    },
+    "marshall-experts-in-residence": {
+      "name": "Marshall Experts-in-Residence",
+      "chunk": "events-mentorship",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/Entrepreneur/rsvp?id=404802",
+          "kind": "campus-groups",
+          "holds": "Greif LaunchPad Office Hours: appointment only, 30-minute drop-ins, Blackstone LaunchPad, Bridge Hall basement, free, all business stages (event page dated Sep 23, 2025)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "This page is the Greif LaunchPad office hours listing (booking via Calendly uscblackstonelaunchpad/psof), consistent with current entry. Cal.com EIR details not re-verified."
+    },
+    "vaneck-southern-california-blockchain-conference": {
+      "name": "VanEck Southern California Blockchain Conference",
+      "chunk": "events-mentorship",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://calendar.usc.edu/event/usc-vaneck-southern-california-blockchain-conference-2026",
+          "kind": "official",
+          "holds": "April 22-23, 2026, Ginsburg Hall day 1 and Caruso Catholic Center day 2, free for everyone, co-hosted by VanEck Digital Assets Initiative and BlockchainSC",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://uscblockchainconf.com/",
+          "kind": "official",
+          "holds": "registration and agenda",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [],
+      "notes": "2026 edition is past; the 2027 date is not yet announced. Day 2 hackathon venue is Caruso Catholic Center."
+    },
+    "weekly-founder-salon": {
+      "name": "Weekly Founder Salon",
+      "chunk": "events-mentorship",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/Entrepreneur/rsvp?id=404802",
+          "kind": "campus-groups",
+          "holds": "Greif LaunchPad office hours, no salon found",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "iya-connect-weekly": {
+      "name": "IYA Connect Weekly",
+      "chunk": "events-mentorship",
+      "status": "not_found",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/",
+          "kind": "official",
+          "holds": "homepage has a newsletter signup (Get our newsletter); no IYA Connect Weekly named",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Homepage offers 'Get our newsletter' only."
+    },
+    "iya-entrepreneur-in-residence": {
+      "name": "IYA Entrepreneur in Residence",
+      "chunk": "p3-07",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/people/tina-sharkey",
+          "kind": "official",
+          "holds": "Tina Sharkey bio; now titled Lecturer, Business of Innovation (not EIR)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Sharkey's page lists her as Lecturer, Business of Innovation, and Director of Innovation Quest; it does not say Entrepreneur in Residence. Roster and booking process still unverified. Consider changing the link to a more suitable page."
+    },
+    "iya-founders-bootcamp": {
+      "name": "IYA Founders Bootcamp",
+      "chunk": "p3-04",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/the-pulse/fall-2024-iya-founders-bootcamp-recap",
+          "kind": "official",
+          "holds": "2024 recap, date, 75+ registrants, Microsoft $5,000 Azure credits",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/startups/blog/innovationquest/",
+          "kind": "news",
+          "holds": "Innovation Quest Azure credits (blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://iovine-young.usc.edu/the-pulse/founders-bootcamp-innovation-quest-2023-roundup",
+          "kind": "official",
+          "holds": "2023 kickoff (opened, only title renders)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "IYA Founders Bootcamp Fall 2025 Innovation Quest",
+        "IYA Founders Bootcamp Fall 2025 Innovation Quest Iovine and Young Academy"
+      ],
+      "notes": "Recap describes it as a one-day cornerstone of the yearlong Innovation Quest for qualified student-led ventures."
+    },
+    "all-school-startup-mixers": {
+      "name": "All-School Startup Mixers",
+      "chunk": "gap-05",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/Viterbitie/rsvp_boot?id=386311",
+          "kind": "campus-groups",
+          "holds": "past Technology Startup Networking Event hosted by Viterbi TIE and Greif Center, for people from across campus; MEPC/MFC/NVSC team building",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/tie-hub-events/",
+          "kind": "official",
+          "holds": "current TIE Hub events (Cloudflare blocked from this environment)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi TIE Hub events fall 2026 startup mixer co-founder"
+      ],
+      "notes": "Engage page confirms Viterbi TIE and Greif Center co-host a campus-wide mixer. No fall 2026 listing visible; official events page is blocked."
+    },
+    "from-discovery-to-commercialization-webinar-series": {
+      "name": "From Discovery to Commercialization Webinar Series",
+      "chunk": "events-mentorship",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://stevens.usc.edu/about/webinar-series-from-discovery-to-commercialization/",
+          "kind": "official",
+          "holds": "Series launched 2020-21 by Stevens Center and USC NAI chapter; lists 2021-22 webinars (latest Mar 9, 2022) with YouTube recordings; playlist bit.ly/DtoCwebinars",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page lists no sessions after March 2022; treat as a recorded resource."
+    },
+    "innovation-cafes": {
+      "name": "Innovation Cafes",
+      "chunk": "p3-04",
+      "status": "not_found",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://keck.usc.edu/mesh/for-faculty/innovation-cafes/",
+          "kind": "official",
+          "holds": "returns 404 now",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://keck.usc.edu/mesh/for-faculty/",
+          "kind": "official",
+          "holds": "MESH faculty page",
+          "lastChecked": null
+        },
+        {
+          "url": "https://keck.usc.edu/mesh-academy/events/",
+          "kind": "official",
+          "holds": "redirects to MESH Strategic Partnerships home, no Innovation Cafe mention",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Keck MESH Innovation Cafes",
+        "USC Keck MESH \"Innovation Cafe\" unmet medical needs"
+      ],
+      "notes": "Current link is dead (404). MESH is now MESH Strategic Partnerships; no Innovation Cafes found."
+    },
+    "keck-mesh-entrepreneurial-support": {
+      "name": "Keck MESH Entrepreneurial Support",
+      "chunk": "p3-07",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://keck.usc.edu/mesh/",
+          "kind": "official",
+          "holds": "MESH services",
+          "lastChecked": null
+        },
+        {
+          "url": "https://keck.usc.edu/mesh/our-services/",
+          "kind": "official",
+          "holds": "MESH services: entrepreneurial support, roadmaps, mentorship, CLS-FAST connections",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://keck.usc.edu/mesh/strategic-partnerships/",
+          "kind": "official",
+          "holds": "Partner list, CLS FAST-USC MESH track, Autobahn Labs up to $5M",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Readable via the node browser script. Services description matches. Audience not explicitly stated on pages read."
+    },
+    "founder-vc-fireside-chats": {
+      "name": "Founder/VC Fireside Chats",
+      "chunk": "p3-04",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/tie-hub-events/",
+          "kind": "official",
+          "holds": "TIE Hub Start-up Stories series, Mixers + Pitches (last updated Mar 2025)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Umbrella entry with no single host. TIE Hub Start-up Stories (Feb-Mar 2025) is the closest match."
+    },
+    "los-angeles-regional-sbdc-network": {
+      "name": "Los Angeles Regional SBDC Network",
+      "chunk": "p3-06",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://smallbizla.org/",
+          "kind": "official",
+          "holds": "no-cost confidential advising, LA/Santa Barbara/Ventura, hosted by Long Beach CCD, 1-866-588-SBDC",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://lbcc.edu/post/los-angeles-regional-small-business-development-centers-sbdc-network",
+          "kind": "official",
+          "holds": "host page (opened, only navigation text extracted)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Matches the entry."
+    },
+    "usc-alumni-entrepreneurs-network-aen": {
+      "name": "USC Alumni Entrepreneurs Network (AEN)",
+      "chunk": "p3-07",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://alumni.usc.edu/alumninetworks/aenmentorship/",
+          "kind": "official",
+          "holds": "AEN mentorship program, 2024 cohort (12 weeks from April), application closed notice",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page still shows only the 2024 cohort and says 2024 application is closed; no 2025/2026 dates found. Needs browser tool (Cloudflare blocks curl)."
+    },
+    "intellectual-property-training": {
+      "name": "Intellectual Property Training",
+      "chunk": "p3-06",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/",
+          "kind": "official",
+          "holds": "TIE Hub programs (blocked by Cloudflare from this environment)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/tie-hub-offerings/",
+          "kind": "official",
+          "holds": "no IP training detail",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi TIE Hub Technology Innovation Fellowship applications 2026",
+        "USC SHIP Fund TIE Hub student founders fall 2026"
+      ],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "national-i-corps-teams-grant": {
+      "name": "National I-Corps Teams Grant",
+      "chunk": "gap-10",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/icorps/icorps-teams/",
+          "kind": "official",
+          "holds": "USC I-Corps teams (Cloudflare blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://www.icorpshubwest.org/programs",
+          "kind": "official",
+          "holds": "regional program, path to Nationals, $50,000 grant",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "The icorpshubwest.org/programs page loaded on one fetch and then showed a bot check on a later one."
+    },
+    "nsf-i-corps-hub-west-region": {
+      "name": "NSF I-Corps Hub: West Region",
+      "chunk": "gap-10",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/icorps/",
+          "kind": "official",
+          "holds": "USC hub page (Cloudflare blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://www.icorpshubwest.org/programs",
+          "kind": "official",
+          "holds": "program description, impact numbers, path to nationals; Apply Now",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Cohort dates (Program Schedule page on icorpshubwest.org) not read; bot check blocked."
+    },
+    "technology-innovation-fellowship": {
+      "name": "Technology Innovation Fellowship",
+      "chunk": "p3-08",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbischool.usc.edu/news/2025/06/turning-research-into-reality-usc-launches-new-tech-innovation-fellowship/",
+          "kind": "news",
+          "holds": "June 3, 2025 launch, inaugural 5 fellows, bi-weekly check-ins, deep tech focus",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/",
+          "kind": "official",
+          "holds": "TIE Hub home; programs menu",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi TIE Hub Technology Innovation Fellowship applications 2026",
+        "USC Viterbi Technology Innovation Fellowship applications"
+      ],
+      "notes": "Launch article confirms; no newer application dates found. Fellows included PhD students and a Keck faculty member."
+    },
+    "founder-central-initiative": {
+      "name": "Founder Central Initiative",
+      "chunk": "p3-08",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.marshall.usc.edu/news/greif-center-names-dan-wadhwani-as-new-director",
+          "kind": "news",
+          "holds": "Wadhwani led Founder Central Initiative, a platform for course development, research symposia and postdoctoral mentoring",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Description matches article. Article does not give launch date or current activity; Wadhwani became Greif Center director July 1 (year not shown in text read)."
+    },
+    "vaneck-digital-assets-initiative": {
+      "name": "VanEck Digital Assets Initiative",
+      "chunk": "gap-10",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.marshall.usc.edu/institutes-and-centers/vaneck-digital-assets-initiative/",
+          "kind": "official",
+          "holds": "director, courses, SCBC conference and hackathon, contact veda@marshall.usc.edu",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Conference month not stated in text read; months left unchanged. Builders Grant not seen."
+    },
+    "deeptech-founder-matching": {
+      "name": "DeepTech Founder Matching",
+      "chunk": "gap-10",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://stevens.usc.edu/",
+          "kind": "official",
+          "holds": "Stevens home: invention disclosure, startup support, proof of concept funding; no founder matching mention",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Stevens Center Viterbi deep tech founder matching OR \"From Lab to Startup\" researchers"
+      ],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "from-lab-to-startup": {
+      "name": "From Lab to Startup",
+      "chunk": "gap-10",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://stevens.usc.edu/",
+          "kind": "official",
+          "holds": "Stevens startup support, proof of concept funding",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC Stevens Center Viterbi deep tech founder matching OR \"From Lab to Startup\" researchers"
+      ],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "usc-stevens-center-for-innovation": {
+      "name": "USC Stevens Center for Innovation",
+      "chunk": "research-legal",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://stevens.usc.edu/researchers-and-innovators/ip-licensing/",
+          "kind": "official",
+          "holds": "Disclosure via Inteum portal, licensing steps, licensing@stevens.usc.edu",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://stevens.usc.edu/",
+          "kind": "official",
+          "holds": "Home: invention disclosure, MTA requests, startup support, proof of concept funding, AI Tech Transfer Assistant",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Consistent with current entry."
+    },
+    "usc-stevens-legal-office-hours": {
+      "name": "USC Stevens Legal Office Hours",
+      "chunk": "research-legal",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://stevens.usc.edu/about-us/programs/legal-office-hours/",
+          "kind": "official",
+          "holds": "Free one-hour Zoom consult, eligibility (faculty, staff, students, alumni, startups without USC IP), intake form to legalofficehours@stevens.usc.edu",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page now lists patent searches and provisional/non-provisional applications under IP topics. Monthly schedule not stated officially (by appointment). Page URL is under /about-us/programs/ and still resolves; nav also lists it under Researchers & Innovators."
+    },
+    "alfred-e-mann-institute-integrated-core-services": {
+      "name": "Alfred E. Mann Institute Integrated Core Services",
+      "chunk": "p3-08",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://ami.usc.edu/",
+          "kind": "official",
+          "holds": "AMI site (could not open; empty/connection failure)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://research.usc.edu/alfred-e-mann-institute-for-biomedical-engineering/",
+          "kind": "official",
+          "holds": "AMI overview (seen in search only)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbischool.usc.edu/news/2022/11/35-million-gift-era-of-the-alfred-e-mann-department-of-biomedical-engineering-begins/",
+          "kind": "news",
+          "holds": "2022 gift, AMI background (search snippet only)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Alfred E. Mann Institute USC AMI faculty biomedical technology",
+        "Alfred E. Mann Institute USC AMI biomedical"
+      ],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "sc-ctsi-southern-california-clinical-and-translational-scien": {
+      "name": "SC CTSI (Southern California Clinical and Translational Science Institute)",
+      "chunk": "research-legal",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://sc-ctsi.org/",
+          "kind": "official",
+          "holds": "Home page current (news dated Oct 2026), nav: Funding Opportunities, Regulatory portal, training",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Home is live and current. /funding-opportunities returns 404 and I did not reach the 2026 pilot grant call, so the 2024 amounts remain unverified for 2026."
+    },
+    "spark-at-usc": {
+      "name": "SPARK at USC",
+      "chunk": "research-legal",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://stemcell.keck.usc.edu/?p=8917",
+          "kind": "official",
+          "holds": "2026 grant call: deadline, eligibility, funding, expectations; posted May 20, 2026",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Only 1 team selected for 2026. Call is for regenerative medicine specifically; contact Dr. Juliane Glaeser. Educational series open to all in person with NDA."
+    },
+    "intellectual-property-and-technology-law-clinic-iptlc": {
+      "name": "Intellectual Property and Technology Law Clinic (IPTLC)",
+      "chunk": "research-legal",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://gould.usc.edu/academics/experiential/clinics/iptlc",
+          "kind": "official",
+          "holds": "Clinic description: copyright, fair use, trademarks, licensing, clients are filmmakers, game developers, artists, entrepreneurs, nonprofits",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page does not mention patents or intake criteria."
+    },
+    "small-business-clinic": {
+      "name": "Small Business Clinic",
+      "chunk": "research-legal",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://gould.usc.edu/academics/courses/small-business-clinic-i-and-ii",
+          "kind": "official",
+          "holds": "Legal assistance to small businesses, entrepreneurs, nonprofits that cannot pay market rates",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Course page LAW-736/737."
+    },
+    "clerky": {
+      "name": "Clerky",
+      "chunk": "research-legal",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.clerky.com/pricing",
+          "kind": "official",
+          "holds": "$819 one-time lifetime package, pay per use option",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.clerky.com",
+          "kind": "official",
+          "holds": "Delaware C corp incorporation, fundraising, hiring products, Delaware PBCs",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "$819 confirmed; pay-per-use $427/$299 not verified in text read. Site also offers Delaware PBC support."
+    },
+    "cmu-international-founders-resource": {
+      "name": "CMU International Founders Resource",
+      "chunk": "research-legal",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.cmu.edu/swartz-center-for-entrepreneurship/education-and-resources/international-founders/",
+          "kind": "official",
+          "holds": "Dead link (404)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Link is dead. Replacement page not found; consider searching CMU Swartz Center site or removing the entry."
+    },
+    "cooley-go": {
+      "name": "Cooley GO",
+      "chunk": "research-legal",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.cooleygo.com",
+          "kind": "official",
+          "holds": "Guidance by stage, docs, collections, copyright 2026",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": null
+    },
+    "dla-piper-accelerate": {
+      "name": "DLA Piper Accelerate",
+      "chunk": "research-legal",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.dlapiper.com/en/resources/accelerate",
+          "kind": "official",
+          "holds": "Guide sections: formation, IP/data protection, funding, employees, going global, regulatory, exit",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "URL works; page did not clearly show document generators."
+    },
+    "legalpad": {
+      "name": "Legalpad",
+      "chunk": "research-legal",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.deel.com/immigration",
+          "kind": "official",
+          "holds": "Deel Immigration for founders, O-1 reviews",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Legalpad brand folded into Deel Immigration; link current."
+    },
+    "peter-roberts-immigration-amas": {
+      "name": "Peter Roberts Immigration AMAs",
+      "chunk": "research-legal",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://news.ycombinator.com/item?id=23940345",
+          "kind": "other",
+          "holds": "July 24, 2020 AMA by Peter Roberts, immigration attorney for YC and startups",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Archived thread; not legal advice."
+    },
+    "project-law": {
+      "name": "Project Law",
+      "chunk": "research-legal",
+      "status": "not_found",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://projectimmigration.com",
+          "kind": "other",
+          "holds": "returned no content",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "projectimmigration.com returned nothing; no alternate source found. Consider removing."
+    },
+    "sophie-alcorn-alcorn-immigration-law": {
+      "name": "Sophie Alcorn (Alcorn Immigration Law)",
+      "chunk": "p3-06",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://alcorn.law",
+          "kind": "official",
+          "holds": "Founder Law services, student founder (F-1/OPT) section",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.rsaconference.com/experts/sophie-alcorn",
+          "kind": "other",
+          "holds": "speaker bio describing Alcorn Immigration Law",
+          "lastChecked": null
+        },
+        {
+          "url": "https://crunchbase.com/person/sophie-alcorn",
+          "kind": "other",
+          "holds": "Founder and CEO, Alcorn Immigration Law",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Sophie Alcorn immigration attorney Alcorn Immigration Law Founder Law"
+      ],
+      "notes": "Site at alcorn.law is now branded Founder Law. Free podcast/column not confirmed on site."
+    },
+    "stripe-atlas": {
+      "name": "Stripe Atlas",
+      "chunk": "research-legal",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://stripe.com/atlas",
+          "kind": "official",
+          "holds": "Atlas now advertises C corp or LLC",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Did not see the $500 price in the text I read; leave funding unchanged but verify."
+    },
+    "venture-scout": {
+      "name": "Venture Scout",
+      "chunk": "gap-10",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/",
+          "kind": "official",
+          "holds": "TIE Hub home (Cloudflare blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://www.cs.usc.edu/newsletter/ug-ms-phd-upcoming-spring-2026-tie-hub-opportunities/",
+          "kind": "listing",
+          "holds": "Spring 2026 TIE Hub opportunities (Cloudflare blocked on curl; snippet only)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC Viterbi TIE Hub Venture Scout students venture capital",
+        "Viterbi Student Innovation Institute VSi2 USC TIE Hub"
+      ],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "viterbi-student-innovation-institute-vsi2": {
+      "name": "Viterbi Student Innovation Institute (VSi2)",
+      "chunk": "p3-08",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/students/vsi2/",
+          "kind": "official",
+          "holds": "VSi2 page, reportedly last updated Dec 4, 2024 (per search snippet); contact viterbi-innovation@usc.edu",
+          "lastChecked": null
+        },
+        {
+          "url": "https://vsi2.usc.edu",
+          "kind": "official",
+          "holds": "same page as above",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/community/usc-students/vsi2/",
+          "kind": "official",
+          "holds": "VSi2 description, contact, EngageSC group; last updated Dec 4, 2024",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/",
+          "kind": "official",
+          "holds": "William W. Wang TIE Hub home",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Viterbi Student Innovation Institute VSi2 USC TIE Hub",
+        "USC Viterbi TIE Hub Venture Scout students venture capital"
+      ],
+      "notes": "Page matches description and link works. Page text says it supports students, faculty, alumni and community."
+    },
+    "microsoft-for-startups-partnership-innovation-quest": {
+      "name": "Microsoft for Startups partnership (Innovation Quest)",
+      "chunk": "p3-07",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/the-pulse/iya-microsoft-for-startups-partnership-innovation-quest",
+          "kind": "official",
+          "holds": "Oct 15, 2024 announcement: up to $150,000 Azure credits, Azure OpenAI, Founders Hub, 1,600 experts, starting Oct 1, 2024",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/startups/blog/innovationquest/",
+          "kind": "official",
+          "holds": "Microsoft blog announcement (blocked by high-demand page this run)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [],
+      "notes": "IYA announcement matches entry. Continuation in 2025-26 not confirmed."
+    },
+    "ai-in-medicine-collaboratory-ai-medx": {
+      "name": "AI in Medicine Collaboratory (AI-MEDx)",
+      "chunk": "p3-07",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://keck.usc.edu/mesh/strategic-partnerships/ai-in-medicine-collaboratory",
+          "kind": "official",
+          "holds": "Mission, leadership (Thompson, Gill, Conti, Duddalwar), Innovation Cafes, partnering program",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Keck MESH strategic partnerships Auransa ChemDiv AI-MEDx"
+      ],
+      "notes": "Matches entry; audience not explicitly stated on page."
+    },
+    "auransa-partnership": {
+      "name": "Auransa Partnership",
+      "chunk": "p3-07",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://keck.usc.edu/mesh/strategic-partnerships/",
+          "kind": "official",
+          "holds": "Auransa section: phase 1 liver cancer trial with USC Norris, AI drug discovery platform plus Brown Center; contact Vasiliki Anest",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Keck MESH strategic partnerships Auransa ChemDiv AI-MEDx"
+      ],
+      "notes": "Page adds that a phase 1 clinical trial in liver and solid tumors is underway; description is still accurate. Other partners listed: Autobahn Labs (up to $5M), CLS FAST, ChemDiv, Ryght."
+    },
+    "autobahn-labs-collaboration": {
+      "name": "Autobahn Labs Collaboration",
+      "chunk": "gap-09",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://keck.usc.edu/mesh/strategic-partnerships/",
+          "kind": "official",
+          "holds": "MESH partnerships list (blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://stevens.usc.edu/industry-news/usc-announces-strategic-collaboration-with-autobahn-labs-to-accelerate-drug-discovery/",
+          "kind": "official",
+          "holds": "Announcement date, up to $5M per selected project, MESH as point of contact",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Funding, description and link confirmed. Page does not state a rolling cadence explicitly."
+    },
+    "chemdiv-partnership": {
+      "name": "ChemDiv Partnership",
+      "chunk": "p3-08",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://keck.usc.edu/mesh/strategic-partnerships/",
+          "kind": "official",
+          "holds": "ChemDiv multi-year service agreement, contacts (needs read-page.cjs; curl is Cloudflare blocked)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Keck MESH strategic partnerships Auransa ChemDiv AI-MEDx"
+      ],
+      "notes": "Page confirms multi-year service agreement with CCDD and San Diego CRO. No eligibility terms stated; contact Camilo Ansarah-Sobrinho."
+    },
+    "rosalie-and-harold-rae-brown-center-for-cancer-drug-developm": {
+      "name": "Rosalie and Harold Rae Brown Center for Cancer Drug Development",
+      "chunk": "gap-09",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://uscnorriscancer.usc.edu/center-for-cancer-drug-development",
+          "kind": "official",
+          "holds": "Established 2020, academic-industry model, how to submit (Melissa Rodgers, MESH), industry contact Vasiliki Anest",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://keck.usc.edu/mesh/strategic-partnerships/",
+          "kind": "official",
+          "holds": "MESH partnerships (blocked)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page lists Norris members as the audience and still names the same two contacts. Anest is described in search results as MESH Chief Innovation Officer."
+    },
+    "ryght-research-network": {
+      "name": "Ryght Research Network",
+      "chunk": "gap-09",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://keck.usc.edu/mesh/strategic-partnerships/",
+          "kind": "official",
+          "holds": "MESH partnerships (blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://www.clinicalresearchnewsonline.com/news/2025/02/20/usc-to-use-generative-ai-to-make-cancer-clinical-trials-more-efficient",
+          "kind": "news",
+          "holds": "First US academic site in Ryght network; pilot of feasibility/efficiency tools at USC Norris; work began first week of 2025",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Feb 2025 article only; no newer status found."
+    },
+    "sanford-burnham-prebys-partnership": {
+      "name": "Sanford Burnham Prebys Partnership",
+      "chunk": "p3-08",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://uscnorriscancer.usc.edu/2021/08/02/university-of-southern-california-norris-comprehensive-cancer-center-announces-collaborative-partnership-with-sanford-burnham-prebys/",
+          "kind": "official",
+          "holds": "2021 announcement; body text not captured in first read (navigation only)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://keck.usc.edu/mesh/strategic-partnerships/",
+          "kind": "official",
+          "holds": "SBP partnership description, eligibility, contact Melissa Rodgers",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Current page still lists SBP as a partner. Current eligibility (Norris/Keck investigators with cancer targets) is narrower than the source."
+    },
+    "alliance-for-socal-innovation": {
+      "name": "Alliance for SoCal Innovation",
+      "chunk": "gap-09",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://alliancesocal.org/",
+          "kind": "official",
+          "holds": "Main site (blocked)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://lu.ma/3wctq2ux",
+          "kind": "listing",
+          "holds": "SoCal Deep Tech Symposium 2025, Sept 18, 2025, El Segundo (search snippet)",
+          "lastChecked": null
+        },
+        {
+          "url": "https://altasea.org/event/first-look-socal-2023/",
+          "kind": "listing",
+          "holds": "First Look 2023 on June 14, 2023",
+          "lastChecked": null
+        },
+        {
+          "url": "https://luma.com/ngwv9b3r",
+          "kind": "listing",
+          "holds": "SoCal Deep Tech Symposium 2026 date, agenda, presenting startups including a USC startup",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://luma.com/d4ogqypj",
+          "kind": "listing",
+          "holds": "SoCal MedTech Symposium 2026 (Nov 4, UC Irvine, per search snippet)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "Alliance for SoCal Innovation First Look showcase 2025 2026",
+        "Alliance for SoCal Innovation First Look showcase 2025"
+      ],
+      "notes": "Cadence annual symposia may fit better than ongoing, but left as is. MedTech date comes from a snippet only."
+    },
+    "apple-tree-partners": {
+      "name": "Apple Tree Partners",
+      "chunk": "partners",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.appletreepartners.com/",
+          "kind": "official",
+          "holds": "Firm description, portfolio news through Oct 2026",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Site is active (news dated Oct 15, 2026) and describes working with scientists from pre-IP ideas through IPO."
+    },
+    "bio-biotechnology-innovation-organization": {
+      "name": "BIO (Biotechnology Innovation Organization)",
+      "chunk": "partners",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.bio.org/",
+          "kind": "official",
+          "holds": "Events, membership, startup member benefits",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "June month stays correct."
+    },
+    "biocom-california": {
+      "name": "Biocom California",
+      "chunk": "partners",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.biocom.org/",
+          "kind": "official",
+          "holds": "Membership, Greater Los Angeles office, Venture Hub, events",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Site lists a Greater Los Angeles location and a Venture Hub."
+    },
+    "biosciencela": {
+      "name": "BioscienceLA",
+      "chunk": "partners",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.biosciencela.org/",
+          "kind": "official",
+          "holds": "Mission, BioscienceLA Week 2026, resources",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Describes itself as the backbone organization coordinating LA's life sciences innovation; hosts BioscienceLA Week annually."
+    },
+    "biotech-connection-la": {
+      "name": "Biotech-Connection LA",
+      "chunk": "partners",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.bc-la.org/",
+          "kind": "official",
+          "holds": "Mission, events, consulting projects, Bio-Entrepreneurship seminar, podcast",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Celebrating 10th anniversary; mission targets emerging scientists and entrepreneurs in LA."
+    },
+    "emerson-collective": {
+      "name": "Emerson Collective",
+      "chunk": "partners",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.emersoncollective.com/",
+          "kind": "official",
+          "holds": "Mission, Demo Day, Emerson Consequential Scholars",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Site says it invests in entrepreneurs and innovators; has a Demo Day program."
+    },
+    "lava-los-angeles-venture-association": {
+      "name": "LAVA (Los Angeles Venture Association)",
+      "chunk": "partners",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.lava.org/",
+          "kind": "official",
+          "holds": "Since 1985 mission, events (Meet the VC, First Look SoCal, LAVA Awards), communities incl. Trojans at LAVA",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Has a Trojans at LAVA affinity group, relevant to USC."
+    },
+    "socalbio": {
+      "name": "SoCalBio",
+      "chunk": "p3-08",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "http://socalbio.org/",
+          "kind": "official",
+          "holds": "Returned empty response",
+          "lastChecked": null
+        },
+        {
+          "url": "https://socalbio.org/events/",
+          "kind": "official",
+          "holds": "events calendar",
+          "lastChecked": null
+        },
+        {
+          "url": "https://socalbio.org/",
+          "kind": "official",
+          "holds": "mission, events, membership programs (Innovation Catalyst)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "SoCalBio life science Southern California events 2026"
+      ],
+      "notes": "Read via read-page.cjs. Hosts 50+ events annually; says it welcomes startup founders, researchers, investors."
+    },
+    "uidp": {
+      "name": "UIDP",
+      "chunk": "p3-08",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://uidp.org/",
+          "kind": "official",
+          "holds": "member list of universities and companies, I-PhD Scholars program, membership and events",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.uwyo.edu/news/2026/03/uw-joins-university-industry-demonstration-partnership.html",
+          "kind": "news",
+          "holds": "March 2026 membership announcement; membership by invitation per snippet",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "UIDP University-Industry Demonstration Partnership membership mission"
+      ],
+      "notes": "Opened via browser reader; site shows university and company members and nothing contradicts the entry. Did not find explicit USC membership statement."
+    },
+    "wavemaker-360-health": {
+      "name": "Wavemaker 360 Health",
+      "chunk": "gap-10",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.wavemaker360.com/",
+          "kind": "official",
+          "holds": "official site (bot check blocks curl)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://dot.la/wavemaker-360-fund-2657485526.html",
+          "kind": "news",
+          "holds": "fund size, location, check size, seed focus",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "Wavemaker 360 Health digital health accelerator Los Angeles"
+      ],
+      "notes": "Official site blocked by bot check. Article is from 2022; no current cohort or application info found."
+    },
+    "westlake-village-biopartners": {
+      "name": "Westlake Village BioPartners",
+      "chunk": "partners",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://westlakebio.com/",
+          "kind": "official",
+          "holds": "Firm description; name now Westlake BioPartners",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Active life science VC in the LA biotech community; official name is Westlake BioPartners."
+    },
+    "fda-approval-biomedical-device-primer": {
+      "name": "FDA Approval / Biomedical Device Primer",
+      "chunk": "p3-05",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/",
+          "kind": "official",
+          "holds": "TIE Hub home; blocked by Cloudflare",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/tie-hub-events/",
+          "kind": "official",
+          "holds": "TIE Hub events page; lists Start-Up Stories, co-founder mixer, Mixers + Pitches (last updated Mar 2025); no FDA session",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC TIE Hub Viterbi Fundraising Bootcamp international student start a company FDA biomedical device primer"
+      ],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "fundraising-bootcamp": {
+      "name": "Fundraising Bootcamp",
+      "chunk": "p3-05",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/tie-hub-events/",
+          "kind": "official",
+          "holds": "TIE Hub events page; no Fundraising Bootcamp listed",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.cs.usc.edu/newsletter/ug-ms-phd-upcoming-spring-2026-tie-hub-opportunities/",
+          "kind": "listing",
+          "holds": "Spring 2026 TIE Hub opportunities list (blocked; seen in search snippet only)",
+          "lastChecked": null
+        }
+      ],
+      "searchQueries": [
+        "USC TIE Hub Viterbi Fundraising Bootcamp"
+      ],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "how-to-start-a-company-as-an-international-student": {
+      "name": "How to Start a Company as an International Student",
+      "chunk": "p3-05",
+      "status": "confirmed-by-staff",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/",
+          "kind": "official",
+          "holds": "TIE Hub home; blocked by Cloudflare",
+          "lastChecked": null
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/tie-hub-events/",
+          "kind": "official",
+          "holds": "TIE Hub events page; no international student session listed",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [
+        "USC TIE Hub international student start a company"
+      ],
+      "notes": "Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    },
+    "greif-center-newsletter": {
+      "name": "Greif Center Newsletter",
+      "chunk": "toolkits",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.marshall.usc.edu/departments/lloyd-greif-center-entrepreneurial-studies/newsletter",
+          "kind": "official",
+          "holds": "Lloyd Greif Center Newsletter signup form page exists",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page loads and is titled Lloyd Greif Center Newsletter Form; only nav text read, so the content claims are not independently verified."
+    },
+    "iya-founder-hub-student-founder-resources": {
+      "name": "IYA Founder Hub (Student Founder Resources)",
+      "chunk": "p3-05",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://iovine-young.usc.edu/student-founder-resources",
+          "kind": "official",
+          "holds": "Founder Hub benefits, eligibility, sign-up instructions (readable via browser script)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page copy seems dated (references Jan 2025 Imagine Cup). Funding figure confirmed."
+    },
+    "venture-scoring-and-resource-unlock-system-iya": {
+      "name": "Venture Scoring and Resource Unlock System (IYA)",
+      "chunk": "p3-05",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://wobbly-pyroraptor-a52.notion.site/Venture-Scoring-and-Resource-Unlock-System-prototype-f6bdb7088d64476d959761ab44e6d05a",
+          "kind": "other",
+          "holds": "Notion prototype page; JS only",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Did not open this run."
+    },
+    "usc-innovation-ecosystem-portal": {
+      "name": "USC Innovation Ecosystem Portal",
+      "chunk": "toolkits",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://innovation.usc.edu/",
+          "kind": "official",
+          "holds": "Portal home: Inspire/Ignite/Invest stages, innovation network, news (latest post July 2026)",
+          "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://research.usc.edu/?p=6349",
+          "kind": "news",
+          "holds": "Launch announcement, June 18, 2025",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Portal live and active. Launch date in entry (May 30, 2025) not re-verified; announcement published June 18, 2025."
+    },
+    "microsoft-for-startups-founders-hub-usc-offer": {
+      "name": "Microsoft for Startups Founders Hub (USC offer)",
+      "chunk": "toolkits",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://provost.sma.usc.edu/prog/microsoft",
+          "kind": "application",
+          "holds": "USC application page, opens Jan 27 2026, eligibility (startup, building MVP/POC, LinkedIn URL)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page does not state credit amounts or the $10,000 Azure cap; those remain from other sources."
+    },
+    "carta": {
+      "name": "Carta",
+      "chunk": "p3-05",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://carta.com/launch/",
+          "kind": "official",
+          "holds": "Carta Launch benefits, sign-up steps, SAFE tools (read via browser script)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "FAQ answers with the 25 stakeholder and $1M limits were collapsed; existing description not contradicted but not re-verified."
+    },
+    "do-more-faster": {
+      "name": "Do More Faster",
+      "chunk": "toolkits",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.barnesandnoble.com/w/do-more-faster-brad-feld/1100296777",
+          "kind": "listing",
+          "holds": "Book listing: Do More Faster: Techstars Lessons to Accelerate Your Startup",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Listing live."
+    },
+    "fast-agreement-founder-advisor-standard-template": {
+      "name": "FAST Agreement (Founder Advisor Standard Template)",
+      "chunk": "toolkits",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://fi.co/fast",
+          "kind": "official",
+          "holds": "FAST Agreement page on Founder Institute site",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page live; equity terms not seen in the truncated read."
+    },
+    "first-round-review": {
+      "name": "First Round Review",
+      "chunk": "toolkits",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://review.firstround.com",
+          "kind": "official",
+          "holds": "Live publication with articles, podcast, newsletter",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": null
+    },
+    "fundraising-by-ryan-breslow": {
+      "name": "Fundraising by Ryan Breslow",
+      "chunk": "p3-05",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.audible.com/pd/Fundraising-Audiobook/B09DJ7JQJF",
+          "kind": "listing",
+          "holds": "Audible listing; now returns an error page",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Audible link returned an error page via curl; could not verify the book or find a replacement link. Consider a new link."
+    },
+    "fysk-founders-you-should-know": {
+      "name": "FYSK (Founders You Should Know)",
+      "chunk": "toolkits",
+      "status": "updated",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://foundersysk.com",
+          "kind": "official",
+          "holds": "Showcase cadence, SF, invite-only, vetting",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Site mentions San Francisco only; New York not confirmed."
+    },
+    "nfx": {
+      "name": "NFX",
+      "chunk": "toolkits",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.nfx.com",
+          "kind": "official",
+          "holds": "Free content, weekly newsletter, posts through Sep 2026",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": null
+    },
+    "venture-deals": {
+      "name": "Venture Deals",
+      "chunk": "toolkits",
+      "status": "confirmed",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.venturedeals.com",
+          "kind": "official",
+          "holds": "Book site live",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": null
+    },
+    "yc-startup-library": {
+      "name": "YC Startup Library",
+      "chunk": "p3-05",
+      "status": "unchecked",
+      "lastResearched": "2026-10-21",
+      "sources": [
+        {
+          "url": "https://www.ycombinator.com/library",
+          "kind": "official",
+          "holds": "Library index; curl returns only the title (JS rendered)",
+          "lastChecked": "2026-10-21"
+        }
+      ],
+      "searchQueries": [],
+      "notes": "Page loads (title YC Startup Library) but content not readable, so no fields verified."
+    }
+  },
+  "listings": {
+    "https://engage.usc.edu/entrepreneur/": {
+      "covers": "Greif Center programs on EngageSC: NVSC, VCIC, Hult Prize, Catalyst Microgrant, Greif LaunchPad",
+      "chunk": "competitions-spaces",
+      "lastSeen": "2026-10-21"
+    },
+    "https://clubs.marshall.usc.edu/": {
+      "covers": "Marshall graduate clubs (EVMA, HTA)",
+      "chunk": "clubs",
+      "lastSeen": "2026-10-21"
+    },
+    "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies": {
+      "covers": "Greif Center courses and degrees (BAEP, minor, MSEI, MSSE)",
+      "chunk": "courses",
+      "lastSeen": "2026-10-21"
+    },
+    "https://iovine-young.usc.edu/program/minors.html": {
+      "covers": "All five Iovine and Young Academy minors, application timing",
+      "chunk": "p3-02",
+      "lastSeen": "2026-10-21"
+    },
+    "https://www.marshall.usc.edu/programs/graduate-programs/graduate-certificates/graduate-certificate-in-technology-commercialization": {
+      "covers": "Marshall graduate certificates overview",
+      "chunk": "courses",
+      "lastSeen": "2026-10-21"
+    },
+    "https://viterbiinnovation.usc.edu/competitions-and-programs/vsee": {
+      "covers": "Viterbi innovation competitions and programs",
+      "chunk": "courses",
+      "lastSeen": "2026-10-21"
+    },
+    "https://rii.usc.edu/wp-content/uploads/sites/5/2026/04/Innovation-Catalyst-Program-Final-v8.pdf": {
+      "covers": "All ICP initiatives: Innovation Empowerment, Stevens Translation Catalyst, Startup Launch, Early Career Innovator (and Techstars) with deadlines, amounts, eligibility",
+      "chunk": "funding",
+      "lastSeen": "2026-10-21"
+    },
+    "https://research.usc.edu/?p=6483": {
+      "covers": "OORI RCP/ICP unified funding pipeline announcement",
+      "chunk": "funding",
+      "lastSeen": "2026-10-21"
+    },
+    "https://students.marshall.usc.edu/node/387104": {
+      "covers": "Marshall resources for launched ventures incl. Marshall Venture Fund",
+      "chunk": "funding",
+      "lastSeen": "2026-10-21"
+    },
+    "https://engage.usc.edu/Viterbitie/": {
+      "covers": "Viterbi TIE Hub events on EngageSC (Origin Weekend, Trojan Tank)",
+      "chunk": "competitions-spaces",
+      "lastSeen": "2026-10-21"
+    },
+    "https://calendar.usc.edu/event/usc-and-techstars-startup-weekend-2026": {
+      "covers": "USC event calendar entry for Startup Weekend",
+      "chunk": "competitions-spaces",
+      "lastSeen": "2026-10-21"
+    },
+    "https://www.techstars.com/usc-and-techstars-programs": {
+      "covers": "USC and Techstars Accelerator, University Catalyst, Startup Weekend",
+      "chunk": "competitions-spaces",
+      "lastSeen": "2026-10-21"
+    },
+    "https://www.cs.usc.edu/newsletter/ug-ms-phd-upcoming-spring-2026-tie-hub-opportunities/": {
+      "covers": "TIE Hub opportunity roundups",
+      "chunk": "p3-06",
+      "lastSeen": "2026-10-21"
+    },
+    "https://www.techstars.com/accelerators": {
+      "covers": "Techstars accelerators including USC and Techstars",
+      "chunk": "accelerators",
+      "lastSeen": "2026-10-21"
+    },
+    "https://games.usc.edu/initiatives": {
+      "covers": "USC Games initiatives",
+      "chunk": "accelerators",
+      "lastSeen": "2026-10-21"
+    },
+    "https://engage.usc.edu/Viterbitie/events": {
+      "covers": "Viterbi TIE events (JS-rendered)",
+      "chunk": "p3-04",
+      "lastSeen": "2026-10-21"
+    },
+    "https://engage.usc.edu/bsel/": {
+      "covers": "BSEL events and news",
+      "chunk": "events-mentorship",
+      "lastSeen": "2026-10-21"
+    },
+    "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab": {
+      "covers": "Brittingham Social Enterprise Lab, Jacobson lecture series",
+      "chunk": "gap-05",
+      "lastSeen": "2026-10-21"
+    },
+    "https://stevens.usc.edu/": {
+      "covers": "Stevens Center startup support and proof of concept funding",
+      "chunk": "gap-10",
+      "lastSeen": "2026-10-21"
+    },
+    "https://gould.usc.edu/academics/experiential/clinics/iptlc": {
+      "covers": "USC Gould clinics (IPTLC, Small Business Clinic)",
+      "chunk": "research-legal",
+      "lastSeen": "2026-10-21"
+    },
+    "https://stemcell.keck.usc.edu/?p=8917": {
+      "covers": "SPARK at USC grant call",
+      "chunk": "research-legal",
+      "lastSeen": "2026-10-21"
+    },
+    "https://keck.usc.edu/mesh/strategic-partnerships/": {
+      "covers": "MESH strategic partners: Brown Center, Sanford Burnham Prebys, Auransa, ChemDiv, Autobahn Labs, Ryght, AI-MEDx, CLS, Heal LA (needs read-page.cjs)",
+      "chunk": "p3-08",
+      "lastSeen": "2026-10-21"
+    },
+    "https://www.lava.org/": {
+      "covers": "LAVA events including First Look SoCal, with Trojans at LAVA group",
+      "chunk": "partners",
+      "lastSeen": "2026-10-21"
+    },
+    "https://innovation.usc.edu/": {
+      "covers": "USC Innovation Ecosystem portal linking OORI, Stevens Center, Techstars, Innovation Quest, Greif Center, I-Corps",
+      "chunk": "toolkits",
+      "lastSeen": "2026-10-21"
+    },
+    "https://viterbiinnovation.usc.edu/competitions-and-programs/summer-smasher-2": {
+      "covers": "Viterbi Innovation programs (Summer Smasher, VSG, ventureSPARK); Cloudflare blocked from curl",
+      "chunk": "gap-01",
+      "lastSeen": "2026-10-21"
+    },
+    "https://iovine-young.usc.edu/the-pulse": {
+      "covers": "IYA news incl. Innovation Quest recaps",
+      "chunk": "gap-01",
+      "lastSeen": "2026-10-21"
+    },
+    "https://larta.org/heal-la/": {
+      "covers": "Heal.LA program and cohorts",
+      "chunk": "gap-01",
+      "lastSeen": "2026-10-21"
+    },
+    "https://viterbiinnovation.usc.edu/": {
+      "covers": "William W. Wang TIE Hub: competitions, programs, courses, events, VSi2, Technology Innovation Fellowship",
+      "chunk": "p3-08",
+      "lastSeen": "2026-10-21"
+    },
+    "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies": {
+      "covers": "Greif Center hub listing Marshall entrepreneurship programs",
+      "chunk": "p3-03",
+      "lastSeen": "2026-10-21"
+    },
+    "https://iovine-young.usc.edu/the-pulse/": {
+      "covers": "IYA news incl. Founders Bootcamp and Innovation Quest recaps",
+      "chunk": "gap-04",
+      "lastSeen": "2026-10-21"
+    },
+    "https://viterbiinnovation.usc.edu/competitions-and-programs/": {
+      "covers": "Viterbi innovation programs (Cloudflare blocked from curl)",
+      "chunk": "gap-04",
+      "lastSeen": "2026-10-21"
+    },
+    "https://viterbiinnovation.usc.edu/tie-hub-events/": {
+      "covers": "TIE Hub events (Start-Up Stories, co-founder mixers, Mixers + Pitches)",
+      "chunk": "p3-05",
+      "lastSeen": "2026-10-21"
+    },
+    "https://iovine-young.usc.edu/student-founder-resources": {
+      "covers": "IYA Innovation Quest and Microsoft Founders Hub resources",
+      "chunk": "p3-05",
+      "lastSeen": "2026-10-21"
+    },
+    "https://viterbiinnovation.usc.edu/about/tie-hub-offerings/": {
+      "covers": "TIE Hub offerings",
+      "chunk": "p3-07",
+      "lastSeen": "2026-10-21"
+    },
+    "https://today.usc.edu/makerspaces-usc-campus-los-angeles/": {
+      "covers": "USC makerspaces overview (Garage, Baum Family Maker Space), 2018",
+      "chunk": "gap-07",
+      "lastSeen": "2026-10-21"
+    },
+    "https://uscnorriscancer.usc.edu/center-for-cancer-drug-development": {
+      "covers": "Brown Center and its partners",
+      "chunk": "gap-09",
+      "lastSeen": "2026-10-21"
+    },
+    "https://luma.com/ngwv9b3r": {
+      "covers": "Alliance for SoCal Innovation 2026 Deep Tech Symposium and First Look showcase",
+      "chunk": "gap-09",
+      "lastSeen": "2026-10-21"
+    },
+    "https://www.icorpshubwest.org/programs": {
+      "covers": "I-Corps Hub West regional program and path to National I-Corps",
+      "chunk": "gap-10",
+      "lastSeen": "2026-10-21"
+    },
+    "https://viterbiinnovation.usc.edu/community": {
+      "covers": "TIE Hub community and student programs (blocked to curl)",
+      "chunk": "gap-10",
+      "lastSeen": "2026-10-21"
+    },
+    "https://students.marshall.usc.edu/node/185116": {
+      "covers": "Marshall entrepreneurship student orgs: EVMA, Lava Lab, SEP, Troy Labs, Spark SC",
+      "chunk": "gap-11",
+      "lastSeen": "2026-10-21"
+    },
+    "https://clubs.marshall.usc.edu/EVMA/club_signup": {
+      "covers": "Marshall graduate clubs list",
+      "chunk": "gap-12",
+      "lastSeen": "2026-10-21"
+    },
+    "https://iovine-young.usc.edu/iya-innovation-quest": {
+      "covers": "IYA Innovation Quest, Venture Showcase, hackathon (renders only the homepage so far)",
+      "chunk": "p3-01",
+      "lastSeen": "2026-10-21"
+    },
+    "https://students.marshall.usc.edu/node/387101": {
+      "covers": "ATHENA Initiative at Marshall",
+      "chunk": "p3-01",
+      "lastSeen": "2026-10-21"
+    },
+    "https://viterbiundergrad.usc.edu/ehp/": {
+      "covers": "Viterbi Engineering Honors Program",
+      "chunk": "p3-03",
+      "lastSeen": "2026-10-21"
+    },
+    "https://tac.usc.edu/academics/innovation-digital-entrepreneur": {
+      "covers": "Technology Entrepreneurship minor",
+      "chunk": "p3-04",
+      "lastSeen": "2026-10-21"
+    },
+    "https://alumni.usc.edu/alumninetworks/aenmentorship/": {
+      "covers": "USC Alumni Entrepreneurs Network mentorship",
+      "chunk": "p3-07",
+      "lastSeen": "2026-10-21"
+    }
+  },
+  "lastRun": "2026-10-21"
+}

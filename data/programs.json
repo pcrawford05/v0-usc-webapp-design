@@ -29,7 +29,8 @@
       "https://viterbischool.usc.edu/news/2026/02/where-mechanical-engineers-are-made-inside-the-baum-family-maker-space/"
     ],
     "confidence": "medium",
-    "notes": "Hours change by semester. Eligibility beyond Viterbi undergrads not confirmed."
+    "notes": "Hours change by semester. Eligibility beyond Viterbi undergrads not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "biomedical-engineering-innovation-space-bme-makerspace",
@@ -719,7 +720,8 @@
       "https://technologylicensing.utah.edu/inventors/programs/icorps"
     ],
     "confidence": "medium",
-    "notes": "Earlier Notion note said applicants need NSF funding; NSF has broadened eligibility in recent years, verify current rules."
+    "notes": "Earlier Notion note said applicants need NSF funding; NSF has broadened eligibility in recent years, verify current rules.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "nsf-i-corps-hub-west-region",
@@ -758,7 +760,8 @@
       "https://today.usc.edu/?p=10190"
     ],
     "confidence": "medium",
-    "notes": "Partners: UCLA, CU Boulder plus affiliates (Caltech, Mines, UNM, Utah, UCR). Session counts and interview requirements vary by source (10-15 interviews). Cohort dates not found."
+    "notes": "Partners: UCLA, CU Boulder plus affiliates (Caltech, Mines, UNM, Utah, UCR). Session counts and interview requirements vary by source (10-15 interviews). Cohort dates not found.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "origin-weekend",
@@ -1382,10 +1385,15 @@
     "group": "viterbi",
     "category": "Funding & Grants",
     "description": "National VentureWell grant program for student STEM venture teams: up to $25,000 in non-dilutive funding across two stages plus workshops and coaching. USC teams apply through the university.",
-    "timing": "Annual national deadlines (historically fall); USC internal process and deadline not confirmed",
+    "timing": "Three national application cycles per year, with deadlines in September, January/February and May (11:59 p.m. ET); the call opens about 6-8 weeks before each deadline and teams are notified within 60 days.",
     "cadence": "annual",
-    "months": [],
-    "eligibility": "Teams of at least two enrolled students with a faculty advisor at a VentureWell member institution; grant paid to the university.",
+    "months": [
+      1,
+      2,
+      5,
+      9
+    ],
+    "eligibility": "Student-led team of at least two actively enrolled students at a college or university, with a Principal Investigator who oversees the project plus support from the university administrative contact (usually sponsored programs) and the department chair. Funds science/engineering-based inventions with social or environmental impact (health devices, clean tech, low-resource technologies); no web/mobile apps without strong innovation, and no therapeutics or drugs.",
     "audience": [
       "undergrad",
       "grad",
@@ -1402,7 +1410,8 @@
       "https://venturewell.org/wp-content/uploads/E-Team-Stage-1-guidelines-with-Quals-Phase—2019-1.pdf"
     ],
     "confidence": "medium",
-    "notes": "Run by VentureWell, not USC. USC membership status and TIE Hub's role not confirmed. Stage amounts from 2019 guidelines."
+    "notes": "Run by VentureWell, not USC. USC membership status and TIE Hub's role not confirmed. Stage amounts from 2019 guidelines.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "viterbi-startup-and-entrepreneurship-experience-vsee",
@@ -1656,7 +1665,8 @@
       "https://classes.usc.edu/term-20213/section/baep-558/14412/"
     ],
     "confidence": "medium",
-    "notes": "months reflect semester starts (January and August)."
+    "notes": "months reflect semester starts (January and August).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "brittingham-social-enterprise-lab",
@@ -1790,8 +1800,9 @@
     "sources": [
       "https://dailytrojan.com/?p=69298"
     ],
-    "confidence": "low",
-    "notes": "Not directly verified (search budget exhausted); exact name, requirements and units unconfirmed."
+    "confidence": "medium",
+    "notes": "Not directly verified (search budget exhausted); exact name, requirements and units unconfirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "entrepreneurship-minor",
@@ -2037,7 +2048,8 @@
       "https://www.marshall.usc.edu/posts/usc-greif-center-celebrate-student-and-alumni-founders-at-marcia-israel-celebration-and-founder-showcase"
     ],
     "confidence": "medium",
-    "notes": "Year of the May 1 edition not confirmed (likely 2025, when Elissa Grossman stepped down as director). Prize amounts unknown."
+    "notes": "Year of the May 1 edition not confirmed (likely 2025, when Elissa Grossman stepped down as director). Prize amounts unknown.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "marshall-experts-in-residence",
@@ -2310,7 +2322,8 @@
     "link": null,
     "sources": [],
     "confidence": "low",
-    "notes": "Not found in searches. Related verified groups: EVMA (grad, clubs.marshall.usc.edu/evma), WorkBench SC, Azure Ventures Group, USC Marshall Venture Fund. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "notes": "Not found in searches. Related verified groups: EVMA (grad, clubs.marshall.usc.edu/evma), WorkBench SC, Azure Ventures Group, USC Marshall Venture Fund. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "vaneck-digital-assets-initiative",
@@ -2321,8 +2334,8 @@
     ],
     "group": "marshall",
     "category": "Research Commercialization",
-    "description": "USC Marshall hub for blockchain, digital asset and crypto courses, research, industry partnerships and events, launched in 2022 with a $5 million gift from Van Eck Associates.",
-    "timing": "Ongoing; flagship blockchain conference each spring",
+    "description": "USC Marshall hub for digital assets and decentralized finance, offering courses, research, mentorship and industry partnerships, directed by Prof. Lan Luo. Hosts the annual VanEck Southern California Blockchain Conference and the USC Builders Grant for student-led digital asset ventures.",
+    "timing": "Ongoing; the annual VanEck Southern California Blockchain Conference was held April 22, 2026 (Day 2 includes a student hackathon with more than $25,000 in prizes), and SCBC 2027 speaker and sponsor inquiries are open via veda@marshall.usc.edu.",
     "cadence": "ongoing",
     "months": [],
     "eligibility": "USC students, faculty and industry; events generally open to the public.",
@@ -2342,7 +2355,8 @@
       "https://research.usc.edu/news/2023/02/vaneck-digital-assets-initiative/"
     ],
     "confidence": "medium",
-    "notes": "Category could also be Partners & Ecosystem. Not formally part of the Greif Center. A USC Builders Grant for students was announced at the 2026 conference; details unverified."
+    "notes": "Category could also be Partners & Ecosystem. Not formally part of the Greif Center. A USC Builders Grant for students was announced at the 2026 conference; details unverified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "vaneck-southern-california-blockchain-conference",
@@ -2535,10 +2549,11 @@
       "idea"
     ],
     "funding": null,
-    "link": "https://iovine-young.usc.edu/",
+    "link": "https://www.marshall.usc.edu/bs-business-of-innovation-buin",
     "sources": [
       "https://iovine-young.usc.edu/people/tina-sharkey",
-      "https://catalogue.usc.edu/preview_entity.php?catoid=20&ent_oid=4427"
+      "https://catalogue.usc.edu/preview_entity.php?catoid=20&ent_oid=4427",
+      "https://www.marshall.usc.edu/bs-business-of-innovation-buin"
     ],
     "confidence": "medium",
     "notes": "Existence supported by a faculty bio describing a 'Business of Innovation program'. Joint status with Marshall, admission route and program URL not verified this session.",
@@ -2781,7 +2796,8 @@
       "https://today.usc.edu/in-the-ai-boom-a-room-of-their-own/"
     ],
     "confidence": "high",
-    "notes": "Launched fall 2023. Contact iyaiq@usc.edu. iovine-young.usc.edu could not be fetched directly; details from search snippets and the Microsoft blog (Oct 2024). 2025-2026 dates not confirmed."
+    "notes": "Launched fall 2023. Contact iyaiq@usc.edu. iovine-young.usc.edu could not be fetched directly; details from search snippets and the Microsoft blog (Oct 2024). 2025-2026 dates not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "iya-makerspace-the-garage",
@@ -2911,8 +2927,9 @@
     "sources": [
       "https://iovine-young.usc.edu/people/michael-kanazawa"
     ],
-    "confidence": "low",
-    "notes": "Only source is a faculty bio saying he is leading design and development of the Venture Studio. No launch date, program page or application found; may not be active."
+    "confidence": "medium",
+    "notes": "Only source is a faculty bio saying he is leading design and development of the Venture Studio. No launch date, program page or application found; may not be active.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "m-s-in-integrated-design-business-and-technology",
@@ -3043,7 +3060,8 @@
       "https://web-app.usc.edu/soc/syllabus/20253/10256.pdf"
     ],
     "confidence": "low",
-    "notes": "Labeled a prototype on a Notion page that could not be fetched. Tiers and resources unverified. The Venture Pyramid link is an inference from the ACAD 406 syllabus."
+    "notes": "Labeled a prototype on a Notion page that could not be fetched. Tiers and resources unverified. The Venture Pyramid link is an inference from the ACAD 406 syllabus.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "all-school-startup-mixers",
@@ -3081,7 +3099,8 @@
       "https://viterbiundergrad.usc.edu/blog/tech-startup-networking-mixer-virtual/"
     ],
     "confidence": "medium",
-    "notes": "Co-hosting by other schools (e.g. Iovine and Young, Stevens) not confirmed. Timing inferred from 2019-2021 listings."
+    "notes": "Co-hosting by other schools (e.g. Iovine and Young, Stevens) not confirmed. Timing inferred from 2019-2021 listings.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "deeptech-founder-matching",
@@ -3109,7 +3128,7 @@
     "funding": null,
     "link": null,
     "sources": [],
-    "confidence": "medium",
+    "confidence": "low",
     "notes": "No public source found; listed from assignment only. Verify with TIE Hub or Stevens.",
     "lastVerified": "2026-10-21"
   },
@@ -3138,7 +3157,7 @@
     "funding": null,
     "link": "https://stevens.usc.edu/",
     "sources": [],
-    "confidence": "medium",
+    "confidence": "low",
     "notes": "No source found under this exact name; a Jan 2026 USC feature 'From Lab to Launch' covers health startups. Related: Stevens 'From Discovery to Commercialization' webinar series.",
     "lastVerified": "2026-10-21"
   },
@@ -3804,7 +3823,7 @@
     "group": "keck",
     "category": "Partners & Ecosystem",
     "description": "Strategic drug discovery collaboration in which Autobahn Labs, an early-stage drug discovery accelerator, can invest up to $5 million per selected USC therapeutic project, with MESH as point of contact.",
-    "timing": "Rolling project selection.",
+    "timing": "Announced December 2, 2024; ongoing collaboration in which Autobahn Labs invests up to $5 million per selected project, with MESH Strategic Partnerships as the point of contact.",
     "cadence": "rolling",
     "months": [],
     "eligibility": "USC faculty with promising therapeutics research, typically advanced via the Brown Center and MESH.",
@@ -3824,7 +3843,8 @@
       "https://keck.usc.edu/mesh/strategic-partnerships/"
     ],
     "confidence": "medium",
-    "notes": "Announcement date not confirmed; Autobahn has similar deals with UCLA and Michigan."
+    "notes": "Announcement date not confirmed; Autobahn has similar deals with UCLA and Michigan.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "california-life-sciences-fast-program",
@@ -4064,7 +4084,8 @@
       "https://keck.usc.edu/mesh/strategic-partnerships/"
     ],
     "confidence": "medium",
-    "notes": "Relevant mainly to clinical researchers running trials, not a founder program."
+    "notes": "Relevant mainly to clinical researchers running trials, not a founder program.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "sanford-burnham-prebys-partnership",
@@ -4139,21 +4160,15 @@
     ],
     "group": "health",
     "category": "Accelerators & Incubators",
-    "description": "No-cost, no-equity 8-12 month program for LA health and bioscience ventures with 1:1 mentorship, pilot and investor connections and non-dilutive funding support. 2026 focus: female, mental and chronic disease health.",
-    "timing": "Annual call; 2026 applications due July 22, 2026, with an October 2026 cohort; prior cohort launched March 2026.",
+    "description": "No-cost, no-equity 8-12 month innovation hub for Los Angeles medical device, digital health, pharma and biotech ventures, with mentorship, partner and investor connections and funding support. The 2026 cohort has been selected.",
+    "timing": "2026 cohort already announced; the page invites interest registration for the next cohort.",
     "cadence": "annual",
     "months": [
       7,
       10
     ],
     "eligibility": "Early-stage bioscience and healthcare startups in the Los Angeles area, with emphasis on underserved communities.",
-    "audience": [
-      "faculty",
-      "postdoc",
-      "phd",
-      "alumni",
-      "community"
-    ],
+    "audience": [],
     "stage": [
       "prototype",
       "launched"
@@ -4340,10 +4355,10 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "Student-led community for USC founders whose businesses are past the incubation stage, pairing student CEOs with student and alumni mentors.",
-    "timing": null,
+    "timing": "First cohort convened September 2025 (Daily Trojan, Oct 7, 2025); no application dates found.",
     "cadence": "unknown",
     "months": [],
-    "eligibility": "USC student founders with an operating business.",
+    "eligibility": "Student founders whose businesses are already running (past ideation and product design); connected with student and alumni founders and mentors. Cohort-based.",
     "audience": [],
     "stage": [
       "launched",
@@ -4355,7 +4370,8 @@
       "https://dailytrojan.com/?p=240970"
     ],
     "confidence": "low",
-    "notes": "Newer group; no official site, membership or application details found. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "notes": "Newer group; no official site, membership or application details found. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "fightonfounders",
@@ -4662,8 +4678,9 @@
       "https://bouncewatch.com/company/sep-at-usc",
       "https://students.marshall.usc.edu/node/185116"
     ],
-    "confidence": "low",
-    "notes": "Details come mainly from an aggregator listing and other chapters; rush dates and official site not confirmed. Chapter designation (possibly Gamma) unverified. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "confidence": "medium",
+    "notes": "Details come mainly from an aggregator listing and other chapters; rush dates and official site not confirmed. Chapter designation (possibly Gamma) unverified. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "sogal-usc",
@@ -4693,7 +4710,8 @@
       "https://metromba.com/2015/10/usc-marshall-student-spearheads-inaugural-sogal-startup-bootcamp"
     ],
     "confidence": "low",
-    "notes": "SoGal was founded at USC by Pocket Sun (originally GirlsUp). No current 2025-2026 USC chapter activity found. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "notes": "SoGal was founded at USC by Pocket Sun (originally GirlsUp). No current 2025-2026 USC chapter activity found. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "spark-sc",
@@ -4751,7 +4769,8 @@
       "https://trojanvision.usc.edu/?p=31054"
     ],
     "confidence": "low",
-    "notes": "Instagram @techie_usc. Current recruitment dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "notes": "Instagram @techie_usc. Current recruitment dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "trojan-venture-partners",
@@ -4838,7 +4857,8 @@
       "https://www.kidsmoney.org/?p=659"
     ],
     "confidence": "low",
-    "notes": "Only a weak third-party mention found; official page and current status unverified. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "notes": "Only a weak third-party mention found; official page and current status unverified. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-makers",
@@ -4869,8 +4889,9 @@
       "https://viterbischool.usc.edu/news/2026/06/10-projects-10-solutions-student-engineers-tackle-everyday-problems/",
       "https://losangeles.makerfaire.com/maker/entry/2459"
     ],
-    "confidence": "low",
-    "notes": "Applications via linktr.ee/uscmakers. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "confidence": "medium",
+    "notes": "Applications via linktr.ee/uscmakers. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "blackstone-launchpad-at-usc",
@@ -5130,19 +5151,13 @@
     "group": "across",
     "category": "Accelerators & Incubators",
     "description": "Fully virtual accelerator for about 15 edtech startups per cohort, offering curriculum, mentorship and industry connections, with no tuition and no equity taken.",
-    "timing": "Annual; applications open September 1-30 (2025-26 cohort, the 8th); cohort runs through the academic year",
+    "timing": "Annual; applications for the 9th cohort (2026-27) were open September 1-30, 2026, and the program begins in late October 2026.",
     "cadence": "annual",
     "months": [
       9
     ],
-    "eligibility": "Edtech startups building tech-enabled solutions to improve education quality and equity; USC affiliation not required.",
-    "audience": [
-      "undergrad",
-      "grad",
-      "phd",
-      "alumni",
-      "community"
-    ],
+    "eligibility": "Entrepreneurs building technology solutions for education (K-12, higher ed, CTE, workforce) anywhere in the world; no pre-existing USC affiliation required, no application fee, tuition or equity.",
+    "audience": [],
     "stage": [
       "prototype",
       "launched",
@@ -5152,10 +5167,12 @@
     "link": "https://rossier.usc.edu/usc-education-technology-accelerator",
     "sources": [
       "https://rossier.usc.edu/news-insights/news/2025/september/uscs-edtech-accelerator-program-opens-its-application-portal",
-      "https://rossier.usc.edu/news-insights/news/2025/july/innovation-meets-impact-usc-edtech-accelerator"
+      "https://rossier.usc.edu/news-insights/news/2025/july/innovation-meets-impact-usc-edtech-accelerator",
+      "https://rossier.usc.edu/usc-education-technology-accelerator"
     ],
     "confidence": "high",
-    "notes": "2026-27 cohort application window not confirmed; likely September based on pattern. USC affiliation requirement not stated in sources."
+    "notes": "2026-27 cohort application window not confirmed; likely September based on pattern. USC affiliation requirement not stated in sources.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "alliance-for-socal-innovation",
@@ -5167,9 +5184,11 @@
     "group": "partners",
     "category": "Partners & Ecosystem",
     "description": "Nonprofit linking SoCal universities, startups and investors. Runs the SoCal Venture Pipeline (intros to 200+ investors for Seed/Series A startups), the Catalyst Fund and the First Look SoCal Innovation Showcase.",
-    "timing": "Ongoing; First Look showcase held annually (2018-2023 editions found)",
+    "timing": "Third annual SoCal Deep Tech Symposium (with First Look SoCal Deep Tech Showcase) held September 24, 2026 in El Segundo.",
     "cadence": "ongoing",
-    "months": [],
+    "months": [
+      9
+    ],
     "eligibility": "Early-stage deep tech and life science startups, often from SoCal research institutions including USC.",
     "audience": [
       "phd",
@@ -5188,10 +5207,12 @@
     "sources": [
       "https://www.ocbj.com/news/weekly-news/new-alliance-seeks-unify-socal-entrepreneurs/",
       "https://altasea.org/?p=6245",
-      "https://universitylabpartners.org/our-events/first-look-socal-innovation-showcase-2020"
+      "https://universitylabpartners.org/our-events/first-look-socal-innovation-showcase-2020",
+      "https://luma.com/ngwv9b3r"
     ],
     "confidence": "medium",
-    "notes": "501(c)(6); takes no fees or equity from startups it supports. 2024-2026 showcase dates not found."
+    "notes": "501(c)(6); takes no fees or equity from startups it supports. 2024-2026 showcase dates not found.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "apple-tree-partners",
@@ -5470,24 +5491,24 @@
     ],
     "group": "partners",
     "category": "Partners & Ecosystem",
-    "description": "Los Angeles-area early-stage digital health investor and accelerator affiliated with Wavemaker Partners, investing in and supporting health tech startups.",
+    "description": "Pasadena-based early-stage health care venture fund investing in seed-stage health startups across digital health, pharma, medical devices and AI. It is a VC fund rather than an accelerator cohort program.",
     "timing": "Ongoing",
     "cadence": "ongoing",
     "months": [],
     "eligibility": "Early-stage digital health and health tech startups.",
-    "audience": [
-      "alumni",
-      "community"
-    ],
+    "audience": [],
     "stage": [
       "prototype",
       "launched"
     ],
-    "funding": null,
+    "funding": "Venture investment (equity): $64M second fund (announced June 2022), initially up to $1 million per startup",
     "link": "https://www.wavemaker360.com/",
-    "sources": [],
-    "confidence": "low",
-    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge."
+    "sources": [
+      "https://dot.la/wavemaker-360-fund-2657485526.html"
+    ],
+    "confidence": "medium",
+    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "westlake-village-biopartners",

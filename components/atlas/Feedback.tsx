@@ -7,7 +7,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { cn } from "@/lib/utils"
 
 /** Inline link that opens a feedback form and emails it via /api/feedback, without leaving the app. Pass program for corrections. */
-export function FeedbackLink({ label, program, className }: { label: string; program?: { id: string; name: string }; className?: string }) {
+export function FeedbackLink({ label, program, className, ariaLabel }: { label: React.ReactNode; program?: { id: string; name: string }; className?: string; ariaLabel?: string }) {
   const [open, setOpen] = useState(false)
   const [message, setMessage] = useState("")
   const [email, setEmail] = useState("")
@@ -44,7 +44,7 @@ export function FeedbackLink({ label, program, className }: { label: string; pro
 
   return (
     <>
-      <button type="button" onClick={() => setOpen(true)} className={cn("font-semibold text-primary hover:underline", className)}>
+      <button type="button" onClick={() => setOpen(true)} aria-label={ariaLabel} className={cn("font-semibold text-primary hover:underline", className)}>
         {label}
       </button>
       <Dialog open={open} onOpenChange={onOpenChange}>

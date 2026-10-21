@@ -1,6 +1,6 @@
 "use client"
 
-import { Bookmark, CalendarDays, Compass, LayoutGrid, MessageCircle, Search, UserRound, X } from "lucide-react"
+import { Bookmark, CalendarDays, Compass, LayoutGrid, MessageCircle, MessageSquare, Search, UserRound, X } from "lucide-react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { Suspense, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
 
@@ -161,6 +161,11 @@ function Atlas() {
               <span className="flex-1">Search or ask anything...</span>
               <kbd className="hidden rounded-md border border-black/10 bg-white/80 px-1.5 py-0.5 font-sans text-[11px] sm:inline">⌘K</kbd>
             </button>
+            <FeedbackLink
+              ariaLabel="Send feedback"
+              label={<><MessageSquare className="h-4 w-4" /><span className="hidden sm:inline">Feedback</span></>}
+              className="inline-flex items-center gap-2 rounded-2xl border border-white/70 bg-white/60 px-3.5 py-2.5 text-sm text-foreground shadow-[inset_0_1px_2px_rgba(0,0,0,.06)] transition hover:bg-white/85 hover:no-underline"
+            />
             <button
               onClick={() => setProfileOpen(true)}
               aria-label="Your profile"

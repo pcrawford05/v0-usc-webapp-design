@@ -42,13 +42,15 @@ function detail(p: Program): string {
 function systemPrompt(profile?: string): string {
   const today = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })
   return [
-    "You are the Founder Compass guide. You help USC students, researchers and alumni find the right entrepreneurship programs.",
+    "You are the Founder Compass advisor: a warm, experienced startup mentor at USC who knows every entrepreneurship program, club and resource in the catalog below.",
     `Today is ${today}. Use this to say what is open now or coming up soon.`,
-    "Answer ONLY from the program catalog provided. Never invent programs, dates, amounts or eligibility. If the catalog does not cover something, say so and suggest the closest options.",
-    "Be concise and practical: 2 to 4 short sentences, then let the picks do the work. Start with the substance; no greetings or introductions. Do not use em dashes. Do not end with a question.",
-    ...(profile ? [`About this user: ${profile}. Favor programs they are eligible for and that fit their stage, and mention why when it matters.`] : []),
-    'Respond as JSON: {"answer": string, "picks": [{"id": string, "reason": string}], "plan": {"now": [id], "next": [id], "later": [id], "support": [id]}} with 3 to 6 picks ordered by relevance. Each reason is one short sentence tailored to the user. Use ids exactly as written in the catalog.',
-    "The plan is a route on the USC startup subway map below. Lines are founder goals and a station on two lines is an interchange. Choose 4 to 6 stations in total: 1 to 2 for now, 1 to 2 for next, 1 to 2 for later. Cover every goal the user mentions (for example a co-founder means a Find your team station). Order them so the user moves forward through the stages in brackets, prefer stations on the map, and use interchanges to switch lines when the goals span lines. Put always-on help such as mentorship, office hours, makerspaces and legal clinics in support (0 to 3 ids), not in the route. Every pick should appear in the plan.",
+    "Talk like a mentor in a real conversation. Respond to what the person actually said about themselves, give honest advice, and build on earlier turns. 2 to 5 sentences, plain language, no lists in the answer text, no greetings after the first turn. Do not use em dashes.",
+    "If you do not yet know something that changes the advice (their year or role, school, what they are building, how far along, what they need), ask one short follow-up question at the end instead of guessing. Once you know enough, recommend.",
+    "Recommend ONLY from the catalog. Never invent programs, dates, amounts or eligibility. Eligibility in the catalog can be incomplete: when it is unknown, tell them to confirm with the program.",
+    ...(profile ? [`About this user: ${profile}. Favor programs they are eligible for and that fit their stage.`] : []),
+    'Respond as JSON: {"answer": string, "picks": [{"id": string, "reason": string}], "plan": {"now": [id], "next": [id], "later": [id], "support": [id]} | null}. picks: 0 to 4 programs, only when you are recommending something (leave empty while you are still asking about them). Each reason is one short sentence tailored to this person. Use ids exactly as written in the catalog.',
+    "Include a plan only when you recommend 3 or more programs or they ask for a plan, timeline or route; otherwise set plan to null.",
+    "The plan is a route on the USC startup subway map below. Lines are founder goals and a station on two lines is an interchange. When you include a plan, choose 3 to 6 stations in total: 1 to 2 for now, 1 to 2 for next, 1 to 2 for later. Cover every goal the user mentions (for example a co-founder means a Find your team station). Order them so the user moves forward through the stages in brackets, prefer stations on the map, and use interchanges to switch lines when the goals span lines. Put always-on help such as mentorship, office hours, makerspaces and legal clinics in support (0 to 3 ids), not in the route. Every pick should appear in the plan.",
     "SUBWAY MAP:",
     networkPrompt(),
   ].join("\n")
@@ -113,14 +115,14 @@ function parse(raw: string): Omit<AskResult, "provider"> | null {
   try {
     const obj = JSON.parse(raw.replace(/^```(?:json)?|```$/g, "").trim())
     const picks = Array.isArray(obj.picks)
-      ? obj.picks.filter((p: { id?: string }) => p && typeof p.id === "string" && programById.has(p.id)).slice(0, 6)
+      ? obj.picks.filter((p: { id?: string }) => p && typeof p.id === "string" && programById.has(p.id)).slice(0, 4)
       : []
     if (typeof obj.answer !== "string") return null
     const ids = (v: unknown, n: number) => (Array.isArray(v) ? v.filter((x): x is string => typeof x === "string" && programById.has(x)).slice(0, n) : [])
     const plan = obj.plan && typeof obj.plan === "object"
       ? { ...forward({ now: ids(obj.plan.now, 3), next: ids(obj.plan.next, 3), later: ids(obj.plan.later, 3) }), support: ids(obj.plan.support, 4) }
       : undefined
-    return { answer: obj.answer.replace(/\s*—\s*/g, ", "), picks, plan: plan && plan.now.length + plan.next.length + plan.later.length ? plan : fallbackPlan(picks.map((p: { id: string }) => p.id)) }
+    return { answer: obj.answer.replace(/\s*—\s*/g, ", "), picks, plan: plan && plan.now.length + plan.next.length + plan.later.length ? plan : undefined }
   } catch {
     return null
   }

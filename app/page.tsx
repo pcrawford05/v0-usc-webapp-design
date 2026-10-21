@@ -1,6 +1,6 @@
 "use client"
 
-import { Bookmark, CalendarDays, Compass, FileText, LayoutGrid, Search, Sparkles, UserRound, X } from "lucide-react"
+import { Bookmark, CalendarDays, Compass, LayoutGrid, MessageCircle, Search, UserRound, X } from "lucide-react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { Suspense, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
 
@@ -8,7 +8,6 @@ import { BubbleMap } from "@/components/atlas/BubbleMap"
 import { CampusMap } from "@/components/atlas/CampusMap"
 import { CommandPalette } from "@/components/atlas/CommandPalette"
 import { Tour } from "@/components/atlas/extras"
-import { JourneyView } from "@/components/atlas/Journey"
 import { SubwayView } from "@/components/atlas/Subway"
 import { ProfileDialog, useProfile } from "@/components/atlas/ProfileDialog"
 import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
@@ -21,8 +20,7 @@ import { cn } from "@/lib/utils"
 
 const MODES = [
   { key: "bubbles", label: "Bubbles" },
-  { key: "subway", label: "Subway", ai: true },
-  { key: "journey", label: "My journey" },
+  { key: "subway", label: "Subway map" },
   { key: "campus", label: "Campus map" },
 ] as const
 
@@ -30,7 +28,7 @@ const TABS = [
   { key: "explore", label: "Explore", icon: Compass },
   { key: "browse", label: "Browse", icon: LayoutGrid },
   { key: "calendar", label: "Calendar", icon: CalendarDays },
-  { key: "ask", label: "Ask AI", icon: Sparkles },
+  { key: "ask", label: "Advisor", icon: MessageCircle },
   { key: "saved", label: "Saved", icon: Bookmark },
 ] as const
 type TabKey = (typeof TABS)[number]["key"]
@@ -54,9 +52,9 @@ function useIndicator(active: string) {
 function Atlas() {
   const params = useSearchParams()
   const router = useRouter()
-  // Older links: ?view=path (Find my path) now lives in My journey; Orbit and Constellation were retired.
-  const rawView = params.get("view") === "path" ? "explore" : params.get("view")
-  const rawMode = params.get("view") === "path" ? "journey" : params.get("mode")
+  // Older links to retired views (Find my path, My journey, Orbit, Constellation) land on Explore.
+  const rawView = params.get("view")
+  const rawMode = params.get("mode")
   const tab = (TABS.find(t => t.key === rawView)?.key ?? "explore") as TabKey
   const mode = MODES.find(m => m.key === rawMode)?.key ?? "bubbles"
   const openId = params.get("p")
@@ -162,14 +160,6 @@ function Atlas() {
               <span className="flex-1">Search or ask anything...</span>
               <kbd className="hidden rounded-md border border-black/10 bg-white/80 px-1.5 py-0.5 font-sans text-[11px] sm:inline">⌘K</kbd>
             </button>
-            <a
-              href="/one-pager"
-              aria-label="Share the one-page PDF"
-              className="inline-flex items-center gap-2 rounded-2xl glass px-3.5 py-2.5 text-sm font-semibold text-foreground transition hover:bg-white/70"
-            >
-              <FileText className="h-4 w-4" />
-              <span className="hidden sm:inline">Share PDF</span>
-            </a>
             <button
               onClick={() => setProfileOpen(true)}
               aria-label="Your profile"
@@ -221,9 +211,7 @@ function Atlas() {
                   onClick={() => setParam({ mode: m.key === "bubbles" ? null : m.key, route: null })}
                   className={cn("relative inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl px-3.5 py-2.5 text-sm font-semibold transition-colors sm:py-1.5", mode === m.key ? "text-primary" : "text-foreground/70 hover:text-foreground")}
                 >
-                  {"ai" in m && <Sparkles className="h-3.5 w-3.5 text-primary" />}
                   {m.label}
-                  {"ai" in m && <span className="hidden rounded-full bg-gradient-to-r from-[#990000] to-[#c2410c] px-1.5 py-px text-[10px] sm:inline font-bold uppercase tracking-wide text-white">AI route</span>}
                 </button>
               ))}
             </div>
@@ -235,17 +223,6 @@ function Atlas() {
             )}
             {mode === "bubbles" && <BubbleMap programs={programs} highlight={highlight} onOpen={onOpen} />}
             {mode === "campus" && <CampusMap programs={programs} highlight={highlight} onOpen={onOpen} />}
-            {mode === "journey" && <JourneyView onOpen={onOpen} profile={me} />}
-            {mode === "bubbles" && !matches && (
-              <button onClick={() => setParam({ mode: "subway" })} className="ai-border group mt-4 flex w-full items-center gap-3 rounded-2xl bg-white/80 p-4 text-left shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg">
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#990000] to-[#c2410c] text-white"><Sparkles className="h-5 w-5" /></span>
-                <span className="min-w-0 flex-1">
-                  <span className="block font-semibold text-foreground">Not sure where to start? Plan your route with AI</span>
-                  <span className="block text-sm text-muted-foreground">Describe your goal and see the programs to do now, next and later, drawn on the USC startup subway.</span>
-                </span>
-                <span className="text-sm font-semibold text-primary transition group-hover:translate-x-1">Try it →</span>
-              </button>
-            )}
             {mode === "subway" && <SubwayView onOpen={onOpen} profile={me ? describeProfile(me) : undefined} initial={params.get("route") ?? undefined} />}
           </div>
         )}
@@ -258,7 +235,7 @@ function Atlas() {
       </main>
 
       <footer className="mx-auto max-w-7xl px-4 pb-10 text-xs text-muted-foreground sm:px-6">
-        Program details are researched from public sources and change often. Always confirm dates and eligibility on the official page. Spot an error? Email <a href="mailto:pcrawfor@usc.edu" className="underline hover:text-foreground">pcrawfor@usc.edu</a>.
+        Program details are researched from public sources and change often. Always confirm dates and eligibility on the official page. Spot an error? Email <a href="mailto:pcrawfor@usc.edu" className="underline hover:text-foreground">pcrawfor@usc.edu</a>. · <a href="/one-pager" className="underline hover:text-foreground">One-page PDF</a>
       </footer>
 
       <CommandPalette

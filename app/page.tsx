@@ -10,6 +10,7 @@ import { CommandPalette } from "@/components/atlas/CommandPalette"
 import { Tour } from "@/components/atlas/extras"
 import { SubwayView } from "@/components/atlas/Subway"
 import { ProfileDialog, useProfile } from "@/components/atlas/ProfileDialog"
+import { FeedbackLink } from "@/components/atlas/Feedback"
 import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
 import { AskView, BrowseView, CalendarView, SavedView, type Turn } from "@/components/atlas/views"
 import { describeProfile, hasProfile, ROLES } from "@/lib/profile"
@@ -235,7 +236,7 @@ function Atlas() {
       </main>
 
       <footer className="mx-auto max-w-7xl px-4 pb-10 text-xs text-muted-foreground sm:px-6">
-        Program details are researched from public sources and change often. Always confirm dates and eligibility on the official page. Spot an error? Email <a href="mailto:pcrawfor@usc.edu" className="underline hover:text-foreground">pcrawfor@usc.edu</a>. · <a href="/one-pager" className="underline hover:text-foreground">One-page PDF</a>
+        Program details are researched from public sources and change often. Always confirm dates and eligibility on the official page. Spot an error or have an idea? <FeedbackLink label="Send feedback" className="font-normal text-inherit underline hover:text-foreground" />. · <a href="/one-pager" className="underline hover:text-foreground">One-page PDF</a>
       </footer>
 
       <CommandPalette

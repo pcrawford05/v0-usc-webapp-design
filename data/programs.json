@@ -1187,7 +1187,7 @@
     ],
     "confidence": "medium",
     "notes": "Homepage lists 'Co-Working' under its Build section but no details on location, hours or access were found. Not the same as the Viterbi Startup Garage (Marina del Rey incubator).",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "tie-hub-office-hours",
@@ -4240,9 +4240,12 @@
     "group": "health",
     "category": "Student Organizations",
     "description": "Free, trainee-led nonprofit building a global biotech founder community; its Activator program helps academic biotech founders refine and advance ventures with mentors.",
-    "timing": "Activator runs annually over about 6 months; local chapter timing unknown.",
+    "timing": "Activator runs annually; Nucleate LA 2026-27 Activator applications opened September 2026 and closed around October 20, 2026.",
     "cadence": "annual",
-    "months": [],
+    "months": [
+      9,
+      10
+    ],
     "eligibility": "Graduate students, postdocs and other academic trainees interested in biotech entrepreneurship.",
     "audience": [
       "grad",
@@ -4260,7 +4263,8 @@
       "https://luma.com/bala5ca7"
     ],
     "confidence": "low",
-    "notes": "Chapters in 41 regions; could not confirm a USC/Los Angeles chapter or 2026 Activator dates. Search budget ran out."
+    "notes": "Nucleate Los Angeles chapter is active on Instagram (@nucleate.la); USC affiliation of the chapter not stated there.",
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "sc-ctsi-southern-california-clinical-and-translational-scien",
@@ -4389,7 +4393,7 @@
     ],
     "confidence": "high",
     "notes": "2026 president listed as Nathan Sutrisno (MBA).",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "exitsc",
@@ -4448,7 +4452,7 @@
     ],
     "confidence": "medium",
     "notes": "Description from existing app data only; no independent source found and site could not be fetched.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "founder-clubs",
@@ -4486,9 +4490,11 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "Student organization running USC's flagship 24-hour hackathon each fall (SoCal Tech Week) plus Hack Nights and tech events focused on inclusive, hands-on building.",
-    "timing": "Flagship hackathon each fall (Nov 8-10 in 2024); smaller events through the year",
+    "timing": "Flagship hackathon each fall (Nov 8-10 in 2024); member recruitment each fall (Fall 2026 timeline posted August 2026).",
     "cadence": "annual",
     "months": [
+      8,
+      9,
       11
     ],
     "eligibility": "Students (USC and other schools) who register for the hackathon.",
@@ -4505,7 +4511,7 @@
     ],
     "confidence": "medium",
     "notes": "2025 and 2026 hackathon dates not confirmed; November based on 2024. Instagram @hackscofficial. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "high-tech-association-hta",
@@ -4517,9 +4523,12 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "USC Marshall graduate career club for technology careers (product management, product marketing, strategy, finance), offering case prep, recruiting resources and mentorship from second-year students.",
-    "timing": "Recruiting-oriented programming throughout the academic year",
+    "timing": "Programming through the academic year, including a Bay Area Tech Trek (October 8-9, 2026) and Tech Fest in April.",
     "cadence": "ongoing",
-    "months": [],
+    "months": [
+      4,
+      10
+    ],
     "eligibility": "USC Marshall graduate (mainly MBA) students pursuing tech careers.",
     "audience": [
       "grad"
@@ -4536,7 +4545,7 @@
     ],
     "confidence": "medium",
     "notes": "At Marshall, HTA stands for High Tech Association, not a healthcare technology group. It is career-focused rather than a startup club; no healthcare entrepreneurship 'HTA' at USC was found.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "kappa-theta-pi-ktp",
@@ -4548,7 +4557,7 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "Co-ed professional technology fraternity chapter for students in CS, informatics, design and related fields, hosting professional development and social events.",
-    "timing": "Fall 2026 application deadline was Friday, September 11, 2026 at 11:59pm; rush events precede it.",
+    "timing": "Rush each fall; the Fall 2026 application deadline was moved to Friday, September 11, 2026 at 12 PM.",
     "cadence": "semester",
     "months": [
       9
@@ -4565,7 +4574,7 @@
     ],
     "confidence": "low",
     "notes": "Existing app data says Tau chapter; could not independently confirm the USC chapter or rush dates. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "lavalab",
@@ -4577,10 +4586,12 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "USC's cross-disciplinary student-run product incubator, founded 2013. Engineers, designers and business students form teams each semester to build MVPs, ending in Demo Night with cash prizes (e.g. $1,000 and $2,000 awards in 2022).",
-    "timing": "Site lists an 'Apply for Fall 2026' link; each semester LavaLab takes a cohort of 28 students (product managers, engineers, designers).",
+    "timing": "Cohorts each semester; Spring 2026 applications opened in January 2026 and Fall 2026 applications closed September 11, 2026.",
     "cadence": "semester",
     "months": [
+      1,
       4,
+      9,
       11,
       12
     ],
@@ -4600,7 +4611,7 @@
     ],
     "confidence": "medium",
     "notes": "App data says about 28 students per semester and $4k+ prizes; not independently verified. Application dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "medesign",
@@ -4633,7 +4644,7 @@
     ],
     "confidence": "medium",
     "notes": "Current officers and 2026-27 application dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "productsc",
@@ -4645,7 +4656,7 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "USC's product management club. Runs two programs: Compass (foundational and advanced PM curriculum) and Catalyst (recruiting prep with resume reviews, mock interviews and alumni mentors).",
-    "timing": "Applications each semester (typically start of fall and spring)",
+    "timing": "Applications each semester; Fall 2026 Compass and Client applications were due September 5, 2026.",
     "cadence": "semester",
     "months": [
       1,
@@ -4665,7 +4676,7 @@
     ],
     "confidence": "low",
     "notes": "Contact product@usc.edu. Exact application months inferred from semester cycle, not confirmed. Marshall launching a PM minor in Fall 2026 (separate). Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "shift-sc",
@@ -4677,9 +4688,11 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "Student-led platform for human-centered, socially responsible technology, founded 2021. Runs workshops, a speaker series and the annual Tech4Good conference on ethical tech.",
-    "timing": "Weekly meetings during the semester; annual Tech4Good conference and speaker series",
+    "timing": "Weekly meetings during the semester; annual Tech4Good conference (October 19, 2026).",
     "cadence": "ongoing",
-    "months": [],
+    "months": [
+      10
+    ],
     "eligibility": "USC students interested in ethics and social impact of technology.",
     "audience": [],
     "stage": [
@@ -4695,7 +4708,7 @@
     ],
     "confidence": "low",
     "notes": "Sponsored by the USC Marshall Neely Center. Official website not found; sources 2022-2024. Earlier first-year activities included a fund for student researchers. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "sigma-eta-pi-sep",
@@ -4708,9 +4721,12 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "Co-ed professional entrepreneurship society at USC (founded 2014). New members go through an internal accelerator that ends in a Demo Day pitch to investors and entrepreneurs.",
-    "timing": "Recruitment (rush) each semester; Demo Day at end of new-member program",
+    "timing": "Recruitment each semester; Fall 2026 applications were due September 4, 2026 at 6 PM.",
     "cadence": "semester",
-    "months": [],
+    "months": [
+      9,
+      10
+    ],
     "eligibility": "USC students accepted through a competitive application and interview rush process.",
     "audience": [],
     "stage": [
@@ -4725,7 +4741,7 @@
     ],
     "confidence": "medium",
     "notes": "Details come mainly from an aggregator listing and other chapters; rush dates and official site not confirmed. Chapter designation (possibly Gamma) unverified. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "sogal-usc",
@@ -4768,10 +4784,11 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "Undergraduate entrepreneurship organization running initiatives such as the Startup Career Fair (25 startups, Feb 2026), founder panels, VC Academy and the Break to Make hardware make-a-thon.",
-    "timing": "Applications each semester; Startup Career Fair typically in February (Feb 2026), other events through the year",
+    "timing": "Applications each semester; Fall 2026 applications closed September 26, 2026 after an extension, with an info session on September 24.",
     "cadence": "semester",
     "months": [
-      2
+      2,
+      9
     ],
     "eligibility": "USC students; members join by semester application, events open to all students.",
     "audience": [],
@@ -4788,7 +4805,7 @@
     ],
     "confidence": "medium",
     "notes": "Startup Career Fair has run almost annually since 2015. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "techie",
@@ -4815,7 +4832,7 @@
     ],
     "confidence": "low",
     "notes": "Instagram @techie_usc. Current recruitment dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "trojan-venture-partners",
@@ -4826,9 +4843,12 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "Student organization focused on venture capital and investing, listed among USC entrepreneurship organizations.",
-    "timing": null,
+    "timing": "Recruits each fall; Fall 2026 applications opened August 27, 2026.",
     "cadence": "unknown",
-    "months": [],
+    "months": [
+      8,
+      9
+    ],
     "eligibility": "USC students interested in venture capital.",
     "audience": [],
     "stage": [],
@@ -4838,7 +4858,8 @@
       "https://coda.io/@hanshen-tjoa/usc-organizations-list/entrepreneurship-organizations-21"
     ],
     "confidence": "low",
-    "notes": "Only an unofficial user-made list mentions it; activities, membership and status unconfirmed. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "notes": "Only an unofficial user-made list mentions it; activities, membership and status unconfirmed. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "troylabs",
@@ -4849,10 +4870,11 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "Student-run organization sponsored by the Greif Center and Marshall, offering BUILD (8-week accelerator), IGNITE (general membership program of workshops and fireside chats) and DEMO (SoCal's largest student-run entrepreneurship conference, 50+ startups, 1000+ attendees).",
-    "timing": "Applications for the Fall 2026 cohort have closed; the next round has not been announced.",
+    "timing": "Fall 2026 member cohort applications closed September 6, 2026; DEMO conference historically in April.",
     "cadence": "annual",
     "months": [
-      4
+      4,
+      9
     ],
     "eligibility": "USC student founders and students interested in startups; DEMO features USC student startups.",
     "audience": [
@@ -4875,7 +4897,7 @@
     ],
     "confidence": "medium",
     "notes": "2026 DEMO date not confirmed. Has a student VC team that helps startups prepare to fundraise; no evidence of its own investment fund. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "usc-entrepreneur-club",
@@ -4915,7 +4937,7 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "Viterbi student club where teams of 5-7 build about 10 student-led engineering projects a year from idea to working build, shown at an end-of-year showcase.",
-    "timing": "Recruitment each fall (and spring); showcase in spring (May 1, 2026)",
+    "timing": "Recruitment each fall; Fall 2026 applications closed September 12, 2026. Showcase in spring (May 1, 2026).",
     "cadence": "annual",
     "months": [
       5,
@@ -4937,7 +4959,7 @@
     ],
     "confidence": "medium",
     "notes": "Applications via linktr.ee/uscmakers. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-20"
   },
   {
     "id": "blackstone-launchpad-at-usc",

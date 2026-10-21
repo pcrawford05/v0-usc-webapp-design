@@ -22,6 +22,8 @@ export interface Program {
   sources: string[]
   confidence: "high" | "medium" | "low"
   notes: string | null
+  // Set when a program looks defunct (no public presence or long silent); hidden from the site but kept in the data.
+  archived?: string
 }
 
 export const GROUPS = {
@@ -93,7 +95,7 @@ export const STAGE_LABELS: Record<Stage, string> = {
 
 export const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
-export const programs = programsData as Program[]
+export const programs = (programsData as Program[]).filter(p => !p.archived)
 export const programById = new Map(programs.map(p => [p.id, p]))
 
 /** Programs that run year round, so they belong in every month of the calendar. */

@@ -15,6 +15,7 @@ export function GET() {
         confidence: "high | medium | low: how well the details are verified against official sources",
         months: "1-12, the months a deadline or event usually falls in",
         sources: "URLs the details were drawn from",
+        archived: "present when a program looks defunct; the reason. Archived programs are hidden on the site",
       },
       programs,
     },

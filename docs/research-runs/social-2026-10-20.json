@@ -27,14 +27,19 @@
  {
   "id": "exitsc",
   "instagram": null,
-  "linkedin": null,
-  "active": null,
+  "linkedin": "https://www.linkedin.com/company/exitsc/",
+  "active": false,
   "eligibility": null,
   "audience": [],
   "dates": [],
   "months": [],
   "events": [],
-  "evidence": []
+  "evidence": [
+   {
+    "url": "https://www.linkedin.com/company/exitsc/",
+    "quote": "ExitSC is bridging the gap between student founders and alumni founders. Only company post is about 11 months old (first official cohort meetup)."
+   }
+  ]
  },
  {
   "id": "fightonfounders",
@@ -85,11 +90,14 @@
   "eligibility": null,
   "audience": [],
   "dates": [
-   "Fall 2026 recruitment; Involvement Fair August 26, 2026"
+   "Recruits each January and August; hackathons and Hack Nights through the year (HackSC x Lovable Hackathon October 2025, spring hackathon late April 2026). Flagship fall hackathon was Nov 8-10 in 2024."
   ],
   "months": [
+   1,
+   4,
    8,
-   9
+   10,
+   11
   ],
   "events": [],
   "evidence": [
@@ -100,6 +108,18 @@
    {
     "url": "https://www.instagram.com/p/Dcb7zfKEo52/",
     "quote": "Take a look at HackSC's Fall 2026 recruitment timeline. Find us at the Involvement Fair this Wednesday 8/26"
+   },
+   {
+    "url": "https://www.instagram.com/p/DTiqkc-gb1O/",
+    "quote": "Are you interested in being a part of HackSC? Check out our application timeline"
+   },
+   {
+    "url": "https://www.instagram.com/p/DPwnlZMgTiW/",
+    "quote": "HackSC x Lovable Hackathon signups close at 6PM TODAY!"
+   },
+   {
+    "url": "https://www.instagram.com/p/DXpzwAFj3Xo/",
+    "quote": "Hackathon starts virtually on Tuesday, ending in person on Thursday"
    }
   ]
  },
@@ -111,8 +131,7 @@
   "eligibility": null,
   "audience": [],
   "dates": [
-   "Bay Area Tech Trek October 8-9, 2026",
-   "Tech Fest April 2026"
+   "Tech Fest each April (April 2026, two days); Bay Area Tech Trek in October (October 8-9, 2026); workshops through the year."
   ],
   "months": [
    4,
@@ -127,6 +146,10 @@
    {
     "url": "https://www.instagram.com/p/DXsguGPD7fQ/",
     "quote": "Tech Fest Day 2: VCs, Startups, Founders"
+   },
+   {
+    "url": "https://www.instagram.com/p/DXsPrl3EiJO/",
+    "quote": "Over 350 participants attended USC Marshall's High Tech Association's (HTA) 2026 Tech Fest"
    }
   ]
  },
@@ -138,9 +161,10 @@
   "eligibility": null,
   "audience": [],
   "dates": [
-   "Fall 2026 rush application deadline September 11, 2026 at 12 PM"
+   "Rush each fall starting at the Involvement Fair; Fall 2026 rush began August 27 and applications closed Friday, September 11, 2026 at 12 PM."
   ],
   "months": [
+   8,
    9
   ],
   "events": [],
@@ -148,6 +172,10 @@
    {
     "url": "https://www.instagram.com/p/DdAubgeqX7k/",
     "quote": "Our Fall 2026 Rush application deadline has been pushed forward to Friday, September 11 at 12 PM"
+   },
+   {
+    "url": "https://www.instagram.com/p/Dcg0B3XCXD6/",
+    "quote": "Fall 2026 Rush starts tomorrow!"
    }
   ]
  },
@@ -159,11 +187,11 @@
   "eligibility": null,
   "audience": [],
   "dates": [
-   "Fall 2026 applications closed September 11, 2026",
-   "Spring 2026 applications opened January 2026"
+   "Cohorts each semester with info sessions; Spring 2026 applications opened mid-January 2026, Fall 2026 applications were due September 11, 2026 at 11:59 PM."
   ],
   "months": [
    1,
+   8,
    9
   ],
   "events": [
@@ -181,6 +209,10 @@
    {
     "url": "https://www.instagram.com/p/DescjDAPrzw/",
     "quote": "Rapid Prototyping Workshop with OpenAI. Wed Oct 21st @ 7:30 PM"
+   },
+   {
+    "url": "https://www.instagram.com/p/DcgtlaDSjGR/",
+    "quote": "Applications are live and due Sept 11th"
    }
   ]
  },
@@ -189,13 +221,15 @@
   "instagram": "https://www.instagram.com/medesign.usc/",
   "linkedin": "https://www.linkedin.com/company/medesign-usc",
   "active": true,
-  "eligibility": null,
+  "eligibility": "USC students of all majors, by application.",
   "audience": [],
   "dates": [
-   "Recruiting season October 2026"
+   "Fall applications each August-September (Fall 2026 decisions released September 14, 2026); Spring Symposium each April (April 27, 2026)."
   ],
   "months": [
-   10
+   4,
+   8,
+   9
   ],
   "events": [],
   "evidence": [
@@ -206,6 +240,14 @@
    {
     "url": "https://www.instagram.com/p/DeFnOKFynza/",
     "quote": "Recruiting season is here!!"
+   },
+   {
+    "url": "https://www.instagram.com/p/DcfNLlqBFL-/",
+    "quote": "We're open to ALL majors and decisions will be released September 14th!!"
+   },
+   {
+    "url": "https://www.instagram.com/p/DXk13ZrCWN1/",
+    "quote": "Spring symposium is here!"
    }
   ]
  },
@@ -217,7 +259,7 @@
   "eligibility": null,
   "audience": [],
   "dates": [
-   "2026-27 Activator applications opened September 2026 and close about October 20, 2026"
+   "Nucleate LA 2026-27 Activator applications opened September 2026 and closed October 20, 2026 (rolling review)."
   ],
   "months": [
    9,
@@ -232,6 +274,10 @@
    {
     "url": "https://www.instagram.com/p/Dec6f1UPnI-/",
     "quote": "There is only 1 more week left to apply to the Nucleate Los Angeles 2026-27 Activator Program!"
+   },
+   {
+    "url": "https://www.instagram.com/p/Dec6f1UPnI-/",
+    "quote": "Final deadline: October 20, 2026"
    }
   ]
  },
@@ -243,9 +289,11 @@
   "eligibility": null,
   "audience": [],
   "dates": [
-   "Fall 2026 Compass and Client applications due September 5, 2026 at 5:59 PM"
+   "Applications each semester; Fall 2026 Compass and Client applications were due September 5, 2026. Compass needs no experience."
   ],
   "months": [
+   1,
+   8,
    9
   ],
   "events": [],
@@ -257,6 +305,10 @@
    {
     "url": "https://www.instagram.com/p/Dc2GCswhZkU/",
     "quote": "ProductSC is partnering with Disney for our F26 client services program"
+   },
+   {
+    "url": "https://www.instagram.com/p/DckplWalUsF/",
+    "quote": "No experience required"
    }
   ]
  },
@@ -289,12 +341,11 @@
   "eligibility": null,
   "audience": [],
   "dates": [
-   "Fall 2026 applications due September 4, 2026 at 6 PM",
-   "SEPHacks during LA Tech Week, October 2026"
+   "Recruitment each semester with info sessions (January 2026; September 1-2, 2026); Fall 2026 applications were due September 4, 2026 at 6 PM."
   ],
   "months": [
-   9,
-   10
+   1,
+   9
   ],
   "events": [],
   "evidence": [
@@ -305,6 +356,10 @@
    {
     "url": "https://www.instagram.com/uscsep/",
     "quote": "Launching startups every semester at USC"
+   },
+   {
+    "url": "https://www.instagram.com/p/DTx8CC-E8cF/",
+    "quote": "Come meet her and other actives at the Info Session Today, 8 PM @ Watt B1"
    }
   ]
  },
@@ -316,10 +371,10 @@
   "eligibility": null,
   "audience": [],
   "dates": [
-   "Fall 2026 applications closed late September 2026 (extended to September 26)",
-   "Info session September 24, 2026"
+   "Applications each semester (no prior experience needed); Fall 2026 applications closed September 26, 2026. Startup Career Fair in February (February 2026)."
   ],
   "months": [
+   2,
    9
   ],
   "events": [],
@@ -331,6 +386,10 @@
    {
     "url": "https://www.instagram.com/p/Ddudn2aSRqv/",
     "quote": "APPLICATIONS EXTENDED TILL TOMORROW AT 5PM"
+   },
+   {
+    "url": "https://www.instagram.com/p/DUkI7NXkUDP/",
+    "quote": "Startup Career Fair is NEXT WEEK"
    }
   ]
  },
@@ -342,11 +401,11 @@
   "eligibility": null,
   "audience": [],
   "dates": [
-   "Fall 2026 applications early September 2026; speaker events in October 2026"
+   "Applications each semester; Spring 2026 apps were due January 24, 2026 and Fall 2026 apps were due September 8, 2026."
   ],
   "months": [
-   9,
-   10
+   1,
+   9
   ],
   "events": [],
   "evidence": [
@@ -357,6 +416,14 @@
    {
     "url": "https://www.instagram.com/p/Dc1y9T5yFY9/",
     "quote": "Apply ASAP!"
+   },
+   {
+    "url": "https://www.instagram.com/p/DTy0FZZiXxP/",
+    "quote": "Spring Applications for Techie are out now!! Get them in before the deadline (Sat 1/24 @11:59)"
+   },
+   {
+    "url": "https://www.instagram.com/p/Dc1y9T5yFY9/",
+    "quote": "UPDATE: Apps now due 9/8 @ 11:59 PM"
    }
   ]
  },
@@ -368,9 +435,11 @@
   "eligibility": null,
   "audience": [],
   "dates": [
-   "Fall 2026 internal member cohort applications extended to September 6, 2026 at 11:59 PM"
+   "Member and Build cohort applications each fall (Fall 2026 due September 6, 2026); DEMO startup conference each April (April 22, 2026)."
   ],
   "months": [
+   4,
+   8,
    9
   ],
   "events": [
@@ -384,6 +453,14 @@
    {
     "url": "https://www.instagram.com/troy.labs/",
     "quote": "usc rso sponsored by the lloyd greif center for entrepreneurial"
+   },
+   {
+    "url": "https://www.instagram.com/p/DccVNRGvhKF/",
+    "quote": "apply to build today. apps due 9/6 11:59pm"
+   },
+   {
+    "url": "https://www.instagram.com/p/DXia-swlDfa/",
+    "quote": "DEMO 2026, that's a wrap"
    }
   ]
  },
@@ -395,9 +472,10 @@
   "eligibility": null,
   "audience": [],
   "dates": [
-   "Fall 2026 applications closed September 12, 2026 at 11:59 PM"
+   "Recruitment each fall (Fall 2026 applications closed September 12, 2026); project showcase each spring (May 1, 2026)."
   ],
   "months": [
+   5,
    9
   ],
   "events": [
@@ -411,6 +489,10 @@
    {
     "url": "https://www.instagram.com/makersusc/",
     "quote": "USC's premier hardware organization"
+   },
+   {
+    "url": "https://www.instagram.com/p/DXnzECsjs50/",
+    "quote": "JOIN US IN THE MAKERS SHOWCASE THIS FRIDAY, MAY 1ST AT TCC 450"
    }
   ]
  },
@@ -422,7 +504,7 @@
   "eligibility": null,
   "audience": [],
   "dates": [
-   "Fall 2026 applications opened August 27, 2026 (General Membership, TVPortfolio, Capstone)"
+   "Recruits each fall; Fall 2026 General Membership applications were due September 1, 2026."
   ],
   "months": [
    8,
@@ -437,6 +519,10 @@
    {
     "url": "https://www.instagram.com/usctvp/",
     "quote": "USC's Premier Society for Buy-Side Enthusiasts"
+   },
+   {
+    "url": "https://www.instagram.com/p/DchodB5yZjp/",
+    "quote": "Deadlines: General Membership, September 1"
    }
   ]
  },
@@ -478,14 +564,19 @@
  {
   "id": "usc-entrepreneur-club",
   "instagram": null,
-  "linkedin": null,
-  "active": null,
+  "linkedin": "https://www.linkedin.com/company/eclubusc/",
+  "active": false,
   "eligibility": null,
   "audience": [],
   "dates": [],
   "months": [],
   "events": [],
-  "evidence": []
+  "evidence": [
+   {
+    "url": "https://www.linkedin.com/company/eclubusc/",
+    "quote": "A private, exclusive consolidation of USC's finest disruptors and innovators. 46 followers, no posts."
+   }
+  ]
  },
  {
   "id": "usc-venture-lab-usc-vc",
@@ -497,7 +588,12 @@
   "dates": [],
   "months": [],
   "events": [],
-  "evidence": []
+  "evidence": [
+   {
+    "url": "https://students.marshall.usc.edu/sites/default/files/2026-06/BAEP%20Grad%20Electives%20-%20Fall%202026.pdf",
+    "quote": "BAEP 565 Venture Lab, 3.0 units"
+   }
+  ]
  },
  {
   "id": "clubs-ecouncil-fund",

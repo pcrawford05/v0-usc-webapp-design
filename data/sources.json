@@ -1,11 +1,17 @@
 {
   "programs": {
     "usc-venture-lab-usc-vc": {
-      "name": "USC Venture Lab / USC VC",
+      "name": "BAEP 565 Venture Lab",
       "chunk": "gap-12",
-      "status": "confirmed-by-staff",
+      "status": "updated",
       "lastResearched": "2026-10-21",
       "sources": [
+        {
+          "url": "https://students.marshall.usc.edu/sites/default/files/2026-06/BAEP%20Grad%20Electives%20-%20Fall%202026.pdf",
+          "kind": "official",
+          "holds": "BAEP 565 Venture Lab, 3 units, Thu 6:30-9:30 pm, course description",
+          "lastChecked": "2026-10-20"
+        },
         {
           "url": "https://clubs.marshall.usc.edu/evma/",
           "kind": "campus-groups",
@@ -129,6 +135,12 @@
           "kind": "news",
           "holds": "description, founders, first cohort",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/exitsc/",
+          "kind": "social",
+          "holds": "ExitSC is bridging the gap between student founders and alumni founders. Only company post is about 11 months old (first official cohort meetup).",
+          "lastChecked": "2026-10-20"
         }
       ],
       "searchQueries": [
@@ -161,7 +173,7 @@
     "founder-clubs": {
       "name": "Founder Clubs",
       "chunk": "gap-11",
-      "status": "not_found",
+      "status": "archived",
       "lastResearched": "2026-10-21",
       "sources": [],
       "searchQueries": [
@@ -410,7 +422,7 @@
     "sogal-usc": {
       "name": "SoGal USC",
       "chunk": "gap-11",
-      "status": "not_found",
+      "status": "archived",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -562,7 +574,7 @@
     "usc-entrepreneur-club": {
       "name": "USC Entrepreneur Club",
       "chunk": "gap-11",
-      "status": "not_found",
+      "status": "archived",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -570,6 +582,12 @@
           "kind": "official",
           "holds": "lists real USC student entrepreneurship orgs (EVMA grad-led, Lava Lab, Troy Labs undergrad-run, Spark SC undergrad-run); no 'USC Entrepreneur Club'",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/eclubusc/",
+          "kind": "social",
+          "holds": "A private, exclusive consolidation of USC's finest disruptors and innovators. 46 followers, no posts.",
+          "lastChecked": "2026-10-20"
         }
       ],
       "searchQueries": [
@@ -2002,7 +2020,7 @@
     "innovation-challenge-greif": {
       "name": "Innovation Challenge (Greif)",
       "chunk": "competitions-spaces",
-      "status": "not_found",
+      "status": "archived",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -2990,7 +3008,7 @@
     "iya-connect-weekly": {
       "name": "IYA Connect Weekly",
       "chunk": "events-mentorship",
-      "status": "not_found",
+      "status": "archived",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -3093,7 +3111,7 @@
     "innovation-cafes": {
       "name": "Innovation Cafes",
       "chunk": "p3-04",
-      "status": "not_found",
+      "status": "archived",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -3603,7 +3621,7 @@
     "project-law": {
       "name": "Project Law",
       "chunk": "research-legal",
-      "status": "not_found",
+      "status": "archived",
       "lastResearched": "2026-10-21",
       "sources": [
         {

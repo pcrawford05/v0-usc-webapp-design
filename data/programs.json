@@ -152,7 +152,8 @@
       "https://viterbiinnovation.usc.edu/?p=2872"
     ],
     "confidence": "medium",
-    "notes": "Exact 'speed dating' format and recurring schedule not confirmed."
+    "notes": "Exact 'speed dating' format and recurring schedule not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "csci-532-innovation-for-defense-applications",
@@ -498,7 +499,7 @@
     "timing": "Ongoing; apply through Marshall graduate certificates.",
     "cadence": "ongoing",
     "months": [],
-    "eligibility": "USC master's and PhD students (and some degree holders) in science, engineering or business; 3.0 GPA required.",
+    "eligibility": "Current USC students enrolled in a master's or doctoral degree program.",
     "audience": [
       "grad",
       "phd"
@@ -514,7 +515,8 @@
       "https://students.marshall.usc.edu/graduate-students/graduate-certificate-admissions-usc-students"
     ],
     "confidence": "medium",
-    "notes": "Run by Marshall (Greif Center) with Viterbi electives; course list from 2012-2013 catalogue. Eligibility sources conflict (open vs current USC students only)."
+    "notes": "Run by Marshall (Greif Center) with Viterbi electives; course list from 2012-2013 catalogue. Eligibility sources conflict (open vs current USC students only).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "how-to-start-a-company-as-an-international-student",
@@ -791,7 +793,8 @@
       "https://www.cs.usc.edu/newsletter/ug-ms-phd-upcoming-spring-2026-tie-hub-opportunities/"
     ],
     "confidence": "medium",
-    "notes": "Dates and prize from search snippets of TIE Hub site, engage.usc.edu RSVP listing and CS newsletter; pages not directly fetchable. Spring 2026 edition described as a 'Google X startup launch sprint'. Exact eligibility not confirmed."
+    "notes": "Dates and prize from search snippets of TIE Hub site, engage.usc.edu RSVP listing and CS newsletter; pages not directly fetchable. Spring 2026 edition described as a 'Google X startup launch sprint'. Exact eligibility not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "ronald-and-valerie-sugar-distinguished-speaker-series-in-adv",
@@ -923,7 +926,8 @@
       "https://engage.usc.edu/Viterbitie/rsvp_boot?id=397842"
     ],
     "confidence": "medium",
-    "notes": "Cadence 'monthly' is from internal notes; public listings show irregular sessions. Check events page for current schedule."
+    "notes": "Cadence 'monthly' is from internal notes; public listings show irregular sessions. Check events page for current schedule.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "summer-smasher",
@@ -1201,10 +1205,12 @@
     "aliases": [],
     "group": "viterbi",
     "category": "Competitions & Pitch",
-    "description": "Shark Tank-style pitch event where students get 3 minutes to pitch ideas to tech investors, innovators and startup mentors, with a $3,000 prize pool.",
-    "timing": "Has run since at least 2023; 2026 date not confirmed",
+    "description": "Shark Tank-style live pitch event where USC students pitch on stage to a panel of Sharks for a chance to win cash, hosted by the Viterbi TIE Hub in collaboration with the Greif Center.",
+    "timing": "Held April 11, 2025, 7-9pm, billed as the first USC Shark Tank; no 2026 edition found.",
     "cadence": "unknown",
-    "months": [],
+    "months": [
+      4
+    ],
     "eligibility": "USC students; the 2023 edition required teams with at least one Marshall and one Viterbi student.",
     "audience": [
       "undergrad",
@@ -1217,10 +1223,12 @@
     "link": "https://viterbiinnovation.usc.edu/",
     "sources": [
       "https://viterbiinnovation.usc.edu/",
-      "https://viterbi.usc.edu/calendar/?event=104073"
+      "https://viterbi.usc.edu/calendar/?event=104073",
+      "https://engage.usc.edu/Viterbitie/rsvp?id=403967"
     ],
     "confidence": "low",
-    "notes": "Prize pool from a recent TIE Hub page snippet. 2023 edition co-sponsored by Viterbi Student Government and Marshall EVMA. Current dates and organizer unverified."
+    "notes": "Prize pool from a recent TIE Hub page snippet. 2023 edition co-sponsored by Viterbi Student Government and Marshall EVMA. Current dates and organizer unverified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-games-summer-bridge-program",
@@ -1256,7 +1264,8 @@
       "https://games.usc.edu/initiatives"
     ],
     "confidence": "medium",
-    "notes": "Run by USC Games (Viterbi CS and Cinematic Arts), not the TIE Hub. Page undated; 2026 dates not confirmed."
+    "notes": "Run by USC Games (Viterbi CS and Cinematic Arts), not the TIE Hub. Page undated; 2026 dates not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-viterbi-startup-showcase",
@@ -1611,7 +1620,8 @@
       "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies"
     ],
     "confidence": "medium",
-    "notes": "No 2025 or 2026 edition details found; eligibility from 2019 call. Co-sponsored historically with Annenberg."
+    "notes": "No 2025 or 2026 edition details found; eligibility from 2019 call. Co-sponsored historically with Annenberg.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "baep-entrepreneurship-courses",
@@ -1683,7 +1693,8 @@
       "https://research.usc.edu/brittingham-social-enterprise-lab"
     ],
     "confidence": "high",
-    "notes": "Located in Bridge Hall 105. Newsletter signup: https://usc.us11.list-manage.com/subscribe?u=99eaca97639e52f3d62e5dc45&id=bbd018bbb1"
+    "notes": "Located in Bridge Hall 105. Newsletter signup: https://usc.us11.list-manage.com/subscribe?u=99eaca97639e52f3d62e5dc45&id=bbd018bbb1",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "catalyst-microgrant-fund",
@@ -1696,12 +1707,15 @@
     "group": "marshall",
     "category": "Funding & Grants",
     "description": "Greif Center microgrants for current USC student founders to cover early startup costs; teams may apply more than once, up to a combined $5,000.",
-    "timing": "Reviewed once per semester; 2025-26 fall window was Oct 5-15, decisions in 2-3 weeks",
-    "cadence": "semester",
+    "timing": "2026-27 proposals are accepted Oct 20, 2026 through Jan 30, 2027; approved teams get an Expert-in-Residence meeting before funds are released, and a one-page report is due May 1, 2027.",
+    "cadence": "annual",
     "months": [
-      10
+      1,
+      10,
+      11,
+      12
     ],
-    "eligibility": "Current USC students on a founding team, from any school (non-Marshall students eligible).",
+    "eligibility": "Full-time USC students in good academic standing who are active or aspiring founders of a new for-profit or nonprofit venture conceived or launched at USC, with a US-based venture under $50,000 in prior funding, at least one semester left before degree completion, and who have taken a Greif Center course or joined Marshall entrepreneurship programming. Any USC school; co-founders may be non-USC.",
     "audience": [
       "undergrad",
       "grad",
@@ -1720,7 +1734,8 @@
       "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies"
     ],
     "confidence": "medium",
-    "notes": "Spring window month not confirmed. Page snippet was truncated, confirm exact cap."
+    "notes": "Spring window month not confirmed. Page snippet was truncated, confirm exact cap.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "ecouncil-fund",
@@ -1731,21 +1746,23 @@
     ],
     "group": "marshall",
     "category": "Funding & Grants",
-    "description": "A Greif Center funding vehicle listed among its programs. Award size and process could not be verified.",
-    "timing": null,
-    "cadence": "unknown",
+    "description": "Greif Center fund that gives Recognized Student Organizations (RSOs) financial or in-kind support for student-run entrepreneurship events and programming.",
+    "timing": "RSOs may apply once per semester; applications reviewed on a rolling basis until funds run out or the academic year ends.",
+    "cadence": "semester",
     "months": [],
-    "eligibility": null,
+    "eligibility": "Recognized Student Organizations at USC running entrepreneurship activities; no funds for event space, food, speaker fees or paid-entry events.",
     "audience": [],
     "stage": [],
-    "funding": null,
-    "link": "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies/funding-opportunities",
+    "funding": "Awards limited to $2,000 or less (larger requests considered); financial and/or in-kind support",
+    "link": "https://engage.usc.edu/entrepreneur/ecouncil-fund/",
     "sources": [
       "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies",
-      "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies/funding-opportunities"
+      "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies/funding-opportunities",
+      "https://engage.usc.edu/entrepreneur/ecouncil-fund/"
     ],
     "confidence": "low",
-    "notes": "Only listed by name on Greif pages and EngageSC navigation; no description found. Likely tied to the Greif eCouncil advisory/donor group."
+    "notes": "Only listed by name on Greif pages and EngageSC navigation; no description found. Likely tied to the Greif eCouncil advisory/donor group.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "entrepreneurship-and-innovation-emphasis",
@@ -1804,7 +1821,8 @@
       "https://dailytrojan.com/?p=69298"
     ],
     "confidence": "medium",
-    "notes": "Unit count and course list not verified. Separate Digital Entrepreneurship Minor exists (with Marshall)."
+    "notes": "Unit count and course list not verified. Separate Digital Entrepreneurship Minor exists (with Marshall).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "founder-central-initiative",
@@ -1862,8 +1880,9 @@
     "sources": [
       "https://www.marshall.usc.edu/departments/lloyd-greif-center-entrepreneurial-studies/newsletter"
     ],
-    "confidence": "low",
-    "notes": "Link from internal notes; not verified (site unreachable, search budget exhausted). Event listings also on engage.usc.edu/Entrepreneur/."
+    "confidence": "medium",
+    "notes": "Link from internal notes; not verified (site unreachable, search budget exhausted). Event listings also on engage.usc.edu/Entrepreneur/.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "hult-prize-at-usc",
@@ -1899,7 +1918,8 @@
       "https://sustainability.usc.edu/?p=9170"
     ],
     "confidence": "medium",
-    "notes": "2026-27 cycle not yet announced. USC final month (January) is inferred. First USC round held 2024-25."
+    "notes": "2026-27 cycle not yet announced. USC final month (January) is inferred. First USC round held 2024-25.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "innovation-challenge-greif",
@@ -1928,7 +1948,8 @@
       "https://ceo.usc.edu/innovation-challenge/"
     ],
     "confidence": "low",
-    "notes": "Link from internal notes; no search results confirmed the page or a 2025-26 edition. Greif also runs the Min Family Challenge ($50,000 prizes)."
+    "notes": "Link from internal notes; no search results confirmed the page or a 2025-26 edition. Greif also runs the Min Family Challenge ($50,000 prizes).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "jacobson-family-sustainable-impact-lecture-series",
@@ -1939,7 +1960,7 @@
     "group": "marshall",
     "category": "Events & Speakers",
     "description": "Free annual BSEL lecture and panel series featuring social impact leaders, open to students, alumni and the community (2022-23 theme: how businesses center community in social impact).",
-    "timing": "Several sessions across the academic year (e.g., Nov 16, 2022; Feb 15, 2023)",
+    "timing": "Panel discussions throughout the academic year; the 2023-24 series covered affordable housing, impact reporting, AI and climate change.",
     "cadence": "annual",
     "months": [],
     "eligibility": "Free and open to USC students, alumni and the public.",
@@ -1957,7 +1978,8 @@
       "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab"
     ],
     "confidence": "medium",
-    "notes": "Most recent confirmed sessions are from 2022-23; current-year schedule not found."
+    "notes": "Most recent confirmed sessions are from 2022-23; current-year schedule not found.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "leverage-point-fellowship",
@@ -1978,7 +2000,8 @@
       "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab"
     ],
     "confidence": "low",
-    "notes": "No source found under this name. Possibly related to BSEL Senior Fellows, Impact Scholars, or the MBA Society and Business Fellowship. Verify with BSEL."
+    "notes": "No source found under this name. Possibly related to BSEL Senior Fellows, Impact Scholars, or the MBA Society and Business Fellowship. Verify with BSEL.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "marcia-israel-celebration-and-founder-showcase",
@@ -2050,7 +2073,8 @@
       "https://cal.com/alexisjeffries"
     ],
     "confidence": "medium",
-    "notes": "No dedicated official Experts-in-Residence page found; details drawn from Greif LaunchPad office hour listings (Feb 2026) and an individual EIR booking page."
+    "notes": "No dedicated official Experts-in-Residence page found; details drawn from Greif LaunchPad office hour listings (Feb 2026) and an individual EIR booking page.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "marshall-greif-incubator",
@@ -2063,7 +2087,7 @@
     "group": "marshall",
     "category": "Accelerators & Incubators",
     "description": "Greif Center incubator led by Paul Orlando that helps founders move from MVP to customers, a tested business model, distribution, team and investment readiness, with monthly mentor sessions, workspace if needed and legal/financial resources.",
-    "timing": "Rolling admissions",
+    "timing": "Fall 2026 cohort runs mid-September to December 2026; applications via the Engage page.",
     "cadence": "rolling",
     "months": [],
     "eligibility": "Startups with at least one USC-affiliated founder (student, alum, faculty or staff) that are past the concept stage with at least an MVP.",
@@ -2088,7 +2112,8 @@
       "https://startusc.com/"
     ],
     "confidence": "medium",
-    "notes": "Portfolio size reported as 160+, 250+ and 300+ in different sources. Rolling admission not explicitly confirmed."
+    "notes": "Portfolio size reported as 160+, 250+ and 300+ in different sources. Rolling admission not explicitly confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "mba-entrepreneurship-and-venture-management-concentration",
@@ -2126,11 +2151,12 @@
     "group": "marshall",
     "category": "Courses & Degrees",
     "description": "27-unit Greif Center master's degree for early and mid-career professionals, full-time in 1 year or part-time over 2 years, blending entrepreneurship core courses (BAEP 551, 552, 554, 558) with innovation electives.",
-    "timing": "Fall start; Fall 2024 priority deadline March 1, rolling review until July 15",
+    "timing": "Fall start; Fall 2027 applications: Round 1 deadline November 1, 2026 (decision by Jan 15, 2027), Round 2 January 15, 2027 (decision by Mar 30, 2027), Round 3 April 15, 2027 (decision by Jun 15, 2027).",
     "cadence": "annual",
     "months": [
-      3,
-      8
+      1,
+      4,
+      11
     ],
     "eligibility": "Bachelor's degree holders; 1-3 years work experience recommended; GMAT/GRE not required.",
     "audience": [
@@ -2149,7 +2175,8 @@
       "https://academicprograms.usc.edu/wp-content/uploads/2024/10/MARSHALL-Entrepreneurship-and-Innovation-9.24.pdf"
     ],
     "confidence": "high",
-    "notes": "Deadlines from Fall 2024 catalog; confirm current cycle. Application fee $175."
+    "notes": "Deadlines from Fall 2024 catalog; confirm current cycle. Application fee $175.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "ms-in-social-entrepreneurship",
@@ -2181,7 +2208,8 @@
       "https://academicprograms.usc.edu/wp-content/uploads/2026/01/MARSHALL-Social-Entrepreneurship-01.26.pdf"
     ],
     "confidence": "high",
-    "notes": "Launched fall 2014. Unit count changed over time (26/30 in older sources)."
+    "notes": "Launched fall 2014. Unit count changed over time (26/30 in older sources).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "new-venture-seed-competition",
@@ -2194,13 +2222,13 @@
     "group": "marshall",
     "category": "Competitions & Pitch",
     "description": "USC's largest startup competition, run by the Greif Center, with a prize pool of over $150,000: Platinum $35,000, Gold $20,000, Silver $15,000, plus Social Impact, Early Stage Concept and $1,500 semi-finalist prizes.",
-    "timing": "Annual, multi-round; info sessions run fall through January, applications historically due around Feb 1, finals in spring",
+    "timing": "Annual; 2025-26 applications were due Feb 8, 2026, quarter-finals Mar 10, semi-finals Apr 16, public finals Apr 24, and winners announced at the awards banquet Apr 30, 2026. 2026-27 dates not yet posted.",
     "cadence": "annual",
     "months": [
       2,
       4
     ],
-    "eligibility": "Any member of the USC community: students, recent graduates (within 5 years), faculty or staff.",
+    "eligibility": "Ventures in any industry with at least one team member who is a current USC student (grad or undergrad), current faculty or staff, or a USC alum within 5 years of graduation (2025-26: SP 2020 to present).",
     "audience": [
       "undergrad",
       "grad",
@@ -2224,7 +2252,8 @@
       "https://nvsc.awardsplatform.com/"
     ],
     "confidence": "high",
-    "notes": "2026-27 deadline not yet published as of search; last confirmed deadline Feb 1, 2025. April finals month is inferred from typical cycle, not confirmed. Applications via nvsc.awardsplatform.com."
+    "notes": "2026-27 deadline not yet published as of search; last confirmed deadline Feb 1, 2025. April finals month is inferred from typical cycle, not confirmed. Applications via nvsc.awardsplatform.com.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-marshall-venture-fund",
@@ -2239,13 +2268,11 @@
     "timing": "Rolling; roughly two investments per year",
     "cadence": "rolling",
     "months": [],
-    "eligibility": "Startups founded or led by USC students, alumni, faculty or staff; students can join as fund analysts.",
+    "eligibility": "Ventures with USC alumni, faculty or staff as founders, co-founders or senior management; inquiries accepted throughout the academic year.",
     "audience": [
-      "undergrad",
-      "grad",
+      "alumni",
       "faculty",
-      "staff",
-      "alumni"
+      "staff"
     ],
     "stage": [
       "launched",
@@ -2260,7 +2287,8 @@
       "https://students.marshall.usc.edu/node/387104"
     ],
     "confidence": "medium",
-    "notes": "Check size and cadence from 2018 launch coverage; latest known investment Dec 2024 (CB Insights). Usually co-invests."
+    "notes": "Check size and cadence from 2018 launch coverage; latest known investment Dec 2024 (CB Insights). Usually co-invests.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-venture-lab-usc-vc",
@@ -2351,7 +2379,8 @@
       "https://lu.ma/plrqp1ea"
     ],
     "confidence": "high",
-    "notes": "Registration site referenced as uscblockchainconf.com. Month has varied (Nov 2023, spring 2025/2026)."
+    "notes": "Registration site referenced as uscblockchainconf.com. Month has varied (Nov 2023, spring 2025/2026).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "venture-capital-investment-competition-vcic",
@@ -2363,18 +2392,19 @@
     "group": "marshall",
     "category": "Competitions & Pitch",
     "description": "Students act as VCs in a one-day due diligence simulation. Greif selects an undergrad team for the West regional (travel paid); grad teams come from an internal EVMA round. USC tied for 4th at 2025 Global Finals.",
-    "timing": "Annual; team selection in fall, regionals in February (Feb 7 and Feb 27, 2026), global finals in spring",
+    "timing": "Annual; 2025-26 undergraduate applications were due Nov 14, 2025 (notified Nov 21), training Jan 2026, West Coast Regionals Feb 7, 2026 at BYU; graduate EVMA internal round Nov 21, Silicon Valley Regionals Feb 27, 2026. 2026-27 dates not posted.",
     "cadence": "annual",
     "months": [
-      2
+      2,
+      11
     ],
-    "eligibility": "Undergrads apply competitively via the Greif Center; MBA/grad students qualify through the internal EVMA VCIC.",
+    "eligibility": "Undergraduates apply competitively through the Greif Center (six students plus one alternate chosen); graduate students qualify through the EVMA internal competition (six plus one alternate). Progressive degree students count as undergrads until they take graduate-level courses. Training sessions are open to all.",
     "audience": [
       "undergrad",
       "grad"
     ],
     "stage": [],
-    "funding": null,
+    "funding": "First place at each regional wins $1,000; Greif Center pays all travel expenses for the chosen team.",
     "link": "https://engage.usc.edu/entrepreneur/venture-capital-investment-competition-(vcic)/",
     "sources": [
       "https://engage.usc.edu/entrepreneur/venture-capital-investment-competition-(vcic)/",
@@ -2383,7 +2413,8 @@
       "https://www.vcic.org/"
     ],
     "confidence": "high",
-    "notes": "This is a skills competition for aspiring investors, not funding for startups. 2026-27 application dates not yet confirmed."
+    "notes": "This is a skills competition for aspiring investors, not funding for startups. 2026-27 application dates not yet confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "weekly-founder-salon",
@@ -2406,7 +2437,8 @@
       "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies"
     ],
     "confidence": "low",
-    "notes": "Searches found no public page for this program; may be new or only promoted via EngageSC/newsletter. Verify with the Greif Center."
+    "notes": "Searches found no public page for this program; may be new or only promoted via EngageSC/newsletter. Verify with the Greif Center.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "acad-406-purpose-driven-innovation-incubator",
@@ -2478,7 +2510,8 @@
       "https://today.usc.edu/?p=11964"
     ],
     "confidence": "medium",
-    "notes": "First class of 25 enrolled fall 2014. Program page URL not verified; catalogue and admissions pages could not be fetched directly."
+    "notes": "First class of 25 enrolled fall 2014. Program page URL not verified; catalogue and admissions pages could not be fetched directly.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "b-s-in-business-of-innovation",
@@ -2507,8 +2540,9 @@
       "https://iovine-young.usc.edu/people/tina-sharkey",
       "https://catalogue.usc.edu/preview_entity.php?catoid=20&ent_oid=4427"
     ],
-    "confidence": "low",
-    "notes": "Existence supported by a faculty bio describing a 'Business of Innovation program'. Joint status with Marshall, admission route and program URL not verified this session."
+    "confidence": "medium",
+    "notes": "Existence supported by a faculty bio describing a 'Business of Innovation program'. Joint status with Marshall, admission route and program URL not verified this session.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "health-innovation-minor",
@@ -2534,8 +2568,9 @@
     "sources": [
       "https://iovine-young.usc.edu/program/minors.html"
     ],
-    "confidence": "low",
-    "notes": "The Academy minors page exists but could not be read; minor names and requirements not confirmed this session."
+    "confidence": "medium",
+    "notes": "The Academy minors page exists but could not be read; minor names and requirements not confirmed this session.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "iya-connect-weekly",
@@ -2564,7 +2599,8 @@
       "https://iovine-young.usc.edu/"
     ],
     "confidence": "low",
-    "notes": "No public source found confirming the name, frequency or how to subscribe; it is likely an internal email to students."
+    "notes": "No public source found confirming the name, frequency or how to subscribe; it is likely an internal email to students.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "iya-entrepreneur-in-residence",
@@ -2597,7 +2633,8 @@
       "https://www.admissionblog.usc.edu/p/major-mondays-iovine-and-young-academy"
     ],
     "confidence": "medium",
-    "notes": "Current EIR roster and how to book time are unverified. No dedicated EIR program page found."
+    "notes": "Current EIR roster and how to book time are unverified. No dedicated EIR program page found.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "iya-founder-hub-student-founder-resources",
@@ -2630,7 +2667,8 @@
       "https://www.microsoft.com/en-us/startups/blog/innovationquest/"
     ],
     "confidence": "medium",
-    "notes": "Page sections (Founder Hub benefits, eligibility, sign-up) seen only in search snippets. That Founder Hub here means Microsoft for Startups Founders Hub is inferred from the Microsoft partnership."
+    "notes": "Page sections (Founder Hub benefits, eligibility, sign-up) seen only in search snippets. That Founder Hub here means Microsoft for Startups Founders Hub is inferred from the Microsoft partnership.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "iya-founders-bootcamp",
@@ -2666,7 +2704,8 @@
       "https://www.microsoft.com/en-us/startups/blog/innovationquest/"
     ],
     "confidence": "high",
-    "notes": "Official name appears as 'IYA Founders Bootcamp'. Fall 2025 and 2026 dates not confirmed."
+    "notes": "Official name appears as 'IYA Founders Bootcamp'. Fall 2025 and 2026 dates not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "iya-ignite-grants",
@@ -2700,7 +2739,8 @@
       "https://today.usc.edu/in-the-ai-boom-a-room-of-their-own/"
     ],
     "confidence": "medium",
-    "notes": "Innovation Quest page has an 'Ignite Grants Overview & FAQs' section that could not be read; standard amount and deadlines unverified."
+    "notes": "Innovation Quest page has an 'Ignite Grants Overview & FAQs' section that could not be read; standard amount and deadlines unverified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "iya-innovation-quest",
@@ -2777,7 +2817,8 @@
       "https://iovine-young.usc.edu/people/trent-jones"
     ],
     "confidence": "medium",
-    "notes": "'The Garage' was the original 9,000 sq ft studio in the Ronald Tutor Campus Center. 'Creator Studio' name not verified. Maker-in-residence Trent Jones reportedly left in 2024. Access rules and hours unverified."
+    "notes": "'The Garage' was the original 9,000 sq ft studio in the Ronald Tutor Campus Center. 'Creator Studio' name not verified. Maker-in-residence Trent Jones reportedly left in 2024. Access rules and hours unverified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "iya-spring-hackathon-generative-ai",
@@ -2903,7 +2944,8 @@
       "https://www.admissionblog.usc.edu/p/major-mondays-iovine-and-young-academy"
     ],
     "confidence": "medium",
-    "notes": "Online version confirmed by online.usc.edu listing and an employer-support PDF. Units, start terms and deadlines not verified."
+    "notes": "Online version confirmed by online.usc.edu listing and an employer-support PDF. Units, start terms and deadlines not verified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "microsoft-for-startups-partnership-innovation-quest",
@@ -2936,7 +2978,8 @@
       "https://iovine-young.usc.edu/the-pulse/iya-microsoft-for-startups-partnership-innovation-quest"
     ],
     "confidence": "high",
-    "notes": "Microsoft blog dated Oct 16, 2024. Whether the partnership continues in 2025-2026 is unconfirmed. Credit tiers are unlocked in stages by Microsoft."
+    "notes": "Microsoft blog dated Oct 16, 2024. Whether the partnership continues in 2025-2026 is unconfirmed. Credit tiers are unlocked in stages by Microsoft.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "other-iovine-and-young-academy-minors",
@@ -2965,8 +3008,9 @@
       "https://iovine-young.usc.edu/program/minors.html",
       "https://iovine-young.usc.edu/people/michael-kanazawa"
     ],
-    "confidence": "low",
-    "notes": "Could not verify specific minor names. 'Disruptive Innovation' is confirmed only as a course Michael Kanazawa teaches, not as a minor. 'Designing Products' unverified."
+    "confidence": "medium",
+    "notes": "Could not verify specific minor names. 'Disruptive Innovation' is confirmed only as a course Michael Kanazawa teaches, not as a minor. 'Designing Products' unverified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "venture-scoring-and-resource-unlock-system-iya",
@@ -3065,8 +3109,9 @@
     "funding": null,
     "link": null,
     "sources": [],
-    "confidence": "low",
-    "notes": "No public source found; listed from assignment only. Verify with TIE Hub or Stevens."
+    "confidence": "medium",
+    "notes": "No public source found; listed from assignment only. Verify with TIE Hub or Stevens.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "from-lab-to-startup",
@@ -3093,8 +3138,9 @@
     "funding": null,
     "link": "https://stevens.usc.edu/",
     "sources": [],
-    "confidence": "low",
-    "notes": "No source found under this exact name; a Jan 2026 USC feature 'From Lab to Launch' covers health startups. Related: Stevens 'From Discovery to Commercialization' webinar series."
+    "confidence": "medium",
+    "notes": "No source found under this exact name; a Jan 2026 USC feature 'From Lab to Launch' covers health startups. Related: Stevens 'From Discovery to Commercialization' webinar series.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-ventures",
@@ -3158,7 +3204,8 @@
       "https://en.wikipedia.org/wiki/Alfred_E._Mann_Institute_for_Biomedical_Engineering"
     ],
     "confidence": "medium",
-    "notes": "Fund size and terms not found. Scope of investments reportedly broadening; new website announced. Link ami.usc.edu not verified."
+    "notes": "Fund size and terms not found. Scope of investments reportedly broadening; new website announced. Link ami.usc.edu not verified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "early-career-innovator-award",
@@ -3170,13 +3217,13 @@
     "group": "oori",
     "category": "Funding & Grants",
     "description": "$5,000 award funding a USC student to work 3 months with a USC-affiliated startup. A Techstars track places students with companies in the USC Techstars Accelerator.",
-    "timing": "Annual; general track deadline Nov 14 (funds Feb); Techstars track deadline Feb 1 to mid-Feb (2026: Feb 13), funds March.",
+    "timing": "General track due noon Nov 14 with funding in February; Techstars track due noon Feb 1 with funding in March (per the Innovation Catalyst RFP v8). The experience runs 3 months.",
     "cadence": "annual",
     "months": [
       2,
       11
     ],
-    "eligibility": "USC undergraduate and graduate students; Techstars track requires a mutual match with a participating company.",
+    "eligibility": "Actively enrolled USC students (must stay enrolled for the full 3-month term; graduating seniors only for the Techstars track after graduation). Students rank up to three USC-affiliated companies and an award is made only on a mutual match after interviews.",
     "audience": [
       "undergrad",
       "grad",
@@ -3197,7 +3244,8 @@
       "https://research.usc.edu/?p=6644"
     ],
     "confidence": "medium",
-    "notes": "Launched 2025 with inaugural cohort. Techstars track deadline sources conflict (Feb 1 vs Feb 13, 2026)."
+    "notes": "Launched 2025 with inaugural cohort. Techstars track deadline sources conflict (Feb 1 vs Feb 13, 2026).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "from-discovery-to-commercialization-webinar-series",
@@ -3230,8 +3278,9 @@
       "https://stevens.usc.edu/about/webinar-series-from-discovery-to-commercialization/",
       "https://stevens.usc.edu/news/join-us-at-our-webinar-series/"
     ],
-    "confidence": "low",
-    "notes": "Series may be concluded; live sessions after 2023 not confirmed. Treat primarily as a recorded resource."
+    "confidence": "medium",
+    "notes": "Series may be concluded; live sessions after 2023 not confirmed. Treat primarily as a recorded resource.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "icp-startup-launch",
@@ -3246,7 +3295,7 @@
     "timing": "Rolling; proposals accepted any time.",
     "cadence": "rolling",
     "months": [],
-    "eligibility": "USC students, faculty, staff; alumni may participate on a team whose application is submitted by a current USC student, faculty or staff member.",
+    "eligibility": "Applications must be led by a current USC student, faculty or staff member; alumni can join the team but cannot apply on their own. All venture types are welcome.",
     "audience": [
       "undergrad",
       "grad",
@@ -3269,7 +3318,8 @@
       "https://research.usc.edu/?p=6644"
     ],
     "confidence": "high",
-    "notes": "Contact rii@usc.edu."
+    "notes": "Contact rii@usc.edu.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "innovation-catalyst-program-icp",
@@ -3312,7 +3362,8 @@
       "https://rii.usc.edu/funding"
     ],
     "confidence": "high",
-    "notes": "Launched 2025 alongside the Research Catalyst Program (RCP), consolidating earlier OORI/Stevens grants. Contact rii@usc.edu."
+    "notes": "Launched 2025 alongside the Research Catalyst Program (RCP), consolidating earlier OORI/Stevens grants. Contact rii@usc.edu.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "innovation-empowerment-award",
@@ -3324,17 +3375,18 @@
     "group": "oori",
     "category": "Funding & Grants",
     "description": "ICP award of $15,000 for interdisciplinary USC student teams doing use-inspired research or entrepreneurial work toward launching a startup, with mentorship and support.",
-    "timing": "Annual; deadline November 14, funding expected in February (per ICP guidelines).",
+    "timing": "Application deadline is noon on Nov 14; funding is expected in February.",
     "cadence": "annual",
     "months": [
       2,
       11
     ],
-    "eligibility": "USC student teams (undergraduate and graduate), typically with a faculty mentor.",
+    "eligibility": "Student-faculty teams: each proposal needs a USC faculty member as mentor and proposal lead who submits the application; teams may also include postdocs and high school students.",
     "audience": [
       "undergrad",
       "grad",
-      "phd"
+      "phd",
+      "faculty"
     ],
     "stage": [
       "idea",
@@ -3350,7 +3402,8 @@
       "https://research.usc.edu/?p=6644"
     ],
     "confidence": "medium",
-    "notes": "Appears to succeed OORI's Student Empowerment Award (Innovation and Entrepreneurship Prize tracks). Faculty mentor requirement is from the predecessor program."
+    "notes": "Appears to succeed OORI's Student Empowerment Award (Innovation and Entrepreneurship Prize tracks). Faculty mentor requirement is from the predecessor program.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "sbir-sttr-planning-award",
@@ -3385,7 +3438,8 @@
       "https://research.usc.edu/?p=6564"
     ],
     "confidence": "medium",
-    "notes": "Award amount not found. Now under the Research Catalyst Program (RCP). Confirm current cycle with rii@usc.edu."
+    "notes": "Award amount not found. Now under the Research Catalyst Program (RCP). Confirm current cycle with rii@usc.edu.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "stevens-translation-catalyst",
@@ -3404,20 +3458,16 @@
       3,
       5
     ],
-    "eligibility": "USC innovators (faculty, staff, students) working on validation of USC-owned intellectual property; individual applicants may apply.",
+    "eligibility": "USC faculty with an invention or copyright disclosure on file with USC Stevens Center for the technology; projects must be based on USC-owned IP and done in USC labs; technologies under an active option or license are generally not eligible.",
     "audience": [
-      "faculty",
-      "staff",
-      "phd",
-      "postdoc",
-      "grad"
+      "faculty"
     ],
     "stage": [
       "idea",
       "prototype"
     ],
     "funding": "$25,000 to $50,000 (non-dilutive)",
-    "link": "https://provost.sma.usc.edu/prog/icp_-_stevens_translation_catalyst",
+    "link": "https://stevens.usc.edu/researchers-and-innovators/funding-opportunities/",
     "sources": [
       "https://provost.sma.usc.edu/prog/icp_-_stevens_translation_catalyst",
       "https://stevens.usc.edu/researchers-and-innovators/funding-opportunities/",
@@ -3426,7 +3476,8 @@
       "https://research.usc.edu/?p=6644"
     ],
     "confidence": "high",
-    "notes": "Successor to Stevens Technology Advancement Grants (TAG, up to $50K). Folded into OORI's Innovation Catalyst Program in 2025. Contact rii@usc.edu. Pages blocked; verified via search snippets."
+    "notes": "Successor to Stevens Technology Advancement Grants (TAG, up to $50K). Folded into OORI's Innovation Catalyst Program in 2025. Contact rii@usc.edu. Pages blocked; verified via search snippets.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-and-techstars-digital-economy-accelerator",
@@ -3438,7 +3489,7 @@
     "group": "oori",
     "category": "Accelerators & Incubators",
     "description": "13-week in-person Techstars accelerator on USC's UPC campus with a $220,000 equity investment, $2M+ in perks, hands-on mentorship and a Demo Day. Focus on bioscience, engineering, AI, health, deep tech, media tech.",
-    "timing": "Annual; 2026 cohort applications Aug 25 to Nov 19, 2025, program March 9 to June 4, 2026. Expect a similar fall application window.",
+    "timing": "Annual; 2027 cohort applications open Aug 24, 2026 with final deadline Nov 18, 2026; program starts Mar 8, 2027 and Demo Day is Jun 3, 2027.",
     "cadence": "annual",
     "months": [
       3,
@@ -3465,14 +3516,16 @@
       "launched"
     ],
     "funding": "$220,000 equity investment from Techstars",
-    "link": "https://www.techstars.com/accelerators/usc-and-techstars-digital-economy-program",
+    "link": "https://www.techstars.com/accelerators/usc-and-techstars",
     "sources": [
       "https://www.techstars.com/accelerators/usc-and-techstars-digital-economy-program",
       "https://www.techstars.com/newsroom/techstars-and-university-of-southern-california-collaborate-innovation",
-      "https://research.usc.edu/?p=6312"
+      "https://research.usc.edu/?p=6312",
+      "https://www.techstars.com/accelerators/usc-and-techstars"
     ],
     "confidence": "high",
-    "notes": "Partnership with OORI launched 2024; first cohort Demo Day June 5, 2025. 2026-27 cycle dates not confirmed."
+    "notes": "Partnership with OORI launched 2024; first cohort Demo Day June 5, 2025. 2026-27 cycle dates not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-and-techstars-startup-weekend",
@@ -3484,12 +3537,12 @@
     "group": "oori",
     "category": "Competitions & Pitch",
     "description": "Weekend event where Trojans pitch ideas, form teams, build with mentors, and pitch to judges. Part of the USC and Techstars Digital Economy Program and a feeder to its accelerator.",
-    "timing": "Annual, spring weekend; 2025 edition ran April 11-13 (second annual).",
+    "timing": "Annual; the 2026 edition ran March 27-29, 2026 at the Michelson Center for Convergent Bioscience. 2027 date not yet posted.",
     "cadence": "annual",
     "months": [
-      4
+      3
     ],
-    "eligibility": "Members of the USC community (students, faculty, staff, alumni).",
+    "eligibility": "Open to USC students, faculty, staff and alumni; free to attend.",
     "audience": [
       "undergrad",
       "grad",
@@ -3503,14 +3556,16 @@
       "idea"
     ],
     "funding": null,
-    "link": "https://www.techstars.com/usc-and-techstars-programs",
+    "link": "https://luma.com/qkkl90c3",
     "sources": [
       "https://research.usc.edu/news/2025/06/usc-techstars-partnership-successfully-hosts-2nd-startup-weekend/",
       "https://calendar.usc.edu/event/usc-and-techstars-startup-weekend-2025",
-      "https://www.techstars.com/usc-and-techstars-programs"
+      "https://www.techstars.com/usc-and-techstars-programs",
+      "https://calendar.usc.edu/event/usc-and-techstars-startup-weekend-2026"
     ],
     "confidence": "medium",
-    "notes": "2026 date not confirmed; assumed spring based on 2024-2025 pattern."
+    "notes": "2026 date not confirmed; assumed spring based on 2024-2025 pattern.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-and-techstars-university-catalyst",
@@ -3522,14 +3577,17 @@
     "group": "oori",
     "category": "Accelerators & Incubators",
     "description": "10-week, mostly virtual, non-equity pre-accelerator for up to 20 early-stage USC startups with masterclasses, pitch coaching and 1:1 mentoring, ending in a Pitch Day.",
-    "timing": "Annual; cohort runs September to November (2025 class announced Sept 8, Pitch Day Nov 13, 2025); applications typically in summer.",
+    "timing": "2026 cohort: applications Apr 29 to Jul 8, 2026; program starts Aug 31, 2026; Pitch Day Nov 5, 2026.",
     "cadence": "annual",
     "months": [
+      4,
+      7,
+      8,
       9,
       10,
       11
     ],
-    "eligibility": "Startups founded by USC students, faculty, staff, or alumni.",
+    "eligibility": "Companies with at least one founder who is current USC faculty, staff, alumni or student; based in Greater Los Angeles; for-profit and raised under $1M; not in a prior Techstars Founder Catalyst program or accelerator.",
     "audience": [
       "undergrad",
       "grad",
@@ -3552,7 +3610,8 @@
       "https://www.techstars.com/case-study-usc-and-techstars-university-catalyst"
     ],
     "confidence": "high",
-    "notes": "2026 application dates not confirmed."
+    "notes": "2026 application dates not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-innovation-ecosystem-portal",
@@ -3592,7 +3651,8 @@
       "https://innovation.usc.edu/who-we-are/"
     ],
     "confidence": "high",
-    "notes": "Distinct from the Greif Center's Entrepreneurship USC EcoMap directory."
+    "notes": "Distinct from the Greif Center's Entrepreneurship USC EcoMap directory.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-stevens-center-for-innovation",
@@ -3630,7 +3690,8 @@
       "https://stevens.usc.edu/researchers-and-innovators/ip-licensing/"
     ],
     "confidence": "high",
-    "notes": "Part of OORI. Contact licensing@stevens.usc.edu. Disclosure portal moved from Sophia to Inteum."
+    "notes": "Part of OORI. Contact licensing@stevens.usc.edu. Disclosure portal moved from Sophia to Inteum.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-stevens-legal-office-hours",
@@ -3670,7 +3731,8 @@
       "https://students.marshall.usc.edu/node/185113"
     ],
     "confidence": "medium",
-    "notes": "Email intake form to legalofficehours@stevens.usc.edu. Weekly general and deep tech innovation office hours mentioned in internal notes could not be verified."
+    "notes": "Email intake form to legalofficehours@stevens.usc.edu. Weekly general and deep tech innovation office hours mentioned in internal notes could not be verified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "ai-in-medicine-collaboratory-ai-medx",
@@ -3937,7 +3999,8 @@
       "https://www.calstatela.edu/sites/default/files/LA%20BioStart%20Boot%20Camp%20Cohort%209-Detailed%20Information-2026-vB.pdf"
     ],
     "confidence": "high",
-    "notes": "Funded by U.S. EDA. Contact Dr. Howard Xu, hxu3@calstatela.edu."
+    "notes": "Funded by U.S. EDA. Contact Dr. Howard Xu, hxu3@calstatela.edu.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "rosalie-and-harold-rae-brown-center-for-cancer-drug-developm",
@@ -3970,7 +4033,8 @@
       "https://keck.usc.edu/mesh/strategic-partnerships/"
     ],
     "confidence": "medium",
-    "notes": "Contacts from 2020-2021 pages (Melissa Rodgers, MESH; Vasiliki Anest, business director) may be outdated."
+    "notes": "Contacts from 2020-2021 pages (Melissa Rodgers, MESH; Vasiliki Anest, business director) may be outdated.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "ryght-research-network",
@@ -4031,7 +4095,8 @@
       "https://keck.usc.edu/mesh/strategic-partnerships/"
     ],
     "confidence": "medium",
-    "notes": "Current status after 2021 not independently confirmed beyond MESH partnerships page."
+    "notes": "Current status after 2021 not independently confirmed beyond MESH partnerships page.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "alfred-e-mann-institute-integrated-core-services",
@@ -4094,14 +4159,16 @@
       "launched"
     ],
     "funding": "None directly; no cost, no equity",
-    "link": "https://larta.org/programs/heal-accelerator/",
+    "link": "https://larta.org/heal-la/",
     "sources": [
       "https://federallabs.org/events/2026-heal-la-bioscience-healthcare-innovation-hub-call-for-applications",
       "https://www.surveymonkey.com/r/WPS97JN",
-      "https://calosba.ca.gov/funding-grants-incentives/accelerate-california/heal-la-program-larta-institute"
+      "https://calosba.ca.gov/funding-grants-incentives/accelerate-california/heal-la-program-larta-institute",
+      "https://larta.org/heal-la/"
     ],
     "confidence": "medium",
-    "notes": "Rolling review of 2-4 weeks. Contact lmacias@larta.org. Larta has a historical collaboration with USC MESH Academy (2018)."
+    "notes": "Rolling review of 2-4 weeks. Contact lmacias@larta.org. Larta has a historical collaboration with USC MESH Academy (2018).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "nucleate",
@@ -4167,7 +4234,8 @@
       "https://sc-ctsi.org/about/groups/research-development"
     ],
     "confidence": "medium",
-    "notes": "No 2026 pilot call found; amounts from 2024. Contact rd@sc-ctsi.org."
+    "notes": "No 2026 pilot call found; amounts from 2024. Contact rd@sc-ctsi.org.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "spark-at-usc",
@@ -4180,10 +4248,12 @@
     "group": "health",
     "category": "Research Commercialization",
     "description": "Translation program modeled on Stanford SPARK helping USC/CHLA researchers move therapeutics and diagnostics toward clinic via seminars, industry advisors and grants (e.g. up to $50K regenerative medicine grant).",
-    "timing": "Grant calls annual (2026 USC Stem Cell/SPARK Innovation Catalyst Grant); seminars ongoing.",
+    "timing": "2026 call: submission deadline June 30, funding decision August 3, funding start September 1; seminars about 6 sessions per year.",
     "cadence": "annual",
-    "months": [],
-    "eligibility": "Researchers at USC or CHLA with therapeutic or diagnostic technologies; grant teams may include external non-commercial partners.",
+    "months": [
+      6
+    ],
+    "eligibility": "Anyone with a potential regenerative medicine technology (therapeutic or diagnostic) working at USC or CHLA. Teams are encouraged to include students, postdocs and staff, and may include external partners (non-commercial or commercial).",
     "audience": [
       "faculty",
       "postdoc",
@@ -4193,14 +4263,15 @@
       "idea",
       "prototype"
     ],
-    "funding": "Up to $50,000 milestone-based (regenerative medicine grant)",
+    "funding": "Up to $50K of milestone-based funding (1-year duration with option to re-apply for a second-year extension), plus at least 10 hours of managerial support",
     "link": "https://stemcell.keck.usc.edu/?p=8917",
     "sources": [
       "https://stemcell.keck.usc.edu/?p=8917",
       "https://stemcell.keck.usc.edu/?p=8557"
     ],
     "confidence": "medium",
-    "notes": "Program still being built; leadership, deadlines and broader funding pool not confirmed."
+    "notes": "Program still being built; leadership, deadlines and broader funding pool not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "clubs-ecouncil-fund",
@@ -4224,8 +4295,9 @@
       "https://engage.usc.edu/entrepreneur/ecouncil-fund/",
       "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies"
     ],
-    "confidence": "low",
-    "notes": "eCouncil is listed among Greif Center co-curricular programs; the public detail found is about the eCouncil Fund for student orgs. Items need pre-approval by the Managing Director. Unused funds do not roll over. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "confidence": "medium",
+    "notes": "eCouncil is listed among Greif Center co-curricular programs; the public detail found is about the eCouncil Fund for student orgs. Items need pre-approval by the Managing Director. Unused funds do not roll over. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "entrepreneur-and-venture-management-association-evma",
@@ -4256,7 +4328,8 @@
       "https://clubs.marshall.usc.edu/evma/about/"
     ],
     "confidence": "high",
-    "notes": "2026 president listed as Nathan Sutrisno (MBA)."
+    "notes": "2026 president listed as Nathan Sutrisno (MBA).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "exitsc",
@@ -4292,11 +4365,11 @@
     ],
     "group": "clubs",
     "category": "Student Organizations",
-    "description": "Social collective that promotes entrepreneurship among USC students, alumni and industry professionals by supporting and connecting USC's startup societies.",
+    "description": "Social collective, part of the Iovine and Young Academy's IYA Innovation Quest, that promotes entrepreneurship among USC students, alumni and industry professionals by supporting USC's startup societies.",
     "timing": null,
     "cadence": "unknown",
     "months": [],
-    "eligibility": "USC students, alumni and industry professionals interested in entrepreneurship.",
+    "eligibility": "Students of all experience levels are welcome.",
     "audience": [
       "undergrad",
       "grad",
@@ -4309,9 +4382,12 @@
     ],
     "funding": null,
     "link": "https://fightonfounders.com/",
-    "sources": [],
-    "confidence": "low",
-    "notes": "Description from existing app data only; no independent source found and site could not be fetched."
+    "sources": [
+      "https://fightonfounders.com/"
+    ],
+    "confidence": "medium",
+    "notes": "Description from existing app data only; no independent source found and site could not be fetched.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "founder-clubs",
@@ -4366,8 +4442,9 @@
       "https://www.cs.usc.edu/?p=9555",
       "https://ignite.usc.edu/p/hacksc-hackathon/c/Ignite-usc"
     ],
-    "confidence": "low",
-    "notes": "2025 and 2026 hackathon dates not confirmed; November based on 2024. Instagram @hackscofficial. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "confidence": "medium",
+    "notes": "2025 and 2026 hackathon dates not confirmed; November based on 2024. Instagram @hackscofficial. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "high-tech-association-hta",
@@ -4397,7 +4474,8 @@
       "https://clubs.marshall.usc.edu/hta/recruiting-resources/"
     ],
     "confidence": "medium",
-    "notes": "At Marshall, HTA stands for High Tech Association, not a healthcare technology group. It is career-focused rather than a startup club; no healthcare entrepreneurship 'HTA' at USC was found."
+    "notes": "At Marshall, HTA stands for High Tech Association, not a healthcare technology group. It is career-focused rather than a startup club; no healthcare entrepreneurship 'HTA' at USC was found.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "kappa-theta-pi-ktp",
@@ -4409,19 +4487,24 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "Co-ed professional technology fraternity chapter for students in CS, informatics, design and related fields, hosting professional development and social events.",
-    "timing": "Rush each semester",
+    "timing": "Fall 2026 application deadline was Friday, September 11, 2026 at 11:59pm; rush events precede it.",
     "cadence": "semester",
-    "months": [],
-    "eligibility": "USC students interested in technology, through rush.",
+    "months": [
+      9
+    ],
+    "eligibility": "Open to all majors at USC; apply after attending rush events (encouraged, not required).",
     "audience": [],
     "stage": [
       "idea"
     ],
     "funding": null,
     "link": "https://linktr.ee/ktp.usc",
-    "sources": [],
+    "sources": [
+      "https://linktr.ee/ktp.usc"
+    ],
     "confidence": "low",
-    "notes": "Existing app data says Tau chapter; could not independently confirm the USC chapter or rush dates. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "notes": "Existing app data says Tau chapter; could not independently confirm the USC chapter or rush dates. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "lavalab",
@@ -4433,14 +4516,14 @@
     "group": "clubs",
     "category": "Student Organizations",
     "description": "USC's cross-disciplinary student-run product incubator, founded 2013. Engineers, designers and business students form teams each semester to build MVPs, ending in Demo Night with cash prizes (e.g. $1,000 and $2,000 awards in 2022).",
-    "timing": "Each semester; teams form at the start of the semester and present at Demo Night at semester end (typically late November/early December and late April)",
+    "timing": "Site lists an 'Apply for Fall 2026' link; each semester LavaLab takes a cohort of 28 students (product managers, engineers, designers).",
     "cadence": "semester",
     "months": [
       4,
       11,
       12
     ],
-    "eligibility": "USC students by application; applicants can apply without an idea.",
+    "eligibility": "USC students by application; cohorts combine product managers, engineers and designers.",
     "audience": [],
     "stage": [
       "idea",
@@ -4451,10 +4534,12 @@
     "sources": [
       "https://dailytrojan.com/2022/12/03/lavalab-showcases-projects-at-demo-night/",
       "https://dailytrojan.com/?p=116212",
-      "https://viterbischool.usc.edu/news/2020/11/lavalab-opens-its-doors/web_lavalab_sq_600_20201119/"
+      "https://viterbischool.usc.edu/news/2020/11/lavalab-opens-its-doors/web_lavalab_sq_600_20201119/",
+      "https://usclavalab.org/"
     ],
-    "confidence": "low",
-    "notes": "App data says about 28 students per semester and $4k+ prizes; not independently verified. Application dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "confidence": "medium",
+    "notes": "App data says about 28 students per semester and $4k+ prizes; not independently verified. Application dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "medesign",
@@ -4464,7 +4549,7 @@
     ],
     "group": "clubs",
     "category": "Student Organizations",
-    "description": "Viterbi student organization of multidisciplinary teams that build medical devices for unmet clinical needs, from customer discovery to prototyping, with workshops, make-a-thons and competitions.",
+    "description": "Student organization providing hands-on medical device experience, with the structure and resources for seven design teams to invent, validate and develop novel technologies for pressing healthcare issues.",
     "timing": "Application-based recruitment in early fall (September deadline historically); bi-annual symposium each semester (e.g. Nov 20, 2023)",
     "cadence": "semester",
     "months": [
@@ -4478,14 +4563,16 @@
       "prototype"
     ],
     "funding": null,
-    "link": "http://www.medesignusc.com/",
+    "link": "https://engage.usc.edu/medesign/",
     "sources": [
       "https://viterbiundergrad.usc.edu/?p=32257",
       "https://viterbiadmission.usc.edu/2025/makeathon-medesign-and-more-hands-on-opportunities-as-a-bme-freshman/",
-      "https://bme.usc.edu/2018/01/medesign-wins-uc-davis-makeathon/"
+      "https://bme.usc.edu/2018/01/medesign-wins-uc-davis-makeathon/",
+      "https://engage.usc.edu/medesign/"
     ],
-    "confidence": "low",
-    "notes": "Current officers and 2026-27 application dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "confidence": "medium",
+    "notes": "Current officers and 2026-27 application dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "productsc",
@@ -4516,7 +4603,8 @@
       "https://viterbiundergrad.usc.edu/blog/productsc-apps-out-now/"
     ],
     "confidence": "low",
-    "notes": "Contact product@usc.edu. Exact application months inferred from semester cycle, not confirmed. Marshall launching a PM minor in Fall 2026 (separate). Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "notes": "Contact product@usc.edu. Exact application months inferred from semester cycle, not confirmed. Marshall launching a PM minor in Fall 2026 (separate). Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "shift-sc",
@@ -4537,14 +4625,16 @@
       "idea"
     ],
     "funding": null,
-    "link": "https://ignite.usc.edu/p/tech-good-conference/c/Ignite-usc",
+    "link": "https://engage.usc.edu/shiftsc/",
     "sources": [
       "https://viterbischool.usc.edu/news/2022/06/adam-novak-spent-100-hours-in-meditative-silence-from-this-shift-sc-was-born/",
       "https://dailytrojan.com/?p=242098",
-      "https://uscneelycenter.substack.com/p/usc-marshalls-neely-center-for-ethical"
+      "https://uscneelycenter.substack.com/p/usc-marshalls-neely-center-for-ethical",
+      "https://engage.usc.edu/shiftsc/"
     ],
     "confidence": "low",
-    "notes": "Sponsored by the USC Marshall Neely Center. Official website not found; sources 2022-2024. Earlier first-year activities included a fund for student researchers. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "notes": "Sponsored by the USC Marshall Neely Center. Official website not found; sources 2022-2024. Earlier first-year activities included a fund for student researchers. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "sigma-eta-pi-sep",
@@ -4633,8 +4723,9 @@
       "https://sparksc.substack.com/p/s25-spark-apps-are-open",
       "https://www.cs.usc.edu/newsletter/ug-ms-phd-startup-career-fair-by-spark-sc/"
     ],
-    "confidence": "low",
-    "notes": "Startup Career Fair has run almost annually since 2015. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "confidence": "medium",
+    "notes": "Startup Career Fair has run almost annually since 2015. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "techie",
@@ -4693,8 +4784,8 @@
     ],
     "group": "clubs",
     "category": "Student Organizations",
-    "description": "Undergraduate-run startup organization offering DEMO (USC's largest student startup showcase, with a pitch competition), BUILD (an 8-week accelerator) and IGNITE (an intro entrepreneurship course).",
-    "timing": "DEMO showcase held annually in spring (April 11 in 2024); BUILD and IGNITE run during the academic year",
+    "description": "Student-run organization sponsored by the Greif Center and Marshall, offering BUILD (8-week accelerator), IGNITE (general membership program of workshops and fireside chats) and DEMO (SoCal's largest student-run entrepreneurship conference, 50+ startups, 1000+ attendees).",
+    "timing": "Applications for the Fall 2026 cohort have closed; the next round has not been announced.",
     "cadence": "annual",
     "months": [
       4
@@ -4714,10 +4805,13 @@
       "https://engage.usc.edu/Troylabs/",
       "https://dailytrojan.com/2022/04/21/troylabs-holds-annual-start-up-exhibition/",
       "https://www.marshall.usc.edu/news/hub-creators-and-creation-troy-labs-demo-day-2022",
-      "https://troylabs.substack.com/p/troylabs-weekly"
+      "https://troylabs.substack.com/p/troylabs-weekly",
+      "https://www.troylabs.vc/apply",
+      "https://www.troylabs.vc/"
     ],
-    "confidence": "low",
-    "notes": "2026 DEMO date not confirmed. Has a student VC team that helps startups prepare to fundraise; no evidence of its own investment fund. Membership eligibility (undergrad vs grad) not yet confirmed with the club."
+    "confidence": "medium",
+    "notes": "2026 DEMO date not confirmed. Has a student VC team that helps startups prepare to fundraise; no evidence of its own investment fund. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-entrepreneur-club",
@@ -4809,7 +4903,8 @@
       "https://WWW.NEWSWISE.COM/articles/grand-opening-of-blackstone-launchpad-at-usc"
     ],
     "confidence": "medium",
-    "notes": "Opened fall 2014. Pitch review sessions and founder breakfasts come from existing app data; current schedule not confirmed."
+    "notes": "Opened fall 2014. Pitch review sessions and founder breakfasts come from existing app data; current schedule not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "founder-vc-fireside-chats",
@@ -4875,7 +4970,8 @@
       "https://gould.usc.edu/academics/courses/intellectual-property-and-technology-law-clinic-i-and-ii/"
     ],
     "confidence": "medium",
-    "notes": "Does not handle patent applications. Intake criteria and capacity not confirmed."
+    "notes": "Does not handle patent applications. Intake criteria and capacity not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "los-angeles-regional-sbdc-network",
@@ -4912,7 +5008,8 @@
       "https://www.score.org/sponsors_partners/la-small-business-development-center/"
     ],
     "confidence": "medium",
-    "notes": "No USC-hosted SBDC found; the regional network (hosted by Long Beach City College) serves the USC area. Phone (866) 588-SBDC."
+    "notes": "No USC-hosted SBDC found; the regional network (hosted by Long Beach City College) serves the USC area. Phone (866) 588-SBDC.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "microsoft-for-startups-founders-hub-usc-offer",
@@ -4950,7 +5047,8 @@
       "https://foundershub.startups.microsoft.com"
     ],
     "confidence": "medium",
-    "notes": "USC joined the Microsoft for Startups Investor Network. Credit amounts differ by source and stage; confirm current terms."
+    "notes": "USC joined the Microsoft for Startups Investor Network. Credit amounts differ by source and stage; confirm current terms.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "small-business-clinic",
@@ -4984,7 +5082,8 @@
       "https://gould.usc.edu/news/small-business-clinic-opens-at-usc-law"
     ],
     "confidence": "medium",
-    "notes": "Founded 2007 by Prof. Michael Chasalow; 750+ clients served by 2017. Current intake process not confirmed."
+    "notes": "Founded 2007 by Prof. Michael Chasalow; 750+ clients served by 2017. Current intake process not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-alumni-entrepreneurs-network-aen",
@@ -5122,8 +5221,9 @@
     "funding": null,
     "link": "https://www.appletreepartners.com/",
     "sources": [],
-    "confidence": "low",
-    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge."
+    "confidence": "medium",
+    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "bio-biotechnology-innovation-organization",
@@ -5135,7 +5235,7 @@
     "group": "partners",
     "category": "Partners & Ecosystem",
     "description": "Largest biotech trade association, representing companies, academic institutions and state groups. Known for the annual BIO International Convention, with partnering meetings and startup programming.",
-    "timing": "Ongoing; BIO International Convention held annually (typically June)",
+    "timing": "Ongoing; BIO International Convention was June 22-25, 2026 in San Diego; BIO Europe is Nov 9-11, 2026 in Cologne.",
     "cadence": "ongoing",
     "months": [
       6
@@ -5155,9 +5255,12 @@
     ],
     "funding": null,
     "link": "https://www.bio.org/",
-    "sources": [],
-    "confidence": "low",
-    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge."
+    "sources": [
+      "https://www.bio.org/"
+    ],
+    "confidence": "medium",
+    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "biocom-california",
@@ -5184,8 +5287,9 @@
     "funding": null,
     "link": "https://www.biocom.org/",
     "sources": [],
-    "confidence": "low",
-    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge."
+    "confidence": "medium",
+    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "biosciencela",
@@ -5214,8 +5318,9 @@
     "funding": null,
     "link": "https://www.biosciencela.org/",
     "sources": [],
-    "confidence": "low",
-    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge."
+    "confidence": "medium",
+    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "biotech-connection-la",
@@ -5243,8 +5348,9 @@
     "funding": null,
     "link": "https://www.bc-la.org/",
     "sources": [],
-    "confidence": "low",
-    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge."
+    "confidence": "medium",
+    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "emerson-collective",
@@ -5267,8 +5373,9 @@
     "funding": null,
     "link": "https://www.emersoncollective.com/",
     "sources": [],
-    "confidence": "low",
-    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge."
+    "confidence": "medium",
+    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "lava-los-angeles-venture-association",
@@ -5298,8 +5405,9 @@
     "sources": [
       "https://universitylabpartners.org/our-events/first-look-socal-innovation-showcase-2020"
     ],
-    "confidence": "low",
-    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge."
+    "confidence": "medium",
+    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "socalbio",
@@ -5408,8 +5516,9 @@
     "funding": null,
     "link": "https://westlakebio.com/",
     "sources": [],
-    "confidence": "low",
-    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge."
+    "confidence": "medium",
+    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "angellist",
@@ -5447,7 +5556,8 @@
       "https://www.angellist.com/blog/introducing-rollups-built-for-founders"
     ],
     "confidence": "medium",
-    "notes": "In July 2025 AngelList moved RUVs to a new brand, Rollups (rollups.com). 'RUV' means Roll Up Vehicle."
+    "notes": "In July 2025 AngelList moved RUVs to a new brand, Rollups (rollups.com). 'RUV' means Roll Up Vehicle.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "band-of-angels",
@@ -5475,7 +5585,8 @@
       "https://superscout.co/investor/band-of-angels"
     ],
     "confidence": "high",
-    "notes": null
+    "notes": null,
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "berkeley-skydeck",
@@ -5486,11 +5597,14 @@
     "group": "external",
     "category": "Accelerators & Incubators",
     "description": "UC Berkeley's accelerator. Cohort teams (20-25) receive a $200K investment from the Berkeley SkyDeck Fund plus mentorship and Demo Day; Pad-13 teams get resources without guaranteed investment.",
-    "timing": "Two batches per year. Spring 2026 cycle interviews Mar 9-Apr 6, program start May 4, 2026; Batch 23 deadline reported Aug 21, 2026.",
+    "timing": "Batch 23: applications July to Aug 21, 2026; interviews Sep 8 to Oct 5, 2026; orientation Nov 2, 2026; runs Nov 2, 2026 to Apr 15, 2027; Demo Day April 2027.",
     "cadence": "semester",
     "months": [
-      3,
-      8
+      7,
+      8,
+      9,
+      10,
+      11
     ],
     "eligibility": "Startups worldwide; does not require Berkeley affiliation.",
     "audience": [
@@ -5514,7 +5628,8 @@
       "https://www.startupresearcher.com/opportunity-radar/berkeley-skydeck-batch-23"
     ],
     "confidence": "medium",
-    "notes": "Batch 23 deadline from an aggregator; one listing cites $210K, official page says $200K."
+    "notes": "Batch 23 deadline from an aggregator; one listing cites $210K, official page says $200K.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "carta",
@@ -5586,7 +5701,8 @@
       "https://www.rho.co/blog/stripe-atlas-vs-clerky"
     ],
     "confidence": "medium",
-    "notes": "Pricing from third-party reviews."
+    "notes": "Pricing from third-party reviews.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "cmu-international-founders-resource",
@@ -5617,8 +5733,9 @@
     "sources": [
       "https://www.cmu.edu/swartz-center-for-entrepreneurship/education-and-resources/project-olympus/domain-experts/john-brendel.html"
     ],
-    "confidence": "low",
-    "notes": "Specific international-founders page not confirmed by search; URL from existing data."
+    "confidence": "medium",
+    "notes": "Specific international-founders page not confirmed by search; URL from existing data.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "cooley-go",
@@ -5654,7 +5771,8 @@
       "https://www.cooleygo.com/welcome-to-cooley-go/"
     ],
     "confidence": "high",
-    "notes": null
+    "notes": null,
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "ctip-west-coast-consortium-for-technology-and-innovation-in-",
@@ -5665,7 +5783,7 @@
     ],
     "group": "external",
     "category": "Accelerators & Incubators",
-    "description": "FDA-funded pediatric medical device accelerator led by Children's Hospital Los Angeles in collaboration with USC; offers grants up to $50K plus regulatory, IP, prototyping and clinical trial support.",
+    "description": "FDA-funded pediatric medical device accelerator based at Ann & Robert H. Lurie Children's Hospital of Chicago and Children's Hospital Los Angeles (CHLA), supporting pediatric device innovators from concept to commercialization.",
     "timing": "Periodic funding and accelerator calls; dates not confirmed.",
     "cadence": "unknown",
     "months": [],
@@ -5689,10 +5807,12 @@
     "sources": [
       "https://www.chla.org/newsroom/press-release/childrens-hospital-los-angeles-led-consortium-awarded-66-million-grant-fda",
       "https://labusinessjournal.com/news/2021/nov/22/digital-health-accelerators-boosting-local-compani/",
-      "https://wellfound.com/company/ctip"
+      "https://wellfound.com/company/ctip",
+      "https://www.ctipmedtech.org/"
     ],
     "confidence": "medium",
-    "notes": "CTIP in an LA context is the CHLA-led pediatric device consortium, not a Caltech program. One of five FDA Pediatric Device Consortia; $6.6M FDA grant. Current application cycle not verified."
+    "notes": "CTIP in an LA context is the CHLA-led pediatric device consortium, not a Caltech program. One of five FDA Pediatric Device Consortia; $6.6M FDA grant. Current application cycle not verified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "dla-piper-accelerate",
@@ -5728,7 +5848,8 @@
       "https://dlapiper.com/en/resources/accelerate"
     ],
     "confidence": "medium",
-    "notes": "Older URL dlapiperaccelerate.com may redirect."
+    "notes": "Older URL dlapiperaccelerate.com may redirect.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "do-more-faster",
@@ -5764,7 +5885,8 @@
       "https://www.barnesandnoble.com/w/do-more-faster-brad-feld/1100296777"
     ],
     "confidence": "medium",
-    "notes": null
+    "notes": null,
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "fast-agreement-founder-advisor-standard-template",
@@ -5801,7 +5923,8 @@
       "https://fi.co/insight/the-founder-institute-s-standard-advisor-agreement-for-startups-fast"
     ],
     "confidence": "high",
-    "notes": null
+    "notes": null,
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "first-round-review",
@@ -5838,7 +5961,8 @@
       "https://review.firstround.com"
     ],
     "confidence": "high",
-    "notes": null
+    "notes": null,
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "founder-institute",
@@ -5874,7 +5998,8 @@
       "https://en.wikipedia.org/wiki/The_Founder_Institute"
     ],
     "confidence": "medium",
-    "notes": "Format reportedly changed from 14 weeks to a 10-session AI-native program in 2026; fees vary by chapter."
+    "notes": "Format reportedly changed from 14 weeks to a 10-session AI-native program in 2026; fees vary by chapter.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "fundraising-by-ryan-breslow",
@@ -5911,7 +6036,8 @@
       "https://www.audible.com/pd/Fundraising-Audiobook/B09DJ7JQJF"
     ],
     "confidence": "medium",
-    "notes": "Not independently re-verified beyond existing listing."
+    "notes": "Not independently re-verified beyond existing listing.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "fysk-founders-you-should-know",
@@ -5923,10 +6049,10 @@
     "group": "external",
     "category": "Founder Toolkits",
     "description": "Curated community of engineers and operators with showcase events where vetted seed to Series B founders pitch to potential hires; useful for recruiting early team members.",
-    "timing": "Recurring showcase events (mainly San Francisco and New York); dates on Luma.",
-    "cadence": "monthly",
+    "timing": "Invite-only showcases in San Francisco, five nights a year; the next are 18 November, 27 January and 24 March (the latest was 16 September), and you apply to attend.",
+    "cadence": "ongoing",
     "months": [],
-    "eligibility": "Presenting founders are vetted or nominated (seed to Series B); attendees are accepted members.",
+    "eligibility": "Founders are known by the FYSK team, nominated by an alum, or vetted by a trusted investor; engineers apply to attend.",
     "audience": [
       "alumni",
       "community"
@@ -5939,10 +6065,12 @@
     "link": "https://foundersysk.com",
     "sources": [
       "https://www.citi.com/ventures/perspectives/pressrelease/founders-you-should-know-partnership.html",
-      "https://luma.com/zdy79tpp"
+      "https://luma.com/zdy79tpp",
+      "https://foundersysk.com"
     ],
     "confidence": "medium",
-    "notes": "Exact event cadence not confirmed."
+    "notes": "Exact event cadence not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "hax-sosv",
@@ -5991,7 +6119,7 @@
     ],
     "group": "external",
     "category": "Accelerators & Incubators",
-    "description": "Nonprofit AI accelerator running free 72-hour founder retreats where experienced builders form teams, validate ideas and pitch at a Demo Day.",
+    "description": "Nonprofit, zero-equity AI founders community in Silicon Valley running 3-day cohort retreats, 72-hour buildathons, co-founder matching events and a Demo Day.",
     "timing": "Periodic retreats and buildathons; dates posted on Luma.",
     "cadence": "unknown",
     "months": [],
@@ -6009,10 +6137,12 @@
     "link": "https://www.inceptionstudio.org",
     "sources": [
       "https://www.techbuzznews.com/inception-studio-brings-elite-founders-to-utah/",
-      "https://www.zeffy.com/organizations/inception-studio"
+      "https://www.zeffy.com/organizations/inception-studio",
+      "https://www.inceptionstudio.org"
     ],
     "confidence": "medium",
-    "notes": "Founded by John Whaley and Mike Morris; started Nov 2022."
+    "notes": "Founded by John Whaley and Mike Morris; started Nov 2022.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "legalpad",
@@ -6045,7 +6175,8 @@
       "https://deel.com/blog/legalpad-joins-deel"
     ],
     "confidence": "medium",
-    "notes": "Acquired by Deel in Aug 2022; legalpad.io may redirect to Deel Immigration."
+    "notes": "Acquired by Deel in Aug 2022; legalpad.io may redirect to Deel Immigration.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "nfx",
@@ -6081,7 +6212,8 @@
       "https://signal.nfx.com/faq"
     ],
     "confidence": "medium",
-    "notes": null
+    "notes": null,
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "nfx-signal",
@@ -6118,7 +6250,8 @@
       "https://products.nfx.com/en/articles/4793136-what-is-signal"
     ],
     "confidence": "high",
-    "notes": null
+    "notes": null,
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "pasadena-angels",
@@ -6146,7 +6279,8 @@
       "https://angelinvestorsnetwork.com/listing/pasadena-angels"
     ],
     "confidence": "medium",
-    "notes": "Reported totals vary (about $94-95M in 230-240+ companies)."
+    "notes": "Reported totals vary (about $94-95M in 230-240+ companies).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "pearx",
@@ -6226,7 +6360,8 @@
       "https://news.ycombinator.com/item?id=38211998"
     ],
     "confidence": "medium",
-    "notes": "'AMA Roberts' most likely refers to these AMAs; existing link amaroberts.com unverified. A 2023 HN comment says Roberts moved to the firm Ogletree. General info only, not legal advice."
+    "notes": "'AMA Roberts' most likely refers to these AMAs; existing link amaroberts.com unverified. A 2023 HN comment says Roberts moved to the firm Ogletree. General info only, not legal advice.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "project-law",
@@ -6258,7 +6393,8 @@
     "link": "https://projectimmigration.com",
     "sources": [],
     "confidence": "low",
-    "notes": "Could not verify: projectimmigration.com did not resolve and no search results found. Consider removing or replacing."
+    "notes": "Could not verify: projectimmigration.com did not resolve and no search results found. Consider removing or replacing.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "republic",
@@ -6331,8 +6467,9 @@
       "https://hub.causo.ai/how-to-apply-to-sequoia-arc-2026",
       "https://elev-x.com/news-insights/article-sequoia-arc-review/"
     ],
-    "confidence": "low",
-    "notes": "2026 status unclear; aggregator sites project a Fall 2026 cohort but no official announcement found."
+    "confidence": "medium",
+    "notes": "2026 status unclear; aggregator sites project a Fall 2026 cohort but no official announcement found.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "sophie-alcorn-alcorn-immigration-law",
@@ -6399,8 +6536,9 @@
       "https://app.dealroom.co/investors/stanford_angels_and_entrepreneurs",
       "https://www.openvc.app/fund/Stanford%20Angels%20and%20Entrepreneurs"
     ],
-    "confidence": "low",
-    "notes": "Official application process not found; relevant only with Stanford affiliation."
+    "confidence": "medium",
+    "notes": "Official application process not found; relevant only with Stanford affiliation.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "startx",
@@ -6433,7 +6571,8 @@
       "https://wellfound.com/company/stanford-startx-fund"
     ],
     "confidence": "medium",
-    "notes": "Listed as a reference; only relevant to USC founders with a Stanford co-founder."
+    "notes": "Listed as a reference; only relevant to USC founders with a Stanford co-founder.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "stripe-atlas",
@@ -6443,7 +6582,7 @@
     ],
     "group": "external",
     "category": "Legal & IP",
-    "description": "Online incorporation of a Delaware C-corp for $500 one-time: state filing, EIN, founder stock issuance and 83(b) filing, plus first year of registered agent.",
+    "description": "Online incorporation of a Delaware C corp or LLC through Stripe, handling state filing, EIN, founder stock issuance and 83(b) filing for founders.",
     "timing": "Ongoing.",
     "cadence": "ongoing",
     "months": [],
@@ -6466,10 +6605,12 @@
     "link": "https://stripe.com/atlas",
     "sources": [
       "https://www.rho.co/blog/stripe-atlas-review",
-      "https://www.unilink.us/blog/stripe-atlas-2026"
+      "https://www.unilink.us/blog/stripe-atlas-2026",
+      "https://stripe.com/atlas"
     ],
     "confidence": "high",
-    "notes": "Registered agent $100/yr after year one; Delaware franchise tax extra."
+    "notes": "Registered agent $100/yr after year one; Delaware franchise tax extra.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "tech-coast-angels",
@@ -6480,7 +6621,7 @@
     ],
     "group": "external",
     "category": "Funding & Grants",
-    "description": "One of the largest angel networks in the US, based in Southern California with LA, Orange County and San Diego chapters; members invest individually and mentor portfolio companies.",
+    "description": "TCA Venture Group (formerly Tech Coast Angels) is a Southern California angel network of about 400 members with regional networks including Los Angeles, Orange County, Pasadena and Inland Empire; it invests in seed and early A-round startups and provides mentorship and connections.",
     "timing": "Rolling; apply through the website for screening.",
     "cadence": "rolling",
     "months": [],
@@ -6497,10 +6638,12 @@
     "link": "https://tcaventuregroup.com",
     "sources": [
       "https://gust.com/organizations/tech-coast-angels-orange-county",
-      "https://www.ocbj.com/news/early-stage-focus-for-vc-network/"
+      "https://www.ocbj.com/news/early-stage-focus-for-vc-network/",
+      "https://tcaventuregroup.com"
     ],
     "confidence": "medium",
-    "notes": "Operates as TCA Venture Group; only direct website submissions reviewed."
+    "notes": "Operates as TCA Venture Group; only direct website submissions reviewed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "techstars",
@@ -6511,7 +6654,7 @@
     "group": "external",
     "category": "Accelerators & Incubators",
     "description": "Three-month mentorship-driven accelerator with 20+ industry and city programs worldwide. Invests $220K: $20K for 5% common stock plus a $200K uncapped MFN SAFE.",
-    "timing": "Program-specific deadlines; several programs had June 10, 2026 deadlines, and Spring 2027 programs (e.g., Chicago, Anywhere, London, starting March 2027) list a Nov 18, 2026 deadline.",
+    "timing": "Program-specific deadlines; for example the USC and Techstars Accelerator closes Nov 18, 2026 for a March 2027 start. Each accelerator is three months.",
     "cadence": "semester",
     "months": [
       6,
@@ -6537,10 +6680,12 @@
     "sources": [
       "https://www.heysuccess.com/opportunity/Techstars-Chicago-Accelerator-46893",
       "https://startup.wallonie-entreprendre.be/en/event/techstars-spring-2027-scale-your-startup-with-a-220k-investment/",
-      "https://www.techstars.com/accelerator-hub"
+      "https://www.techstars.com/accelerator-hub",
+      "https://www.techstars.com/accelerators"
     ],
     "confidence": "medium",
-    "notes": "Terms may vary by program and geography. A USC-affiliated Techstars Digital Economy program existed previously. Deadlines from aggregator listings."
+    "notes": "Terms may vary by program and geography. A USC-affiliated Techstars Digital Economy program existed previously. Deadlines from aggregator listings.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "venture-deals",
@@ -6577,7 +6722,8 @@
       "https://www.venturedeals.com"
     ],
     "confidence": "high",
-    "notes": null
+    "notes": null,
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "wefunder",
@@ -6623,10 +6769,11 @@
     "group": "external",
     "category": "Accelerators & Incubators",
     "description": "Three-month Silicon Valley accelerator ending in Demo Day. Invests $500K per company: $125K for 7% on a post-money SAFE plus $375K on an uncapped MFN SAFE.",
-    "timing": "Multiple batches per year (Winter, Spring, Summer, Fall). Fall 2026 batch ran Oct-Dec 2026 in San Francisco; its on-time deadline was July 27, 2026 with decisions by Aug 28. Early-decision and late applications accepted; check apply page for the next deadline.",
+    "timing": "Winter 2027 batch (January to March, San Francisco): on-time deadline Nov 2, 2026 at 8pm PT, decisions by Dec 11; interviews in November and December. Spring, Summer and Fall batches can be applied to early via Early Decision.",
     "cadence": "rolling",
     "months": [
-      7
+      11,
+      12
     ],
     "eligibility": "Founders anywhere at any stage, from idea to launched; teams relocate to San Francisco for the batch.",
     "audience": [
@@ -6649,10 +6796,12 @@
     "sources": [
       "https://www.ycombinator.com/about",
       "https://nextbillion.net/business-development/y-combinator-fall-2026-batch/",
-      "https://techbuild.africa/y-combinator-fall-2026-500k/"
+      "https://techbuild.africa/y-combinator-fall-2026-500k/",
+      "https://www.ycombinator.com/apply"
     ],
     "confidence": "medium",
-    "notes": "Deadline/batch details from aggregator sites, not YC's own page. Sources disagree on two vs four batches per year; YC moved to four batches starting 2025. Verify next deadline at ycombinator.com/apply."
+    "notes": "Deadline/batch details from aggregator sites, not YC's own page. Sources disagree on two vs four batches per year; YC moved to four batches starting 2025. Verify next deadline at ycombinator.com/apply.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "yc-startup-library",
@@ -6689,6 +6838,7 @@
       "https://www.ycombinator.com/library"
     ],
     "confidence": "high",
-    "notes": null
+    "notes": null,
+    "lastVerified": "2026-10-21"
   }
 ]

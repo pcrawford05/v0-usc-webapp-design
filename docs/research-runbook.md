@@ -19,6 +19,12 @@ The WebFetch tool fails in the cloud container (DNS), but `curl` through the pro
 curl -sL --max-time 20 -A "Mozilla/5.0" "<url>" | python3 -c "import sys,re,html;t=sys.stdin.read();t=re.sub(r'(?s)<(script|style).*?</\1>','',t);print(re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',t)))[:12000])"
 ```
 
+If curl returns nothing useful (Cloudflare on viterbiinnovation.usc.edu, pear.vc and hax.co; JavaScript-rendered pages on iovine-young.usc.edu and Engage), read the page with the preinstalled Chromium:
+
+```sh
+node scripts/read-page.cjs "<url>"
+```
+
 A source counts as checked only if it was actually read. Search snippets do not count.
 
 ## Rules the agents follow

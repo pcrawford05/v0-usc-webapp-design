@@ -11,6 +11,16 @@ How to refresh every program in `data/programs.json` and keep `data/sources.json
 5. **Review** the diff of `data/programs.json` by hand before committing: look for eligibility that widened, prizes that changed by an order of magnitude, and links that moved off usc.edu. Programs flagged `defunct` or `not_found` are listed in the run log; decide whether to remove them.
 6. Build, check a few changed programs in the app, then commit and open a PR.
 
+## Reading pages
+
+The WebFetch tool fails in the cloud container (DNS), but `curl` through the proxy works. Agents read pages with:
+
+```sh
+curl -sL --max-time 20 -A "Mozilla/5.0" "<url>" | python3 -c "import sys,re,html;t=sys.stdin.read();t=re.sub(r'(?s)<(script|style).*?</\1>','',t);print(re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',t)))[:12000])"
+```
+
+A source counts as checked only if it was actually read. Search snippets do not count.
+
 ## Rules the agents follow
 
 - Never invent facts; every change cites a page.

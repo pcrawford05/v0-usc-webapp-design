@@ -52,7 +52,9 @@ for (const chunk of results) {
   for (const r of chunk.research.programs ?? []) {
     const p = byId.get(r.id)
     if (!p) { log.skipped.push(`unknown id ${r.id}`); continue }
-    p.lastVerified = date
+    // Only a program whose sources were actually opened this run counts as verified.
+    const opened = (r.sources ?? []).some(s => s.checked)
+    if (opened) p.lastVerified = date
     if (r.status === "defunct" || r.status === "not_found") log.flagged.push(`${r.id}: ${r.status}${r.notes ? ` (${r.notes})` : ""}`)
 
     const prev = registry.programs[r.id] ?? { sources: [], searchQueries: [] }
@@ -61,7 +63,7 @@ for (const chunk of results) {
     registry.programs[r.id] = {
       name: p.name,
       chunk: chunk.chunk,
-      status: r.status,
+      status: opened || r.status === "not_found" || r.status === "defunct" ? r.status : "unchecked",
       lastResearched: date,
       sources: [...seen.values()],
       searchQueries: [...new Set([...(r.search_queries ?? []), ...prev.searchQueries])].slice(0, 8),

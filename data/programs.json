@@ -12,10 +12,9 @@
     "timing": "Ongoing during the semester; posted hours Mon-Fri 11am-10pm, Sat 10am-5pm (as of March 2025).",
     "cadence": "ongoing",
     "months": [],
-    "eligibility": "USC Viterbi students who complete required safety training.",
+    "eligibility": "Design and fabrication center for undergraduate students in the USC Viterbi School of Engineering.",
     "audience": [
-      "undergrad",
-      "grad"
+      "undergrad"
     ],
     "stage": [
       "idea",
@@ -62,7 +61,8 @@
       "https://bme.usc.edu/facilities/"
     ],
     "confidence": "medium",
-    "notes": "Access rules for non-BME students not confirmed."
+    "notes": "Access rules for non-BME students not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "ce-486-engineering-innovation-for-global-challenges",
@@ -192,7 +192,8 @@
       "https://viterbigrad.usc.edu/2018/11/sign-up-for-csci-599-hacking-for-defense-spring-2019/"
     ],
     "confidence": "medium",
-    "notes": "Earlier offered as CSCI 599 Hacking for Defense (2019). Instructor Clifford Neuman (2025). Link between CSCI 532 and the H4D name inferred."
+    "notes": "Earlier offered as CSCI 599 Hacking for Defense (2019). Instructor Clifford Neuman (2025). Link between CSCI 532 and the H4D name inferred.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "das-family-innovate-x-la-student-competition",
@@ -229,7 +230,8 @@
       "https://viterbiundergrad.usc.edu/?p=31536"
     ],
     "confidence": "high",
-    "notes": "Run by CEE department, not TIE Hub. Established 2022 by alumni Santanu and Kelly Das. One sustainability page cites $15,000; most sources say $20,000. 2026 winner: MatterFlow."
+    "notes": "Run by CEE department, not TIE Hub. Established 2022 by alumni Santanu and Kelly Das. One sustainability page cites $15,000; most sources say $20,000. 2026 winner: MatterFlow.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "data-center-challenge",
@@ -259,11 +261,13 @@
     ],
     "group": "viterbi",
     "category": "Courses & Degrees",
-    "description": "Viterbi honors program with an Honors Colloquium and a thesis or commercialization plan option, including an innovation and tech commercialization track.",
-    "timing": "Apply after first or third semester (spring application).",
+    "description": "W.V.T. Rusch Undergraduate Engineering Honors Program for Viterbi students: Honors Colloquium plus an honors project, as either a thesis (Research Track) or a commercialization plan (Innovation Track, Technology Innovation and Entrepreneurship).",
+    "timing": "Students with more than 3 semesters left apply in their second or fourth semester (spring of freshman or sophomore year); juniors and transfers with 3 semesters left apply in fall of junior year, with the next window listed as coming November 2026 and decisions before winter break.",
     "cadence": "annual",
-    "months": [],
-    "eligibility": "Viterbi undergrads with 3.5+ cumulative and major GPA and at least 3 semesters remaining.",
+    "months": [
+      11
+    ],
+    "eligibility": "Viterbi undergraduates with at least 3 semesters remaining at USC and a minimum 3.50 cumulative and major USC GPA at application; GPA must be maintained to earn the honors designation.",
     "audience": [
       "undergrad"
     ],
@@ -275,10 +279,12 @@
     "link": "https://viterbiundergrad.usc.edu/ehp/",
     "sources": [
       "https://viterbiundergrad.usc.edu/?p=22687",
-      "https://viterbiundergrad.usc.edu/?p=19197"
+      "https://viterbiundergrad.usc.edu/?p=19197",
+      "https://viterbiundergrad.usc.edu/ehp/"
     ],
     "confidence": "medium",
-    "notes": "Sources date from about 2018-2020; GPA rules and application timing may have changed."
+    "notes": "Sources date from about 2018-2020; GPA rules and application timing may have changed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "engineering-innovation-for-global-challenges-minor",
@@ -377,7 +383,8 @@
       "https://viterbiinnovation.usc.edu/"
     ],
     "confidence": "low",
-    "notes": "No public source found for this specific session; listed from assignment only. Verify with TIE Hub."
+    "notes": "No public source found for this specific session; listed from assignment only. Verify with TIE Hub.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "founder-happy-hours-and-mixers",
@@ -412,7 +419,8 @@
       "https://viterbigrad.usc.edu/academic-services/new-student-information"
     ],
     "confidence": "medium",
-    "notes": "'Happy hour' branding not confirmed in sources; events archive lists 'Mixers + Pitches' and a 'Start-up Curious?' mixer."
+    "notes": "'Happy hour' branding not confirmed in sources; events archive lists 'Mixers + Pitches' and a 'Start-up Curious?' mixer.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "fundraising-bootcamp",
@@ -433,7 +441,8 @@
       "https://viterbiinnovation.usc.edu/tie-hub-events/"
     ],
     "confidence": "low",
-    "notes": "No source found confirming a TIE Hub 'Fundraising Bootcamp'. Description is a placeholder; verify with TIE Hub before publishing."
+    "notes": "No source found confirming a TIE Hub 'Fundraising Bootcamp'. Description is a placeholder; verify with TIE Hub before publishing.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "future-of-social-media-challenge",
@@ -464,7 +473,7 @@
     "group": "viterbi",
     "category": "Competitions & Pitch",
     "description": "International undergraduate startup competition co-founded in 2025 by USC's Mike Lee; USC selects an All-Star team that travels fully funded to compete at GSSC Worlds.",
-    "timing": "Annual; USC team selection in fall, Worlds May 17-21, 2026 in Seoul",
+    "timing": "Annual; USC team selection in fall, GSSC 2027 Worlds May 16-20, 2027 in Seoul (theme: AI Empowering Your Community)",
     "cadence": "annual",
     "months": [
       5
@@ -485,7 +494,8 @@
       "https://tac.usc.edu/2025/12/tac-students-represent-usc-on-the-global-stage-at-gssc-2026/"
     ],
     "confidence": "medium",
-    "notes": "Run by the Global Student Startup Foundation (nonprofit) alongside the Asian Leadership Conference; USC involvement via Viterbi. 2026: 17 USC students (2 teams + 7 organizers) traveled."
+    "notes": "Run by the Global Student Startup Foundation (nonprofit) alongside the Asian Leadership Conference; USC involvement via Viterbi. 2026: 17 USC students (2 teams + 7 organizers) traveled.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "graduate-certificate-in-technology-commercialization",
@@ -547,7 +557,8 @@
       "https://viterbiinnovation.usc.edu/"
     ],
     "confidence": "low",
-    "notes": "No USC page found for this session. Students should confirm visa questions with the USC Office of International Services and an attorney."
+    "notes": "No USC page found for this session. Students should confirm visa questions with the USC Office of International Services and an attorney.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "intellectual-property-training",
@@ -579,7 +590,8 @@
       "https://viterbiinnovation.usc.edu/"
     ],
     "confidence": "low",
-    "notes": "No public page found confirming format or dates. For licensing USC-owned IP, the USC Stevens Center for Innovation is the relevant office."
+    "notes": "No public page found confirming format or dates. For licensing USC-owned IP, the USC Stevens Center for Innovation is the relevant office.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "ise-585-strategic-management-of-technology-and-innovation",
@@ -647,7 +659,8 @@
       "https://viterbischool.usc.edu/news/2024/11/mepc-2024-2025-innovation-meets-imagination/"
     ],
     "confidence": "high",
-    "notes": "Prize raised from $50K to $100K for 2024-25. 2026 winner: Bilisense (jaundice testing). Exact team-composition rules not verified."
+    "notes": "Prize raised from $50K to $100K for 2024-25. 2026 winner: Bilisense (jaundice testing). Exact team-composition rules not verified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "min-family-challenge",
@@ -685,7 +698,8 @@
       "https://viterbischool.usc.edu/news/2026/05/usc-viterbi-startup-showcase-awards-150k-to-student-ventures/"
     ],
     "confidence": "high",
-    "notes": "Official MFC page appeared out of date in search snippets (referenced 2025-26 cycle). Some past cycles had October deadlines."
+    "notes": "Official MFC page appeared out of date in search snippets (referenced 2025-26 cycle). Some past cycles had October deadlines.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "national-i-corps-teams-grant",
@@ -809,7 +823,7 @@
     "group": "viterbi",
     "category": "Events & Speakers",
     "description": "Distinguished speaker series of the USC School of Advanced Computing featuring top tech leaders. The inaugural talk in fall 2024 featured Uber CEO Dara Khosrowshahi.",
-    "timing": "Periodic; inaugural event held in late October 2024. Future dates not confirmed.",
+    "timing": "Inaugural event Oct 22, 2024 with Uber CEO Dara Khosrowshahi at Ginsburg Hall (Banerjee Mittal Auditorium); no later dates found.",
     "cadence": "unknown",
     "months": [],
     "eligibility": "USC community; attendance details (open or invite-only) not confirmed.",
@@ -827,10 +841,12 @@
     "link": "https://viterbischool.usc.edu/news/2024/10/uber-ceo-we-depend-on-engineers-to-build-everything/",
     "sources": [
       "https://viterbischool.usc.edu/news/2024/10/uber-ceo-we-depend-on-engineers-to-build-everything/sugar-dara-khosrowshahi-fight-on/",
-      "https://viterbischool.usc.edu/news/news_category/viterbi-school/page/9"
+      "https://viterbischool.usc.edu/news/news_category/viterbi-school/page/9",
+      "https://viterbischool.usc.edu/news/2024/10/uber-ceo-we-depend-on-engineers-to-build-everything/"
     ],
     "confidence": "medium",
-    "notes": "Named for Ron and Valerie Sugar, whose $5M gift also endowed a trustee chair at the School of Advanced Computing. Run by the School of Advanced Computing, not the TIE Hub. A same-named series also exists at UCLA Samueli; do not confuse. No 2025-2026 speaker found."
+    "notes": "Named for Ron and Valerie Sugar, whose $5M gift also endowed a trustee chair at the School of Advanced Computing. Run by the School of Advanced Computing, not the TIE Hub. A same-named series also exists at UCLA Samueli; do not confuse. No 2025-2026 speaker found.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "sbir-sttr-grant-assistance",
@@ -863,7 +879,8 @@
       "https://research.usc.edu/?p=6243"
     ],
     "confidence": "medium",
-    "notes": "Advisory support, not a grant itself. Separately, USC Office of Research and Innovation has run an SBIR/STTR Planning Award for faculty partnered with small businesses."
+    "notes": "Advisory support, not a grant itself. Separately, USC Office of Research and Innovation has run an SBIR/STTR Planning Award for faculty partnered with small businesses.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "ship-fund",
@@ -896,7 +913,8 @@
       "https://www.cs.usc.edu/newsletter/ug-ms-phd-ship-fund/"
     ],
     "confidence": "medium",
-    "notes": "Details from a CS department newsletter repost of a TIE Hub announcement (search snippet). Unclear whether it recurs each semester."
+    "notes": "Details from a CS department newsletter repost of a TIE Hub announcement (search snippet). Unclear whether it recurs each semester.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "startup-stories",
@@ -941,7 +959,7 @@
     "group": "viterbi",
     "category": "Accelerators & Incubators",
     "description": "Viterbi Startup Garage summer program where USC students join operating tech startups as Entrepreneurs-in-Training to learn startup thinking and build a project portfolio.",
-    "timing": "Summer (roughly late May/June to late July), weekdays with weekly lab meetings; applications typically close March-May",
+    "timing": "Summer 2026 application timeline is listed as coming soon (all dates TBD) as of the page last updated March 31, 2026; an interest form is open.",
     "cadence": "annual",
     "months": [
       3,
@@ -957,14 +975,16 @@
       "idea"
     ],
     "funding": null,
-    "link": "https://viterbiinnovation.usc.edu/vsg",
+    "link": "https://viterbiinnovation.usc.edu/summer-smasher/",
     "sources": [
       "https://viterbicareers.usc.edu/?p=19298",
       "https://viterbicareers.usc.edu/?p=21235",
-      "https://viterbiinnovation.usc.edu/vsg"
+      "https://viterbiinnovation.usc.edu/vsg",
+      "https://viterbiinnovation.usc.edu/summer-smasher/"
     ],
     "confidence": "medium",
-    "notes": "Most recent confirmed signal is a 2025 interest form; 2024 edition hybrid with applications closing May 23. No 2026 details found."
+    "notes": "Most recent confirmed signal is a 2025 interest form; 2024 edition hybrid with applications closing May 23. No 2026 details found.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "summer-start-fellows",
@@ -975,27 +995,26 @@
     "group": "viterbi",
     "category": "Mentorship & Office Hours",
     "description": "Viterbi graduate admissions program letting select incoming MS students arrive early in summer; the Notion entry says it pays a 50% stipend for students interning at startups.",
-    "timing": "Summer before first fall term (2025: June 16-Aug 12; deadline Dec 1 prior year)",
+    "timing": "Summer 2025 ran June 16 to August 12, 2025, with an application deadline of December 1, 2024; the page has not been updated for later years.",
     "cadence": "annual",
     "months": [
       6,
       7,
       8
     ],
-    "eligibility": "Select incoming Viterbi master's students (MS Computer Science and its Data Science/AI variants per 2025 page).",
+    "eligibility": "Select high-achieving incoming Viterbi master's students in MS Computer Science, MS CS (Data Science) or MS CS (Artificial Intelligence).",
     "audience": [
       "grad"
     ],
-    "stage": [
-      "idea"
-    ],
+    "stage": [],
     "funding": "50% startup internship stipend (unverified)",
     "link": "https://viterbigradadmission.usc.edu/summer-start/",
     "sources": [
       "https://viterbigradadmission.usc.edu/summer-start/"
     ],
-    "confidence": "low",
-    "notes": "Startup-internship stipend only from Notion; not confirmed in sources. The 'Fellows' name and TIE Hub involvement unverified. Category is a best guess."
+    "confidence": "medium",
+    "notes": "Startup-internship stipend only from Notion; not confirmed in sources. The 'Fellows' name and TIE Hub involvement unverified. Category is a best guess.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "technology-development-and-commercialization-engr-494-former",
@@ -1032,7 +1051,8 @@
       "https://classes.usc.edu/term-20253/course/engr-494"
     ],
     "confidence": "medium",
-    "notes": "Offered as ENGR 499 (special topics) 2020-2022, then as ENGR 494 from 2023. Taught by Denise McKenzie."
+    "notes": "Offered as ENGR 499 (special topics) 2020-2022, then as ENGR 494 from 2023. Taught by Denise McKenzie.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "technology-entrepreneurship-minor",
@@ -1043,8 +1063,8 @@
     ],
     "group": "viterbi",
     "category": "Courses & Degrees",
-    "description": "Undergraduate minor (successor to the Marshall-Viterbi Digital Entrepreneurship minor) covering how startups and tech companies take ventures from ideation through launch.",
-    "timing": "Ongoing; declare any time.",
+    "description": "Undergraduate minor from the Technology and Applied Computing (TAC) program, successor to the Innovation: The Digital Entrepreneur minor, teaching students to design, prototype and launch technology-driven products and ventures with hands-on technical tools.",
+    "timing": "Expected to be available to students beginning Fall 2026; 17-18 units.",
     "cadence": "ongoing",
     "months": [],
     "eligibility": "USC undergraduates of any major.",
@@ -1056,12 +1076,14 @@
       "prototype"
     ],
     "funding": null,
-    "link": "https://viterbiundergrad.usc.edu/viable-business-entrepreneurship-competency/",
+    "link": "https://tac.usc.edu/academics/innovation-digital-entrepreneur",
     "sources": [
-      "https://viterbiundergrad.usc.edu/viable-business-entrepreneurship-competency/"
+      "https://viterbiundergrad.usc.edu/viable-business-entrepreneurship-competency/",
+      "https://tac.usc.edu/academics/innovation-digital-entrepreneur"
     ],
-    "confidence": "low",
-    "notes": "Could not confirm a minor currently titled 'Technology Entrepreneurship' in sources; renaming from Digital Entrepreneurship is from assignment. Check USC catalogue."
+    "confidence": "medium",
+    "notes": "Could not confirm a minor currently titled 'Technology Entrepreneurship' in sources; renaming from Digital Entrepreneurship is from assignment. Check USC catalogue.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "technology-innovation-fellowship",
@@ -1094,7 +1116,8 @@
       "https://viterbiinnovation.usc.edu/"
     ],
     "confidence": "medium",
-    "notes": "Inaugural cohort of 5 fellows (2025). Program page says applications open at a future date. Cadence assumed annual; not confirmed."
+    "notes": "Inaugural cohort of 5 fellows (2025). Program page says applications open at a future date. Cadence assumed annual; not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "tie-hub-1-1-mentorship",
@@ -1128,8 +1151,9 @@
       "https://viterbiinnovation.usc.edu/about/tie-hub-offerings/",
       "https://viterbiinnovation.usc.edu/community/usc-students/vsi2/"
     ],
-    "confidence": "low",
-    "notes": "Sources describe 'office hours to provide personalized mentoring' and bookable sessions with founders and experts; no distinct mentorship program page or matching process found."
+    "confidence": "medium",
+    "notes": "Sources describe 'office hours to provide personalized mentoring' and bookable sessions with founders and experts; no distinct mentorship program page or matching process found.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "tie-hub-coworking",
@@ -1161,8 +1185,9 @@
       "https://viterbiinnovation.usc.edu/",
       "https://viterbiinnovation.usc.edu/about/tie-hub-offerings/"
     ],
-    "confidence": "low",
-    "notes": "Homepage lists 'Co-Working' under its Build section but no details on location, hours or access were found. Not the same as the Viterbi Startup Garage (Marina del Rey incubator)."
+    "confidence": "medium",
+    "notes": "Homepage lists 'Co-Working' under its Build section but no details on location, hours or access were found. Not the same as the Viterbi Startup Garage (Marina del Rey incubator).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "tie-hub-office-hours",
@@ -1176,7 +1201,7 @@
     "group": "viterbi",
     "category": "Mentorship & Office Hours",
     "description": "Free 1:1 office hours with TIE Hub staff and experts to talk through an idea or venture and next steps; includes a deep tech-focused session alongside general innovation hours.",
-    "timing": "Weekly during the academic year; general hours with Prof. Trina Gregory Tue/Thu 10am-12pm (OHE 412); deep tech hours have been Tue 4-5pm (OHE 310S). Book via the site.",
+    "timing": "Office hours are offered with Trina Gregory (mobile app and DoD tech) and Dr. Oscar Neyra-Nazarrett (clean-tech); book via the Schedule Office Hours buttons. Specific days and times are not listed on the page (last updated March 9, 2025).",
     "cadence": "weekly",
     "months": [],
     "eligibility": "USC students (and staff and faculty) working on an idea or startup; sign up for a slot.",
@@ -1200,7 +1225,8 @@
       "https://viterbiinnovation.usc.edu/tie-hub-events/"
     ],
     "confidence": "medium",
-    "notes": "Times come from older pages and internal notes; confirm current schedule. Deep tech host previously listed as Oscar Nazarrett (internal notes, unverified)."
+    "notes": "Times come from older pages and internal notes; confirm current schedule. Deep tech host previously listed as Oscar Nazarrett (internal notes, unverified).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "trojan-tank",
@@ -1303,7 +1329,8 @@
       "https://viterbischool.usc.edu/news/2026/05/usc-viterbi-startup-showcase-awards-150k-to-student-ventures/"
     ],
     "confidence": "medium",
-    "notes": "Inaugural in 2026. Live pitch winner (Pando Surgical) got $500."
+    "notes": "Inaugural in 2026. Live pitch winner (Pando Surgical) got $500.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "venture-scout",
@@ -1353,14 +1380,13 @@
     "group": "viterbi",
     "category": "Accelerators & Incubators",
     "description": "A 3-week intensive program helping student and faculty founders take ideas from concept to launch through mentorship, customer discovery and early market validation.",
-    "timing": "Runs during the academic year in cycles; interest form for future cycles",
+    "timing": "Offered throughout the academic year; if you miss an application cycle, fill out the interest form to be notified when applications reopen.",
     "cadence": "unknown",
     "months": [],
-    "eligibility": "USC student and faculty founders with an early-stage idea.",
+    "eligibility": "Student and faculty founders with an idea or technology, from concept toward launch.",
     "audience": [
       "undergrad",
       "grad",
-      "phd",
       "faculty"
     ],
     "stage": [
@@ -1372,8 +1398,9 @@
       "https://viterbiinnovation.usc.edu/?p=2775",
       "https://viterbi.usc.edu/news/events/calendar/?event=105727"
     ],
-    "confidence": "low",
-    "notes": "Program page last updated Sept 2024; unclear if still running. No source found for a TIE Hub program named 'Genesis' or a ventureSPARK rename; the Genesis alias is unverified (search hits for Genesis at USC refer to the DOE Genesis Mission AI initiative)."
+    "confidence": "medium",
+    "notes": "Program page last updated Sept 2024; unclear if still running. No source found for a TIE Hub program named 'Genesis' or a ventureSPARK rename; the Genesis alias is unverified (search hits for Genesis at USC refer to the DOE Genesis Mission AI initiative).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "venturewell-e-team-program",
@@ -1421,7 +1448,7 @@
     ],
     "group": "viterbi",
     "category": "Courses & Degrees",
-    "description": "Two-week entrepreneurship module inside every ENGR 102 section: students learn value propositions, customer discovery and the lean canvas, then pitch in teams; winning team members get $50 gift cards.",
+    "description": "Two-week entrepreneurship module inside every fall ENGR 102 section: students learn value propositions, customer discovery and the lean canvas, then pitch in groups of about three; each member of a section's winning group gets a $50 Amazon gift card.",
     "timing": "Annual; fall semester, within ENGR 102.",
     "cadence": "annual",
     "months": [
@@ -1441,10 +1468,12 @@
     "link": "https://viterbiinnovation.usc.edu/competitions-and-programs/vsee/",
     "sources": [
       "https://viterbiinnovation.usc.edu/competitions-and-programs/vsee",
-      "https://web-app.usc.edu/soc/syllabus/20243/28632.pdf"
+      "https://web-app.usc.edu/soc/syllabus/20243/28632.pdf",
+      "https://viterbiinnovation.usc.edu/competitions-and-programs/vsee/"
     ],
     "confidence": "medium",
-    "notes": "Expansion of the acronym not confirmed in sources; prize amount may have changed."
+    "notes": "Expansion of the acronym not confirmed in sources; prize amount may have changed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "viterbi-startup-garage",
@@ -1474,14 +1503,16 @@
       "launched"
     ],
     "funding": null,
-    "link": "https://viterbiinnovation.usc.edu/viterbi-startup-garage-landing-page/",
+    "link": "https://viterbiinnovation.usc.edu/",
     "sources": [
       "https://viterbiinnovation.usc.edu/viterbi-startup-garage-landing-page/vsg-2",
       "https://viterbiinnovation.usc.edu/?p=907",
-      "https://viterbischool.usc.edu/news/2024/03/the-usc-viterbi-startup-garage-fostering-the-next-wave-of-tech-innovators/"
+      "https://viterbischool.usc.edu/news/2024/03/the-usc-viterbi-startup-garage-fostering-the-next-wave-of-tech-innovators/",
+      "https://viterbiinnovation.usc.edu/"
     ],
     "confidence": "medium",
-    "notes": "Founded 2013. Offerings per Notion: Founder Circle, Oceanside Chats, VC/Legal office hours, EIRs. Current cohort dates unknown."
+    "notes": "Founded 2013. Offerings per Notion: Founder Circle, Oceanside Chats, VC/Legal office hours, EIRs. Current cohort dates unknown.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "viterbi-student-innovation-institute-vsi2",
@@ -1518,7 +1549,8 @@
       "https://viterbi.usc.edu/news/news/2012/viterbi-student-innovation.htm"
     ],
     "confidence": "medium",
-    "notes": "Founded 2012. Official name is 'Viterbi Student Innovation Institute'. Page last updated 2021; may now be folded into the William W. Wang TIE Hub. Contact viterbi-innovation@usc.edu."
+    "notes": "Founded 2012. Official name is 'Viterbi Student Innovation Institute'. Page last updated 2021; may now be folded into the William W. Wang TIE Hub. Contact viterbi-innovation@usc.edu.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "viterbi-venture-fund",
@@ -1551,7 +1583,8 @@
       "https://viterbiinnovation.usc.edu/?p=934"
     ],
     "confidence": "medium",
-    "notes": "Fund page last updated Aug 2021; contact listed as David Eastman. No board seat taken. Current activity unverified."
+    "notes": "Fund page last updated Aug 2021; contact listed as David Eastman. No board seat taken. Current activity unverified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "yc-application-office-hours",
@@ -1586,7 +1619,8 @@
       "https://www.cs.usc.edu/newsletter/ug-ms-phd-free-yc-application-office-hours-for-usc-founders"
     ],
     "confidence": "medium",
-    "notes": "Only a 2025 announcement found; unclear whether it runs every YC cycle (YC now has multiple batches a year)."
+    "notes": "Only a 2025 announcement found; unclear whether it runs every YC cycle (YC now has multiple batches a year).",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "athena-women-s-entrepreneurship-summit-and-female-founders-p",
@@ -1860,7 +1894,8 @@
       "https://www.marshall.usc.edu/news/greif-center-names-dan-wadhwani-as-new-director"
     ],
     "confidence": "low",
-    "notes": "Only one source; not a founder support program per se. Launch date and current activity unknown."
+    "notes": "Only one source; not a founder support program per se. Launch date and current activity unknown.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "greif-center-newsletter",
@@ -2151,8 +2186,9 @@
     "funding": null,
     "link": "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies",
     "sources": [],
-    "confidence": "low",
-    "notes": "Not verified (search budget exhausted); requirements unconfirmed. Related club: EVMA."
+    "confidence": "medium",
+    "notes": "Not verified (search budget exhausted); requirements unconfirmed. Related club: EVMA.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "ms-in-entrepreneurship-and-innovation",
@@ -2492,7 +2528,8 @@
       "https://wobbly-pyroraptor-a52.notion.site/ACAD-406-Purpose-Driven-Innovation-Incubator-Fall-2024-c349eec83b5346c79db04842c99b76e8"
     ],
     "confidence": "high",
-    "notes": "Taught by Chris Swain. Fall 2026 schedule not verified."
+    "notes": "Taught by Chris Swain. Fall 2026 schedule not verified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "b-s-in-arts-technology-and-the-business-of-innovation",
@@ -2568,10 +2605,10 @@
     "group": "iya",
     "category": "Courses & Degrees",
     "description": "An Iovine and Young Academy minor for USC students interested in designing and launching innovations in health and healthcare.",
-    "timing": "Ongoing; declared during undergraduate study",
+    "timing": "Minor applications are seasonal; the Spring 2027 minor application opens in early Spring 2027.",
     "cadence": "ongoing",
     "months": [],
-    "eligibility": "USC undergraduates from any major (details unverified).",
+    "eligibility": "Majors in other USC schools who want to specialize in cross-disciplinary theory and application and design strategy; questions to iyadvise@usc.edu.",
     "audience": [
       "undergrad"
     ],
@@ -2661,14 +2698,15 @@
     ],
     "group": "iya",
     "category": "Founder Toolkits",
-    "description": "An Academy page gathering USC and IYA resources for student-led ventures, including Founder Hub benefits (Microsoft for Startups, up to $150,000 in Azure credits), eligibility, sign-up steps and other USC founder resources.",
-    "timing": "Rolling",
+    "description": "IYA page on the Microsoft for Startups Founders Hub partnership for Innovation Quest ventures: up to $150,000 in Azure credits, free AI model access, tools such as GitHub, Microsoft 365 and LinkedIn Premium, and unlimited 1:1 expert meetings, plus eligibility and sign-up steps.",
+    "timing": "Rolling. Sign up through Microsoft Founders Hub with a USC email, select 'USC - IYA Innovation Quest', then email IYAIQ@usc.edu. (Page mentions an Imagine Cup Semifinals nomination for January 2025, now past.)",
     "cadence": "rolling",
     "months": [],
-    "eligibility": "Academy student founders; specific eligibility requirements are listed on the page but could not be read.",
+    "eligibility": "Academy student and alumni founders and collaborators in Innovation Quest. The startup must be building owned (not licensed) software central to the business, have received under $10,000 in prior free Azure credits, not be past a Series D, and be a privately held for-profit company (not an educational institution, government entity, personal blog, dev shop, consultancy, agency, or crypto mining company).",
     "audience": [
       "undergrad",
-      "grad"
+      "grad",
+      "alumni"
     ],
     "stage": [
       "idea",
@@ -2696,10 +2734,10 @@
     "group": "iya",
     "category": "Events & Speakers",
     "description": "A one-day kickoff for Innovation Quest that dives into entrepreneurial skills and AI capabilities, with mentorship from industry leaders, to set student ventures up for the rest of the year.",
-    "timing": "Annual, in the fall (e.g. October 20, 2023; Fall 2024 edition kicked off the 2024-2025 Innovation Quest)",
+    "timing": "Annual, early fall: second annual edition held Sept 20, 2024. Fall 2025 and 2026 dates not found.",
     "cadence": "annual",
     "months": [
-      10
+      9
     ],
     "eligibility": "Student founders taking part in the Academy's Innovation Quest.",
     "audience": [
@@ -2732,12 +2770,13 @@
     "group": "iya",
     "category": "Funding & Grants",
     "description": "Innovation Quest grants that give selected student teams funding and mentorship to build a Minimum Viable Product, in categories such as Gen AI and Society, social impact and innovation. A reported award was $3,000.",
-    "timing": "Annual, awarded during the fall semester (e.g. December 2024)",
+    "timing": "Fall 2024 round: submissions due Nov 9, 2024; winners announced by Dec 1, 2024. No 2025 or 2026 round found.",
     "cadence": "annual",
     "months": [
+      11,
       12
     ],
-    "eligibility": "Selected student-led teams in the Academy's Innovation Quest.",
+    "eligibility": "Student teams with at least one Iovine and Young Academy student (ACAD major or minor, or IDSN) enrolled in the fall and following spring semester; non-Academy students may also join, and Gen AI and Society grant teams can come from any USC school. Based on the Fall 2024 round.",
     "audience": [
       "undergrad",
       "grad"
@@ -2746,12 +2785,13 @@
       "idea",
       "prototype"
     ],
-    "funding": "Example: $3,000 Gen AI and Society Ignite Grant (Dec 2024); amounts may vary",
-    "link": "https://iovine-young.usc.edu/iya-innovation-quest",
+    "funding": "Up to $3,000 per team (Fall 2024: up to nine grants, up to four for AI projects), plus at least one industry mentor",
+    "link": "https://iovine-young.usc.edu/iya-ignite-grants-overview-and-faqs",
     "sources": [
       "https://iovine-young.usc.edu/iya-innovation-quest",
       "https://www.microsoft.com/en-us/startups/blog/innovationquest/",
-      "https://today.usc.edu/in-the-ai-boom-a-room-of-their-own/"
+      "https://today.usc.edu/in-the-ai-boom-a-room-of-their-own/",
+      "https://iovine-young.usc.edu/iya-ignite-grants-overview-and-faqs"
     ],
     "confidence": "medium",
     "notes": "Innovation Quest page has an 'Ignite Grants Overview & FAQs' section that could not be read; standard amount and deadlines unverified.",
@@ -2863,8 +2903,9 @@
     "sources": [
       "https://iovine-young.usc.edu/iya-innovation-quest"
     ],
-    "confidence": "low",
-    "notes": "Innovation Quest page lists a 'Spring Hackathon' component; no source confirmed the name 'Generative AI Hackathon', dates, prizes or whether it ran in 2025 or 2026."
+    "confidence": "medium",
+    "notes": "Innovation Quest page lists a 'Spring Hackathon' component; no source confirmed the name 'Generative AI Hackathon', dates, prizes or whether it ran in 2025 or 2026.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "iya-venture-showcase",
@@ -2901,7 +2942,8 @@
       "https://today.usc.edu/in-the-ai-boom-a-room-of-their-own/"
     ],
     "confidence": "high",
-    "notes": "Tracks: Innovation, Social Impact, Gen AI and Society, Alumni Ventures. Prize amounts vary by year. One search snippet tied an August 9, 2024 date to the 2024 showcase page, likely a recap post date; Microsoft says April."
+    "notes": "Tracks: Innovation, Social Impact, Gen AI and Society, Alumni Ventures. Prize amounts vary by year. One search snippet tied an August 9, 2024 date to the 2024 showcase page, likely a recap post date; Microsoft says April.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "iya-venture-studio",
@@ -3008,11 +3050,11 @@
     ],
     "group": "iya",
     "category": "Courses & Degrees",
-    "description": "The Academy offers minors open to USC students outside the Academy in areas such as innovation, product design and entrepreneurship. See the minors page for the current list.",
-    "timing": "Ongoing; declared during undergraduate study",
+    "description": "The Academy offers five minors for majors in other USC schools: Health Innovation, Designing Products, Extended Reality Design and Development, Disruptive Innovation, and Designing for Digital Experiences.",
+    "timing": "The Spring 2027 minor application opens in early Spring 2027.",
     "cadence": "ongoing",
     "months": [],
-    "eligibility": "USC undergraduates (details unverified).",
+    "eligibility": "Majors in other USC schools; non-majors needing course access should email iyadvise@usc.edu for D-Clearance.",
     "audience": [
       "undergrad"
     ],
@@ -3783,7 +3825,8 @@
       "https://keck.usc.edu/mesh/strategic-partnerships/"
     ],
     "confidence": "medium",
-    "notes": "Leadership also includes Indy Gill, David Conti, Vinay Duddalwar."
+    "notes": "Leadership also includes Indy Gill, David Conti, Vinay Duddalwar.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "auransa-partnership",
@@ -3811,8 +3854,9 @@
     "sources": [
       "https://keck.usc.edu/mesh/strategic-partnerships/"
     ],
-    "confidence": "low",
-    "notes": "Only brief snippet evidence; start date and scope not confirmed."
+    "confidence": "medium",
+    "notes": "Only brief snippet evidence; start date and scope not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "autobahn-labs-collaboration",
@@ -3858,26 +3902,23 @@
     "group": "keck",
     "category": "Accelerators & Incubators",
     "description": "Free, non-dilutive ~12-week program from California Life Sciences pairing early-stage life science startups with expert advisors, ending in an investor Innovation Showcase. MESH connects USC founders to it.",
-    "timing": "Twice yearly (spring and fall cohorts); Fall 2026 applications closed July 6, kickoff September, showcase Dec 10, 2026.",
+    "timing": "Twice yearly. Fall 2026: applications closed July 6, kickoff September (virtual), Innovation Showcase Dec 10, 2026 (Bay Area). Spring 2027: applications close Jan 6, 2027, kickoff April 2027, showcase June 2027.",
     "cadence": "semester",
     "months": [
+      1,
+      4,
+      6,
       7,
       9,
       12
     ],
-    "eligibility": "California-based early-stage life science companies with under 12 employees and under $5M in dilutive funding raised.",
-    "audience": [
-      "faculty",
-      "postdoc",
-      "phd",
-      "alumni",
-      "community"
-    ],
+    "eligibility": "Early-stage life science companies with fewer than 12 employees and under $5M in dilutive funding raised, based in or with a strong presence in California.",
+    "audience": [],
     "stage": [
       "prototype",
       "launched"
     ],
-    "funding": "None; free and non-dilutive",
+    "funding": "None; no cost and equity-free support, 8-12 hours of customized mentorship, one-year complimentary CLS membership (Discovery Awards offered by partners Servier and Chiesi)",
     "link": "https://califesciences.org/fast-program/",
     "sources": [
       "https://califesciences.org/fast-program/",
@@ -3885,7 +3926,8 @@
       "https://keck.usc.edu/mesh/our-services/"
     ],
     "confidence": "high",
-    "notes": "Spring 2027 dates not yet confirmed. CLS also publishes a Startup Resource Guide."
+    "notes": "Spring 2027 dates not yet confirmed. CLS also publishes a Startup Resource Guide.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "chemdiv-partnership",
@@ -3913,8 +3955,9 @@
     "sources": [
       "https://keck.usc.edu/mesh/strategic-partnerships/"
     ],
-    "confidence": "low",
-    "notes": "Single source (MESH partnerships page snippet); dates and terms unknown."
+    "confidence": "medium",
+    "notes": "Single source (MESH partnerships page snippet); dates and terms unknown.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "innovation-cafes",
@@ -3944,7 +3987,8 @@
       "https://keck.usc.edu/mesh/strategic-partnerships/ai-in-medicine-collaboratory"
     ],
     "confidence": "low",
-    "notes": "Only description found ties it to the AI in Medicine Collaboratory (AI-MEDx). Schedule and eligibility not confirmed."
+    "notes": "Only description found ties it to the AI in Medicine Collaboratory (AI-MEDx). Schedule and eligibility not confirmed.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "keck-mesh-entrepreneurial-support",
@@ -3980,7 +4024,8 @@
       "https://keck.usc.edu/mesh/for-faculty/industry-pathways/"
     ],
     "confidence": "medium",
-    "notes": "keck.usc.edu blocked; verified via search snippets."
+    "notes": "keck.usc.edu blocked; verified via search snippets.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "la-biostart-boot-camp",
@@ -4100,7 +4145,7 @@
     "timing": "Rolling; projects selected via Brown Center/MESH.",
     "cadence": "rolling",
     "months": [],
-    "eligibility": "USC Norris/Keck investigators with clinically relevant cancer targets.",
+    "eligibility": "Open to all USC researchers interested in small molecule drug discovery.",
     "audience": [
       "faculty",
       "postdoc"
@@ -4876,7 +4921,7 @@
       5,
       9
     ],
-    "eligibility": "USC students by application.",
+    "eligibility": "USC students; anyone with a passion for making is welcome to join the community of 60+ Makers.",
     "audience": [],
     "stage": [
       "idea",
@@ -4887,7 +4932,8 @@
     "sources": [
       "https://www.cs.usc.edu/?p=8742",
       "https://viterbischool.usc.edu/news/2026/06/10-projects-10-solutions-student-engineers-tackle-everyday-problems/",
-      "https://losangeles.makerfaire.com/maker/entry/2459"
+      "https://losangeles.makerfaire.com/maker/entry/2459",
+      "https://viterbimakers.usc.edu/"
     ],
     "confidence": "medium",
     "notes": "Applications via linktr.ee/uscmakers. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
@@ -4955,8 +5001,9 @@
     "funding": null,
     "link": null,
     "sources": [],
-    "confidence": "low",
-    "notes": "Description from existing app data; no specific host or schedule found."
+    "confidence": "medium",
+    "notes": "Description from existing app data; no specific host or schedule found.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "intellectual-property-and-technology-law-clinic-iptlc",
@@ -5139,7 +5186,8 @@
       "https://today.usc.edu/?p=13072"
     ],
     "confidence": "medium",
-    "notes": "Timing based on the 2024 cohort; 2026 dates not confirmed. Contacts: aen@alumni.usc.edu, contact@aenmentorship.com."
+    "notes": "Timing based on the 2024 cohort; 2026 dates not confirmed. Contacts: aen@alumni.usc.edu, contact@aenmentorship.com.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "usc-rossier-edtech-accelerator",
@@ -5438,10 +5486,13 @@
     ],
     "group": "partners",
     "category": "Partners & Ecosystem",
-    "description": "Regional life science industry organization for Southern California, hosting networking and educational events for biomedical companies and entrepreneurs.",
-    "timing": "Ongoing",
+    "description": "Membership-based life science industry organization for Southern California biotech, medtech and pharma companies, with networking events, conferences, savings programs and advocacy.",
+    "timing": "Ongoing; next events are a networking mixer in Orange County on Oct 29, 2026 and the 28th Annual SoCalBio Investor & Partnering Conference on May 12-13, 2027.",
     "cadence": "ongoing",
-    "months": [],
+    "months": [
+      5,
+      10
+    ],
     "eligibility": "Southern California life science companies, founders and professionals.",
     "audience": [
       "alumni",
@@ -5453,10 +5504,13 @@
       "scaling"
     ],
     "funding": null,
-    "link": "http://socalbio.org/",
-    "sources": [],
-    "confidence": "low",
-    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge. Organization's current activity level unknown."
+    "link": "https://socalbio.org/",
+    "sources": [
+      "https://socalbio.org/"
+    ],
+    "confidence": "medium",
+    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge. Organization's current activity level unknown.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "uidp",
@@ -5479,8 +5533,9 @@
     "funding": null,
     "link": "https://uidp.org/",
     "sources": [],
-    "confidence": "low",
-    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge."
+    "confidence": "medium",
+    "notes": "Not verified in this research pass (web search budget exhausted, direct fetches blocked); based on existing app data and general knowledge.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "wavemaker-360-health",
@@ -5664,17 +5719,8 @@
     "timing": "Ongoing.",
     "cadence": "ongoing",
     "months": [],
-    "eligibility": "Incorporated startups; free tier limited to 25 stakeholders and $1M raised.",
-    "audience": [
-      "undergrad",
-      "grad",
-      "phd",
-      "postdoc",
-      "faculty",
-      "staff",
-      "alumni",
-      "community"
-    ],
+    "eligibility": "Incorporated startups; sign-up needs an email address and your certificate of incorporation.",
+    "audience": [],
     "stage": [
       "prototype",
       "launched",
@@ -5687,7 +5733,8 @@
       "https://carta.com/blog/launch-apac-mena/"
     ],
     "confidence": "high",
-    "notes": null
+    "notes": null,
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "clerky",
@@ -6103,7 +6150,7 @@
     ],
     "group": "external",
     "category": "Accelerators & Incubators",
-    "description": "SOSV's hard tech accelerator (robotics, climate, industrial, health hardware) based in Newark, NJ with engineering support; initial investment package reported up to $550K.",
+    "description": "SOSV's hard tech accelerator based in Newark, NJ (with a Plasma Forge facility in Princeton) offering up to $550K in initial pre-seed funding, a six-month residency, labs and in-house engineering support.",
     "timing": "Rolling applications; roughly six-month residency program.",
     "cadence": "rolling",
     "months": [],
@@ -6123,14 +6170,17 @@
       "launched"
     ],
     "funding": "Up to $550,000 initial package (reported)",
-    "link": "https://hax.co/program/",
+    "link": "https://hax.co/apply/",
     "sources": [
       "https://sosv.com/announcing-hax-deep-tech-showcase-ny-deep-tech-week-2026/",
       "https://www.peony.ink/blog/hardware-accelerators",
-      "https://f4.fund/firms/hax"
+      "https://f4.fund/firms/hax",
+      "https://hax.co/program/",
+      "https://hax.co/apply/"
     ],
     "confidence": "medium",
-    "notes": "Terms vary across sources ($250K to $550K); confirm with HAX."
+    "notes": "Terms vary across sources ($250K to $550K); confirm with HAX.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "inception-studio",
@@ -6312,7 +6362,7 @@
     ],
     "group": "external",
     "category": "Accelerators & Incubators",
-    "description": "Pear VC's selective early-stage accelerator (about 20 companies per cohort) with founder-to-founder mentorship and Demo Day. Invests roughly $250K-$2M per company.",
+    "description": "Pear VC's elite pre-seed accelerator (fewer than 25 teams per cohort) with a 12-week program, founder-to-founder mentorship, recruiting and GTM support, and a Demo Day to top investors. Invests $500K-$2M per company.",
     "timing": "Two cohorts per year (Winter and Summer). W26 applications ran Aug 28-Sep 13, 2025; S26 deadlines reported in Feb-April 2026; W27 applications reportedly closed Aug 17, 2026.",
     "cadence": "semester",
     "months": [
@@ -6321,28 +6371,24 @@
       8,
       9
     ],
-    "eligibility": "Pre-seed and seed founders, often recent grads or students from top universities.",
-    "audience": [
-      "undergrad",
-      "grad",
-      "phd",
-      "alumni",
-      "community"
-    ],
+    "eligibility": "Pre-seed founders, from idea stage (a founder joined with no cofounder and no product) to early traction.",
+    "audience": [],
     "stage": [
       "idea",
       "prototype",
       "launched"
     ],
-    "funding": "$250,000-$2,000,000 investment",
+    "funding": "$500K-$2M investment per company, plus about $4.5M in credits and deals",
     "link": "https://pear.vc/pearx/",
     "sources": [
       "https://pear.vc/?p=6808",
       "https://pear.vc/pearx-s25-applications-are-now-open/",
-      "https://hub.causo.ai/guides/how-to-apply-to-pearx-2026"
+      "https://hub.causo.ai/guides/how-to-apply-to-pearx-2026",
+      "https://pear.vc/pearx/"
     ],
     "confidence": "medium",
-    "notes": "Exact 2026-2027 dates from third-party guides; confirm on pear.vc."
+    "notes": "Exact 2026-2027 dates from third-party guides; confirm on pear.vc.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "peter-roberts-immigration-amas",
@@ -6502,7 +6548,7 @@
     ],
     "group": "external",
     "category": "Legal & IP",
-    "description": "Silicon Valley immigration attorney focused on startup founders (O-1A, H-1B, E-2, L-1A, EB-1A, EB-2 NIW); also publishes free guidance via podcast and TechCrunch column.",
+    "description": "Founder Law (formerly Alcorn Immigration Law) provides founder-focused U.S. immigration and corporate legal counsel for international founders, covering O-1A, EB-1A, EB-2 NIW, H-1B and L-1 visas, plus company formation, equity and fundraising.",
     "timing": "Ongoing.",
     "cadence": "ongoing",
     "months": [],
@@ -6524,10 +6570,12 @@
     "link": "https://alcorn.law",
     "sources": [
       "https://techcrunch.com/2023/05/17/ask-sophie-which-visas-are-best-for-u-s-startup-accelerators/",
-      "https://nvca.org/?p=116084"
+      "https://nvca.org/?p=116084",
+      "https://alcorn.law"
     ],
     "confidence": "medium",
-    "notes": "A competitor page says the firm now operates as Founder Law; unverified."
+    "notes": "A competitor page says the firm now operates as Founder Law; unverified.",
+    "lastVerified": "2026-10-21"
   },
   {
     "id": "stanford-angels-and-entrepreneurs",

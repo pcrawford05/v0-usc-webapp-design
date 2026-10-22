@@ -30,7 +30,7 @@ Run from a session on your computer with Claude in Chrome connected (it uses you
 | troylabs | TroyLabs | club | USC student founders and students interested in startups; DEMO features USC stud |
 | usc-entrepreneur-club | USC Entrepreneur Club | club | USC students of any major. |
 | usc-makers | USC Makers | club | USC students; anyone with a passion for making is welcome to join the community  |
-| usc-venture-lab-usc-vc | USC Venture Lab / USC VC | club | unknown |
+| usc-venture-lab-usc-vc | BAEP 565 Venture Lab | course (not a club) | USC Marshall graduate elective. |
 | clubs-ecouncil-fund | eCouncil Fund | club | USC Recognized Student Organizations hosting entrepreneurship activities. |
 | acad-406-purpose-driven-innovation-incubator | ACAD 406 Purpose-Driven Innovation Incubator | unchecked | USC students with a venture project; enrollment restrictions not confirmed. |
 | athena-women-s-entrepreneurship-summit-and-female-founders-p | ATHENA Women's Entrepreneurship Summit and Female Founders Pitch Competition | unchecked | Ventures in any industry with a female founder and at least one team member who  |

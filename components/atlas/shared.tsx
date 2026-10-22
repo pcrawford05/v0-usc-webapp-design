@@ -8,6 +8,7 @@ import { AUDIENCE_LABELS, GROUPS, MONTHS, STAGE_LABELS, type Program } from "@/l
 import { cn } from "@/lib/utils"
 
 import { RemindButton, ShareButton } from "./extras"
+import { FeedbackLink } from "./Feedback"
 
 // ---------- Saved programs (per browser) ----------
 
@@ -240,13 +241,7 @@ export function ProgramDrawer({
               </div>
               <p className="text-xs text-muted-foreground">
                 Something out of date or wrong?{" "}
-                <a
-                  className="font-semibold text-primary hover:underline"
-                  href={`mailto:pcrawfor@usc.edu?subject=${encodeURIComponent(`Founder Compass correction: ${program.name}`)}&body=${encodeURIComponent(`Program: ${program.name} (${program.id})\nWhat should change:\n\nSource or contact (optional):\n`)}`}
-                >
-                  Send a correction
-                </a>
-                . Run this program? We will update it with you.
+                <FeedbackLink label="Send a correction" program={program} />. Run this program? We will update it with you.
               </p>
             </div>
           </>

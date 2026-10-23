@@ -647,7 +647,7 @@
     "trojan-venture-partners": {
       "name": "Trojan Venture Partners",
       "chunk": "gap-11",
-      "status": "not_found",
+      "status": "archived",
       "lastResearched": "2026-10-22",
       "sources": [
         {
@@ -843,7 +843,7 @@
     "ce-499-innovation-for-global-challenges": {
       "name": "CE 499 Innovation for Global Challenges",
       "chunk": "p3-03",
-      "status": "unchecked",
+      "status": "archived",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -3152,7 +3152,7 @@
     "venture-showcase-viterbi": {
       "name": "Venture Showcase (Viterbi)",
       "chunk": "gap-05",
-      "status": "confirmed-by-staff",
+      "status": "archived",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -3442,7 +3442,7 @@
     "from-discovery-to-commercialization-webinar-series": {
       "name": "From Discovery to Commercialization Webinar Series",
       "chunk": "events-mentorship",
-      "status": "confirmed",
+      "status": "archived",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -3665,7 +3665,7 @@
     "founder-central-initiative": {
       "name": "Founder Central Initiative",
       "chunk": "p3-08",
-      "status": "confirmed",
+      "status": "archived",
       "lastResearched": "2026-10-21",
       "sources": [
         {
@@ -4623,7 +4623,7 @@
     "venture-scoring-and-resource-unlock-system-iya": {
       "name": "Venture Scoring and Resource Unlock System (IYA)",
       "chunk": "p3-05",
-      "status": "unchecked",
+      "status": "archived",
       "lastResearched": "2026-10-21",
       "sources": [
         {

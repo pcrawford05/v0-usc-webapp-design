@@ -1,6 +1,6 @@
 "use client"
 
-import { Bookmark, CalendarDays, Compass, LayoutGrid, MessageCircle, MessageSquare, Search, UserRound, X } from "lucide-react"
+import { Bookmark, Compass, MessageCircle, Search, UserRound } from "lucide-react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { Suspense, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
 
@@ -12,27 +12,26 @@ import { SubwayView } from "@/components/atlas/Subway"
 import { ProfileDialog, useProfile } from "@/components/atlas/ProfileDialog"
 import { FeedbackLink } from "@/components/atlas/Feedback"
 import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
-import { AskView, BrowseView, CalendarView, SavedView, type Turn } from "@/components/atlas/views"
+import { DiscoverView } from "@/components/atlas/Discover"
+import { SavedView } from "@/components/atlas/Saved"
+import { AskView, type Turn } from "@/components/atlas/views"
+import { NEEDS, type NeedKey } from "@/lib/catalog"
 import { describeProfile, hasProfile, ROLES } from "@/lib/profile"
 import { programById, programs } from "@/lib/programs"
 import { filterParams, readFilters, type Filters } from "@/lib/filters"
 import { rankPrograms } from "@/lib/search"
 import { cn } from "@/lib/utils"
 
-const MODES = [
-  { key: "bubbles", label: "Bubbles" },
-  { key: "subway", label: "Subway map" },
-  { key: "campus", label: "Campus map" },
-] as const
-
 const TABS = [
-  { key: "explore", label: "Explore", icon: Compass },
-  { key: "browse", label: "Browse", icon: LayoutGrid },
-  { key: "calendar", label: "Calendar", icon: CalendarDays },
+  { key: "discover", label: "Discover", icon: Compass },
   { key: "ask", label: "Advisor", icon: MessageCircle },
   { key: "saved", label: "Saved", icon: Bookmark },
 ] as const
 type TabKey = (typeof TABS)[number]["key"]
+type Mode = "list" | "map" | "bubbles" | "campus"
+
+// Old links: Explore and Browse are now Discover, Calendar lives in Saved, the Subway tab is Discover's map.
+const LEGACY_VIEW: Record<string, TabKey> = { explore: "discover", browse: "discover", calendar: "saved", path: "discover" }
 
 /** A pill that slides under whichever button in a group is active. */
 function useIndicator(active: string) {
@@ -53,11 +52,11 @@ function useIndicator(active: string) {
 function Atlas() {
   const params = useSearchParams()
   const router = useRouter()
-  // Older links to retired views (Find my path, My journey, Orbit, Constellation) land on Explore.
-  const rawView = params.get("view")
+  const rawView = params.get("view") ?? ""
+  const tab = (TABS.find(t => t.key === rawView)?.key ?? LEGACY_VIEW[rawView] ?? "discover") as TabKey
   const rawMode = params.get("mode")
-  const tab = (TABS.find(t => t.key === rawView)?.key ?? "explore") as TabKey
-  const mode = MODES.find(m => m.key === rawMode)?.key ?? "bubbles"
+  const mode: Mode = rawMode === "subway" || rawMode === "map" ? "map" : rawMode === "bubbles" || rawMode === "campus" ? rawMode : "list"
+  const need = (NEEDS.find(n => n.key === params.get("need"))?.key ?? null) as NeedKey | null
   const openId = params.get("p")
   const open = openId ? programById.get(openId) ?? null : null
 
@@ -82,9 +81,7 @@ function Atlas() {
   const filters = useMemo(() => readFilters(params), [params])
   const setFilters = useCallback((f: Partial<Filters>) => setParam(filterParams(f)), [setParam])
   const [paletteOpen, setPaletteOpen] = useState(false)
-  const query = filters.q
-  const setQuery = (q: string) => setFilters({ q })
-  const matches = useMemo(() => (query.trim() ? rankPrograms(query, 200).map(r => r.program) : null), [query])
+  const matches = useMemo(() => (filters.q.trim() ? rankPrograms(filters.q, 200).map(r => r.program) : null), [filters.q])
   const highlight = useMemo(() => (matches ? new Set(matches.map(p => p.id)) : null), [matches])
 
   const [turns, setTurns] = useState<Turn[]>([])
@@ -121,9 +118,8 @@ function Atlas() {
 
   const onOpen = useCallback((id: string) => setParam({ p: id }), [setParam])
   const card = { onOpen, isSaved, onToggleSave: toggle, onAsk: (q: string) => ask(q) }
-  const usc = programs.filter(p => p.group !== "external").length
   const tabsInd = useIndicator(tab)
-  const modesInd = useIndicator(mode)
+  const setMode = (m: Mode) => setParam({ view: "discover", mode: m === "list" ? null : m, route: null })
 
   // Feeds the cursor position to every .spotlight card for the hover light.
   useEffect(() => {
@@ -138,107 +134,80 @@ function Atlas() {
     return () => window.removeEventListener("pointermove", move)
   }, [])
 
+  const tabButton = (t: (typeof TABS)[number], compact: boolean) => (
+    <button
+      key={t.key}
+      data-key={t.key}
+      data-tour={t.key === "ask" ? "ask" : undefined}
+      onClick={() => setParam({ view: t.key, p: null })}
+      aria-current={tab === t.key ? "page" : undefined}
+      className={cn(
+        "relative inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-xl font-semibold transition-colors",
+        compact ? "flex-col gap-0.5 py-1.5 text-[11px]" : "px-4 py-2 text-sm",
+        tab === t.key ? "text-primary" : "text-foreground/65 hover:text-foreground",
+      )}
+    >
+      <t.icon className={compact ? "h-5 w-5" : "h-4 w-4"} />
+      {t.label}
+      {t.key === "saved" && saved.length > 0 && <span className={cn("rounded-full bg-secondary px-1.5 text-[10px] text-secondary-foreground", compact && "absolute right-[22%] top-0.5")}>{saved.length}</span>}
+    </button>
+  )
+
   return (
-    <div className="app-bg min-h-screen">
-      <header className="z-40 px-3 pt-3 sm:sticky sm:top-0 sm:px-6">
-        <div className="glass mx-auto max-w-7xl rounded-3xl px-4 py-3 sm:px-5">
-          <div className="flex flex-wrap items-center gap-3">
-            <div className="flex min-w-0 flex-1 items-center gap-3">
-              <div className="group/logo flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[#b3001b] to-[#7a0000] text-[#FFCC00] shadow-[inset_0_1px_0_rgba(255,255,255,.35),0_6px_16px_-6px_rgba(153,0,0,.6)]">
-                <Compass className="h-5 w-5 transition-transform duration-700 group-hover/logo:rotate-[200deg]" />
-              </div>
-              <div className="min-w-0 leading-tight">
-                <div className="text-[15px] font-bold tracking-tight text-foreground">Founder Compass</div>
-                <div className="hidden text-xs text-muted-foreground lg:block">{usc} USC programs · {programs.length - usc} outside resources</div>
-              </div>
-            </div>
-            <button
-              onClick={() => setPaletteOpen(true)}
-              data-tour="search"
-              className="order-last flex w-full items-center gap-2 rounded-2xl border border-white/70 bg-white/60 py-2.5 pl-3 pr-2 text-left text-sm text-muted-foreground shadow-[inset_0_1px_2px_rgba(0,0,0,.06)] transition hover:bg-white/85 sm:order-none sm:w-80"
-            >
-              <Search className="h-4 w-4" />
-              <span className="flex-1">Search or ask anything...</span>
-              <kbd className="hidden rounded-md border border-black/10 bg-white/80 px-1.5 py-0.5 font-sans text-[11px] sm:inline">⌘K</kbd>
+    <div className="app-bg min-h-screen pb-24 sm:pb-0">
+      {/* Thin header: brand, search, profile. On phones the tabs move to a bottom bar. */}
+      <header className="sticky top-0 z-40 px-3 pt-2 sm:px-6 sm:pt-3">
+        <div className="glass mx-auto flex max-w-7xl items-center gap-2 rounded-2xl px-3 py-2 sm:gap-3 sm:rounded-3xl sm:px-4">
+          <button onClick={() => setParam({ view: "discover", mode: null, need: null, p: null })} className="group/logo flex min-w-0 items-center gap-2.5" aria-label="Founder Compass home">
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#b3001b] to-[#7a0000] text-[#FFCC00] shadow-[inset_0_1px_0_rgba(255,255,255,.35)]">
+              <Compass className="h-[18px] w-[18px] transition-transform duration-700 group-hover/logo:rotate-[200deg]" />
+            </span>
+            <span className="truncate text-[15px] font-bold tracking-tight text-foreground">Founder Compass</span>
+          </button>
+          <nav ref={tabsInd.ref} className="relative mx-auto hidden gap-1 rounded-2xl bg-black/[.04] p-1 sm:flex" aria-label="Views">
+            {tabsInd.box && <span aria-hidden className="tab-indicator absolute left-0 top-0 rounded-xl bg-white/90 shadow-sm" style={{ transform: `translate(${tabsInd.box.x}px, ${tabsInd.box.y}px)`, width: tabsInd.box.w, height: tabsInd.box.h }} />}
+            {TABS.map(t => tabButton(t, false))}
+          </nav>
+          <div className="ml-auto flex items-center gap-1.5 sm:ml-0">
+            <button onClick={() => setPaletteOpen(true)} data-tour="search" aria-label="Search" className="flex items-center gap-2 rounded-xl px-2.5 py-2 text-sm text-muted-foreground hover:bg-white/70">
+              <Search className="h-[18px] w-[18px]" />
+              <kbd className="hidden rounded-md border border-black/10 bg-white/80 px-1.5 py-0.5 font-sans text-[11px] lg:inline">⌘K</kbd>
             </button>
-            <FeedbackLink
-              ariaLabel="Send feedback"
-              label={<><MessageSquare className="h-4 w-4" /><span className="hidden sm:inline">Feedback</span></>}
-              className="inline-flex items-center gap-2 rounded-2xl border border-white/70 bg-white/60 px-3.5 py-2.5 text-sm text-foreground shadow-[inset_0_1px_2px_rgba(0,0,0,.06)] transition hover:bg-white/85 hover:no-underline"
-            />
             <button
               onClick={() => setProfileOpen(true)}
               aria-label="Your profile"
-              className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-br from-[#b3001b] to-[#8a0000] px-3.5 py-2.5 text-sm font-semibold text-white shadow-[inset_0_1px_0_rgba(255,255,255,.3),0_8px_20px_-8px_rgba(153,0,0,.7)] transition hover:brightness-110"
+              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-[#b3001b] to-[#8a0000] px-2.5 py-2 text-sm font-semibold text-white hover:brightness-110 sm:px-3"
             >
               <UserRound className="h-4 w-4" />
-              <span className="hidden sm:inline">{me ? (me.name?.split(" ")[0] ?? ROLES.find(r => r.key === me.role)?.label ?? "Your profile") : "Personalize"}</span>
+              <span className="hidden md:inline">{me ? (me.name?.split(" ")[0] ?? ROLES.find(r => r.key === me.role)?.label ?? "Profile") : "Personalize"}</span>
             </button>
           </div>
-          <nav ref={tabsInd.ref} className="relative mt-3 flex gap-1 overflow-x-auto rounded-2xl bg-black/[.04] p-1 [scrollbar-width:none]" aria-label="Views">
-            {tabsInd.box && (
-              <span aria-hidden className="tab-indicator absolute left-0 top-0 rounded-xl bg-white/90 shadow-[0_1px_0_#fff_inset,0_4px_14px_-6px_rgba(0,0,0,.25)]" style={{ transform: `translate(${tabsInd.box.x}px, ${tabsInd.box.y}px)`, width: tabsInd.box.w, height: tabsInd.box.h }} />
-            )}
-            {TABS.map(t => (
-              <button
-                key={t.key}
-                data-key={t.key}
-                data-tour={t.key === "ask" ? "ask" : undefined}
-                aria-label={t.label}
-                onClick={() => setParam({ view: t.key })}
-                aria-current={tab === t.key ? "page" : undefined}
-                className={cn(
-                  "relative inline-flex shrink-0 flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-xl px-3 py-2 text-sm font-semibold transition-colors",
-                  tab === t.key ? "text-primary" : "text-foreground/70 hover:text-foreground",
-                )}
-              >
-                <t.icon className="h-4 w-4" />
-                <span className="hidden sm:inline">{t.label}</span>
-                {t.key === "saved" && saved.length > 0 && (
-                  <span className="rounded-full bg-secondary px-1.5 text-[11px] text-secondary-foreground">{saved.length}</span>
-                )}
-              </button>
-            ))}
-          </nav>
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6">
-        {tab === "explore" && (
-          <div key={mode} className="animate-view">
-            <div ref={modesInd.ref} data-tour="explore-modes" className="relative mb-4 grid grid-cols-2 gap-1 rounded-2xl glass p-1 sm:inline-flex" role="tablist" aria-label="Explore views">
-              {modesInd.box && <span aria-hidden className="tab-indicator absolute left-0 top-0 rounded-xl bg-white/90 shadow-sm" style={{ transform: `translate(${modesInd.box.x}px, ${modesInd.box.y}px)`, width: modesInd.box.w, height: modesInd.box.h }} />}
-              {MODES.map(m => (
-                <button
-                  key={m.key}
-                  data-key={m.key}
-                  role="tab"
-                  aria-selected={mode === m.key}
-                  onClick={() => setParam({ mode: m.key === "bubbles" ? null : m.key, route: null })}
-                  className={cn("relative inline-flex shrink-0 items-center justify-center gap-1.5 rounded-xl px-3.5 py-2.5 text-sm font-semibold transition-colors sm:py-1.5", mode === m.key ? "text-primary" : "text-foreground/70 hover:text-foreground")}
-                >
-                  {m.label}
-                </button>
-              ))}
+      <main className="mx-auto max-w-7xl px-4 py-5 sm:px-6 sm:py-6">
+        <div key={`${tab}-${mode}`} className="animate-view">
+          {tab === "discover" && (mode === "list" || mode === "map") && (
+            <DiscoverView filters={filters} setFilters={setFilters} need={need} setNeed={n => setParam({ need: n })} profile={me} mode={mode} setMode={setMode} {...card} />
+          )}
+          {tab === "discover" && (mode === "bubbles" || mode === "campus") && (
+            <div className="space-y-3">
+              <button onClick={() => setMode("map")} className="text-sm font-semibold text-primary hover:underline">← Back to Discover</button>
+              {mode === "bubbles" ? <BubbleMap programs={programs} highlight={highlight} onOpen={onOpen} /> : <CampusMap programs={programs} highlight={highlight} onOpen={onOpen} />}
             </div>
-            {matches && (
-              <p className="mb-3 inline-flex items-center gap-2 text-sm text-muted-foreground">
-                Showing {matches.length} program{matches.length === 1 ? "" : "s"} for "{query}"
-                <button onClick={() => setQuery("")} aria-label="Clear search" className="rounded-full bg-foreground/[.07] p-0.5 hover:bg-foreground/[.12]"><X className="h-3.5 w-3.5" /></button>
-              </p>
-            )}
-            {mode === "bubbles" && <BubbleMap programs={programs} highlight={highlight} onOpen={onOpen} />}
-            {mode === "campus" && <CampusMap programs={programs} highlight={highlight} onOpen={onOpen} />}
-            {mode === "subway" && <SubwayView onOpen={onOpen} profile={me ? describeProfile(me) : undefined} initial={params.get("route") ?? undefined} />}
-          </div>
-        )}
-        {tab !== "explore" && <div key={tab} className="animate-view">
-        {tab === "browse" && <BrowseView all={programs} filters={filters} setFilters={setFilters} profile={me} saved={saved} {...card} />}
-        {tab === "calendar" && <CalendarView all={programs} onOpen={onOpen} profile={me} saved={saved} />}
-        {tab === "ask" && <AskView turns={turns} busy={busy} onSend={ask} {...card} />}
-        {tab === "saved" && <SavedView saved={saved} onAskPlan={ask} {...card} />}
-        </div>}
+          )}
+          {tab === "discover" && params.get("route") && mode === "map" && (
+            <div className="mt-6"><SubwayView onOpen={onOpen} initial={params.get("route") ?? undefined} /></div>
+          )}
+          {tab === "ask" && <AskView turns={turns} busy={busy} onSend={ask} {...card} />}
+          {tab === "saved" && <SavedView saved={saved} {...card} />}
+        </div>
       </main>
+
+      {/* Phone tab bar */}
+      <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-black/5 bg-white/90 px-2 pb-[max(8px,env(safe-area-inset-bottom))] pt-1 backdrop-blur-xl sm:hidden" aria-label="Views">
+        <div className="flex">{TABS.map(t => tabButton(t, true))}</div>
+      </nav>
 
       <footer className="mx-auto max-w-7xl px-4 pb-10 text-xs text-muted-foreground sm:px-6">
         Program details are researched from public sources and change often. Always confirm dates and eligibility on the official page. Spot an error or have an idea? <FeedbackLink label="Send feedback" className="font-normal text-inherit underline hover:text-foreground" />. · <a href="/one-pager" className="underline hover:text-foreground">One-page PDF</a>
@@ -250,7 +219,7 @@ function Atlas() {
         views={TABS}
         onOpen={onOpen}
         onAsk={ask}
-        onFilter={q => setParam({ ...filterParams({ q }), view: "browse", p: null })}
+        onFilter={q => setParam({ ...filterParams({ q }), view: "discover", mode: null, p: null })}
         onView={v => setParam({ view: v })}
       />
 

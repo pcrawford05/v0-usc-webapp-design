@@ -24,6 +24,7 @@ export interface Program {
   notes: string | null
   // Set when a program looks defunct (no public presence or long silent); hidden from the site but kept in the data.
   archived?: string
+  lastVerified?: string
 }
 
 export const GROUPS = {

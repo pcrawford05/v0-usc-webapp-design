@@ -1,5 +1,6 @@
 import { GROUPS, MONTHS, programs, programById, type Program } from "@/lib/programs"
 import { COLUMN, forward, networkPrompt, onMap } from "@/lib/network"
+import { getEngageEvents } from "@/lib/engage"
 import { rankPrograms } from "@/lib/search"
 
 export interface ChatTurn {
@@ -56,8 +57,21 @@ function systemPrompt(profile?: string): string {
   ].join("\n")
 }
 
+// Live EngageSC events, fetched once per request batch and cached by lib/engage for a day.
+let eventLines = ""
+async function loadEvents() {
+  try {
+    const events = await getEngageEvents()
+    const fmt = (iso: string) => new Date(iso).toLocaleString("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" })
+    eventLines = events.slice(0, 40).map(e => `${fmt(e.start)} | ${e.title} | host: ${e.host}${e.programIds[0] ? ` (${e.programIds[0]})` : ""} | ${e.url}`).join("\n")
+  } catch {
+    eventLines = ""
+  }
+}
+
 function userPrompt(query: string, ranked: Program[], withCatalog: boolean): string {
   return [
+    ...(eventLines ? ["UPCOMING EVENTS ON ENGAGESC (live; mention them with their date when the user asks what is happening or when one fits):", eventLines, ""] : []),
     ...(withCatalog ? ["FULL CATALOG (id | name | group | category | when):", programs.map(compactLine).join("\n"), ""] : []),
     "DETAILS FOR THE MOST RELEVANT PROGRAMS:",
     ranked.map(detail).join("\n"),
@@ -137,6 +151,7 @@ function fallbackPlan(ids: string[]): RoutePlan | undefined {
 }
 
 export async function ask(query: string, history: ChatTurn[] = [], profile?: string): Promise<AskResult> {
+  await loadEvents()
   const context = [...history.filter(t => t.role === "user").slice(-2).map(t => t.content), query].join(" ")
   const ranked = rankPrograms(context, 20).map(r => r.program)
   const system = systemPrompt(profile)

@@ -6,7 +6,7 @@ export function GET(req: Request) {
   return new Response(
     `# Founder Compass
 
-> A directory of USC entrepreneurship programs and outside founder resources.
+> A directory of USC entrepreneurship programs, clubs, courses and resources. Outside resources are archived and hidden.
 
 ## Data
 - [Program catalog (JSON)](${origin}/programs.json): every program with group, category, description, timing, eligibility, audience, stage, funding, official link, sources and a confidence rating.

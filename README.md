@@ -1,6 +1,6 @@
 # Founder Compass
 
-Every USC entrepreneurship program in one place: 167 USC programs plus 36 outside founder resources, each with timing, eligibility, funding, a description and an official link.
+Every USC entrepreneurship program in one place: 143 USC programs, clubs and courses, each with timing, eligibility, funding, a description and an official link.
 
 [Live app](https://v0-usc-webapp-design.vercel.app/)
 

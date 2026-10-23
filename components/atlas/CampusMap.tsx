@@ -213,7 +213,7 @@ export function CampusMap({ programs, highlight, onOpen }: { programs: Program[]
             </div>
             <ul className="flex-1 space-y-1 overflow-y-auto p-2">
               {[...PLACES.map(p => ({ key: p.key, name: p.name, sub: `${p.building} · ${CAMPUSES[p.campus].label}`, color: p.color, campus: p.campus as CampusKey | null })),
-                { key: OFF, name: "Off campus & online", sub: "Partners and outside founder resources", color: "#3E4A52", campus: null }]
+                { key: OFF, name: "Off campus & online", sub: "Online or no fixed USC building", color: "#3E4A52", campus: null }]
                 .map(row => ({ ...row, n: byPlace.get(row.key)?.length ?? 0 }))
                 .sort((a, b) => b.n - a.n)
                 .map(row => (

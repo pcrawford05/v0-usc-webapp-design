@@ -1,0 +1,692 @@
+{
+  "date": "2026-10-22",
+  "method": "Signed-in EngageSC via Claude in Chrome (read only). Group pages, group directory (club_signup) and the events JSON (mobile_events_list, with club_id and filter1=past) compared with the public feed ical_usc.ics (1,473 events).",
+  "catalog_groups": [
+    {
+      "name": "Lloyd Greif Center for Entrepreneurial Studies",
+      "engageUrl": "https://engage.usc.edu/entrepreneur/",
+      "engageSlug": "entrepreneur",
+      "engageClubId": 36948,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36948.ics",
+      "description": "Greif Center group: courses, mentorship, funding and competitions; hosts Catalyst Microgrant, Greif LaunchPad, eCouncil Fund, VCIC, Marshall Greif Incubator and Hult Prize x USC pages.",
+      "whoCanJoin": null,
+      "memberCount": null,
+      "eventCount": 128,
+      "mostRecentEvent": "2026-09-02",
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": true,
+      "programs": [
+        "catalyst-microgrant-fund",
+        "ecouncil-fund",
+        "clubs-ecouncil-fund",
+        "marshall-experts-in-residence",
+        "marshall-greif-incubator",
+        "new-venture-seed-competition",
+        "venture-capital-investment-competition-vcic",
+        "greif-center-newsletter"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/entrepreneur/",
+        "https://engage.usc.edu/club_signup?view=all&search=Lloyd+Greif+Center+for+Entrepreneurial+Studies",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36948"
+      ],
+      "notes": "Co-hosted the Oct 6, 2026 TIE Hub event in the public feed. Member count not shown on its custom page."
+    },
+    {
+      "name": "Viterbi Office of Technology Innovation and Entrepreneurship (TIE Hub)",
+      "engageUrl": "https://engage.usc.edu/viterbitie/",
+      "engageSlug": "viterbitie",
+      "engageClubId": 36311,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36311.ics",
+      "description": "Mission is to launch ventures with significant social and economic impact based on USC faculty, students, and technologies.",
+      "whoCanJoin": null,
+      "memberCount": 274,
+      "eventCount": 73,
+      "mostRecentEvent": "2026-10-06",
+      "nextEvent": null,
+      "contactEmail": "viterbi-innovation@usc.edu",
+      "active": true,
+      "programs": [
+        "origin-weekend",
+        "startup-stories",
+        "trojan-tank",
+        "all-school-startup-mixers"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/viterbitie/",
+        "https://engage.usc.edu/club_signup?view=all&search=Viterbi+Office+of+Technology+Innovation+and+Entrepreneurship",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36311"
+      ]
+    },
+    {
+      "name": "USC Marshall Brittingham Social Enterprise Lab",
+      "engageUrl": "https://engage.usc.edu/bsel/",
+      "engageSlug": "bsel",
+      "engageClubId": 37419,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_37419.ics",
+      "description": "Center of Excellence at USC Marshall; hub for social impact entrepreneurship and intrapreneurship working with undergraduate and graduate students from all schools.",
+      "whoCanJoin": null,
+      "memberCount": null,
+      "eventCount": null,
+      "mostRecentEvent": "2026-10-22",
+      "nextEvent": "2026-10-26",
+      "contactEmail": null,
+      "active": true,
+      "programs": [
+        "brittingham-social-enterprise-lab",
+        "hult-prize-at-usc"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/bsel/",
+        "https://engage.usc.edu/club_signup?view=all&search=USC+Marshall+Brittingham+Social+Enterprise+Lab",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=37419"
+      ],
+      "notes": "Upcoming: Power of the Ask - For Social Entrepreneurs (Oct 26, 2026, event 414465) and Hult Prize Information Session - Virtual (Oct 27, 2026, event 414468); both are in the public feed."
+    },
+    {
+      "name": "HackSC",
+      "engageUrl": "https://engage.usc.edu/hacksc/",
+      "engageSlug": "hacksc",
+      "engageClubId": 35933,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_35933.ics",
+      "description": "Hackathon in Los Angeles; over 800 hackers, designers and visionaries.",
+      "whoCanJoin": null,
+      "memberCount": 32,
+      "eventCount": 2,
+      "mostRecentEvent": "2023-09-22",
+      "nextEvent": null,
+      "contactEmail": "rso@hacksc.com",
+      "active": false,
+      "programs": [
+        "hacksc"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/hacksc/",
+        "https://engage.usc.edu/club_signup?view=all&search=HackSC",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=35933"
+      ]
+    },
+    {
+      "name": "High Tech Association (HTA)",
+      "engageUrl": "https://engage.usc.edu/HighTechAssociation/",
+      "engageSlug": "HighTechAssociation",
+      "engageClubId": 35957,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_35957.ics",
+      "description": "Marshall group preparing members for careers in the technology industry, including product management.",
+      "whoCanJoin": "Open to all Marshall graduate students for a standard membership fee.",
+      "memberCount": null,
+      "eventCount": null,
+      "mostRecentEvent": "2026-04-10",
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": false,
+      "programs": [
+        "high-tech-association-hta"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/HighTechAssociation/",
+        "https://engage.usc.edu/club_signup?view=all&search=High+Tech+Association",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=35957"
+      ],
+      "notes": "Engage page shows officers only; last Engage event Apr 10, 2026."
+    },
+    {
+      "name": "Kappa Theta Pi (KTP)",
+      "engageUrl": "https://engage.usc.edu/ktp/",
+      "engageSlug": "ktp",
+      "engageClubId": 37238,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_37238.ics",
+      "description": "Community of students with a shared interest in technology; professional, technical and social development.",
+      "whoCanJoin": null,
+      "memberCount": 57,
+      "eventCount": 9,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": false,
+      "programs": [
+        "kappa-theta-pi-ktp"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/ktp/",
+        "https://engage.usc.edu/club_signup?view=all&search=Kappa+Theta+Pi",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=37238"
+      ]
+    },
+    {
+      "name": "LavaLab",
+      "engageUrl": "https://engage.usc.edu/lavalab/",
+      "engageSlug": "lavalab",
+      "engageClubId": 36145,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36145.ics",
+      "description": "USC's student-run startup incubator; each semester a new cohort of designers, engineers and product managers builds products and finds cofounders.",
+      "whoCanJoin": null,
+      "memberCount": 77,
+      "eventCount": 0,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": "usclavalab@gmail.com",
+      "active": false,
+      "programs": [
+        "lavalab"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/lavalab/",
+        "https://engage.usc.edu/club_signup?view=all&search=LavaLab",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36145"
+      ]
+    },
+    {
+      "name": "MEDesign",
+      "engageUrl": "https://engage.usc.edu/medesign/",
+      "engageSlug": "medesign",
+      "engageClubId": 36221,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36221.ics",
+      "description": "Hands-on medical device experience; seven design teams invent, validate and develop new technologies.",
+      "whoCanJoin": null,
+      "memberCount": 146,
+      "eventCount": 6,
+      "mostRecentEvent": "2020-08-28",
+      "nextEvent": null,
+      "contactEmail": "medesign@usc.edu",
+      "active": false,
+      "programs": [
+        "medesign"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/medesign/",
+        "https://engage.usc.edu/club_signup?view=all&search=MEDesign",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36221"
+      ]
+    },
+    {
+      "name": "ProductSC",
+      "engageUrl": "https://engage.usc.edu/productsc/",
+      "engageSlug": "productsc",
+      "engageClubId": 36407,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36407.ics",
+      "description": "Prepares aspiring product managers through education, mentorship and community (Compass and Catalyst programs).",
+      "whoCanJoin": null,
+      "memberCount": 34,
+      "eventCount": 0,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": "product@usc.edu",
+      "active": false,
+      "programs": [
+        "productsc"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/productsc/",
+        "https://engage.usc.edu/club_signup?view=all&search=ProductSC",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36407"
+      ]
+    },
+    {
+      "name": "Shift SC",
+      "engageUrl": "https://engage.usc.edu/shiftsc/",
+      "engageSlug": "shiftsc",
+      "engageClubId": 36539,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36539.ics",
+      "description": "Student-led platform for ethically aligned and socially responsible technology.",
+      "whoCanJoin": null,
+      "memberCount": 81,
+      "eventCount": 1,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": "shiftsc@usc.edu",
+      "active": false,
+      "programs": [
+        "shift-sc"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/shiftsc/",
+        "https://engage.usc.edu/club_signup?view=all&search=Shift+SC",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36539"
+      ]
+    },
+    {
+      "name": "Sigma Eta Pi (SEP)",
+      "engageUrl": "https://engage.usc.edu/uscsep/",
+      "engageSlug": "uscsep",
+      "engageClubId": 36545,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36545.ics",
+      "description": "USC's entrepreneurship society; weekly workshops, networking and a semesterly pitch competition.",
+      "whoCanJoin": null,
+      "memberCount": 89,
+      "eventCount": 21,
+      "mostRecentEvent": "2019-01-14",
+      "nextEvent": null,
+      "contactEmail": "uscsep@usc.edu",
+      "active": false,
+      "programs": [
+        "sigma-eta-pi-sep"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/uscsep/",
+        "https://engage.usc.edu/club_signup?view=all&search=Sigma+Eta+Pi",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36545"
+      ]
+    },
+    {
+      "name": "Spark SC",
+      "engageUrl": "https://engage.usc.edu/spark/",
+      "engageSlug": "spark",
+      "engageClubId": 36601,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36601.ics",
+      "description": "Student-run entrepreneurship ecosystem building communities and creative opportunities for budding entrepreneurs.",
+      "whoCanJoin": null,
+      "memberCount": 80,
+      "eventCount": 3,
+      "mostRecentEvent": "2020-03-10",
+      "nextEvent": null,
+      "contactEmail": "gosparksc@gmail.com",
+      "active": false,
+      "programs": [
+        "spark-sc"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/spark/",
+        "https://engage.usc.edu/club_signup?view=all&search=Spark+SC",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36601"
+      ]
+    },
+    {
+      "name": "Techie",
+      "engageUrl": "https://engage.usc.edu/Techie/",
+      "engageSlug": "Techie",
+      "engageClubId": 36688,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36688.ics",
+      "description": "Undergraduate RSO for Trojans pursuing business roles within the tech industry.",
+      "whoCanJoin": "Undergraduate USC students (stated as an undergraduate RSO).",
+      "memberCount": null,
+      "eventCount": null,
+      "mostRecentEvent": "2021-03-12",
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": false,
+      "programs": [
+        "techie"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/Techie/",
+        "https://engage.usc.edu/club_signup?view=all&search=Techie",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36688"
+      ]
+    },
+    {
+      "name": "Trojan Venture Partners",
+      "engageUrl": "https://engage.usc.edu/TrojanVenturePartners/",
+      "engageSlug": "TrojanVenturePartners",
+      "engageClubId": 36803,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36803.ics",
+      "description": "USC venture capital organization preparing members for entrepreneurship and investing; workshops, speakers and networking.",
+      "whoCanJoin": null,
+      "memberCount": null,
+      "eventCount": null,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": false,
+      "programs": [
+        "trojan-venture-partners"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/TrojanVenturePartners/",
+        "https://engage.usc.edu/club_signup?view=all&search=Trojan+Venture+Partners",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36803"
+      ],
+      "notes": "Engage page shows officers only; website listed as usctvp.org."
+    },
+    {
+      "name": "TroyLabs",
+      "engageUrl": "https://engage.usc.edu/troylabs/",
+      "engageSlug": "troylabs",
+      "engageClubId": 36822,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36822.ics",
+      "description": "Framework for Trojan founders: DEMO startup showcase, 8-week BUILD accelerator and IGNITE intro course.",
+      "whoCanJoin": null,
+      "memberCount": 41,
+      "eventCount": 1,
+      "mostRecentEvent": "2020-02-07",
+      "nextEvent": null,
+      "contactEmail": "troylabs@usc.edu",
+      "active": false,
+      "programs": [
+        "troylabs"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/troylabs/",
+        "https://engage.usc.edu/club_signup?view=all&search=TroyLabs",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36822"
+      ]
+    },
+    {
+      "name": "Makers",
+      "engageUrl": "https://engage.usc.edu/viterbimakers/",
+      "engageSlug": "viterbimakers",
+      "engageClubId": 36171,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36171.ics",
+      "description": "Explores electronic and system design (IoT, embedded systems, robotics) through interdisciplinary projects.",
+      "whoCanJoin": null,
+      "memberCount": 64,
+      "eventCount": 0,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": "uscmakers@gmail.com",
+      "active": false,
+      "programs": [
+        "usc-makers"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/viterbimakers/",
+        "https://engage.usc.edu/club_signup?view=all&search=Makers",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36171"
+      ]
+    },
+    {
+      "name": "Entrepreneurship & Venture Management Association (EVMA)",
+      "engageUrl": null,
+      "engageSlug": null,
+      "engageClubId": 35806,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_35806.ics",
+      "description": "Graduate venture network at USC Marshall connecting graduate students to founders, investors and operators in Los Angeles.",
+      "whoCanJoin": null,
+      "memberCount": null,
+      "eventCount": null,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": false,
+      "programs": [
+        "entrepreneur-and-venture-management-association-evma"
+      ],
+      "evidence": [
+        "https://engage.usc.edu/club_signup?view=all&search=Entrepreneurship+&+Venture+Management+Association",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=35806"
+      ],
+      "notes": "Directory entry links out to clubs.marshall.usc.edu/evma; no Engage group slug found."
+    }
+  ],
+  "new_groups": [
+    {
+      "name": "Entrepreneurship & Innovation Student Association (EISA)",
+      "engageUrl": "https://engage.usc.edu/EISA/",
+      "engageSlug": "EISA",
+      "engageClubId": 36211,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36211.ics",
+      "description": "Student-led organization serving the MSEI community; supportive, entrepreneurial community for founders and students.",
+      "whoCanJoin": "MSEI students get free admission to events; others may attend for a small fee.",
+      "memberCount": null,
+      "eventCount": null,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": false,
+      "programs": [],
+      "evidence": [
+        "https://engage.usc.edu/EISA/",
+        "https://engage.usc.edu/club_signup?view=all&search=Entrepreneurship+&+Innovation+Student+Association",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36211"
+      ],
+      "notes": "Group Not Registered Yet. Officers-only page."
+    },
+    {
+      "name": "VC Academy (VCA)",
+      "engageUrl": "https://engage.usc.edu/VCA/",
+      "engageSlug": "VCA",
+      "engageClubId": 37460,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_37460.ics",
+      "description": "Promotes venture capital on campus with VC resources, mentors, curricula and professional opportunities.",
+      "whoCanJoin": null,
+      "memberCount": null,
+      "eventCount": null,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": false,
+      "programs": [],
+      "evidence": [
+        "https://engage.usc.edu/VCA/",
+        "https://engage.usc.edu/club_signup?view=all&search=VC+Academy",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=37460"
+      ],
+      "notes": "Officers-only page; no Engage events."
+    },
+    {
+      "name": "Marshall Outreach Volunteer Entrepreneurs (MOVE)",
+      "engageUrl": "https://engage.usc.edu/move/",
+      "engageSlug": "move",
+      "engageClubId": 36198,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36198.ics",
+      "description": "Community exploring the intersection of business and social impact; programming, networking, service and case competitions.",
+      "whoCanJoin": null,
+      "memberCount": 90,
+      "eventCount": 0,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": "usc.move@gmail.com",
+      "active": false,
+      "programs": [],
+      "evidence": [
+        "https://engage.usc.edu/move/",
+        "https://engage.usc.edu/club_signup?view=all&search=Marshall+Outreach+Volunteer+Entrepreneurs",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36198"
+      ]
+    },
+    {
+      "name": "Translational Biotechnology Association (TBA)",
+      "engageUrl": "https://engage.usc.edu/Tba/",
+      "engageSlug": "Tba",
+      "engageClubId": 36745,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36745.ics",
+      "description": "For medical students interested in biotech innovation or collaborating on projects.",
+      "whoCanJoin": "Medical students (stated).",
+      "memberCount": null,
+      "eventCount": null,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": false,
+      "programs": [],
+      "evidence": [
+        "https://engage.usc.edu/Tba/",
+        "https://engage.usc.edu/club_signup?view=all&search=Translational+Biotechnology+Association",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36745"
+      ]
+    },
+    {
+      "name": "Viterbi Vision Venture",
+      "engageUrl": "https://engage.usc.edu/visionventure/",
+      "engageSlug": "visionventure",
+      "engageClubId": 37198,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_37198.ics",
+      "description": "No description posted (Viterbi School of Engineering, Academic).",
+      "whoCanJoin": null,
+      "memberCount": null,
+      "eventCount": null,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": false,
+      "programs": [],
+      "evidence": [
+        "https://engage.usc.edu/visionventure/",
+        "https://engage.usc.edu/club_signup?view=all&search=Viterbi+Vision+Venture",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=37198"
+      ]
+    },
+    {
+      "name": "MS Social Entrepreneurship Student Association (MSSE SA)",
+      "engageUrl": "https://engage.usc.edu/mssesa/",
+      "engageSlug": "mssesa",
+      "engageClubId": 36213,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36213.ics",
+      "description": "Fosters growth and connections for USC Marshall MS in Social Entrepreneurship students and alumni.",
+      "whoCanJoin": null,
+      "memberCount": 107,
+      "eventCount": 6,
+      "mostRecentEvent": "2025-12-05",
+      "nextEvent": null,
+      "contactEmail": "uscmssesa@gmail.com",
+      "active": false,
+      "programs": [],
+      "evidence": [
+        "https://engage.usc.edu/mssesa/",
+        "https://engage.usc.edu/club_signup?view=all&search=MS+Social+Entrepreneurship+Student+Association",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36213"
+      ]
+    },
+    {
+      "name": "USG Social, Recreation/Startup Fund",
+      "engageUrl": "https://engage.usc.edu/usgacr/",
+      "engageSlug": "usgacr",
+      "engageClubId": 35471,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_35471.ics",
+      "description": "USG Funding Board group.",
+      "whoCanJoin": null,
+      "memberCount": 4,
+      "eventCount": 0,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": "usgacr@usc.edu",
+      "active": false,
+      "programs": [],
+      "evidence": [
+        "https://engage.usc.edu/usgacr/",
+        "https://engage.usc.edu/club_signup?view=all&search=USG+Social,+Recreation/Startup+Fund",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=35471"
+      ]
+    },
+    {
+      "name": "TAMID Group",
+      "engageUrl": "https://engage.usc.edu/TamidGroup/",
+      "engageSlug": "TamidGroup",
+      "engageClubId": 36680,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36680.ics",
+      "description": "Experiential business learning; hands-on consulting or fund experience with Israeli startups.",
+      "whoCanJoin": null,
+      "memberCount": null,
+      "eventCount": null,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": false,
+      "programs": [],
+      "evidence": [
+        "https://engage.usc.edu/TamidGroup/",
+        "https://engage.usc.edu/club_signup?view=all&search=TAMID+Group",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36680"
+      ]
+    },
+    {
+      "name": "Marshall Artificial Intelligence Association (MAIA)",
+      "engageUrl": "https://engage.usc.edu/MAIA/",
+      "engageSlug": "MAIA",
+      "engageClubId": 37302,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_37302.ics",
+      "description": "Empowers young entrepreneurs interested in AI and advanced data analytics.",
+      "whoCanJoin": null,
+      "memberCount": null,
+      "eventCount": null,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": false,
+      "programs": [],
+      "evidence": [
+        "https://engage.usc.edu/MAIA/",
+        "https://engage.usc.edu/club_signup?view=all&search=Marshall+Artificial+Intelligence+Association",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=37302"
+      ]
+    },
+    {
+      "name": "Impact Investing Group at USC",
+      "engageUrl": null,
+      "engageSlug": null,
+      "engageClubId": 35983,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_35983.ics",
+      "description": "Introduces undergraduates to careers in impact investing.",
+      "whoCanJoin": null,
+      "memberCount": null,
+      "eventCount": null,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": null,
+      "active": false,
+      "programs": [],
+      "evidence": [
+        "https://engage.usc.edu/club_signup?view=all&search=Impact+Investing+Group+at+USC",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=35983"
+      ]
+    },
+    {
+      "name": "Blockchain at USC",
+      "engageUrl": "https://engage.usc.edu/trojancryptocurrencyinvestmentclub/",
+      "engageSlug": "trojancryptocurrencyinvestmentclub",
+      "engageClubId": 35635,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_35635.ics",
+      "description": "Blockchain technology community with weekly workshops.",
+      "whoCanJoin": null,
+      "memberCount": 22,
+      "eventCount": 2,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": "blockchainusc@gmail.com",
+      "active": false,
+      "programs": [],
+      "evidence": [
+        "https://engage.usc.edu/trojancryptocurrencyinvestmentclub/",
+        "https://engage.usc.edu/club_signup?view=all&search=Blockchain+at+USC",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=35635"
+      ]
+    },
+    {
+      "name": "Project Athena",
+      "engageUrl": "https://engage.usc.edu/projectathena/",
+      "engageSlug": "projectathena",
+      "engageClubId": 36411,
+      "calendarFeed": "https://engage.usc.edu/ical/usc/ical_club_36411.ics",
+      "description": "Southern California collegiate hackathon for marginalized genders.",
+      "whoCanJoin": null,
+      "memberCount": 40,
+      "eventCount": 0,
+      "mostRecentEvent": null,
+      "nextEvent": null,
+      "contactEmail": "athenahacks@gmail.com",
+      "active": false,
+      "programs": [],
+      "evidence": [
+        "https://engage.usc.edu/projectathena/",
+        "https://engage.usc.edu/club_signup?view=all&search=Project+Athena",
+        "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?filter1=past&club_id=36411"
+      ]
+    }
+  ],
+  "private_events": [],
+  "private_events_summary": {
+    "signedInUpcoming": 464,
+    "notInPublicFeed": 63,
+    "fromTargetHosts": 0,
+    "evidence": [
+      "https://engage.usc.edu/mobile_ws/v17/mobile_events_list?range=0&limit=1000",
+      "https://engage.usc.edu/ical/usc/ical_usc.ics"
+    ],
+    "notes": "The 63 hidden events come from residential colleges, Graduate Student Government, pharmacy, Visions & Voices, overseas studies, student health, Viterbi School and academic calendar entries. None are hosted by catalog groups, the new groups, Greif, TIE Hub, Brittingham, IYA or Stevens. IYA and USC Stevens have no Engage group in the directory."
+  },
+  "not_on_engage": [
+    "nucleate",
+    "exitsc",
+    "fightonfounders",
+    "founder-clubs",
+    "sogal-usc",
+    "usc-entrepreneur-club",
+    "iya-connect-weekly",
+    "venture-scoring-and-resource-unlock-system-iya",
+    "innovation-cafes",
+    "project-law",
+    "founder-central-initiative",
+    "innovation-challenge-greif"
+  ]
+}

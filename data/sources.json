@@ -84,23 +84,37 @@
       "name": "eCouncil Fund",
       "chunk": "clubs",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/entrepreneur/ecouncil-fund/",
           "kind": "official",
           "holds": "eligibility, $2,000 cap, rolling basis, once per semester",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies on EngageSC: Greif Center group: courses, mentorship, funding and competitions; hosts Catalyst Microgrant, Greif LaunchPad, eCouncil Fund, VCIC, Marshall Greif Incubator and Hult Prize x USC pages.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36948.ics",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Page matches current entry (awards $2,000 or less, rolling until funds exhausted or end of academic year)."
+      "notes": "Page matches current entry (awards $2,000 or less, rolling until funds exhausted or end of academic year).",
+      "engageClubId": 36948,
+      "engageSlug": "entrepreneur"
     },
     "entrepreneur-and-venture-management-association-evma": {
       "name": "Entrepreneur & Venture Management Association (EVMA)",
       "chunk": "clubs",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://clubs.marshall.usc.edu/evma/",
@@ -113,10 +127,17 @@
           "kind": "social",
           "holds": "Entrepreneur & Venture Management Association; A week in San Francisco for SF Tech Week. EVMA members spent it at Fight on SF",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_35806.ics",
+          "kind": "campus-groups",
+          "holds": "Entrepreneurship & Venture Management Association (EVMA) events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Site described as Marshall's premier graduate club for entrepreneurship, startups and VC; copyright 2026."
+      "notes": "Site described as Marshall's premier graduate club for entrepreneurship, startups and VC; copyright 2026.",
+      "engageClubId": 35806
     },
     "exitsc": {
       "name": "ExitSC",
@@ -185,7 +206,7 @@
       "name": "HackSC",
       "chunk": "clubs",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://www.hacksc.com/",
@@ -197,7 +218,7 @@
           "url": "https://engage.usc.edu/hacksc/",
           "kind": "campus-groups",
           "holds": "800+ hackers, organizing team recruitment",
-          "lastChecked": "2026-10-21"
+          "lastChecked": "2026-10-22"
         },
         {
           "url": "https://www.instagram.com/hackscofficial/",
@@ -210,16 +231,24 @@
           "kind": "social",
           "holds": "Company page (posts not readable during check)",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_35933.ics",
+          "kind": "campus-groups",
+          "holds": "HackSC events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "No 2025/2026 hackathon dates published on the pages read; /events returns 404."
+      "notes": "No 2025/2026 hackathon dates published on the pages read; /events returns 404.",
+      "engageClubId": 35933,
+      "engageSlug": "hacksc"
     },
     "high-tech-association-hta": {
       "name": "High Tech Association (HTA)",
       "chunk": "clubs",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://clubs.marshall.usc.edu/hta",
@@ -232,16 +261,30 @@
           "kind": "social",
           "holds": "Tech trek kicking off tomorrow at 9AM. Over the next 2 days, we would be visiting @cisco @adobe @salesforce; Tech Fest Day 2: VCs, Startups, Founders",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/HighTechAssociation/",
+          "kind": "campus-groups",
+          "holds": "High Tech Association (HTA) on EngageSC: Marshall group preparing members for careers in the technology industry, including product management. Who can join: Open to all Marshall graduate students for a standard membership fee.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_35957.ics",
+          "kind": "campus-groups",
+          "holds": "High Tech Association (HTA) events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Matches entry."
+      "notes": "Matches entry.",
+      "engageClubId": 35957,
+      "engageSlug": "HighTechAssociation"
     },
     "kappa-theta-pi-ktp": {
       "name": "Kappa Theta Pi (KTP)",
       "chunk": "clubs",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://linktr.ee/ktp.usc",
@@ -254,16 +297,30 @@
           "kind": "social",
           "holds": "Our Fall 2026 Rush application deadline has been pushed forward to Friday, September 11 at 12 PM",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/ktp/",
+          "kind": "campus-groups",
+          "holds": "Kappa Theta Pi (KTP) on EngageSC: Community of students with a shared interest in technology; professional, technical and social development.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_37238.ics",
+          "kind": "campus-groups",
+          "holds": "Kappa Theta Pi (KTP) events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Linktree also says it is 'establishing a chapter at USC'; billed as USC's only co-ed professional technology fraternity."
+      "notes": "Linktree also says it is 'establishing a chapter at USC'; billed as USC's only co-ed professional technology fraternity.",
+      "engageClubId": 37238,
+      "engageSlug": "ktp"
     },
     "lavalab": {
       "name": "LavaLab",
       "chunk": "clubs",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://usclavalab.org/",
@@ -282,22 +339,36 @@
           "kind": "social",
           "holds": "Company page (posts not readable during check)",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/lavalab/",
+          "kind": "campus-groups",
+          "holds": "LavaLab on EngageSC: USC's student-run startup incubator; each semester a new cohort of designers, engineers and product managers builds products and finds cofounders.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36145.ics",
+          "kind": "campus-groups",
+          "holds": "LavaLab events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Site frames it as a product incubator with a YC-style curriculum; prize amounts not on homepage."
+      "notes": "Site frames it as a product incubator with a YC-style curriculum; prize amounts not on homepage.",
+      "engageClubId": 36145,
+      "engageSlug": "lavalab"
     },
     "medesign": {
       "name": "MEDesign",
       "chunk": "clubs",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/medesign/",
           "kind": "campus-groups",
           "holds": "mission, 146 members, 10 officers",
-          "lastChecked": "2026-10-21"
+          "lastChecked": "2026-10-22"
         },
         {
           "url": "http://www.medesignusc.com/",
@@ -316,16 +387,24 @@
           "kind": "social",
           "holds": "Company page (posts not readable during check)",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36221.ics",
+          "kind": "campus-groups",
+          "holds": "MEDesign events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "No application dates found."
+      "notes": "No application dates found.",
+      "engageClubId": 36221,
+      "engageSlug": "medesign"
     },
     "productsc": {
       "name": "ProductSC",
       "chunk": "clubs",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/ProductSc/",
@@ -344,22 +423,36 @@
           "kind": "social",
           "holds": "Company page (posts not readable during check)",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/productsc/",
+          "kind": "campus-groups",
+          "holds": "ProductSC on EngageSC: Prepares aspiring product managers through education, mentorship and community (Compass and Catalyst programs).",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36407.ics",
+          "kind": "campus-groups",
+          "holds": "ProductSC events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "productsc.org did not render text."
+      "notes": "productsc.org did not render text.",
+      "engageClubId": 36407,
+      "engageSlug": "productsc"
     },
     "shift-sc": {
       "name": "Shift SC",
       "chunk": "clubs",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/shiftsc/",
           "kind": "campus-groups",
           "holds": "mission, 81 members, Tech4Good Career Fair, Symposium, Pitch Competition",
-          "lastChecked": "2026-10-21"
+          "lastChecked": "2026-10-22"
         },
         {
           "url": "https://www.instagram.com/shift.sc/",
@@ -372,16 +465,24 @@
           "kind": "social",
           "holds": "Company page (posts not readable during check)",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36539.ics",
+          "kind": "campus-groups",
+          "holds": "Shift SC events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Engage lists Tech4Good Career Fair, Symposium and Pitch Competition."
+      "notes": "Engage lists Tech4Good Career Fair, Symposium and Pitch Competition.",
+      "engageClubId": 36539,
+      "engageSlug": "shiftsc"
     },
     "sigma-eta-pi-sep": {
       "name": "Sigma Eta Pi (SEP)",
       "chunk": "gap-11",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/SigmaEtaPi/",
@@ -412,12 +513,26 @@
           "kind": "social",
           "holds": "Company page (posts not readable during check)",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/uscsep/",
+          "kind": "campus-groups",
+          "holds": "Sigma Eta Pi (SEP) on EngageSC: USC's entrepreneurship society; weekly workshops, networking and a semesterly pitch competition.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36545.ics",
+          "kind": "campus-groups",
+          "holds": "Sigma Eta Pi (SEP) events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [
         "Sigma Eta Pi USC entrepreneurship fraternity rush"
       ],
-      "notes": "Current link is fine; no rush dates found. Link change is just a confirmation, effectively no change needed."
+      "notes": "Current link is fine; no rush dates found. Link change is just a confirmation, effectively no change needed.",
+      "engageClubId": 36545,
+      "engageSlug": "uscsep"
     },
     "sogal-usc": {
       "name": "SoGal USC",
@@ -447,7 +562,7 @@
       "name": "Spark SC",
       "chunk": "clubs",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://sparksc.org/",
@@ -466,16 +581,30 @@
           "kind": "social",
           "holds": "Company page (posts not readable during check)",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/spark/",
+          "kind": "campus-groups",
+          "holds": "Spark SC on EngageSC: Student-run entrepreneurship ecosystem building communities and creative opportunities for budding entrepreneurs.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36601.ics",
+          "kind": "campus-groups",
+          "holds": "Spark SC events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Homepage matches; no new dates."
+      "notes": "Homepage matches; no new dates.",
+      "engageClubId": 36601,
+      "engageSlug": "spark"
     },
     "techie": {
       "name": "Techie",
       "chunk": "gap-11",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://dailytrojan.com/?p=157288",
@@ -494,18 +623,32 @@
           "kind": "social",
           "holds": "Company page (posts not readable during check)",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/Techie/",
+          "kind": "campus-groups",
+          "holds": "Techie on EngageSC: Undergraduate RSO for Trojans pursuing business roles within the tech industry. Who can join: Undergraduate USC students (stated as an undergraduate RSO).",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36688.ics",
+          "kind": "campus-groups",
+          "holds": "Techie events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [
         "Techie USC club recruitment 2026 business roles in tech"
       ],
-      "notes": "Description consistent with 2021 article; no current recruitment dates found. Instagram @techie_usc."
+      "notes": "Description consistent with 2021 article; no current recruitment dates found. Instagram @techie_usc.",
+      "engageClubId": 36688,
+      "engageSlug": "Techie"
     },
     "trojan-venture-partners": {
       "name": "Trojan Venture Partners",
       "chunk": "gap-11",
       "status": "not_found",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://coda.io/@hanshen-tjoa/usc-organizations-list/entrepreneurship-organizations-21",
@@ -518,18 +661,32 @@
           "kind": "social",
           "holds": "Applications are officially open! Apply for: General Membership, TVPortfolio, Capstone; USC's Premier Society for Buy-Side Enthusiasts",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/TrojanVenturePartners/",
+          "kind": "campus-groups",
+          "holds": "Trojan Venture Partners on EngageSC: USC venture capital organization preparing members for entrepreneurship and investing; workshops, speakers and networking.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36803.ics",
+          "kind": "campus-groups",
+          "holds": "Trojan Venture Partners events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [
         "Trojan Venture Partners USC"
       ],
-      "notes": "No official page found."
+      "notes": "No official page found.",
+      "engageClubId": 36803,
+      "engageSlug": "TrojanVenturePartners"
     },
     "troylabs": {
       "name": "TroyLabs",
       "chunk": "clubs",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://www.troylabs.vc/",
@@ -566,10 +723,24 @@
           "kind": "social",
           "holds": "Company page (posts not readable during check)",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/troylabs/",
+          "kind": "campus-groups",
+          "holds": "TroyLabs on EngageSC: Framework for Trojan founders: DEMO startup showcase, 8-week BUILD accelerator and IGNITE intro course.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36822.ics",
+          "kind": "campus-groups",
+          "holds": "TroyLabs events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Contact troylabs@usc.edu."
+      "notes": "Contact troylabs@usc.edu.",
+      "engageClubId": 36822,
+      "engageSlug": "troylabs"
     },
     "usc-entrepreneur-club": {
       "name": "USC Entrepreneur Club",
@@ -599,7 +770,7 @@
       "name": "USC Makers",
       "chunk": "p3-08",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://viterbimakers.usc.edu/",
@@ -618,12 +789,26 @@
           "kind": "social",
           "holds": "APPLICATIONS CLOSE IN AT 11:59PM TONIGHT!!; USC's premier hardware organization",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://engage.usc.edu/viterbimakers/",
+          "kind": "campus-groups",
+          "holds": "Makers on EngageSC: Explores electronic and system design (IoT, embedded systems, robotics) through interdisciplinary projects.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36171.ics",
+          "kind": "campus-groups",
+          "holds": "Makers events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [
         "Techie USC club recruitment 2026 business roles in tech"
       ],
-      "notes": "Site does not state undergrad vs grad level, so audience stays []. Join page not read; application mechanics (linktr.ee/uscmakers) not re-verified."
+      "notes": "Site does not state undergrad vs grad level, so audience stays []. Join page not read; application mechanics (linktr.ee/uscmakers) not re-verified.",
+      "engageClubId": 36171,
+      "engageSlug": "viterbimakers"
     },
     "ce-486-engineering-innovation-for-global-challenges": {
       "name": "CE 486 Engineering Innovation for Global Challenges",
@@ -1274,7 +1459,7 @@
       "name": "Catalyst Microgrant Fund",
       "chunk": "funding",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/entrepreneur/catalyst-microgrant-/",
@@ -1287,26 +1472,54 @@
           "kind": "official",
           "holds": "Greif funding overview (NVSC etc.)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies on EngageSC: Greif Center group: courses, mentorship, funding and competitions; hosts Catalyst Microgrant, Greif LaunchPad, eCouncil Fund, VCIC, Marshall Greif Incubator and Hult Prize x USC pages.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36948.ics",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Spring window no longer separate; one window per year now."
+      "notes": "Spring window no longer separate; one window per year now.",
+      "engageClubId": 36948,
+      "engageSlug": "entrepreneur"
     },
     "ecouncil-fund": {
       "name": "eCouncil Fund",
       "chunk": "funding",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/entrepreneur/ecouncil-fund/",
           "kind": "campus-groups",
           "holds": "award size, rules, cadence",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies on EngageSC: Greif Center group: courses, mentorship, funding and competitions; hosts Catalyst Microgrant, Greif LaunchPad, eCouncil Fund, VCIC, Marshall Greif Incubator and Hult Prize x USC pages.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36948.ics",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "For student organizations, not individual founders. Audience left empty since no student level is stated."
+      "notes": "For student organizations, not individual founders. Audience left empty since no student level is stated.",
+      "engageClubId": 36948,
+      "engageSlug": "entrepreneur"
     },
     "usc-marshall-venture-fund": {
       "name": "USC Marshall Venture Fund",
@@ -1878,7 +2091,7 @@
       "name": "Origin Weekend",
       "chunk": "competitions-spaces",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/rsvp?id=413622",
@@ -1897,12 +2110,26 @@
           "kind": "listing",
           "holds": "Spring 2026 Origin Weekend Impact (snippet)",
           "lastChecked": null
+        },
+        {
+          "url": "https://engage.usc.edu/viterbitie/",
+          "kind": "campus-groups",
+          "holds": "Viterbi Office of Technology Innovation and Entrepreneurship (TIE Hub) on EngageSC: Mission is to launch ventures with significant social and economic impact based on USC faculty, students, and technologies.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36311.ics",
+          "kind": "campus-groups",
+          "holds": "Viterbi Office of Technology Innovation and Entrepreneurship (TIE Hub) events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [
         "Origin Weekend USC TIE Hub Fall 2026 Replit"
       ],
-      "notes": "Fall 2026 dates and $5,000 prize confirmed on EngageSC (event already past as of Oct 21, 2026). Registration was via luma.com/tiehub-16n5. The page does not state an audience, so audience values are unsupported by this source. Next edition (spring 2027) not yet posted."
+      "notes": "Fall 2026 dates and $5,000 prize confirmed on EngageSC (event already past as of Oct 21, 2026). Registration was via luma.com/tiehub-16n5. The page does not state an audience, so audience values are unsupported by this source. Next edition (spring 2027) not yet posted.",
+      "engageClubId": 36311,
+      "engageSlug": "viterbitie"
     },
     "tie-hub-coworking": {
       "name": "TIE Hub Coworking",
@@ -1936,7 +2163,7 @@
       "name": "Trojan Tank",
       "chunk": "competitions-spaces",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/Viterbitie/rsvp?id=403967",
@@ -1949,12 +2176,26 @@
           "kind": "listing",
           "holds": "2023 edition (unchecked)",
           "lastChecked": null
+        },
+        {
+          "url": "https://engage.usc.edu/viterbitie/",
+          "kind": "campus-groups",
+          "holds": "Viterbi Office of Technology Innovation and Entrepreneurship (TIE Hub) on EngageSC: Mission is to launch ventures with significant social and economic impact based on USC faculty, students, and technologies.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36311.ics",
+          "kind": "campus-groups",
+          "holds": "Viterbi Office of Technology Innovation and Entrepreneurship (TIE Hub) events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [
         "Trojan Tank USC pitch competition TIE Hub $3,000"
       ],
-      "notes": "The $3,000 prize pool and the 3-minute pitch format were not confirmed on the opened page (it only says '$$'); the 'first of its kind' wording conflicts with the claim of a 2023 edition. No edition found since April 2025."
+      "notes": "The $3,000 prize pool and the 3-minute pitch format were not confirmed on the opened page (it only says '$$'); the 'first of its kind' wording conflicts with the claim of a 2023 edition. No edition found since April 2025.",
+      "engageClubId": 36311,
+      "engageSlug": "viterbitie"
     },
     "athena-women-s-entrepreneurship-summit-and-female-founders-p": {
       "name": "ATHENA Women's Entrepreneurship Summit and Female Founders Pitch Competition",
@@ -1991,7 +2232,7 @@
       "name": "Hult Prize at USC",
       "chunk": "competitions-spaces",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/entrepreneur/information-sessions/",
@@ -2010,12 +2251,26 @@
           "kind": "news",
           "holds": "first USC round",
           "lastChecked": null
+        },
+        {
+          "url": "https://engage.usc.edu/bsel/",
+          "kind": "campus-groups",
+          "holds": "USC Marshall Brittingham Social Enterprise Lab on EngageSC: Center of Excellence at USC Marshall; hub for social impact entrepreneurship and intrapreneurship working with undergraduate and graduate students from all schools.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_37419.ics",
+          "kind": "campus-groups",
+          "holds": "USC Marshall Brittingham Social Enterprise Lab events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [
         "Hult Prize x USC 2026-27 Greif Center"
       ],
-      "notes": "Page still shows the 2025-26 cycle; no 2026-27 cycle found yet (expect info sessions about Sept-Oct 2026 if it runs). The 2-4 team size and Dec 5 deadline were not visible on the opened page."
+      "notes": "Page still shows the 2025-26 cycle; no 2026-27 cycle found yet (expect info sessions about Sept-Oct 2026 if it runs). The 2-4 team size and Dec 5 deadline were not visible on the opened page.",
+      "engageClubId": 37419,
+      "engageSlug": "bsel"
     },
     "innovation-challenge-greif": {
       "name": "Innovation Challenge (Greif)",
@@ -2043,7 +2298,7 @@
       "name": "New Venture Seed Competition",
       "chunk": "competitions-spaces",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/rsvp?id=404789",
@@ -2068,18 +2323,32 @@
           "kind": "official",
           "holds": "NVSC overview, $150,000+, Catalyst Microgrant",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies on EngageSC: Greif Center group: courses, mentorship, funding and competitions; hosts Catalyst Microgrant, Greif LaunchPad, eCouncil Fund, VCIC, Marshall Greif Incubator and Hult Prize x USC pages.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36948.ics",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [
         "USC New Venture Seed Competition 2026-27 Greif Center application deadline"
       ],
-      "notes": "The NVSC EngageSC page now redirects to the Greif home page; the RSVP page id=404789 holds the detailed rules. Months should probably include March (quarter-finals) but [2,4] is acceptable. Finals are in late April, now confirmed."
+      "notes": "The NVSC EngageSC page now redirects to the Greif home page; the RSVP page id=404789 holds the detailed rules. Months should probably include March (quarter-finals) but [2,4] is acceptable. Finals are in late April, now confirmed.",
+      "engageClubId": 36948,
+      "engageSlug": "entrepreneur"
     },
     "venture-capital-investment-competition-vcic": {
       "name": "Venture Capital Investment Competition (VCIC)",
       "chunk": "competitions-spaces",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/entrepreneur/venture-capital-investment-competition-(vcic)/",
@@ -2092,10 +2361,24 @@
           "kind": "official",
           "holds": "global VCIC (not opened)",
           "lastChecked": null
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies on EngageSC: Greif Center group: courses, mentorship, funding and competitions; hosts Catalyst Microgrant, Greif LaunchPad, eCouncil Fund, VCIC, Marshall Greif Incubator and Hult Prize x USC pages.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36948.ics",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Page still shows the 2025-26 cycle. 2026-27 undergraduate applications likely due mid-November 2026; not yet posted."
+      "notes": "Page still shows the 2025-26 cycle. 2026-27 undergraduate applications likely due mid-November 2026; not yet posted.",
+      "engageClubId": 36948,
+      "engageSlug": "entrepreneur"
     },
     "iya-makerspace-the-garage": {
       "name": "IYA Makerspace (The Garage)",
@@ -2311,17 +2594,31 @@
       "name": "Marshall Greif Incubator",
       "chunk": "accelerators",
       "status": "updated",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/entrepreneur/marshall-greif-incubator/",
           "kind": "campus-groups",
           "holds": "cohort dates, eligibility, 300+ portfolio, Paul Orlando",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies on EngageSC: Greif Center group: courses, mentorship, funding and competitions; hosts Catalyst Microgrant, Greif LaunchPad, eCouncil Fund, VCIC, Marshall Greif Incubator and Hult Prize x USC pages.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36948.ics",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Page now describes a cohort format (Fall 2026), so rolling cadence may be outdated, but it does not say how other terms work. Eligibility matches (one USC-connected founder: students, alumni, faculty, staff). Page does not state an MVP requirement."
+      "notes": "Page now describes a cohort format (Fall 2026), so rolling cadence may be outdated, but it does not say how other terms work. Eligibility matches (one USC-connected founder: students, alumni, faculty, staff). Page does not state an MVP requirement.",
+      "engageClubId": 36948,
+      "engageSlug": "entrepreneur"
     },
     "iya-innovation-quest": {
       "name": "IYA Innovation Quest",
@@ -2736,7 +3033,7 @@
       "name": "Startup Stories",
       "chunk": "gap-05",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://viterbiinnovation.usc.edu/tie-hub-events/",
@@ -2755,10 +3052,24 @@
           "kind": "campus-groups",
           "holds": "Startup Stories with David Hodge, Wed Sep 11 2024 12-1 PM, free, Viterbi TIE",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/viterbitie/",
+          "kind": "campus-groups",
+          "holds": "Viterbi Office of Technology Innovation and Entrepreneurship (TIE Hub) on EngageSC: Mission is to launch ventures with significant social and economic impact based on USC faculty, students, and technologies.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36311.ics",
+          "kind": "campus-groups",
+          "holds": "Viterbi Office of Technology Innovation and Entrepreneurship (TIE Hub) events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Sep 2024 session confirmed. Current schedule not verifiable."
+      "notes": "Sep 2024 session confirmed. Current schedule not verifiable.",
+      "engageClubId": 36311,
+      "engageSlug": "viterbitie"
     },
     "summer-start-fellows": {
       "name": "Summer Start Fellows",
@@ -2882,7 +3193,7 @@
       "name": "Brittingham Social Enterprise Lab",
       "chunk": "events-mentorship",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab",
@@ -2894,11 +3205,19 @@
           "url": "https://engage.usc.edu/bsel/",
           "kind": "campus-groups",
           "holds": "BSEL EngageSC page, works with undergrad and grad students from all schools",
-          "lastChecked": "2026-10-21"
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_37419.ics",
+          "kind": "campus-groups",
+          "holds": "USC Marshall Brittingham Social Enterprise Lab events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Page also lists Warren Bennis Scholars Program (20 sophomores, 2-year leadership program). Impact Scholars is now named Social Impact Scholars Program."
+      "notes": "Page also lists Warren Bennis Scholars Program (20 sophomores, 2-year leadership program). Impact Scholars is now named Social Impact Scholars Program.",
+      "engageClubId": 37419,
+      "engageSlug": "bsel"
     },
     "jacobson-family-sustainable-impact-lecture-series": {
       "name": "Jacobson Family Sustainable Impact Lecture Series",
@@ -2955,17 +3274,31 @@
       "name": "Marshall Experts-in-Residence",
       "chunk": "events-mentorship",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/Entrepreneur/rsvp?id=404802",
           "kind": "campus-groups",
           "holds": "Greif LaunchPad Office Hours: appointment only, 30-minute drop-ins, Blackstone LaunchPad, Bridge Hall basement, free, all business stages (event page dated Sep 23, 2025)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies on EngageSC: Greif Center group: courses, mentorship, funding and competitions; hosts Catalyst Microgrant, Greif LaunchPad, eCouncil Fund, VCIC, Marshall Greif Incubator and Hult Prize x USC pages.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36948.ics",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "This page is the Greif LaunchPad office hours listing (booking via Calendly uscblackstonelaunchpad/psof), consistent with current entry. Cal.com EIR details not re-verified."
+      "notes": "This page is the Greif LaunchPad office hours listing (booking via Calendly uscblackstonelaunchpad/psof), consistent with current entry. Cal.com EIR details not re-verified.",
+      "engageClubId": 36948,
+      "engageSlug": "entrepreneur"
     },
     "vaneck-southern-california-blockchain-conference": {
       "name": "VanEck Southern California Blockchain Conference",
@@ -3072,7 +3405,7 @@
       "name": "All-School Startup Mixers",
       "chunk": "gap-05",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://engage.usc.edu/Viterbitie/rsvp_boot?id=386311",
@@ -3085,12 +3418,26 @@
           "kind": "official",
           "holds": "current TIE Hub events (Cloudflare blocked from this environment)",
           "lastChecked": null
+        },
+        {
+          "url": "https://engage.usc.edu/viterbitie/",
+          "kind": "campus-groups",
+          "holds": "Viterbi Office of Technology Innovation and Entrepreneurship (TIE Hub) on EngageSC: Mission is to launch ventures with significant social and economic impact based on USC faculty, students, and technologies.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36311.ics",
+          "kind": "campus-groups",
+          "holds": "Viterbi Office of Technology Innovation and Entrepreneurship (TIE Hub) events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [
         "USC Viterbi TIE Hub events fall 2026 startup mixer co-founder"
       ],
-      "notes": "Engage page confirms Viterbi TIE and Greif Center co-host a campus-wide mixer. No fall 2026 listing visible; official events page is blocked."
+      "notes": "Engage page confirms Viterbi TIE and Greif Center co-host a campus-wide mixer. No fall 2026 listing visible; official events page is blocked.",
+      "engageClubId": 36311,
+      "engageSlug": "viterbitie"
     },
     "from-discovery-to-commercialization-webinar-series": {
       "name": "From Discovery to Commercialization Webinar Series",
@@ -4231,17 +4578,31 @@
       "name": "Greif Center Newsletter",
       "chunk": "toolkits",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-22",
       "sources": [
         {
           "url": "https://www.marshall.usc.edu/departments/lloyd-greif-center-entrepreneurial-studies/newsletter",
           "kind": "official",
           "holds": "Lloyd Greif Center Newsletter signup form page exists",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies on EngageSC: Greif Center group: courses, mentorship, funding and competitions; hosts Catalyst Microgrant, Greif LaunchPad, eCouncil Fund, VCIC, Marshall Greif Incubator and Hult Prize x USC pages.",
+          "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ical/usc/ical_club_36948.ics",
+          "kind": "campus-groups",
+          "holds": "Lloyd Greif Center for Entrepreneurial Studies events calendar feed (public iCal)",
+          "lastChecked": "2026-10-22"
         }
       ],
       "searchQueries": [],
-      "notes": "Page loads and is titled Lloyd Greif Center Newsletter Form; only nav text read, so the content claims are not independently verified."
+      "notes": "Page loads and is titled Lloyd Greif Center Newsletter Form; only nav text read, so the content claims are not independently verified.",
+      "engageClubId": 36948,
+      "engageSlug": "entrepreneur"
     },
     "iya-founder-hub-student-founder-resources": {
       "name": "IYA Founder Hub (Student Founder Resources)",
@@ -4690,5 +5051,5 @@
       "lastSeen": "2026-10-21"
     }
   },
-  "lastRun": "2026-10-21"
+  "lastRun": "2026-10-22"
 }

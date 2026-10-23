@@ -6,9 +6,10 @@ import { loadEngageEvents } from "@/lib/engage-client"
 
 // Plays on every cold open (a full page load). It is rendered on the server so it covers the first paint,
 // and it lives in the root layout, so tab switches and client navigation never replay it.
-// Timing: the animation needs ~1.4s; we lift once the app is ready but never earlier than that, and never
-// later than 3s. Under reduced motion the mark appears without spinning and lifts after 0.6s.
-const MIN_MS = 1400
+// Timing: the animation takes ~1.3s. Once it has finished and the app is ready, the finished mark holds for
+// 0.2s, then lifts; never later than 3s. Under reduced motion the mark appears without spinning and lifts after 0.6s.
+const ANIM_MS = 1300
+const HOLD_MS = 200
 const MIN_REDUCED_MS = 600
 const MAX_MS = 3000
 const FADE_MS = 320
@@ -28,7 +29,9 @@ export function LaunchScreen() {
       setPhase("fade")
       setTimeout(() => setPhase("gone"), FADE_MS)
     }
-    Promise.all([wait(reduced ? MIN_REDUCED_MS : MIN_MS), ready]).then(lift)
+    Promise.all([wait(reduced ? MIN_REDUCED_MS : ANIM_MS), ready])
+      .then(() => wait(reduced ? 0 : HOLD_MS))
+      .then(lift)
     const cap = setTimeout(lift, MAX_MS)
     return () => clearTimeout(cap)
   }, [])
@@ -56,10 +59,7 @@ export function LaunchScreen() {
           <circle cx="256" cy="256" r="10" fill="#990000" />
         </g>
       </svg>
-      <div className="launch-word text-center">
-        <div className="text-xl font-bold tracking-tight">Founder Compass</div>
-        <div className="mt-1 text-sm opacity-60">Every USC startup program</div>
-      </div>
+      <div className="launch-word text-xl font-bold tracking-tight">Founder Compass</div>
     </div>
   )
 }

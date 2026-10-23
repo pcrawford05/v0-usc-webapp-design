@@ -182,7 +182,7 @@ body {
 /* Native cross-fade between views where the browser supports View Transitions. */
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 260ms; }
 
-/* Launch screen: tile pops, ring draws, ticks land, needle spins in and settles with a spring, wordmark rises. ~1.3s total. */
+/* Launch screen: tile pops, ring draws, ticks land, needle spins in and settles with a spring, wordmark rises. ~1.3s total, then a 0.2s hold. */
 .launch { background: #fbf8f4; color: #1d1d1f; }
 @media (prefers-color-scheme: dark) { .launch { background: #0b0b0c; color: #f5f5f7; } }
 .launch-tile { animation: launch-tile 420ms cubic-bezier(.3,1.4,.5,1) both; }

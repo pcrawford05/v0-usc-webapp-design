@@ -22,7 +22,7 @@ import { rankPrograms } from "@/lib/search"
 import { cn } from "@/lib/utils"
 
 import { ProgramTable } from "./ProgramTable"
-import { ShareButton, UpcomingStrip } from "./extras"
+import { EngageEvents, ShareButton, UpcomingStrip } from "./extras"
 import { GroupPill, ProgramCard } from "./shared"
 import { downloadReminders } from "@/lib/reminders"
 import { encodeRoute } from "@/lib/network"
@@ -257,6 +257,7 @@ export function CalendarView({ all, onOpen, profile, saved = [] }: { all: Progra
   return (
     <div className="space-y-4">
       <UpcomingStrip list={pool} saved={saved} onOpen={onOpen} />
+      <EngageEvents onOpen={onOpen} />
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="text-sm text-muted-foreground">
           Deadlines and events for the next 12 months, based on each program's usual cycle. Dates shift year to year, so confirm on the official page.

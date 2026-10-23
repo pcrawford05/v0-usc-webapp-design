@@ -100,6 +100,50 @@ export function UpcomingStrip({ list, saved, onOpen, title = "Coming up" }: { li
   )
 }
 
+// ---------- Live events from EngageSC ----------
+
+type LiveEvent = { id: string; title: string; start: string; url: string; host: string; programIds: string[] }
+
+/** Dated events posted on EngageSC by catalog groups, refreshed daily by /api/events. */
+export function EngageEvents({ onOpen }: { onOpen: (id: string) => void }) {
+  const [events, setEvents] = useState<LiveEvent[] | null>(null)
+  useEffect(() => {
+    fetch("/api/events")
+      .then(r => (r.ok ? r.json() : { events: [] }))
+      .then(d => setEvents(d.events ?? []))
+      .catch(() => setEvents([]))
+  }, [])
+  if (!events?.length) return null
+  const fmt = (iso: string) =>
+    new Date(iso).toLocaleString("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" })
+  return (
+    <section className="rounded-2xl glass p-4">
+      <header className="mb-2 flex items-baseline justify-between gap-2">
+        <h3 className="font-semibold">Live on EngageSC</h3>
+        <span className="text-xs text-muted-foreground">Next 60 days, updated daily</span>
+      </header>
+      <ul className="divide-y divide-border">
+        {events.map(e => (
+          <li key={e.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 py-2 text-sm">
+            <span className="w-40 shrink-0 text-muted-foreground">{fmt(e.start)}</span>
+            <span className="min-w-0 flex-1 font-medium">{e.title}</span>
+            {e.programIds[0] ? (
+              <button onClick={() => onOpen(e.programIds[0])} className="text-xs text-muted-foreground underline-offset-2 hover:underline">
+                {e.host}
+              </button>
+            ) : (
+              <span className="text-xs text-muted-foreground">{e.host}</span>
+            )}
+            <a href={e.url} target="_blank" rel="noreferrer" className="rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+              RSVP on Engage
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}
+
 // ---------- First-visit tour ----------
 
 const STEPS = [

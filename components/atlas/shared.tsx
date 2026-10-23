@@ -1,9 +1,10 @@
 "use client"
 
-import { Bookmark, BookmarkCheck, CalendarDays, Check, Minus, ExternalLink, GraduationCap, Users, Wallet } from "lucide-react"
+import { Bookmark, BookmarkCheck, CalendarDays, ChevronDown, ExternalLink, GraduationCap, ShieldCheck, Users, Wallet } from "lucide-react"
 import { useCallback, useEffect, useState } from "react"
 
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
+import { advisorOnly } from "@/lib/catalog"
 import { AUDIENCE_LABELS, GROUPS, MONTHS, STAGE_LABELS, type Program } from "@/lib/programs"
 import { cn } from "@/lib/utils"
 
@@ -58,11 +59,21 @@ export function whenLabel(p: Program): string {
   return p.cadence === "unknown" ? "Timing not published" : p.cadence[0].toUpperCase() + p.cadence.slice(1)
 }
 
+/** The one fact that matters most on a card: when it next opens, else the money, else that it is always on. */
+export function keyFact(p: Program): string {
+  const now = new Date().getMonth() + 1
+  if (p.months.length) {
+    const next = [...p.months].sort((a, b) => ((a - now + 12) % 12) - ((b - now + 12) % 12))[0]
+    return next === now ? "Open this month" : `Next: ${MONTHS[next - 1]}`
+  }
+  if (p.funding && p.funding.length <= 48) return p.funding
+  return ["rolling", "ongoing", "weekly", "monthly"].includes(p.cadence) ? "Year-round" : "Dates vary"
+}
+
 export function ProgramCard({
   program,
   index = 0,
   reason,
-  checks,
   onOpen,
   saved,
   onToggleSave,
@@ -70,11 +81,11 @@ export function ProgramCard({
   program: Program
   index?: number
   reason?: string
-  checks?: { ok: boolean; label: string }[]
   onOpen: (id: string) => void
   saved: boolean
   onToggleSave: (id: string) => void
 }) {
+  const line = reason || (program.description ?? "").split(/(?<=\.)\s/)[0]
   return (
     <div
       role="button"
@@ -84,43 +95,21 @@ export function ProgramCard({
       style={{ "--i": index } as React.CSSProperties}
       className="spotlight animate-rise group relative flex h-full flex-col glass glass-hover rounded-2xl p-4 text-left hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
     >
-      <div className="flex items-start justify-between gap-2">
-        <GroupPill program={program} />
-        <span className="flex items-center">
+      <div className="flex items-start gap-2">
+        <h3 className="min-w-0 flex-1 font-semibold leading-snug text-foreground">{program.name}</h3>
         <button
           type="button"
           aria-label={saved ? "Remove from saved" : "Save program"}
           onClick={e => (e.stopPropagation(), onToggleSave(program.id))}
-          className="rounded-md p-2 text-muted-foreground transition hover:bg-muted hover:text-primary sm:p-1"
+          className="-mr-1 -mt-1 rounded-md p-2 text-muted-foreground transition hover:bg-muted hover:text-primary sm:p-1"
         >
           {saved ? <BookmarkCheck className="h-4 w-4 text-primary" /> : <Bookmark className="h-4 w-4" />}
         </button>
-        </span>
       </div>
-      <h3 className="mt-2 font-semibold leading-snug text-foreground">{program.name}</h3>
-      <p className="mt-0.5 text-xs text-muted-foreground">{program.category}</p>
-      <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{reason || program.description}</p>
-      {checks && checks.length > 0 && (
-        <ul className="mt-2 space-y-0.5">
-          {checks.map(c => (
-            <li key={c.label} className={cn("flex items-center gap-1.5 text-xs", c.ok ? "text-emerald-700" : "text-muted-foreground")}>
-              {c.ok ? <Check className="h-3.5 w-3.5" /> : <Minus className="h-3.5 w-3.5" />}
-              {c.label}
-            </li>
-          ))}
-        </ul>
-      )}
-      <div className="mt-auto flex flex-wrap gap-x-3 gap-y-1 pt-3 text-xs text-muted-foreground">
-        <span className="inline-flex items-center gap-1">
-          <CalendarDays className="h-3.5 w-3.5" />
-          <span className="line-clamp-1">{whenLabel(program)}</span>
-        </span>
-        {program.funding && (
-          <span className="inline-flex items-center gap-1 font-medium text-foreground">
-            <Wallet className="h-3.5 w-3.5" />
-            <span className="line-clamp-1">{program.funding}</span>
-          </span>
-        )}
+      {line && <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">{line}</p>}
+      <div className="mt-auto flex items-center gap-2 pt-3 text-xs">
+        <GroupPill program={program} />
+        <span className="truncate font-medium text-foreground/80">{keyFact(program)}</span>
       </div>
     </div>
   )
@@ -128,15 +117,16 @@ export function ProgramCard({
 
 // ---------- Detail drawer ----------
 
-function Field({ icon: Icon, label, children }: { icon: typeof CalendarDays; label: string; children: React.ReactNode }) {
+function Section({ icon: Icon, title, open, children }: { icon: typeof CalendarDays; title: string; open?: boolean; children: React.ReactNode }) {
   return (
-    <div className="flex gap-3">
-      <Icon className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-      <div>
-        <div className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{label}</div>
-        <div className="mt-0.5 text-sm text-foreground">{children}</div>
-      </div>
-    </div>
+    <details open={open} className="group px-4 py-3">
+      <summary className="flex cursor-pointer list-none items-center gap-2.5 text-sm font-semibold text-foreground">
+        <Icon className="h-4 w-4 shrink-0 text-primary" />
+        {title}
+        <ChevronDown className="ml-auto h-4 w-4 text-muted-foreground transition group-open:rotate-180" />
+      </summary>
+      <div className="mt-2 pl-[26px] text-sm leading-relaxed text-foreground/90">{children}</div>
+    </details>
   )
 }
 
@@ -154,6 +144,7 @@ export function ProgramDrawer({
   onAsk: (question: string) => void
 }) {
   const g = program ? GROUPS[program.group] : null
+  const support = program ? advisorOnly.filter(x => x.group === program.group && x.id !== program.id).slice(0, 5) : []
   return (
     <Sheet open={!!program} onOpenChange={open => !open && onClose()}>
       <SheetContent side="right" className="glass-strong w-full overflow-y-auto border-0 p-0 sm:max-w-md">
@@ -166,59 +157,15 @@ export function ProgramDrawer({
                 <SheetDescription className="text-sm text-white/85">{program.category}</SheetDescription>
               </SheetHeader>
             </div>
-            <div className="space-y-5 px-6 py-6">
+            <div className="space-y-4 px-6 py-5">
               {program.description && <p className="text-[15px] leading-relaxed text-foreground">{program.description}</p>}
-              <div className="space-y-4">
-                <Field icon={CalendarDays} label="When">
-                  {whenLabel(program)}
-                  {program.months.length > 0 && (
-                    <div className="mt-2 flex gap-0.5">
-                      {MONTHS.map((m, i) => (
-                        <span
-                          key={m}
-                          title={m}
-                          className={cn(
-                            "h-1.5 flex-1 rounded-full",
-                            program.months.includes(i + 1) ? "bg-primary" : "bg-muted",
-                          )}
-                        />
-                      ))}
-                    </div>
-                  )}
-                </Field>
-                {program.eligibility && (
-                  <Field icon={Users} label="Who can join">
-                    {program.eligibility}
-                  </Field>
-                )}
-                {program.funding && (
-                  <Field icon={Wallet} label="Funding">
-                    {program.funding}
-                  </Field>
-                )}
-                {(program.audience.length > 0 || program.stage.length > 0) && (
-                  <Field icon={GraduationCap} label="Best for">
-                    <div className="flex flex-wrap gap-1.5">
-                      {program.audience.map(a => (
-                        <span key={a} className="rounded-full bg-muted px-2 py-0.5 text-xs">
-                          {AUDIENCE_LABELS[a]}
-                        </span>
-                      ))}
-                      {program.stage.map(s => (
-                        <span key={s} className="rounded-full border border-border px-2 py-0.5 text-xs">
-                          {STAGE_LABELS[s]} stage
-                        </span>
-                      ))}
-                    </div>
-                  </Field>
-                )}
+              <div className="flex flex-wrap gap-1.5 text-xs">
+                <span className="rounded-full bg-primary/10 px-2.5 py-1 font-semibold text-primary">{keyFact(program)}</span>
+                <span className="rounded-full bg-black/[.05] px-2.5 py-1">
+                  {program.audience.length ? program.audience.map(a => AUDIENCE_LABELS[a]).join(", ") : "Eligibility: check with the program"}
+                </span>
               </div>
-              {program.confidence === "low" && (
-                <p className="rounded-lg bg-secondary/25 px-3 py-2 text-xs text-foreground">
-                  Some details could not be fully verified. Confirm on the official page before you apply.
-                </p>
-              )}
-              <div className="sticky bottom-0 -mx-6 flex flex-nowrap gap-2 border-t sm:flex-wrap border-black/5 bg-white px-6 py-3 sm:static sm:mx-0 sm:border-0 sm:bg-transparent sm:px-0 sm:py-0 sm:pt-1 sm:backdrop-blur-none">
+              <div className="sticky bottom-0 -mx-6 flex flex-nowrap gap-2 border-t border-black/5 bg-white px-6 py-3 sm:static sm:mx-0 sm:flex-wrap sm:border-0 sm:bg-transparent sm:px-0 sm:py-0">
                 {program.link && (
                   <a
                     href={program.link}
@@ -231,18 +178,55 @@ export function ProgramDrawer({
                 )}
                 <button
                   onClick={() => onToggleSave(program.id)}
-                  className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-semibold transition hover:bg-muted"
+                  className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm font-semibold transition hover:bg-muted sm:px-4"
                 >
                   {saved ? <BookmarkCheck className="h-4 w-4 text-primary" /> : <Bookmark className="h-4 w-4" />}
-                  {saved ? "Saved" : "Save"}
+                  <span className="sr-only sm:not-sr-only">{saved ? "Saved" : "Save"}</span>
                 </button>
                 <RemindButton program={program} />
                 <ShareButton url={`${typeof window !== "undefined" ? window.location.origin : ""}/?p=${program.id}`} title={program.name} label="Share" className="py-2" compactLabel />
               </div>
-              <p className="text-xs text-muted-foreground">
-                Something out of date or wrong?{" "}
-                <FeedbackLink label="Send a correction" program={program} />. Run this program? We will update it with you.
-              </p>
+
+              <div className="divide-y divide-border rounded-2xl border border-border bg-white/60">
+                <Section icon={CalendarDays} title="When" open>
+                  {whenLabel(program)}
+                  {program.months.length > 0 && (
+                    <div className="mt-2 flex gap-0.5" aria-label={`Usually ${program.months.map(m => MONTHS[m - 1]).join(", ")}`}>
+                      {MONTHS.map((m, i) => (
+                        <span key={m} title={m} className={cn("h-1.5 flex-1 rounded-full", program.months.includes(i + 1) ? "bg-primary" : "bg-muted")} />
+                      ))}
+                    </div>
+                  )}
+                </Section>
+                {(program.eligibility || program.stage.length > 0) && (
+                  <Section icon={Users} title="Who can join">
+                    {program.eligibility}
+                    {program.stage.length > 0 && (
+                      <div className="mt-2 flex flex-wrap gap-1.5">
+                        {program.stage.map(st => <span key={st} className="rounded-full border border-border px-2 py-0.5 text-xs">{STAGE_LABELS[st]} stage</span>)}
+                      </div>
+                    )}
+                  </Section>
+                )}
+                {program.funding && <Section icon={Wallet} title="Funding">{program.funding}</Section>}
+                {support.length > 0 && (
+                  <Section icon={GraduationCap} title={`Support from ${g.short}`}>
+                    <p className="text-xs text-muted-foreground">Always-on help you can use alongside this program.</p>
+                    <ul className="mt-1.5 space-y-1">
+                      {support.map(x => (
+                        <li key={x.id}>
+                          {x.link ? <a href={x.link} target="_blank" rel="noreferrer" className="hover:text-primary hover:underline">{x.name}</a> : x.name}
+                        </li>
+                      ))}
+                    </ul>
+                  </Section>
+                )}
+                <Section icon={ShieldCheck} title="Is this right?">
+                  {program.confidence === "low" ? "Some details could not be fully verified. " : ""}
+                  {program.lastVerified ? `Checked against the official source on ${new Date(program.lastVerified + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}. ` : ""}
+                  Confirm dates on the official page before you apply. <FeedbackLink label="Send a correction" program={program} />.
+                </Section>
+              </div>
             </div>
           </>
         )}

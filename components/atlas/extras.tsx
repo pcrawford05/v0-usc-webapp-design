@@ -3,9 +3,8 @@
 import { BellPlus, Check, Link2, Share2, Sparkles, X } from "lucide-react"
 import { useEffect, useLayoutEffect, useState } from "react"
 
-import { monthsAway } from "@/lib/filters"
 import { canRemind, downloadReminders } from "@/lib/reminders"
-import { GROUPS, MONTHS, type Program } from "@/lib/programs"
+import { MONTHS, type Program } from "@/lib/programs"
 import { shareLink } from "@/lib/share"
 import { cn } from "@/lib/utils"
 
@@ -55,48 +54,10 @@ export function RemindButton({ program, compact }: { program: Program; compact?:
       {done ? <Check className="h-4 w-4 text-emerald-600" /> : <BellPlus className="h-4 w-4" />}
     </button>
   ) : (
-    <button onClick={go} className="inline-flex items-center gap-2 rounded-lg border border-border px-4 py-2 text-sm font-semibold transition hover:bg-muted">
+    <button onClick={go} className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm font-semibold transition hover:bg-muted sm:px-4">
       {done ? <Check className="h-4 w-4 text-emerald-600" /> : <BellPlus className="h-4 w-4" />}
       <span className={cn(!done && "sr-only sm:not-sr-only")}>{done ? "Open the file to add it" : "Remind me"}</span>
     </button>
-  )
-}
-
-// ---------- Upcoming deadlines ----------
-
-/** Programs that open or close in roughly the next 60 days, saved ones first. */
-export function upcoming(list: Program[], saved: string[] = []): Program[] {
-  return list
-    .filter(p => p.months.length && monthsAway(p) <= 2)
-    .sort((a, b) => Number(saved.includes(b.id)) - Number(saved.includes(a.id)) || monthsAway(a) - monthsAway(b) || a.name.localeCompare(b.name))
-}
-
-export function UpcomingStrip({ list, saved, onOpen, title = "Coming up" }: { list: Program[]; saved: string[]; onOpen: (id: string) => void; title?: string }) {
-  const items = upcoming(list, saved).slice(0, 14)
-  if (!items.length) return null
-  const when = (p: Program) => (monthsAway(p) === 0 ? "this month" : MONTHS[(new Date().getMonth() + monthsAway(p)) % 12])
-  return (
-    <section className="flex items-center gap-2 overflow-hidden rounded-2xl glass py-2 pl-3 pr-2">
-      <span className="shrink-0 text-xs font-bold uppercase tracking-wide text-primary">{title}</span>
-      <div className="flex min-w-0 flex-1 gap-1.5 overflow-x-auto [scrollbar-width:none]">
-        {items.map((p, i) => (
-          <button
-            key={p.id}
-            onClick={() => onOpen(p.id)}
-            style={{ "--i": i } as React.CSSProperties}
-            className="animate-rise inline-flex shrink-0 items-center gap-1.5 rounded-full bg-white/70 px-3 py-1.5 text-[13px] shadow-sm transition hover:bg-white"
-          >
-            <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: GROUPS[p.group].color }} />
-            <span className="max-w-[14rem] truncate font-medium text-foreground">{p.name}</span>
-            <span className={cn("text-xs", monthsAway(p) === 0 ? "font-semibold text-primary" : "text-muted-foreground")}>{when(p)}</span>
-            {saved.includes(p.id) && <span className="text-[10px] font-bold uppercase text-primary">saved</span>}
-          </button>
-        ))}
-      </div>
-      <button onClick={() => downloadReminders(items, "founder-compass-upcoming.ics")} title={`Add all ${items.length} to your calendar`} aria-label={`Add all ${items.length} to your calendar`} className="shrink-0 rounded-full p-2 text-primary transition hover:bg-white/70">
-        <BellPlus className="h-4 w-4" />
-      </button>
-    </section>
   )
 }
 
@@ -148,7 +109,7 @@ export function EngageEvents({ onOpen }: { onOpen: (id: string) => void }) {
 
 const STEPS = [
   { target: "search", title: "Search everything", body: "Type anything: grants, biotech, pitch, co-founder. Press ⌘K from anywhere." },
-  { target: "explore-modes", title: "See how it fits together", body: "The Subway map shows every program by founder goal and stage. Stations on two lines serve both." },
+  { target: "needs", title: "Start with what you need", body: "Pick funding, a team, a place to build and more. You get a short list of the best bets, with filters when you want them." },
   { target: "ask", title: "Talk to the Advisor", body: "Tell it about yourself and get advice like you would from a mentor, drawn only from real USC programs." },
 ]
 const TOUR_KEY = "compass:toured"

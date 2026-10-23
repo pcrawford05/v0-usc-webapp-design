@@ -120,7 +120,8 @@
       "https://global.usc.edu/usc-viterbi-innovation-engineering-design-global-crises-program/"
     ],
     "confidence": "medium",
-    "notes": "Appears to have been superseded by CE 486ab; may not be offered currently."
+    "notes": "Appears to have been superseded by CE 486ab; may not be offered currently.",
+    "archived": "Historical course, replaced by CE 486."
   },
   {
     "id": "co-founder-speed-dating",
@@ -1300,8 +1301,10 @@
     "id": "usc-viterbi-startup-showcase",
     "name": "USC Viterbi Startup Showcase",
     "aliases": [
+      "Innovation Showcase",
+      "Venture Showcase (Viterbi)",
       "Viterbi Startup Showcase",
-      "Innovation Showcase"
+      "Viterbi Venture Showcase"
     ],
     "group": "viterbi",
     "category": "Events & Speakers",
@@ -1368,7 +1371,8 @@
     "link": "https://viterbiinnovation.usc.edu/",
     "sources": [],
     "confidence": "medium",
-    "notes": "Possibly the same as the USC Viterbi Startup Showcase (April 2026); could not confirm as a separate program. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    "notes": "Possibly the same as the USC Viterbi Startup Showcase (April 2026); could not confirm as a separate program. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
+    "archived": "Duplicate of the USC Viterbi Startup Showcase; kept as an alias there."
   },
   {
     "id": "venturespark",
@@ -1895,7 +1899,8 @@
     ],
     "confidence": "low",
     "notes": "Only one source; not a founder support program per se. Launch date and current activity unknown.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "archived": "Research found it is not a founder support program."
   },
   {
     "id": "greif-center-newsletter",
@@ -3112,7 +3117,8 @@
     ],
     "confidence": "low",
     "notes": "Labeled a prototype on a Notion page that could not be fetched. Tiers and resources unverified. The Venture Pyramid link is an inference from the ACAD 406 syllabus.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "archived": "Internal IYA prototype, not a program students apply to."
   },
   {
     "id": "all-school-startup-mixers",
@@ -3350,7 +3356,8 @@
     ],
     "confidence": "medium",
     "notes": "Series may be concluded; live sessions after 2023 not confirmed. Treat primarily as a recorded resource.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "archived": "Webinar series ran 2020 to 2022; recordings only."
   },
   {
     "id": "icp-startup-launch",
@@ -4885,7 +4892,8 @@
     ],
     "confidence": "low",
     "notes": "Only an unofficial user-made list mentions it; activities, membership and status unconfirmed. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "archived": "No public source found and not on the USC staff list."
   },
   {
     "id": "troylabs",

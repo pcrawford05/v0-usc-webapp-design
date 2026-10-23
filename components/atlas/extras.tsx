@@ -3,6 +3,7 @@
 import { BellPlus, Check, Link2, Share2, Sparkles, X } from "lucide-react"
 import { useEffect, useLayoutEffect, useState } from "react"
 
+import { loadEngageEvents, type LiveEvent } from "@/lib/engage-client"
 import { canRemind, downloadReminders } from "@/lib/reminders"
 import { MONTHS, type Program } from "@/lib/programs"
 import { shareLink } from "@/lib/share"
@@ -63,16 +64,11 @@ export function RemindButton({ program, compact }: { program: Program; compact?:
 
 // ---------- Live events from EngageSC ----------
 
-type LiveEvent = { id: string; title: string; start: string; url: string; host: string; programIds: string[] }
-
 /** Dated events posted on EngageSC by catalog groups, refreshed daily by /api/events. */
 export function EngageEvents({ onOpen }: { onOpen: (id: string) => void }) {
   const [events, setEvents] = useState<LiveEvent[] | null>(null)
   useEffect(() => {
-    fetch("/api/events")
-      .then(r => (r.ok ? r.json() : { events: [] }))
-      .then(d => setEvents(d.events ?? []))
-      .catch(() => setEvents([]))
+    loadEngageEvents().then(setEvents)
   }, [])
   if (!events?.length) return null
   const fmt = (iso: string) =>

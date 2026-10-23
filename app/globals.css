@@ -182,7 +182,26 @@ body {
 /* Native cross-fade between views where the browser supports View Transitions. */
 ::view-transition-old(root), ::view-transition-new(root) { animation-duration: 260ms; }
 
+/* Launch screen: tile pops, ring draws, ticks land, needle spins in and settles with a spring, wordmark rises. ~1.3s total. */
+.launch { background: #fbf8f4; color: #1d1d1f; }
+@media (prefers-color-scheme: dark) { .launch { background: #0b0b0c; color: #f5f5f7; } }
+.launch-tile { animation: launch-tile 420ms cubic-bezier(.3,1.4,.5,1) both; }
+.launch-ring { stroke-dasharray: 1; stroke-dashoffset: 1; transform: rotate(-90deg); transform-origin: 256px 256px; animation: launch-ring 520ms 160ms cubic-bezier(.6,0,.3,1) forwards; }
+.launch-ticks rect { transform-box: fill-box; transform-origin: center; animation: launch-tick 260ms cubic-bezier(.3,1.6,.5,1) both; }
+.launch-ticks rect:nth-child(1) { animation-delay: 520ms; }
+.launch-ticks rect:nth-child(4) { animation-delay: 570ms; }
+.launch-ticks rect:nth-child(2) { animation-delay: 620ms; }
+.launch-ticks rect:nth-child(3) { animation-delay: 670ms; }
+.launch-needle { transform-origin: 256px 256px; animation: launch-needle 900ms 300ms cubic-bezier(.2,.9,.25,1.12) both; }
+.launch-word { animation: rise 420ms 880ms cubic-bezier(.2,.8,.2,1) both; }
+@keyframes launch-tile { from { opacity: 0; transform: scale(.7); } to { opacity: 1; transform: none; } }
+@keyframes launch-ring { to { stroke-dashoffset: 0; } }
+@keyframes launch-tick { from { opacity: 0; transform: scale(0); } to { opacity: 1; transform: none; } }
+@keyframes launch-needle { 0% { opacity: 0; transform: rotate(-540deg) scale(.6); } 25% { opacity: 1; } 100% { transform: none; } }
+
 @media (prefers-reduced-motion: reduce) {
+  .launch-tile, .launch-ticks rect, .launch-needle, .launch-word { animation: none !important; }
+  .launch-ring { animation: none !important; stroke-dashoffset: 0; }
   .app-bg::before, .animate-rise, .animate-pop-in, .animate-view, .animate-tour-ring, .ai-border::before { animation: none !important; }
   .tab-indicator { transition: none; }
 }

@@ -1,0 +1,628 @@
+{
+  "updated": "2026-10-24",
+  "source": "EngageSC public calendars and data/programs.json",
+  "events": [
+    {
+      "id": "414465",
+      "title": "Power of the Ask - For Social Entrepreneurs",
+      "start": "2026-10-26T17:00:00Z",
+      "end": "2026-10-26T19:00:00Z",
+      "host": "USC Marshall Brittingham Social Enterprise Lab",
+      "url": "https://engage.usc.edu/rsvp?id=414465",
+      "programIds": [
+        "hult-prize-at-usc",
+        "brittingham-social-enterprise-lab"
+      ]
+    },
+    {
+      "id": "414468",
+      "title": "Hult Prize Information Session- VIRTUAL",
+      "start": "2026-10-27T20:00:00Z",
+      "end": "2026-10-27T21:00:00Z",
+      "host": "USC Marshall Brittingham Social Enterprise Lab",
+      "url": "https://engage.usc.edu/rsvp?id=414468",
+      "programIds": [
+        "hult-prize-at-usc",
+        "brittingham-social-enterprise-lab"
+      ]
+    }
+  ],
+  "cycles": [
+    {
+      "id": "co-founder-speed-dating",
+      "name": "Co-founder Speed Dating",
+      "months": [
+        3
+      ],
+      "timing": "Periodic; a co-founder event was listed in March 2025."
+    },
+    {
+      "id": "csci-532-innovation-for-defense-applications",
+      "name": "CSCI 532 Innovation for Defense Applications",
+      "months": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "timing": "Spring semester (Spring 2025 Thursday afternoons)."
+    },
+    {
+      "id": "das-family-innovate-x-la-student-competition",
+      "name": "Das Family Innovate x LA Student Competition",
+      "months": [
+        5,
+        9
+      ],
+      "timing": "Annual; fall kickoff/info session (September), six monthly seminars, spring Demo Day (May)"
+    },
+    {
+      "id": "engineering-honors-program-ehp",
+      "name": "Engineering Honors Program (EHP)",
+      "months": [
+        11
+      ],
+      "timing": "Students with more than 3 semesters left apply in their second or fourth semester (spring of freshman or sophomore year); juniors and transfers with 3 semesters left apply in fall of junior year, with the next window listed as coming November 2026 and decisions before winter break."
+    },
+    {
+      "id": "engr-493-dean-s-seminar-in-entrepreneurship-disruptive-techn",
+      "name": "ENGR 493 Dean's Seminar in Entrepreneurship: Disruptive Technologies",
+      "months": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "timing": "Spring semester; Spring 2025 met Fridays 10-11:50am online."
+    },
+    {
+      "id": "global-student-startup-competition",
+      "name": "Global Student Startup Competition",
+      "months": [
+        5
+      ],
+      "timing": "Annual; USC team selection in fall, GSSC 2027 Worlds May 16-20, 2027 in Seoul (theme: AI Empowering Your Community)"
+    },
+    {
+      "id": "maseeh-entrepreneurship-prize-competition",
+      "name": "Maseeh Entrepreneurship Prize Competition",
+      "months": [
+        1,
+        4
+      ],
+      "timing": "Annual; applications open in the fall and closed Jan 27, 2026; winners announced at the Startup Showcase in late April (Apr 27, 2026)"
+    },
+    {
+      "id": "min-family-challenge",
+      "name": "Min Family Challenge",
+      "months": [
+        1,
+        4
+      ],
+      "timing": "Annual; applications open in the fall and closed Jan 27, 2026; winners announced at the Startup Showcase in late April"
+    },
+    {
+      "id": "origin-weekend",
+      "name": "Origin Weekend",
+      "months": [
+        1,
+        9
+      ],
+      "timing": "Runs each semester; Spring 2026 edition (Origin Weekend Impact) Jan 22-26, 2026; Fall 2026 edition (x Replit) Sept 24-28, 2026"
+    },
+    {
+      "id": "ship-fund",
+      "name": "SHIP Fund",
+      "months": [
+        10,
+        11
+      ],
+      "timing": "Fall 2026: register by Oct 2, 2026; program runs Oct 5 - Nov 23, 2026"
+    },
+    {
+      "id": "summer-smasher",
+      "name": "Summer Smasher",
+      "months": [
+        3,
+        6,
+        7
+      ],
+      "timing": "Summer 2026 application timeline is listed as coming soon (all dates TBD) as of the page last updated March 31, 2026; an interest form is open."
+    },
+    {
+      "id": "summer-start-fellows",
+      "name": "Summer Start Fellows",
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "timing": "Summer 2025 ran June 16 to August 12, 2025, with an application deadline of December 1, 2024; the page has not been updated for later years."
+    },
+    {
+      "id": "technology-development-and-commercialization-engr-494-former",
+      "name": "Technology Development and Commercialization (ENGR 494, formerly ENGR 499)",
+      "months": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "timing": "Fall semester; recently Tuesdays 3-4:50pm."
+    },
+    {
+      "id": "trojan-tank",
+      "name": "Trojan Tank",
+      "months": [
+        4
+      ],
+      "timing": "Held April 11, 2025, 7-9pm, billed as the first USC Shark Tank; no 2026 edition found."
+    },
+    {
+      "id": "usc-games-summer-bridge-program",
+      "name": "USC Games Summer Bridge Program",
+      "months": [
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "timing": "Annual; applications open in February; program runs late May to early August."
+    },
+    {
+      "id": "usc-viterbi-startup-showcase",
+      "name": "USC Viterbi Startup Showcase",
+      "months": [
+        4
+      ],
+      "timing": "Annual, late April (inaugural Apr 27, 2026 at Ginsburg Hall)"
+    },
+    {
+      "id": "venturewell-e-team-program",
+      "name": "VentureWell E-Team Program",
+      "months": [
+        1,
+        2,
+        5,
+        9
+      ],
+      "timing": "Three national application cycles per year, with deadlines in September, January/February and May (11:59 p.m. ET); the call opens about 6-8 weeks before each deadline and teams are notified within 60 days."
+    },
+    {
+      "id": "viterbi-startup-and-entrepreneurship-experience-vsee",
+      "name": "Viterbi Startup and Entrepreneurship Experience (VSEE)",
+      "months": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "timing": "Annual; fall semester, within ENGR 102."
+    },
+    {
+      "id": "yc-application-office-hours",
+      "name": "YC Application Office Hours",
+      "months": [
+        4
+      ],
+      "timing": "Offered ahead of YC application cycles; announced April 30, 2025."
+    },
+    {
+      "id": "athena-women-s-entrepreneurship-summit-and-female-founders-p",
+      "name": "ATHENA Women's Entrepreneurship Summit and Female Founders Pitch Competition",
+      "months": [
+        3
+      ],
+      "timing": "Annual summit in early March (Mar 7, 2024; Mar 2, 2023); pitch applications precede it"
+    },
+    {
+      "id": "baep-entrepreneurship-courses",
+      "name": "BAEP Entrepreneurship Courses",
+      "months": [
+        1,
+        8
+      ],
+      "timing": "Offered each fall and spring semester"
+    },
+    {
+      "id": "catalyst-microgrant-fund",
+      "name": "Catalyst Microgrant Fund",
+      "months": [
+        1,
+        10,
+        11,
+        12
+      ],
+      "timing": "2026-27 proposals are accepted Oct 20, 2026 through Jan 30, 2027; approved teams get an Expert-in-Residence meeting before funds are released, and a one-page report is due May 1, 2027."
+    },
+    {
+      "id": "hult-prize-at-usc",
+      "name": "Hult Prize at USC",
+      "months": [
+        1,
+        12
+      ],
+      "timing": "Annual; 2025-26 applications due Dec 5, finalists notified Dec 18, USC final in early spring"
+    },
+    {
+      "id": "marcia-israel-celebration-and-founder-showcase",
+      "name": "Marcia Israel Celebration and Founder Showcase",
+      "months": [
+        5
+      ],
+      "timing": "Annual, around May 1 (end of spring semester)"
+    },
+    {
+      "id": "ms-in-entrepreneurship-and-innovation",
+      "name": "MS in Entrepreneurship and Innovation",
+      "months": [
+        1,
+        4,
+        11
+      ],
+      "timing": "Fall start; Fall 2027 applications: Round 1 deadline November 1, 2026 (decision by Jan 15, 2027), Round 2 January 15, 2027 (decision by Mar 30, 2027), Round 3 April 15, 2027 (decision by Jun 15, 2027)."
+    },
+    {
+      "id": "ms-in-social-entrepreneurship",
+      "name": "MS in Social Entrepreneurship",
+      "months": [
+        8
+      ],
+      "timing": "Fall start with a mandatory pre-fall course"
+    },
+    {
+      "id": "new-venture-seed-competition",
+      "name": "New Venture Seed Competition",
+      "months": [
+        2,
+        4
+      ],
+      "timing": "Annual; 2025-26 applications were due Feb 8, 2026, quarter-finals Mar 10, semi-finals Apr 16, public finals Apr 24, and winners announced at the awards banquet Apr 30, 2026. 2026-27 dates not yet posted."
+    },
+    {
+      "id": "usc-venture-lab-usc-vc",
+      "name": "BAEP 565 Venture Lab",
+      "months": [
+        8
+      ],
+      "timing": "Offered Fall 2026, Thursdays 6:30-9:30 pm."
+    },
+    {
+      "id": "vaneck-southern-california-blockchain-conference",
+      "name": "VanEck Southern California Blockchain Conference",
+      "months": [
+        4
+      ],
+      "timing": "Annual; 2026 edition April 22-23 (conference day 1, hackathon day 2). First held November 2023."
+    },
+    {
+      "id": "venture-capital-investment-competition-vcic",
+      "name": "Venture Capital Investment Competition (VCIC)",
+      "months": [
+        2,
+        11
+      ],
+      "timing": "Annual; 2025-26 undergraduate applications were due Nov 14, 2025 (notified Nov 21), training Jan 2026, West Coast Regionals Feb 7, 2026 at BYU; graduate EVMA internal round Nov 21, Silicon Valley Regionals Feb 27, 2026. 2026-27 dates not posted."
+    },
+    {
+      "id": "acad-406-purpose-driven-innovation-incubator",
+      "name": "ACAD 406 Purpose-Driven Innovation Incubator",
+      "months": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "timing": "Fall semester (Fall 2025: Wednesdays 6-7:50pm, IYH 210, plus an online section; Fall 2024: Thursdays 5-6:50pm)"
+    },
+    {
+      "id": "iya-founders-bootcamp",
+      "name": "IYA Founders Bootcamp",
+      "months": [
+        9
+      ],
+      "timing": "Annual, early fall: second annual edition held Sept 20, 2024. Fall 2025 and 2026 dates not found."
+    },
+    {
+      "id": "iya-ignite-grants",
+      "name": "IYA Ignite Grants",
+      "months": [
+        11,
+        12
+      ],
+      "timing": "Fall 2024 round: submissions due Nov 9, 2024; winners announced by Dec 1, 2024. No 2025 or 2026 round found."
+    },
+    {
+      "id": "iya-innovation-quest",
+      "name": "IYA Innovation Quest",
+      "months": [
+        4,
+        10,
+        12
+      ],
+      "timing": "Annual academic-year cycle; Founders Bootcamp kickoff in October, Ignite Grants awarded around December, Venture Showcase in April"
+    },
+    {
+      "id": "iya-venture-showcase",
+      "name": "IYA Venture Showcase",
+      "months": [
+        4
+      ],
+      "timing": "Annual, in April (end of the Innovation Quest year)"
+    },
+    {
+      "id": "all-school-startup-mixers",
+      "name": "All-School Startup Mixers",
+      "months": [
+        9,
+        10
+      ],
+      "timing": "Typically early fall semester (past mixers in October); one past mixer drew 261 registrants."
+    },
+    {
+      "id": "early-career-innovator-award",
+      "name": "Early Career Innovator Award",
+      "months": [
+        2,
+        11
+      ],
+      "timing": "General track due noon Nov 14 with funding in February; Techstars track due noon Feb 1 with funding in March (per the Innovation Catalyst RFP v8). The experience runs 3 months."
+    },
+    {
+      "id": "innovation-catalyst-program-icp",
+      "name": "Innovation Catalyst Program (ICP)",
+      "months": [
+        2,
+        3,
+        11
+      ],
+      "timing": "Annual cycle with initiative-specific deadlines (Nov 14, Feb 1, Mar 1); Startup Launch is rolling. Next ICP deadline Fall 2026."
+    },
+    {
+      "id": "innovation-empowerment-award",
+      "name": "Innovation Empowerment Award",
+      "months": [
+        2,
+        11
+      ],
+      "timing": "Application deadline is noon on Nov 14; funding is expected in February."
+    },
+    {
+      "id": "sbir-sttr-planning-award",
+      "name": "SBIR/STTR Planning Award",
+      "months": [
+        2
+      ],
+      "timing": "Annual internal cycle; FY25 closed Oct 19, 2024; a Research Catalyst Program SBIR/STTR topic listed a Feb 16, 2026 deadline."
+    },
+    {
+      "id": "stevens-translation-catalyst",
+      "name": "Stevens Translation Catalyst",
+      "months": [
+        3,
+        5
+      ],
+      "timing": "Annual; 2026 deadline was March 1 (5pm PT), funding expected May 1. Next ICP cycle expected Fall 2026."
+    },
+    {
+      "id": "usc-and-techstars-digital-economy-accelerator",
+      "name": "USC and Techstars Digital Economy Accelerator",
+      "months": [
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10,
+        11
+      ],
+      "timing": "Annual; 2027 cohort applications open Aug 24, 2026 with final deadline Nov 18, 2026; program starts Mar 8, 2027 and Demo Day is Jun 3, 2027."
+    },
+    {
+      "id": "usc-and-techstars-startup-weekend",
+      "name": "USC and Techstars Startup Weekend",
+      "months": [
+        3
+      ],
+      "timing": "Annual; the 2026 edition ran March 27-29, 2026 at the Michelson Center for Convergent Bioscience. 2027 date not yet posted."
+    },
+    {
+      "id": "usc-and-techstars-university-catalyst",
+      "name": "USC and Techstars University Catalyst",
+      "months": [
+        4,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "timing": "2026 cohort: applications Apr 29 to Jul 8, 2026; program starts Aug 31, 2026; Pitch Day Nov 5, 2026."
+    },
+    {
+      "id": "california-life-sciences-fast-program",
+      "name": "California Life Sciences FAST Program",
+      "months": [
+        1,
+        4,
+        6,
+        7,
+        9,
+        12
+      ],
+      "timing": "Twice yearly. Fall 2026: applications closed July 6, kickoff September (virtual), Innovation Showcase Dec 10, 2026 (Bay Area). Spring 2027: applications close Jan 6, 2027, kickoff April 2027, showcase June 2027."
+    },
+    {
+      "id": "la-biostart-boot-camp",
+      "name": "LA BioStart Boot Camp",
+      "months": [
+        6,
+        7,
+        8
+      ],
+      "timing": "Annual summer cohort; Cohort 9 ran July 14 to Aug 13, 2026, applications due June 19, 2026."
+    },
+    {
+      "id": "larta-institute-heal-la-accelerator",
+      "name": "Larta Institute Heal.LA Accelerator",
+      "months": [
+        7,
+        10
+      ],
+      "timing": "2026 cohort already announced; the page invites interest registration for the next cohort."
+    },
+    {
+      "id": "nucleate",
+      "name": "Nucleate",
+      "months": [
+        9,
+        10
+      ],
+      "timing": "Nucleate LA 2026-27 Activator applications opened September 2026 and closed October 20, 2026 (rolling review)."
+    },
+    {
+      "id": "spark-at-usc",
+      "name": "SPARK at USC",
+      "months": [
+        6
+      ],
+      "timing": "2026 call: submission deadline June 30, funding decision August 3, funding start September 1; seminars about 6 sessions per year."
+    },
+    {
+      "id": "hacksc",
+      "name": "HackSC",
+      "months": [
+        1,
+        4,
+        8,
+        10,
+        11
+      ],
+      "timing": "Recruits each January and August; hackathons and Hack Nights through the year (HackSC x Lovable Hackathon October 2025, spring hackathon late April 2026). Flagship fall hackathon was Nov 8-10 in 2024."
+    },
+    {
+      "id": "high-tech-association-hta",
+      "name": "High Tech Association (HTA)",
+      "months": [
+        4,
+        10
+      ],
+      "timing": "Tech Fest each April (April 2026, two days); Bay Area Tech Trek in October (October 8-9, 2026); workshops through the year."
+    },
+    {
+      "id": "kappa-theta-pi-ktp",
+      "name": "Kappa Theta Pi (KTP)",
+      "months": [
+        8,
+        9
+      ],
+      "timing": "Rush each fall starting at the Involvement Fair; Fall 2026 rush began August 27 and applications closed Friday, September 11, 2026 at 12 PM."
+    },
+    {
+      "id": "lavalab",
+      "name": "LavaLab",
+      "months": [
+        1,
+        8,
+        9
+      ],
+      "timing": "Cohorts each semester with info sessions; Spring 2026 applications opened mid-January 2026, Fall 2026 applications were due September 11, 2026 at 11:59 PM."
+    },
+    {
+      "id": "medesign",
+      "name": "MEDesign",
+      "months": [
+        4,
+        8,
+        9
+      ],
+      "timing": "Fall applications each August-September (Fall 2026 decisions released September 14, 2026); Spring Symposium each April (April 27, 2026)."
+    },
+    {
+      "id": "productsc",
+      "name": "ProductSC",
+      "months": [
+        1,
+        8,
+        9
+      ],
+      "timing": "Applications each semester; Fall 2026 Compass and Client applications were due September 5, 2026. Compass needs no experience."
+    },
+    {
+      "id": "shift-sc",
+      "name": "Shift SC",
+      "months": [
+        10
+      ],
+      "timing": "Weekly meetings during the semester; annual Tech4Good conference (October 19, 2026)."
+    },
+    {
+      "id": "sigma-eta-pi-sep",
+      "name": "Sigma Eta Pi (SEP)",
+      "months": [
+        1,
+        9
+      ],
+      "timing": "Recruitment each semester with info sessions (January 2026; September 1-2, 2026); Fall 2026 applications were due September 4, 2026 at 6 PM."
+    },
+    {
+      "id": "spark-sc",
+      "name": "Spark SC",
+      "months": [
+        2,
+        9
+      ],
+      "timing": "Applications each semester (no prior experience needed); Fall 2026 applications closed September 26, 2026. Startup Career Fair in February (February 2026)."
+    },
+    {
+      "id": "techie",
+      "name": "Techie",
+      "months": [
+        1,
+        9
+      ],
+      "timing": "Applications each semester; Spring 2026 apps were due January 24, 2026 and Fall 2026 apps were due September 8, 2026."
+    },
+    {
+      "id": "troylabs",
+      "name": "TroyLabs",
+      "months": [
+        4,
+        8,
+        9
+      ],
+      "timing": "Member and Build cohort applications each fall (Fall 2026 due September 6, 2026); DEMO startup conference each April (April 22, 2026)."
+    },
+    {
+      "id": "usc-makers",
+      "name": "USC Makers",
+      "months": [
+        5,
+        9
+      ],
+      "timing": "Recruitment each fall (Fall 2026 applications closed September 12, 2026); project showcase each spring (May 1, 2026)."
+    },
+    {
+      "id": "usc-alumni-entrepreneurs-network-aen",
+      "name": "USC Alumni Entrepreneurs Network (AEN)",
+      "months": [
+        4,
+        5,
+        6
+      ],
+      "timing": "Mentorship program runs 12 weeks starting in April (2024 cohort); network events ongoing"
+    },
+    {
+      "id": "usc-rossier-edtech-accelerator",
+      "name": "USC Rossier EdTech Accelerator",
+      "months": [
+        9
+      ],
+      "timing": "Annual; applications for the 9th cohort (2026-27) were open September 1-30, 2026, and the program begins in late October 2026."
+    }
+  ]
+}

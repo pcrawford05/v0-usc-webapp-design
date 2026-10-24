@@ -167,3 +167,12 @@ export function decodeRoute(s: string): { now: string[]; next: string[]; later: 
   const [now, next, later] = [valid(parts[0]), valid(parts[1]), valid(parts[2])]
   return now.length + next.length + later.length ? { now, next, later, support: [] } : null
 }
+
+/** An ordered route drawn on the subway map: what to do now, next, and later. */
+export interface RoutePlan {
+  now: string[]
+  next: string[]
+  later: string[]
+  /** Always-on support (mentoring, office hours, spaces, legal help) to lean on throughout. */
+  support: string[]
+}

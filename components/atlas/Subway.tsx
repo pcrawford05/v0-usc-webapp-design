@@ -3,7 +3,7 @@
 import { ArrowRight, RotateCcw } from "lucide-react"
 import { useEffect, useMemo, useRef, useState } from "react"
 
-import type { RoutePlan } from "@/lib/ai"
+import type { RoutePlan } from "@/lib/network"
 import { COLUMN, COLUMNS, KIND_LABELS, LINES, STATIONS, ZONES, decodeRoute, encodeRoute, linesAt, monthName, nextMonth, offMap, planRoute, type Kind } from "@/lib/network"
 import { GROUPS, programById, type Program } from "@/lib/programs"
 import { cn } from "@/lib/utils"

@@ -5,16 +5,14 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { Suspense, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
 
 import { BubbleMap } from "@/components/atlas/BubbleMap"
-import { CampusMap } from "@/components/atlas/CampusMap"
 import { CommandPalette } from "@/components/atlas/CommandPalette"
 import { Tour } from "@/components/atlas/extras"
-import { SubwayView } from "@/components/atlas/Subway"
 import { ProfileDialog, useProfile } from "@/components/atlas/ProfileDialog"
 import { FeedbackLink } from "@/components/atlas/Feedback"
 import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
 import { DiscoverView } from "@/components/atlas/Discover"
 import { SavedView } from "@/components/atlas/Saved"
-import { AskView, type Turn } from "@/components/atlas/views"
+import { AdvisorView } from "@/components/atlas/views"
 import { NEEDS, type NeedKey } from "@/lib/catalog"
 import { describeProfile, hasProfile, ROLES } from "@/lib/profile"
 import { programById, programs } from "@/lib/programs"
@@ -28,7 +26,7 @@ const TABS = [
   { key: "saved", label: "Saved", icon: Bookmark },
 ] as const
 type TabKey = (typeof TABS)[number]["key"]
-type Mode = "list" | "map" | "bubbles" | "campus"
+type Mode = "list" | "subway" | "campus" | "bubbles"
 
 // Old links: Explore and Browse are now Discover, Calendar lives in Saved, the Subway tab is Discover's map.
 const LEGACY_VIEW: Record<string, TabKey> = { explore: "discover", browse: "discover", calendar: "saved", path: "discover" }
@@ -55,7 +53,8 @@ function Atlas() {
   const rawView = params.get("view") ?? ""
   const tab = (TABS.find(t => t.key === rawView)?.key ?? LEGACY_VIEW[rawView] ?? "discover") as TabKey
   const rawMode = params.get("mode")
-  const mode: Mode = rawMode === "subway" || rawMode === "map" ? "map" : rawMode === "bubbles" || rawMode === "campus" ? rawMode : "list"
+  // "map" was the subway's old name in shared links.
+  const mode: Mode = rawMode === "subway" || rawMode === "map" ? "subway" : rawMode === "bubbles" || rawMode === "campus" ? rawMode : "list"
   const need = (NEEDS.find(n => n.key === params.get("need"))?.key ?? null) as NeedKey | null
   const openId = params.get("p")
   const open = openId ? programById.get(openId) ?? null : null
@@ -84,37 +83,8 @@ function Atlas() {
   const matches = useMemo(() => (filters.q.trim() ? rankPrograms(filters.q, 200).map(r => r.program) : null), [filters.q])
   const highlight = useMemo(() => (matches ? new Set(matches.map(p => p.id)) : null), [matches])
 
-  const [turns, setTurns] = useState<Turn[]>([])
-  const [busy, setBusy] = useState(false)
-  const ask = useCallback(
-    async (q: string) => {
-      const query = q.trim()
-      if (!query) return
-      const history = turns.map(t => ({ role: t.role, content: t.content }))
-      setTurns(prev => [...prev, { role: "user", content: query }])
-      setBusy(true)
-      setParam({ view: "ask", p: null })
-      try {
-        const res = await fetch("/api/ask", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ query, history, profile: me ? describeProfile(me) : undefined }),
-        })
-        const data = await res.json()
-        setTurns(prev => [
-          ...prev,
-          res.ok
-            ? { role: "assistant", content: data.answer, picks: data.picks, plan: data.plan, provider: data.provider }
-            : { role: "assistant", content: data.error ?? "Something went wrong." },
-        ])
-      } catch {
-        setTurns(prev => [...prev, { role: "assistant", content: "I could not reach the server. Try again in a moment." }])
-      } finally {
-        setBusy(false)
-      }
-    },
-    [turns, setParam, me],
-  )
+  // Questions typed anywhere (palette, program drawer) ride along to the Advisor's prompt.
+  const ask = useCallback((q: string) => setParam({ view: "ask", ask: q.trim() || null, p: null }), [setParam])
 
   const onOpen = useCallback((id: string) => setParam({ p: id }), [setParam])
   const card = { onOpen, isSaved, onToggleSave: toggle, onAsk: (q: string) => ask(q) }
@@ -187,19 +157,16 @@ function Atlas() {
 
       <main className="mx-auto max-w-7xl px-4 py-5 sm:px-6 sm:py-6">
         <div key={`${tab}-${mode}`} className="animate-view">
-          {tab === "discover" && (mode === "list" || mode === "map") && (
-            <DiscoverView filters={filters} setFilters={setFilters} need={need} setNeed={n => setParam({ need: n })} profile={me} mode={mode} setMode={setMode} {...card} />
+          {tab === "discover" && mode !== "bubbles" && (
+            <DiscoverView filters={filters} setFilters={setFilters} need={need} setNeed={n => setParam({ need: n })} profile={me} mode={mode} setMode={setMode} route={params.get("route")} highlight={highlight} {...card} />
           )}
-          {tab === "discover" && (mode === "bubbles" || mode === "campus") && (
+          {tab === "discover" && mode === "bubbles" && (
             <div className="space-y-3">
-              <button onClick={() => setMode("map")} className="text-sm font-semibold text-primary hover:underline">← Back to Discover</button>
-              {mode === "bubbles" ? <BubbleMap programs={programs} highlight={highlight} onOpen={onOpen} /> : <CampusMap programs={programs} highlight={highlight} onOpen={onOpen} />}
+              <button onClick={() => setMode("campus")} className="text-sm font-semibold text-primary hover:underline">← Back to the map</button>
+              <BubbleMap programs={programs} highlight={highlight} onOpen={onOpen} />
             </div>
           )}
-          {tab === "discover" && params.get("route") && mode === "map" && (
-            <div className="mt-6"><SubwayView onOpen={onOpen} initial={params.get("route") ?? undefined} /></div>
-          )}
-          {tab === "ask" && <AskView turns={turns} busy={busy} onSend={ask} {...card} />}
+          {tab === "ask" && <AdvisorView question={params.get("ask") ?? undefined} about={me ? describeProfile(me) : undefined} />}
           {tab === "saved" && <SavedView saved={saved} {...card} />}
         </div>
       </main>

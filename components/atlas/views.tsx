@@ -1,144 +1,61 @@
 "use client"
 
-import { ArrowUp, Compass } from "lucide-react"
-import { useEffect, useRef, useState } from "react"
+import { Check, Copy, ExternalLink, FileText } from "lucide-react"
+import { useEffect, useState } from "react"
 
-import type { RoutePlan } from "@/lib/ai"
-import { encodeRoute } from "@/lib/network"
-import { GROUPS, programById } from "@/lib/programs"
+import { advisorPrompt } from "@/lib/advisor"
 
-import { Itinerary, SubwayMap } from "./Subway"
+// ---------- Advisor ----------
+// No chat here: the person takes a short prompt to their own ChatGPT or Claude, which already knows them.
+// The prompt only points at /llms.txt, so the assistant reads our facts and nothing else we send.
 
-type CardProps = { onOpen: (id: string) => void; isSaved: (id: string) => boolean; onToggleSave: (id: string) => void; onAsk?: (q: string) => void }
+export function AdvisorView({ question, about }: { question?: string; about?: string }) {
+  const [origin, setOrigin] = useState("https://v0-usc-webapp-design.vercel.app")
+  const [copied, setCopied] = useState(false)
+  useEffect(() => setOrigin(window.location.origin), [])
 
-// ---------- Ask AI ----------
-
-export interface Turn {
-  role: "user" | "assistant"
-  content: string
-  picks?: { id: string; reason: string }[]
-  plan?: RoutePlan
-  provider?: string
-}
-
-const SUGGESTIONS = [
-  "I'm a sophomore with an app idea but no team. Where should I start?",
-  "I'm a PhD student and my lab research might be a company",
-  "We have a prototype and need our first $10K",
-  "What's happening this week for founders?",
-  "Plan my next 6 months",
-]
-
-export function AskView({
-  turns,
-  busy,
-  onSend,
-  ...card
-}: CardProps & { turns: Turn[]; busy: boolean; onSend: (q: string) => void }) {
-  const [input, setInput] = useState("")
-  const [mapFor, setMapFor] = useState<number | null>(null)
-  const endRef = useRef<HTMLDivElement>(null)
-  const send = (q: string) => {
-    if (!q.trim() || busy) return
-    onSend(q)
-    setInput("")
+  const extra = [about && `About me: ${about}.`, question && `My question: ${question}`].filter(Boolean).join(" ")
+  const prompt = advisorPrompt(origin, extra)
+  const q = encodeURIComponent(prompt)
+  const copy = async () => {
+    await navigator.clipboard.writeText(prompt).catch(() => undefined)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 1600)
   }
-  useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" })
-  }, [turns.length, busy])
 
   return (
-    <div className="mx-auto flex max-w-3xl flex-col">
-      <div className="space-y-4">
-        {/* The advisor opens the conversation, so the page reads as a chat, not a search box. */}
-        <Bubble>
-          Hi, I'm the Founder Compass advisor. I know every USC entrepreneurship program, club and resource. Tell me a bit about you: your year or role, what you're building, and where you're stuck.
-        </Bubble>
-        {turns.length === 0 && (
-          <div className="flex flex-wrap gap-2 pl-10">
-            {SUGGESTIONS.map(s => (
-              <button key={s} onClick={() => send(s)} className="rounded-full border border-black/10 bg-white/70 px-3.5 py-2 text-left text-sm transition hover:border-primary/40 hover:bg-white">
-                {s}
-              </button>
-            ))}
-          </div>
-        )}
-        {turns.map((t, i) =>
-          t.role === "user" ? (
-            <div key={i} className="flex justify-end animate-pop-in">
-              <div className="max-w-[85%] rounded-2xl rounded-br-md bg-primary px-4 py-2.5 text-primary-foreground">{t.content}</div>
-            </div>
-          ) : (
-            <div key={i} className="space-y-2">
-              <Bubble>{t.content}</Bubble>
-              {t.picks && t.picks.length > 0 && (
-                <div className="space-y-1.5 pl-10">
-                  {t.picks.map(p => {
-                    const prog = programById.get(p.id)
-                    if (!prog) return null
-                    return (
-                      <button key={p.id} onClick={() => card.onOpen(p.id)} className="flex w-full items-start gap-3 rounded-xl border border-black/5 bg-white/70 px-3 py-2.5 text-left transition hover:bg-white">
-                        <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full" style={{ backgroundColor: GROUPS[prog.group].color }} />
-                        <span className="min-w-0">
-                          <span className="block text-sm font-semibold text-foreground">{prog.name}</span>
-                          {p.reason && <span className="block text-xs text-muted-foreground">{p.reason}</span>}
-                        </span>
-                      </button>
-                    )
-                  })}
-                  {t.plan && (
-                    <button onClick={() => setMapFor(mapFor === i ? null : i)} className="text-xs font-semibold text-primary hover:underline">
-                      {mapFor === i ? "Hide the map" : "See this as a route on the subway map"}
-                    </button>
-                  )}
-                </div>
-              )}
-              {t.plan && mapFor === i && (
-                <div className="space-y-3 pl-10 animate-pop-in">
-                  <Itinerary route={t.plan} onOpen={card.onOpen} />
-                  <SubwayMap route={t.plan} onOpen={card.onOpen} compact />
-                  <a href={`?view=explore&mode=subway&route=${encodeRoute(t.plan)}`} className="inline-block text-xs font-semibold text-primary hover:underline">
-                    Open on the full map
-                  </a>
-                </div>
-              )}
-              {t.provider === "local" && <p className="pl-10 text-xs text-muted-foreground">The advisor is offline right now, so these are keyword matches.</p>}
-            </div>
-          ),
-        )}
-        {busy && (
-          <div className="flex items-center gap-2 pl-10 text-sm text-muted-foreground">
-            <span className="inline-flex gap-1">
-              {[0, 1, 2].map(k => <span key={k} className="h-1.5 w-1.5 animate-bounce rounded-full bg-muted-foreground/60" style={{ animationDelay: `${k * 120}ms` }} />)}
-            </span>
-          </div>
-        )}
-        <div ref={endRef} />
+    <div className="mx-auto max-w-2xl space-y-5">
+      <header className="space-y-1.5">
+        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">Ask your own AI</h1>
+        <p className="text-sm text-muted-foreground">
+          Your ChatGPT or Claude already knows you. This short prompt points it at our list of USC programs and events, and it comes back with your top 5 and one question.
+        </p>
+      </header>
+
+      <div className="grid gap-2 sm:grid-cols-2">
+        <a href={`https://chatgpt.com/?q=${q}`} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-foreground px-4 py-3.5 text-[15px] font-semibold text-background transition hover:opacity-90">
+          Open in ChatGPT <ExternalLink className="h-4 w-4" />
+        </a>
+        <a href={`https://claude.ai/new?q=${q}`} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#c96442] px-4 py-3.5 text-[15px] font-semibold text-white transition hover:opacity-90">
+          Open in Claude <ExternalLink className="h-4 w-4" />
+        </a>
       </div>
 
-      <form onSubmit={e => (e.preventDefault(), send(input))} className="sticky bottom-3 mt-6 flex items-center gap-2 rounded-2xl border border-black/5 bg-white p-2 shadow-xl sm:bg-white/80 sm:backdrop-blur-xl">
-        <input
-          value={input}
-          onChange={e => setInput(e.target.value)}
-          placeholder={turns.length ? "Reply..." : "Tell the advisor about you..."}
-          className="min-w-0 flex-1 bg-transparent px-3 py-2 text-base outline-none sm:text-sm"
-          aria-label="Message the advisor"
-        />
-        <button type="submit" disabled={busy || !input.trim()} aria-label="Send" className="shrink-0 rounded-xl bg-primary p-3 text-primary-foreground transition hover:opacity-90 disabled:opacity-40 sm:p-2.5">
-          <ArrowUp className="h-4 w-4" />
-        </button>
-      </form>
-    </div>
-  )
-}
+      <section className="rounded-2xl border border-black/5 bg-white/80 p-4">
+        <div className="mb-2 flex items-center justify-between gap-2">
+          <span className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Or paste this anywhere</span>
+          <button onClick={copy} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground">
+            {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />} {copied ? "Copied" : "Copy"}
+          </button>
+        </div>
+        <p className="select-all rounded-xl bg-black/[.04] p-3 font-mono text-[13px] leading-relaxed text-foreground">{prompt}</p>
+      </section>
 
-function Bubble({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="flex items-start gap-2.5 animate-pop-in">
-      <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-[#b3001b] to-[#7a0000] text-[#FFCC00]">
-        <Compass className="h-3.5 w-3.5" />
-      </span>
-      <div className="max-w-[88%] whitespace-pre-line rounded-2xl rounded-tl-md glass px-4 py-3 leading-relaxed text-foreground">{children}</div>
+      <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
+        <FileText className="h-3.5 w-3.5" />
+        <a href="/llms.txt" target="_blank" className="underline hover:text-foreground">See exactly what it reads</a>
+        {about ? " · Includes what you told us in Personalize." : " · Personalize adds a line about you."}
+      </p>
     </div>
   )
 }

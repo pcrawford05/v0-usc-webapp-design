@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronDown, Clock, List, Map as MapIcon, Search, ShieldCheck, SlidersHorizontal, X } from "lucide-react"
+import { Bookmark, BookmarkCheck, ChevronDown, Clock, List, Map as MapIcon, Route, Search, ShieldCheck, SlidersHorizontal, X } from "lucide-react"
 import { useEffect, useMemo, useState } from "react"
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
@@ -13,25 +13,29 @@ import { rankPrograms } from "@/lib/search"
 import { cn } from "@/lib/utils"
 
 import { ShareButton } from "./extras"
-import { ProgramCard } from "./shared"
-import { SubwayMap } from "./Subway"
+import { CampusMap } from "./CampusMap"
+import { keyFact } from "./shared"
+import { SubwayMap, SubwayView } from "./Subway"
 
 type CardProps = { onOpen: (id: string) => void; isSaved: (id: string) => boolean; onToggleSave: (id: string) => void }
-const FIRST = 8
+const FIRST = 25
+type Mode = "list" | "subway" | "campus" | "bubbles"
 
 /** Featured order: flagship (on the map) first, then verified, then soonest, so the short list leads with the best bets. */
 function featured(a: Program, b: Program) {
   return Number(onMap(b.id)) - Number(onMap(a.id)) || Number(b.confidence === "high") - Number(a.confidence === "high") || monthsAway(a) - monthsAway(b)
 }
 
-export function DiscoverView({ filters: f, setFilters, need, setNeed, profile, mode, setMode, ...card }: CardProps & {
+export function DiscoverView({ filters: f, setFilters, need, setNeed, profile, mode, setMode, route, highlight, ...card }: CardProps & {
   filters: Filters
   setFilters: (f: Partial<Filters>) => void
   need: NeedKey | null
   setNeed: (n: NeedKey | null) => void
   profile: Profile | null
-  mode: "list" | "map"
-  setMode: (m: "list" | "map" | "bubbles" | "campus") => void
+  mode: Exclude<Mode, "bubbles">
+  setMode: (m: Mode) => void
+  route: string | null
+  highlight: Set<string> | null
 }) {
   const [draft, setDraft] = useState(f.q)
   const [all, setAll] = useState(false)
@@ -113,9 +117,10 @@ export function DiscoverView({ filters: f, setFilters, need, setNeed, profile, m
           {chips.length > 0 && <span className="rounded-full bg-primary px-1.5 text-[11px] text-primary-foreground">{chips.length}</span>}
         </button>
         <div className="flex shrink-0 rounded-2xl border border-black/5 bg-white/80 p-1" role="group" aria-label="View">
-          {([["list", List, "List"], ["map", MapIcon, "Map"]] as const).map(([k, Icon, label]) => (
-            <button key={k} onClick={() => setMode(k)} aria-pressed={mode === k} aria-label={label} className={cn("rounded-xl p-2", mode === k ? "bg-primary text-primary-foreground" : "text-foreground/60 hover:text-foreground")}>
+          {([["list", List, "List"], ["subway", Route, "Routes"], ["campus", MapIcon, "Map"]] as const).map(([k, Icon, label]) => (
+            <button key={k} onClick={() => setMode(k)} aria-pressed={mode === k} aria-label={label} title={label} className={cn("inline-flex items-center gap-1.5 rounded-xl px-2.5 py-2 text-sm font-semibold", mode === k ? "bg-primary text-primary-foreground" : "text-foreground/60 hover:text-foreground")}>
               <Icon className="h-4 w-4" />
+              <span className="hidden md:inline">{label}</span>
             </button>
           ))}
         </div>
@@ -133,8 +138,16 @@ export function DiscoverView({ filters: f, setFilters, need, setNeed, profile, m
         </div>
       )}
 
-      {mode === "map" ? (
-        <MapPanel onOpen={card.onOpen} setMode={setMode} />
+      {mode === "subway" ? (
+        <RoutesPanel onOpen={card.onOpen} route={route} />
+      ) : mode === "campus" ? (
+        <div className="space-y-3">
+          <p className="text-sm text-muted-foreground">Where each program lives on the University Park and Health Sciences campuses. Tap a building to see what is there.</p>
+          <CampusMap programs={listed} highlight={highlight} onOpen={card.onOpen} />
+          <button onClick={() => setMode("bubbles")} className="mx-auto flex items-center gap-1.5 rounded-full border border-black/5 bg-white/80 px-4 py-2 text-sm font-semibold hover:bg-white">
+            See every program as bubbles, by school
+          </button>
+        </div>
       ) : (
         <>
           <div className="flex items-baseline justify-between text-sm">
@@ -143,11 +156,7 @@ export function DiscoverView({ filters: f, setFilters, need, setNeed, profile, m
             </span>
           </div>
           {items.length ? (
-            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-              {shown.map((p, i) => (
-                <ProgramCard key={p.id} index={i} program={p} onOpen={card.onOpen} saved={card.isSaved(p.id)} onToggleSave={card.onToggleSave} />
-              ))}
-            </div>
+            <ProgramList items={shown} {...card} />
           ) : (
             <div className="rounded-3xl border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
               Nothing matches. <button onClick={() => (setFilters(CLEAR_ALL), setDraft(""), setNeed(null))} className="font-semibold text-primary hover:underline">Start over</button>
@@ -255,15 +264,77 @@ function CourseGroups({ onOpen }: { onOpen: (id: string) => void }) {
   )
 }
 
-/** Desktop gets the subway map; phones get each line as a short vertical list. */
-function MapPanel({ onOpen, setMode }: { onOpen: (id: string) => void; setMode: (m: "list" | "map" | "bubbles" | "campus") => void }) {
+/** A table, not cards: one row per program so the whole catalog scans like a database. */
+function ProgramList({ items, onOpen, isSaved, onToggleSave }: CardProps & { items: Program[] }) {
+  const who = (p: Program) => {
+    if (!p.audience.length) return "Check"
+    const names = p.audience.map(a => AUDIENCE_LABELS[a])
+    return names.length > 2 ? `${names.slice(0, 2).join(", ")} +${names.length - 2}` : names.join(", ")
+  }
+  return (
+    <div className="overflow-hidden rounded-2xl border border-black/5 bg-white/80">
+      <table className="w-full text-left text-sm">
+        <thead className="hidden border-b border-black/5 text-xs uppercase tracking-wide text-muted-foreground sm:table-header-group">
+          <tr>
+            <th className="px-4 py-2.5 font-semibold">Program</th>
+            <th className="px-3 py-2.5 font-semibold">School</th>
+            <th className="hidden px-3 py-2.5 font-semibold lg:table-cell">Type</th>
+            <th className="hidden px-3 py-2.5 font-semibold md:table-cell">For</th>
+            <th className="px-3 py-2.5 font-semibold">When</th>
+            <th className="w-10" />
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-black/5">
+          {items.map(p => (
+            <tr key={p.id} onClick={() => onOpen(p.id)} className="cursor-pointer transition hover:bg-black/[.025]">
+              <td className="px-4 py-2.5">
+                <div className="font-semibold text-foreground">{p.name}</div>
+                <div className="line-clamp-1 text-xs text-muted-foreground">{p.description}</div>
+                <div className="mt-1 flex flex-wrap gap-x-2 text-[11px] text-muted-foreground sm:hidden">
+                  <span>{GROUPS[p.group].short}</span>·<span>{keyFact(p)}</span>
+                </div>
+              </td>
+              <td className="hidden whitespace-nowrap px-3 py-2.5 sm:table-cell">
+                <span className="inline-flex items-center gap-1.5">
+                  <span className="h-2 w-2 rounded-full" style={{ backgroundColor: GROUPS[p.group].color }} />
+                  {GROUPS[p.group].short}
+                </span>
+              </td>
+              <td className="hidden px-3 py-2.5 text-muted-foreground lg:table-cell">{p.category}</td>
+              <td className="hidden whitespace-nowrap px-3 py-2.5 text-muted-foreground md:table-cell">{who(p)}</td>
+              <td className="hidden whitespace-nowrap px-3 py-2.5 sm:table-cell">{keyFact(p)}</td>
+              <td className="px-2 py-2.5 text-right">
+                <button
+                  onClick={e => (e.stopPropagation(), onToggleSave(p.id))}
+                  aria-label={isSaved(p.id) ? `Unsave ${p.name}` : `Save ${p.name}`}
+                  className="rounded-lg p-2 text-muted-foreground hover:bg-black/[.05] hover:text-primary"
+                >
+                  {isSaved(p.id) ? <BookmarkCheck className="h-4 w-4 text-primary" /> : <Bookmark className="h-4 w-4" />}
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+/** Routes: the subway map of founder goals. Desktop gets the map; phones get each line as a short list. */
+function RoutesPanel({ onOpen, route }: { onOpen: (id: string) => void; route: string | null }) {
+  if (route) return <SubwayView onOpen={onOpen} initial={route} />
   return (
     <div className="space-y-3">
+      <div className="space-y-1">
+        <h2 className="text-lg font-bold text-foreground">Pick a goal, then ride the line</h2>
+        <p className="text-sm text-muted-foreground">
+          Each line is something founders want (money, a team, a product, a spinout), with stops in the order most students take them, from first step to biggest step. A stop on two lines helps with both.
+        </p>
+      </div>
       <div className="hidden sm:block">
         <SubwayMap onOpen={onOpen} />
       </div>
       <div className="space-y-2 sm:hidden">
-        <p className="text-sm text-muted-foreground">Each line is a founder goal, from first step to biggest step.</p>
         {LINES.map(l => (
           <details key={l.key} className="group rounded-2xl border border-black/5 bg-white/80">
             <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-[15px] font-semibold" style={{ color: l.color }}>
@@ -287,10 +358,6 @@ function MapPanel({ onOpen, setMode }: { onOpen: (id: string) => void; setMode: 
           </details>
         ))}
       </div>
-      <p className="text-xs text-muted-foreground">
-        Other views: <button onClick={() => setMode("bubbles")} className="font-semibold text-primary hover:underline">Bubbles</button> ·{" "}
-        <button onClick={() => setMode("campus")} className="font-semibold text-primary hover:underline">Campus map</button>
-      </p>
     </div>
   )
 }

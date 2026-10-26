@@ -15,12 +15,25 @@ const DAY = 86_400_000
 
 /** Each listed program once, at its next cycle, plus every live event. */
 export function upcoming(events: LiveEvent[], now = new Date()): Upcoming[] {
-  const deadlines: Upcoming[] = listed.filter(p => p.months.length).map(p => nextDeadline(p, now))
+  const deadlines: Upcoming[] = listed.filter(onCalendar).map(p => nextDeadline(p, now))
   const live: Upcoming[] = events
     .map(e => ({ kind: "event" as const, key: `e-${e.id}`, title: e.title, start: new Date(e.start), end: e.end ? new Date(e.end) : null, host: e.host, url: e.url, programId: e.programIds[0] ?? null }))
     .filter(e => e.start.getTime() >= now.getTime() - 2 * 3600_000)
   return [...live, ...deadlines]
 }
+
+const RECURRING = new Set(["weekly", "monthly", "semester", "ongoing", "rolling"])
+
+/** Only things with a real window to act on: no courses or degrees, no mixers that repeat every semester. */
+export function onCalendar(p: Program): boolean {
+  if (!p.months.length) return false
+  if (p.category === "Courses & Degrees") return false
+  if (p.category === "Events & Speakers" && RECURRING.has(p.cadence)) return false
+  return true
+}
+
+/** Clubs recruit rather than take applications, so their rows say so. */
+export const deadlineLabel = (p: Program) => (p.category === "Student Organizations" ? "Recruiting" : "Deadline")
 
 /** A program's next cycle as a month-only deadline. */
 export function nextDeadline(p: Program, now = new Date()): Extract<Upcoming, { kind: "deadline" }> {

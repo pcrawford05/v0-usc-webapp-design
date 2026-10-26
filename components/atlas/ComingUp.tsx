@@ -4,7 +4,7 @@ import { Bookmark, ChevronDown, ExternalLink, X } from "lucide-react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { useEffect, useMemo, useState } from "react"
 
-import { bucket, calEntry, isSavedItem, matches, upcoming, type CalFilter, type Upcoming } from "@/lib/calendar"
+import { bucket, calEntry, deadlineLabel, isSavedItem, matches, upcoming, type CalFilter, type Upcoming } from "@/lib/calendar"
 import { loadEngageEvents, type LiveEvent } from "@/lib/engage-client"
 import { GROUPS, MONTHS } from "@/lib/programs"
 import { cn } from "@/lib/utils"
@@ -172,7 +172,7 @@ function Row({ u, saved, onOpen }: { u: Upcoming; saved: boolean; onOpen: (id: s
       <DateBlock top={String(u.year)} big={MONTHS[u.month - 1]} bottom="usually" fuzzy />
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-1.5">
-          <Kind />
+          <Kind label={deadlineLabel(p)} />
           <span className="inline-flex items-center gap-1 text-[11px] text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: GROUPS[p.group].color }} />
             {GROUPS[p.group].short}
@@ -197,10 +197,10 @@ function DateBlock({ top, big, bottom, fuzzy }: { top: string; big: string; bott
   )
 }
 
-function Kind({ event }: { event?: boolean }) {
+function Kind({ event, label }: { event?: boolean; label?: string }) {
   return (
-    <span className={cn("rounded-md px-1.5 py-0.5 text-[11px] font-semibold", event ? "bg-[#2563A8]/10 text-[#2563A8]" : "bg-[#1B7F5C]/10 text-[#1B7F5C]")}>
-      {event ? "Event" : "Deadline"}
+    <span className={cn("rounded-md px-1.5 py-0.5 text-[11px] font-semibold", event ? "bg-[#2563A8]/10 text-[#2563A8]" : label === "Recruiting" ? "bg-[#A16207]/10 text-[#A16207]" : "bg-[#1B7F5C]/10 text-[#1B7F5C]")}>
+      {event ? "Event" : label}
     </span>
   )
 }

@@ -7,7 +7,7 @@ import { courses, listed } from "@/lib/catalog"
 import { applyFilters, CLEAR_ALL, isOpenNow, monthsAway, type Filters } from "@/lib/filters"
 import { LINES, onMap } from "@/lib/network"
 import { fitScore, type Profile } from "@/lib/profile"
-import { AUDIENCE_LABELS, CATEGORY_COLORS, GROUPS, MONTHS, programs, GROUP_KEYS, STAGE_LABELS, programById, type Audience, type Program, type Stage } from "@/lib/programs"
+import { AUDIENCE_LABELS, CATEGORIES, CATEGORY_COLORS, GROUPS, MONTHS, programs, GROUP_KEYS, STAGE_LABELS, programById, type Audience, type Program, type Stage } from "@/lib/programs"
 import { rankPrograms } from "@/lib/search"
 import { cn } from "@/lib/utils"
 import eventsData from "@/data/events.json"
@@ -20,7 +20,6 @@ import { keyFact } from "./shared"
 import { SubwayMap, SubwayView } from "./Subway"
 
 type CardProps = { onOpen: (id: string) => void; isSaved: (id: string) => boolean; onToggleSave: (id: string) => void }
-const FIRST = 25
 type Mode = "list" | "subway" | "campus" | "bubbles"
 
 /** Featured order: flagship (on the map) first, then verified, then soonest, so the short list leads with the best bets. */
@@ -38,14 +37,12 @@ export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, r
   highlight: Set<string> | null
 }) {
   const [draft, setDraft] = useState(f.q)
-  const [all, setAll] = useState(false)
   const [sheet, setSheet] = useState(false)
   useEffect(() => {
     if (draft === f.q) return
     const t = setTimeout(() => setFilters({ q: draft }), 200)
     return () => clearTimeout(t)
   }, [draft, f.q, setFilters])
-  useEffect(() => setAll(false), [f])
 
   // Searching looks through everything listed plus folded courses; browsing shows listed programs only.
   const pool = useMemo(() => {
@@ -56,7 +53,6 @@ export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, r
     if (f.q.trim()) return out
     return [...out].sort((a, b) => (profile ? fitScore(b, profile) - fitScore(a, profile) : 0) || featured(a, b))
   }, [pool, f, profile])
-  const shown = all ? items : items.slice(0, FIRST)
   const showCourses = !f.q.trim()
 
   const count = (skip: Parameters<typeof applyFilters>[2], test: (p: Program) => boolean) => applyFilters(pool, f, skip).filter(test).length
@@ -166,16 +162,11 @@ export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, r
             <LastChecked />
           </div>
           {items.length ? (
-            <ProgramList items={shown} {...card} />
+            <ProgramList items={items} {...card} />
           ) : (
             <div className="rounded-3xl border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
               Nothing matches. <button onClick={() => (setFilters(CLEAR_ALL), setDraft(""))} className="font-semibold text-primary hover:underline">Start over</button>
             </div>
-          )}
-          {items.length > FIRST && (
-            <button onClick={() => setAll(!all)} className="mx-auto flex items-center gap-1.5 rounded-full border border-black/5 bg-white/80 px-4 py-2 text-sm font-semibold hover:bg-white">
-              {all ? "Show fewer" : `Show all ${items.length}`} <ChevronDown className={cn("h-4 w-4 transition", all && "rotate-180")} />
-            </button>
           )}
           {showCourses && <CourseGroups onOpen={card.onOpen} />}
         </>
@@ -300,83 +291,89 @@ function CourseGroups({ onOpen }: { onOpen: (id: string) => void }) {
   )
 }
 
-/** A database view: one row per program, property columns with tags, sticky header. Columns drop away on phones. */
+/** A spreadsheet: one tight row per program, grouped under a header row per type. Groups fold. */
 function ProgramList({ items, onOpen, isSaved, onToggleSave }: CardProps & { items: Program[] }) {
+  const [folded, setFolded] = useState<Set<string>>(new Set())
   const who = (p: Program) => {
     if (!p.audience.length) return null
     const names = p.audience.map(a => AUDIENCE_LABELS[a])
     return names.length > 2 ? `${names.slice(0, 2).join(", ")} +${names.length - 2}` : names.join(", ")
   }
-  const th = "border-r border-black/[.06] px-3 py-2 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground last:border-r-0"
-  const td = "border-r border-black/[.06] px-3 py-2 align-middle last:border-r-0"
+  // Groups follow the catalog's type order; within a group rows keep the incoming order (best fit or best match).
+  const groups = CATEGORIES.map(c => ({ c, rows: items.filter(p => p.category === c) })).filter(g => g.rows.length)
+  const toggle = (c: string) => setFolded(prev => {
+    const next = new Set(prev)
+    next.has(c) ? next.delete(c) : next.add(c)
+    return next
+  })
+  const cell = "border-r border-black/[.07] px-2.5 last:border-r-0"
   return (
-    <div className="overflow-clip rounded-xl border border-black/[.08] bg-white shadow-[0_1px_2px_rgba(0,0,0,.04)]">
-      <table className="w-full table-fixed text-left text-[13px]">
+    <div className="overflow-clip rounded-lg border border-black/[.1] bg-white text-[13px] shadow-[0_1px_2px_rgba(0,0,0,.04)]">
+      <table className="w-full table-fixed border-collapse text-left">
         <colgroup>
-          <col />
-          <col className="hidden w-[118px] sm:table-column" />
-          <col className="hidden w-[190px] lg:table-column" />
-          <col className="hidden w-[150px] md:table-column" />
-          <col className="hidden w-[132px] sm:table-column" />
-          <col className="w-11" />
+          <col className="w-[60%] sm:w-[260px]" />
+          <col className="hidden lg:table-column" />
+          <col className="hidden w-[92px] sm:table-column" />
+          <col className="hidden w-[140px] md:table-column" />
+          <col className="w-[40%] sm:w-[150px]" />
+          <col className="w-9" />
         </colgroup>
-        <thead className="sticky top-[68px] z-10 hidden bg-[#fbfaf9] sm:table-header-group">
-          <tr className="border-b border-black/[.08]">
-            <th className={th}>Name</th>
-            <th className={cn(th, "hidden sm:table-cell")}>School</th>
-            <th className={cn(th, "hidden lg:table-cell")}>Type</th>
-            <th className={cn(th, "hidden md:table-cell")}>For</th>
-            <th className={cn(th, "hidden sm:table-cell")}>Next</th>
-            <th className={th}><span className="sr-only">Save</span></th>
+        <thead className="sticky top-[60px] z-10 bg-[#f3f1ef] sm:top-[68px]">
+          <tr className="h-8 border-b border-black/[.1] text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+            <th className={cell}>Program</th>
+            <th className={cn(cell, "hidden lg:table-cell")}>What it is</th>
+            <th className={cn(cell, "hidden sm:table-cell")}>School</th>
+            <th className={cn(cell, "hidden md:table-cell")}>For</th>
+            <th className={cell}>Next</th>
+            <th><span className="sr-only">Save</span></th>
           </tr>
         </thead>
-        <tbody>
-          {items.map(p => {
-            const fact = keyFact(p)
-            const soon = fact === "Open this month"
-            return (
-              <tr key={p.id} onClick={() => onOpen(p.id)} className="group cursor-pointer border-b border-black/[.06] last:border-b-0 hover:bg-[#f7f5f3]">
-                <td className={td}>
-                  <div className="truncate font-semibold text-foreground group-hover:text-primary">{p.name}</div>
-                  <div className="truncate text-xs text-muted-foreground">{p.description}</div>
-                  <div className="mt-1.5 flex flex-wrap items-center gap-1 sm:hidden">
-                    <Tag color={GROUPS[p.group].color}>{GROUPS[p.group].short}</Tag>
-                    <span className={cn("text-[11px]", soon ? "font-semibold text-primary" : "text-muted-foreground")}>{fact}</span>
-                  </div>
-                </td>
-                <td className={cn(td, "hidden sm:table-cell")}><Tag color={GROUPS[p.group].color}>{GROUPS[p.group].short}</Tag></td>
-                <td className={cn(td, "hidden lg:table-cell")}><Tag color={CATEGORY_COLORS[p.category]} subtle>{p.category}</Tag></td>
-                <td className={cn(td, "hidden truncate text-muted-foreground md:table-cell")}>{who(p) ?? <span className="text-muted-foreground/60">Check</span>}</td>
-                <td className={cn(td, "hidden sm:table-cell")}>
-                  <span className={cn("inline-flex items-center gap-1.5 whitespace-nowrap", soon ? "font-semibold text-primary" : "text-foreground/80")}>
-                    {soon && <span className="h-1.5 w-1.5 rounded-full bg-primary" />}
-                    {fact}
+        {groups.map(({ c, rows }) => {
+          const closed = folded.has(c)
+          return (
+            <tbody key={c}>
+              <tr className="h-8 cursor-pointer border-b border-black/[.1] bg-[#faf9f8] hover:bg-[#f5f3f1]" onClick={() => toggle(c)}>
+                <td colSpan={6} className="px-2.5">
+                  <span className="flex items-center gap-2 font-semibold text-foreground">
+                    <ChevronDown className={cn("h-3.5 w-3.5 text-muted-foreground transition", closed && "-rotate-90")} />
+                    <span className="h-2.5 w-2.5 rounded-sm" style={{ backgroundColor: CATEGORY_COLORS[c] }} />
+                    {c}
+                    <span className="font-normal text-muted-foreground">{rows.length}</span>
                   </span>
                 </td>
-                <td className="px-1 py-2 text-right align-middle">
-                  <button
-                    onClick={e => (e.stopPropagation(), onToggleSave(p.id))}
-                    aria-label={isSaved(p.id) ? `Unsave ${p.name}` : `Save ${p.name}`}
-                    className="rounded-lg p-2.5 text-muted-foreground hover:bg-black/[.05] hover:text-primary"
-                  >
-                    {isSaved(p.id) ? <BookmarkCheck className="h-4 w-4 text-primary" /> : <Bookmark className="h-4 w-4" />}
-                  </button>
-                </td>
               </tr>
-            )
-          })}
-        </tbody>
+              {!closed && rows.map(p => {
+                const fact = keyFact(p)
+                const soon = fact === "Open this month"
+                return (
+                  <tr key={p.id} onClick={() => onOpen(p.id)} className="group h-8 cursor-pointer border-b border-black/[.06] hover:bg-[#fff8e6]">
+                    <td className={cn(cell, "truncate font-medium text-foreground group-hover:text-primary")} title={p.name}>{p.name}</td>
+                    <td className={cn(cell, "hidden truncate text-muted-foreground lg:table-cell")} title={p.description ?? undefined}>{p.description}</td>
+                    <td className={cn(cell, "hidden truncate sm:table-cell")}>
+                      <span className="inline-flex items-center gap-1.5">
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: GROUPS[p.group].color }} />
+                        {GROUPS[p.group].short}
+                      </span>
+                    </td>
+                    <td className={cn(cell, "hidden truncate text-muted-foreground md:table-cell")}>{who(p) ?? <span className="text-muted-foreground/60">Check</span>}</td>
+                    <td className={cn(cell, "truncate", soon ? "font-semibold text-primary" : "text-foreground/80")}>{fact}</td>
+                    <td className="text-center">
+                      <button
+                        onClick={e => (e.stopPropagation(), onToggleSave(p.id))}
+                        aria-label={isSaved(p.id) ? `Unsave ${p.name}` : `Save ${p.name}`}
+                        className="rounded p-1.5 text-muted-foreground hover:bg-black/[.05] hover:text-primary"
+                      >
+                        {isSaved(p.id) ? <BookmarkCheck className="h-3.5 w-3.5 text-primary" /> : <Bookmark className="h-3.5 w-3.5" />}
+                      </button>
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          )
+        })}
       </table>
     </div>
-  )
-}
-
-/** A Notion-style property tag. */
-function Tag({ color, subtle, children }: { color: string; subtle?: boolean; children: React.ReactNode }) {
-  return (
-    <span className="inline-flex max-w-full items-center truncate rounded-md px-1.5 py-0.5 text-[12px] font-medium" style={{ backgroundColor: `${color}${subtle ? "12" : "1a"}`, color }}>
-      {children}
-    </span>
   )
 }
 

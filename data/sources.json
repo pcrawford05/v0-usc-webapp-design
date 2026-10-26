@@ -5377,6 +5377,26 @@
       ],
       "searchQueries": [],
       "notes": "Page loads (title YC Startup Library) but content not readable, so no fields verified."
+    },
+    "usc-venture-capital": {
+      "name": "USC Venture Capital (USCVC)",
+      "status": "new",
+      "lastResearched": "2026-10-26",
+      "sources": [
+        {
+          "url": "https://www.linkedin.com/company/usc-venture-capital/about/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "About: \"university venture fund housed in the Lloyd Greif Center... powered by BAEP 565: Venture Lab\"; \"backing early-stage, USC-affiliated startups\"; founded 2026; welcomes inquiries year-round",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://uscventurecapital.com",
+          "kind": "official",
+          "holds": "Fund website (JavaScript only, no readable text on Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
+        }
+      ]
     }
   },
   "listings": {

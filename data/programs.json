@@ -2366,7 +2366,7 @@
     ],
     "group": "marshall",
     "category": "Courses & Degrees",
-    "description": "Greif Center graduate course (3 units) where students work with startups and venture capitalists on sourcing deals, diligence, investment memos and portfolio support. Hosts a guest speaker from the venture world every Thursday night.",
+    "description": "Greif Center graduate course (3 units) where students work with startups and venture capitalists on sourcing deals, diligence, investment memos and portfolio support. Powers USC Venture Capital (USCVC), the university's student-run fund, and hosts a guest speaker from the venture world every Thursday night.",
     "timing": "Offered Fall 2026, Thursdays 6:30-9:30 pm.",
     "cadence": "semester",
     "months": [
@@ -2384,6 +2384,36 @@
     ],
     "confidence": "medium",
     "notes": "A course, not a student club (confirmed by Founder Compass team, Oct 2026). Fall 2026 instructors: Jack Crawford and Jai Choi. Weekly Thursday speakers confirmed by Peyton (Oct 26, 2026).",
+    "lastVerified": "2026-10-26"
+  },
+  {
+    "id": "usc-venture-capital",
+    "name": "USC Venture Capital (USCVC)",
+    "aliases": [
+      "USCVC",
+      "USC VC",
+      "USC Venture Capital Fund"
+    ],
+    "group": "marshall",
+    "category": "Funding & Grants",
+    "description": "USC's university venture fund, housed in the Greif Center and run through BAEP 565 Venture Lab, backing early-stage USC-affiliated startups while students learn to source, evaluate and support investments.",
+    "timing": "Founded 2026; welcomes inquiries from founders, students and partners year-round.",
+    "cadence": "rolling",
+    "months": [],
+    "eligibility": "Early-stage, USC-affiliated startups. Students get involved through BAEP 565 Venture Lab.",
+    "audience": [],
+    "stage": [
+      "prototype",
+      "launched"
+    ],
+    "funding": "Early-stage capital (check size not published)",
+    "link": "https://uscventurecapital.com",
+    "sources": [
+      "https://www.linkedin.com/company/usc-venture-capital/about/",
+      "https://uscventurecapital.com"
+    ],
+    "confidence": "medium",
+    "notes": "Replaces the USC Marshall Venture Fund (no longer active, per Peyton). Facts from the fund's LinkedIn About page; its website loads no readable text yet. Check size and student audience not published.",
     "lastVerified": "2026-10-26"
   },
   {

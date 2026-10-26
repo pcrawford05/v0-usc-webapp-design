@@ -1,11 +1,11 @@
 "use client"
 
-import { Bookmark, BookmarkCheck, CalendarDays, ChevronDown, ExternalLink, GraduationCap, ShieldCheck, Users, Wallet } from "lucide-react"
+import { Bookmark, BookmarkCheck, CalendarDays, ChevronDown, ExternalLink, GraduationCap, Instagram, Linkedin, UserRound, ShieldCheck, Users, Wallet } from "lucide-react"
 import { useCallback, useEffect, useState } from "react"
 
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { advisorOnly } from "@/lib/catalog"
-import { AUDIENCE_LABELS, GROUPS, MONTHS, STAGE_LABELS, type Program } from "@/lib/programs"
+import { AUDIENCE_LABELS, currentContact, GROUPS, MONTHS, STAGE_LABELS, type Program } from "@/lib/programs"
 import { calEntry, nextDeadline } from "@/lib/calendar"
 import { programLink } from "@/lib/links"
 import { cn } from "@/lib/utils"
@@ -168,6 +168,7 @@ export function ProgramDrawer({
                   {program.audience.length ? program.audience.map(a => AUDIENCE_LABELS[a]).join(", ") : "Eligibility: check with the program"}
                 </span>
               </div>
+              <KeyContact program={program} />
               <div className="sticky bottom-0 -mx-6 flex flex-nowrap gap-2 border-t border-black/5 bg-white px-6 py-3 sm:static sm:mx-0 sm:flex-wrap sm:border-0 sm:bg-transparent sm:px-0 sm:py-0">
                 {link && (
                   <a
@@ -192,6 +193,8 @@ export function ProgramDrawer({
                 )}
                 <ShareButton url={`${typeof window !== "undefined" ? window.location.origin : ""}/?p=${program.id}`} title={program.name} label="Share" className="py-2" compactLabel />
               </div>
+
+              <Socials program={program} />
 
               <div className="divide-y divide-border rounded-2xl border border-border bg-white/60">
                 <Section icon={CalendarDays} title="When" open>
@@ -238,5 +241,54 @@ export function ProgramDrawer({
         )}
       </SheetContent>
     </Sheet>
+  )
+}
+
+/** The program's own Instagram and LinkedIn first, then its host unit's pages, labeled as such. */
+function Socials({ program }: { program: Program }) {
+  const links = program.socials ?? []
+  if (!links.length) return null
+  return (
+    <div className="flex flex-wrap items-center gap-1.5">
+      <span className="mr-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Follow</span>
+      {links.map(s => {
+        const Icon = s.platform === "instagram" ? Instagram : Linkedin
+        const label = s.host ? `${s.host} on ${s.platform === "instagram" ? "Instagram" : "LinkedIn"}` : s.platform === "instagram" ? `@${s.handle ?? "Instagram"}` : "LinkedIn"
+        return (
+          <a
+            key={s.url}
+            href={s.url}
+            target="_blank"
+            rel="noreferrer"
+            className={cn(
+              "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition hover:-translate-y-px",
+              s.platform === "instagram" ? "bg-gradient-to-br from-[#f58529] via-[#dd2a7b] to-[#8134af] text-white" : "bg-[#0A66C2] text-white",
+              s.host && "opacity-80",
+            )}
+          >
+            <Icon className="h-3.5 w-3.5" /> {label}
+          </a>
+        )
+      })}
+    </div>
+  )
+}
+
+/** Name and title only; people can look up the email or LinkedIn themselves. Corrections go through "Is this right?". */
+function KeyContact({ program }: { program: Program }) {
+  const c = currentContact(program)
+  if (!c) return null
+  const checked = new Date(`${c.checked}T12:00:00`).toLocaleDateString("en-US", { month: "short", year: "numeric" })
+  return (
+    <p className="flex items-start gap-2 text-sm">
+      <UserRound className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+      <span>
+        <span className="font-semibold text-foreground">{c.name}</span>
+        <span className="text-muted-foreground">, {c.title}{c.term ? ` (${c.term})` : ""}</span>
+        <a href={c.source} target="_blank" rel="noreferrer" className="ml-1.5 text-xs text-muted-foreground underline-offset-2 hover:underline" title="Where this name is published">
+          source · {checked}
+        </a>
+      </span>
+    </p>
   )
 }

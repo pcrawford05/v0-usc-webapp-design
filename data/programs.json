@@ -155,7 +155,14 @@
     ],
     "confidence": "medium",
     "notes": "Exact 'speed dating' format and recurring schedule not confirmed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "csci-532-innovation-for-defense-applications",
@@ -251,7 +258,14 @@
     "link": "https://viterbiinnovation.usc.edu/",
     "sources": [],
     "confidence": "medium",
-    "notes": "No source found; existence, dates and prizes unverified. Do not publish without confirmation from TIE Hub. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    "notes": "No source found; existence, dates and prizes unverified. Do not publish without confirmation from TIE Hub. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "engineering-honors-program-ehp",
@@ -385,7 +399,14 @@
     ],
     "confidence": "medium",
     "notes": "No public source found for this specific session; listed from assignment only. Verify with TIE Hub. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "founder-happy-hours-and-mixers",
@@ -421,7 +442,14 @@
     ],
     "confidence": "medium",
     "notes": "'Happy hour' branding not confirmed in sources; events archive lists 'Mixers + Pitches' and a 'Start-up Curious?' mixer.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "fundraising-bootcamp",
@@ -443,7 +471,14 @@
     ],
     "confidence": "medium",
     "notes": "No source found confirming a TIE Hub 'Fundraising Bootcamp'. Description is a placeholder; verify with TIE Hub before publishing. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "future-of-social-media-challenge",
@@ -462,7 +497,14 @@
     "link": "https://viterbiinnovation.usc.edu/",
     "sources": [],
     "confidence": "medium",
-    "notes": "No source found; existence, dates and prizes unverified. Do not publish without confirmation from TIE Hub. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    "notes": "No source found; existence, dates and prizes unverified. Do not publish without confirmation from TIE Hub. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "global-student-startup-competition",
@@ -559,7 +601,14 @@
     ],
     "confidence": "medium",
     "notes": "No USC page found for this session. Students should confirm visa questions with the USC Office of International Services and an attorney. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "intellectual-property-training",
@@ -592,7 +641,14 @@
     ],
     "confidence": "medium",
     "notes": "No public page found confirming format or dates. For licensing USC-owned IP, the USC Stevens Center for Innovation is the relevant office. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "ise-585-strategic-management-of-technology-and-innovation",
@@ -663,7 +719,27 @@
     ],
     "confidence": "high",
     "notes": "Prize raised from $50K to $100K for 2024-25. 2026 winner: Bilisense (jaundice testing). Exact team-composition rules not verified.",
-    "lastVerified": "2026-10-26"
+    "lastVerified": "2026-10-26",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "min-family-challenge",
@@ -704,7 +780,27 @@
     ],
     "confidence": "high",
     "notes": "Official MFC page appeared out of date in search snippets (referenced 2025-26 cycle). Some past cycles had October deadlines.",
-    "lastVerified": "2026-10-26"
+    "lastVerified": "2026-10-26",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "national-i-corps-teams-grant",
@@ -740,7 +836,14 @@
     ],
     "confidence": "medium",
     "notes": "Earlier Notion note said applicants need NSF funding; NSF has broadened eligibility in recent years, verify current rules.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "nsf-i-corps-hub-west-region",
@@ -780,7 +883,14 @@
     ],
     "confidence": "medium",
     "notes": "Partners: UCLA, CU Boulder plus affiliates (Caltech, Mines, UNM, Utah, UCR). Session counts and interview requirements vary by source (10-15 interviews). Cohort dates not found.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "origin-weekend",
@@ -816,7 +926,27 @@
     ],
     "confidence": "medium",
     "notes": "Dates and prize from search snippets of TIE Hub site, engage.usc.edu RSVP listing and CS newsletter; pages not directly fetchable. Spring 2026 edition described as a 'Google X startup launch sprint'. Exact eligibility not confirmed.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "ronald-and-valerie-sugar-distinguished-speaker-series-in-adv",
@@ -885,7 +1015,14 @@
     ],
     "confidence": "medium",
     "notes": "Advisory support, not a grant itself. Separately, USC Office of Research and Innovation has run an SBIR/STTR Planning Award for faculty partnered with small businesses.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "ship-fund",
@@ -919,7 +1056,20 @@
     ],
     "confidence": "medium",
     "notes": "Details from a CS department newsletter repost of a TIE Hub announcement (search snippet). Unclear whether it recurs each semester.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ]
   },
   {
     "id": "startup-stories",
@@ -953,7 +1103,14 @@
     ],
     "confidence": "medium",
     "notes": "Cadence 'monthly' is from internal notes; public listings show irregular sessions. Check events page for current schedule.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "summer-smasher",
@@ -989,7 +1146,27 @@
     ],
     "confidence": "medium",
     "notes": "Most recent confirmed signal is a 2025 interest form; 2024 edition hybrid with applications closing May 23. No 2026 details found.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "summer-start-fellows",
@@ -1019,7 +1196,20 @@
     ],
     "confidence": "medium",
     "notes": "Startup-internship stipend only from Notion; not confirmed in sources. The 'Fellows' name and TIE Hub involvement unverified. Category is a best guess.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscviterbi/",
+        "host": "Viterbi",
+        "handle": "uscviterbi"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usc-viterbi-school-of-engineering/",
+        "host": "Viterbi"
+      }
+    ]
   },
   {
     "id": "technology-development-and-commercialization-engr-494-former",
@@ -1122,7 +1312,20 @@
     ],
     "confidence": "medium",
     "notes": "Inaugural cohort of 5 fellows (2025). Program page says applications open at a future date. Cadence assumed annual; not confirmed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ]
   },
   {
     "id": "tie-hub-1-1-mentorship",
@@ -1158,7 +1361,27 @@
     ],
     "confidence": "medium",
     "notes": "Sources describe 'office hours to provide personalized mentoring' and bookable sessions with founders and experts; no distinct mentorship program page or matching process found.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "tie-hub-coworking",
@@ -1192,7 +1415,26 @@
     ],
     "confidence": "medium",
     "notes": "Homepage lists 'Co-Working' under its Build section but no details on location, hours or access were found. Not the same as the Viterbi Startup Garage (Marina del Rey incubator).",
-    "lastVerified": "2026-10-20"
+    "lastVerified": "2026-10-20",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "tie-hub-office-hours",
@@ -1231,7 +1473,27 @@
     ],
     "confidence": "medium",
     "notes": "Times come from older pages and internal notes; confirm current schedule. Deep tech host previously listed as Oscar Nazarrett (internal notes, unverified).",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "trojan-tank",
@@ -1262,7 +1524,27 @@
     ],
     "confidence": "low",
     "notes": "Prize pool from a recent TIE Hub page snippet. 2023 edition co-sponsored by Viterbi Student Government and Marshall EVMA. Current dates and organizer unverified.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "usc-games-summer-bridge-program",
@@ -1337,7 +1619,20 @@
     ],
     "confidence": "medium",
     "notes": "Inaugural in 2026. Live pitch winner (Pando Surgical) got $500.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ]
   },
   {
     "id": "venture-scout",
@@ -1356,7 +1651,27 @@
     "link": "https://viterbiinnovation.usc.edu/",
     "sources": [],
     "confidence": "medium",
-    "notes": "No source found; existence and details unverified. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    "notes": "No source found; existence and details unverified. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "venture-showcase-viterbi",
@@ -1408,7 +1723,27 @@
     ],
     "confidence": "medium",
     "notes": "Program page last updated Sept 2024; unclear if still running. No source found for a TIE Hub program named 'Genesis' or a ventureSPARK rename; the Genesis alias is unverified (search hits for Genesis at USC refer to the DOE Genesis Mission AI initiative).",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "venturewell-e-team-program",
@@ -1481,7 +1816,27 @@
     ],
     "confidence": "medium",
     "notes": "Expansion of the acronym not confirmed in sources; prize amount may have changed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscviterbi/",
+        "host": "Viterbi",
+        "handle": "uscviterbi"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usc-viterbi-school-of-engineering/",
+        "host": "Viterbi"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "viterbi-startup-garage",
@@ -1520,7 +1875,27 @@
     ],
     "confidence": "medium",
     "notes": "Founded 2013. Offerings per Notion: Founder Circle, Oceanside Chats, VC/Legal office hours, EIRs. Current cohort dates unknown.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "viterbi-student-innovation-institute-vsi2",
@@ -1558,7 +1933,27 @@
     ],
     "confidence": "medium",
     "notes": "Founded 2012. Official name is 'Viterbi Student Innovation Institute'. Page last updated 2021; may now be folded into the William W. Wang TIE Hub. Contact viterbi-innovation@usc.edu.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscviterbi/",
+        "host": "Viterbi",
+        "handle": "uscviterbi"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usc-viterbi-school-of-engineering/",
+        "host": "Viterbi"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "viterbi-venture-fund",
@@ -1592,7 +1987,27 @@
     ],
     "confidence": "medium",
     "notes": "Fund page last updated Aug 2021; contact listed as David Eastman. No board seat taken. Current activity unverified.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctiehub/",
+        "host": "TIE Hub",
+        "handle": "usctiehub"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "yc-application-office-hours",
@@ -1672,7 +2087,15 @@
     ],
     "confidence": "medium",
     "notes": "No 2025 or 2026 edition details found; eligibility from 2019 call. Co-sponsored historically with Annenberg.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscmarshall/",
+        "host": "Marshall",
+        "handle": "uscmarshall"
+      }
+    ]
   },
   {
     "id": "baep-entrepreneurship-courses",
@@ -1746,7 +2169,21 @@
     ],
     "confidence": "high",
     "notes": "Located in Bridge Hall 105. Newsletter signup: https://usc.us11.list-manage.com/subscribe?u=99eaca97639e52f3d62e5dc45&id=bbd018bbb1",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-brittingham-social-enterprise-lab/",
+        "host": "Brittingham Lab"
+      }
+    ],
+    "contact": {
+      "name": "Jessica Jackley",
+      "title": "Director",
+      "kind": "staff",
+      "source": "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "catalyst-microgrant-fund",
@@ -1875,7 +2312,20 @@
     ],
     "confidence": "medium",
     "notes": "Unit count and course list not verified. Separate Digital Entrepreneurship Minor exists (with Marshall).",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usc_entrepreneurship/",
+        "host": "Greif Center",
+        "handle": "usc_entrepreneurship"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+        "host": "Greif Center"
+      }
+    ]
   },
   {
     "id": "social-entrepreneurship-minor",
@@ -1985,7 +2435,20 @@
     ],
     "confidence": "medium",
     "notes": "Link from internal notes; not verified (site unreachable, search budget exhausted). Event listings also on engage.usc.edu/Entrepreneur/.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usc_entrepreneurship/",
+        "host": "Greif Center",
+        "handle": "usc_entrepreneurship"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+        "host": "Greif Center"
+      }
+    ]
   },
   {
     "id": "hult-prize-at-usc",
@@ -2022,7 +2485,20 @@
     ],
     "confidence": "medium",
     "notes": "2026-27 cycle not yet announced. USC final month (January) is inferred. First USC round held 2024-25.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usc_entrepreneurship/",
+        "host": "Greif Center",
+        "handle": "usc_entrepreneurship"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+        "host": "Greif Center"
+      }
+    ]
   },
   {
     "id": "innovation-challenge-greif",
@@ -2083,7 +2559,14 @@
     ],
     "confidence": "medium",
     "notes": "Most recent confirmed sessions are from 2022-23; current-year schedule not found.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-brittingham-social-enterprise-lab/",
+        "host": "Brittingham Lab"
+      }
+    ]
   },
   {
     "id": "leverage-point-fellowship",
@@ -2112,7 +2595,14 @@
     ],
     "confidence": "medium",
     "notes": "No source found under this name. Possibly related to BSEL Senior Fellows, Impact Scholars, or the MBA Society and Business Fellowship. Verify with BSEL. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-26"
+    "lastVerified": "2026-10-26",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-brittingham-social-enterprise-lab/",
+        "host": "Brittingham Lab"
+      }
+    ]
   },
   {
     "id": "marcia-israel-celebration-and-founder-showcase",
@@ -2225,7 +2715,27 @@
     ],
     "confidence": "medium",
     "notes": "Portfolio size reported as 160+, 250+ and 300+ in different sources. Rolling admission not explicitly confirmed.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usc_entrepreneurship/",
+        "host": "Greif Center",
+        "handle": "usc_entrepreneurship"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+        "host": "Greif Center"
+      }
+    ],
+    "contact": {
+      "name": "Paul Orlando",
+      "title": "Director, USC Incubator",
+      "kind": "staff",
+      "source": "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "mba-entrepreneurship-and-venture-management-concentration",
@@ -2289,7 +2799,20 @@
     ],
     "confidence": "high",
     "notes": "Deadlines from Fall 2024 catalog; confirm current cycle. Application fee $175.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usc_entrepreneurship/",
+        "host": "Greif Center",
+        "handle": "usc_entrepreneurship"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+        "host": "Greif Center"
+      }
+    ]
   },
   {
     "id": "ms-in-social-entrepreneurship",
@@ -2322,7 +2845,14 @@
     ],
     "confidence": "high",
     "notes": "Launched fall 2014. Unit count changed over time (26/30 in older sources).",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-brittingham-social-enterprise-lab/",
+        "host": "Brittingham Lab"
+      }
+    ]
   },
   {
     "id": "new-venture-seed-competition",
@@ -2366,7 +2896,27 @@
     ],
     "confidence": "high",
     "notes": "2026-27 deadline not yet published as of search; last confirmed deadline Feb 1, 2025. April finals month is inferred from typical cycle, not confirmed. Applications via nvsc.awardsplatform.com.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usc_entrepreneurship/",
+        "host": "Greif Center",
+        "handle": "usc_entrepreneurship"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+        "host": "Greif Center"
+      }
+    ],
+    "contact": {
+      "name": "Dan Wadhwani",
+      "title": "Director, Lloyd Greif Center",
+      "kind": "staff",
+      "source": "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "usc-marshall-venture-fund",
@@ -2402,7 +2952,14 @@
     "confidence": "medium",
     "notes": "Check size and cadence from 2018 launch coverage; latest known investment Dec 2024 (CB Insights). Usually co-invests.",
     "lastVerified": "2026-10-21",
-    "archived": "No longer active (Peyton, Oct 26, 2026)."
+    "archived": "No longer active (Peyton, Oct 26, 2026).",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+        "host": "Greif Center"
+      }
+    ]
   },
   {
     "id": "usc-venture-lab-usc-vc",
@@ -2432,7 +2989,20 @@
     ],
     "confidence": "medium",
     "notes": "A course, not a student club (confirmed by Founder Compass team, Oct 2026). Fall 2026 instructors: Jack Crawford and Jai Choi. Weekly Thursday speakers confirmed by Peyton (Oct 26, 2026).",
-    "lastVerified": "2026-10-26"
+    "lastVerified": "2026-10-26",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usc_entrepreneurship/",
+        "host": "Greif Center",
+        "handle": "usc_entrepreneurship"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+        "host": "Greif Center"
+      }
+    ]
   },
   {
     "id": "usc-venture-capital",
@@ -2462,7 +3032,20 @@
     ],
     "confidence": "medium",
     "notes": "Replaces the USC Marshall Venture Fund (no longer active, per Peyton). Facts from the fund's LinkedIn About page; its website loads no readable text yet. Check size and student audience not published.",
-    "lastVerified": "2026-10-26"
+    "lastVerified": "2026-10-26",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-venture-capital/"
+      }
+    ],
+    "contact": {
+      "name": "Dan Wadhwani",
+      "title": "Director, Lloyd Greif Center",
+      "kind": "staff",
+      "source": "https://uscventurecapital.com/about",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "vaneck-digital-assets-initiative",
@@ -2495,7 +3078,15 @@
     ],
     "confidence": "medium",
     "notes": "Category could also be Partners & Ecosystem. Not formally part of the Greif Center. A USC Builders Grant for students was announced at the 2026 conference; details unverified.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscmarshall/",
+        "host": "Marshall",
+        "handle": "uscmarshall"
+      }
+    ]
   },
   {
     "id": "vaneck-southern-california-blockchain-conference",
@@ -2533,7 +3124,15 @@
     ],
     "confidence": "high",
     "notes": "Registration site referenced as uscblockchainconf.com. Month has varied (Nov 2023, spring 2025/2026).",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscmarshall/",
+        "host": "Marshall",
+        "handle": "uscmarshall"
+      }
+    ]
   },
   {
     "id": "venture-capital-investment-competition-vcic",
@@ -2567,7 +3166,20 @@
     ],
     "confidence": "high",
     "notes": "This is a skills competition for aspiring investors, not funding for startups. 2026-27 application dates not yet confirmed.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usc_entrepreneurship/",
+        "host": "Greif Center",
+        "handle": "usc_entrepreneurship"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+        "host": "Greif Center"
+      }
+    ]
   },
   {
     "id": "weekly-founder-salon",
@@ -2642,7 +3254,20 @@
     ],
     "confidence": "high",
     "notes": "Taught by Chris Swain. Fall 2026 schedule not verified.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "b-s-in-arts-technology-and-the-business-of-innovation",
@@ -2675,7 +3300,20 @@
     ],
     "confidence": "medium",
     "notes": "First class of 25 enrolled fall 2014. Program page URL not verified; catalogue and admissions pages could not be fetched directly.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "b-s-in-business-of-innovation",
@@ -2707,7 +3345,20 @@
     ],
     "confidence": "medium",
     "notes": "Existence supported by a faculty bio describing a 'Business of Innovation program'. Joint status with Marshall, admission route and program URL not verified this session.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "health-innovation-minor",
@@ -2735,7 +3386,20 @@
     ],
     "confidence": "medium",
     "notes": "The Academy minors page exists but could not be read; minor names and requirements not confirmed this session.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "iya-connect-weekly",
@@ -2800,7 +3464,20 @@
     ],
     "confidence": "medium",
     "notes": "Current EIR roster and how to book time are unverified. No dedicated EIR program page found.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "iya-founder-hub-student-founder-resources",
@@ -2835,7 +3512,20 @@
     ],
     "confidence": "medium",
     "notes": "Page sections (Founder Hub benefits, eligibility, sign-up) seen only in search snippets. That Founder Hub here means Microsoft for Startups Founders Hub is inferred from the Microsoft partnership.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "iya-founders-bootcamp",
@@ -2872,7 +3562,20 @@
     ],
     "confidence": "high",
     "notes": "Official name appears as 'IYA Founders Bootcamp'. Fall 2025 and 2026 dates not confirmed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "iya-ignite-grants",
@@ -2909,7 +3612,20 @@
     ],
     "confidence": "medium",
     "notes": "Innovation Quest page has an 'Ignite Grants Overview & FAQs' section that could not be read; standard amount and deadlines unverified.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "iya-innovation-quest",
@@ -2951,7 +3667,20 @@
     ],
     "confidence": "high",
     "notes": "Launched fall 2023. Contact iyaiq@usc.edu. iovine-young.usc.edu could not be fetched directly; details from search snippets and the Microsoft blog (Oct 2024). 2025-2026 dates not confirmed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "iya-makerspace-the-garage",
@@ -2988,7 +3717,20 @@
     ],
     "confidence": "medium",
     "notes": "'The Garage' was the original 9,000 sq ft studio in the Ronald Tutor Campus Center. 'Creator Studio' name not verified. Maker-in-residence Trent Jones reportedly left in 2024. Access rules and hours unverified.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "iya-spring-hackathon-generative-ai",
@@ -3019,7 +3761,20 @@
     ],
     "confidence": "medium",
     "notes": "Innovation Quest page lists a 'Spring Hackathon' component; no source confirmed the name 'Generative AI Hackathon', dates, prizes or whether it ran in 2025 or 2026.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "iya-venture-showcase",
@@ -3057,7 +3812,20 @@
     ],
     "confidence": "high",
     "notes": "Tracks: Innovation, Social Impact, Gen AI and Society, Alumni Ventures. Prize amounts vary by year. One search snippet tied an August 9, 2024 date to the 2024 showcase page, likely a recap post date; Microsoft says April.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "iya-venture-studio",
@@ -3085,7 +3853,27 @@
     ],
     "confidence": "medium",
     "notes": "Only source is a faculty bio saying he is leading design and development of the Venture Studio. No launch date, program page or application found; may not be active.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ],
+    "contact": {
+      "name": "Michael Kanazawa",
+      "title": "IYA Venture Studio Lead",
+      "kind": "staff",
+      "source": "https://iovine-young.usc.edu/people/michael-kanazawa",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "m-s-in-integrated-design-business-and-technology",
@@ -3118,7 +3906,20 @@
     ],
     "confidence": "medium",
     "notes": "Online version confirmed by online.usc.edu listing and an employer-support PDF. Units, start terms and deadlines not verified.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "microsoft-for-startups-partnership-innovation-quest",
@@ -3183,7 +3984,20 @@
     ],
     "confidence": "medium",
     "notes": "Could not verify specific minor names. 'Disruptive Innovation' is confirmed only as a course Michael Kanazawa teaches, not as a minor. 'Designing Products' unverified.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usciovineyoung/",
+        "host": "IYA",
+        "handle": "usciovineyoung"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usciovineyoung/",
+        "host": "IYA"
+      }
+    ]
   },
   {
     "id": "venture-scoring-and-resource-unlock-system-iya",
@@ -3257,7 +4071,25 @@
     ],
     "confidence": "medium",
     "notes": "Co-hosting by other schools (e.g. Iovine and Young, Stevens) not confirmed. Timing inferred from 2019-2021 listings.",
-    "lastVerified": "2026-10-26"
+    "lastVerified": "2026-10-26",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usc_entrepreneurship/",
+        "host": "Greif Center",
+        "handle": "usc_entrepreneurship"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+        "host": "Greif Center"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+        "host": "TIE Hub"
+      }
+    ]
   },
   {
     "id": "deeptech-founder-matching",
@@ -3318,7 +4150,20 @@
     "sources": [],
     "confidence": "medium",
     "notes": "No source found under this exact name; a Jan 2026 USC feature 'From Lab to Launch' covers health startups. Related: Stevens 'From Discovery to Commercialization' webinar series. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-26"
+    "lastVerified": "2026-10-26",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ]
   },
   {
     "id": "usc-ventures",
@@ -3383,7 +4228,20 @@
     ],
     "confidence": "medium",
     "notes": "Fund size and terms not found. Scope of investments reportedly broadening; new website announced. Link ami.usc.edu not verified.",
-    "lastVerified": "2026-10-26"
+    "lastVerified": "2026-10-26",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-alfred-e-mann-institute/"
+      }
+    ],
+    "contact": {
+      "name": "Tariq Warsi",
+      "title": "Managing Director, AMI",
+      "kind": "staff",
+      "source": "https://research.usc.edu/?p=6419",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "usc-amgen-bioaccelerator",
@@ -3417,7 +4275,19 @@
       "https://provost.sma.usc.edu/prog/usc-amgen",
       "https://calendar.usc.edu/event/usc-amgen-bioaccelerator-program-webinar"
     ],
-    "confidence": "high"
+    "confidence": "high",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-alfred-e-mann-institute/",
+        "host": "AMI"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/researchatusc/",
+        "host": "OORI"
+      }
+    ]
   },
   {
     "id": "early-career-innovator-award",
@@ -3457,7 +4327,20 @@
     ],
     "confidence": "medium",
     "notes": "Launched 2025 with inaugural cohort. Techstars track deadline sources conflict (Feb 1 vs Feb 13, 2026).",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ]
   },
   {
     "id": "from-discovery-to-commercialization-webinar-series",
@@ -3532,7 +4415,20 @@
     ],
     "confidence": "high",
     "notes": "Contact rii@usc.edu.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ]
   },
   {
     "id": "innovation-catalyst-program-icp",
@@ -3576,7 +4472,20 @@
     ],
     "confidence": "high",
     "notes": "Launched 2025 alongside the Research Catalyst Program (RCP), consolidating earlier OORI/Stevens grants. Contact rii@usc.edu.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ]
   },
   {
     "id": "innovation-empowerment-award",
@@ -3616,7 +4525,20 @@
     ],
     "confidence": "medium",
     "notes": "Appears to succeed OORI's Student Empowerment Award (Innovation and Entrepreneurship Prize tracks). Faculty mentor requirement is from the predecessor program.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ]
   },
   {
     "id": "sbir-sttr-planning-award",
@@ -3652,7 +4574,20 @@
     ],
     "confidence": "medium",
     "notes": "Award amount not found. Now under the Research Catalyst Program (RCP). Confirm current cycle with rii@usc.edu.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ]
   },
   {
     "id": "stevens-translation-catalyst",
@@ -3690,7 +4625,20 @@
     ],
     "confidence": "high",
     "notes": "Successor to Stevens Technology Advancement Grants (TAG, up to $50K). Folded into OORI's Innovation Catalyst Program in 2025. Contact rii@usc.edu. Pages blocked; verified via search snippets.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ]
   },
   {
     "id": "usc-and-techstars-digital-economy-accelerator",
@@ -3738,7 +4686,20 @@
     ],
     "confidence": "high",
     "notes": "Partnership with OORI launched 2024; first cohort Demo Day June 5, 2025. 2026-27 cycle dates not confirmed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ]
   },
   {
     "id": "usc-and-techstars-startup-weekend",
@@ -3778,7 +4739,20 @@
     ],
     "confidence": "medium",
     "notes": "2026 date not confirmed; assumed spring based on 2024-2025 pattern.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ]
   },
   {
     "id": "usc-and-techstars-university-catalyst",
@@ -3824,7 +4798,27 @@
     ],
     "confidence": "high",
     "notes": "2026 application dates not confirmed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ],
+    "contact": {
+      "name": "Telesha Bowen",
+      "title": "Program Manager",
+      "kind": "staff",
+      "source": "https://techstars.com/usc-and-techstars-university-catalyst",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "usc-innovation-ecosystem-portal",
@@ -3865,7 +4859,20 @@
     ],
     "confidence": "high",
     "notes": "Distinct from the Greif Center's Entrepreneurship USC EcoMap directory.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ]
   },
   {
     "id": "usc-stevens-center-for-innovation",
@@ -3904,7 +4911,27 @@
     ],
     "confidence": "high",
     "notes": "Part of OORI. Contact licensing@stevens.usc.edu. Disclosure portal moved from Sophia to Inteum.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ],
+    "contact": {
+      "name": "Erin Overstreet, PhD",
+      "title": "Executive Director, Stevens Center",
+      "kind": "staff",
+      "source": "https://stevens.usc.edu/directory/",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "usc-stevens-legal-office-hours",
@@ -3945,7 +4972,20 @@
     ],
     "confidence": "medium",
     "notes": "Email intake form to legalofficehours@stevens.usc.edu. Weekly general and deep tech innovation office hours mentioned in internal notes could not be verified.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscstevens/",
+        "host": "Stevens Center",
+        "handle": "uscstevens"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+        "host": "Stevens Center"
+      }
+    ]
   },
   {
     "id": "ai-in-medicine-collaboratory-ai-medx",
@@ -3978,7 +5018,14 @@
     ],
     "confidence": "medium",
     "notes": "Leadership also includes Indy Gill, David Conti, Vinay Duddalwar.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+        "host": "Keck MESH"
+      }
+    ]
   },
   {
     "id": "auransa-partnership",
@@ -4008,7 +5055,14 @@
     ],
     "confidence": "medium",
     "notes": "Only brief snippet evidence; start date and scope not confirmed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+        "host": "Keck MESH"
+      }
+    ]
   },
   {
     "id": "autobahn-labs-collaboration",
@@ -4040,7 +5094,14 @@
     ],
     "confidence": "medium",
     "notes": "Announcement date not confirmed; Autobahn has similar deals with UCLA and Michigan.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+        "host": "Keck MESH"
+      }
+    ]
   },
   {
     "id": "california-life-sciences-fast-program",
@@ -4109,7 +5170,14 @@
     ],
     "confidence": "medium",
     "notes": "Single source (MESH partnerships page snippet); dates and terms unknown.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+        "host": "Keck MESH"
+      }
+    ]
   },
   {
     "id": "innovation-cafes",
@@ -4178,7 +5246,21 @@
     ],
     "confidence": "medium",
     "notes": "keck.usc.edu blocked; verified via search snippets.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+        "host": "Keck MESH"
+      }
+    ],
+    "contact": {
+      "name": "Vasiliki Anest, PhD",
+      "title": "Chief Innovation Officer; Head of MESH Strategic Partnerships",
+      "kind": "staff",
+      "source": "https://keck.usc.edu/mesh/mesh-team/",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "la-biostart-boot-camp",
@@ -4252,7 +5334,14 @@
     ],
     "confidence": "medium",
     "notes": "Contacts from 2020-2021 pages (Melissa Rodgers, MESH; Vasiliki Anest, business director) may be outdated.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+        "host": "Keck MESH"
+      }
+    ]
   },
   {
     "id": "ryght-research-network",
@@ -4283,7 +5372,14 @@
     ],
     "confidence": "medium",
     "notes": "Relevant mainly to clinical researchers running trials, not a founder program.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+        "host": "Keck MESH"
+      }
+    ]
   },
   {
     "id": "sanford-burnham-prebys-partnership",
@@ -4315,7 +5411,14 @@
     ],
     "confidence": "medium",
     "notes": "Current status after 2021 not independently confirmed beyond MESH partnerships page.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+        "host": "Keck MESH"
+      }
+    ]
   },
   {
     "id": "alfred-e-mann-institute-integrated-core-services",
@@ -4347,7 +5450,13 @@
       "https://en.wikipedia.org/wiki/Alfred_E._Mann_Institute_for_Biomedical_Engineering"
     ],
     "confidence": "medium",
-    "notes": "No source found for a program named 'Integrated Core Services'; description reflects AMI's general support. Link not verified. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    "notes": "No source found for a program named 'Integrated Core Services'; description reflects AMI's general support. Link not verified. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-alfred-e-mann-institute/"
+      }
+    ]
   },
   {
     "id": "larta-institute-heal-la-accelerator",
@@ -4419,7 +5528,18 @@
     ],
     "confidence": "low",
     "notes": "Nucleate Los Angeles chapter is active on Instagram (@nucleate.la); USC affiliation of the chapter not stated there.",
-    "lastVerified": "2026-10-26"
+    "lastVerified": "2026-10-26",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/nucleate.la/",
+        "handle": "nucleate.la"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/nucleate-los-angeles/"
+      }
+    ]
   },
   {
     "id": "sc-ctsi-southern-california-clinical-and-translational-scien",
@@ -4454,7 +5574,18 @@
     ],
     "confidence": "medium",
     "notes": "No 2026 pilot call found; amounts from 2024. Contact rd@sc-ctsi.org.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/socalctsi/",
+        "handle": "socalctsi"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/sc-ctsi/"
+      }
+    ]
   },
   {
     "id": "spark-at-usc",
@@ -4490,7 +5621,20 @@
     ],
     "confidence": "medium",
     "notes": "Program still being built; leadership, deadlines and broader funding pool not confirmed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/KeckSchoolUSC/",
+        "host": "Keck",
+        "handle": "KeckSchoolUSC"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/keckschoolusc/",
+        "host": "Keck"
+      }
+    ]
   },
   {
     "id": "clubs-ecouncil-fund",
@@ -4516,7 +5660,20 @@
     ],
     "confidence": "medium",
     "notes": "eCouncil is listed among Greif Center co-curricular programs; the public detail found is about the eCouncil Fund for student orgs. Items need pre-approval by the Managing Director. Unused funds do not roll over. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usc_entrepreneurship/",
+        "host": "Greif Center",
+        "handle": "usc_entrepreneurship"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+        "host": "Greif Center"
+      }
+    ]
   },
   {
     "id": "entrepreneur-and-venture-management-association-evma",
@@ -4541,14 +5698,34 @@
       "launched"
     ],
     "funding": null,
-    "link": "https://clubs.marshall.usc.edu/evma/",
+    "link": "https://www.evma.club/",
     "sources": [
+      "https://www.evma.club/",
       "https://clubs.marshall.usc.edu/evma/",
       "https://clubs.marshall.usc.edu/evma/about/"
     ],
     "confidence": "high",
     "notes": "2026 president listed as Nathan Sutrisno (MBA).",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-26",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscmarshall_evma/",
+        "handle": "uscmarshall_evma"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usc-evma/"
+      }
+    ],
+    "contact": {
+      "name": "Shayan Akhtari",
+      "title": "President",
+      "term": "2026-27",
+      "kind": "club",
+      "source": "https://www.evma.club/",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "exitsc",
@@ -4575,7 +5752,13 @@
     ],
     "confidence": "low",
     "notes": "Newer group; no official site, membership or application details found. Membership eligibility (undergrad vs grad) not yet confirmed with the club. LinkedIn page (linkedin.com/company/exitsc) has one post, about 11 months old; looks quiet.",
-    "lastVerified": "2026-10-20"
+    "lastVerified": "2026-10-20",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/exitsc/"
+      }
+    ]
   },
   {
     "id": "fightonfounders",
@@ -4607,7 +5790,18 @@
     ],
     "confidence": "medium",
     "notes": "Description from existing app data only; no independent source found and site could not be fetched. Instagram @fightonfounders last posted October 2025, though the bio says the Fall 2026 interest form is open.",
-    "lastVerified": "2026-10-20"
+    "lastVerified": "2026-10-20",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/fightonfounders/",
+        "handle": "fightonfounders"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/fightonfounders/"
+      }
+    ]
   },
   {
     "id": "founder-clubs",
@@ -4670,7 +5864,25 @@
     ],
     "confidence": "medium",
     "notes": "2025 and 2026 hackathon dates not confirmed; November based on 2024. Instagram @hackscofficial. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/hackscofficial/",
+        "handle": "hackscofficial"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/hacksc/"
+      }
+    ],
+    "contact": {
+      "name": "Jamie Chiang",
+      "title": "President",
+      "kind": "club",
+      "source": "https://engage.usc.edu/hacksc/web_officers",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "high-tech-association-hta",
@@ -4705,7 +5917,18 @@
     ],
     "confidence": "medium",
     "notes": "At Marshall, HTA stands for High Tech Association, not a healthcare technology group. It is career-focused rather than a startup club; no healthcare entrepreneurship 'HTA' at USC was found.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/high.tech.usc/",
+        "handle": "high.tech.usc"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/hta-usc-marshall/"
+      }
+    ]
   },
   {
     "id": "kappa-theta-pi-ktp",
@@ -4736,7 +5959,18 @@
     ],
     "confidence": "low",
     "notes": "Existing app data says Tau chapter; could not independently confirm the USC chapter or rush dates. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/ktp.usc/",
+        "handle": "ktp.usc"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/kappa-theta-pi-usc/"
+      }
+    ]
   },
   {
     "id": "lavalab",
@@ -4771,7 +6005,25 @@
     ],
     "confidence": "medium",
     "notes": "App data says about 28 students per semester and $4k+ prizes; not independently verified. Application dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usclavalab/",
+        "handle": "usclavalab"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/usclavalab/"
+      }
+    ],
+    "contact": {
+      "name": "Sonya Alexis",
+      "title": "President",
+      "kind": "club",
+      "source": "https://engage.usc.edu/lavalab/web_officers",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "medesign",
@@ -4805,7 +6057,18 @@
     ],
     "confidence": "medium",
     "notes": "Current officers and 2026-27 application dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/medesign.usc/",
+        "handle": "medesign.usc"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/medesign-usc/"
+      }
+    ]
   },
   {
     "id": "productsc",
@@ -4838,7 +6101,25 @@
     ],
     "confidence": "low",
     "notes": "Contact product@usc.edu. Exact application months inferred from semester cycle, not confirmed. Marshall launching a PM minor in Fall 2026 (separate). Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/product.sc/",
+        "handle": "product.sc"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/product-sc/"
+      }
+    ],
+    "contact": {
+      "name": "Ryan Pham",
+      "title": "President",
+      "kind": "club",
+      "source": "https://engage.usc.edu/ProductSc/web_officers",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "shift-sc",
@@ -4870,7 +6151,18 @@
     ],
     "confidence": "low",
     "notes": "Sponsored by the USC Marshall Neely Center. Official website not found; sources 2022-2024. Earlier first-year activities included a fund for student researchers. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/shift.sc/",
+        "handle": "shift.sc"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/shiftsc/"
+      }
+    ]
   },
   {
     "id": "sigma-eta-pi-sep",
@@ -4903,7 +6195,18 @@
     ],
     "confidence": "medium",
     "notes": "Details come mainly from an aggregator listing and other chapters; rush dates and official site not confirmed. Chapter designation (possibly Gamma) unverified. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscsep/",
+        "handle": "uscsep"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/uscsep/"
+      }
+    ]
   },
   {
     "id": "sogal-usc",
@@ -4968,7 +6271,25 @@
     ],
     "confidence": "medium",
     "notes": "Startup Career Fair has run almost annually since 2015. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/gosparksc/",
+        "handle": "gosparksc"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/spark-sc/"
+      }
+    ],
+    "contact": {
+      "name": "Rila He",
+      "title": "President",
+      "kind": "club",
+      "source": "https://engage.usc.edu/spark/web_officers",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "techie",
@@ -5002,7 +6323,18 @@
     ],
     "confidence": "low",
     "notes": "Instagram @techie_usc. Current recruitment dates not found. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/techie_usc/",
+        "handle": "techie_usc"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/techieusc/"
+      }
+    ]
   },
   {
     "id": "trojan-venture-partners",
@@ -5031,7 +6363,25 @@
     ],
     "confidence": "medium",
     "notes": "Active per its LinkedIn page (Oct 2026 student panel). Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-26"
+    "lastVerified": "2026-10-26",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/usctvp/",
+        "handle": "usctvp"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/trojan-venture-partners/"
+      }
+    ],
+    "contact": {
+      "name": "Jason Copeland",
+      "title": "President",
+      "kind": "club",
+      "source": "https://engage.usc.edu/TrojanVenturePartners/web_officers",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "impact-investing-group-at-usc",
@@ -5058,7 +6408,13 @@
       "https://engage.usc.edu/club_signup?view=all&search=impact%20investing",
       "https://www.linkedin.com/company/impact-investing-at-usc/"
     ],
-    "confidence": "medium"
+    "confidence": "medium",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/impact-investing-at-usc/"
+      }
+    ]
   },
   {
     "id": "troylabs",
@@ -5097,7 +6453,25 @@
     ],
     "confidence": "medium",
     "notes": "2026 DEMO date not confirmed. Has a student VC team that helps startups prepare to fundraise; no evidence of its own investment fund. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-26"
+    "lastVerified": "2026-10-26",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/troy.labs/",
+        "handle": "troy.labs"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/troy-labs/"
+      }
+    ],
+    "contact": {
+      "name": "Anastasia Ramirez",
+      "title": "President",
+      "kind": "club",
+      "source": "https://engage.usc.edu/Troylabs/web_officers",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "usc-entrepreneur-club",
@@ -5126,7 +6500,13 @@
     "confidence": "low",
     "notes": "Only a weak third-party mention found; official page and current status unverified. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
     "lastVerified": "2026-10-20",
-    "archived": "LinkedIn page has no posts and 46 followers; no Instagram found (Oct 2026 social check)."
+    "archived": "LinkedIn page has no posts and 46 followers; no Instagram found (Oct 2026 social check).",
+    "socials": [
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/company/eclubusc/"
+      }
+    ]
   },
   {
     "id": "usc-makers",
@@ -5160,7 +6540,25 @@
     ],
     "confidence": "medium",
     "notes": "Applications via linktr.ee/uscmakers. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/makersusc/",
+        "handle": "makersusc"
+      },
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscviterbi/",
+        "host": "Viterbi",
+        "handle": "uscviterbi"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usc-viterbi-school-of-engineering/",
+        "host": "Viterbi"
+      }
+    ]
   },
   {
     "id": "blackstone-launchpad-at-usc",
@@ -5263,7 +6661,20 @@
     ],
     "confidence": "medium",
     "notes": "Does not handle patent applications. Intake criteria and capacity not confirmed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscgouldlaw/",
+        "host": "Gould",
+        "handle": "uscgouldlaw"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usc-gould-school-of-law/",
+        "host": "Gould"
+      }
+    ]
   },
   {
     "id": "los-angeles-regional-sbdc-network",
@@ -5375,7 +6786,20 @@
     ],
     "confidence": "medium",
     "notes": "Founded 2007 by Prof. Michael Chasalow; 750+ clients served by 2017. Current intake process not confirmed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscgouldlaw/",
+        "host": "Gould",
+        "handle": "uscgouldlaw"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usc-gould-school-of-law/",
+        "host": "Gould"
+      }
+    ]
   },
   {
     "id": "usc-alumni-entrepreneurs-network-aen",
@@ -5444,7 +6868,20 @@
     ],
     "confidence": "high",
     "notes": "2026-27 cohort application window not confirmed; likely September based on pattern. USC affiliation requirement not stated in sources.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "socials": [
+      {
+        "platform": "instagram",
+        "url": "https://www.instagram.com/uscrossier/",
+        "host": "Rossier",
+        "handle": "uscrossier"
+      },
+      {
+        "platform": "linkedin",
+        "url": "https://www.linkedin.com/school/usc-rossier-school-of-education/",
+        "host": "Rossier"
+      }
+    ]
   },
   {
     "id": "alliance-for-socal-innovation",

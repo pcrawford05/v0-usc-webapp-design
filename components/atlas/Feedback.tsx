@@ -51,7 +51,7 @@ export function FeedbackLink({ label, program, className, ariaLabel }: { label: 
         <DialogContent className="max-w-md">
           <DialogHeader>
             <DialogTitle>{program ? `Correct ${program.name}` : "Send feedback"}</DialogTitle>
-            <DialogDescription>{program ? "Tell us what's wrong or out of date. A source link helps." : "Ideas, bugs or a missing program. It goes straight to the maintainer."}</DialogDescription>
+            <DialogDescription>{program ? "Tell us what's wrong or out of date: dates, eligibility, links or the key contact. A source link helps." : "Ideas, bugs or a missing program. It goes straight to the maintainer."}</DialogDescription>
           </DialogHeader>
           {state === "sent" ? (
             <div className="flex flex-col items-center gap-3 py-6 text-center">

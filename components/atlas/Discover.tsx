@@ -227,6 +227,16 @@ function ProgramList({ items, onOpen, isSaved, onToggleSave }: CardProps & { ite
   // Courses go last, since they start folded.
   const order = [...CATEGORIES.filter(c => c !== "Courses & Degrees"), "Courses & Degrees" as const]
   const groups = order.map(c => ({ c, rows: items.filter(p => p.category === c) })).filter(g => g.rows.length)
+  // Ctrl+Alt+T (Cmd+Option+T on a Mac) folds every group, or opens them all if they are already folded.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.code !== "KeyT" || !e.altKey || !(e.metaKey || e.ctrlKey)) return
+      e.preventDefault()
+      setFolded(prev => (prev.size === groups.length ? new Set() : new Set(groups.map(g => g.c))))
+    }
+    window.addEventListener("keydown", onKey)
+    return () => window.removeEventListener("keydown", onKey)
+  }, [groups])
   const toggle = (c: string) => setFolded(prev => {
     const next = new Set(prev)
     next.has(c) ? next.delete(c) : next.add(c)
@@ -258,7 +268,7 @@ function ProgramList({ items, onOpen, isSaved, onToggleSave }: CardProps & { ite
           const closed = folded.has(c)
           return (
             <tbody key={c}>
-              <tr className="h-8 cursor-pointer border-b border-black/[.1] bg-[#faf9f8] hover:bg-[#f5f3f1]" onClick={() => toggle(c)}>
+              <tr className="h-8 cursor-pointer border-b border-black/[.1] bg-[#faf9f8] hover:bg-[#f5f3f1]" onClick={() => toggle(c)} title="Click to fold or open. Ctrl+Alt+T (Cmd+Option+T on Mac) folds or opens every group.">
                 <td colSpan={6} className="px-2.5">
                   <span className="flex items-center gap-2 font-semibold text-foreground">
                     <ChevronDown className={cn("h-3.5 w-3.5 text-muted-foreground transition", closed && "-rotate-90")} />

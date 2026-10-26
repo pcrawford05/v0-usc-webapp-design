@@ -26,14 +26,15 @@ const pageUrl = url => {
 
 let count = 0
 for (const p of programs) {
-  const urls = [p.link, ...(p.sources ?? []), ...((registry.programs[p.id]?.sources ?? []).map(s => s.url))].filter(Boolean)
+  // Registry sources can say whose page it is with `host`; otherwise known host pages are labeled from HOSTS.
+  const entries = [...(registry.programs[p.id]?.sources ?? []), ...[p.link, ...(p.sources ?? [])].filter(Boolean).map(url => ({ url }))]
   const seen = new Map()
-  for (const u of urls) {
-    const s = pageUrl(u)
-    if (s && !seen.has(s.key)) seen.set(s.key, s)
+  for (const e of entries) {
+    const s = pageUrl(e.url)
+    if (s && !seen.has(s.key)) seen.set(s.key, { ...s, host: e.host ?? HOSTS[s.key] })
   }
   const socials = [...seen.values()]
-    .map(s => ({ platform: s.platform, url: s.url, ...(HOSTS[s.key] ? { host: HOSTS[s.key] } : {}), ...(s.handle ? { handle: s.handle } : {}) }))
+    .map(s => ({ platform: s.platform, url: s.url, ...(s.host ? { host: s.host } : {}), ...(s.handle ? { handle: s.handle } : {}) }))
     // The program's own pages first, Instagram before LinkedIn, then host pages.
     .sort((a, b) => Number(!!a.host) - Number(!!b.host) || (a.platform === "instagram" ? -1 : 1) - (b.platform === "instagram" ? -1 : 1))
   if (socials.length) {

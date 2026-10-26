@@ -1,0 +1,760 @@
+{
+ "found": [
+  {
+   "programId": "fightonfounders",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/company/fightonfounders/",
+   "host": null,
+   "evidence": "LinkedIn company search: \"part of IYA Innovation Quest, USC community of Trojan entrepreneurs\", 28 followers. Own IG already in catalog; fightonfounders.com footer links IG only.",
+   "latestPost": null
+  },
+  {
+   "programId": "entrepreneur-and-venture-management-association-evma",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/company/usc-evma/",
+   "host": null,
+   "evidence": "LinkedIn company page \"USC Entrepreneurship and Venture Management Association (EVMA)\": graduate venture network at USC Marshall, 256 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "high-tech-association-hta",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/company/hta-usc-marshall/",
+   "host": null,
+   "evidence": "LinkedIn company page \"High Tech Association (HTA) at USC Marshall\", student org, 519 followers. clubs.marshall.usc.edu/hta also links an older LinkedIn group (linkedin.com/groups/USC-Marshall-High-Tech-Association-3815434).",
+   "latestPost": null
+  },
+  {
+   "programId": "new-venture-seed-competition",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usc_entrepreneurship/",
+   "host": "Greif Center",
+   "evidence": "Instagram bio \"USC Greif Center for Entrepreneurial Studies\", 2,775 followers; also linked from engage.usc.edu/entrepreneur footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "venture-capital-investment-competition-vcic",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usc_entrepreneurship/",
+   "host": "Greif Center",
+   "evidence": "Instagram bio \"USC Greif Center for Entrepreneurial Studies\", 2,775 followers; also linked from engage.usc.edu/entrepreneur footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "marshall-greif-incubator",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usc_entrepreneurship/",
+   "host": "Greif Center",
+   "evidence": "Instagram bio \"USC Greif Center for Entrepreneurial Studies\", 2,775 followers; also linked from engage.usc.edu/entrepreneur footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "greif-center-newsletter",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usc_entrepreneurship/",
+   "host": "Greif Center",
+   "evidence": "Instagram bio \"USC Greif Center for Entrepreneurial Studies\", 2,775 followers; also linked from engage.usc.edu/entrepreneur footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "all-school-startup-mixers",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usc_entrepreneurship/",
+   "host": "Greif Center",
+   "evidence": "Instagram bio \"USC Greif Center for Entrepreneurial Studies\", 2,775 followers; also linked from engage.usc.edu/entrepreneur footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "entrepreneurship-minor",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usc_entrepreneurship/",
+   "host": "Greif Center",
+   "evidence": "Instagram bio \"USC Greif Center for Entrepreneurial Studies\", 2,775 followers; also linked from engage.usc.edu/entrepreneur footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "ms-in-entrepreneurship-and-innovation",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usc_entrepreneurship/",
+   "host": "Greif Center",
+   "evidence": "Instagram bio \"USC Greif Center for Entrepreneurial Studies\", 2,775 followers; also linked from engage.usc.edu/entrepreneur footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-venture-lab-usc-vc",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usc_entrepreneurship/",
+   "host": "Greif Center",
+   "evidence": "Instagram bio \"USC Greif Center for Entrepreneurial Studies\", 2,775 followers; also linked from engage.usc.edu/entrepreneur footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "hult-prize-at-usc",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usc_entrepreneurship/",
+   "host": "Greif Center",
+   "evidence": "Instagram bio \"USC Greif Center for Entrepreneurial Studies\", 2,775 followers; also linked from engage.usc.edu/entrepreneur footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "clubs-ecouncil-fund",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usc_entrepreneurship/",
+   "host": "Greif Center",
+   "evidence": "Instagram bio \"USC Greif Center for Entrepreneurial Studies\", 2,775 followers; also linked from engage.usc.edu/entrepreneur footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "hult-prize-at-usc",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+   "host": "Greif Center",
+   "evidence": "Linked in footer of engage.usc.edu/entrepreneur group page (Greif Center runs the Entrepreneur group, Hult Prize x USC and ECouncil Fund pages).",
+   "latestPost": null
+  },
+  {
+   "programId": "clubs-ecouncil-fund",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+   "host": "Greif Center",
+   "evidence": "Linked in footer of engage.usc.edu/entrepreneur group page (Greif Center runs the Entrepreneur group, Hult Prize x USC and ECouncil Fund pages).",
+   "latestPost": null
+  },
+  {
+   "programId": "maseeh-entrepreneurship-prize-competition",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "min-family-challenge",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "origin-weekend",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "ship-fund",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "summer-smasher",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "technology-innovation-fellowship",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "tie-hub-1-1-mentorship",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "tie-hub-coworking",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "tie-hub-office-hours",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-viterbi-startup-showcase",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "venture-scout",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "viterbi-startup-garage",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "viterbi-venture-fund",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "trojan-tank",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "venturespark",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usctiehub/",
+   "host": "TIE Hub",
+   "evidence": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+   "latestPost": null
+  },
+  {
+   "programId": "trojan-tank",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+   "host": "TIE Hub",
+   "evidence": "Trojan Tank is run by TIE Hub (program link viterbiinnovation.usc.edu); no own page found.",
+   "latestPost": null
+  },
+  {
+   "programId": "venturespark",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+   "host": "TIE Hub",
+   "evidence": "Program link is viterbiinnovation.usc.edu (TIE Hub).",
+   "latestPost": null
+  },
+  {
+   "programId": "iya-innovation-quest",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "iya-venture-showcase",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "iya-ignite-grants",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "iya-founders-bootcamp",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "iya-founder-hub-student-founder-resources",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "iya-entrepreneur-in-residence",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "iya-makerspace-the-garage",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "iya-spring-hackathon-generative-ai",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "iya-venture-studio",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "b-s-in-arts-technology-and-the-business-of-innovation",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "b-s-in-business-of-innovation",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "acad-406-purpose-driven-innovation-incubator",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "other-iovine-and-young-academy-minors",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "health-innovation-minor",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "m-s-in-integrated-design-business-and-technology",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "Instagram \"USC Iovine and Young Academy\", 12.1K followers, 1,023 posts; linked from iovine-young.usc.edu.",
+   "latestPost": null
+  },
+  {
+   "programId": "m-s-in-integrated-design-business-and-technology",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/school/usciovineyoung/",
+   "host": "IYA",
+   "evidence": "IYA school page, same host as other IYA programs.",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-stevens-center-for-innovation",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-stevens-legal-office-hours",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "stevens-translation-catalyst",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "innovation-catalyst-program-icp",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "icp-startup-launch",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "early-career-innovator-award",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "innovation-empowerment-award",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "sbir-sttr-planning-award",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-and-techstars-digital-economy-accelerator",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-and-techstars-university-catalyst",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-and-techstars-startup-weekend",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-innovation-ecosystem-portal",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "from-lab-to-startup",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscstevens/",
+   "host": "Stevens Center",
+   "evidence": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-makers",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscviterbi/",
+   "host": "Viterbi",
+   "evidence": "Official Viterbi Instagram, 20K followers (listed at viterbischool.usc.edu/social-media).",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-makers",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/school/usc-viterbi-school-of-engineering/",
+   "host": "Viterbi",
+   "evidence": "Official Viterbi LinkedIn school page, 29,777 followers, posted within last week (2026-10).",
+   "latestPost": "2026-10"
+  },
+  {
+   "programId": "viterbi-startup-and-entrepreneurship-experience-vsee",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscviterbi/",
+   "host": "Viterbi",
+   "evidence": "Official Viterbi Instagram, 20K followers (listed at viterbischool.usc.edu/social-media).",
+   "latestPost": null
+  },
+  {
+   "programId": "viterbi-startup-and-entrepreneurship-experience-vsee",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/school/usc-viterbi-school-of-engineering/",
+   "host": "Viterbi",
+   "evidence": "Official Viterbi LinkedIn school page, 29,777 followers, posted within last week (2026-10).",
+   "latestPost": "2026-10"
+  },
+  {
+   "programId": "viterbi-student-innovation-institute-vsi2",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscviterbi/",
+   "host": "Viterbi",
+   "evidence": "Official Viterbi Instagram, 20K followers (listed at viterbischool.usc.edu/social-media).",
+   "latestPost": null
+  },
+  {
+   "programId": "viterbi-student-innovation-institute-vsi2",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/school/usc-viterbi-school-of-engineering/",
+   "host": "Viterbi",
+   "evidence": "Official Viterbi LinkedIn school page, 29,777 followers, posted within last week (2026-10).",
+   "latestPost": "2026-10"
+  },
+  {
+   "programId": "summer-start-fellows",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscviterbi/",
+   "host": "Viterbi",
+   "evidence": "Official Viterbi Instagram, 20K followers (listed at viterbischool.usc.edu/social-media).",
+   "latestPost": null
+  },
+  {
+   "programId": "summer-start-fellows",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/school/usc-viterbi-school-of-engineering/",
+   "host": "Viterbi",
+   "evidence": "Official Viterbi LinkedIn school page, 29,777 followers, posted within last week (2026-10).",
+   "latestPost": "2026-10"
+  },
+  {
+   "programId": "athena-women-s-entrepreneurship-summit-and-female-founders-p",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscmarshall/",
+   "host": "Marshall",
+   "evidence": "Instagram \"USC Marshall School of Business\", 45.8K followers; linked from marshall.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "vaneck-digital-assets-initiative",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscmarshall/",
+   "host": "Marshall",
+   "evidence": "Instagram \"USC Marshall School of Business\", 45.8K followers; linked from marshall.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "vaneck-southern-california-blockchain-conference",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscmarshall/",
+   "host": "Marshall",
+   "evidence": "Instagram \"USC Marshall School of Business\", 45.8K followers; linked from marshall.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "sc-ctsi-southern-california-clinical-and-translational-scien",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/socalctsi/",
+   "host": null,
+   "evidence": "Instagram \"SoCal Clinical and Translational Science Institute\", 292 followers; linked from sc-ctsi.org footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "sc-ctsi-southern-california-clinical-and-translational-scien",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/company/sc-ctsi/",
+   "host": null,
+   "evidence": "Linked from sc-ctsi.org footer (page not opened).",
+   "latestPost": null
+  },
+  {
+   "programId": "alfred-e-mann-institute-fund-ami",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/company/usc-alfred-e-mann-institute/",
+   "host": null,
+   "evidence": "LinkedIn company page \"USC Alfred E. Mann Institute\", 305 followers; bio: accelerates biotech innovation to help USC technologies reach market.",
+   "latestPost": null
+  },
+  {
+   "programId": "alfred-e-mann-institute-integrated-core-services",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/company/usc-alfred-e-mann-institute/",
+   "host": null,
+   "evidence": "LinkedIn company page \"USC Alfred E. Mann Institute\", 305 followers; bio: accelerates biotech innovation to help USC technologies reach market.",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-amgen-bioaccelerator",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/company/usc-alfred-e-mann-institute/",
+   "host": "AMI",
+   "evidence": "Program is run with AMI and OORI (see discovery run).",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-amgen-bioaccelerator",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/company/researchatusc",
+   "host": "OORI",
+   "evidence": "Linked from research.usc.edu footer (page not opened).",
+   "latestPost": null
+  },
+  {
+   "programId": "intellectual-property-and-technology-law-clinic-iptlc",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscgouldlaw/",
+   "host": "Gould",
+   "evidence": "Instagram \"USC Gould School of Law\", 18.9K followers; linked from gould.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "intellectual-property-and-technology-law-clinic-iptlc",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/school/usc-gould-school-of-law/",
+   "host": "Gould",
+   "evidence": "Linked from gould.usc.edu footer (page not opened).",
+   "latestPost": null
+  },
+  {
+   "programId": "small-business-clinic",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscgouldlaw/",
+   "host": "Gould",
+   "evidence": "Instagram \"USC Gould School of Law\", 18.9K followers; linked from gould.usc.edu footer.",
+   "latestPost": null
+  },
+  {
+   "programId": "small-business-clinic",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/school/usc-gould-school-of-law/",
+   "host": "Gould",
+   "evidence": "Linked from gould.usc.edu footer (page not opened).",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-rossier-edtech-accelerator",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/uscrossier/",
+   "host": "Rossier",
+   "evidence": "Linked from rossier.usc.edu footer (not opened).",
+   "latestPost": null
+  },
+  {
+   "programId": "usc-rossier-edtech-accelerator",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/school/usc-rossier-school-of-education/",
+   "host": "Rossier",
+   "evidence": "Linked from rossier.usc.edu footer (not opened).",
+   "latestPost": null
+  },
+  {
+   "programId": "spark-at-usc",
+   "platform": "instagram",
+   "url": "https://www.instagram.com/KeckSchoolUSC/",
+   "host": "Keck",
+   "evidence": "Linked from stemcell.keck.usc.edu footer (not opened). Program page is on the Keck stem cell site, whose own pages are instagram.com/uscstemcell and linkedin.com/company/uscstemcell.",
+   "latestPost": null
+  },
+  {
+   "programId": "spark-at-usc",
+   "platform": "linkedin",
+   "url": "https://www.linkedin.com/school/keckschoolusc/",
+   "host": "Keck",
+   "evidence": "Linked from stemcell.keck.usc.edu footer (not opened).",
+   "latestPost": null
+  }
+ ],
+ "notFound": [
+  {
+   "programId": "exitsc",
+   "checked": [
+    "Instagram /exitsc and /exit.sc (404)",
+    "web search",
+    "engage.usc.edu/exitsc"
+   ]
+  },
+  {
+   "programId": "impact-investing-group-at-usc",
+   "checked": [
+    "Instagram /uscimpactinvesting (404)",
+    "web search (only other schools)",
+    "engage.usc.edu/impactinvesting (no socials)"
+   ]
+  },
+  {
+   "programId": "usc-makers",
+   "checked": [
+    "LinkedIn company search \"USC Makers\" (only Tikkun Olam Makers, MEGA)",
+    "viterbimakers.usc.edu (JS, no links)",
+    "linktr.ee/uscmakers (IG only)",
+    "web search"
+   ]
+  },
+  {
+   "programId": "hult-prize-at-usc",
+   "checked": [
+    "Instagram /hultprizeusc (404)",
+    "LinkedIn search \"Hult Prize USC\" (0)",
+    "web search",
+    "national hultprize.org has IG hultprize and LinkedIn hult-prize-foundation but those are not the USC campus program"
+   ]
+  },
+  {
+   "programId": "trojan-tank",
+   "checked": [
+    "TIE Hub IG/LI (recorded as host)",
+    "LinkedIn search (0)",
+    "web search"
+   ]
+  },
+  {
+   "programId": "athena-women-s-entrepreneurship-summit-and-female-founders-p",
+   "checked": [
+    "Marshall IG (host recorded)",
+    "Marshall LinkedIn only as tracking URL linkedin.com/edu/school?id=17972, not resolved"
+   ]
+  },
+  {
+   "programId": "keck-mesh-entrepreneurial-support",
+   "checked": [
+    "already has MESH LinkedIn host; Keck IG not checked"
+   ]
+  }
+ ],
+ "blocked": null,
+ "notes": [
+  "Cheap curl of site footers worked best for host units (engage.usc.edu/entrepreneur, marshall.usc.edu, gould, rossier, sc-ctsi.org, stevens.usc.edu, iovine-young.usc.edu, research.usc.edu, stemcell.keck.usc.edu, clubs.marshall.usc.edu/<club>). viterbiinnovation.usc.edu, viterbi.usc.edu, ami.usc.edu, keck.usc.edu and viterbimakers.usc.edu return no social links via curl (JS-rendered).",
+  "WebSearch (standard) was nearly useless for student orgs and socials; skip it.",
+  "Instagram profile pages load logged in via Chrome; page text gives name, followers, bio but NOT post dates, so latestPost is null except Viterbi LinkedIn (2026-10).",
+  "LinkedIn company search URL (/search/results/companies/?keywords=<short name>) plus find with 'href' works well; long names return no results, use acronym + USC. Guessing Instagram handles costs a load each and failed 4 of 4 (hultprizeusc, uscimpactinvesting, exit.sc, usc_evma).",
+  "Catalog discrepancy: EVMA instagram in catalog is uscmarshallevma, but clubs.marshall.usc.edu/evma links instagram.com/usc_evma, which 404s on Instagram. Verify catalog handle.",
+  "HTA also has a legacy LinkedIn group on clubs.marshall.usc.edu; the company page hta-usc-marshall is preferred. CyNet Accelerator (linkedin.com/company/usc-cynet-accelerator/, 90 followers) is affiliated with HTA/EVMA and is not in the catalog.",
+  "Host entries marked 'not opened' come from the host site's own footer link and were not loaded in Chrome. ~26 Instagram/LinkedIn page loads used. Marshall School LinkedIn needs a clean URL (site only gives a tracking link). Host IG for iya/stevens/greif/tie sets are new relative to existing LinkedIn-only host socials.",
+  "No login wall, captcha or rate-limit seen."
+ ]
+}

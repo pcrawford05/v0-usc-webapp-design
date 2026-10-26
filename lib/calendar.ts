@@ -81,12 +81,19 @@ export function bucket(items: Upcoming[], saved: string[], now = new Date()): Bu
 
 const FULL = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-/** Month-only deadlines get a reminder two weeks before the month begins, so there is time to apply. */
-export function reminderDate(month: number, now = new Date()): Date {
-  let year = now.getFullYear()
-  const at = (y: number) => new Date(y, month - 1, 1 - 14)
-  if (at(year) <= now) year += 1
-  return at(year)
+/**
+ * When to remind about a month-only deadline: two weeks before the month starts, repeating yearly.
+ * If that day has already passed this cycle (it is late October and the program runs in November),
+ * remind on the 1st of the month, or tomorrow if the month has begun, rather than skipping a year.
+ */
+export function reminderFor(month: number, now = new Date()): { date: Date; yearly: boolean } {
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+  const year = now.getFullYear() + (month < now.getMonth() + 1 ? 1 : 0)
+  const early = new Date(year, month - 1, 1 - 14)
+  if (early > today) return { date: early, yearly: true }
+  const first = new Date(year, month - 1, 1)
+  const tomorrow = new Date(today.getTime() + DAY)
+  return { date: first > today ? first : tomorrow, yearly: false }
 }
 
 // ---------- Add to calendar: Google (link) and Apple (calendar file the OS opens in Calendar) ----------
@@ -115,8 +122,7 @@ export function calEntry(u: Upcoming, site: string): CalEntry {
   const p = u.program
   return {
     title: `Check: ${p.name} (usually ${MONTHS[u.month - 1]})`,
-    allDay: reminderDate(u.month),
-    yearly: true,
+    ...(({ date, yearly }) => ({ allDay: date, yearly }))(reminderFor(u.month)),
     url: p.link ?? undefined,
     details: `${p.name} usually opens or has its deadline in ${MONTHS[u.month - 1]}. Confirm the exact date on its page.${p.link ? `\n${p.link}` : ""}\nFounder Compass: ${site}/?p=${p.id}`,
   }

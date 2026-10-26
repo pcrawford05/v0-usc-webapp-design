@@ -1,6 +1,6 @@
 "use client"
 
-import { Bookmark, Compass, MessageCircle, Search, UserRound } from "lucide-react"
+import { Bookmark, CalendarDays, Compass, MessageCircle, Search } from "lucide-react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { Suspense, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react"
 
@@ -11,7 +11,8 @@ import { ProfileDialog, useProfile } from "@/components/atlas/ProfileDialog"
 import { FeedbackLink } from "@/components/atlas/Feedback"
 import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
 import { DiscoverView } from "@/components/atlas/Discover"
-import { SavedView } from "@/components/atlas/Saved"
+import { ComingUp } from "@/components/atlas/ComingUp"
+import { ProfileMenu, SavedView } from "@/components/atlas/Saved"
 import { AdvisorView } from "@/components/atlas/views"
 import { describeProfile, hasProfile, ROLES } from "@/lib/profile"
 import { programById, programs } from "@/lib/programs"
@@ -22,13 +23,13 @@ import { cn } from "@/lib/utils"
 const TABS = [
   { key: "discover", label: "Discover", icon: Compass },
   { key: "ask", label: "Advisor", icon: MessageCircle },
-  { key: "saved", label: "Saved", icon: Bookmark },
+  { key: "calendar", label: "Calendar", icon: CalendarDays },
 ] as const
-type TabKey = (typeof TABS)[number]["key"]
+type TabKey = (typeof TABS)[number]["key"] | "saved"
 type Mode = "list" | "subway" | "campus" | "bubbles"
 
-// Old links: Explore and Browse are now Discover, Calendar lives in Saved, the Subway tab is Discover's map.
-const LEGACY_VIEW: Record<string, TabKey> = { explore: "discover", browse: "discover", calendar: "saved", path: "discover" }
+// Old links: Explore and Browse are now Discover, the Subway tab is Discover's map. Saved lives in the profile menu.
+const LEGACY_VIEW: Record<string, TabKey> = { explore: "discover", browse: "discover", path: "discover", saved: "saved" }
 
 /** A pill that slides under whichever button in a group is active. */
 function useIndicator(active: string) {
@@ -117,7 +118,6 @@ function Atlas() {
     >
       <t.icon className={compact ? "h-5 w-5" : "h-4 w-4"} />
       {t.label}
-      {t.key === "saved" && saved.length > 0 && <span className={cn("rounded-full bg-secondary px-1.5 text-[10px] text-secondary-foreground", compact && "absolute right-[22%] top-0.5")}>{saved.length}</span>}
     </button>
   )
 
@@ -141,14 +141,12 @@ function Atlas() {
               <Search className="h-[18px] w-[18px]" />
               <kbd className="hidden rounded-md border border-black/10 bg-white/80 px-1.5 py-0.5 font-sans text-[11px] lg:inline">⌘K</kbd>
             </button>
-            <button
-              onClick={() => setProfileOpen(true)}
-              aria-label="Your profile"
-              className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-br from-[#b3001b] to-[#8a0000] px-2.5 py-2 text-sm font-semibold text-white hover:brightness-110 sm:px-3"
-            >
-              <UserRound className="h-4 w-4" />
-              <span className="hidden md:inline">{me ? (me.name?.split(" ")[0] ?? ROLES.find(r => r.key === me.role)?.label ?? "Profile") : "Personalize"}</span>
-            </button>
+            <ProfileMenu
+              name={me ? (me.name?.split(" ")[0] ?? ROLES.find(r => r.key === me.role)?.label ?? "Profile") : null}
+              savedCount={saved.length}
+              onSaved={() => setParam({ view: "saved", p: null })}
+              onEdit={() => setProfileOpen(true)}
+            />
           </div>
         </div>
       </header>
@@ -165,6 +163,7 @@ function Atlas() {
             </div>
           )}
           {tab === "ask" && <AdvisorView question={params.get("ask") ?? undefined} about={me ? describeProfile(me) : undefined} />}
+          {tab === "calendar" && <ComingUp saved={saved} onOpen={onOpen} />}
           {tab === "saved" && <SavedView saved={saved} {...card} />}
         </div>
       </main>
@@ -181,7 +180,7 @@ function Atlas() {
       <CommandPalette
         open={paletteOpen}
         onOpenChange={setPaletteOpen}
-        views={TABS}
+        views={[...TABS, { key: "saved", label: "Saved programs", icon: Bookmark }]}
         onOpen={onOpen}
         onAsk={ask}
         onFilter={q => setParam({ ...filterParams({ q }), view: "discover", mode: null, p: null })}

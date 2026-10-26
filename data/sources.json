@@ -3654,6 +3654,12 @@
           "kind": "official",
           "holds": "event recap: about 200 attendees voted with gold coins, undergrad and alumni winners, recognizes Greif Center 2025 graduates, New Venture Seed Competition prize",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=409735",
+          "kind": "campus-groups",
+          "holds": "\"accepting nominations for the 2026 Alumni Entrepreneur of the Year Award\" (Jan 28-31, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -5394,6 +5400,71 @@
           "url": "https://uscventurecapital.com",
           "kind": "official",
           "holds": "Fund website (JavaScript only, no readable text on Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
+        }
+      ]
+    },
+    "usc-amgen-bioaccelerator": {
+      "name": "USC + Amgen BioAccelerator",
+      "status": "new",
+      "lastResearched": "2026-10-26",
+      "sources": [
+        {
+          "url": "https://provost.sma.usc.edu/prog/usc-amgen",
+          "kind": "official",
+          "holds": "\"inaugural USC + Amgen BioAccelerator Program, a new competitive opportunity for early-stage USC-affiliated biotechnology and life science companies\"",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://calendar.usc.edu/event/usc-amgen-bioaccelerator-program-webinar",
+          "kind": "official",
+          "holds": "\"Up to $250,000 in investment from the USC Alfred E. Mann Institute\"",
+          "lastChecked": "2026-10-26"
+        }
+      ]
+    },
+    "social-entrepreneurship-minor": {
+      "name": "Social Entrepreneurship Minor",
+      "status": "new",
+      "lastResearched": "2026-10-26",
+      "sources": [
+        {
+          "url": "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors",
+          "kind": "official",
+          "holds": "Lists Social Entrepreneurship Minor among Marshall minors (2026-2027 catalogue); admission requirements",
+          "lastChecked": "2026-10-26"
+        }
+      ]
+    },
+    "technology-commercialization-minor": {
+      "name": "Technology Commercialization Minor",
+      "status": "new",
+      "lastResearched": "2026-10-26",
+      "sources": [
+        {
+          "url": "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors",
+          "kind": "official",
+          "holds": "Lists Technology Commercialization Minor among Marshall minors (2026-2027 catalogue); admission requirements",
+          "lastChecked": "2026-10-26"
+        }
+      ]
+    },
+    "impact-investing-group-at-usc": {
+      "name": "Impact Investing Group at USC",
+      "status": "new",
+      "lastResearched": "2026-10-26",
+      "sources": [
+        {
+          "url": "https://engage.usc.edu/club_signup?view=all&search=impact%20investing",
+          "kind": "campus-groups",
+          "holds": "Active RSO; mission: \"motivate, educate, and excite undergraduate students about careers in the impact investing community\"",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/company/impact-investing-at-usc/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "\"USC's first and only student-run undergraduate impact investing organization\" (founded 2019)",
           "lastChecked": "2026-10-26"
         }
       ]

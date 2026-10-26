@@ -1,0 +1,716 @@
+{
+  "run": "discovery-2026-10-26",
+  "scope": "USC (Los Angeles) only; catalog loaded with 203 entries including archived",
+  "candidates": [
+    {
+      "name": "USC Venture Capital (USCVC)",
+      "host": "Lloyd Greif Center for Entrepreneurial Studies (USC Marshall)",
+      "category": "Funding & Grants",
+      "description": "University venture fund at the Greif Center, run by students in the BAEP 565 Venture Lab practicum, that backs early-stage USC-affiliated startups.",
+      "timing": "Launched 2026; no application window or deadline published (site routes founders to a submit-your-company page).",
+      "eligibility": "Early-stage startups with a USC affiliation. Formal criteria not published.",
+      "funding": "Check size not published. Equity investment.",
+      "link": "https://uscventurecapital.com/",
+      "evidence": [
+        {
+          "url": "https://uscventurecapital.com/",
+          "quote": "USC Venture Capital is a university fund launched in 2026 at USC's Lloyd Greif Center for Entrepreneurial Studies."
+        },
+        {
+          "url": "https://uscventurecapital.com/about",
+          "quote": "backing early-stage, USC-affiliated startups across the Trojan network"
+        },
+        {
+          "url": "https://uscventurecapital.com/about",
+          "quote": "prototyped by the Marshall Venture Fund, which \"proved the model\" (paraphrase of page: USCVC is presented as the lasting institution that followed it)"
+        }
+      ],
+      "lastActivity": "2026",
+      "recommend": "include",
+      "why": "A live, founder-facing fund. The catalog only mentions USCVC inside the Venture Lab (BAEP 565) course entry, and the Marshall Venture Fund is archived as inactive. The USCVC site says it succeeds that fund, so founders looking for Greif money currently find no Funding entry. Check size and intake process are unpublished, so keep the description to what the site says and link it."
+    },
+    {
+      "name": "USC + Amgen BioAccelerator Program",
+      "host": "USC Office of Research and Innovation with Amgen and the Alfred E. Mann Institute",
+      "category": "Accelerators & Incubators",
+      "description": "Inaugural competitive program that picks one early-stage USC-affiliated biotech or life science company for investment, Amgen mentorship and a year of free lab space.",
+      "timing": "Applications opened Jun 1, 2026 and closed Sep 30, 2026 (5 PM PT); information webinar held May 28, 2026. Selection result not yet seen.",
+      "eligibility": "USC-affiliated early-stage therapeutics, diagnostics, drug discovery platform, research tool and enabling biotech companies. Organizations and individual applicants.",
+      "funding": "Up to $250,000 from the USC Alfred E. Mann Institute, Amgen scientific mentorship and business development support, one year of free lab space at a USC-affiliated bio-incubator.",
+      "link": "https://provost.sma.usc.edu/prog/usc-amgen",
+      "evidence": [
+        {
+          "url": "https://provost.sma.usc.edu/prog/usc-amgen",
+          "quote": "invites applications for the inaugural USC + Amgen BioAccelerator Program, a new competitive opportunity for early-stage USC-affiliated biotechnology and life science companies"
+        },
+        {
+          "url": "https://calendar.usc.edu/event/usc-amgen-bioaccelerator-program-webinar",
+          "quote": "Up to $250,000 in investment from the USC Alfred E. Mann Institute"
+        },
+        {
+          "url": "https://calendar.usc.edu/event/usc-amgen-bioaccelerator-program-webinar",
+          "quote": "One year of free lab space at a USC-affiliated bio-incubator"
+        }
+      ],
+      "lastActivity": "2026-09-30 (application deadline)",
+      "recommend": "include",
+      "why": "Only appears today as one funding sentence inside the AMI entry. It is a distinct program with its own RFP and page. The 2026 window has closed, so list it as 'next cycle not announced' and ask OORI whether it repeats. Founders in life science will look for it by name."
+    },
+    {
+      "name": "Social Entrepreneurship Minor",
+      "host": "USC Marshall (Greif Center and Brittingham Social Enterprise Lab)",
+      "category": "Courses & Degrees",
+      "description": "Undergraduate minor on social entrepreneurship, social impact and managing social enterprises, open to students from other majors.",
+      "timing": "Applications accepted year-round; decisions about 10 business days after applying. Requirements follow the 2026-2027 catalogue.",
+      "eligibility": "Admission requires 32 to 48 completed units, a declared major and a minimum USC GPA of 2.75. At least 16 unique units outside the home department.",
+      "funding": "None (academic program).",
+      "link": "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors",
+      "evidence": [
+        {
+          "url": "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors",
+          "quote": "Admission for Marshall minors requires the completion of 32-48 units, a declared major, and a minimum USC GPA of 2.75."
+        },
+        {
+          "url": "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors",
+          "quote": "Applications to Marshall minors are accepted throughout the year."
+        },
+        {
+          "url": "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors",
+          "quote": "page lists 20 Marshall minors including Entrepreneurship, Social Entrepreneurship, and Technology Commercialization (2026-2027 Catalogue)"
+        }
+      ],
+      "lastActivity": "2026-10 (page current for 2026-2027 catalogue)",
+      "recommend": "include",
+      "why": "Catalog has the Entrepreneurship Minor and the Technology Entrepreneurship Minor but not this one. The Marshall minors page lists it for 2026-2027 and the Greif Center page names it among its seven entrepreneurship minors. The catalogue entry itself could not be opened (certificate error), so confirm unit counts before copying requirements."
+    },
+    {
+      "name": "Technology Commercialization Minor",
+      "host": "USC Marshall with USC Viterbi",
+      "category": "Courses & Degrees",
+      "description": "Undergraduate minor combining business and engineering courses on taking technology from lab to market.",
+      "timing": "Applications accepted year-round (Marshall minors process). Requirements follow the 2026-2027 catalogue.",
+      "eligibility": "Admission requires 32 to 48 completed units, a declared major and a minimum USC GPA of 2.75. Business Administration and Accounting majors can apply only to the interdisciplinary Marshall minors.",
+      "funding": "None (academic program).",
+      "link": "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors",
+      "evidence": [
+        {
+          "url": "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors",
+          "quote": "page lists Technology Commercialization among the 20 Marshall minors, linked to the 2026-2027 Catalogue"
+        },
+        {
+          "url": "https://www.marshall.usc.edu/departments/lloyd-greif-center-entrepreneurial-studies",
+          "quote": "Greif Center page lists Technology Commercialization Minor with partner school Viterbi School of Engineering (seven entrepreneurship minors)"
+        }
+      ],
+      "lastActivity": "2026-10 (page current for 2026-2027 catalogue)",
+      "recommend": "include",
+      "why": "Missing even though the catalog lists the Graduate Certificate in Technology Commercialization and ENGR 494. This is the undergraduate sibling. Course list unverified (catalogue page blocked), so describe it at the level the Marshall pages support."
+    },
+    {
+      "name": "Startup Survival Series",
+      "host": "Lloyd Greif Center for Entrepreneurial Studies (USC Marshall)",
+      "category": "Events & Speakers",
+      "description": "Greif workshop series with alumni founder panels and method workshops for student founders trying to keep a venture alive.",
+      "timing": "Sessions seen Oct 7, 2025 (Bullseye Sprint workshop) and Nov 18, 2025 (#2, alumni founder panel). 2026 sessions not seen.",
+      "eligibility": "Incubator cohort members and USC entrepreneurs working on active ventures. Free, register on EngageSC.",
+      "funding": "None.",
+      "link": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=405066",
+      "evidence": [
+        {
+          "url": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=405066",
+          "quote": "Come hear from multiple USC alumni founders in a range of business types."
+        },
+        {
+          "url": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=405064",
+          "quote": "Learn the Method That Stops Startups from Building Products Nobody Buys with Charbel Simon!"
+        },
+        {
+          "url": "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies",
+          "quote": "Greif page lists the Startup Survival Workshop Series among its organized programming"
+        }
+      ],
+      "lastActivity": "2025-11-18",
+      "recommend": "include",
+      "why": "Named on the Greif Center program list and run twice in fall 2025 on EngageSC, but absent from the catalog. Cadence is unclear, so label it 'check EngageSC for dates' rather than a fixed schedule."
+    },
+    {
+      "name": "Mark and Semira Moshayedi Innovation Award",
+      "host": "USC Chan Division of Occupational Science and Occupational Therapy",
+      "category": "Competitions & Pitch",
+      "description": "Annual student pitch competition for innovations that advance occupational therapy or occupational science, from assistive tech to new care models.",
+      "timing": "Final pitches held Apr 17, 2025 and Mar 24, 2026 (4:45 to 6:30 PM, CHP Building, hybrid). RSVP by about a week before.",
+      "eligibility": "USC occupational therapy and occupational science students (graduate students in the 2024 call).",
+      "funding": "Prize package for the winner. $5,000 was listed in the 2024 call (from a search snippet, not confirmed for 2026).",
+      "link": "https://calendar.usc.edu/event/mark-and-semira-moshayedi-innovation-award-2026",
+      "evidence": [
+        {
+          "url": "https://calendar.usc.edu/event/mark-and-semira-moshayedi-innovation-award-2026",
+          "quote": "This distinguished award will be given to the student whose innovative work has the potential to advance the quality of occupational therapy or occupational science, and will result in a positive societal impact."
+        },
+        {
+          "url": "https://calendar.usc.edu/event/mark-and-semira-moshayedi-innovation-award-final-pitches",
+          "quote": "same award, Final Pitches on Thursday, April 17th, 2025"
+        },
+        {
+          "url": "https://hscnews.usc.edu/?p=9465",
+          "quote": "annual competition sponsored by Semira Dariushnia, MD, and her husband, Mark Moshayedi; winner receives a prize package (2019 article, paraphrased)"
+        }
+      ],
+      "lastActivity": "2026-03-24",
+      "recommend": "include",
+      "why": "Two straight years of public final pitches and a funded prize. Narrow audience (OT/OS students), like the Das Family Innovate LA competition already in the catalog. Confirm the current prize amount with the Chan Division before showing a number."
+    },
+    {
+      "name": "USC Venture & Innovation Summit",
+      "host": "USC Office of Research and Innovation (OORI)",
+      "category": "Events & Speakers",
+      "description": "One-day OORI summit of founders, investors, researchers and corporate leaders on spinning out deep tech, healthcare investment and LA's startup ecosystem.",
+      "timing": "Held Feb 12, 2026, 9 AM to 5 PM, Ginsburg Hall. Whether it repeats in 2027 is not announced.",
+      "eligibility": "Free; register on Luma. Open to the innovation community. Students not explicitly mentioned.",
+      "funding": "None.",
+      "link": "https://calendar.usc.edu/event/usc-venture-innovation-summit",
+      "evidence": [
+        {
+          "url": "https://calendar.usc.edu/event/usc-venture-innovation-summit",
+          "quote": "a high-momentum gathering that brings together founders, investors, researchers, and ecosystem leaders shaping the future of innovation across Los Angeles and Southern California (from the event description)"
+        },
+        {
+          "url": "https://research.usc.edu/news/2026/04/usc-oori-organized-venture-innovation-summit-showcases-a-thriving-innovation-ecosystem/",
+          "quote": "Sponsored by Amgen and J.P. Morgan; announced the USC-Amgen BioAccelerator Program (per article summary)"
+        }
+      ],
+      "lastActivity": "2026-02-12",
+      "recommend": "maybe",
+      "why": "Real, free, OORI-run networking event, but one edition and no word on recurrence. Add only if the team wants a Recurring Founder Events entry for it; otherwise watch for a 2027 date."
+    },
+    {
+      "name": "Game Entrepreneurism Minor",
+      "host": "USC School of Cinematic Arts (Interactive Media & Games) with USC Marshall",
+      "category": "Courses & Degrees",
+      "description": "Minor for game designers on forming, maintaining and expanding a team into a game business.",
+      "timing": "Offered under the current catalogue (catoid=22 link). Application process not checked.",
+      "eligibility": "USC undergraduates; requirements in the catalogue.",
+      "funding": "None (academic program).",
+      "link": "https://cinema.usc.edu/degrees/minor/",
+      "evidence": [
+        {
+          "url": "https://cinema.usc.edu/degrees/minor/",
+          "quote": "A minor in Game Entrepreneurism helps game designers take their ideas to the next level, teaching how to form, maintain, and expand their team into a business."
+        },
+        {
+          "url": "https://www.marshall.usc.edu/departments/lloyd-greif-center-entrepreneurial-studies",
+          "quote": "Greif Center page lists Game Entrepreneurism Minor with partner School of Cinematic Arts"
+        }
+      ],
+      "lastActivity": "2026 (page footer 2026; no year stated for the minor)",
+      "recommend": "maybe",
+      "why": "Listed by both Cinematic Arts and the Greif Center, but it is not on Marshall's own 2026-2027 minors list, so confirm it is still admitting students before adding."
+    },
+    {
+      "name": "Media Economics and Entrepreneurship (M2E) Minor",
+      "host": "USC Annenberg with Greif Center",
+      "category": "Courses & Degrees",
+      "description": "24-unit minor combining communication, journalism and entrepreneurship courses on the economics of media and new media ventures.",
+      "timing": "Offered per the Annenberg minors page; requirements shown for the most current catalogue year.",
+      "eligibility": "Minimum 3.0 GPA and 32 completed units (sophomore standing). GPA does not guarantee admission.",
+      "funding": "None (academic program).",
+      "link": "https://annenberg.usc.edu/node/56886",
+      "evidence": [
+        {
+          "url": "https://annenberg.usc.edu/node/56886",
+          "quote": "24-unit minor housed in the School of Communication combining Communication, Journalism, and Entrepreneurship (from page summary; requires BAEP 450 or 451 and COMM 209)"
+        },
+        {
+          "url": "https://www.marshall.usc.edu/departments/lloyd-greif-center-entrepreneurial-studies",
+          "quote": "Greif Center lists Media Entrepreneurship & Economics Minor with partner Annenberg"
+        }
+      ],
+      "lastActivity": "2026 (page footer 2026)",
+      "recommend": "maybe",
+      "why": "Entrepreneurship-themed minor with a named Greif tie, but it is not on Marshall's 2026-2027 minors page and the page states no catalogue year. Same decision as the Game Entrepreneurism minor."
+    },
+    {
+      "name": "Hub@CUB (USC Innovation Headquarters)",
+      "host": "USC Office of Research and Innovation / USC and Techstars",
+      "category": "Makerspaces & Coworking",
+      "description": "USC's innovation headquarters on the edge of University Park campus, home of the USC and Techstars programs, with workshops, lectures and masterclass series for Trojan founders.",
+      "timing": "Ongoing; programming tied to Techstars cohorts (University Catalyst Aug 31 to Nov 5, 2026).",
+      "eligibility": "Trojan entrepreneurs; whether drop-in coworking is open to students is not stated.",
+      "funding": "None.",
+      "link": "https://innovation.usc.edu/connect/",
+      "evidence": [
+        {
+          "url": "https://innovation.usc.edu/connect/",
+          "quote": "The Hub@Cub, strategically located on the edge of USC's University Park Campus, is USC's innovation headquarters."
+        },
+        {
+          "url": "https://innovation.usc.edu/connect/",
+          "quote": "Hub@Cub hosts a range of programs tailored to support Trojan entrepreneurs, including educational workshops, lectures, seminars, and masterclass series."
+        }
+      ],
+      "lastActivity": "2026",
+      "recommend": "maybe",
+      "why": "A physical location founders will hear about but cannot find in the catalog. Open questions: address (the site gives only 3720 Flower Street) and whether students can use it for coworking. Could be a note on the Techstars entries instead of a new row."
+    },
+    {
+      "name": "Alumni Entrepreneur of the Year Award",
+      "host": "Lloyd Greif Center for Entrepreneurial Studies (USC Marshall)",
+      "category": "Events & Speakers",
+      "description": "Greif Center's annual recognition of an alumni founder, with a public nomination call.",
+      "timing": "2026 nominations ran Jan 28 to Jan 31, 2026 via Google Form.",
+      "eligibility": "USC alumni entrepreneurs nominated by the community.",
+      "funding": "None (recognition).",
+      "link": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=409735",
+      "evidence": [
+        {
+          "url": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=409735",
+          "quote": "The Lloyd Greif Center for Entrepreneurial Studies is now accepting nominations for the 2026 Alumni Entrepreneur of the Year Award"
+        }
+      ],
+      "lastActivity": "2026-01-31",
+      "recommend": "maybe",
+      "why": "Only one source, and it is a recognition rather than a resource for founders. Probably fits as a line in the Marcia Israel Celebration entry instead."
+    },
+    {
+      "name": "Blackstone LaunchPad Internship Program",
+      "host": "Blackstone LaunchPad at USC (Greif Center)",
+      "category": "Mentorship & Office Hours",
+      "description": "Paid internships with startups, with an early-access sign-up window each cycle.",
+      "timing": "Sign-up window Dec 3 to Dec 18, 2025 for spring internships; later cycles not seen.",
+      "eligibility": "USC students (Blackstone LaunchPad network).",
+      "funding": "Paid internships (amounts not stated).",
+      "link": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=408798",
+      "evidence": [
+        {
+          "url": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=408798",
+          "quote": "A new wave of paid Blackstone LaunchPad internships will open this spring"
+        }
+      ],
+      "lastActivity": "2025-12-18",
+      "recommend": "maybe",
+      "why": "Single EngageSC listing with thin detail and no external confirmation. Better as a sentence under Blackstone LaunchPad than a separate row. No good category fits."
+    },
+    {
+      "name": "Sunstone Economic Development Challenge @ USC Price",
+      "host": "USC Price School with City/County Management Fellowship",
+      "category": "Competitions & Pitch",
+      "description": "Student teams partner with local governments on strategies to attract and retain small businesses; final pitches win cash prizes.",
+      "timing": "2026 final pitch Apr 23, 2026; 2026-27 info session Sep 4, 2026; final pitch Thursday, Apr 22, 2027.",
+      "eligibility": "USC Price public policy students with active standing.",
+      "funding": "1st $5,000, 2nd $3,000, 3rd $1,500 (2026-27).",
+      "link": "https://sites.usc.edu/sunstone-price-challenge/",
+      "evidence": [
+        {
+          "url": "https://calendar.usc.edu/event/sunstone-economic-development-challenge-at-usc-price-final-pitch",
+          "quote": "student teams collaborate with local government clients to design actionable strategies for economic development issues, competing for cash prizes!"
+        },
+        {
+          "url": "https://calendar.usc.edu/event/sept-4-price-sunstone-challenge-student-competitor-information-session",
+          "quote": "The top 3 teams will win cash prizes. 1st Place: $5,0002nd Place: $3,0003rd Place: $1,500"
+        }
+      ],
+      "lastActivity": "2026-09-04",
+      "recommend": "maybe",
+      "why": "Active and prized, but students advise cities on economic development rather than found startups. Likely out of Founder Compass scope; include only if the scope allows civic-policy competitions."
+    },
+    {
+      "name": "TroyLabs DEMO 2026",
+      "host": "TroyLabs (student-run, Greif sponsored)",
+      "category": "Events & Speakers",
+      "description": "Annual student startup conference and pitch competition, Apr 22, 2026, $7,500 first and $3,000 second.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://demo.troylabs.vc/",
+      "evidence": [
+        {
+          "url": "https://demo.troylabs.vc/",
+          "quote": "DEMO 2026 is USC's largest student-organized entrepreneurship conference, presented by TroyLabs and sponsored by the USC Lloyd Greif Center for Entrepreneurial Studies."
+        }
+      ],
+      "lastActivity": "2026-04-22",
+      "recommend": "skip",
+      "why": "Already covered: the TroyLabs entry lists DEMO, the April 22, 2026 date and the $7,500/$3,000 prizes."
+    },
+    {
+      "name": "Microsoft for Startups Investor Network (OORI)",
+      "host": "USC OORI",
+      "category": "Funding & Grants",
+      "description": "Up to $25,000 Azure credits and AI tools for USC-affiliated founders via an OORI access code.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://research.usc.edu/news/2026/03/oori-unlocks-microsoft-for-startups-resources-for-usc-entrepreneurs/",
+      "evidence": [
+        {
+          "url": "https://research.usc.edu/news/2026/03/oori-unlocks-microsoft-for-startups-resources-for-usc-entrepreneurs/",
+          "quote": "Submit an application through the OORI portal; OORI issues an access code (per article summary)."
+        }
+      ],
+      "lastActivity": "2026-03-27",
+      "recommend": "skip",
+      "why": "Near-duplicate of the Microsoft for Startups Founders Hub (USC offer) entry. Worth updating that entry's link and benefit text (OORI portal at provost.sma.usc.edu/prog/usc-microsoft), not adding a row."
+    },
+    {
+      "name": "Early Career Innovator (general track)",
+      "host": "USC OORI",
+      "category": "Funding & Grants",
+      "description": "$5,000 to work 3 months with a USC-affiliated startup.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://rii.usc.edu/wp-content/uploads/sites/5/2025/10/Innovation-Catalyst-Program-Final-002.pdf",
+      "evidence": [
+        {
+          "url": "https://rii.usc.edu/wp-content/uploads/sites/5/2025/10/Innovation-Catalyst-Program-Final-002.pdf",
+          "quote": "Early Career Innovator: Provides $5,000 in funding for USC students to gain hands-on experience by working with USC-affiliated startups for a 3-month period."
+        }
+      ],
+      "lastActivity": "2026",
+      "recommend": "skip",
+      "why": "Already covered by Early Career Innovator Award (both tracks)."
+    },
+    {
+      "name": "Greif Center Practitioners-in-Residence",
+      "host": "Lloyd Greif Center",
+      "category": "Mentorship & Office Hours",
+      "description": "Workshops, meetings and mentorship with experienced professionals, Jan 28 to May 16, 2026.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=409733",
+      "evidence": [
+        {
+          "url": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=409733",
+          "quote": "Our Practitioners-in-Residence Program offers USC students interested in entrepreneurship access to workshops, meetings, and mentorship with experienced professionals in a variety of areas."
+        }
+      ],
+      "lastActivity": "2026-05-16",
+      "recommend": "skip",
+      "why": "Almost certainly the same program as Marshall Experts-in-Residence (same Greif EngageSC group, same spring term). Consider adding 'Practitioners-in-Residence' as an alias rather than a new row."
+    },
+    {
+      "name": "CoFounder Speed Meet",
+      "host": "Greif Center and Viterbi TIE Hub",
+      "category": "Events & Speakers",
+      "description": "Co-founder selection workshop and matching, Sept 18 and Oct 16, 2025.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://calendar.usc.edu/event/cofounder-speed-meet",
+      "evidence": [
+        {
+          "url": "https://calendar.usc.edu/event/cofounder-speed-meet",
+          "quote": "Join the Greif Center & Viterbi TIE Hub for a dynamic workshop designed to help you navigate the ins and outs of building a successful entrepreneurial partnership!"
+        }
+      ],
+      "lastActivity": "2025-10-16",
+      "recommend": "skip",
+      "why": "Duplicate of Co-founder Speed Dating. Could add 'CoFounder Speed Meet' as an alias."
+    },
+    {
+      "name": "Greif LaunchPad Idea to Launch series and office hours",
+      "host": "Blackstone LaunchPad at USC",
+      "category": "Mentorship & Office Hours",
+      "description": "Weekly Idea to Launch sessions, coworking and office hours with Amiah Sheppard, fall 2025 to spring 2026.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=404769",
+      "evidence": [
+        {
+          "url": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=404769",
+          "quote": "Greif LaunchPad Idea to Launch (EngageSC event series, Sept 22 2025 to spring 2026)"
+        }
+      ],
+      "lastActivity": "2026-04-01",
+      "recommend": "skip",
+      "why": "Covered by Blackstone LaunchPad at USC and Marshall Experts-in-Residence (which already aliases Greif LaunchPad Office Hours)."
+    },
+    {
+      "name": "Marshall Tech Fest",
+      "host": "USC Marshall (student-led, HTA)",
+      "category": "Events & Speakers",
+      "description": "Two-day student-led tech forum with a hackathon, Apr 10, 2026.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://calendar.usc.edu/event/marshall-tech-fest",
+      "evidence": [
+        {
+          "url": "https://calendar.usc.edu/event/marshall-tech-fest",
+          "quote": "USC Marshall Tech Fest 2026 is a two-day, student-led, industry-facing technology and innovation forum"
+        }
+      ],
+      "lastActivity": "2026-04-10",
+      "recommend": "skip",
+      "why": "Already in the High Tech Association (HTA) entry (Tech Fest each April)."
+    },
+    {
+      "name": "Spark SC Startup Career Fair",
+      "host": "Spark SC",
+      "category": "Events & Speakers",
+      "description": "Startup career fair run by Spark SC, Feb 2026.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://www.cs.usc.edu/newsletter/ug-ms-phd-startup-career-fair-by-spark-sc/",
+      "evidence": [
+        {
+          "url": "https://www.cs.usc.edu/newsletter/ug-ms-phd-startup-career-fair-by-spark-sc/",
+          "quote": "Search snippet only: USC Viterbi CS newsletter dated Feb 11, 2026 announces a Startup Career Fair run by Spark SC (page returned 404 when opened)"
+        }
+      ],
+      "lastActivity": "2026-02",
+      "recommend": "skip",
+      "why": "Event of an existing club (Spark SC). Not opened, so unverified. No new row."
+    },
+    {
+      "name": "Research Catalyst Program (RCP)",
+      "host": "USC OORI",
+      "category": "Funding & Grants",
+      "description": "Faculty-led research funding in seven tracks, two deadlines a year (Feb 16 and Sep 14).",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://research.usc.edu/?p=6483",
+      "evidence": [
+        {
+          "url": "https://research.usc.edu/?p=6483",
+          "quote": "The RCP promotes foundational and interdisciplinary research by supporting faculty-led projects across seven distinct tracks."
+        }
+      ],
+      "lastActivity": "2026-09-14",
+      "recommend": "skip",
+      "why": "Faculty research funding, not founder support. Its SBIR/STTR track is already covered by SBIR/STTR Planning Award."
+    },
+    {
+      "name": "Wrigley Sustainability Prize",
+      "host": "USC Wrigley Institute",
+      "category": "Competitions & Pitch",
+      "description": "Student sustainability seed prize ($7,000/$5,000/$3,000) with a route into NVSC.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://calendar.usc.edu/event/wrigley_sustainability_prize_applications_open",
+      "evidence": [
+        {
+          "url": "https://calendar.usc.edu/event/wrigley_sustainability_prize_applications_open",
+          "quote": "First: $7,000 cash, plus automatic second-round entry to the USC Marshall School of Business New Venture Seed Competition"
+        }
+      ],
+      "lastActivity": "2021",
+      "recommend": "skip",
+      "why": "Latest evidence is the 2021 cycle. No 2025 or 2026 listing found."
+    },
+    {
+      "name": "Azure Ventures Group",
+      "host": "Student club",
+      "category": "Student Organizations",
+      "description": "Student club offering capital, consulting and training to student startups.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://dailytrojan.com/?p=156282",
+      "evidence": [
+        {
+          "url": "https://dailytrojan.com/?p=156282",
+          "quote": "Daily Trojan article dated February 12, 2021 describes the club; no 2025 or 2026 activity found."
+        }
+      ],
+      "lastActivity": "2021",
+      "recommend": "skip",
+      "why": "Stale. No current activity."
+    },
+    {
+      "name": "Viterbi Venture Incubation Program (VIP)",
+      "host": "Student-run, Viterbi",
+      "category": "Accelerators & Incubators",
+      "description": "Student-run incubator at the USC Hacker House.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://dailytrojan.com/?p=97995",
+      "evidence": [
+        {
+          "url": "https://dailytrojan.com/?p=97995",
+          "quote": "Undated Daily Trojan article; no current page found."
+        }
+      ],
+      "lastActivity": "unknown",
+      "recommend": "skip",
+      "why": "Stale or undated. Viterbi Startup Garage and TroyLabs BUILD cover this space."
+    },
+    {
+      "name": "IYA Student Venture Fund",
+      "host": "USC Iovine and Young Academy",
+      "category": "Funding & Grants",
+      "description": "Giving-page fund described as seed funding for students ready to launch ventures.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://fightongiveback.usc.edu/p/student-venture-fund/c/iovine-and-young-academy",
+      "evidence": [
+        {
+          "url": "https://fightongiveback.usc.edu/p/student-venture-fund/c/iovine-and-young-academy",
+          "quote": "The Student Venture Fund assists students ready to launch their ventures, providing seed funding and resources to help them turn innovative ideas into reality. (giving page also shows 'No funds available')"
+        }
+      ],
+      "lastActivity": "unknown",
+      "recommend": "skip",
+      "why": "Donation page only; no application process, dates or awards found. IYA Ignite Grants and Innovation Quest cover IYA funding."
+    },
+    {
+      "name": "NAE Grand Challenges (Viterbi)",
+      "host": "USC Viterbi VSi2",
+      "category": "Competitions & Pitch",
+      "description": "Student team competition tied to the NAE Grand Challenges Summit.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://viterbiinnovation.usc.edu/competitions-and-programs/grand-challenges/",
+      "evidence": [
+        {
+          "url": "https://viterbiinnovation.usc.edu/competitions-and-programs/grand-challenges/",
+          "quote": "Page shows 'Applications Currently Closed'; last updated August 4, 2022; no 2025 or 2026 info."
+        }
+      ],
+      "lastActivity": "2022",
+      "recommend": "skip",
+      "why": "Stale."
+    },
+    {
+      "name": "SoCal Deep Tech Symposium 2026",
+      "host": "Alliance for SoCal Innovation (not USC)",
+      "category": "Events & Speakers",
+      "description": "Sept 24, 2026 startup and investor symposium in El Segundo, listed on the USC calendar.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://calendar.usc.edu/event/the-socal-deep-tech-symposium-2026",
+      "evidence": [
+        {
+          "url": "https://calendar.usc.edu/event/the-socal-deep-tech-symposium-2026",
+          "quote": "The SoCal Deep Tech Symposium gathers over 130 top corporate leaders, government representatives, startup founders, and early-stage investors"
+        }
+      ],
+      "lastActivity": "2026-09-24",
+      "recommend": "skip",
+      "why": "Outside USC. Hosted by DTI at THE BR-DGE and produced by the Alliance for SoCal Innovation, which is archived in the catalog."
+    },
+    {
+      "name": "USC Stevens Student Innovator Showcase",
+      "host": "USC Stevens Center",
+      "category": "Competitions & Pitch",
+      "description": "Student pitch showcase with USC-sponsored prizes.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://viterbiundergrad.usc.edu/?p=26932",
+      "evidence": [
+        {
+          "url": "https://viterbiundergrad.usc.edu/?p=26932",
+          "quote": "Listing dated 2021 (search result); no 2025 or 2026 edition found."
+        }
+      ],
+      "lastActivity": "2021",
+      "recommend": "skip",
+      "why": "Stale."
+    },
+    {
+      "name": "MSSE Student Association",
+      "host": "USC Marshall MSSE students",
+      "category": "Student Organizations",
+      "description": "Student association for the MS in Social Entrepreneurship.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://engage.usc.edu/Mssesa/",
+      "evidence": [
+        {
+          "url": "https://engage.usc.edu/Mssesa/",
+          "quote": "Only visible event is an MSSE Holiday Dinner on Dec 5, 2025."
+        }
+      ],
+      "lastActivity": "2025-12-05",
+      "recommend": "skip",
+      "why": "Social club, not a founder resource."
+    },
+    {
+      "name": "Engage startup and VC clubs already reviewed (EISA, VC Academy, MOVE, TBA, Viterbi Vision Venture, USG Startup Fund, TAMID, MAIA, Impact Investing Group, Project Athena, BlackGen Capital)",
+      "host": "Various student groups",
+      "category": "Student Organizations",
+      "description": "Registered but quiet clubs with startup, VC or impact themes.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://engage.usc.edu/club_signup?view=all&search=entrepreneur",
+      "evidence": [
+        {
+          "url": "https://engage.usc.edu/club_signup?view=all&search=entrepreneur",
+          "quote": "EngageSC shows no events for these groups (BlackGen Capital page shows 0 events; earlier Oct 22 run found the others inactive)."
+        }
+      ],
+      "lastActivity": "none found",
+      "recommend": "skip",
+      "why": "None show 2025 or 2026 activity. Recheck if a club posts an event or LinkedIn update."
+    },
+    {
+      "name": "Wallis Annenberg Innovation Internship Program",
+      "host": "USC Annenberg",
+      "category": "Mentorship & Office Hours",
+      "description": "Student internship presentation, Sept 30, 2026.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://calendar.usc.edu/event/wallis-annenberg-innovation-internship-program-presentation",
+      "evidence": [
+        {
+          "url": "https://calendar.usc.edu/event/wallis-annenberg-innovation-internship-program-presentation",
+          "quote": "Join us for a student presentation for the Wallis Annenberg Innovation Internship Program on September 30"
+        }
+      ],
+      "lastActivity": "2026-09-30",
+      "recommend": "skip",
+      "why": "Journalism innovation internship, not a founder program."
+    },
+    {
+      "name": "Entrepreneurship Through Acquisition talk",
+      "host": "Greif Center",
+      "category": "Events & Speakers",
+      "description": "One-off hybrid talk, Oct 1, 2025.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=406819",
+      "evidence": [
+        {
+          "url": "https://engage.usc.edu/entrepreneur/rsvp_boot?id=406819",
+          "quote": "Entrepreneurship Through Acquisition (Wednesday, 01 October 2025)"
+        }
+      ],
+      "lastActivity": "2025-10-01",
+      "recommend": "skip",
+      "why": "One-off event, not a program."
+    },
+    {
+      "name": "Proving Ground (University of South Carolina)",
+      "host": "University of South Carolina, not USC",
+      "category": "Competitions & Pitch",
+      "description": "Startup competition with up to $25,000 in seed money.",
+      "timing": "n/a",
+      "eligibility": "n/a",
+      "funding": "n/a",
+      "link": "https://cms.sc.edu/study/colleges_schools/moore/research_and_centers/centers/faber_entrepreneurship_center/proving_ground.php",
+      "evidence": [
+        {
+          "url": "https://cms.sc.edu/study/colleges_schools/moore/research_and_centers/centers/faber_entrepreneurship_center/proving_ground.php",
+          "quote": "Live pitch competition: Friday, April 17, 2026."
+        }
+      ],
+      "lastActivity": "2026-04-17",
+      "recommend": "skip",
+      "why": "Different school. Flagged because searches for 'USC' return South Carolina programs."
+    }
+  ]
+}

@@ -1878,6 +1878,54 @@
     "lastVerified": "2026-10-21"
   },
   {
+    "id": "social-entrepreneurship-minor",
+    "name": "Social Entrepreneurship Minor",
+    "aliases": [],
+    "group": "marshall",
+    "category": "Courses & Degrees",
+    "description": "Undergraduate Marshall minor on social entrepreneurship and managing social enterprises, open to students in other majors.",
+    "timing": "Applications accepted year-round; decisions in about 10 business days.",
+    "cadence": "rolling",
+    "months": [],
+    "eligibility": "USC undergraduates with 32 to 48 completed units, a declared major and a minimum USC GPA of 2.75.",
+    "audience": [
+      "undergrad"
+    ],
+    "stage": [],
+    "notes": null,
+    "lastVerified": "2026-10-26",
+    "funding": null,
+    "link": "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors",
+    "sources": [
+      "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors"
+    ],
+    "confidence": "high"
+  },
+  {
+    "id": "technology-commercialization-minor",
+    "name": "Technology Commercialization Minor",
+    "aliases": [],
+    "group": "marshall",
+    "category": "Courses & Degrees",
+    "description": "Undergraduate minor from Marshall and Viterbi on taking technology from lab to market, combining business and engineering courses.",
+    "timing": "Applications accepted year-round; decisions in about 10 business days.",
+    "cadence": "rolling",
+    "months": [],
+    "eligibility": "USC undergraduates with 32 to 48 completed units, a declared major and a minimum USC GPA of 2.75.",
+    "audience": [
+      "undergrad"
+    ],
+    "stage": [],
+    "notes": null,
+    "lastVerified": "2026-10-26",
+    "funding": null,
+    "link": "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors",
+    "sources": [
+      "https://students.marshall.usc.edu/current-students/applying-marshall-current-usc-students/marshall-minors"
+    ],
+    "confidence": "high"
+  },
+  {
     "id": "founder-central-initiative",
     "name": "Founder Central Initiative",
     "aliases": [
@@ -2075,7 +2123,7 @@
     ],
     "group": "marshall",
     "category": "Events & Speakers",
-    "description": "Annual Greif Center end-of-year celebration where student and alumni ventures exhibit (49 in one recent year), attendees vote with gold coins, and prizes go to outstanding seniors and student ventures.",
+    "description": "Annual Greif Center end-of-year celebration where student and alumni ventures exhibit (49 in one recent year), attendees vote with gold coins, and prizes go to outstanding seniors and student ventures. The Greif Center also names an Alumni Entrepreneur of the Year each year (nominations open in January).",
     "timing": "Annual, around May 1 (end of spring semester)",
     "cadence": "annual",
     "months": [
@@ -2101,7 +2149,7 @@
     ],
     "confidence": "medium",
     "notes": "Year of the May 1 edition not confirmed (likely 2025, when Elissa Grossman stepped down as director). Prize amounts unknown.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "marshall-experts-in-residence",
@@ -3338,6 +3386,40 @@
     "lastVerified": "2026-10-26"
   },
   {
+    "id": "usc-amgen-bioaccelerator",
+    "name": "USC + Amgen BioAccelerator",
+    "aliases": [
+      "Amgen BioAccelerator",
+      "USC Amgen BioAccelerator Program"
+    ],
+    "group": "oori",
+    "category": "Accelerators & Incubators",
+    "description": "Competitive program that picks one early-stage USC-affiliated biotech or life science company for investment from the Alfred E. Mann Institute, Amgen mentorship and a year of free lab space.",
+    "timing": "Inaugural 2026 cycle: applications opened Jun 1 and closed Sep 30, 2026 (5 PM PT). Next cycle not yet announced.",
+    "cadence": "annual",
+    "months": [
+      6,
+      7,
+      8,
+      9
+    ],
+    "eligibility": "USC-affiliated early-stage therapeutics, diagnostics, drug discovery platform, research tool and enabling biotech companies.",
+    "audience": [],
+    "stage": [
+      "prototype",
+      "launched"
+    ],
+    "notes": null,
+    "lastVerified": "2026-10-26",
+    "funding": "Up to $250,000 from AMI, plus Amgen mentorship and a year of free lab space",
+    "link": "https://provost.sma.usc.edu/prog/usc-amgen",
+    "sources": [
+      "https://provost.sma.usc.edu/prog/usc-amgen",
+      "https://calendar.usc.edu/event/usc-amgen-bioaccelerator-program-webinar"
+    ],
+    "confidence": "high"
+  },
+  {
     "id": "early-career-innovator-award",
     "name": "Early Career Innovator Award",
     "aliases": [
@@ -3619,7 +3701,7 @@
     ],
     "group": "oori",
     "category": "Accelerators & Incubators",
-    "description": "13-week in-person Techstars accelerator on USC's UPC campus with a $220,000 equity investment, $2M+ in perks, hands-on mentorship and a Demo Day. Focus on bioscience, engineering, AI, health, deep tech, media tech.",
+    "description": "13-week in-person Techstars accelerator on USC's UPC campus with a $220,000 equity investment, $2M+ in perks, hands-on mentorship and a Demo Day. Focus on bioscience, engineering, AI, health, deep tech, media tech. Based at Hub@CUB, USC's innovation headquarters run by OORI.",
     "timing": "Annual; 2027 cohort applications open Aug 24, 2026 with final deadline Nov 18, 2026; program starts Mar 8, 2027 and Demo Day is Jun 3, 2027.",
     "cadence": "annual",
     "months": [
@@ -3667,7 +3749,7 @@
     ],
     "group": "oori",
     "category": "Competitions & Pitch",
-    "description": "Weekend event where Trojans pitch ideas, form teams, build with mentors, and pitch to judges. Part of the USC and Techstars Digital Economy Program and a feeder to its accelerator.",
+    "description": "Weekend event where Trojans pitch ideas, form teams, build with mentors, and pitch to judges. Part of the USC and Techstars Digital Economy Program and a feeder to its accelerator. Based at Hub@CUB, USC's innovation headquarters run by OORI.",
     "timing": "Annual; the 2026 edition ran March 27-29, 2026 at the Michelson Center for Convergent Bioscience. 2027 date not yet posted.",
     "cadence": "annual",
     "months": [
@@ -3707,7 +3789,7 @@
     ],
     "group": "oori",
     "category": "Accelerators & Incubators",
-    "description": "10-week, mostly virtual, non-equity pre-accelerator for up to 20 early-stage USC startups with masterclasses, pitch coaching and 1:1 mentoring, ending in a Pitch Day.",
+    "description": "10-week, mostly virtual, non-equity pre-accelerator for up to 20 early-stage USC startups with masterclasses, pitch coaching and 1:1 mentoring, ending in a Pitch Day. Based at Hub@CUB, USC's innovation headquarters run by OORI.",
     "timing": "2026 cohort: applications Apr 29 to Jul 8, 2026; program starts Aug 31, 2026; Pitch Day Nov 5, 2026.",
     "cadence": "annual",
     "months": [
@@ -4952,6 +5034,33 @@
     "lastVerified": "2026-10-26"
   },
   {
+    "id": "impact-investing-group-at-usc",
+    "name": "Impact Investing Group at USC",
+    "aliases": [
+      "IIG"
+    ],
+    "group": "clubs",
+    "category": "Student Organizations",
+    "description": "USC's student-run undergraduate impact investing club; members learn impact investing hands-on through pro bono consulting, microfinance and financial research for social entrepreneurs.",
+    "timing": "Recruits each semester (dates not published).",
+    "cadence": "semester",
+    "months": [],
+    "eligibility": "USC undergraduates.",
+    "audience": [
+      "undergrad"
+    ],
+    "stage": [],
+    "notes": "Recruiting dates not published; LinkedIn shows no recent posts.",
+    "lastVerified": "2026-10-26",
+    "funding": null,
+    "link": "https://www.linkedin.com/company/impact-investing-at-usc/",
+    "sources": [
+      "https://engage.usc.edu/club_signup?view=all&search=impact%20investing",
+      "https://www.linkedin.com/company/impact-investing-at-usc/"
+    ],
+    "confidence": "medium"
+  },
+  {
     "id": "troylabs",
     "name": "TroyLabs",
     "aliases": [
@@ -5085,7 +5194,8 @@
     ],
     "confidence": "medium",
     "notes": "Opened fall 2014. Pitch review sessions and founder breakfasts come from existing app data; current schedule not confirmed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "archived": "No longer running at USC (Peyton, Oct 26, 2026)."
   },
   {
     "id": "founder-vc-fireside-chats",

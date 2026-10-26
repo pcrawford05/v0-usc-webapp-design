@@ -26,13 +26,3 @@ export function tierOf(p: Program): Tier {
 export const listed = programs.filter(p => tierOf(p) === "listed")
 export const courses = programs.filter(p => tierOf(p) === "course")
 export const advisorOnly = programs.filter(p => tierOf(p) === "advisor")
-
-// Discover opens with one question. Each answer is a small set of categories.
-export const NEEDS = [
-  { key: "funding", label: "Funding", hint: "Grants, funds and prize money", categories: ["Funding & Grants", "Competitions & Pitch"] },
-  { key: "team", label: "A team", hint: "Clubs, mixers and co-founder matching", categories: ["Student Organizations", "Events & Speakers"] },
-  { key: "build", label: "To build", hint: "Accelerators, incubators and spaces", categories: ["Accelerators & Incubators", "Makerspaces & Coworking"] },
-  { key: "learn", label: "To learn", hint: "Degrees, minors and courses", categories: ["Courses & Degrees"] },
-  { key: "research", label: "Lab to market", hint: "Spinning out research", categories: ["Research Commercialization", "Legal & IP"] },
-] as const satisfies readonly { key: string; label: string; hint: string; categories: readonly Category[] }[]
-export type NeedKey = (typeof NEEDS)[number]["key"]

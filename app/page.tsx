@@ -13,7 +13,6 @@ import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
 import { DiscoverView } from "@/components/atlas/Discover"
 import { SavedView } from "@/components/atlas/Saved"
 import { AdvisorView } from "@/components/atlas/views"
-import { NEEDS, type NeedKey } from "@/lib/catalog"
 import { describeProfile, hasProfile, ROLES } from "@/lib/profile"
 import { programById, programs } from "@/lib/programs"
 import { filterParams, readFilters, type Filters } from "@/lib/filters"
@@ -55,7 +54,6 @@ function Atlas() {
   const rawMode = params.get("mode")
   // "map" was the subway's old name in shared links.
   const mode: Mode = rawMode === "subway" || rawMode === "map" ? "subway" : rawMode === "bubbles" || rawMode === "campus" ? rawMode : "list"
-  const need = (NEEDS.find(n => n.key === params.get("need"))?.key ?? null) as NeedKey | null
   const openId = params.get("p")
   const open = openId ? programById.get(openId) ?? null : null
 
@@ -128,7 +126,7 @@ function Atlas() {
       {/* Thin header: brand, search, profile. On phones the tabs move to a bottom bar. */}
       <header className="sticky top-0 z-40 px-3 pt-2 sm:px-6 sm:pt-3">
         <div className="glass mx-auto flex max-w-7xl items-center gap-2 rounded-2xl px-3 py-2 sm:gap-3 sm:rounded-3xl sm:px-4">
-          <button onClick={() => setParam({ view: "discover", mode: null, need: null, p: null })} className="group/logo flex min-w-0 items-center gap-2.5" aria-label="Founder Compass home">
+          <button onClick={() => setParam({ view: "discover", mode: null, p: null })} className="group/logo flex min-w-0 items-center gap-2.5" aria-label="Founder Compass home">
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#b3001b] to-[#7a0000] text-[#FFCC00] shadow-[inset_0_1px_0_rgba(255,255,255,.35)]">
               <Compass className="h-[18px] w-[18px] transition-transform duration-700 group-hover/logo:rotate-[200deg]" />
             </span>
@@ -158,7 +156,7 @@ function Atlas() {
       <main className="mx-auto max-w-7xl px-4 py-5 sm:px-6 sm:py-6">
         <div key={`${tab}-${mode}`} className="animate-view">
           {tab === "discover" && mode !== "bubbles" && (
-            <DiscoverView filters={filters} setFilters={setFilters} need={need} setNeed={n => setParam({ need: n })} profile={me} mode={mode} setMode={setMode} route={params.get("route")} highlight={highlight} {...card} />
+            <DiscoverView filters={filters} setFilters={setFilters} profile={me} mode={mode} setMode={setMode} route={params.get("route")} highlight={highlight} {...card} />
           )}
           {tab === "discover" && mode === "bubbles" && (
             <div className="space-y-3">

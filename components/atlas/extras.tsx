@@ -105,7 +105,7 @@ export function EngageEvents({ onOpen }: { onOpen: (id: string) => void }) {
 
 const STEPS = [
   { target: "search", title: "Search everything", body: "Type anything: grants, biotech, pitch, co-founder. Press ⌘K from anywhere." },
-  { target: "needs", title: "Start with what you need", body: "Pick funding, a team, a place to build and more. You get a short list of the best bets, with filters when you want them." },
+  { target: "filters", title: "Narrow it down", body: "Filter by who you are, your stage, your school, or what is open now. Every view has its own shareable link." },
   { target: "ask", title: "Talk to the Advisor", body: "Tell it about yourself and get advice like you would from a mentor, drawn only from real USC programs." },
 ]
 const TOUR_KEY = "compass:toured"

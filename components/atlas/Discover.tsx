@@ -1,16 +1,18 @@
 "use client"
 
-import { Bookmark, BookmarkCheck, ChevronDown, Clock, List, Map as MapIcon, Route, Search, ShieldCheck, SlidersHorizontal, X } from "lucide-react"
+import { BookOpen, Bookmark, BookmarkCheck, ChevronDown, GraduationCap, Clock, List, Map as MapIcon, Route, Search, ShieldCheck, SlidersHorizontal, X } from "lucide-react"
 import { useEffect, useMemo, useState } from "react"
 
-import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
-import { courses, listed, NEEDS, type NeedKey } from "@/lib/catalog"
+import { courses, listed } from "@/lib/catalog"
 import { applyFilters, CLEAR_ALL, isOpenNow, monthsAway, type Filters } from "@/lib/filters"
 import { LINES, onMap } from "@/lib/network"
 import { fitScore, type Profile } from "@/lib/profile"
-import { AUDIENCE_LABELS, GROUPS, GROUP_KEYS, STAGE_LABELS, programById, type Audience, type Program, type Stage } from "@/lib/programs"
+import { AUDIENCE_LABELS, CATEGORY_COLORS, GROUPS, MONTHS, programs, GROUP_KEYS, STAGE_LABELS, programById, type Audience, type Program, type Stage } from "@/lib/programs"
 import { rankPrograms } from "@/lib/search"
 import { cn } from "@/lib/utils"
+import eventsData from "@/data/events.json"
+
+const EVENTS_UPDATED = (eventsData as { updated: string }).updated
 
 import { ShareButton } from "./extras"
 import { CampusMap } from "./CampusMap"
@@ -26,11 +28,9 @@ function featured(a: Program, b: Program) {
   return Number(onMap(b.id)) - Number(onMap(a.id)) || Number(b.confidence === "high") - Number(a.confidence === "high") || monthsAway(a) - monthsAway(b)
 }
 
-export function DiscoverView({ filters: f, setFilters, need, setNeed, profile, mode, setMode, route, highlight, ...card }: CardProps & {
+export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, route, highlight, ...card }: CardProps & {
   filters: Filters
   setFilters: (f: Partial<Filters>) => void
-  need: NeedKey | null
-  setNeed: (n: NeedKey | null) => void
   profile: Profile | null
   mode: Exclude<Mode, "bubbles">
   setMode: (m: Mode) => void
@@ -45,21 +45,19 @@ export function DiscoverView({ filters: f, setFilters, need, setNeed, profile, m
     const t = setTimeout(() => setFilters({ q: draft }), 200)
     return () => clearTimeout(t)
   }, [draft, f.q, setFilters])
-  useEffect(() => setAll(false), [need, f])
+  useEffect(() => setAll(false), [f])
 
-  const needCats = need ? (NEEDS.find(n => n.key === need)!.categories as readonly string[]) : null
   // Searching looks through everything listed plus folded courses; browsing shows listed programs only.
   const pool = useMemo(() => {
-    const base = f.q.trim() ? rankPrograms(f.q, 200).map(r => r.program).filter(p => listed.includes(p) || courses.includes(p)) : listed
-    return needCats ? base.filter(p => needCats.includes(p.category)) : base
-  }, [f.q, needCats])
+    return f.q.trim() ? rankPrograms(f.q, 200).map(r => r.program).filter(p => listed.includes(p) || courses.includes(p)) : listed
+  }, [f.q])
   const items = useMemo(() => {
     const out = applyFilters(pool, f)
     if (f.q.trim()) return out
     return [...out].sort((a, b) => (profile ? fitScore(b, profile) - fitScore(a, profile) : 0) || featured(a, b))
   }, [pool, f, profile])
   const shown = all ? items : items.slice(0, FIRST)
-  const showCourses = !f.q.trim() && (!need || need === "learn")
+  const showCourses = !f.q.trim()
 
   const count = (skip: Parameters<typeof applyFilters>[2], test: (p: Program) => boolean) => applyFilters(pool, f, skip).filter(test).length
   const chips: { label: string; clear: Partial<Filters> }[] = [
@@ -73,30 +71,9 @@ export function DiscoverView({ filters: f, setFilters, need, setNeed, profile, m
 
   return (
     <div className="space-y-4">
-      <section className="space-y-3">
-        <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-3xl">What do you need?</h1>
-        <div data-tour="needs" className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:px-0" role="radiogroup" aria-label="What you need">
-          {NEEDS.map(n => (
-            <button
-              key={n.key}
-              role="radio"
-              aria-checked={need === n.key}
-              onClick={() => setNeed(need === n.key ? null : n.key)}
-              title={n.hint}
-              className={cn(
-                "shrink-0 rounded-2xl px-4 py-2.5 text-[15px] font-semibold transition",
-                need === n.key ? "bg-primary text-primary-foreground shadow-md" : "border border-black/5 bg-white/70 text-foreground hover:bg-white",
-              )}
-            >
-              {n.label}
-            </button>
-          ))}
-        </div>
-        {need && <p className="text-sm text-muted-foreground">{NEEDS.find(n => n.key === need)!.hint}</p>}
-      </section>
 
-      <div className="flex items-center gap-2">
-        <label className="relative min-w-0 flex-1">
+      <div className="flex flex-wrap items-center gap-2">
+        <label className="relative min-w-0 flex-1 basis-full sm:basis-0">
           <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <input
             value={draft}
@@ -111,18 +88,50 @@ export function DiscoverView({ filters: f, setFilters, need, setNeed, profile, m
             </button>
           )}
         </label>
-        <button onClick={() => setSheet(true)} className="inline-flex shrink-0 items-center gap-2 rounded-2xl border border-black/5 bg-white/80 px-3.5 py-3 text-sm font-semibold hover:bg-white">
+        <button onClick={() => setSheet(!sheet)} aria-expanded={sheet} data-tour="filters" className={cn("inline-flex shrink-0 items-center gap-2 rounded-2xl border px-3.5 py-3 text-sm font-semibold transition", sheet ? "border-primary/30 bg-primary/[.06] text-primary" : "border-black/5 bg-white/80 hover:bg-white")}>
           <SlidersHorizontal className="h-4 w-4" />
-          <span className="hidden sm:inline">Filters</span>
+          <span>Filters</span>
           {chips.length > 0 && <span className="rounded-full bg-primary px-1.5 text-[11px] text-primary-foreground">{chips.length}</span>}
         </button>
-        <div className="flex shrink-0 rounded-2xl border border-black/5 bg-white/80 p-1" role="group" aria-label="View">
-          {([["list", List, "List"], ["subway", Route, "Routes"], ["campus", MapIcon, "Map"]] as const).map(([k, Icon, label]) => (
+        <div className="ml-auto flex shrink-0 rounded-2xl border border-black/5 bg-white/80 p-1 sm:ml-0" role="group" aria-label="View">
+          {([["campus", MapIcon, "Map"], ["subway", Route, "Routes"], ["list", List, "List"]] as const).map(([k, Icon, label]) => (
             <button key={k} onClick={() => setMode(k)} aria-pressed={mode === k} aria-label={label} title={label} className={cn("inline-flex items-center gap-1.5 rounded-xl px-2.5 py-2 text-sm font-semibold", mode === k ? "bg-primary text-primary-foreground" : "text-foreground/60 hover:text-foreground")}>
               <Icon className="h-4 w-4" />
               <span className="hidden md:inline">{label}</span>
             </button>
           ))}
+        </div>
+      </div>
+
+      <div className={cn("grid transition-[grid-template-rows,opacity] duration-300 ease-out", sheet ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0")} aria-hidden={!sheet} inert={!sheet}>
+        <div className="overflow-hidden">
+          <div className="grid gap-4 rounded-2xl border border-black/5 bg-white/85 p-4 sm:grid-cols-2 lg:grid-cols-4">
+            <Group label="For">
+              {(Object.keys(AUDIENCE_LABELS) as Audience[]).map(a => (
+                <Opt key={a} on={f.who === a} n={count("who", p => p.audience.includes(a))} onClick={() => setFilters({ who: f.who === a ? null : a })}>{AUDIENCE_LABELS[a]}</Opt>
+              ))}
+            </Group>
+            <Group label="Stage">
+              {(Object.keys(STAGE_LABELS) as Stage[]).map(s => (
+                <Opt key={s} on={f.stage === s} n={count("stage", p => p.stage.includes(s))} onClick={() => setFilters({ stage: f.stage === s ? null : s })}>{STAGE_LABELS[s]}</Opt>
+              ))}
+            </Group>
+            <Group label="School or unit">
+              {GROUP_KEYS.map(g => {
+                const on = f.units.includes(g)
+                if (!on && !count("units", p => p.group === g)) return null
+                return (
+                  <Opt key={g} on={on} n={count("units", p => p.group === g)} onClick={() => setFilters({ units: on ? f.units.filter(x => x !== g) : [...f.units, g] })}>
+                    {GROUPS[g].short}
+                  </Opt>
+                )
+              })}
+            </Group>
+            <Group label="Show only">
+              <Opt on={f.open} n={count("open", isOpenNow)} onClick={() => setFilters({ open: !f.open })}><Clock className="h-3.5 w-3.5" /> Open now</Opt>
+              <Opt on={f.verified} n={count("verified", p => p.confidence !== "low")} onClick={() => setFilters({ verified: !f.verified })}><ShieldCheck className="h-3.5 w-3.5" /> Verified</Opt>
+            </Group>
+          </div>
         </div>
       </div>
 
@@ -150,16 +159,17 @@ export function DiscoverView({ filters: f, setFilters, need, setNeed, profile, m
         </div>
       ) : (
         <>
-          <div className="flex items-baseline justify-between text-sm">
+          <div className="flex flex-wrap items-baseline justify-between gap-2 text-sm">
             <span className="font-semibold">
               {items.length} <span className="font-normal text-muted-foreground">{f.q ? `results for "${f.q}"` : profile ? "programs, best fit first" : "programs"}</span>
             </span>
+            <LastChecked />
           </div>
           {items.length ? (
             <ProgramList items={shown} {...card} />
           ) : (
             <div className="rounded-3xl border border-dashed border-border p-8 text-center text-sm text-muted-foreground">
-              Nothing matches. <button onClick={() => (setFilters(CLEAR_ALL), setDraft(""), setNeed(null))} className="font-semibold text-primary hover:underline">Start over</button>
+              Nothing matches. <button onClick={() => (setFilters(CLEAR_ALL), setDraft(""))} className="font-semibold text-primary hover:underline">Start over</button>
             </div>
           )}
           {items.length > FIRST && (
@@ -171,43 +181,6 @@ export function DiscoverView({ filters: f, setFilters, need, setNeed, profile, m
         </>
       )}
 
-      <Sheet open={sheet} onOpenChange={setSheet}>
-        <SheetContent side="bottom" className="max-h-[85vh] overflow-y-auto rounded-t-3xl border-0 bg-white px-5 pb-8 pt-5 sm:mx-auto sm:max-w-2xl">
-          <SheetHeader className="text-left">
-            <SheetTitle>Filters</SheetTitle>
-          </SheetHeader>
-          <div className="mt-4 space-y-5">
-            <Group label="For">
-              {(Object.keys(AUDIENCE_LABELS) as Audience[]).map(a => (
-                <Opt key={a} on={f.who === a} n={count("who", p => p.audience.includes(a))} onClick={() => setFilters({ who: f.who === a ? null : a })}>{AUDIENCE_LABELS[a]}</Opt>
-              ))}
-            </Group>
-            <Group label="Stage">
-              {(Object.keys(STAGE_LABELS) as Stage[]).map(s => (
-                <Opt key={s} on={f.stage === s} n={count("stage", p => p.stage.includes(s))} onClick={() => setFilters({ stage: f.stage === s ? null : s })}>{STAGE_LABELS[s]}</Opt>
-              ))}
-            </Group>
-            <Group label="School or unit">
-              {GROUP_KEYS.map(g => {
-                const on = f.units.includes(g)
-                if (!on && !count("units", p => p.group === g)) return null
-                return (
-                  <Opt key={g} on={on} n={count("units", p => p.group === g)} onClick={() => setFilters({ units: on ? f.units.filter(x => x !== g) : [...f.units, g] })}>
-                    {GROUPS[g].short}
-                  </Opt>
-                )
-              })}
-            </Group>
-            <Group label="Show only">
-              <Opt on={f.open} n={count("open", isOpenNow)} onClick={() => setFilters({ open: !f.open })}><Clock className="h-3.5 w-3.5" /> Open now</Opt>
-              <Opt on={f.verified} n={count("verified", p => p.confidence !== "low")} onClick={() => setFilters({ verified: !f.verified })}><ShieldCheck className="h-3.5 w-3.5" /> Verified</Opt>
-            </Group>
-            <button onClick={() => setSheet(false)} className="w-full rounded-2xl bg-primary py-3 text-sm font-semibold text-primary-foreground">
-              Show {items.length} programs
-            </button>
-          </div>
-        </SheetContent>
-      </Sheet>
     </div>
   )
 }
@@ -235,88 +208,175 @@ function Opt({ on, n, onClick, children }: { on: boolean; n: number; onClick: ()
   )
 }
 
-/** Individual courses fold into one entry per school; the list opens on tap. */
-function CourseGroups({ onOpen }: { onOpen: (id: string) => void }) {
-  const bySchool = GROUP_KEYS.map(g => ({ g, items: courses.filter(p => p.group === g) })).filter(x => x.items.length)
+const fmt = (d: string) => new Date(`${d}T12:00:00`).toLocaleDateString("en-US", { month: "short", day: "numeric" })
+const LAST_CHECK = programs.reduce((m, p) => (p.lastVerified && p.lastVerified > m ? p.lastVerified : m), "")
+
+/** When the research run last checked the catalog, and when events last refreshed. */
+function LastChecked() {
+  if (!LAST_CHECK) return null
   return (
-    <section className="space-y-2">
-      <h2 className="text-sm font-bold text-foreground">Entrepreneurship courses</h2>
-      <div className="grid gap-2 sm:grid-cols-2 xl:grid-cols-3">
-        {bySchool.map(({ g, items }) => (
-          <details key={g} className="group rounded-2xl border border-black/5 bg-white/70 px-4 py-3 open:bg-white">
-            <summary className="flex cursor-pointer list-none items-center gap-2 text-sm font-semibold">
-              <span className="h-2 w-2 rounded-full" style={{ backgroundColor: GROUPS[g].color }} />
-              {GROUPS[g].short} courses
-              <span className="font-normal text-muted-foreground">{items.length}</span>
-              <ChevronDown className="ml-auto h-4 w-4 text-muted-foreground transition group-open:rotate-180" />
-            </summary>
-            <ul className="mt-2 space-y-1">
-              {items.map(p => (
-                <li key={p.id}>
-                  <button onClick={() => onOpen(p.id)} className="text-left text-sm text-foreground/85 hover:text-primary hover:underline">{p.name}</button>
-                </li>
-              ))}
-            </ul>
-          </details>
-        ))}
+    <span className="inline-flex items-center gap-1.5 text-xs text-muted-foreground" title="Each program is re-checked against its official page, socials and EngageSC">
+      <span className="relative flex h-2 w-2">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60 motion-reduce:hidden" />
+        <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+      </span>
+      Programs checked {fmt(LAST_CHECK)} · Events updated {fmt(EVENTS_UPDATED)}
+    </span>
+  )
+}
+
+/** Courses as a small catalogue: a code badge, the title, when it runs, filterable by school. */
+function CourseGroups({ onOpen }: { onOpen: (id: string) => void }) {
+  const schools = GROUP_KEYS.filter(g => courses.some(p => p.group === g))
+  const [school, setSchool] = useState<string | null>(null)
+  const shown = school ? courses.filter(p => p.group === school) : courses
+  const split = (name: string) => {
+    const m = name.match(/^([A-Z]{2,5}\s\d{3}[a-z]*)\s+(.*)$/) ?? name.match(/^(.*)\s\(([A-Z]{2,5}\s\d{3}[a-z]*)[^)]*\)$/)
+    if (!m) return { code: null, title: name }
+    return /^[A-Z]{2,5}\s\d/.test(m[1]) ? { code: m[1], title: m[2] } : { code: m[2], title: m[1] }
+  }
+  const term = (p: Program) => {
+    const t = p.timing?.split(/[;.(]/)[0]?.trim()
+    return t && t.length < 40 ? t : p.months.length ? `Usually ${p.months.map(m => MONTHS[m - 1]).join(", ")}` : "Most semesters"
+  }
+  return (
+    <section className="space-y-3 pt-4">
+      <div className="flex flex-wrap items-end justify-between gap-3">
+        <div>
+          <h2 className="flex items-center gap-2 text-lg font-bold text-foreground">
+            <GraduationCap className="h-5 w-5 text-primary" /> Entrepreneurship courses
+          </h2>
+          <p className="text-sm text-muted-foreground">Classes you can take for credit. Check the schedule of classes for this term.</p>
+        </div>
+        <div className="flex flex-wrap gap-1.5" role="group" aria-label="Filter courses by school">
+          {[null, ...schools].map(g => (
+            <button
+              key={g ?? "all"}
+              onClick={() => setSchool(g)}
+              aria-pressed={school === g}
+              className={cn("rounded-full px-3 py-2 text-[13px] font-semibold transition", school === g ? "bg-foreground text-background" : "bg-black/[.05] text-foreground/75 hover:bg-black/[.08]")}
+            >
+              {g ? GROUPS[g as keyof typeof GROUPS].short : "All"}
+              <span className="ml-1 font-normal opacity-60">{g ? courses.filter(p => p.group === g).length : courses.length}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+      <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+        {shown.map(p => {
+          const { code, title } = split(p.name)
+          const color = GROUPS[p.group].color
+          return (
+            <button
+              key={p.id}
+              onClick={() => onOpen(p.id)}
+              className="group flex items-start gap-3 rounded-2xl border border-black/[.06] bg-white p-3.5 text-left transition hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-14px_rgba(0,0,0,.35)]"
+            >
+              <span
+                className="flex h-12 w-14 shrink-0 flex-col items-center justify-center rounded-xl text-center font-bold leading-none"
+                style={{ backgroundColor: `${color}14`, color }}
+              >
+                {code ? (
+                  <>
+                    <span className="text-[10px] tracking-wider">{code.split(" ")[0]}</span>
+                    <span className="mt-0.5 text-[15px]">{code.split(" ")[1]}</span>
+                  </>
+                ) : (
+                  <BookOpen className="h-5 w-5" />
+                )}
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="line-clamp-2 text-sm font-semibold leading-snug text-foreground group-hover:text-primary">{title}</span>
+                <span className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">
+                  <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: color }} />
+                  {GROUPS[p.group].short} · {term(p)}
+                </span>
+              </span>
+            </button>
+          )
+        })}
       </div>
     </section>
   )
 }
 
-/** A table, not cards: one row per program so the whole catalog scans like a database. */
+/** A database view: one row per program, property columns with tags, sticky header. Columns drop away on phones. */
 function ProgramList({ items, onOpen, isSaved, onToggleSave }: CardProps & { items: Program[] }) {
   const who = (p: Program) => {
-    if (!p.audience.length) return "Check"
+    if (!p.audience.length) return null
     const names = p.audience.map(a => AUDIENCE_LABELS[a])
     return names.length > 2 ? `${names.slice(0, 2).join(", ")} +${names.length - 2}` : names.join(", ")
   }
+  const th = "border-r border-black/[.06] px-3 py-2 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground last:border-r-0"
+  const td = "border-r border-black/[.06] px-3 py-2 align-middle last:border-r-0"
   return (
-    <div className="overflow-hidden rounded-2xl border border-black/5 bg-white/80">
-      <table className="w-full text-left text-sm">
-        <thead className="hidden border-b border-black/5 text-xs uppercase tracking-wide text-muted-foreground sm:table-header-group">
-          <tr>
-            <th className="px-4 py-2.5 font-semibold">Program</th>
-            <th className="px-3 py-2.5 font-semibold">School</th>
-            <th className="hidden px-3 py-2.5 font-semibold lg:table-cell">Type</th>
-            <th className="hidden px-3 py-2.5 font-semibold md:table-cell">For</th>
-            <th className="px-3 py-2.5 font-semibold">When</th>
-            <th className="w-10" />
+    <div className="overflow-clip rounded-xl border border-black/[.08] bg-white shadow-[0_1px_2px_rgba(0,0,0,.04)]">
+      <table className="w-full table-fixed text-left text-[13px]">
+        <colgroup>
+          <col />
+          <col className="hidden w-[118px] sm:table-column" />
+          <col className="hidden w-[190px] lg:table-column" />
+          <col className="hidden w-[150px] md:table-column" />
+          <col className="hidden w-[132px] sm:table-column" />
+          <col className="w-11" />
+        </colgroup>
+        <thead className="sticky top-[68px] z-10 hidden bg-[#fbfaf9] sm:table-header-group">
+          <tr className="border-b border-black/[.08]">
+            <th className={th}>Name</th>
+            <th className={cn(th, "hidden sm:table-cell")}>School</th>
+            <th className={cn(th, "hidden lg:table-cell")}>Type</th>
+            <th className={cn(th, "hidden md:table-cell")}>For</th>
+            <th className={cn(th, "hidden sm:table-cell")}>Next</th>
+            <th className={th}><span className="sr-only">Save</span></th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-black/5">
-          {items.map(p => (
-            <tr key={p.id} onClick={() => onOpen(p.id)} className="cursor-pointer transition hover:bg-black/[.025]">
-              <td className="px-4 py-2.5">
-                <div className="font-semibold text-foreground">{p.name}</div>
-                <div className="line-clamp-1 text-xs text-muted-foreground">{p.description}</div>
-                <div className="mt-1 flex flex-wrap gap-x-2 text-[11px] text-muted-foreground sm:hidden">
-                  <span>{GROUPS[p.group].short}</span>·<span>{keyFact(p)}</span>
-                </div>
-              </td>
-              <td className="hidden whitespace-nowrap px-3 py-2.5 sm:table-cell">
-                <span className="inline-flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full" style={{ backgroundColor: GROUPS[p.group].color }} />
-                  {GROUPS[p.group].short}
-                </span>
-              </td>
-              <td className="hidden px-3 py-2.5 text-muted-foreground lg:table-cell">{p.category}</td>
-              <td className="hidden whitespace-nowrap px-3 py-2.5 text-muted-foreground md:table-cell">{who(p)}</td>
-              <td className="hidden whitespace-nowrap px-3 py-2.5 sm:table-cell">{keyFact(p)}</td>
-              <td className="px-2 py-2.5 text-right">
-                <button
-                  onClick={e => (e.stopPropagation(), onToggleSave(p.id))}
-                  aria-label={isSaved(p.id) ? `Unsave ${p.name}` : `Save ${p.name}`}
-                  className="rounded-lg p-2 text-muted-foreground hover:bg-black/[.05] hover:text-primary"
-                >
-                  {isSaved(p.id) ? <BookmarkCheck className="h-4 w-4 text-primary" /> : <Bookmark className="h-4 w-4" />}
-                </button>
-              </td>
-            </tr>
-          ))}
+        <tbody>
+          {items.map(p => {
+            const fact = keyFact(p)
+            const soon = fact === "Open this month"
+            return (
+              <tr key={p.id} onClick={() => onOpen(p.id)} className="group cursor-pointer border-b border-black/[.06] last:border-b-0 hover:bg-[#f7f5f3]">
+                <td className={td}>
+                  <div className="truncate font-semibold text-foreground group-hover:text-primary">{p.name}</div>
+                  <div className="truncate text-xs text-muted-foreground">{p.description}</div>
+                  <div className="mt-1.5 flex flex-wrap items-center gap-1 sm:hidden">
+                    <Tag color={GROUPS[p.group].color}>{GROUPS[p.group].short}</Tag>
+                    <span className={cn("text-[11px]", soon ? "font-semibold text-primary" : "text-muted-foreground")}>{fact}</span>
+                  </div>
+                </td>
+                <td className={cn(td, "hidden sm:table-cell")}><Tag color={GROUPS[p.group].color}>{GROUPS[p.group].short}</Tag></td>
+                <td className={cn(td, "hidden lg:table-cell")}><Tag color={CATEGORY_COLORS[p.category]} subtle>{p.category}</Tag></td>
+                <td className={cn(td, "hidden truncate text-muted-foreground md:table-cell")}>{who(p) ?? <span className="text-muted-foreground/60">Check</span>}</td>
+                <td className={cn(td, "hidden sm:table-cell")}>
+                  <span className={cn("inline-flex items-center gap-1.5 whitespace-nowrap", soon ? "font-semibold text-primary" : "text-foreground/80")}>
+                    {soon && <span className="h-1.5 w-1.5 rounded-full bg-primary" />}
+                    {fact}
+                  </span>
+                </td>
+                <td className="px-1 py-2 text-right align-middle">
+                  <button
+                    onClick={e => (e.stopPropagation(), onToggleSave(p.id))}
+                    aria-label={isSaved(p.id) ? `Unsave ${p.name}` : `Save ${p.name}`}
+                    className="rounded-lg p-2.5 text-muted-foreground hover:bg-black/[.05] hover:text-primary"
+                  >
+                    {isSaved(p.id) ? <BookmarkCheck className="h-4 w-4 text-primary" /> : <Bookmark className="h-4 w-4" />}
+                  </button>
+                </td>
+              </tr>
+            )
+          })}
         </tbody>
       </table>
     </div>
+  )
+}
+
+/** A Notion-style property tag. */
+function Tag({ color, subtle, children }: { color: string; subtle?: boolean; children: React.ReactNode }) {
+  return (
+    <span className="inline-flex max-w-full items-center truncate rounded-md px-1.5 py-0.5 text-[12px] font-medium" style={{ backgroundColor: `${color}${subtle ? "12" : "1a"}`, color }}>
+      {children}
+    </span>
   )
 }
 

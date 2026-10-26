@@ -1,13 +1,13 @@
 "use client"
 
-import { BookOpen, Bookmark, BookmarkCheck, ChevronDown, GraduationCap, Clock, List, Map as MapIcon, Route, Search, ShieldCheck, SlidersHorizontal, X } from "lucide-react"
+import { Bookmark, BookmarkCheck, ChevronDown, Clock, List, Map as MapIcon, Route, Search, ShieldCheck, SlidersHorizontal, X } from "lucide-react"
 import { useEffect, useMemo, useState } from "react"
 
 import { courses, listed } from "@/lib/catalog"
 import { applyFilters, CLEAR_ALL, isOpenNow, monthsAway, type Filters } from "@/lib/filters"
 import { LINES, onMap } from "@/lib/network"
 import { fitScore, type Profile } from "@/lib/profile"
-import { AUDIENCE_LABELS, CATEGORIES, CATEGORY_COLORS, GROUPS, MONTHS, programs, GROUP_KEYS, STAGE_LABELS, programById, type Audience, type Program, type Stage } from "@/lib/programs"
+import { AUDIENCE_LABELS, CATEGORIES, CATEGORY_COLORS, GROUPS, programs, GROUP_KEYS, STAGE_LABELS, programById, type Audience, type Program, type Stage } from "@/lib/programs"
 import { rankPrograms } from "@/lib/search"
 import { cn } from "@/lib/utils"
 import eventsData from "@/data/events.json"
@@ -46,14 +46,13 @@ export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, r
 
   // Searching looks through everything listed plus folded courses; browsing shows listed programs only.
   const pool = useMemo(() => {
-    return f.q.trim() ? rankPrograms(f.q, 200).map(r => r.program).filter(p => listed.includes(p) || courses.includes(p)) : listed
+    return f.q.trim() ? rankPrograms(f.q, 200).map(r => r.program).filter(p => listed.includes(p) || courses.includes(p)) : [...listed, ...courses]
   }, [f.q])
   const items = useMemo(() => {
     const out = applyFilters(pool, f)
     if (f.q.trim()) return out
     return [...out].sort((a, b) => (profile ? fitScore(b, profile) - fitScore(a, profile) : 0) || featured(a, b))
   }, [pool, f, profile])
-  const showCourses = !f.q.trim()
 
   const count = (skip: Parameters<typeof applyFilters>[2], test: (p: Program) => boolean) => applyFilters(pool, f, skip).filter(test).length
   const chips: { label: string; clear: Partial<Filters> }[] = [
@@ -168,7 +167,6 @@ export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, r
               Nothing matches. <button onClick={() => (setFilters(CLEAR_ALL), setDraft(""))} className="font-semibold text-primary hover:underline">Start over</button>
             </div>
           )}
-          {showCourses && <CourseGroups onOpen={card.onOpen} />}
         </>
       )}
 
@@ -216,91 +214,19 @@ function LastChecked() {
   )
 }
 
-/** Courses as a small catalogue: a code badge, the title, when it runs, filterable by school. */
-function CourseGroups({ onOpen }: { onOpen: (id: string) => void }) {
-  const schools = GROUP_KEYS.filter(g => courses.some(p => p.group === g))
-  const [school, setSchool] = useState<string | null>(null)
-  const shown = school ? courses.filter(p => p.group === school) : courses
-  const split = (name: string) => {
-    const m = name.match(/^([A-Z]{2,5}\s\d{3}[a-z]*)\s+(.*)$/) ?? name.match(/^(.*)\s\(([A-Z]{2,5}\s\d{3}[a-z]*)[^)]*\)$/)
-    if (!m) return { code: null, title: name }
-    return /^[A-Z]{2,5}\s\d/.test(m[1]) ? { code: m[1], title: m[2] } : { code: m[2], title: m[1] }
-  }
-  const term = (p: Program) => {
-    const t = p.timing?.split(/[;.(]/)[0]?.trim()
-    return t && t.length < 40 ? t : p.months.length ? `Usually ${p.months.map(m => MONTHS[m - 1]).join(", ")}` : "Most semesters"
-  }
-  return (
-    <section className="space-y-3 pt-4">
-      <div className="flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <h2 className="flex items-center gap-2 text-lg font-bold text-foreground">
-            <GraduationCap className="h-5 w-5 text-primary" /> Entrepreneurship courses
-          </h2>
-          <p className="text-sm text-muted-foreground">Classes you can take for credit. Check the schedule of classes for this term.</p>
-        </div>
-        <div className="flex flex-wrap gap-1.5" role="group" aria-label="Filter courses by school">
-          {[null, ...schools].map(g => (
-            <button
-              key={g ?? "all"}
-              onClick={() => setSchool(g)}
-              aria-pressed={school === g}
-              className={cn("rounded-full px-3 py-2 text-[13px] font-semibold transition", school === g ? "bg-foreground text-background" : "bg-black/[.05] text-foreground/75 hover:bg-black/[.08]")}
-            >
-              {g ? GROUPS[g as keyof typeof GROUPS].short : "All"}
-              <span className="ml-1 font-normal opacity-60">{g ? courses.filter(p => p.group === g).length : courses.length}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-      <div className="grid gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-        {shown.map(p => {
-          const { code, title } = split(p.name)
-          const color = GROUPS[p.group].color
-          return (
-            <button
-              key={p.id}
-              onClick={() => onOpen(p.id)}
-              className="group flex items-start gap-3 rounded-2xl border border-black/[.06] bg-white p-3.5 text-left transition hover:-translate-y-0.5 hover:shadow-[0_10px_24px_-14px_rgba(0,0,0,.35)]"
-            >
-              <span
-                className="flex h-12 w-14 shrink-0 flex-col items-center justify-center rounded-xl text-center font-bold leading-none"
-                style={{ backgroundColor: `${color}14`, color }}
-              >
-                {code ? (
-                  <>
-                    <span className="text-[10px] tracking-wider">{code.split(" ")[0]}</span>
-                    <span className="mt-0.5 text-[15px]">{code.split(" ")[1]}</span>
-                  </>
-                ) : (
-                  <BookOpen className="h-5 w-5" />
-                )}
-              </span>
-              <span className="min-w-0 flex-1">
-                <span className="line-clamp-2 text-sm font-semibold leading-snug text-foreground group-hover:text-primary">{title}</span>
-                <span className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">
-                  <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: color }} />
-                  {GROUPS[p.group].short} · {term(p)}
-                </span>
-              </span>
-            </button>
-          )
-        })}
-      </div>
-    </section>
-  )
-}
-
 /** A spreadsheet: one tight row per program, grouped under a header row per type. Groups fold. */
 function ProgramList({ items, onOpen, isSaved, onToggleSave }: CardProps & { items: Program[] }) {
-  const [folded, setFolded] = useState<Set<string>>(new Set())
+  // Courses and degrees start folded: a dropdown inside the list, opened when wanted.
+  const [folded, setFolded] = useState<Set<string>>(new Set(["Courses & Degrees"]))
   const who = (p: Program) => {
     if (!p.audience.length) return null
     const names = p.audience.map(a => AUDIENCE_LABELS[a])
     return names.length > 2 ? `${names.slice(0, 2).join(", ")} +${names.length - 2}` : names.join(", ")
   }
   // Groups follow the catalog's type order; within a group rows keep the incoming order (best fit or best match).
-  const groups = CATEGORIES.map(c => ({ c, rows: items.filter(p => p.category === c) })).filter(g => g.rows.length)
+  // Courses go last, since they start folded.
+  const order = [...CATEGORIES.filter(c => c !== "Courses & Degrees"), "Courses & Degrees" as const]
+  const groups = order.map(c => ({ c, rows: items.filter(p => p.category === c) })).filter(g => g.rows.length)
   const toggle = (c: string) => setFolded(prev => {
     const next = new Set(prev)
     next.has(c) ? next.delete(c) : next.add(c)

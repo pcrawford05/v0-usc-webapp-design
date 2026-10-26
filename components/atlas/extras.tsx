@@ -1,11 +1,9 @@
 "use client"
 
-import { BellPlus, Check, Link2, Share2, Sparkles, X } from "lucide-react"
-import { useEffect, useLayoutEffect, useState } from "react"
+import { CalendarDays, CalendarPlus, Check, Link2, Share2, Sparkles, X } from "lucide-react"
+import { useEffect, useLayoutEffect, useRef, useState } from "react"
 
-import { loadEngageEvents, type LiveEvent } from "@/lib/engage-client"
-import { canRemind, downloadReminders } from "@/lib/reminders"
-import { MONTHS, type Program } from "@/lib/programs"
+import { googleCalendarUrl, openInAppleCalendar, type CalEntry } from "@/lib/calendar"
 import { shareLink } from "@/lib/share"
 import { cn } from "@/lib/utils"
 
@@ -38,66 +36,66 @@ export function ShareButton({ url, title, label = "Copy link", className, compac
   )
 }
 
-// ---------- Reminders ----------
+// ---------- Add to calendar ----------
 
-export function RemindButton({ program, compact }: { program: Program; compact?: boolean }) {
+/** One button that offers Google Calendar or Apple Calendar for an event or a deadline. */
+export function AddToCalendar({ entry, compact, className }: { entry: () => CalEntry; compact?: boolean; className?: string }) {
+  const [open, setOpen] = useState(false)
   const [done, setDone] = useState(false)
-  if (!canRemind(program)) return null
-  const go = (e: React.MouseEvent) => {
-    e.stopPropagation()
-    downloadReminders([program], `${program.id}-reminder.ics`)
-    setDone(true)
-    setTimeout(() => setDone(false), 2200)
-  }
-  const when = program.months.map(m => MONTHS[m - 1]).join(", ")
-  return compact ? (
-    <button type="button" onClick={go} aria-label={`Remind me before ${when}`} title={`Add a calendar reminder 2 weeks before ${when}`} className="rounded-md p-2 text-muted-foreground transition hover:bg-muted hover:text-primary sm:p-1">
-      {done ? <Check className="h-4 w-4 text-emerald-600" /> : <BellPlus className="h-4 w-4" />}
-    </button>
-  ) : (
-    <button onClick={go} className="inline-flex shrink-0 items-center gap-2 rounded-lg border border-border px-3 py-2 text-sm font-semibold transition hover:bg-muted sm:px-4">
-      {done ? <Check className="h-4 w-4 text-emerald-600" /> : <BellPlus className="h-4 w-4" />}
-      <span className={cn(!done && "sr-only sm:not-sr-only")}>{done ? "Open the file to add it" : "Remind me"}</span>
-    </button>
-  )
-}
-
-// ---------- Live events from EngageSC ----------
-
-/** Dated events posted on EngageSC by catalog groups, refreshed daily by /api/events. */
-export function EngageEvents({ onOpen }: { onOpen: (id: string) => void }) {
-  const [events, setEvents] = useState<LiveEvent[] | null>(null)
+  const ref = useRef<HTMLDivElement>(null)
   useEffect(() => {
-    loadEngageEvents().then(setEvents)
-  }, [])
-  if (!events?.length) return null
-  const fmt = (iso: string) =>
-    new Date(iso).toLocaleString("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" })
+    if (!open) return
+    const close = (e: PointerEvent) => !ref.current?.contains(e.target as Node) && setOpen(false)
+    const esc = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false)
+    document.addEventListener("pointerdown", close)
+    document.addEventListener("keydown", esc)
+    return () => (document.removeEventListener("pointerdown", close), document.removeEventListener("keydown", esc))
+  }, [open])
+  const finish = () => {
+    setOpen(false)
+    setDone(true)
+    setTimeout(() => setDone(false), 2000)
+  }
   return (
-    <section className="rounded-2xl glass p-4">
-      <header className="mb-2 flex items-baseline justify-between gap-2">
-        <h3 className="font-semibold">Live on EngageSC</h3>
-        <span className="text-xs text-muted-foreground">Next 60 days, updated daily</span>
-      </header>
-      <ul className="divide-y divide-border">
-        {events.map(e => (
-          <li key={e.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 py-2 text-sm">
-            <span className="w-40 shrink-0 text-muted-foreground">{fmt(e.start)}</span>
-            <span className="min-w-0 flex-1 font-medium">{e.title}</span>
-            {e.programIds[0] ? (
-              <button onClick={() => onOpen(e.programIds[0])} className="text-xs text-muted-foreground underline-offset-2 hover:underline">
-                {e.host}
-              </button>
-            ) : (
-              <span className="text-xs text-muted-foreground">{e.host}</span>
-            )}
-            <a href={e.url} target="_blank" rel="noreferrer" className="rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
-              RSVP on Engage
-            </a>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <div ref={ref} className={cn("relative", className)} onClick={e => e.stopPropagation()}>
+      <button
+        type="button"
+        onClick={() => setOpen(!open)}
+        aria-haspopup="menu"
+        aria-expanded={open}
+        aria-label="Add to calendar"
+        className={cn(
+          "inline-flex items-center gap-2 font-semibold transition",
+          compact ? "rounded-lg p-2.5 text-muted-foreground hover:bg-black/[.05] hover:text-primary" : "rounded-lg border border-border px-3 py-2 text-sm hover:bg-muted sm:px-4",
+        )}
+      >
+        {done ? <Check className="h-4 w-4 text-emerald-600" /> : <CalendarPlus className="h-4 w-4" />}
+        {!compact && <span className="sr-only sm:not-sr-only">Add to calendar</span>}
+      </button>
+      {open && (
+        <div role="menu" className="absolute right-0 top-full z-50 mt-1 w-52 overflow-hidden rounded-xl border border-black/[.08] bg-white p-1 text-sm shadow-[0_12px_32px_-12px_rgba(0,0,0,.35)] animate-pop-in">
+          <a
+            role="menuitem"
+            href={googleCalendarUrl(entry())}
+            target="_blank"
+            rel="noreferrer"
+            onClick={finish}
+            className="flex items-center gap-2.5 rounded-lg px-3 py-2.5 font-medium hover:bg-black/[.04]"
+          >
+            <span className="flex h-5 w-5 items-center justify-center rounded bg-[#4285F4] text-[10px] font-bold text-white">G</span>
+            Google Calendar
+          </a>
+          <button
+            role="menuitem"
+            onClick={() => (openInAppleCalendar(entry()), finish())}
+            className="flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-left font-medium hover:bg-black/[.04]"
+          >
+            <span className="flex h-5 w-5 items-center justify-center rounded bg-[#FF3B30] text-white"><CalendarDays className="h-3 w-3" /></span>
+            Apple Calendar
+          </button>
+        </div>
+      )}
+    </div>
   )
 }
 

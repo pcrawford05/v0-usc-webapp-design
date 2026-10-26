@@ -6,10 +6,11 @@ import { useCallback, useEffect, useState } from "react"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { advisorOnly } from "@/lib/catalog"
 import { AUDIENCE_LABELS, GROUPS, MONTHS, STAGE_LABELS, type Program } from "@/lib/programs"
+import { calEntry, nextDeadline } from "@/lib/calendar"
 import { programLink } from "@/lib/links"
 import { cn } from "@/lib/utils"
 
-import { RemindButton, ShareButton } from "./extras"
+import { AddToCalendar, ShareButton } from "./extras"
 import { FeedbackLink } from "./Feedback"
 
 // ---------- Saved programs (per browser) ----------
@@ -186,7 +187,9 @@ export function ProgramDrawer({
                   {saved ? <BookmarkCheck className="h-4 w-4 text-primary" /> : <Bookmark className="h-4 w-4" />}
                   <span className="sr-only sm:not-sr-only">{saved ? "Saved" : "Save"}</span>
                 </button>
-                <RemindButton program={program} />
+                {program.months.length > 0 && (
+                  <AddToCalendar entry={() => calEntry(nextDeadline(program), window.location.origin)} />
+                )}
                 <ShareButton url={`${typeof window !== "undefined" ? window.location.origin : ""}/?p=${program.id}`} title={program.name} label="Share" className="py-2" compactLabel />
               </div>
 

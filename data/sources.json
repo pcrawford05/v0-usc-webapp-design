@@ -175,12 +175,6 @@
           "lastChecked": "2026-10-21"
         },
         {
-          "url": "https://www.instagram.com/uscmarshallevma/",
-          "kind": "social",
-          "holds": "Entrepreneur & Venture Management Association; A week in San Francisco for SF Tech Week. EVMA members spent it at Fight on SF",
-          "lastChecked": "2026-10-20"
-        },
-        {
           "url": "https://engage.usc.edu/ical/usc/ical_club_35806.ics",
           "kind": "campus-groups",
           "holds": "Entrepreneurship & Venture Management Association (EVMA) events calendar feed (public iCal)",
@@ -191,6 +185,19 @@
           "kind": "social",
           "platform": "linkedin",
           "holds": "LinkedIn company page \"USC Entrepreneurship and Venture Management Association (EVMA)\": graduate venture network at USC Marshall, 256 followers.",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.evma.club/",
+          "kind": "official",
+          "holds": "EVMA's own site: \"The 2026-2027 Board ... Shayan Akhtari President\"; links instagram.com/uscmarshall_evma",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.instagram.com/uscmarshall_evma/",
+          "kind": "social",
+          "platform": "instagram",
+          "holds": "EVMA Instagram, linked from evma.club",
           "lastChecked": "2026-10-26"
         }
       ],
@@ -1239,6 +1246,12 @@
           "host": "Viterbi",
           "holds": "Official Viterbi LinkedIn school page, 29,777 followers, posted within last week (2026-10).",
           "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -1695,6 +1708,12 @@
           "kind": "official",
           "holds": "thin offerings page",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -1783,6 +1802,12 @@
           "platform": "instagram",
           "host": "TIE Hub",
           "holds": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
           "lastChecked": "2026-10-26"
         }
       ],
@@ -2441,6 +2466,12 @@
           "kind": "listing",
           "holds": "Spring 2026 TIE Hub opportunities (lists MFC, MEPC, Origin Weekend; no Data Center Challenge in snippet)",
           "lastChecked": null
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2459,6 +2490,12 @@
           "kind": "listing",
           "holds": "Spring 2026 TIE Hub opportunities (no such challenge in snippet)",
           "lastChecked": null
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2547,6 +2584,12 @@
           "host": "TIE Hub",
           "holds": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
           "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2592,6 +2635,12 @@
           "platform": "instagram",
           "host": "TIE Hub",
           "holds": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
           "lastChecked": "2026-10-26"
         }
       ],
@@ -2648,6 +2697,12 @@
           "host": "TIE Hub",
           "holds": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
           "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2686,6 +2741,12 @@
           "kind": "social",
           "platform": "linkedin",
           "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
           "lastChecked": "2026-10-26"
         }
       ],
@@ -2736,6 +2797,12 @@
           "platform": "linkedin",
           "host": "TIE Hub",
           "holds": "Trojan Tank is run by TIE Hub (program link viterbiinnovation.usc.edu); no own page found.",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
           "lastChecked": "2026-10-26"
         }
       ],
@@ -3205,6 +3272,12 @@
           "host": "TIE Hub",
           "holds": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
           "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -3255,6 +3328,12 @@
           "host": "TIE Hub",
           "holds": "Program link is viterbiinnovation.usc.edu (TIE Hub).",
           "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -3297,6 +3376,12 @@
           "platform": "instagram",
           "host": "TIE Hub",
           "holds": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
           "lastChecked": "2026-10-26"
         }
       ],
@@ -3789,6 +3874,12 @@
           "kind": "campus-groups",
           "holds": "TIE events (JS)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -3814,6 +3905,12 @@
           "kind": "official",
           "holds": "TIE Hub: Start-up Curious? mixer",
           "lastChecked": null
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -3876,6 +3973,12 @@
           "kind": "campus-groups",
           "holds": "Viterbi Office of Technology Innovation and Entrepreneurship (TIE Hub) events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -3947,6 +4050,12 @@
           "host": "TIE Hub",
           "holds": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
           "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -3977,6 +4086,12 @@
           "platform": "instagram",
           "host": "TIE Hub",
           "holds": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
           "lastChecked": "2026-10-26"
         }
       ],
@@ -4593,6 +4708,12 @@
           "kind": "official",
           "holds": "no IP training detail",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -4618,6 +4739,12 @@
           "kind": "official",
           "holds": "regional program, path to Nationals, $50,000 grant",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -4640,6 +4767,12 @@
           "kind": "official",
           "holds": "program description, impact numbers, path to nationals; Apply Now",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -5217,6 +5350,12 @@
           "host": "TIE Hub",
           "holds": "Instagram bio \"TIE Hub - USC Viterbi\", highlights for Origin Weekend, MEPC, MFC; 1,582 followers.",
           "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -5269,6 +5408,12 @@
           "platform": "linkedin",
           "host": "Viterbi",
           "holds": "Official Viterbi LinkedIn school page, 29,777 followers, posted within last week (2026-10).",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
           "lastChecked": "2026-10-26"
         }
       ],
@@ -5757,6 +5902,12 @@
           "kind": "official",
           "holds": "TIE Hub events page; lists Start-Up Stories, co-founder mixer, Mixers + Pitches (last updated Mar 2025); no FDA session",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -5781,6 +5932,12 @@
           "kind": "listing",
           "holds": "Spring 2026 TIE Hub opportunities list (blocked; seen in search snippet only)",
           "lastChecked": null
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -5805,6 +5962,12 @@
           "kind": "official",
           "holds": "TIE Hub events page; no international student session listed",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://viterbiinnovation.usc.edu/about/team",
+          "kind": "official",
+          "holds": "contact: Ralph Lin, Managing Director, Office of Technology Innovation and Entrepreneurship (team page; confirmed by Peyton Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [

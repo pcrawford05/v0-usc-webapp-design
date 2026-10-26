@@ -155,7 +155,14 @@
     ],
     "confidence": "medium",
     "notes": "Exact 'speed dating' format and recurring schedule not confirmed.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "csci-532-innovation-for-defense-applications",
@@ -251,7 +258,14 @@
     "link": "https://viterbiinnovation.usc.edu/",
     "sources": [],
     "confidence": "medium",
-    "notes": "No source found; existence, dates and prizes unverified. Do not publish without confirmation from TIE Hub. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    "notes": "No source found; existence, dates and prizes unverified. Do not publish without confirmation from TIE Hub. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "engineering-honors-program-ehp",
@@ -385,7 +399,14 @@
     ],
     "confidence": "medium",
     "notes": "No public source found for this specific session; listed from assignment only. Verify with TIE Hub. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "founder-happy-hours-and-mixers",
@@ -421,7 +442,14 @@
     ],
     "confidence": "medium",
     "notes": "'Happy hour' branding not confirmed in sources; events archive lists 'Mixers + Pitches' and a 'Start-up Curious?' mixer.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "fundraising-bootcamp",
@@ -443,7 +471,14 @@
     ],
     "confidence": "medium",
     "notes": "No source found confirming a TIE Hub 'Fundraising Bootcamp'. Description is a placeholder; verify with TIE Hub before publishing. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "future-of-social-media-challenge",
@@ -462,7 +497,14 @@
     "link": "https://viterbiinnovation.usc.edu/",
     "sources": [],
     "confidence": "medium",
-    "notes": "No source found; existence, dates and prizes unverified. Do not publish without confirmation from TIE Hub. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete."
+    "notes": "No source found; existence, dates and prizes unverified. Do not publish without confirmation from TIE Hub. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "global-student-startup-competition",
@@ -559,7 +601,14 @@
     ],
     "confidence": "medium",
     "notes": "No USC page found for this session. Students should confirm visa questions with the USC Office of International Services and an attorney. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "intellectual-property-training",
@@ -592,7 +641,14 @@
     ],
     "confidence": "medium",
     "notes": "No public page found confirming format or dates. For licensing USC-owned IP, the USC Stevens Center for Innovation is the relevant office. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "ise-585-strategic-management-of-technology-and-innovation",
@@ -676,7 +732,14 @@
         "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
         "host": "TIE Hub"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "min-family-challenge",
@@ -730,7 +793,14 @@
         "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
         "host": "TIE Hub"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "national-i-corps-teams-grant",
@@ -766,7 +836,14 @@
     ],
     "confidence": "medium",
     "notes": "Earlier Notion note said applicants need NSF funding; NSF has broadened eligibility in recent years, verify current rules.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "nsf-i-corps-hub-west-region",
@@ -806,7 +883,14 @@
     ],
     "confidence": "medium",
     "notes": "Partners: UCLA, CU Boulder plus affiliates (Caltech, Mines, UNM, Utah, UCR). Session counts and interview requirements vary by source (10-15 interviews). Cohort dates not found.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "origin-weekend",
@@ -855,7 +939,14 @@
         "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
         "host": "TIE Hub"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "ronald-and-valerie-sugar-distinguished-speaker-series-in-adv",
@@ -924,7 +1015,14 @@
     ],
     "confidence": "medium",
     "notes": "Advisory support, not a grant itself. Separately, USC Office of Research and Innovation has run an SBIR/STTR Planning Award for faculty partnered with small businesses.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "ship-fund",
@@ -1005,7 +1103,14 @@
     ],
     "confidence": "medium",
     "notes": "Cadence 'monthly' is from internal notes; public listings show irregular sessions. Check events page for current schedule.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-22",
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "summer-smasher",
@@ -1054,7 +1159,14 @@
         "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
         "host": "TIE Hub"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "summer-start-fellows",
@@ -1262,7 +1374,14 @@
         "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
         "host": "TIE Hub"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "tie-hub-coworking",
@@ -1308,7 +1427,14 @@
         "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
         "host": "TIE Hub"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "tie-hub-office-hours",
@@ -1360,7 +1486,14 @@
         "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
         "host": "TIE Hub"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "trojan-tank",
@@ -1404,7 +1537,14 @@
         "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
         "host": "TIE Hub"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "usc-games-summer-bridge-program",
@@ -1524,7 +1664,14 @@
         "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
         "host": "TIE Hub"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "venture-showcase-viterbi",
@@ -1589,7 +1736,14 @@
         "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
         "host": "TIE Hub"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "venturewell-e-team-program",
@@ -1675,7 +1829,14 @@
         "url": "https://www.linkedin.com/school/usc-viterbi-school-of-engineering/",
         "host": "Viterbi"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "viterbi-startup-garage",
@@ -1727,7 +1888,14 @@
         "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
         "host": "TIE Hub"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "viterbi-student-innovation-institute-vsi2",
@@ -1778,7 +1946,14 @@
         "url": "https://www.linkedin.com/school/usc-viterbi-school-of-engineering/",
         "host": "Viterbi"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "viterbi-venture-fund",
@@ -1825,7 +2000,14 @@
         "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
         "host": "TIE Hub"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ralph Lin",
+      "title": "Managing Director, Viterbi TIE Hub",
+      "kind": "staff",
+      "source": "https://viterbiinnovation.usc.edu/about/team",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "yc-application-office-hours",
@@ -5516,25 +5698,34 @@
       "launched"
     ],
     "funding": null,
-    "link": "https://clubs.marshall.usc.edu/evma/",
+    "link": "https://www.evma.club/",
     "sources": [
+      "https://www.evma.club/",
       "https://clubs.marshall.usc.edu/evma/",
       "https://clubs.marshall.usc.edu/evma/about/"
     ],
     "confidence": "high",
     "notes": "2026 president listed as Nathan Sutrisno (MBA).",
-    "lastVerified": "2026-10-22",
+    "lastVerified": "2026-10-26",
     "socials": [
       {
         "platform": "instagram",
-        "url": "https://www.instagram.com/uscmarshallevma/",
-        "handle": "uscmarshallevma"
+        "url": "https://www.instagram.com/uscmarshall_evma/",
+        "handle": "uscmarshall_evma"
       },
       {
         "platform": "linkedin",
         "url": "https://www.linkedin.com/company/usc-evma/"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Shayan Akhtari",
+      "title": "President",
+      "term": "2026-27",
+      "kind": "club",
+      "source": "https://www.evma.club/",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "exitsc",

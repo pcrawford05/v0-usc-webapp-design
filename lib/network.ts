@@ -36,8 +36,8 @@ export interface Line {
 export const LINES: Line[] = [
   { key: "team", name: "Find your team", color: "#C98A00", stops: ["all-school-startup-mixers", "co-founder-speed-dating", "origin-weekend", "usc-and-techstars-startup-weekend", "deeptech-founder-matching", "usc-alumni-entrepreneurs-network-aen"] },
   { key: "pitch", name: "Pitch & win", color: "#C2410C", stops: ["origin-weekend", "trojan-tank", "min-family-challenge", "new-venture-seed-competition", "maseeh-entrepreneurship-prize-competition", "iya-venture-showcase", "usc-viterbi-startup-showcase"] },
-  { key: "funding", name: "Get funded", color: "#1B7F5C", stops: ["catalyst-microgrant-fund", "iya-ignite-grants", "ship-fund", "venturewell-e-team-program", "new-venture-seed-competition", "viterbi-venture-fund", "usc-marshall-venture-fund", "tech-coast-angels"] },
-  { key: "build", name: "Build & accelerate", color: "#990000", stops: ["summer-start-fellows", "summer-smasher", "iya-innovation-quest", "usc-and-techstars-university-catalyst", "viterbi-startup-garage", "marshall-greif-incubator", "usc-marshall-venture-fund", "y-combinator"] },
+  { key: "funding", name: "Get funded", color: "#1B7F5C", stops: ["catalyst-microgrant-fund", "iya-ignite-grants", "ship-fund", "venturewell-e-team-program", "new-venture-seed-competition", "viterbi-venture-fund", "tech-coast-angels"] },
+  { key: "build", name: "Build & accelerate", color: "#990000", stops: ["summer-start-fellows", "summer-smasher", "iya-innovation-quest", "usc-and-techstars-university-catalyst", "viterbi-startup-garage", "marshall-greif-incubator", "y-combinator"] },
   { key: "research", name: "Lab to market", color: "#2563A8", stops: ["from-lab-to-startup", "nsf-i-corps-hub-west-region", "national-i-corps-teams-grant", "stevens-translation-catalyst", "venturewell-e-team-program", "innovation-catalyst-program-icp", "icp-startup-launch", "alfred-e-mann-institute-fund-ami"] },
   { key: "health", name: "Health & bio", color: "#BE185D", stops: ["spark-at-usc", "sc-ctsi-southern-california-clinical-and-translational-scien", "innovation-catalyst-program-icp", "california-life-sciences-fast-program", "alfred-e-mann-institute-fund-ami"] },
 ]
@@ -51,7 +51,7 @@ export const COLUMN: Record<string, number> = {
   "min-family-challenge": 4, "venturewell-e-team-program": 4, "usc-and-techstars-university-catalyst": 4, "deeptech-founder-matching": 4,
   "new-venture-seed-competition": 5, "innovation-catalyst-program-icp": 5, "viterbi-startup-garage": 5,
   "maseeh-entrepreneurship-prize-competition": 6, "viterbi-venture-fund": 6, "icp-startup-launch": 6, "california-life-sciences-fast-program": 6, "marshall-greif-incubator": 6, "usc-alumni-entrepreneurs-network-aen": 6,
-  "iya-venture-showcase": 7, "usc-marshall-venture-fund": 7, "alfred-e-mann-institute-fund-ami": 7,
+  "iya-venture-showcase": 7, "alfred-e-mann-institute-fund-ami": 7,
   "tech-coast-angels": 8, "usc-viterbi-startup-showcase": 8, "y-combinator": 8,
 }
 export const COLUMNS = 9

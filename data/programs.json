@@ -206,7 +206,7 @@
     ],
     "group": "viterbi",
     "category": "Competitions & Pitch",
-    "description": "Run by the Sonny Astani Dept. of Civil and Environmental Engineering: teams pitch startup ideas tackling LA civil and environmental challenges, attending monthly seminars with industry mentors, for a $20,000 grand prize.",
+    "description": "Run by the Sonny Astani Dept. of Civil and Environmental Engineering: teams pitch startup ideas tackling LA civil and environmental challenges, attending monthly seminars with industry mentors, for a share of $30,000 in prizes (2026-27).",
     "timing": "Annual; fall kickoff/info session (September), six monthly seminars, spring Demo Day (May)",
     "cadence": "annual",
     "months": [
@@ -222,7 +222,7 @@
     "stage": [
       "idea"
     ],
-    "funding": "$20,000 grand prize",
+    "funding": "Share of $30,000 in prizes (2026-27 Das Family Incubator)",
     "link": "https://cee.usc.edu/current-students/student-competition/",
     "sources": [
       "https://cee.usc.edu/current-students/student-competition/",
@@ -232,7 +232,7 @@
     ],
     "confidence": "high",
     "notes": "Run by CEE department, not TIE Hub. Established 2022 by alumni Santanu and Kelly Das. One sustainability page cites $15,000; most sources say $20,000. 2026 winner: MatterFlow.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "data-center-challenge",
@@ -2353,19 +2353,20 @@
     ],
     "confidence": "medium",
     "notes": "Check size and cadence from 2018 launch coverage; latest known investment Dec 2024 (CB Insights). Usually co-invests.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-21",
+    "archived": "No longer active (Peyton, Oct 26, 2026)."
   },
   {
     "id": "usc-venture-lab-usc-vc",
-    "name": "BAEP 565 Venture Lab",
+    "name": "Venture Lab (BAEP 565)",
     "aliases": [
       "USC Venture Lab",
-      "USC VC",
+      "BAEP 565 Venture Lab",
       "BAEP 565"
     ],
     "group": "marshall",
     "category": "Courses & Degrees",
-    "description": "Greif Center graduate course (3 units) where students work with startups and venture capitalists on sourcing deals, diligence, evaluating investments, writing investment memos and managing portfolio companies.",
+    "description": "Greif Center graduate course (3 units) where students work with startups and venture capitalists on sourcing deals, diligence, investment memos and portfolio support. Hosts a guest speaker from the venture world every Thursday night.",
     "timing": "Offered Fall 2026, Thursdays 6:30-9:30 pm.",
     "cadence": "semester",
     "months": [
@@ -2382,8 +2383,8 @@
       "https://students.marshall.usc.edu/sites/default/files/2026-06/BAEP%20Grad%20Electives%20-%20Fall%202026.pdf"
     ],
     "confidence": "medium",
-    "notes": "A course, not a student club (confirmed by Founder Compass team, Oct 2026). Fall 2026 instructors: Jack Crawford and Jai Choi.",
-    "lastVerified": "2026-10-20"
+    "notes": "A course, not a student club (confirmed by Founder Compass team, Oct 2026). Fall 2026 instructors: Jack Crawford and Jai Choi. Weekly Thursday speakers confirmed by Peyton (Oct 26, 2026).",
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "vaneck-digital-assets-initiative",
@@ -2492,18 +2493,28 @@
   },
   {
     "id": "weekly-founder-salon",
-    "name": "Weekly Founder Salon",
+    "name": "Start Up Salon",
     "aliases": [
+      "Startup Salon",
+      "Weekly Founder Salon",
       "Founder Salon"
     ],
     "group": "marshall",
     "category": "Events & Speakers",
-    "description": "A recurring Greif Center gathering for USC founders. No public details could be verified.",
-    "timing": "Weekly (per name); day and time not verified",
+    "description": "Recurring founder gathering hosted by Paul Orlando at the USC Incubator (Greif Center), open to anyone with a direct connection to USC.",
+    "timing": "Recurring Thursday afternoons during the semester (for example Thu Sep 10, 2026, 3-4pm at the USC Incubator).",
     "cadence": "weekly",
     "months": [],
-    "eligibility": null,
-    "audience": [],
+    "eligibility": "Open to anyone with a direct connection to USC.",
+    "audience": [
+      "undergrad",
+      "grad",
+      "phd",
+      "postdoc",
+      "faculty",
+      "staff",
+      "alumni"
+    ],
     "stage": [],
     "funding": null,
     "link": "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies",
@@ -2511,8 +2522,8 @@
       "https://students.marshall.usc.edu/lloyd-greif-center-entrepreneurial-studies"
     ],
     "confidence": "medium",
-    "notes": "Searches found no public page for this program; may be new or only promoted via EngageSC/newsletter. Verify with the Greif Center. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-21"
+    "notes": "Listed as \"Weekly Founder Salon\" on Ralph Lin's staff list; Peyton confirmed it is the Start Up Salon (Oct 26, 2026). Dates from LinkedIn posts.",
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "acad-406-purpose-driven-innovation-incubator",
@@ -4889,7 +4900,7 @@
     ],
     "group": "clubs",
     "category": "Student Organizations",
-    "description": "Student organization focused on venture capital and investing, listed among USC entrepreneurship organizations.",
+    "description": "Student venture capital and investing club; runs recruiting panels and events for students interested in VC and finance.",
     "timing": "Recruits each fall; Fall 2026 General Membership applications were due September 1, 2026.",
     "cadence": "unknown",
     "months": [
@@ -4903,12 +4914,12 @@
     "link": "https://engage.usc.edu/TrojanVenturePartners/",
     "sources": [
       "https://coda.io/@hanshen-tjoa/usc-organizations-list/entrepreneurship-organizations-21",
-      "https://engage.usc.edu/TrojanVenturePartners/"
+      "https://engage.usc.edu/TrojanVenturePartners/",
+      "https://www.linkedin.com/company/trojan-venture-partners/"
     ],
-    "confidence": "low",
-    "notes": "Only an unofficial user-made list mentions it; activities, membership and status unconfirmed. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22",
-    "archived": "No public source found and not on the USC staff list."
+    "confidence": "medium",
+    "notes": "Active per its LinkedIn page (Oct 2026 student panel). Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "troylabs",

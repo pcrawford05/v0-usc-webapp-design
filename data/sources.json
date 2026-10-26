@@ -683,7 +683,7 @@
       "name": "Trojan Venture Partners",
       "chunk": "gap-11",
       "status": "archived",
-      "lastResearched": "2026-10-22",
+      "lastResearched": "2026-10-26",
       "sources": [
         {
           "url": "https://coda.io/@hanshen-tjoa/usc-organizations-list/entrepreneurship-organizations-21",
@@ -714,6 +714,13 @@
           "kind": "social",
           "platform": "linkedin",
           "holds": "LinkedIn page: Trojan Venture Partners",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7515543788233097216/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "status: student panel on Wednesday, October 14th (active)",
           "lastChecked": "2026-10-26"
         }
       ],
@@ -2120,7 +2127,7 @@
       "name": "Das Family Innovate x LA Student Competition",
       "chunk": "p3-02",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-26",
       "sources": [
         {
           "url": "https://cee.usc.edu/current-students/student-competition/",
@@ -2139,6 +2146,13 @@
           "kind": "news",
           "holds": "2026 winner MatterFlow, $20,000, winners announced Apr 30 (snippet only)",
           "lastChecked": null
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512651668438618112/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "funding: \"compete for a share of $30,000 in prizes\" (USC Stevens Center post, Oct 2026)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -3704,13 +3718,27 @@
       "name": "Weekly Founder Salon",
       "chunk": "events-mentorship",
       "status": "confirmed-by-staff",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-26",
       "sources": [
         {
           "url": "https://engage.usc.edu/Entrepreneur/rsvp?id=404802",
           "kind": "campus-groups",
           "holds": "Greif LaunchPad office hours, no salon found",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7501060312716951552/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "timing: \"Paul Orlando is hosting another Start Up Salon on Thurs 9/10 from 3-4pm in the USC Incubator\"",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506368332774813697/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "eligibility: \"Open to anyone with a direct connection to USC.\"",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],

@@ -25,6 +25,8 @@ export interface Program {
   // Set when a program looks defunct (no public presence or long silent); hidden from the site but kept in the data.
   archived?: string
   lastVerified?: string
+  /** Official LinkedIn and Instagram pages; `host` marks a host unit's page rather than the program's own. */
+  socials?: { platform: "linkedin" | "instagram"; url: string; host?: string; handle?: string }[]
 }
 
 export const GROUPS = {

@@ -1,6 +1,6 @@
 "use client"
 
-import { Bookmark, BookmarkCheck, CalendarDays, ChevronDown, ExternalLink, GraduationCap, ShieldCheck, Users, Wallet } from "lucide-react"
+import { Bookmark, BookmarkCheck, CalendarDays, ChevronDown, ExternalLink, GraduationCap, Instagram, Linkedin, ShieldCheck, Users, Wallet } from "lucide-react"
 import { useCallback, useEffect, useState } from "react"
 
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
@@ -193,6 +193,8 @@ export function ProgramDrawer({
                 <ShareButton url={`${typeof window !== "undefined" ? window.location.origin : ""}/?p=${program.id}`} title={program.name} label="Share" className="py-2" compactLabel />
               </div>
 
+              <Socials program={program} />
+
               <div className="divide-y divide-border rounded-2xl border border-border bg-white/60">
                 <Section icon={CalendarDays} title="When" open>
                   {whenLabel(program)}
@@ -238,5 +240,35 @@ export function ProgramDrawer({
         )}
       </SheetContent>
     </Sheet>
+  )
+}
+
+/** The program's own Instagram and LinkedIn first, then its host unit's pages, labeled as such. */
+function Socials({ program }: { program: Program }) {
+  const links = program.socials ?? []
+  if (!links.length) return null
+  return (
+    <div className="flex flex-wrap items-center gap-1.5">
+      <span className="mr-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">Follow</span>
+      {links.map(s => {
+        const Icon = s.platform === "instagram" ? Instagram : Linkedin
+        const label = s.host ? `${s.host} on ${s.platform === "instagram" ? "Instagram" : "LinkedIn"}` : s.platform === "instagram" ? `@${s.handle ?? "Instagram"}` : "LinkedIn"
+        return (
+          <a
+            key={s.url}
+            href={s.url}
+            target="_blank"
+            rel="noreferrer"
+            className={cn(
+              "inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold transition hover:-translate-y-px",
+              s.platform === "instagram" ? "bg-gradient-to-br from-[#f58529] via-[#dd2a7b] to-[#8134af] text-white" : "bg-[#0A66C2] text-white",
+              s.host && "opacity-80",
+            )}
+          >
+            <Icon className="h-3.5 w-3.5" /> {label}
+          </a>
+        )
+      })}
+    </div>
   )
 }

@@ -6,6 +6,7 @@ import { useCallback, useEffect, useState } from "react"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { advisorOnly } from "@/lib/catalog"
 import { AUDIENCE_LABELS, GROUPS, MONTHS, STAGE_LABELS, type Program } from "@/lib/programs"
+import { programLink } from "@/lib/links"
 import { cn } from "@/lib/utils"
 
 import { RemindButton, ShareButton } from "./extras"
@@ -144,6 +145,7 @@ export function ProgramDrawer({
   onAsk: (question: string) => void
 }) {
   const g = program ? GROUPS[program.group] : null
+  const link = program ? programLink(program) : null
   const support = program ? advisorOnly.filter(x => x.group === program.group && x.id !== program.id).slice(0, 5) : []
   return (
     <Sheet open={!!program} onOpenChange={open => !open && onClose()}>
@@ -166,14 +168,15 @@ export function ProgramDrawer({
                 </span>
               </div>
               <div className="sticky bottom-0 -mx-6 flex flex-nowrap gap-2 border-t border-black/5 bg-white px-6 py-3 sm:static sm:mx-0 sm:flex-wrap sm:border-0 sm:bg-transparent sm:px-0 sm:py-0">
-                {program.link && (
+                {link && (
                   <a
-                    href={program.link}
+                    href={link.href}
                     target="_blank"
                     rel="noreferrer"
+                    title={link.specific ? undefined : `This program has no page of its own; this opens the ${link.label.replace(/ page$/, "")} site`}
                     className="inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:opacity-90 sm:flex-none"
                   >
-                    Official page <ExternalLink className="h-4 w-4" />
+                    {link.label} <ExternalLink className="h-4 w-4" />
                   </a>
                 )}
                 <button

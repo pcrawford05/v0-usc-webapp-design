@@ -40,6 +40,8 @@ export function programLink(p: Program): ProgramLink | null {
   }
   const path = url.pathname.toLowerCase()
   if (/\/(news|newsletter|the-pulse|blog|stories)\b/.test(path) || /dailytrojan\.com/.test(url.hostname)) return null
+  const social = socialLabel(url)
+  if (social) return { href: p.link, label: social, specific: true }
   if (url.hostname === "classes.usc.edu") return { href: p.link, label: "Class schedule", specific: true }
   if (url.hostname === "catalogue.usc.edu") return { href: p.link, label: "USC Catalogue", specific: true }
   if (url.pathname.endsWith(".pdf")) return { href: p.link, label: "Course list (PDF)", specific: true }
@@ -54,4 +56,16 @@ export function programLink(p: Program): ProgramLink | null {
   if (url.searchParams.has("p")) return { href: p.link, label: "Announcement", specific: false }
   // Its own domain (a club site, a nonprofit) is the program's site even without its name in the path.
   return { href: p.link, label: "Website", specific: true }
+}
+
+/** Posts and profiles on social media are fine as the main link when that is where a program announces itself. */
+function socialLabel(url: URL): string | null {
+  const host = url.hostname.replace(/^www\./, "")
+  const path = url.pathname
+  if (host.endsWith("linkedin.com")) return /^\/(feed\/update|posts|events)\//.test(path) ? "LinkedIn post" : "LinkedIn page"
+  if (host === "instagram.com") return /^\/(p|reel)\//.test(path) ? "Instagram post" : "Instagram"
+  if (host === "x.com" || host === "twitter.com") return /\/status\//.test(path) ? "Post on X" : "X profile"
+  if (host === "linktr.ee") return "Linktree"
+  if (host === "youtube.com" || host === "youtu.be") return "Video"
+  return null
 }

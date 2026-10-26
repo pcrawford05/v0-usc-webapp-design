@@ -101,7 +101,7 @@ export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, r
 
       <div className={cn("grid transition-[grid-template-rows,opacity] duration-300 ease-out", sheet ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0")} aria-hidden={!sheet} inert={!sheet}>
         <div className="overflow-hidden">
-          <div className="grid gap-4 rounded-2xl border border-black/5 bg-white/85 p-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="space-y-1 rounded-xl border border-black/[.06] bg-white/90 px-3 py-2">
             <Group label="For">
               {(Object.keys(AUDIENCE_LABELS) as Audience[]).map(a => (
                 <Opt key={a} on={f.who === a} n={count("who", p => p.audience.includes(a))} onClick={() => setFilters({ who: f.who === a ? null : a })}>{AUDIENCE_LABELS[a]}</Opt>
@@ -112,7 +112,7 @@ export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, r
                 <Opt key={s} on={f.stage === s} n={count("stage", p => p.stage.includes(s))} onClick={() => setFilters({ stage: f.stage === s ? null : s })}>{STAGE_LABELS[s]}</Opt>
               ))}
             </Group>
-            <Group label="School or unit">
+            <Group label="School">
               {GROUP_KEYS.map(g => {
                 const on = f.units.includes(g)
                 if (!on && !count("units", p => p.group === g)) return null
@@ -123,9 +123,9 @@ export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, r
                 )
               })}
             </Group>
-            <Group label="Show only">
-              <Opt on={f.open} n={count("open", isOpenNow)} onClick={() => setFilters({ open: !f.open })}><Clock className="h-3.5 w-3.5" /> Open now</Opt>
-              <Opt on={f.verified} n={count("verified", p => p.confidence !== "low")} onClick={() => setFilters({ verified: !f.verified })}><ShieldCheck className="h-3.5 w-3.5" /> Verified</Opt>
+            <Group label="Only">
+              <Opt on={f.open} n={count("open", isOpenNow)} onClick={() => setFilters({ open: !f.open })}><Clock className="h-3 w-3" /> Open now</Opt>
+              <Opt on={f.verified} n={count("verified", p => p.confidence !== "low")} onClick={() => setFilters({ verified: !f.verified })}><ShieldCheck className="h-3 w-3" /> Verified</Opt>
             </Group>
           </div>
         </div>
@@ -178,9 +178,9 @@ export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, r
 
 function Group({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div>
-      <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">{label}</div>
-      <div className="flex flex-wrap gap-1.5">{children}</div>
+    <div className="flex items-center gap-2">
+      <div className="w-14 shrink-0 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">{label}</div>
+      <div className="flex min-w-0 flex-1 gap-1 overflow-x-auto py-0.5 [scrollbar-width:none] sm:flex-wrap">{children}</div>
     </div>
   )
 }
@@ -191,10 +191,10 @@ function Opt({ on, n, onClick, children }: { on: boolean; n: number; onClick: ()
       onClick={onClick}
       disabled={!n && !on}
       aria-pressed={on}
-      className={cn("inline-flex items-center gap-1.5 rounded-full px-3 py-2 text-sm transition disabled:opacity-35", on ? "bg-primary text-primary-foreground" : "bg-black/[.05] hover:bg-black/[.08]")}
+      className={cn("inline-flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1.5 text-xs font-medium transition disabled:opacity-35 sm:py-1", on ? "bg-primary text-primary-foreground" : "bg-black/[.05] hover:bg-black/[.08]")}
     >
       {children}
-      <span className={cn("text-xs", on ? "text-primary-foreground/75" : "text-muted-foreground")}>{n}</span>
+      <span className={cn("text-[10px]", on ? "text-primary-foreground/75" : "text-muted-foreground")}>{n}</span>
     </button>
   )
 }

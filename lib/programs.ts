@@ -26,6 +26,8 @@ export interface Program {
   archived?: string
   lastVerified?: string
   /** Official LinkedIn and Instagram pages; `host` marks a host unit's page rather than the program's own. */
+  /** One named person, as the program itself publishes them: name and title only, never email or phone. */
+  contact?: { name: string; title: string; term?: string; kind: "staff" | "club"; source: string; checked: string }
   socials?: { platform: "linkedin" | "instagram"; url: string; host?: string; handle?: string }[]
 }
 
@@ -104,4 +106,12 @@ export const programById = new Map(programs.map(p => [p.id, p]))
 /** Programs that run year round, so they belong in every month of the calendar. */
 export function isAlwaysOn(p: Program): boolean {
   return p.months.length === 0 && ["rolling", "ongoing", "weekly", "monthly"].includes(p.cadence)
+}
+
+/** A contact is shown only while fresh: club officers turn over yearly, staff more slowly. */
+export function currentContact(p: Program, now = new Date()): Program["contact"] | null {
+  const c = p.contact
+  if (!c) return null
+  const months = (now.getTime() - new Date(`${c.checked}T12:00:00`).getTime()) / (30.4 * 86_400_000)
+  return months <= (c.kind === "club" ? 6 : 12) ? c : null
 }

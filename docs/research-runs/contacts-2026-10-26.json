@@ -1,0 +1,218 @@
+{
+ "contacts": [
+  {
+   "programId": "marshall-greif-incubator",
+   "name": "Paul Orlando",
+   "title": "Director of USC Incubator Program",
+   "term": null,
+   "kind": "staff",
+   "source": "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies",
+   "quote": "Paul Orlando Director of USC Incubator Program Adjunct Professor of Entrepreneurship",
+   "pageDate": null
+  },
+  {
+   "programId": "new-venture-seed-competition",
+   "name": "Dan Wadhwani",
+   "title": "Director of the Lloyd Greif Center for Entrepreneurial Studies",
+   "term": null,
+   "kind": "staff",
+   "source": "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies",
+   "quote": "Dan Wadhwani Director of the Lloyd Greif Center for Entrepreneurial Studies",
+   "pageDate": null
+  },
+  {
+   "programId": "usc-venture-capital",
+   "name": "Dan Wadhwani",
+   "title": "Director of Lloyd Greif Center for Entrepreneurial Studies, USC",
+   "term": null,
+   "kind": "staff",
+   "source": "https://uscventurecapital.com/about",
+   "quote": "Dan Wadhwani Director of Lloyd Greif Center for Entrepreneurial Studies, USC",
+   "pageDate": null
+  },
+  {
+   "programId": "brittingham-social-enterprise-lab",
+   "name": "Jessica Jackley",
+   "title": "Director of the Brittingham Social Enterprise Lab",
+   "term": null,
+   "kind": "staff",
+   "source": "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab",
+   "quote": "Jessica Jackley David C. Bohnett (Endowed) Chair in Human Leadership Director of the Brittingham Social Enterprise Lab",
+   "pageDate": null
+  },
+  {
+   "programId": "iya-venture-studio",
+   "name": "Michael Kanazawa",
+   "title": "Distinguished Visiting Lecturer and IYA Venture Studio Lead",
+   "term": null,
+   "kind": "staff",
+   "source": "https://iovine-young.usc.edu/people/michael-kanazawa",
+   "quote": "Distinguished Visiting Lecturer and IYA Venture Studio Lead",
+   "pageDate": null
+  },
+  {
+   "programId": "usc-stevens-center-for-innovation",
+   "name": "Erin Overstreet, PhD",
+   "title": "Executive Director",
+   "term": null,
+   "kind": "staff",
+   "source": "https://stevens.usc.edu/directory/",
+   "quote": "Erin Overstreet, PhD Executive Director",
+   "pageDate": null
+  },
+  {
+   "programId": "alfred-e-mann-institute-fund-ami",
+   "name": "Tariq Warsi",
+   "title": "Managing Director",
+   "term": null,
+   "kind": "staff",
+   "source": "https://research.usc.edu/?p=6419",
+   "quote": "Under the leadership of Managing Director Tariq Warsi",
+   "pageDate": "2025-09"
+  },
+  {
+   "programId": "keck-mesh-entrepreneurial-support",
+   "name": "Vasiliki Anest, PhD",
+   "title": "Chief Innovation Officer; Head of MESH Strategic Partnerships",
+   "term": null,
+   "kind": "staff",
+   "source": "https://keck.usc.edu/mesh/mesh-team/",
+   "quote": "Vasiliki Anest, PhD, Chief Innovation Officer; Head of MESH Strategic Partnerships",
+   "pageDate": null
+  },
+  {
+   "programId": "usc-and-techstars-university-catalyst",
+   "name": "Telesha Bowen",
+   "title": "Program Manager",
+   "term": null,
+   "kind": "staff",
+   "source": "https://techstars.com/usc-and-techstars-university-catalyst",
+   "quote": "Meet the Team Telesha Bowen Program Manager",
+   "pageDate": null
+  },
+  {
+   "programId": "troylabs",
+   "name": "Anastasia Ramirez",
+   "title": "President",
+   "term": null,
+   "kind": "club",
+   "source": "https://engage.usc.edu/Troylabs/web_officers",
+   "quote": "Anastasia Ramirez Student President",
+   "pageDate": null
+  },
+  {
+   "programId": "lavalab",
+   "name": "Sonya Alexis",
+   "title": "President",
+   "term": null,
+   "kind": "club",
+   "source": "https://engage.usc.edu/lavalab/web_officers",
+   "quote": "Sonya Alexis Student President",
+   "pageDate": null
+  },
+  {
+   "programId": "spark-sc",
+   "name": "Rila He",
+   "title": "President",
+   "term": null,
+   "kind": "club",
+   "source": "https://engage.usc.edu/spark/web_officers",
+   "quote": "Rila He Student President",
+   "pageDate": null
+  },
+  {
+   "programId": "productsc",
+   "name": "Ryan Pham",
+   "title": "President",
+   "term": null,
+   "kind": "club",
+   "source": "https://engage.usc.edu/ProductSc/web_officers",
+   "quote": "Ryan Pham Student President",
+   "pageDate": null
+  },
+  {
+   "programId": "hacksc",
+   "name": "Jamie Chiang",
+   "title": "President",
+   "term": null,
+   "kind": "club",
+   "source": "https://engage.usc.edu/hacksc/web_officers",
+   "quote": "Jamie Chiang Student President",
+   "pageDate": null
+  },
+  {
+   "programId": "trojan-venture-partners",
+   "name": "Jason Copeland",
+   "title": "President",
+   "term": null,
+   "kind": "club",
+   "source": "https://engage.usc.edu/TrojanVenturePartners/web_officers",
+   "quote": "Jason Copeland Student President",
+   "pageDate": null
+  }
+ ],
+ "notFound": [
+  {
+   "programId": "viterbi-startup-garage",
+   "checked": [
+    "https://viterbiinnovation.usc.edu/",
+    "https://viterbiinnovation.usc.edu/contact/",
+    "https://viterbiinnovation.usc.edu/about/ (redirects to home)"
+   ]
+  },
+  {
+   "programId": "summer-smasher",
+   "checked": [
+    "https://viterbiinnovation.usc.edu/summer-smasher/ (Cloudflare block via curl)",
+    "https://viterbiinnovation.usc.edu/contact/"
+   ]
+  },
+  {
+   "programId": "maseeh-entrepreneurship-prize-competition",
+   "checked": [
+    "https://viterbiinnovation.usc.edu/mepc/"
+   ]
+  },
+  {
+   "programId": "trojan-tank",
+   "checked": [
+    "https://viterbiinnovation.usc.edu/",
+    "https://viterbiinnovation.usc.edu/contact/"
+   ]
+  },
+  {
+   "programId": "iya-innovation-quest",
+   "checked": [
+    "https://iovine-young.usc.edu/iya-innovation-quest",
+    "https://iovine-young.usc.edu/experiences/innovation-quest/ (empty/generic)"
+   ]
+  },
+  {
+   "programId": "innovation-catalyst-program-icp",
+   "checked": [
+    "https://research.usc.edu/?p=6483",
+    "https://rii.usc.edu/wp-content/uploads/sites/5/2026/04/Innovation-Catalyst-Program-Final-v8.pdf (only generic rii@/researchsupport@ mailboxes)"
+   ]
+  },
+  {
+   "programId": "entrepreneur-and-venture-management-association-evma",
+   "checked": [
+    "https://clubs.marshall.usc.edu/evma/",
+    "https://clubs.marshall.usc.edu/evma/leadership-team/ (24-25 names, no titles except one)",
+    "https://engage.usc.edu/evma/web_officers (no officers rendered)",
+    "https://uscventurecapital.com/about (names Shayan Akhtari as EVMA President but third-party page, not used)"
+   ]
+  }
+ ],
+ "blocked": null,
+ "notes": [
+  "Run 2026-10-26. LinkedIn/Instagram not opened (no login-free text expected); Chrome used for 6 page loads only.",
+  "EngageSC /<slug>/web_officers via curl is the most reliable club source: returns officer name, role and Student/Faculty tag with no JS. It states no term, so term=null. Works for troylabs, lavalab, spark, ProductSc, hacksc, TrojanVenturePartners; not for EVMA (slug has no officers listed).",
+  "Club own sites: usclavalab.org and troylabs.vc list exec boards and agree with EngageSC (troylabs.vc also shows Charlotte Chang as President, EngageSC lists her Vice President; EngageSC used, co-president possible). sparksc.org/our-people is stale (Core F'24-S'25), EngageSC used for Spark.",
+  "viterbiinnovation.usc.edu (TIE Hub) blocks curl via Cloudflare; works in Chrome but has no team page; /contact/ shows only a generic mailbox. 4 TIE Hub programs unresolved.",
+  "marshall.usc.edu Greif Center page (curl) has a GREIF CENTER STAFF section with director titles. NVSC and USC Venture Capital use center director Dan Wadhwani (center-level, not program-specific).",
+  "stevens.usc.edu/directory/ works via curl and lists titles; Executive Director is a center-level contact. Techstars page names Telesha Bowen as Program Manager (undated).",
+  "keck.usc.edu/mesh/mesh-team/ needs Chrome (Cloudflare on curl) but lists titles clearly. uscventurecapital.com is JS only: needs Chrome; /about lists faculty and staff without a fund lead.",
+  "ami.usc.edu returns empty; AMI name comes from a Sept 2025 research.usc.edu announcement (may be dated)."
+ ]
+}

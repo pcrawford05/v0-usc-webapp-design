@@ -303,6 +303,12 @@
           "kind": "campus-groups",
           "holds": "HackSC events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/hacksc/web_officers",
+          "kind": "campus-groups",
+          "holds": "contact: Jamie Chiang Student President",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -431,6 +437,12 @@
           "kind": "campus-groups",
           "holds": "LavaLab events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/lavalab/web_officers",
+          "kind": "campus-groups",
+          "holds": "contact: Sonya Alexis Student President",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -515,6 +527,12 @@
           "kind": "campus-groups",
           "holds": "ProductSC events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/ProductSc/web_officers",
+          "kind": "campus-groups",
+          "holds": "contact: Ryan Pham Student President",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -673,6 +691,12 @@
           "kind": "campus-groups",
           "holds": "Spark SC events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://engage.usc.edu/spark/web_officers",
+          "kind": "campus-groups",
+          "holds": "contact: Rila He Student President",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -767,6 +791,12 @@
           "platform": "linkedin",
           "holds": "status: student panel on Wednesday, October 14th (active)",
           "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://engage.usc.edu/TrojanVenturePartners/web_officers",
+          "kind": "campus-groups",
+          "holds": "contact: Jason Copeland Student President",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -842,6 +872,12 @@
           "kind": "social",
           "platform": "linkedin",
           "holds": "eligibility: BUILD is our 8-week flagship accelerator, providing hands-on consulting to USC's premier startups, from pre-seed to seed-stage companies with a functional MVP.",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://engage.usc.edu/Troylabs/web_officers",
+          "kind": "campus-groups",
+          "holds": "contact: Anastasia Ramirez Student President",
           "lastChecked": "2026-10-26"
         }
       ],
@@ -2887,6 +2923,12 @@
           "host": "Greif Center",
           "holds": "Instagram bio \"USC Greif Center for Entrepreneurial Studies\", 2,775 followers; also linked from engage.usc.edu/entrepreneur footer.",
           "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies",
+          "kind": "official",
+          "holds": "contact: Dan Wadhwani Director of the Lloyd Greif Center for Entrepreneurial Studies",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -3300,6 +3342,12 @@
           "platform": "instagram",
           "host": "Greif Center",
           "holds": "Instagram bio \"USC Greif Center for Entrepreneurial Studies\", 2,775 followers; also linked from engage.usc.edu/entrepreneur footer.",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies",
+          "kind": "official",
+          "holds": "contact: Paul Orlando Director of USC Incubator Program Adjunct Professor of Entrepreneurship",
           "lastChecked": "2026-10-26"
         }
       ],
@@ -4463,6 +4511,12 @@
           "platform": "linkedin",
           "holds": "LinkedIn page: MESH Strategic Partnerships, Keck School of Medicine of USC",
           "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://keck.usc.edu/mesh/mesh-team/",
+          "kind": "official",
+          "holds": "contact: Vasiliki Anest, PhD, Chief Innovation Officer; Head of MESH Strategic Partnerships",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -4760,6 +4814,12 @@
           "platform": "instagram",
           "host": "Stevens Center",
           "holds": "Instagram \"USC Stevens Center for Innovation\" (@uscedu tech transfer office), 1,537 followers; linked from stevens.usc.edu footer.",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://stevens.usc.edu/directory/",
+          "kind": "official",
+          "holds": "contact: Erin Overstreet, PhD Executive Director",
           "lastChecked": "2026-10-26"
         }
       ],
@@ -6057,6 +6117,12 @@
           "url": "https://uscventurecapital.com",
           "kind": "official",
           "holds": "Fund website (JavaScript only, no readable text on Oct 26, 2026)",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://uscventurecapital.com/about",
+          "kind": "official",
+          "holds": "contact: Dan Wadhwani Director of Lloyd Greif Center for Entrepreneurial Studies, USC",
           "lastChecked": "2026-10-26"
         }
       ]

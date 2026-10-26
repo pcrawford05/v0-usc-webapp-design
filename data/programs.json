@@ -1994,7 +1994,14 @@
         "url": "https://www.linkedin.com/company/usc-brittingham-social-enterprise-lab/",
         "host": "Brittingham Lab"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Jessica Jackley",
+      "title": "Director",
+      "kind": "staff",
+      "source": "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "catalyst-microgrant-fund",
@@ -2539,7 +2546,14 @@
         "url": "https://www.linkedin.com/company/lloydgreifcenter/",
         "host": "Greif Center"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Paul Orlando",
+      "title": "Director, USC Incubator",
+      "kind": "staff",
+      "source": "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "mba-entrepreneurship-and-venture-management-concentration",
@@ -2713,7 +2727,14 @@
         "url": "https://www.linkedin.com/company/lloydgreifcenter/",
         "host": "Greif Center"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Dan Wadhwani",
+      "title": "Director, Lloyd Greif Center",
+      "kind": "staff",
+      "source": "https://www.marshall.usc.edu/institutes-and-centers/lloyd-greif-center-for-entrepreneurial-studies",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "usc-marshall-venture-fund",
@@ -2835,7 +2856,14 @@
         "platform": "linkedin",
         "url": "https://www.linkedin.com/company/usc-venture-capital/"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Dan Wadhwani",
+      "title": "Director, Lloyd Greif Center",
+      "kind": "staff",
+      "source": "https://uscventurecapital.com/about",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "vaneck-digital-assets-initiative",
@@ -3656,7 +3684,14 @@
         "url": "https://www.linkedin.com/school/usciovineyoung/",
         "host": "IYA"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Michael Kanazawa",
+      "title": "IYA Venture Studio Lead",
+      "kind": "staff",
+      "source": "https://iovine-young.usc.edu/people/michael-kanazawa",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "m-s-in-integrated-design-business-and-technology",
@@ -4017,7 +4052,14 @@
         "platform": "linkedin",
         "url": "https://www.linkedin.com/company/usc-alfred-e-mann-institute/"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Tariq Warsi",
+      "title": "Managing Director, AMI",
+      "kind": "staff",
+      "source": "https://research.usc.edu/?p=6419",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "usc-amgen-bioaccelerator",
@@ -4587,7 +4629,14 @@
         "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
         "host": "Stevens Center"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Telesha Bowen",
+      "title": "Program Manager",
+      "kind": "staff",
+      "source": "https://techstars.com/usc-and-techstars-university-catalyst",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "usc-innovation-ecosystem-portal",
@@ -4693,7 +4742,14 @@
         "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
         "host": "Stevens Center"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Erin Overstreet, PhD",
+      "title": "Executive Director, Stevens Center",
+      "kind": "staff",
+      "source": "https://stevens.usc.edu/directory/",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "usc-stevens-legal-office-hours",
@@ -5015,7 +5071,14 @@
         "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
         "host": "Keck MESH"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Vasiliki Anest, PhD",
+      "title": "Chief Innovation Officer; Head of MESH Strategic Partnerships",
+      "kind": "staff",
+      "source": "https://keck.usc.edu/mesh/mesh-team/",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "la-biostart-boot-camp",
@@ -5621,7 +5684,14 @@
         "platform": "linkedin",
         "url": "https://www.linkedin.com/company/hacksc/"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Jamie Chiang",
+      "title": "President",
+      "kind": "club",
+      "source": "https://engage.usc.edu/hacksc/web_officers",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "high-tech-association-hta",
@@ -5755,7 +5825,14 @@
         "platform": "linkedin",
         "url": "https://www.linkedin.com/company/usclavalab/"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Sonya Alexis",
+      "title": "President",
+      "kind": "club",
+      "source": "https://engage.usc.edu/lavalab/web_officers",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "medesign",
@@ -5844,7 +5921,14 @@
         "platform": "linkedin",
         "url": "https://www.linkedin.com/company/product-sc/"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Ryan Pham",
+      "title": "President",
+      "kind": "club",
+      "source": "https://engage.usc.edu/ProductSc/web_officers",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "shift-sc",
@@ -6007,7 +6091,14 @@
         "platform": "linkedin",
         "url": "https://www.linkedin.com/company/spark-sc/"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Rila He",
+      "title": "President",
+      "kind": "club",
+      "source": "https://engage.usc.edu/spark/web_officers",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "techie",
@@ -6092,7 +6183,14 @@
         "platform": "linkedin",
         "url": "https://www.linkedin.com/company/trojan-venture-partners/"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Jason Copeland",
+      "title": "President",
+      "kind": "club",
+      "source": "https://engage.usc.edu/TrojanVenturePartners/web_officers",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "impact-investing-group-at-usc",
@@ -6175,7 +6273,14 @@
         "platform": "linkedin",
         "url": "https://www.linkedin.com/company/troy-labs/"
       }
-    ]
+    ],
+    "contact": {
+      "name": "Anastasia Ramirez",
+      "title": "President",
+      "kind": "club",
+      "source": "https://engage.usc.edu/Troylabs/web_officers",
+      "checked": "2026-10-26"
+    }
   },
   {
     "id": "usc-entrepreneur-club",

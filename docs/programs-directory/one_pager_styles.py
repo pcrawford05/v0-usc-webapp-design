@@ -16,10 +16,11 @@ SECTIONS = [
         "Maseeh Entrepreneurial Prize Competition", "Min Family Challenge", "Trojan Tank", "Origin Weekend",
         "Viterbi Startup Showcase", "Technology Entrepreneurship Minor"]),
     ("Marshall Greif Center", [
-        "Lloyd Greif Center for Entrepreneurial Studies", "Greif Incubator", "USC Marshall Venture Fund",
-        "New Venture Seed Competition", "ATHENA Initiative & Summit", "Founder Central Initiative",
-        "Brittingham Social Enterprise Lab", "Marshall Experts-in-Residence", "Catalyst Microgrant",
-        "M.S. Entrepreneurship & Innovation", "M.S. Social Entrepreneurship", "Entrepreneurship Minor"]),
+        "Lloyd Greif Center for Entrepreneurial Studies", "Greif Incubator", "USC Venture Capital (USCVC)",
+        "Venture Lab (BAEP 565)", "New Venture Seed Competition", "ATHENA Initiative & Summit", "Start Up Salon",
+        "Brittingham Social Enterprise Lab", "Leverage Point Fellowship", "Marshall Experts-in-Residence",
+        "Catalyst Microgrant", "M.S. Entrepreneurship & Innovation", "M.S. Social Entrepreneurship",
+        "Entrepreneurship, Social Entrepreneurship & Technology Commercialization Minors"]),
     ("Iovine and Young Academy", [
         "IYA Innovation Quest", "IYA Venture Studio", "IYA Founder Hub", "IYA Founders Bootcamp",
         "IYA Ignite Grants", "IYA Venture Showcase", "IYA Entrepreneur in Residence",
@@ -27,15 +28,15 @@ SECTIONS = [
         "M.S. Integrated Design, Business & Technology", "Health Innovation Minor", "IYA Makerspace"]),
     ("Research & Launch", [
         "USC Stevens Center for Innovation", "Stevens Legal Office Hours", "Innovation Catalyst Program",
-        "Startup Launch Award", "Techstars USC Digital Economy Program", "USC + Techstars Startup Weekend",
-        "Alfred E. Mann Institute", "IP & Technology Law Clinic"]),
+        "Startup Launch Award", "USC + Amgen BioAccelerator", "Techstars USC Digital Economy Program",
+        "USC + Techstars Startup Weekend", "Alfred E. Mann Institute", "IP & Technology Law Clinic"]),
     ("Across USC", [
-        "Blackstone LaunchPad", "Founder Clubs", "Alumni Entrepreneurs Network", "VentureWell E-Team Grants",
+        "Keck MESH Entrepreneurial Support", "Alumni Entrepreneurs Network", "VentureWell E-Team Grants",
         "USC Games Summer Bridge Program", "Rossier EdTech Accelerator", "Gould Small Business Clinic",
-        "Keck MESH Innovation Cafes"]),
+        "Nucleate Los Angeles", "LA Regional SBDC"]),
     ("Student Organizations", [
-        "LavaLab", "SparkSC", "TroyLabs", "Sigma Eta Pi", "FightOnFounders", "HackSC", "USC Entrepreneur Club",
-        "Entrepreneur & Venture Management Association"]),
+        "LavaLab", "SparkSC", "TroyLabs", "ProductSC", "Sigma Eta Pi", "FightOnFounders", "HackSC",
+        "Trojan Venture Partners", "Impact Investing Group", "Entrepreneur & Venture Management Association"]),
 ]
 # Grid: row 1 holds the three flagship units, row 2 the rest, so columns line up.
 ROWS = [SECTIONS[:3], SECTIONS[3:]]

@@ -639,6 +639,8 @@
     "cadence": "annual",
     "months": [
       1,
+      2,
+      3,
       4
     ],
     "eligibility": "USC student-led teams with a technology-enabled venture; Viterbi student involvement expected (verify current rules).",
@@ -661,7 +663,7 @@
     ],
     "confidence": "high",
     "notes": "Prize raised from $50K to $100K for 2024-25. 2026 winner: Bilisense (jaundice testing). Exact team-composition rules not verified.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "min-family-challenge",
@@ -678,6 +680,8 @@
     "cadence": "annual",
     "months": [
       1,
+      2,
+      3,
       4
     ],
     "eligibility": "Teams must have a USC Viterbi student (undergrad or grad) in a lead role; multidisciplinary teams encouraged.",
@@ -700,7 +704,7 @@
     ],
     "confidence": "high",
     "notes": "Official MFC page appeared out of date in search snippets (referenced 2025-26 cycle). Some past cycles had October deadlines.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "national-i-corps-teams-grant",
@@ -2040,20 +2044,27 @@
     "group": "marshall",
     "category": "Mentorship & Office Hours",
     "description": "Reported BSEL social impact fellowship. No public information could be verified.",
-    "timing": null,
+    "timing": "2026-27 cycle: applications were due Sep 21, 2026 at 1:00pm PT (extended from Sep 18); interviews Oct 12; notifications on or before Oct 16; fellowship begins Nov 2, 2026.",
     "cadence": "unknown",
-    "months": [],
-    "eligibility": null,
-    "audience": [],
+    "months": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "eligibility": "Early-stage USC alumni founders committed to developing a social venture; for-profit and non-profit models are both eligible.",
+    "audience": [
+      "alumni"
+    ],
     "stage": [],
-    "funding": null,
+    "funding": "$25,000 award (2 awards in 2026), plus 6 months of dedicated office space in the Brittingham Lab",
     "link": "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab",
     "sources": [
       "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab"
     ],
     "confidence": "medium",
     "notes": "No source found under this name. Possibly related to BSEL Senior Fellows, Impact Scholars, or the MBA Society and Business Fellowship. Verify with BSEL. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "marcia-israel-celebration-and-founder-showcase",
@@ -3131,7 +3142,7 @@
     "group": "joint",
     "category": "Events & Speakers",
     "description": "Free campus-wide startup networking mixers co-hosted by the Viterbi TIE Hub and Marshall's Lloyd Greif Center, open to students from every school.",
-    "timing": "Typically early fall semester (past mixers in October); one past mixer drew 261 registrants.",
+    "timing": "Typically early fall semester. Fall 2026: first joint Viterbi, Marshall (Greif) and Iovine and Young Academy Startup Mixer on Oct 6, 2026, 4-6 PM drop-in (355 attendees, 54 USC groups represented).",
     "cadence": "semester",
     "months": [
       9,
@@ -3157,7 +3168,7 @@
     ],
     "confidence": "medium",
     "notes": "Co-hosting by other schools (e.g. Iovine and Young, Stevens) not confirmed. Timing inferred from 2019-2021 listings.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "deeptech-founder-matching",
@@ -3198,10 +3209,12 @@
     "group": "joint",
     "category": "Research Commercialization",
     "description": "Joint Viterbi TIE Hub and USC Stevens Center for Innovation programming that helps researchers turn lab discoveries into startups.",
-    "timing": null,
+    "timing": "Fall 2026 workshop with Wilson Sonsini on Friday, Oct 9, 2026, 9:00 am-12:00 pm, with free one-on-one legal office hours Oct 8 and 9.",
     "cadence": "unknown",
-    "months": [],
-    "eligibility": "USC researchers (faculty, postdocs, PhD students) with technology to commercialize; details not confirmed.",
+    "months": [
+      10
+    ],
+    "eligibility": "USC faculty, clinicians, researchers, postdocs and graduate students.",
     "audience": [
       "phd",
       "postdoc",
@@ -3216,7 +3229,7 @@
     "sources": [],
     "confidence": "medium",
     "notes": "No source found under this exact name; a Jan 2026 USC feature 'From Lab to Launch' covers health startups. Related: Stevens 'From Discovery to Commercialization' webinar series. Confirmed by USC staff (Ralph Lin's program list); no public page found in the Oct 2026 research run, so details may be incomplete.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "usc-ventures",
@@ -3272,7 +3285,7 @@
       "prototype",
       "launched"
     ],
-    "funding": "Equity investment; amounts not published",
+    "funding": "Equity investment; amounts vary. The 2026 USC + Amgen BioAccelerator offered one selected USC-affiliated life science company up to $250,000 from AMI (deadline Sept 30, 2026).",
     "link": "https://ami.usc.edu/",
     "sources": [
       "https://research.usc.edu/?p=6419",
@@ -3281,7 +3294,7 @@
     ],
     "confidence": "medium",
     "notes": "Fund size and terms not found. Scope of investments reportedly broadening; new website announced. Link ami.usc.edu not verified.",
-    "lastVerified": "2026-10-21"
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "early-career-innovator-award",
@@ -4257,13 +4270,15 @@
     "group": "health",
     "category": "Student Organizations",
     "description": "Free, trainee-led nonprofit building a global biotech founder community; its Activator program helps academic biotech founders refine and advance ventures with mentors.",
-    "timing": "Nucleate LA 2026-27 Activator applications opened September 2026 and closed October 20, 2026 (rolling review).",
+    "timing": "Nucleate LA 2026-27 Activator applications opened September 2026; the deadline was extended from Oct 20 to Nov 1, 2026 (rolling review). The 2026 cycle Demo Day was May 8, 2026.",
     "cadence": "annual",
     "months": [
+      5,
       9,
-      10
+      10,
+      11
     ],
-    "eligibility": "Graduate students, postdocs and other academic trainees interested in biotech entrepreneurship.",
+    "eligibility": "Academic trainees (graduate students, postdocs, MD, MBA, JD, MS and PhD trainees); business-minded people such as MBAs can join an inventor's team through the Business Contributor track.",
     "audience": [
       "grad",
       "phd",
@@ -4273,7 +4288,7 @@
       "idea",
       "prototype"
     ],
-    "funding": null,
+    "funding": "Free and equity-free (no cash funding)",
     "link": "https://nucleate.xyz/",
     "sources": [
       "https://luma.com/owz1s10s",
@@ -4281,7 +4296,7 @@
     ],
     "confidence": "low",
     "notes": "Nucleate Los Angeles chapter is active on Instagram (@nucleate.la); USC affiliation of the chapter not stated there.",
-    "lastVerified": "2026-10-20"
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "sc-ctsi-southern-california-clinical-and-translational-scien",
@@ -4911,7 +4926,7 @@
       8,
       9
     ],
-    "eligibility": "USC student founders and students interested in startups; DEMO features USC student startups.",
+    "eligibility": "USC student founders and students interested in startups. BUILD (8-week accelerator) takes pre-seed to seed-stage USC startups with a functional MVP; member applications cover six divisions (product management, marketing, finance/VC, software engineering, design, DEMO).",
     "audience": [
       "undergrad"
     ],
@@ -4920,7 +4935,7 @@
       "prototype",
       "launched"
     ],
-    "funding": "Pitch competition prizes in the thousands of dollars at DEMO",
+    "funding": "DEMO pitch competition cash pool of $10,500 in 2026 ($7,500 first place, $3,000 second)",
     "link": "https://www.troylabs.vc/",
     "sources": [
       "https://engage.usc.edu/Troylabs/",
@@ -4932,7 +4947,7 @@
     ],
     "confidence": "medium",
     "notes": "2026 DEMO date not confirmed. Has a student VC team that helps startups prepare to fundraise; no evidence of its own investment fund. Membership eligibility (undergrad vs grad) not yet confirmed with the club.",
-    "lastVerified": "2026-10-22"
+    "lastVerified": "2026-10-26"
   },
   {
     "id": "usc-entrepreneur-club",

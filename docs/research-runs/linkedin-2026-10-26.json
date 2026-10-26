@@ -1,0 +1,483 @@
+{
+  "run": "2026-10-26",
+  "pages": [
+    {
+      "programIds": [
+        "new-venture-seed-competition",
+        "venture-capital-investment-competition-vcic",
+        "marshall-greif-incubator",
+        "usc-marshall-venture-fund",
+        "greif-center-newsletter",
+        "all-school-startup-mixers",
+        "entrepreneurship-minor",
+        "ms-in-entrepreneurship-and-innovation",
+        "usc-venture-lab-usc-vc"
+      ],
+      "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+      "name": "Lloyd Greif Center for Entrepreneurial Studies - USC Marshall"
+    },
+    {
+      "programIds": [
+        "maseeh-entrepreneurship-prize-competition",
+        "min-family-challenge",
+        "origin-weekend",
+        "ship-fund",
+        "tie-hub-coworking",
+        "tie-hub-office-hours",
+        "tie-hub-1-1-mentorship",
+        "usc-viterbi-startup-showcase",
+        "viterbi-venture-fund",
+        "venture-scout",
+        "summer-smasher",
+        "technology-innovation-fellowship",
+        "viterbi-startup-garage",
+        "all-school-startup-mixers"
+      ],
+      "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+      "name": "TIE Hub - USC Viterbi"
+    },
+    {
+      "programIds": [
+        "iya-innovation-quest",
+        "iya-venture-showcase",
+        "iya-ignite-grants",
+        "iya-founders-bootcamp",
+        "iya-founder-hub-student-founder-resources",
+        "iya-entrepreneur-in-residence",
+        "iya-makerspace-the-garage",
+        "iya-spring-hackathon-generative-ai",
+        "iya-venture-studio",
+        "b-s-in-arts-technology-and-the-business-of-innovation",
+        "b-s-in-business-of-innovation",
+        "acad-406-purpose-driven-innovation-incubator",
+        "other-iovine-and-young-academy-minors",
+        "health-innovation-minor"
+      ],
+      "url": "https://www.linkedin.com/school/usciovineyoung/",
+      "name": "USC Jimmy Iovine and Andre Young Academy"
+    },
+    {
+      "programIds": [
+        "usc-stevens-center-for-innovation",
+        "usc-stevens-legal-office-hours",
+        "stevens-translation-catalyst",
+        "innovation-catalyst-program-icp",
+        "icp-startup-launch",
+        "early-career-innovator-award",
+        "innovation-empowerment-award",
+        "sbir-sttr-planning-award",
+        "usc-and-techstars-digital-economy-accelerator",
+        "usc-and-techstars-university-catalyst",
+        "usc-and-techstars-startup-weekend",
+        "usc-innovation-ecosystem-portal",
+        "from-lab-to-startup"
+      ],
+      "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+      "name": "USC Stevens Center for Innovation"
+    },
+    {
+      "programIds": [
+        "keck-mesh-entrepreneurial-support",
+        "ai-in-medicine-collaboratory-ai-medx",
+        "auransa-partnership",
+        "autobahn-labs-collaboration",
+        "chemdiv-partnership",
+        "rosalie-and-harold-rae-brown-center-for-cancer-drug-developm",
+        "ryght-research-network",
+        "sanford-burnham-prebys-partnership"
+      ],
+      "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+      "name": "MESH Strategic Partnerships, Keck School of Medicine of USC"
+    },
+    {
+      "programIds": [
+        "brittingham-social-enterprise-lab",
+        "leverage-point-fellowship",
+        "ms-in-social-entrepreneurship",
+        "jacobson-family-sustainable-impact-lecture-series"
+      ],
+      "url": "https://www.linkedin.com/company/usc-brittingham-social-enterprise-lab/",
+      "name": "USC Brittingham Social Enterprise Lab (Marshall School of Business)"
+    },
+    {
+      "programIds": [
+        "lavalab"
+      ],
+      "url": "https://www.linkedin.com/company/usclavalab/",
+      "name": "LavaLab"
+    },
+    {
+      "programIds": [
+        "troylabs"
+      ],
+      "url": "https://www.linkedin.com/company/troy-labs/",
+      "name": "TroyLabs"
+    },
+    {
+      "programIds": [
+        "spark-sc"
+      ],
+      "url": "https://www.linkedin.com/company/spark-sc/",
+      "name": "Spark SC"
+    },
+    {
+      "programIds": [
+        "productsc"
+      ],
+      "url": "https://www.linkedin.com/company/product-sc/",
+      "name": "ProductSC"
+    },
+    {
+      "programIds": [
+        "sigma-eta-pi-sep"
+      ],
+      "url": "https://www.linkedin.com/company/uscsep/",
+      "name": "SEP at USC"
+    },
+    {
+      "programIds": [
+        "hacksc"
+      ],
+      "url": "https://www.linkedin.com/company/hacksc/",
+      "name": "HackSC"
+    },
+    {
+      "programIds": [
+        "usc-entrepreneur-club"
+      ],
+      "url": "https://www.linkedin.com/company/eclubusc/",
+      "name": "USC Entrepreneur Club",
+      "archivedIds": [
+        "usc-entrepreneur-club"
+      ]
+    },
+    {
+      "programIds": [
+        "exitsc"
+      ],
+      "url": "https://www.linkedin.com/company/exitsc/",
+      "name": "ExitSC"
+    },
+    {
+      "programIds": [
+        "medesign"
+      ],
+      "url": "https://www.linkedin.com/company/medesign-usc/",
+      "name": "MEDesign"
+    },
+    {
+      "programIds": [
+        "techie"
+      ],
+      "url": "https://www.linkedin.com/company/techieusc/",
+      "name": "techie."
+    },
+    {
+      "programIds": [
+        "shift-sc"
+      ],
+      "url": "https://www.linkedin.com/company/shiftsc/",
+      "name": "Shift SC"
+    },
+    {
+      "programIds": [
+        "trojan-venture-partners"
+      ],
+      "url": "https://www.linkedin.com/company/trojan-venture-partners/",
+      "name": "Trojan Venture Partners",
+      "archivedIds": [
+        "trojan-venture-partners"
+      ]
+    },
+    {
+      "programIds": [
+        "kappa-theta-pi-ktp"
+      ],
+      "url": "https://www.linkedin.com/company/kappa-theta-pi-usc/",
+      "name": "Kappa Theta Pi USC"
+    },
+    {
+      "programIds": [
+        "nucleate"
+      ],
+      "url": "https://www.linkedin.com/company/nucleate-los-angeles/",
+      "name": "Nucleate Los Angeles"
+    }
+  ],
+  "findings": [
+    {
+      "programId": "leverage-point-fellowship",
+      "field": "funding",
+      "proposed": "$25,000 award (2 awards in 2026), plus 6 months of dedicated office space in the Brittingham Lab",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7492994329481736193/",
+      "postDate": "2026-08-11",
+      "quote": "We are pleased to announce a new $25K award for USC alumni founders for 2026-27! Leverage Point Fellowships are for early-stage USC alumni founders committed to developing a social venture. These awards include 6 months of dedicated office space in the Brittingham Lab on the USC campus."
+    },
+    {
+      "programId": "leverage-point-fellowship",
+      "field": "eligibility",
+      "proposed": "Early-stage USC alumni founders committed to developing a social venture; for-profit and non-profit models are both eligible.",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7492994329481736193/",
+      "postDate": "2026-08-11",
+      "quote": "Leverage Point Fellowships are for early-stage USC alumni founders committed to developing a social venture.",
+      "note": "Same post also says: \"-Open to for-profit and non-profit models\""
+    },
+    {
+      "programId": "leverage-point-fellowship",
+      "field": "audience",
+      "proposed": "[\"alumni\"]",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7492994329481736193/",
+      "postDate": "2026-08-11",
+      "quote": "Leverage Point Fellowships are for early-stage USC alumni founders committed to developing a social venture."
+    },
+    {
+      "programId": "leverage-point-fellowship",
+      "field": "timing",
+      "proposed": "2026-27 cycle: applications were due Sep 21, 2026 at 1:00pm PT (extended from Sep 18); interviews Oct 12; notifications on or before Oct 16; fellowship begins Nov 2, 2026.",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505373291872788480/",
+      "postDate": "2026-09-14",
+      "quote": "Sep 21: Extended deadline! Submit by 1:00pm PT. - Oct 12: Top applicants invited for in-person interviews. Please hold this date. - On or before Oct 16: Notifications sent. - Nov 2: Fellowship begins!"
+    },
+    {
+      "programId": "leverage-point-fellowship",
+      "field": "months",
+      "proposed": "[8, 9, 10, 11]",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505373291872788480/",
+      "postDate": "2026-09-14",
+      "quote": "Sep 21: Extended deadline! Submit by 1:00pm PT. - Oct 12: Top applicants invited for in-person interviews.",
+      "note": "August from the announcement post 7492994329481736193 (2026-08-11); November from the Nov 2 start date."
+    },
+    {
+      "programId": "maseeh-entrepreneurship-prize-competition",
+      "field": "months",
+      "proposed": "[1, 2, 3, 4]",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7451501601611218944/",
+      "postDate": "2026-04-19",
+      "quote": "The MEPC competition ran over February to April with 15 teams competing for $100,000 in non-dilutive funding.",
+      "note": "Adds Feb and Mar (competition period) to the existing Jan deadline and Apr showcase months."
+    },
+    {
+      "programId": "min-family-challenge",
+      "field": "months",
+      "proposed": "[1, 2, 3, 4]",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7450671230204133376/",
+      "postDate": "2026-04-16",
+      "quote": "The MFC competition ran from February to April this year, with teams competing for $50,000 in non-dilutive funding.",
+      "note": "Adds Feb and Mar (competition period) to the existing Jan deadline and Apr showcase months."
+    },
+    {
+      "programId": "nucleate",
+      "field": "timing",
+      "proposed": "Nucleate LA 2026-27 Activator applications opened September 2026; the deadline was extended from Oct 20 to Nov 1, 2026 (rolling review). The 2026 cycle Demo Day was May 8, 2026.",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7518771729092001793/",
+      "postDate": "2026-10-21",
+      "quote": "The deadline for Nucleate 2026-2027 Activator Program has been extended to Sunday, November 1, 2026!",
+      "note": "Demo Day date from post 7459760857422630916 (2026-05-12): \"Last Friday, on May 8th, 2026, the Nucleate LA community came together at California NanoSystems Institute for the culmination of another incredible Activator cycle\". Original Oct 20 deadline from 7498099401370816512."
+    },
+    {
+      "programId": "nucleate",
+      "field": "months",
+      "proposed": "[5, 9, 10, 11]",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7518771729092001793/",
+      "postDate": "2026-10-21",
+      "quote": "The deadline for Nucleate 2026-2027 Activator Program has been extended to Sunday, November 1, 2026!",
+      "note": "May = Demo Day (post 7459760857422630916)."
+    },
+    {
+      "programId": "nucleate",
+      "field": "funding",
+      "proposed": "None; the Activator is free and equity-free",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7518771729092001793/",
+      "postDate": "2026-10-21",
+      "quote": "Nucleate’s FREE, equity-free Activator Program helps academic innovators explore the commercial potential of their technologies"
+    },
+    {
+      "programId": "nucleate",
+      "field": "eligibility",
+      "proposed": "Academic trainees (graduate students, postdocs, MD, MBA, JD, MS and PhD trainees); business-minded people such as MBAs can join an inventor's team through the Business Contributor track.",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7508269314957856768/",
+      "postDate": "2026-09-22",
+      "quote": "Whether you're a postdoc, PhD, MBA, MD, JD, or MS trainee, and whether you're just beginning to explore biotech entrepreneurship or already building your own venture",
+      "note": "Business Contributor quote from 7512905355547336705: \"Activator program’s Business Contributor track is for MBAs and business-minded individuals interested in venture creation\""
+    },
+    {
+      "programId": "troylabs",
+      "field": "funding",
+      "proposed": "DEMO pitch competition cash pool of $10,500 in 2026 ($7,500 first place, $3,000 second)",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7452154230913597440/",
+      "postDate": "2026-04-21",
+      "quote": "Five of our top startups will take the stage in our annual DEMO pitch competition: $7,500 for first place (proudly sponsored by Abdo John Hajj by Type One Ventures) and $3,000 for second",
+      "note": "Pool total from 7452552244593606656: \"Pitch Competition — watch USC's boldest student founders compete for the chance to bring their ideas to life. ($10,500 cash pool)\""
+    },
+    {
+      "programId": "troylabs",
+      "field": "eligibility",
+      "proposed": "USC student founders and students interested in startups. BUILD (8-week accelerator) takes pre-seed to seed-stage USC startups with a functional MVP; member applications cover six divisions (product management, marketing, finance/VC, software engineering, design, DEMO).",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7497810850024476672/",
+      "postDate": "2026-08-25",
+      "quote": "BUILD is our 8-week flagship accelerator, providing hands-on consulting to USC's premier startups — from pre-seed to seed-stage companies with a functional MVP.",
+      "note": "Divisions from 7499138433848590336: \"TroyLabs applications are officially open — across all six divisions. product management. marketing. finance/vc. software engineering. design. demo.\""
+    },
+    {
+      "programId": "all-school-startup-mixers",
+      "field": "timing",
+      "proposed": "Typically early fall semester. Fall 2026: first joint Viterbi, Marshall (Greif) and Iovine and Young Academy Startup Mixer on Oct 6, 2026, 4-6 PM drop-in (355 attendees, 54 USC groups represented).",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7512919578583396352/",
+      "postDate": "2026-10-05",
+      "quote": "That’s the idea behind USC’s upcoming Startup Mixer, a joint effort from Viterbi, Greif, and IYA, bringing together different parts of the university’s entrepreneurial community in one space. ... Date: October 6 Drop in anytime between 4–6 PM.",
+      "note": "Attendance from recap 7513867035051925504: \"355 attendees 🤝 54 USC clubs, departments, groups, centers, and initiatives represented\""
+    },
+    {
+      "programId": "all-school-startup-mixers",
+      "field": "months",
+      "proposed": "[10]",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7512919578583396352/",
+      "postDate": "2026-10-05",
+      "quote": "Date: October 6 Drop in anytime between 4–6 PM.",
+      "note": "Current value is [9, 10]; the 2026 edition was October only. Keep 9 if earlier mixers were in September."
+    },
+    {
+      "programId": "from-lab-to-startup",
+      "field": "timing",
+      "proposed": "Fall 2026 workshop with Wilson Sonsini on Friday, Oct 9, 2026, 9:00 am-12:00 pm, with free one-on-one legal office hours Oct 8 and 9.",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505772431802953728/",
+      "postDate": "2026-09-15",
+      "quote": "Join the USC Stevens Center and Wilson Sonsini Goodrich & Rosati for a From Lab to Startup workshop, designed to help #researchers turn promising discoveries into commercial ventures. ... Friday, October 9 at 9:00 am – 12:00 pm ... Free one-on-one legal office hours will be available October 8 and 9.",
+      "note": "Location omitted on purpose."
+    },
+    {
+      "programId": "from-lab-to-startup",
+      "field": "months",
+      "proposed": "[10]",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505772431802953728/",
+      "postDate": "2026-09-15",
+      "quote": "Friday, October 9 at 9:00 am – 12:00 pm"
+    },
+    {
+      "programId": "from-lab-to-startup",
+      "field": "eligibility",
+      "proposed": "USC faculty, clinicians, researchers, postdocs and graduate students.",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7505772431802953728/",
+      "postDate": "2026-09-15",
+      "quote": "Open to #USC faculty, clinicians, researchers, postdocs, and graduate students."
+    },
+    {
+      "programId": "alfred-e-mann-institute-fund-ami",
+      "field": "funding",
+      "proposed": "Equity investment; amounts vary. The 2026 USC + Amgen BioAccelerator offered one selected USC-affiliated life science company up to $250,000 from AMI (deadline Sept 30, 2026).",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7498044648716804096/",
+      "postDate": "2026-08-25",
+      "quote": "One selected company will receive: 💰 Up to $250,000 in investment from the USC Alfred E. Mann Institute 🧬 Scientific mentorship and business development support from Amgen 🧪 One year of lab space at LA BioSpace",
+      "note": "Same post: \"Application deadline: September 30, 2026 at 5:00 p.m. PDT\". Could also be a new catalog entry (USC + Amgen BioAccelerator)."
+    },
+    {
+      "programId": "das-family-innovate-x-la-student-competition",
+      "field": "funding",
+      "proposed": "Share of $30,000 in prizes (2026-27 Das Family Incubator)",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7512651668438618112/",
+      "postDate": "2026-10-04",
+      "quote": "Top three teams advance to the Das Family Incubator and compete for a share of $30,000 in prizes!",
+      "note": "Seen on the USC Stevens Center feed (Dual-Use Hackathon, Oct 16-18, 2026). Verify that the Das Family Incubator is this catalog entry before replacing the $20,000 grand prize figure."
+    },
+    {
+      "programId": "trojan-venture-partners",
+      "field": "status",
+      "proposed": "active (currently archived as 'No public source found'; this page and post are a public source)",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7515543788233097216/",
+      "postDate": "2026-10-12",
+      "quote": "Join TVP for our Student Panel featuring upperclassmen who have successfully navigated the recruiting process and secured internships at some of the biggest banks! ... Wednesday, October 14th"
+    },
+    {
+      "programId": "weekly-founder-salon",
+      "field": "timing",
+      "proposed": "Possible match: the Start Up Salon hosted by the USC Marshall / Greif Incubator (for example Thursday Sept 10, 2026, 3-4pm).",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501060312716951552/",
+      "postDate": "2026-09-02",
+      "quote": "Save the date! Paul Orlando is hosting another Start Up Salon on Thurs 9/10 from 3-4pm in the USC Incubator.",
+      "note": "Unconfirmed that this is the same program as Ralph's 'Weekly Founder Salon'; posted by the Brittingham Lab page. Eligibility line from 7506368332774813697: \"Open to anyone with a direct connection to USC.\" Verify before applying."
+    },
+    {
+      "programId": "venture-scout",
+      "field": "status",
+      "proposed": "TIE Hub signalled an upcoming venture program for USC students in March 2026 (tagged #VentureScouts); no launch details found.",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7437995888188379136/",
+      "postDate": "2026-03-12",
+      "quote": "If you are a USC student interested in breaking into venture capital and getting hands-on experience with founders, we are building something for you... Stay tuned for upcoming opportunities with TIEHub!",
+      "note": "Weak signal; do not change timing."
+    }
+  ],
+  "confirmed": [
+    {
+      "programId": "usc-and-techstars-digital-economy-accelerator",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7508244493435904001/",
+      "postDate": "2026-09-22",
+      "quote": "Program starts March 8, 2027 📅 Demo Day: June 3, 2027 ⏰ Applications close November 18, 2026",
+      "matches": "timing, funding ($220,000), eligibility (USC-affiliated founders)"
+    },
+    {
+      "programId": "usc-and-techstars-university-catalyst",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7513300371872595968/",
+      "postDate": "2026-10-06",
+      "quote": "On November 5 from 12–2 p.m. PT, USC faculty, alumni, and student founders will take the virtual stage",
+      "matches": "Pitch Day Nov 5, 2026"
+    },
+    {
+      "programId": "ship-fund",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7503967210327932928/",
+      "postDate": "2026-09-11",
+      "quote": "At the end, 3 teams will receive $5,000 each to keep building.",
+      "matches": "funding; also says there is no application or selection process"
+    },
+    {
+      "programId": "origin-weekend",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7511181469667569664/",
+      "postDate": "2026-09-30",
+      "quote": "What can 180+ students build in four days? Quite a lot. Across 46 teams",
+      "matches": "Fall 2026 edition ran"
+    },
+    {
+      "programId": "lavalab",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501743054102474752/",
+      "postDate": "2026-09-04",
+      "quote": "Applications for our F26 cohort close in one week. Friday, Sept 11 @ 11:59 PM PST.",
+      "matches": "timing"
+    },
+    {
+      "programId": "troylabs",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7502037033519984640/",
+      "postDate": "2026-09-05",
+      "quote": "applications for our internal member cohort is now extended until 9/6 11:59pm.",
+      "matches": "timing (Sept 6)"
+    },
+    {
+      "programId": "productsc",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7501883558983180288/",
+      "postDate": "2026-09-05",
+      "quote": "Applications Extended: Saturday 9/5 @5:59",
+      "matches": "timing (Sept 5)"
+    },
+    {
+      "programId": "shift-sc",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7518863566200987648/",
+      "postDate": "2026-10-22",
+      "quote": "Winners and Honorable Mentions were celebrated and prizes awarded at Shift SC’s Tech4Good Conference on October 19.",
+      "matches": "timing (Oct 19, 2026)"
+    },
+    {
+      "programId": "la-biostart-boot-camp",
+      "postUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7468396289827860480/",
+      "postDate": "2026-06-04",
+      "quote": "July 14 through August 13, 2026 ... Deadline to apply is June 19, 2026.",
+      "matches": "timing"
+    }
+  ],
+  "notes": [
+    "Clubs with LinkedIn pages but no posts at all: HackSC, ExitSC, USC Entrepreneur Club, MEDesign, techie., Kappa Theta Pi USC (kappa-theta-pi-usc). SEP at USC showed no posts in the last ~6 months. Spark SC had one post (Apr 2026). No posts is not evidence a club is inactive.",
+    "A second KTP page exists, /company/ktp-tau-chapter/ ('Professional Co-Ed Technology Fraternity at the ...'); not opened, so not confirmed.",
+    "/company/usciovineyoungonline/ (USC Iovine and Young Academy Online) appeared in search but was not opened.",
+    "No LinkedIn page found for SoGal USC or the USC Marshall Venture Fund.",
+    "Posts-search for New Venture Seed Competition returned only individual members' posts, which are not used per the rules. Flagship searches for Innovation Quest, Hult Prize, Summer Smasher, Innovation Catalyst Program and Viterbi Venture Fund were not run (budget).",
+    "USC Marshall School of Business page not read (very broad feed; budget). About 58 page loads used."
+  ],
+  "blocked": null
+}

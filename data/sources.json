@@ -29,6 +29,13 @@
           "kind": "news",
           "holds": "Undergraduate VCIC team (Marshall, Dornsife, Viterbi) won VCIC West and tied for fourth at the 2025 global finals",
           "lastChecked": null
+        },
+        {
+          "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: Lloyd Greif Center for Entrepreneurial Studies - USC Marshall",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -41,7 +48,7 @@
       "name": "Nucleate",
       "chunk": "p3-08",
       "status": "unchecked",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-26",
       "sources": [
         {
           "url": "https://nucleate.xyz/",
@@ -72,6 +79,27 @@
           "kind": "social",
           "holds": "Applications are OPEN for the Nucleate Los Angeles 2026-27 Activator Program!; There is only 1 more week left to apply to the Nucleate Los Angeles 2026-27 Activator Program!",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518771729092001793/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "timing: The deadline for Nucleate 2026-2027 Activator Program has been extended to Sunday, November 1, 2026!",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7508269314957856768/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "eligibility: Whether you're a postdoc, PhD, MBA, MD, JD, or MS trainee, and whether you're just beginning to explore biotech entrepreneurship or already building your own venture",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/company/nucleate-los-angeles/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: Nucleate Los Angeles",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -309,6 +337,13 @@
           "kind": "campus-groups",
           "holds": "Kappa Theta Pi (KTP) events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://www.linkedin.com/company/kappa-theta-pi-usc/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: Kappa Theta Pi USC",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -673,6 +708,13 @@
           "kind": "campus-groups",
           "holds": "Trojan Venture Partners events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://www.linkedin.com/company/trojan-venture-partners/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: Trojan Venture Partners",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -686,7 +728,7 @@
       "name": "TroyLabs",
       "chunk": "clubs",
       "status": "updated",
-      "lastResearched": "2026-10-22",
+      "lastResearched": "2026-10-26",
       "sources": [
         {
           "url": "https://www.troylabs.vc/",
@@ -735,6 +777,20 @@
           "kind": "campus-groups",
           "holds": "TroyLabs events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7452154230913597440/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "funding: Five of our top startups will take the stage in our annual DEMO pitch competition: $7,500 for first place (proudly sponsored by Abdo John Hajj by Type One Ventures) and $3,000 for second",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7497810850024476672/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "eligibility: BUILD is our 8-week flagship accelerator, providing hands-on consulting to USC's premier startups, from pre-seed to seed-stage companies with a functional MVP.",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -1137,6 +1193,13 @@
           "kind": "official",
           "holds": "Greif Center hub",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: Lloyd Greif Center for Entrepreneurial Studies - USC Marshall",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -1179,6 +1242,13 @@
           "kind": "official",
           "holds": "27-unit curriculum, full-time 1 year or part-time 2 years (U.S. only)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: Lloyd Greif Center for Entrepreneurial Studies - USC Marshall",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -1195,6 +1265,13 @@
           "kind": "official",
           "holds": "27-unit curriculum, format, 1-2 years, early/mid-career target, classes begin each August",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-brittingham-social-enterprise-lab/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Brittingham Social Enterprise Lab (Marshall School of Business)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -1217,6 +1294,13 @@
           "kind": "official",
           "holds": "Fall 2025 syllabus (empty via curl)",
           "lastChecked": null
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -1241,6 +1325,13 @@
           "kind": "official",
           "holds": "returned only Academy home content",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -1281,6 +1372,13 @@
           "kind": "news",
           "holds": "Daily Trojan coverage",
           "lastChecked": null
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -1305,6 +1403,13 @@
           "kind": "official",
           "holds": "health innovation minor article (blank via curl)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -1351,6 +1456,13 @@
           "kind": "official",
           "holds": "full minors list, application timing, D-clearance",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -1415,6 +1527,13 @@
           "kind": "listing",
           "holds": "TIE Hub opportunity roundup, spring 2026 (Cloudflare blocked)",
           "lastChecked": null
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -1450,6 +1569,13 @@
           "kind": "official",
           "holds": "investment size, criteria, contact David Eastman",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -1538,6 +1664,13 @@
           "kind": "listing",
           "holds": "fund profile",
           "lastChecked": null
+        },
+        {
+          "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: Lloyd Greif Center for Entrepreneurial Studies - USC Marshall",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -1566,6 +1699,13 @@
           "kind": "official",
           "holds": "Fall 2023 Ignite Grants overview",
           "lastChecked": null
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -1578,7 +1718,7 @@
       "name": "Alfred E. Mann Institute Fund (AMI)",
       "chunk": "funding",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-26",
       "sources": [
         {
           "url": "https://research.usc.edu/?p=6419",
@@ -1591,6 +1731,13 @@
           "kind": "official",
           "holds": "AMI site (returned empty via curl)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7498044648716804096/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "funding: One selected company will receive: 💰 Up to $250,000 in investment from the USC Alfred E. Mann Institute 🧬 Scientific mentorship and business development support from Amgen 🧪 One year of lab space at L",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -1621,6 +1768,13 @@
           "kind": "official",
           "holds": "program page (404 via curl)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -1645,6 +1799,13 @@
           "kind": "news",
           "holds": "ICP overview",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -1667,6 +1828,13 @@
           "kind": "news",
           "holds": "Dec 15 2025 OORI pipeline announcement",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -1685,6 +1853,13 @@
           "kind": "official",
           "holds": "amount $15,000, deadline, eligibility",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -1713,6 +1888,13 @@
           "kind": "official",
           "holds": "program page (404 via curl, link may be dead)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -1735,6 +1917,13 @@
           "kind": "official",
           "holds": "$25K-$50K, Mar 1 noon, May 1 funding, eligibility",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -2033,7 +2222,7 @@
       "name": "Maseeh Entrepreneurship Prize Competition",
       "chunk": "p3-02",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-26",
       "sources": [
         {
           "url": "https://viterbiinnovation.usc.edu/mepc/",
@@ -2058,6 +2247,20 @@
           "kind": "official",
           "holds": "TIE Hub home, links to competitions and event calendar",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7451501601611218944/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "months: The MEPC competition ran over February to April with 15 teams competing for $100,000 in non-dilutive funding.",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2069,7 +2272,7 @@
       "name": "Min Family Challenge",
       "chunk": "p3-02",
       "status": "confirmed",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-26",
       "sources": [
         {
           "url": "https://viterbiinnovation.usc.edu/mfc/",
@@ -2082,6 +2285,20 @@
           "kind": "listing",
           "holds": "$50,000, Jan 27 deadline (snippet)",
           "lastChecked": null
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7450671230204133376/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "months: The MFC competition ran from February to April this year, with teams competing for $50,000 in non-dilutive funding.",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -2122,6 +2339,13 @@
           "kind": "campus-groups",
           "holds": "Viterbi Office of Technology Innovation and Entrepreneurship (TIE Hub) events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2154,6 +2378,13 @@
           "kind": "social",
           "holds": "Join us this Tuesday for Co-Founder Speed Dating",
           "lastChecked": "2026-10-20"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -2335,6 +2566,13 @@
           "kind": "campus-groups",
           "holds": "Lloyd Greif Center for Entrepreneurial Studies events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: Lloyd Greif Center for Entrepreneurial Studies - USC Marshall",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2373,6 +2611,13 @@
           "kind": "campus-groups",
           "holds": "Lloyd Greif Center for Entrepreneurial Studies events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: Lloyd Greif Center for Entrepreneurial Studies - USC Marshall",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -2397,6 +2642,13 @@
           "kind": "news",
           "holds": "2018 article: The Garage is a 9,000 sq ft studio on the 4th floor of the Tutor Campus Center for Iovine and Young Academy students; IYA Hall planned for 2019",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -2413,6 +2665,13 @@
           "kind": "official",
           "holds": "page renders only the Academy homepage, no hackathon details",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2438,6 +2697,13 @@
           "kind": "news",
           "holds": "2024 recap title only",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2475,6 +2741,13 @@
           "kind": "news",
           "holds": "2025 edition Apr 11-13",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2521,6 +2794,13 @@
           "kind": "official",
           "holds": "program details, 2026 timeline TBD, interest form",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2583,6 +2863,13 @@
           "kind": "news",
           "holds": "Spring 2025 deadline April 13, 2025 (Cloudflare blocked)",
           "lastChecked": null
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2613,6 +2900,13 @@
           "kind": "campus-groups",
           "holds": "Lloyd Greif Center for Entrepreneurial Studies events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: Lloyd Greif Center for Entrepreneurial Studies - USC Marshall",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -2637,6 +2931,13 @@
           "kind": "news",
           "holds": "2024 showcase recap (only title and nav text)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -2656,6 +2957,13 @@
           "kind": "official",
           "holds": "bio: Venture Studio Lead; 'new initiative' focused on future of human performance with AI, XR, IoT, robotics; students, faculty, corporate teams",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -2681,6 +2989,13 @@
           "kind": "official",
           "holds": "13-week in-person, eligibility, 2027 dates",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -2697,6 +3012,13 @@
           "kind": "official",
           "holds": "timeline, eligibility, 10-week format, up to 20 startups, no equity",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -3104,6 +3426,13 @@
           "kind": "official",
           "holds": "Office hours with Trina Gregory and Dr. Oscar Neyra-Nazarrett",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -3120,6 +3449,13 @@
           "kind": "official",
           "holds": "advisors, booking links",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -3142,6 +3478,13 @@
           "kind": "official",
           "holds": "Min Family Challenge",
           "lastChecked": null
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -3212,6 +3555,13 @@
           "kind": "campus-groups",
           "holds": "USC Marshall Brittingham Social Enterprise Lab events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-brittingham-social-enterprise-lab/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Brittingham Social Enterprise Lab (Marshall School of Business)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -3230,6 +3580,13 @@
           "kind": "official",
           "holds": "states the series is hosted annually for students, alumni and local community; features social impact and business leaders",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-brittingham-social-enterprise-lab/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Brittingham Social Enterprise Lab (Marshall School of Business)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -3239,13 +3596,34 @@
       "name": "Leverage Point Fellowship",
       "chunk": "events-mentorship",
       "status": "confirmed-by-staff",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-26",
       "sources": [
         {
           "url": "https://www.marshall.usc.edu/institutes-and-centers/brittingham-social-enterprise-lab",
           "kind": "official",
           "holds": "BSEL programs list: Social Impact Scholars, Warren Bennis Scholars, Jacobson lectures, MSSE; no Leverage Point Fellowship",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7492994329481736193/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "funding: We are pleased to announce a new $25K award for USC alumni founders for 2026-27! Leverage Point Fellowships are for early-stage USC alumni founders committed to developing a social venture. These awar",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505373291872788480/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "timing: Sep 21: Extended deadline! Submit by 1:00pm PT. - Oct 12: Top applicants invited for in-person interviews. Please hold this date. - On or before Oct 16: Notifications sent. - Nov 2: Fellowship begins!",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-brittingham-social-enterprise-lab/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Brittingham Social Enterprise Lab (Marshall School of Business)",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -3365,6 +3743,13 @@
           "kind": "official",
           "holds": "Tina Sharkey bio; now titled Lecturer, Business of Innovation (not EIR)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -3393,6 +3778,13 @@
           "kind": "official",
           "holds": "2023 kickoff (opened, only title renders)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -3405,7 +3797,7 @@
       "name": "All-School Startup Mixers",
       "chunk": "gap-05",
       "status": "confirmed",
-      "lastResearched": "2026-10-22",
+      "lastResearched": "2026-10-26",
       "sources": [
         {
           "url": "https://engage.usc.edu/Viterbitie/rsvp_boot?id=386311",
@@ -3430,6 +3822,27 @@
           "kind": "campus-groups",
           "holds": "Viterbi Office of Technology Innovation and Entrepreneurship (TIE Hub) events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7512919578583396352/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "timing: That’s the idea behind USC’s upcoming Startup Mixer, a joint effort from Viterbi, Greif, and IYA, bringing together different parts of the university’s entrepreneurial community in one space. ... Date",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: Lloyd Greif Center for Entrepreneurial Studies - USC Marshall",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -3509,6 +3922,13 @@
           "kind": "official",
           "holds": "Partner list, CLS FAST-USC MESH track, Autobahn Labs up to $5M",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: MESH Strategic Partnerships, Keck School of Medicine of USC",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -3654,6 +4074,13 @@
           "kind": "official",
           "holds": "TIE Hub home; programs menu",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -3716,13 +4143,27 @@
       "name": "From Lab to Startup",
       "chunk": "gap-10",
       "status": "confirmed-by-staff",
-      "lastResearched": "2026-10-21",
+      "lastResearched": "2026-10-26",
       "sources": [
         {
           "url": "https://stevens.usc.edu/",
           "kind": "official",
           "holds": "Stevens startup support, proof of concept funding",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/feed/update/urn:li:activity:7505772431802953728/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "timing: Join the USC Stevens Center and Wilson Sonsini Goodrich & Rosati for a From Lab to Startup workshop, designed to help #researchers turn promising discoveries into commercial ventures. ... Friday, Octo",
+          "lastChecked": "2026-10-26"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -3747,6 +4188,13 @@
           "kind": "official",
           "holds": "Home: invention disclosure, MTA requests, startup support, proof of concept funding, AI Tech Transfer Assistant",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -3763,6 +4211,13 @@
           "kind": "official",
           "holds": "Free one-hour Zoom consult, eligibility (faculty, staff, students, alumni, startups without USC IP), intake form to legalofficehours@stevens.usc.edu",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -4044,6 +4499,13 @@
           "kind": "listing",
           "holds": "Spring 2026 TIE Hub opportunities (Cloudflare blocked on curl; snippet only)",
           "lastChecked": null
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-viterbi-tie/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: TIE Hub - USC Viterbi",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -4122,6 +4584,13 @@
           "kind": "official",
           "holds": "Mission, leadership (Thompson, Gill, Conti, Duddalwar), Innovation Cafes, partnering program",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: MESH Strategic Partnerships, Keck School of Medicine of USC",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -4140,6 +4609,13 @@
           "kind": "official",
           "holds": "Auransa section: phase 1 liver cancer trial with USC Norris, AI drug discovery platform plus Brown Center; contact Vasiliki Anest",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: MESH Strategic Partnerships, Keck School of Medicine of USC",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -4164,6 +4640,13 @@
           "kind": "official",
           "holds": "Announcement date, up to $5M per selected project, MESH as point of contact",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: MESH Strategic Partnerships, Keck School of Medicine of USC",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -4180,6 +4663,13 @@
           "kind": "official",
           "holds": "ChemDiv multi-year service agreement, contacts (needs read-page.cjs; curl is Cloudflare blocked)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: MESH Strategic Partnerships, Keck School of Medicine of USC",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [
@@ -4204,6 +4694,13 @@
           "kind": "official",
           "holds": "MESH partnerships (blocked)",
           "lastChecked": null
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: MESH Strategic Partnerships, Keck School of Medicine of USC",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -4226,6 +4723,13 @@
           "kind": "news",
           "holds": "First US academic site in Ryght network; pilot of feasibility/efficiency tools at USC Norris; work began first week of 2025",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: MESH Strategic Partnerships, Keck School of Medicine of USC",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -4248,6 +4752,13 @@
           "kind": "official",
           "holds": "SBP partnership description, eligibility, contact Melissa Rodgers",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-mesh-strategic-partnerships/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: MESH Strategic Partnerships, Keck School of Medicine of USC",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -4597,6 +5108,13 @@
           "kind": "campus-groups",
           "holds": "Lloyd Greif Center for Entrepreneurial Studies events calendar feed (public iCal)",
           "lastChecked": "2026-10-22"
+        },
+        {
+          "url": "https://www.linkedin.com/company/lloydgreifcenter/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: Lloyd Greif Center for Entrepreneurial Studies - USC Marshall",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -4615,6 +5133,13 @@
           "kind": "official",
           "holds": "Founder Hub benefits, eligibility, sign-up instructions (readable via browser script)",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/school/usciovineyoung/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Jimmy Iovine and Andre Young Academy",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -4653,6 +5178,13 @@
           "kind": "news",
           "holds": "Launch announcement, June 18, 2025",
           "lastChecked": "2026-10-21"
+        },
+        {
+          "url": "https://www.linkedin.com/company/usc-stevens-center-for-innovation/",
+          "kind": "social",
+          "platform": "linkedin",
+          "holds": "LinkedIn page: USC Stevens Center for Innovation",
+          "lastChecked": "2026-10-26"
         }
       ],
       "searchQueries": [],
@@ -5051,5 +5583,5 @@
       "lastSeen": "2026-10-21"
     }
   },
-  "lastRun": "2026-10-22"
+  "lastRun": "2026-10-26"
 }

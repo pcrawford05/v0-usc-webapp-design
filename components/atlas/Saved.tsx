@@ -39,11 +39,11 @@ export function ProfileMenu({ name, savedCount, onSaved, onEdit }: { name: strin
       </button>
       {open && (
         <div role="menu" className="absolute right-0 top-full z-50 mt-2 w-56 overflow-hidden rounded-xl border border-black/[.08] bg-white p-1 text-sm shadow-[0_16px_40px_-14px_rgba(0,0,0,.4)] animate-pop-in">
-          <button role="menuitem" onClick={pick(onSaved)} className="flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-left font-medium hover:bg-black/[.04]">
+          <button role="menuitem" onClick={pick(onSaved)} className="flex w-full items-center gap-2.5 rounded-sm px-3 py-2.5 text-left font-medium hover:bg-black/[.04]">
             <Bookmark className="h-4 w-4 text-primary" /> Saved programs
             <span className="ml-auto text-xs text-muted-foreground">{savedCount}</span>
           </button>
-          <button role="menuitem" onClick={pick(onEdit)} className="flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-left font-medium hover:bg-black/[.04]">
+          <button role="menuitem" onClick={pick(onEdit)} className="flex w-full items-center gap-2.5 rounded-sm px-3 py-2.5 text-left font-medium hover:bg-black/[.04]">
             <UserRound className="h-4 w-4 text-primary" /> {name ? "Edit your profile" : "Personalize"}
           </button>
         </div>

@@ -86,7 +86,7 @@ export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, r
         <button onClick={() => setSheet(!sheet)} aria-expanded={sheet} data-tour="filters" className={cn("inline-flex shrink-0 items-center gap-2 rounded-2xl border px-3.5 py-3 text-sm font-semibold transition", sheet ? "border-primary/30 bg-primary/[.06] text-primary" : "border-black/5 bg-white/80 hover:bg-white")}>
           <SlidersHorizontal className="h-4 w-4" />
           <span>Filters</span>
-          {chips.length > 0 && <span className="rounded-full bg-primary px-1.5 text-[11px] text-primary-foreground">{chips.length}</span>}
+          {chips.length > 0 && <span className="rounded-full bg-primary px-1.5 text-xs text-primary-foreground">{chips.length}</span>}
         </button>
         <div className="ml-auto flex shrink-0 rounded-2xl border border-black/5 bg-white/80 p-1 sm:ml-0" role="group" aria-label="View">
           {([["campus", MapIcon, "Map"], ["subway", Route, "Routes"], ["list", List, "List"]] as const).map(([k, Icon, label]) => (
@@ -133,11 +133,11 @@ export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, r
       {chips.length > 0 && (
         <div className="flex flex-wrap items-center gap-1.5">
           {chips.map(c => (
-            <button key={c.label} onClick={() => setFilters(c.clear)} className="inline-flex items-center gap-1 rounded-full bg-foreground/[.07] py-1 pl-3 pr-2 text-[13px] font-medium hover:bg-foreground/[.12]">
+            <button key={c.label} onClick={() => setFilters(c.clear)} className="inline-flex items-center gap-1 rounded-full bg-foreground/[.07] py-1 pl-3 pr-2 text-xs font-medium hover:bg-foreground/[.12]">
               {c.label} <X className="h-3.5 w-3.5" />
             </button>
           ))}
-          <button onClick={() => setFilters(CLEAR_ALL)} className="text-[13px] font-semibold text-primary hover:underline">Clear</button>
+          <button onClick={() => setFilters(CLEAR_ALL)} className="text-xs font-semibold text-primary hover:underline">Clear</button>
           <ShareButton title={`${items.length} USC programs on Founder Compass`} label="Copy link" />
         </div>
       )}
@@ -177,7 +177,7 @@ export function DiscoverView({ filters: f, setFilters, profile, mode, setMode, r
 function Group({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="flex items-center gap-2">
-      <div className="w-14 shrink-0 text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">{label}</div>
+      <div className="w-14 shrink-0 text-xs font-semibold uppercase tracking-wide text-muted-foreground">{label}</div>
       <div className="flex min-w-0 flex-1 gap-1 overflow-x-auto py-0.5 [scrollbar-width:none] sm:flex-wrap">{children}</div>
     </div>
   )
@@ -192,7 +192,7 @@ function Opt({ on, n, onClick, children }: { on: boolean; n: number; onClick: ()
       className={cn("inline-flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1.5 text-xs font-medium transition disabled:opacity-35 sm:py-1", on ? "bg-primary text-primary-foreground" : "bg-black/[.05] hover:bg-black/[.08]")}
     >
       {children}
-      <span className={cn("text-[10px]", on ? "text-primary-foreground/75" : "text-muted-foreground")}>{n}</span>
+      <span className={cn("text-xs", on ? "text-primary-foreground/75" : "text-muted-foreground")}>{n}</span>
     </button>
   )
 }
@@ -244,7 +244,7 @@ function ProgramList({ items, onOpen, isSaved, onToggleSave }: CardProps & { ite
   })
   const cell = "border-r border-black/[.07] px-2.5 last:border-r-0"
   return (
-    <div className="overflow-clip rounded-lg border border-black/[.1] bg-white text-[13px] shadow-[0_1px_2px_rgba(0,0,0,.04)]">
+    <div className="overflow-clip rounded-lg border border-black/[.1] bg-white text-xs shadow-[0_1px_2px_rgba(0,0,0,.04)]">
       <table className="w-full table-fixed border-collapse text-left">
         <colgroup>
           <col className="w-[60%] sm:w-[260px]" />
@@ -255,7 +255,7 @@ function ProgramList({ items, onOpen, isSaved, onToggleSave }: CardProps & { ite
           <col className="w-9" />
         </colgroup>
         <thead className="sticky top-[60px] z-10 bg-[#f3f1ef] sm:top-[68px]">
-          <tr className="h-8 border-b border-black/[.1] text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
+          <tr className="h-8 border-b border-black/[.1] text-xs font-semibold uppercase tracking-wide text-muted-foreground">
             <th className={cell}>Program</th>
             <th className={cn(cell, "hidden lg:table-cell")}>What it is</th>
             <th className={cn(cell, "hidden sm:table-cell")}>School</th>
@@ -330,7 +330,7 @@ function RoutesPanel({ onOpen, route }: { onOpen: (id: string) => void; route: s
       <div className="space-y-2 sm:hidden">
         {LINES.map(l => (
           <details key={l.key} className="group rounded-2xl border border-black/5 bg-white/80">
-            <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-[15px] font-semibold" style={{ color: l.color }}>
+            <summary className="flex cursor-pointer list-none items-center gap-2 px-4 py-3 text-sm font-semibold" style={{ color: l.color }}>
               <span className="h-3 w-3 rounded-full" style={{ backgroundColor: l.color }} />
               {l.name}
               <span className="text-xs font-normal text-muted-foreground">{l.stops.length} stops</span>

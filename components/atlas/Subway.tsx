@@ -181,7 +181,7 @@ export function Itinerary({ route, onOpen }: { route: RoutePlan; onOpen: (id: st
           <div key={c.key} className="glass rounded-2xl p-3">
             <div className="flex items-baseline justify-between">
               <span className="text-sm font-bold text-foreground">{c.label}</span>
-              <span className="text-[11px] text-muted-foreground">{c.hint}</span>
+              <span className="text-xs text-muted-foreground">{c.hint}</span>
             </div>
             <div className="mt-2 space-y-1.5">
               {route[c.key].length === 0 && <div className="text-xs text-muted-foreground">Nothing yet</div>}
@@ -226,7 +226,7 @@ function StopRow({ id, transfer, onOpen }: { id: string; transfer: boolean; onOp
       </span>
       <span className="min-w-0 flex-1">
         <span className="block font-medium leading-snug text-foreground">{p.name}</span>
-        <span className="block text-[11px] text-muted-foreground">
+        <span className="block text-xs text-muted-foreground">
           {m ? `Usually ${m}` : whenLabel(p)}
           {transfer && " · interchange"}
           {!lines.length && " · off the map"}
@@ -252,7 +252,7 @@ export function SubwayView({ onOpen, initial }: { onOpen: (id: string) => void; 
             <span className="text-sm font-bold text-foreground">Your route</span>
             <span className="flex gap-2">
               <ShareButton url={routeUrl(route)} title="My Founder Compass route" label="Share this route" />
-              <button onClick={() => setRoute(null)} className="inline-flex items-center gap-1 rounded-full bg-foreground/[.07] px-3 py-1.5 text-[13px] font-semibold hover:bg-foreground/[.12]">
+              <button onClick={() => setRoute(null)} className="inline-flex items-center gap-1 rounded-full bg-foreground/[.07] px-3 py-1.5 text-xs font-semibold hover:bg-foreground/[.12]">
                 <RotateCcw className="h-3.5 w-3.5" /> Clear
               </button>
             </span>

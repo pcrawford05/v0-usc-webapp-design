@@ -112,7 +112,7 @@ function Atlas() {
       aria-current={tab === t.key ? "page" : undefined}
       className={cn(
         "relative inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-xl font-semibold transition-colors",
-        compact ? "flex-col gap-0.5 py-1.5 text-[11px]" : "px-4 py-2 text-sm",
+        compact ? "flex-col gap-0.5 py-1.5 text-xs" : "px-4 py-2 text-sm",
         tab === t.key ? "text-primary" : "text-foreground/65 hover:text-foreground",
       )}
     >
@@ -130,7 +130,7 @@ function Atlas() {
             <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#b3001b] to-[#7a0000] text-[#FFCC00] shadow-[inset_0_1px_0_rgba(255,255,255,.35)]">
               <Compass className="h-[18px] w-[18px] transition-transform duration-700 group-hover/logo:rotate-[200deg]" />
             </span>
-            <span className="truncate text-[15px] font-bold tracking-tight text-foreground">Founder Compass</span>
+            <span className="truncate text-base font-bold tracking-tight text-foreground">Founder Compass</span>
           </button>
           <nav ref={tabsInd.ref} className="relative mx-auto hidden gap-1 rounded-2xl bg-black/[.04] p-1 sm:flex" aria-label="Views">
             {tabsInd.box && <span aria-hidden className="tab-indicator absolute left-0 top-0 rounded-xl bg-white/90 shadow-sm" style={{ transform: `translate(${tabsInd.box.x}px, ${tabsInd.box.y}px)`, width: tabsInd.box.w, height: tabsInd.box.h }} />}
@@ -139,7 +139,7 @@ function Atlas() {
           <div className="ml-auto flex items-center gap-1.5 sm:ml-0">
             <button onClick={() => setPaletteOpen(true)} data-tour="search" aria-label="Search" className="flex items-center gap-2 rounded-xl px-2.5 py-2 text-sm text-muted-foreground hover:bg-white/70">
               <Search className="h-[18px] w-[18px]" />
-              <kbd className="hidden rounded-md border border-black/10 bg-white/80 px-1.5 py-0.5 font-sans text-[11px] lg:inline">⌘K</kbd>
+              <kbd className="hidden rounded-md border border-black/10 bg-white/80 px-1.5 py-0.5 font-sans text-xs lg:inline">⌘K</kbd>
             </button>
             <ProfileMenu
               name={me ? (me.name?.split(" ")[0] ?? ROLES.find(r => r.key === me.role)?.label ?? "Profile") : null}
@@ -151,7 +151,7 @@ function Atlas() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-7xl px-4 py-5 sm:px-6 sm:py-6">
+      <main id="main" tabIndex={-1} className="mx-auto outline-none max-w-7xl px-4 py-5 sm:px-6 sm:py-6">
         <div key={`${tab}-${mode}`} className="animate-view">
           {tab === "discover" && mode !== "bubbles" && (
             <DiscoverView filters={filters} setFilters={setFilters} profile={me} mode={mode} setMode={setMode} route={params.get("route")} highlight={highlight} {...card} />

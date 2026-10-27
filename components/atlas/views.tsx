@@ -33,10 +33,10 @@ export function AdvisorView({ question, about }: { question?: string; about?: st
       </header>
 
       <div className="grid gap-2 sm:grid-cols-2">
-        <a href={`https://chatgpt.com/?q=${q}`} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-foreground px-4 py-3.5 text-[15px] font-semibold text-background transition hover:opacity-90">
+        <a href={`https://chatgpt.com/?q=${q}`} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-foreground px-4 py-3.5 text-base font-semibold text-background transition hover:opacity-90">
           Open in ChatGPT <ExternalLink className="h-4 w-4" />
         </a>
-        <a href={`https://claude.ai/new?q=${q}`} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#c96442] px-4 py-3.5 text-[15px] font-semibold text-white transition hover:opacity-90">
+        <a href={`https://claude.ai/new?q=${q}`} target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 rounded-2xl bg-[#c96442] px-4 py-3.5 text-base font-semibold text-white transition hover:opacity-90">
           Open in Claude <ExternalLink className="h-4 w-4" />
         </a>
       </div>
@@ -48,7 +48,7 @@ export function AdvisorView({ question, about }: { question?: string; about?: st
             {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />} {copied ? "Copied" : "Copy"}
           </button>
         </div>
-        <p className="select-all rounded-xl bg-black/[.04] p-3 font-mono text-[13px] leading-relaxed text-foreground">{prompt}</p>
+        <p className="select-all rounded-xl bg-black/[.04] p-3 font-mono text-xs leading-relaxed text-foreground">{prompt}</p>
       </section>
 
       <p className="flex items-center gap-1.5 text-xs text-muted-foreground">

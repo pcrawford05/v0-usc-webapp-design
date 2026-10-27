@@ -80,7 +80,7 @@ export function AddToCalendar({ entry, compact, className }: { entry: () => CalE
             target="_blank"
             rel="noreferrer"
             onClick={finish}
-            className="flex items-center gap-2.5 rounded-lg px-3 py-2.5 font-medium hover:bg-black/[.04]"
+            className="flex items-center gap-2.5 rounded-sm px-3 py-2.5 font-medium hover:bg-black/[.04]"
           >
             <span className="flex h-5 w-5 items-center justify-center rounded bg-[#4285F4] text-xs font-bold text-white">G</span>
             Google Calendar
@@ -88,7 +88,7 @@ export function AddToCalendar({ entry, compact, className }: { entry: () => CalE
           <button
             role="menuitem"
             onClick={() => (openInAppleCalendar(entry()), finish())}
-            className="flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-left font-medium hover:bg-black/[.04]"
+            className="flex w-full items-center gap-2.5 rounded-sm px-3 py-2.5 text-left font-medium hover:bg-black/[.04]"
           >
             <span className="flex h-5 w-5 items-center justify-center rounded bg-[#FF3B30] text-white"><CalendarDays className="h-3 w-3" /></span>
             Apple Calendar

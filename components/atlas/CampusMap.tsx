@@ -137,25 +137,25 @@ export function CampusMap({ programs, highlight, onOpen }: { programs: Program[]
     <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_360px]">
       <div className="relative h-[460px] overflow-hidden rounded-3xl glass sm:h-[620px]">
         <div ref={el} className="absolute inset-0 z-0" aria-label="Map of USC campuses" />
-        <div className="absolute left-3 top-3 z-[500] flex gap-1 rounded-2xl glass-strong p-1">
+        <div className="absolute left-3 top-3 z-[500] flex gap-1 rounded-xl glass-strong p-1">
           {(Object.keys(CAMPUSES) as CampusKey[]).map(c => (
             <button
               key={c}
               onClick={() => goCampus(c)}
               aria-pressed={campus === c}
-              className={cn("rounded-xl px-3 py-1.5 text-sm font-semibold transition", campus === c ? "bg-primary text-primary-foreground shadow-sm" : "text-foreground/70 hover:text-foreground")}
+              className={cn("rounded-sm px-3 py-1.5 text-sm font-semibold transition", campus === c ? "bg-primary text-primary-foreground shadow-sm" : "text-foreground/70 hover:text-foreground")}
             >
               {CAMPUSES[c].label}
             </button>
           ))}
         </div>
-        <div className="absolute bottom-7 left-3 z-[500] flex gap-1 rounded-2xl glass-strong p-1">
+        <div className="absolute bottom-7 left-3 z-[500] flex gap-1 rounded-xl glass-strong p-1">
           {(Object.keys(BASEMAPS) as BasemapKey[]).map(k => (
             <button
               key={k}
               onClick={() => setBasemap(k)}
               aria-pressed={basemap === k}
-              className={cn("rounded-xl px-2.5 py-1.5 text-xs font-semibold transition", basemap === k ? "bg-foreground text-background shadow-sm" : "text-foreground/70 hover:text-foreground")}
+              className={cn("rounded-sm px-2.5 py-1.5 text-xs font-semibold transition", basemap === k ? "bg-foreground text-background shadow-sm" : "text-foreground/70 hover:text-foreground")}
             >
               {BASEMAPS[k].label}
             </button>

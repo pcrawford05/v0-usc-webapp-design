@@ -23,7 +23,7 @@ export function ShareButton({ url, title, label = "Copy link", className, compac
     <button
       onClick={go}
       className={cn(
-        "relative inline-flex items-center gap-1.5 overflow-hidden rounded-full px-3 py-1.5 text-[13px] font-semibold transition-all duration-300",
+        "relative inline-flex items-center gap-1.5 overflow-hidden rounded-full px-3 py-1.5 text-xs font-semibold transition duration-300",
         state === "done" ? "bg-emerald-600 text-white" : "bg-foreground text-background hover:-translate-y-px hover:shadow-lg",
         className,
       )}
@@ -82,7 +82,7 @@ export function AddToCalendar({ entry, compact, className }: { entry: () => CalE
             onClick={finish}
             className="flex items-center gap-2.5 rounded-lg px-3 py-2.5 font-medium hover:bg-black/[.04]"
           >
-            <span className="flex h-5 w-5 items-center justify-center rounded bg-[#4285F4] text-[10px] font-bold text-white">G</span>
+            <span className="flex h-5 w-5 items-center justify-center rounded bg-[#4285F4] text-xs font-bold text-white">G</span>
             Google Calendar
           </a>
           <button
@@ -133,7 +133,7 @@ export function Tour() {
   const left = Math.min(Math.max(12, box.left), window.innerWidth - 332)
   return (
     <div className="pointer-events-none fixed inset-0 z-[60]">
-      <div className="absolute rounded-2xl border-[3px] border-primary/70 transition-all duration-500 ease-out animate-tour-ring" style={{ left: box.left - 6, top: box.top - 6, width: box.width + 12, height: box.height + 12 }} />
+      <div className="absolute rounded-2xl border-[3px] border-primary/70 transition duration-500 ease-out animate-tour-ring" style={{ left: box.left - 6, top: box.top - 6, width: box.width + 12, height: box.height + 12 }} />
       <div key={step} className="pointer-events-auto absolute w-80 rounded-2xl glass-strong p-4 shadow-2xl animate-pop-in" style={{ left, top: box.bottom + 14 }}>
         <div className="flex items-start justify-between gap-2">
           <div className="flex items-center gap-2 text-sm font-bold text-foreground"><Sparkles className="h-4 w-4 text-primary" /> {s.title}</div>
@@ -141,7 +141,7 @@ export function Tour() {
         </div>
         <p className="mt-1.5 text-sm text-muted-foreground">{s.body}</p>
         <div className="mt-3 flex items-center justify-between">
-          <div className="flex gap-1">{STEPS.map((_, i) => <span key={i} className={cn("h-1.5 rounded-full transition-all duration-300", i === step ? "w-5 bg-primary" : "w-1.5 bg-foreground/20")} />)}</div>
+          <div className="flex gap-1">{STEPS.map((_, i) => <span key={i} className={cn("h-1.5 rounded-full transition duration-300", i === step ? "w-5 bg-primary" : "w-1.5 bg-foreground/20")} />)}</div>
           <button onClick={() => (step < STEPS.length - 1 ? setStep(step + 1) : end())} className="rounded-full bg-primary px-3.5 py-1.5 text-xs font-semibold text-primary-foreground hover:brightness-110">
             {step < STEPS.length - 1 ? "Next" : "Got it"}
           </button>

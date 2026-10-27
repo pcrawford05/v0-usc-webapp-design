@@ -205,3 +205,12 @@ body {
   .app-bg::before, .animate-rise, .animate-pop-in, .animate-view, .animate-tour-ring, .ai-border::before { animation: none !important; }
   .tab-indicator { transition: none; }
 }
+
+/* ---------- States (ai-design-skills B9) ---------- */
+:focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; border-radius: 6px; }
+button:not(:disabled):active, a[role="menuitem"]:active, [role="button"]:active { transform: scale(0.98); }
+h1, h2, h3 { text-wrap: balance; }
+p { text-wrap: pretty; }
+@media (prefers-reduced-motion: reduce) {
+  button:not(:disabled):active, [role="button"]:active { transform: none; }
+}

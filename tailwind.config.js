@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      // One deceleration curve for every transition (UI playbook / ai-design-skills B7).
+      transitionTimingFunction: { DEFAULT: "cubic-bezier(0.22, 1, 0.36, 1)" },
+      transitionDuration: { DEFAULT: "300ms" },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

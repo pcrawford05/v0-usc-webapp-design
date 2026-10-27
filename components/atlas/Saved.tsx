@@ -35,7 +35,7 @@ export function ProfileMenu({ name, savedCount, onSaved, onEdit }: { name: strin
         <UserRound className="h-4 w-4" />
         <span className="hidden md:inline">{name ?? "You"}</span>
         <ChevronDown className={cn("hidden h-3.5 w-3.5 transition md:block", open && "rotate-180")} />
-        {savedCount > 0 && <span className="absolute -right-1.5 -top-1.5 min-w-[18px] rounded-full bg-secondary px-1 text-center text-[10px] leading-[18px] text-secondary-foreground ring-2 ring-white">{savedCount}</span>}
+        {savedCount > 0 && <span className="absolute -right-1.5 -top-1.5 min-w-[18px] rounded-full bg-secondary px-1 text-center text-xs leading-[18px] text-secondary-foreground ring-2 ring-white">{savedCount}</span>}
       </button>
       {open && (
         <div role="menu" className="absolute right-0 top-full z-50 mt-2 w-56 overflow-hidden rounded-xl border border-black/[.08] bg-white p-1 text-sm shadow-[0_16px_40px_-14px_rgba(0,0,0,.4)] animate-pop-in">

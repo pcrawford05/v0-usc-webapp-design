@@ -62,8 +62,8 @@ export function CommandPalette({
         <Command shouldFilter={false} loop className="flex flex-col">
           <div className="flex items-center gap-3 border-b border-black/5 px-4">
             <Search className="h-5 w-5 text-muted-foreground" />
-            <Command.Input value={q} onValueChange={setQ} placeholder="Search programs or ask anything..." className="h-14 flex-1 bg-transparent text-base sm:text-[15px] outline-none placeholder:text-muted-foreground" />
-            <kbd className="rounded-md border border-black/10 bg-white/70 px-1.5 py-0.5 text-[11px] text-muted-foreground">esc</kbd>
+            <Command.Input value={q} onValueChange={setQ} placeholder="Search programs or ask anything..." className="h-14 flex-1 bg-transparent text-base sm:text-sm outline-none placeholder:text-muted-foreground" />
+            <kbd className="rounded-md border border-black/10 bg-white/70 px-1.5 py-0.5 text-xs text-muted-foreground">esc</kbd>
           </div>
           <Command.List className="max-h-[60vh] overflow-y-auto p-2">
             {looksLikeQuestion && askItem}
@@ -101,7 +101,7 @@ export function CommandPalette({
               </>
             )}
           </Command.List>
-          <div className="flex items-center gap-4 border-t border-black/5 px-4 py-2 text-[11px] text-muted-foreground">
+          <div className="flex items-center gap-4 border-t border-black/5 px-4 py-2 text-xs text-muted-foreground">
             <span><kbd className="font-sans">↑↓</kbd> move</span>
             <span><kbd className="font-sans">↵</kbd> open</span>
             <span className="ml-auto">Answers come only from the USC program catalog</span>

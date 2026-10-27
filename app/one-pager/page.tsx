@@ -26,7 +26,7 @@ export default function OnePager() {
             <ArrowLeft className="h-4 w-4" /> Founder Compass
           </Link>
           <div className="min-w-0 flex-1">
-            <h1 className="text-[15px] font-bold tracking-tight text-foreground">USC Entrepreneurship One-Pager</h1>
+            <h1 className="text-base font-bold tracking-tight text-foreground">USC Entrepreneurship One-Pager</h1>
             <p className="text-xs text-muted-foreground">Every major program on a single page, ready to share or print.</p>
           </div>
           <button onClick={copy} className="inline-flex items-center gap-2 rounded-2xl glass px-3.5 py-2 text-sm font-semibold hover:bg-white/70">

@@ -71,7 +71,7 @@ export function ComingUp({ saved, onOpen }: { saved: string[]; onOpen: (id: stri
           <Chip key={w.key} on={f.when === w.key} n={count({ when: w.key })} onClick={() => set({ when: f.when === w.key ? "any" : w.key })}>{w.label}</Chip>
         ))}
         {filtered && (
-          <button onClick={() => set({ type: "all", when: "any" })} className="inline-flex shrink-0 items-center gap-1 px-2 text-[13px] font-semibold text-primary hover:underline">
+          <button onClick={() => set({ type: "all", when: "any" })} className="inline-flex shrink-0 items-center gap-1 px-2 text-xs font-semibold text-primary hover:underline">
             <X className="h-3.5 w-3.5" /> Clear all
           </button>
         )}
@@ -118,7 +118,7 @@ function Chip({ on, n, onClick, children }: { on: boolean; n: number; onClick: (
     <button
       onClick={onClick}
       aria-pressed={on}
-      className={cn("inline-flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-2 text-[13px] font-semibold transition", on ? "bg-foreground text-background" : "bg-white/80 text-foreground/80 ring-1 ring-black/[.06] hover:bg-white")}
+      className={cn("inline-flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-2 text-xs font-semibold transition", on ? "bg-foreground text-background" : "bg-white/80 text-foreground/80 ring-1 ring-black/[.06] hover:bg-white")}
     >
       {children}
       <span className={cn("font-normal", on ? "opacity-70" : "text-muted-foreground")}>{n}</span>
@@ -146,7 +146,7 @@ function Row({ u, saved, onOpen }: { u: Upcoming; saved: boolean; onOpen: (id: s
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-center gap-1.5">
             <Kind event />
-            {chip && <span className={cn("rounded-md px-1.5 py-0.5 text-[11px] font-semibold", chip.tone === "red" ? "bg-primary text-primary-foreground" : chip.tone === "amber" ? "bg-amber-100 text-amber-800" : "bg-black/[.05] text-foreground/70")}>{chip.label}</span>}
+            {chip && <span className={cn("rounded-md px-1.5 py-0.5 text-xs font-semibold", chip.tone === "red" ? "bg-primary text-primary-foreground" : chip.tone === "amber" ? "bg-amber-100 text-amber-800" : "bg-black/[.05] text-foreground/70")}>{chip.label}</span>}
             {saved && <Bookmark className="h-3.5 w-3.5 fill-primary text-primary" aria-label="Saved" />}
           </div>
           <div className="mt-0.5 line-clamp-2 font-semibold leading-snug text-foreground sm:truncate">{u.title}</div>
@@ -173,7 +173,7 @@ function Row({ u, saved, onOpen }: { u: Upcoming; saved: boolean; onOpen: (id: s
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-1.5">
           <Kind label={deadlineLabel(p)} />
-          <span className="inline-flex items-center gap-1 text-[11px] text-muted-foreground">
+          <span className="inline-flex items-center gap-1 text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: GROUPS[p.group].color }} />
             {GROUPS[p.group].short}
           </span>
@@ -190,16 +190,16 @@ function Row({ u, saved, onOpen }: { u: Upcoming; saved: boolean; onOpen: (id: s
 function DateBlock({ top, big, bottom, fuzzy }: { top: string; big: string; bottom: string; fuzzy?: boolean }) {
   return (
     <div className={cn("flex w-14 shrink-0 flex-col items-center rounded-xl py-1.5 leading-none", fuzzy ? "border border-dashed border-black/15 text-foreground/70" : "bg-primary/[.07] text-primary")}>
-      <span className="text-[10px] font-semibold uppercase tracking-wide opacity-80">{top}</span>
+      <span className="text-xs font-semibold uppercase tracking-wide opacity-80">{top}</span>
       <span className="mt-1 text-lg font-bold">{big}</span>
-      <span className="mt-1 text-[10px] opacity-80">{bottom}</span>
+      <span className="mt-1 text-xs opacity-80">{bottom}</span>
     </div>
   )
 }
 
 function Kind({ event, label }: { event?: boolean; label?: string }) {
   return (
-    <span className={cn("rounded-md px-1.5 py-0.5 text-[11px] font-semibold", event ? "bg-[#2563A8]/10 text-[#2563A8]" : label === "Recruiting" ? "bg-[#A16207]/10 text-[#A16207]" : "bg-[#1B7F5C]/10 text-[#1B7F5C]")}>
+    <span className={cn("rounded-md px-1.5 py-0.5 text-xs font-semibold", event ? "bg-[#2563A8]/10 text-[#2563A8]" : label === "Recruiting" ? "bg-[#A16207]/10 text-[#A16207]" : "bg-[#1B7F5C]/10 text-[#1B7F5C]")}>
       {event ? "Event" : label}
     </span>
   )

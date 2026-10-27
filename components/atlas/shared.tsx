@@ -46,7 +46,7 @@ export function GroupPill({ program, className }: { program: Program; className?
   const g = GROUPS[program.group]
   return (
     <span
-      className={cn("inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-[11px] font-semibold", className)}
+      className={cn("inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-semibold", className)}
       style={{ backgroundColor: `${g.color}14`, color: g.color }}
     >
       <span className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: g.color }} />
@@ -161,7 +161,7 @@ export function ProgramDrawer({
               </SheetHeader>
             </div>
             <div className="space-y-4 px-6 py-5">
-              {program.description && <p className="text-[15px] leading-relaxed text-foreground">{program.description}</p>}
+              {program.description && <p className="text-base leading-relaxed text-foreground">{program.description}</p>}
               <div className="flex flex-wrap gap-1.5 text-xs">
                 <span className="rounded-full bg-primary/10 px-2.5 py-1 font-semibold text-primary">{keyFact(program)}</span>
                 <span className="rounded-full bg-black/[.05] px-2.5 py-1">

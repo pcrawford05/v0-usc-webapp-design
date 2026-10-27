@@ -1,4 +1,5 @@
 import programs from "@/data/programs.json"
+import announced from "@/data/announced-events.json"
 import sources from "@/data/sources.json"
 
 // Live events from EngageSC (engage.usc.edu). Each catalog program whose group is on Engage has
@@ -101,8 +102,9 @@ export async function getEngageEvents(now = new Date()): Promise<EngageEvent[]> 
   const from = now.getTime() - DAY * 1000 // keep events that started today
   const to = now.getTime() + WINDOW_DAYS * DAY * 1000
   const seen = new Set<string>()
-  return results
-    .flat()
+  // Events from official newsletters that the public Engage feed does not carry.
+  const extra: EngageEvent[] = announced.events.map(e => ({ ...e, clubId: 0 }))
+  return [...results.flat(), ...extra]
     .filter(e => {
       const t = Date.parse(e.start)
       if (t < from || t > to || seen.has(e.id)) return false

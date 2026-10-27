@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-24",
-  "source": "EngageSC public calendars and data/programs.json",
+  "updated": "2026-10-27",
+  "source": "EngageSC public calendars, data/announced-events.json and data/programs.json",
   "events": [
     {
       "id": "414465",
@@ -25,6 +25,89 @@
         "hult-prize-at-usc",
         "brittingham-social-enterprise-lab"
       ]
+    },
+    {
+      "id": "a-nvsc-info-1",
+      "title": "New Venture Seed Competition Info Session #1 (Zoom)",
+      "start": "2026-10-27T21:00:00Z",
+      "end": "2026-10-27T22:00:00Z",
+      "url": "https://engage.usc.edu/Entrepreneur/rsvp_boot?id=414404",
+      "host": "Greif Center",
+      "programIds": [
+        "new-venture-seed-competition"
+      ],
+      "source": "Greif Center newsletter, Oct 26, 2026"
+    },
+    {
+      "id": "a-venture-lab-hall-tafazzoli",
+      "title": "Venture Lab Speaker Session: Russ Hall and Farshid Tafazzoli",
+      "start": "2026-10-30T01:30:00Z",
+      "end": "2026-10-30T03:00:00Z",
+      "url": "https://luma.com/ie7dl24t",
+      "host": "USC Venture Capital",
+      "programIds": [
+        "usc-venture-lab-usc-vc",
+        "usc-venture-capital"
+      ],
+      "source": "USC Venture Capital email to ecosystem leaders, Oct 26, 2026"
+    },
+    {
+      "id": "a-vcic-training-1",
+      "title": "VCIC Training Session with Mucker Capital (Zoom)",
+      "start": "2026-10-30T20:00:00Z",
+      "end": "2026-10-30T22:00:00Z",
+      "url": "https://engage.usc.edu/Entrepreneur/survey?survey_uid=12ba59df-be85-11f1-9eb5-0ee783f753d3",
+      "host": "Greif Center",
+      "programIds": [
+        "venture-capital-investment-competition-vcic"
+      ],
+      "source": "Greif Center newsletter, Oct 26, 2026"
+    },
+    {
+      "id": "a-cofounder-matchmaking",
+      "title": "USC Cofounder Matchmaking",
+      "start": "2026-11-04T03:00:00Z",
+      "end": "2026-11-04T04:30:00Z",
+      "url": "https://app.co-finders.com/?event=usc-cofounder-matchmaking-event",
+      "host": "TIE Hub and Greif Center",
+      "programIds": [],
+      "source": "Greif Center newsletter, Oct 26, 2026"
+    },
+    {
+      "id": "a-nvsc-info-2",
+      "title": "New Venture Seed Competition Info Session #2 (Zoom)",
+      "start": "2026-11-10T22:00:00Z",
+      "end": "2026-11-10T23:00:00Z",
+      "url": "https://engage.usc.edu/Entrepreneur/rsvp_boot?id=414404",
+      "host": "Greif Center",
+      "programIds": [
+        "new-venture-seed-competition"
+      ],
+      "source": "Greif Center newsletter, Oct 26, 2026"
+    },
+    {
+      "id": "a-nvsc-info-3",
+      "title": "New Venture Seed Competition Info Session #3 (in person)",
+      "start": "2026-11-19T00:00:00Z",
+      "end": "2026-11-19T01:00:00Z",
+      "url": "https://engage.usc.edu/Entrepreneur/rsvp_boot?id=414404",
+      "host": "Greif Center",
+      "programIds": [
+        "new-venture-seed-competition"
+      ],
+      "source": "Greif Center newsletter, Oct 26, 2026"
+    },
+    {
+      "id": "a-nvsc-info-4",
+      "title": "New Venture Seed Competition Info Session #4 (Zoom)",
+      "start": "2026-12-01T22:00:00Z",
+      "end": "2026-12-01T23:00:00Z",
+      "url": "https://engage.usc.edu/Entrepreneur/rsvp_boot?id=414404",
+      "host": "Greif Center",
+      "programIds": [
+        "new-venture-seed-competition"
+      ],
+      "source": "Greif Center newsletter, Oct 26, 2026"
     }
   ],
   "cycles": [
@@ -88,6 +171,8 @@
       "name": "Maseeh Entrepreneurship Prize Competition",
       "months": [
         1,
+        2,
+        3,
         4
       ],
       "timing": "Annual; applications open in the fall and closed Jan 27, 2026; winners announced at the Startup Showcase in late April (Apr 27, 2026)"
@@ -97,6 +182,8 @@
       "name": "Min Family Challenge",
       "months": [
         1,
+        2,
+        3,
         4
       ],
       "timing": "Annual; applications open in the fall and closed Jan 27, 2026; winners announced at the Startup Showcase in late April"
@@ -247,6 +334,17 @@
       "timing": "Annual; 2025-26 applications due Dec 5, finalists notified Dec 18, USC final in early spring"
     },
     {
+      "id": "leverage-point-fellowship",
+      "name": "Leverage Point Fellowship",
+      "months": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "timing": "2026-27 cycle: applications were due Sep 21, 2026 at 1:00pm PT (extended from Sep 18); interviews Oct 12; notifications on or before Oct 16; fellowship begins Nov 2, 2026."
+    },
+    {
       "id": "marcia-israel-celebration-and-founder-showcase",
       "name": "Marcia Israel Celebration and Founder Showcase",
       "months": [
@@ -276,18 +374,21 @@
       "id": "new-venture-seed-competition",
       "name": "New Venture Seed Competition",
       "months": [
+        10,
+        11,
+        12,
         2,
         4
       ],
-      "timing": "Annual; 2025-26 applications were due Feb 8, 2026, quarter-finals Mar 10, semi-finals Apr 16, public finals Apr 24, and winners announced at the awards banquet Apr 30, 2026. 2026-27 dates not yet posted."
+      "timing": "Annual. 2026-27 info sessions Oct 27, Nov 10, Nov 18 and Dec 1, 2026; 2025-26 applications were due Feb 8 with finals Apr 24. 2026-27 deadline not yet posted."
     },
     {
       "id": "usc-venture-lab-usc-vc",
-      "name": "BAEP 565 Venture Lab",
+      "name": "Venture Lab (BAEP 565)",
       "months": [
-        8
+        10
       ],
-      "timing": "Offered Fall 2026, Thursdays 6:30-9:30 pm."
+      "timing": "Spring 2027 cohort, Thursdays 6:30-9:30 pm. Priority application deadline Oct 27, 2026, rolling admission after. Open to graduate students in any USC school."
     },
     {
       "id": "vaneck-southern-california-blockchain-conference",
@@ -301,10 +402,11 @@
       "id": "venture-capital-investment-competition-vcic",
       "name": "Venture Capital Investment Competition (VCIC)",
       "months": [
-        2,
-        11
+        10,
+        11,
+        2
       ],
-      "timing": "Annual; 2025-26 undergraduate applications were due Nov 14, 2025 (notified Nov 21), training Jan 2026, West Coast Regionals Feb 7, 2026 at BYU; graduate EVMA internal round Nov 21, Silicon Valley Regionals Feb 27, 2026. 2026-27 dates not posted."
+      "timing": "Annual. 2026-27: training session Oct 30, 2026 (Zoom, open to all); Undergraduate Regional Feb 20, 2027 at USC Marshall; MBA Regional Feb 26, 2027 at Berkeley Haas. Apply individually or as a team."
     },
     {
       "id": "acad-406-purpose-driven-innovation-incubator",
@@ -360,7 +462,26 @@
         9,
         10
       ],
-      "timing": "Typically early fall semester (past mixers in October); one past mixer drew 261 registrants."
+      "timing": "Typically early fall semester. Fall 2026: first joint Viterbi, Marshall (Greif) and Iovine and Young Academy Startup Mixer on Oct 6, 2026, 4-6 PM drop-in (355 attendees, 54 USC groups represented)."
+    },
+    {
+      "id": "from-lab-to-startup",
+      "name": "From Lab to Startup",
+      "months": [
+        10
+      ],
+      "timing": "Fall 2026 workshop with Wilson Sonsini on Friday, Oct 9, 2026, 9:00 am-12:00 pm, with free one-on-one legal office hours Oct 8 and 9."
+    },
+    {
+      "id": "usc-amgen-bioaccelerator",
+      "name": "USC + Amgen BioAccelerator",
+      "months": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "timing": "Inaugural 2026 cycle: applications opened Jun 1 and closed Sep 30, 2026 (5 PM PT). Next cycle not yet announced."
     },
     {
       "id": "early-career-innovator-award",
@@ -479,10 +600,12 @@
       "id": "nucleate",
       "name": "Nucleate",
       "months": [
+        5,
         9,
-        10
+        10,
+        11
       ],
-      "timing": "Nucleate LA 2026-27 Activator applications opened September 2026 and closed October 20, 2026 (rolling review)."
+      "timing": "Nucleate LA 2026-27 Activator applications opened September 2026; the deadline was extended from Oct 20 to Nov 1, 2026 (rolling review). The 2026 cycle Demo Day was May 8, 2026."
     },
     {
       "id": "spark-at-usc",
@@ -586,6 +709,15 @@
         9
       ],
       "timing": "Applications each semester; Spring 2026 apps were due January 24, 2026 and Fall 2026 apps were due September 8, 2026."
+    },
+    {
+      "id": "trojan-venture-partners",
+      "name": "Trojan Venture Partners",
+      "months": [
+        8,
+        9
+      ],
+      "timing": "Recruits each fall; Fall 2026 General Membership applications were due September 1, 2026."
     },
     {
       "id": "troylabs",

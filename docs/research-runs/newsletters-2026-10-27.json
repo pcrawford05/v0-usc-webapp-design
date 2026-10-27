@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-27",
+  "kind": "newsletters",
+  "inbox": "pcrawfor@usc.edu, last 21 days",
+  "emails": [
+    {
+      "subject": "Fall in Full Swing at the Greif Center!",
+      "from": "entrepreneur@marshall.usc.edu",
+      "date": "2026-10-26",
+      "used": [
+        "NVSC info sessions x4",
+        "VCIC training Oct 30 + 2027 regionals",
+        "Cofounder Matchmaking Nov 3",
+        "Venture Lab Spring 2027 priority deadline Oct 27"
+      ],
+      "links_resolved_with": "curl redirect follow (no Chrome needed)"
+    },
+    {
+      "subject": "Please share: Venture Lab Speaker Session (Thu 10/29)",
+      "from": "USC Venture Capital (forwarded)",
+      "date": "2026-10-26",
+      "used": [
+        "Venture Lab speaker session Oct 29, luma.com/ie7dl24t"
+      ],
+      "not_used": "leader contact list (personal data; only reconfirms Shayan Akhtari/EVMA and Ralph Lin/TIE Hub)"
+    }
+  ],
+  "skipped": [
+    "Viterbi ECE department news (no founder events)",
+    "personal threads"
+  ],
+  "notes": "Greif Center newsletter links are click.comm.marshall.usc.edu trackers; curl -sIL resolves them. Greif NVSC RSVP (Engage 414404) is not in the public Engage feed, so announced events live in data/announced-events.json."
+}

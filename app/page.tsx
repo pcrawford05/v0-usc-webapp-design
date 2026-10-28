@@ -12,6 +12,7 @@ import { FeedbackLink } from "@/components/atlas/Feedback"
 import { ProgramDrawer, useSaved } from "@/components/atlas/shared"
 import { DiscoverView } from "@/components/atlas/Discover"
 import { ComingUp } from "@/components/atlas/ComingUp"
+import { TabBar } from "@/components/atlas/TabBar"
 import { ProfileMenu, SavedView } from "@/components/atlas/Saved"
 import { AdvisorView } from "@/components/atlas/views"
 import { describeProfile, hasProfile, ROLES } from "@/lib/profile"
@@ -103,7 +104,7 @@ function Atlas() {
     return () => window.removeEventListener("pointermove", move)
   }, [])
 
-  const tabButton = (t: (typeof TABS)[number], compact: boolean) => (
+  const tabButton = (t: (typeof TABS)[number]) => (
     <button
       key={t.key}
       data-key={t.key}
@@ -111,12 +112,11 @@ function Atlas() {
       onClick={() => setParam({ view: t.key, p: null })}
       aria-current={tab === t.key ? "page" : undefined}
       className={cn(
-        "relative inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-xl font-semibold transition-colors",
-        compact ? "flex-col gap-0.5 py-1.5 text-xs" : "px-4 py-2 text-sm",
+        "relative inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-xl px-4 py-2 text-sm font-semibold transition-colors",
         tab === t.key ? "text-primary" : "text-foreground/65 hover:text-foreground",
       )}
     >
-      <t.icon className={compact ? "h-5 w-5" : "h-4 w-4"} />
+      <t.icon className="h-4 w-4" />
       {t.label}
     </button>
   )
@@ -134,7 +134,7 @@ function Atlas() {
           </button>
           <nav ref={tabsInd.ref} className="relative mx-auto hidden gap-1 rounded-2xl bg-black/[.04] p-1 sm:flex" aria-label="Views">
             {tabsInd.box && <span aria-hidden className="tab-indicator absolute left-0 top-0 rounded-xl bg-white/90 shadow-sm" style={{ transform: `translate(${tabsInd.box.x}px, ${tabsInd.box.y}px)`, width: tabsInd.box.w, height: tabsInd.box.h }} />}
-            {TABS.map(t => tabButton(t, false))}
+            {TABS.map(t => tabButton(t))}
           </nav>
           <div className="ml-auto flex items-center gap-1.5 sm:ml-0">
             <button onClick={() => setPaletteOpen(true)} data-tour="search" aria-label="Search" className="flex items-center gap-2 rounded-xl px-2.5 py-2 text-sm text-muted-foreground hover:bg-white/70">
@@ -169,9 +169,7 @@ function Atlas() {
       </main>
 
       {/* Phone tab bar */}
-      <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-black/5 bg-white/90 px-2 pb-[max(8px,env(safe-area-inset-bottom))] pt-1 backdrop-blur-xl sm:hidden" aria-label="Views">
-        <div className="flex">{TABS.map(t => tabButton(t, true))}</div>
-      </nav>
+      <TabBar tabs={TABS} active={tab} onSelect={key => setParam({ view: key, p: null })} />
 
       <footer className="mx-auto max-w-7xl px-4 pb-10 text-xs text-muted-foreground sm:px-6">
         Program details are researched from public sources and change often. Always confirm dates and eligibility on the official page. Spot an error or have an idea? <FeedbackLink label="Send feedback" className="font-normal text-inherit underline hover:text-foreground" />. · <a href="/one-pager" className="underline hover:text-foreground">One-page PDF</a>

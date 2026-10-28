@@ -2865,9 +2865,12 @@
     "group": "marshall",
     "category": "Competitions & Pitch",
     "description": "USC's largest startup competition, run by the Greif Center, with a prize pool of over $150,000: Platinum $35,000, Gold $20,000, Silver $15,000, plus Social Impact, Early Stage Concept and $1,500 semi-finalist prizes.",
-    "timing": "Annual; 2025-26 applications were due Feb 8, 2026, quarter-finals Mar 10, semi-finals Apr 16, public finals Apr 24, and winners announced at the awards banquet Apr 30, 2026. 2026-27 dates not yet posted.",
+    "timing": "Annual. 2026-27 info sessions Oct 27, Nov 10, Nov 18 and Dec 1, 2026; 2025-26 applications were due Feb 8 with finals Apr 24. 2026-27 deadline not yet posted.",
     "cadence": "annual",
     "months": [
+      10,
+      11,
+      12,
       2,
       4
     ],
@@ -2896,7 +2899,7 @@
     ],
     "confidence": "high",
     "notes": "2026-27 deadline not yet published as of search; last confirmed deadline Feb 1, 2025. April finals month is inferred from typical cycle, not confirmed. Applications via nvsc.awardsplatform.com.",
-    "lastVerified": "2026-10-22",
+    "lastVerified": "2026-10-27",
     "socials": [
       {
         "platform": "instagram",
@@ -2972,10 +2975,10 @@
     "group": "marshall",
     "category": "Courses & Degrees",
     "description": "Greif Center graduate course (3 units) where students work with startups and venture capitalists on sourcing deals, diligence, investment memos and portfolio support. Powers USC Venture Capital (USCVC), the university's student-run fund, and hosts a guest speaker from the venture world every Thursday night.",
-    "timing": "Offered Fall 2026, Thursdays 6:30-9:30 pm.",
+    "timing": "Spring 2027 cohort, Thursdays 6:30-9:30 pm. Priority application deadline Oct 27, 2026, rolling admission after. Open to graduate students in any USC school.",
     "cadence": "semester",
     "months": [
-      8
+      10
     ],
     "eligibility": "Listed among USC Marshall graduate BAEP electives.",
     "audience": [
@@ -2989,7 +2992,7 @@
     ],
     "confidence": "medium",
     "notes": "A course, not a student club (confirmed by Founder Compass team, Oct 2026). Fall 2026 instructors: Jack Crawford and Jai Choi. Weekly Thursday speakers confirmed by Peyton (Oct 26, 2026).",
-    "lastVerified": "2026-10-26",
+    "lastVerified": "2026-10-27",
     "socials": [
       {
         "platform": "instagram",
@@ -3144,11 +3147,12 @@
     "group": "marshall",
     "category": "Competitions & Pitch",
     "description": "Students act as VCs in a one-day due diligence simulation. Greif selects an undergrad team for the West regional (travel paid); grad teams come from an internal EVMA round. USC tied for 4th at 2025 Global Finals.",
-    "timing": "Annual; 2025-26 undergraduate applications were due Nov 14, 2025 (notified Nov 21), training Jan 2026, West Coast Regionals Feb 7, 2026 at BYU; graduate EVMA internal round Nov 21, Silicon Valley Regionals Feb 27, 2026. 2026-27 dates not posted.",
+    "timing": "Annual. 2026-27: training session Oct 30, 2026 (Zoom, open to all); Undergraduate Regional Feb 20, 2027 at USC Marshall; MBA Regional Feb 26, 2027 at Berkeley Haas. Apply individually or as a team.",
     "cadence": "annual",
     "months": [
-      2,
-      11
+      10,
+      11,
+      2
     ],
     "eligibility": "Undergraduates apply competitively through the Greif Center (six students plus one alternate chosen); graduate students qualify through the EVMA internal competition (six plus one alternate). Progressive degree students count as undergrads until they take graduate-level courses. Training sessions are open to all.",
     "audience": [
@@ -3166,7 +3170,7 @@
     ],
     "confidence": "high",
     "notes": "This is a skills competition for aspiring investors, not funding for startups. 2026-27 application dates not yet confirmed.",
-    "lastVerified": "2026-10-22",
+    "lastVerified": "2026-10-27",
     "socials": [
       {
         "platform": "instagram",

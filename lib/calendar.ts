@@ -117,7 +117,7 @@ export interface CalEntry {
 /** An event, or a month-only deadline turned into an honest "check if it is open" reminder. */
 export function calEntry(u: Upcoming, site: string): CalEntry {
   if (u.kind === "event") {
-    return { title: u.title, start: u.start, end: u.end ?? new Date(u.start.getTime() + 3600_000), url: u.url, details: `Hosted by ${u.host}. RSVP and location on EngageSC: ${u.url}` }
+    return { title: u.title, start: u.start, end: u.end ?? new Date(u.start.getTime() + 3600_000), url: u.url, details: `Hosted by ${u.host}. Details and RSVP: ${u.url}` }
   }
   const p = u.program
   return {

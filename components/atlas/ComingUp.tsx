@@ -59,7 +59,7 @@ export function ComingUp({ saved, onOpen }: { saved: string[]; onOpen: (id: stri
     <section className="space-y-3">
       <div className="flex flex-wrap items-end justify-between gap-2">
         <h1 className="text-2xl font-bold tracking-tight">Coming up</h1>
-        <span className="text-xs text-muted-foreground">Events from EngageSC, updated daily · Deadlines by usual month</span>
+        <span className="text-xs text-muted-foreground">Events from EngageSC and USC newsletters, updated daily · Deadlines by usual month</span>
       </div>
 
       <div className="-mx-4 flex gap-1.5 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:flex-wrap sm:px-0" role="group" aria-label="Filter coming up">
@@ -157,9 +157,9 @@ function Row({ u, saved, onOpen }: { u: Upcoming; saved: boolean; onOpen: (id: s
           )}
         </div>
         <a href={u.url} target="_blank" rel="noreferrer" className="hidden shrink-0 items-center gap-1.5 rounded-full bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground hover:opacity-90 sm:inline-flex">
-          RSVP on Engage <ExternalLink className="h-3.5 w-3.5" />
+          {rsvpLabel(u.url)} <ExternalLink className="h-3.5 w-3.5" />
         </a>
-        <a href={u.url} target="_blank" rel="noreferrer" aria-label="RSVP on EngageSC" className="rounded-lg p-2.5 text-primary hover:bg-black/[.05] sm:hidden">
+        <a href={u.url} target="_blank" rel="noreferrer" aria-label={rsvpLabel(u.url)} className="rounded-lg p-2.5 text-primary hover:bg-black/[.05] sm:hidden">
           <ExternalLink className="h-4 w-4" />
         </a>
         <AddToCalendar compact entry={() => calEntry(u, site)} />
@@ -185,6 +185,13 @@ function Row({ u, saved, onOpen }: { u: Upcoming; saved: boolean; onOpen: (id: s
       <AddToCalendar compact entry={() => calEntry(u, site)} />
     </li>
   )
+}
+
+/** Name the button for the site it opens. */
+function rsvpLabel(url: string) {
+  if (url.includes("engage.usc.edu")) return url.includes("/survey") ? "Apply on Engage" : "RSVP on Engage"
+  if (/lu\.?ma/.test(url)) return "RSVP on Luma"
+  return "Register"
 }
 
 function DateBlock({ top, big, bottom, fuzzy }: { top: string; big: string; bottom: string; fuzzy?: boolean }) {

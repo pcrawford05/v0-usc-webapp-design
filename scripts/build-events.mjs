@@ -63,12 +63,17 @@ for (const [clubId, ids] of clubs) {
     console.warn(`Engage feed for club ${clubId} failed; skipped`)
   }
 }
+// Events announced in official newsletters that the Engage feed does not carry.
+for (const e of JSON.parse(readFileSync("data/announced-events.json", "utf8")).events) {
+  const t = Date.parse(e.start)
+  if (t >= now - 864e5 && t <= horizon && !seen.has(e.id)) events.push(e)
+}
 events.sort((a, b) => a.start.localeCompare(b.start))
 
 const cycles = programs
   .filter(p => p.months.length)
   .map(p => ({ id: p.id, name: p.name, months: p.months, timing: p.timing }))
 
-const out = { updated: new Date().toISOString().slice(0, 10), source: "EngageSC public calendars and data/programs.json", events, cycles }
+const out = { updated: new Date().toISOString().slice(0, 10), source: "EngageSC public calendars, data/announced-events.json and data/programs.json", events, cycles }
 writeFileSync("data/events.json", JSON.stringify(out, null, 2) + "\n")
 console.log(`data/events.json: ${events.length} Engage events, ${cycles.length} program cycles`)
